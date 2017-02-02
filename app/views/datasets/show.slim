@@ -1,0 +1,17 @@
+h4= @dataset.title
+
+= link_to "Download", @dataset.dataset_file.url(:original), class: "button button-primary"
+
+table.versions
+  - @dataset.versions.reverse.each do |version|
+    - version_object = YAML::load(version.object)
+
+    tr
+      td= version.index
+      td= version.commit_message
+      td= I18n.l(version_object['updated_at'], format: :simple)
+
+.actions
+  = link_to "Index", datasets_path, class: "button"
+  span.or or
+  = link_to "Edit", edit_dataset_path(@dataset), class: "button"

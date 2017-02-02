@@ -1,0 +1,21 @@
+= form_for dataset, html: { class: "dataset" } do |f|
+  .errors
+    - dataset.errors.full_messages.each do |message|
+      .error= message
+
+  .form-field
+    = f.label :title
+    = f.text_field :title
+
+  .form-field
+    = f.label :dataset_file
+    = f.file_field :dataset_file
+
+  .form-field
+    = f.label :commit_message
+    = f.text_area :commit_message
+
+  .form-field
+    = f.submit
+    span.or or
+    = link_to "Cancel", dataset_path(dataset), class: "button cancel"

@@ -1,0 +1,23 @@
+// Variables
+$error-color: #e77
+
+// Form styling
+form
+  .error
+    background-color: $error-color
+    border-color: darken($error-color, 20)
+    padding: 4px 10px
+    margin-bottom: 10px
+    border-radius: 4px
+
+  .button.cancel
+    background-color: $error-color
+    border-color: darken($error-color, 20)
+
+  &.dataset
+    textarea#dataset_commit_message
+      min-width: 400px
+
+// Other
+span.or
+  margin: 0 5px

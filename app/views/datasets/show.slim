@@ -12,6 +12,6 @@ table.versions
       td= I18n.l(version_object['updated_at'], format: :simple)
 
 .actions
-  = link_to "Index", datasets_path, class: "button"
+  = link_to "Home", datasets_path, class: "button"
   span.or or
-  = link_to "Edit", edit_dataset_path(@dataset), class: "button"
+  = link_to "Upload", edit_dataset_path(@dataset), class: "button"

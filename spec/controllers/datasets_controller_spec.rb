@@ -60,18 +60,6 @@ describe DatasetsController do
 
       expect(dataset.reload.title).to eq("non-ameland")
     end
-
-    it 'creates a version in the database' do
-      put :update, params: {
-        id: dataset.id,
-        dataset: {
-          title: "non-ameland",
-          commit_message: "Changing title"
-        }
-      }
-
-      expect(dataset.reload.versions.count).to eq(1)
-    end
   end
 
   it 'can download the xls file'

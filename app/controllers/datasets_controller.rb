@@ -22,7 +22,7 @@ class DatasetsController < ApplicationController
   private
 
   def params_for_dataset
-    params.require(:dataset).permit(:title, :dataset_file, :commit_message)
+    params.require(:dataset).permit(:dataset_file, :commit_message)
   end
 
   def find_dataset

@@ -1,4 +1,13 @@
 h4 Datasets
 
-- @datasets.each do |dataset|
-  p= link_to dataset.title, dataset_path(dataset)
+table
+  thead
+    tr
+      th Dataset title
+      th
+
+  tbody
+    - @datasets.each do |dataset|
+      tr
+        td= link_to dataset.title, dataset_path(dataset)
+        td= link_to "Download", dataset.dataset_file.url(:original), class: "button button-primary"

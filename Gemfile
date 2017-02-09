@@ -16,15 +16,20 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
 gem 'slim'
-gem 'roo'
 gem 'paper_trail'
 gem 'paperclip'
+gem 'devise'
+gem 'pundit'
 
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec'
   gem 'rspec-rails'
   gem 'pry'
+end
+
+group :test do
+  gem 'factory_girl_rails'
 end
 
 group :development do

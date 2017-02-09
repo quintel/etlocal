@@ -1,4 +1,5 @@
 class DatasetsController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_dataset, except: :index
 
   def index

@@ -1,0 +1,10 @@
+.header
+  .title
+    h1=link_to I18n.t("application"), '/'
+
+  - if current_user
+    .current-user
+      span Signed in as&nbsp;
+      span= current_user.email
+
+      = link_to 'Sign out', destroy_user_session_path, class: 'button', method: :delete

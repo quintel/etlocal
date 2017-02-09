@@ -23,5 +23,7 @@ en:
   time:
     formats:
       simple: "%Y-%m-%d:%H:%M"
+
+  application: ETLocal
   hello: "Hello world"
 

@@ -10,16 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170209152310) do
+ActiveRecord::Schema.define(version: 20170215110840) do
 
-  create_table "datasets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "title"
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.string   "dataset_file_file_name"
-    t.string   "dataset_file_content_type"
-    t.integer  "dataset_file_file_size"
-    t.datetime "dataset_file_updated_at"
+  create_table "dataset_edits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id"
+    t.integer  "source_id"
+    t.string   "commit"
+    t.string   "area"
+    t.string   "key"
+    t.string   "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["source_id"], name: "index_dataset_edits_on_source_id", using: :btree
+    t.index ["user_id"], name: "index_dataset_edits_on_user_id", using: :btree
+  end
+
+  create_table "sources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "source_file_file_name"
+    t.string   "source_file_content_type"
+    t.integer  "source_file_file_size"
+    t.datetime "source_file_updated_at"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

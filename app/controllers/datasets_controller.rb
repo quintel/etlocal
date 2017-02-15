@@ -1,32 +1,12 @@
 class DatasetsController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_dataset, except: :index
 
   def index
-    @datasets = Dataset.all
+    @datasets = Atlas::Dataset::Derived.all
   end
 
   def show
-  end
-
-  def edit
-  end
-
-  def update
-    if @dataset.update_attributes(params_for_dataset)
-      redirect_to dataset_path(@dataset)
-    else
-      render :edit
-    end
-  end
-
-  private
-
-  def params_for_dataset
-    params.require(:dataset).permit(:dataset_file, :commit_message)
-  end
-
-  def find_dataset
-    @dataset = Dataset.find(params[:id])
+    @dataset       = Atlas::Dataset::Derived.find(params[:id])
+    @dataset_edits = DatasetEditCollection.for(@dataset.key)
   end
 end

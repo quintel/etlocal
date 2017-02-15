@@ -16,14 +16,19 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
 gem 'slim'
-gem 'paper_trail'
 gem 'paperclip'
 gem 'devise'
 gem 'pundit'
 
+#gem 'atlas', ref: 'ff004b2', github: 'quintel/atlas'
+gem 'rubel',    ref: 'ad3d44e', github: 'quintel/rubel'
+gem 'refinery', ref: '636686c', github: 'quintel/refinery'
+gem 'atlas', path: '../atlas'
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec'
+  gem 'rspec-collection_matchers'
   gem 'rspec-rails'
   gem 'pry'
 end

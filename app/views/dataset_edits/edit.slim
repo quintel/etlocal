@@ -1,0 +1,20 @@
+= form_for @dataset_edit, url: dataset_dataset_edit_path(params[:dataset_id], params[:id]), method: :patch do |f|
+  = f.hidden_field :area, value: params[:dataset_id]
+  = f.hidden_field :key, value: params[:id]
+
+  .field
+    = f.label params[:id]
+    = f.text_field :value
+
+  .field
+    = f.label :commit
+    = f.text_area :commit
+
+  = f.fields_for(:source) do |s|
+    .field
+      = s.label :source_file
+      = s.file_field :source_file
+
+  = f.submit "Save"
+  span.or or
+  = link_to "Cancel", dataset_path(@dataset.key), class: "button cancel"

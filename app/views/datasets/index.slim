@@ -9,5 +9,4 @@ table
   tbody
     - @datasets.each do |dataset|
       tr
-        td= link_to dataset.title, dataset_path(dataset)
-        td= link_to "Download", dataset.dataset_file.url(:original), class: "button button-primary"
+        td= link_to dataset.key, dataset_path(dataset.key)

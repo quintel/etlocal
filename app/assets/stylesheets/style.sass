@@ -25,6 +25,10 @@ h1 a
   text-decoration: none
 
 // Form styling
+.button.cancel
+  background-color: $error-color
+  border-color: darken($error-color, 20)
+
 form
   .error
     background-color: $error-color
@@ -32,10 +36,6 @@ form
     padding: 4px 10px
     margin-bottom: 10px
     border-radius: 4px
-
-  .button.cancel
-    background-color: $error-color
-    border-color: darken($error-color, 20)
 
   &.dataset
     textarea#dataset_commit_message
@@ -48,7 +48,26 @@ span.or
 table tbody tr td a.button
   margin-bottom: 0
 
+.tab
+  margin-bottom: 20px
+
 .attributes
+  .editable
+    margin: 5px 0
+    &:hover
+      cursor: pointer
+
+    &.enabled
+      padding: 12px 18px
+      border: 1px solid #ddd
+
+      .actions
+        margin-top: 10px
+        display: block
+
+    .actions
+      display: none
+
   .key
     min-width: 400px
     display: inline-block

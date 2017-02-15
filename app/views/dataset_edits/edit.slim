@@ -4,7 +4,7 @@
 
   .field
     = f.label params[:id]
-    = f.text_field :value
+    = f.text_field :value, placeholder: dataset_value_for(params[:id]).to_s
 
   .field
     = f.label :commit

@@ -1,13 +1,43 @@
 h4= @dataset.key
 
 .attributes
-  .area
-    - @dataset.attributes.each do |key, value|
-      div
-        strong.key= key
-        span.val= dataset_value_for(key, value)
+  .static.tab
+    h5 Static
 
-        = link_to "Edit", edit_dataset_dataset_edit_path(@dataset.key, key)
+    .non-editable
+      strong.key Base dataset
+      span.val= @dataset.base_dataset
+
+    .non-editable
+      strong.key Analysis year
+      span.val= @dataset.analysis_year
+
+  .area.tab
+    h5 Area attributes
+
+    - @dataset.editable_attributes.each do |attribute|
+      .editable
+        strong.key= attribute.name
+        span.val= dataset_value_for(attribute.name)
+
+        .actions
+          = link_to "Edit", edit_dataset_dataset_edit_path(@dataset.key, attribute.name), class: "button"
+          span.or or
+          = link_to "Cancel", "#", class: "button cancel"
+
+  .initializer-inputs.tab
+    h5 Inputs
+
+    - @dataset.init.each_pair do |key, value|
+      .editable
+        strong.key= key
+        span.val= value
+
+        .actions
+          = link_to "Edit", edit_dataset_dataset_edit_path(@dataset.key, key), class: "button"
+          span.or or
+          = link_to "Cancel", "#", class: "button cancel"
+
 
 .actions
   = link_to "Home", datasets_path, class: "button"

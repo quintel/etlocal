@@ -1,5 +1,6 @@
 class DatasetEditsController < ApplicationController
   before_action :find_dataset
+  before_action :find_previous_edits
 
   def edit
     @dataset_edit = current_user.dataset_edits.new
@@ -10,7 +11,7 @@ class DatasetEditsController < ApplicationController
     @dataset_edit = current_user.dataset_edits.new(dataset_edit_params)
 
     if @dataset_edit.save
-      redirect_to datasets_path
+      redirect_to dataset_path(@dataset.key)
     else
       render :edit
     end
@@ -20,6 +21,10 @@ class DatasetEditsController < ApplicationController
 
   def find_dataset
     @dataset = Atlas::Dataset::Derived.find(params[:dataset_id])
+  end
+
+  def find_previous_edits
+    @dataset_edits = DatasetEditCollection.for(params[:dataset_id])
   end
 
   def dataset_edit_params

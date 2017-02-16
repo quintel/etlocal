@@ -3,6 +3,7 @@ class Source < ApplicationRecord
 
   has_many :dataset_edits
 
+  validates_presence_of :source_file
   validates_attachment_content_type :source_file, content_type: [
     'application/octet-stream',
     'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',

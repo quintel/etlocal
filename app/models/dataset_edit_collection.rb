@@ -11,7 +11,11 @@ class DatasetEditCollection
     @dataset_edits
   end
 
+  def previous(key)
+    @dataset_edits.select { |edit| edit.key == key }.reverse
+  end
+
   def find(key)
-    @dataset_edits.where(key: key).last
+    previous(key).first
   end
 end

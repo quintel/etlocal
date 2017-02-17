@@ -1,12 +1,5 @@
 h4 Datasets
 
-table
-  thead
-    tr
-      th Dataset title
-      th
-
-  tbody
-    - @datasets.each do |dataset|
-      tr
-        td= link_to dataset.key, dataset_path(dataset.key)
+- @datasets.each do |dataset|
+  .dataset
+    = link_to dataset.area, dataset_path(dataset.key)

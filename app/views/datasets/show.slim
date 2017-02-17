@@ -16,28 +16,13 @@ h4= @dataset.key
     h5 Area attributes
 
     - @dataset.editable_attributes.each do |attribute|
-      .editable
-        strong.key= attribute.name
-        span.val= dataset_value_for(attribute.name)
-
-        .actions
-          = link_to "Edit", edit_dataset_dataset_edit_path(@dataset.key, attribute.name), class: "button"
-          span.or or
-          = link_to "Cancel", "#", class: "button cancel"
+      = render 'editable', key: attribute.name, value: dataset_value_for(attribute.name)
 
   .initializer-inputs.tab
     h5 Inputs
 
     - @dataset.init.each_pair do |key, value|
-      .editable
-        strong.key= key
-        span.val= value
-
-        .actions
-          = link_to "Edit", edit_dataset_dataset_edit_path(@dataset.key, key), class: "button"
-          span.or or
-          = link_to "Cancel", "#", class: "button cancel"
-
+      = render 'editable', key: key, value: value
 
 .actions
   = link_to "Home", datasets_path, class: "button"

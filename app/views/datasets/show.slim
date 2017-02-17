@@ -1,4 +1,4 @@
-h4= @dataset.key
+h4= @dataset.area
 
 .attributes
   .static.tab
@@ -6,11 +6,11 @@ h4= @dataset.key
 
     .non-editable
       strong.key Base dataset
-      span.val= @dataset.base_dataset
+      span.val= @dataset.atlas_dataset.base_dataset
 
     .non-editable
       strong.key Analysis year
-      span.val= @dataset.analysis_year
+      span.val= @dataset.atlas_dataset.analysis_year
 
   .area.tab
     h5 Area attributes
@@ -21,7 +21,7 @@ h4= @dataset.key
   .initializer-inputs.tab
     h5 Inputs
 
-    - @dataset.init.each_pair do |key, value|
+    - @dataset.atlas_dataset.init.each_pair do |key, value|
       = render 'editable', key: key, value: value
 
 .actions

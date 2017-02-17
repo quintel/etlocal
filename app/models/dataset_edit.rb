@@ -8,7 +8,4 @@ class DatasetEdit < ApplicationRecord
   validates_presence_of :dataset_id
   validates_presence_of :key
   validates_presence_of :value
-
-  def original_value
-  end
 end

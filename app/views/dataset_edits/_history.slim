@@ -1,0 +1,21 @@
+strong Previous changes
+
+- @dataset_edits.previous(params[:id]).each do |dataset_edit|
+  .change
+    .left
+      .created
+        = I18n.l dataset_edit.created_at, format: :short
+      .by
+        | by&nbsp;
+        = dataset_edit.user.name
+
+    .right
+      .changed_value
+        = "Changed value to #{ dataset_edit.value }"
+      .reason
+        = dataset_edit.commit
+
+      = link_to "Download source", dataset_edit.source.source_file.url, class: "button"
+
+
+    .clear

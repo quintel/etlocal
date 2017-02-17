@@ -25,20 +25,4 @@
     = link_to "Cancel", dataset_path(@dataset.key), class: "button cancel"
 
   .history
-    strong Previous changes
-
-    - @dataset_edits.previous(params[:id]).each do |dataset_edit|
-      .change
-        .left
-          .created
-            = I18n.l dataset_edit.created_at, format: :short
-          .by
-            = dataset_edit.user_id
-
-        .right
-          .changed_value
-            = "Changed value to #{ dataset_edit.value }"
-          .reason
-            = dataset_edit.commit
-
-        .clear
+    = render 'history'

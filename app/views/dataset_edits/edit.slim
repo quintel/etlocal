@@ -4,12 +4,15 @@
       div.error= message
 
   = form_for @dataset_edit, url: dataset_dataset_edit_path(params[:dataset_id], params[:id]), method: :patch do |f|
-    = f.hidden_field :area, value: params[:dataset_id]
+    = f.hidden_field :dataset_id, value: @dataset.id
     = f.hidden_field :key, value: params[:id]
 
     .field
       = f.label params[:id]
-      = f.text_field :value, placeholder: dataset_value_for(params[:id]).to_s
+
+      - if is_boolean_field?(params[:id])
+      - else
+        = f.text_field :value, placeholder: dataset_value_for(params[:id]).to_s
 
     .field
       = f.label :commit

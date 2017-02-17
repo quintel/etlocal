@@ -5,7 +5,10 @@ class DatasetEdit < ApplicationRecord
   accepts_nested_attributes_for :source
 
   validates_presence_of :commit
-  validates_presence_of :area
+  validates_presence_of :dataset_id
   validates_presence_of :key
   validates_presence_of :value
+
+  def original_value
+  end
 end

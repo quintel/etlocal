@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170216132336) do
+ActiveRecord::Schema.define(version: 20170217091922) do
 
   create_table "dataset_edits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
     t.integer  "source_id"
+    t.integer  "dataset_id"
     t.string   "commit"
-    t.string   "area"
     t.string   "key"
     t.string   "value"
     t.datetime "created_at", null: false
@@ -44,17 +44,6 @@ ActiveRecord::Schema.define(version: 20170216132336) do
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
-  end
-
-  create_table "versions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
-    t.string   "item_type",      limit: 191,        null: false
-    t.integer  "item_id",                           null: false
-    t.string   "event",                             null: false
-    t.string   "whodunnit"
-    t.text     "object",         limit: 4294967295
-    t.datetime "created_at"
-    t.string   "commit_message"
-    t.index ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
   end
 
 end

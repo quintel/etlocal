@@ -1,6 +1,6 @@
 class DatasetEditCollection
-  def self.for(area)
-    new(DatasetEdit.where(area: area))
+  def self.for(dataset_id)
+    new(DatasetEdit.where(dataset_id: dataset_id))
   end
 
   def initialize(dataset_edits)

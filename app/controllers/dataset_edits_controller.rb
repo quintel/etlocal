@@ -20,16 +20,16 @@ class DatasetEditsController < ApplicationController
   private
 
   def find_dataset
-    @dataset = Atlas::Dataset::Derived.find(params[:dataset_id])
+    @dataset = Dataset.find(params[:dataset_id])
   end
 
   def find_previous_edits
-    @dataset_edits = DatasetEditCollection.for(params[:dataset_id])
+    @dataset_edits = DatasetEditCollection.for(@dataset.id)
   end
 
   def dataset_edit_params
     params
       .require(:dataset_edit)
-      .permit(:commit, :value, :key, :area, source_attributes: [:source_file])
+      .permit(:commit, :value, :key, :dataset_id, source_attributes: [:source_file])
   end
 end

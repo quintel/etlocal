@@ -18,7 +18,7 @@ describe DatasetEdit do
   end
 
   it "can't have a blank area" do
-    expect(dataset).to have(1).errors_on(:area)
+    expect(dataset).to have(1).errors_on(:dataset_id)
   end
 
   it "can't have a blank key" do

@@ -3,7 +3,7 @@ FactoryGirl.define do
     user
     source
     commit "Some commit"
-    area "ameland"
+    dataset_id 10
     key "number_of_cars"
     value 1.0
   end

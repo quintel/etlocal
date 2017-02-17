@@ -15,7 +15,7 @@ describe DatasetEditsController do
     before do
       post :update, params: { dataset_id: dataset.key, id: 'number_of_buildings', dataset_edit: {
         source_attributes: { source_file: fixture_file_upload('test.xls') },
-        area: dataset.key,
+        dataset_id: dataset.id,
         key: 'number_of_buildings',
         commit: "Because of reasons",
         value: 2000

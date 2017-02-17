@@ -11,7 +11,7 @@ class DatasetEditsController < ApplicationController
     @dataset_edit = current_user.dataset_edits.new(dataset_edit_params)
 
     if @dataset_edit.save
-      redirect_to dataset_path(@dataset.key)
+      redirect_to dataset_path(@dataset.area)
     else
       render :edit
     end

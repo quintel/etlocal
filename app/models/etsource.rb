@@ -1,5 +1,5 @@
 module Etsource
   def self.collection(datasets = nil)
-    @collection ||= datasets
+    @datasets ||= datasets
   end
 end

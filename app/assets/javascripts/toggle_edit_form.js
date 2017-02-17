@@ -1,7 +1,7 @@
 $(document).on('turbolinks:load', function () {
     'use strict';
 
-    $("div.editable strong.key").on("click.enable", function () {
+    $("div.editable strong.key, div.editable span.val").on("click.enable", function () {
         $("div.editable").removeClass("enabled");
 
         $(this).parents(".editable").addClass("enabled");

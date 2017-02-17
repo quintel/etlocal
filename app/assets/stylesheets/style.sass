@@ -1,8 +1,10 @@
 // Variables
 $error-color: #e77
+$pending: #f6a633
+$border-color: #eee
 
 .header
-  border-bottom: 1px solid #eee
+  border-bottom: 1px solid $border-color
   margin: 20px 0 25px
   padding: 10px 0
 
@@ -54,18 +56,29 @@ table tbody tr td a.button
 .attributes
   .editable
     margin: 5px 0
+
     &:hover
       cursor: pointer
 
     &.enabled
       padding: 12px 18px
-      border: 1px solid #ddd
+      border: 1px solid $border-color
       margin-left: -18px
       box-shadow: 0px 2px 5px 0px #ccc
 
       .actions
         margin-top: 10px
         display: block
+
+    span.status
+      border-left-width: 6px
+      border-left-style: solid
+      border-left-color: transparent
+      padding-left: 5px
+      margin-left: -11px
+
+      &.edited
+        border-left-color: $pending
 
     strong
       width: 600px
@@ -101,12 +114,12 @@ table tbody tr td a.button
       height: 200px
 
   .history
-    border-left: 1px solid #eee
+    border-left: 1px solid $border-color
     padding-left: 20px
 
     .change
       margin-bottom: 6px
-      border-bottom: 1px solid #eee
+      border-bottom: 1px solid $border-color
       padding: 12px 0
 
       .left

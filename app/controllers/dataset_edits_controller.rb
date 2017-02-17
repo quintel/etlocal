@@ -9,7 +9,6 @@ class DatasetEditsController < ApplicationController
 
   def update
     @dataset_edit = current_user.dataset_edits.new(dataset_edit_params)
-    @dataset_edit.build_source
 
     if @dataset_edit.save
       redirect_to dataset_path(@dataset.key)

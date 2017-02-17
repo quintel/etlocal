@@ -16,6 +16,6 @@ class DatasetEditCollection
   end
 
   def find(key)
-    previous(key).first
+    previous(key.to_s).first
   end
 end

@@ -2,4 +2,20 @@ h4 Datasets
 
 - @datasets.each do |dataset|
   .dataset
-    = link_to dataset.area, dataset_path(dataset.area)
+    h5= dataset.area.humanize
+
+    - if dataset.dataset_edits.all.any?
+      dl.info
+        dt.label Latest edit
+        dd
+          span= I18n.l dataset.dataset_edits.latest.created_at, format: :simple
+          span by
+          span= dataset.dataset_edits.latest.user.name
+
+        dt.label Amount of edits
+        dd= dataset.dataset_edits.all.count
+
+    .actions
+      = link_to "Edit", dataset_path(dataset.area), class: "button"
+
+    .clear

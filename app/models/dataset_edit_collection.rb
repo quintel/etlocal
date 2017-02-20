@@ -18,4 +18,8 @@ class DatasetEditCollection
   def find(key)
     previous(key.to_s).first
   end
+
+  def latest
+    all.first
+  end
 end

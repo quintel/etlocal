@@ -11,8 +11,10 @@ class DatasetEditsController < ApplicationController
     @dataset_edit = current_user.dataset_edits.new(dataset_edit_params)
 
     if @dataset_edit.save
-      redirect_to dataset_path(@dataset.area),
-        flash: { success: I18n.t("dataset_edit.success", key: @dataset_edit.key, value: @dataset_edit.value) }
+      redirect_to dataset_path(@dataset.area), flash: {
+        success: I18n.t("dataset_edit.success",
+          key: @dataset_edit.key, value: @dataset_edit.value)
+      }
     else
       @dataset_edit.build_source
 

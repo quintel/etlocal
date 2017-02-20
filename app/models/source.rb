@@ -4,12 +4,16 @@ class Source < ApplicationRecord
   has_many :dataset_edits
 
   validates_presence_of :source_file
+
+  # Validates attachments content types. The content types are in alphabetical
+  # order. Please stick to that.
   validates_attachment_content_type :source_file, content_type: [
     'application/octet-stream',
-    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    'application/pdf',
     'application/vnd.ms-excel',
     'application/vnd.ms-office',
+    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     'application/x-ole-storage',
     'application/xls',
     'application/xlsx',

@@ -13,6 +13,8 @@ class DatasetEditsController < ApplicationController
     if @dataset_edit.save
       redirect_to dataset_path(@dataset.area)
     else
+      @dataset_edit.build_source
+
       render :edit
     end
   end

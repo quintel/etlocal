@@ -1,4 +1,4 @@
-- area = lutjebroek
+- area = ameland
 - id = 10
 - parent_id = 10
 - enabled.etengine = true
@@ -79,7 +79,7 @@
 - base_dataset = nl
 - scaling.area_attribute = number_of_residences
 - scaling.base_value = 7449298
-- scaling.has_agriculture = 
-- scaling.has_energy = 
-- scaling.has_industry = 
+- scaling.has_agriculture =
+- scaling.has_energy =
+- scaling.has_industry =
 - scaling.value = 1000

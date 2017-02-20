@@ -14,5 +14,6 @@ module Etlocal
     config.time_zone = "Europe/Amsterdam"
 
     config.encoding  = "utf-8"
+    config.etsource_path = '../etsource'
   end
 end

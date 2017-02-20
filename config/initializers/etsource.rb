@@ -1,1 +1,1 @@
-Atlas.data_dir = '../etsource'
+Atlas.data_dir = Rails.configuration.etsource_path

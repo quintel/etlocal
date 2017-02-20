@@ -1,6 +1,7 @@
 // Variables
 $error-color: #e77
-$pending: #f6a633
+$pending-color: #f6a633
+$success-color: #a8ed96
 $border-color: #eee
 
 .header
@@ -35,9 +36,6 @@ form
   .error
     background-color: $error-color
     border-color: darken($error-color, 20)
-    padding: 4px 10px
-    margin-bottom: 10px
-    border-radius: 4px
 
   &.dataset
     textarea#dataset_commit_message
@@ -78,7 +76,7 @@ table tbody tr td a.button
       margin-left: -11px
 
       &.edited
-        border-left-color: $pending
+        border-left-color: $pending-color
 
     strong
       width: 600px
@@ -154,3 +152,12 @@ table tbody tr td a.button
 .clear
   clear: both
 
+.notice
+  padding: 4px 10px
+  margin-bottom: 10px
+  border-radius: 4px
+
+.flash
+  .success
+    background-color: $success-color
+    border: 1px solid darken($success-color, 20)

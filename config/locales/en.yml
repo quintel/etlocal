@@ -4,3 +4,6 @@ en:
       simple: "%Y-%m-%d:%H:%M"
 
   application: ETLocal
+
+  dataset_edit:
+    success: "Successfully changed %{key} to %{value}"

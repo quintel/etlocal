@@ -1,3 +1,7 @@
+- if flash[:success]
+  .flash
+    .success.notice= flash[:success]
+
 h4= @dataset.area.humanize
 
 .attributes

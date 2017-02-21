@@ -139,9 +139,20 @@ table tbody tr td a.button
   margin-bottom: 20px
   box-shadow: 0px 2px 5px 0px #ccc
 
+  a
+    text-decoration: none
+    color: black
+
+    &:hover
+      color: black
+
+  &:hover
+    background-color: #f7f7f7
+
   .image
     float: left
     margin-right: 20px
+    height: 200px
 
   .context
     padding: 12px 15px 0 15px
@@ -151,7 +162,7 @@ table tbody tr td a.button
     margin-bottom: 5px
 
   dl.info
-    font-size: 11px
+    font-size: 13px
     color: #555555
     margin: 5px 0
 
@@ -161,12 +172,6 @@ table tbody tr td a.button
 
     dd > span
       margin-right: 5px
-
-  .actions
-    float: right
-    position: absolute
-    bottom: 8px
-    right: 15px
 
 .clear
   clear: both

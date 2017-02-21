@@ -1,8 +1,10 @@
 class Dataset
+  ATLAS_ATTRIBUTES = %i(base_dataset analysis_year area id)
+
   attr_reader :atlas_dataset
 
   def self.all
-    Etsource.collection
+    Etsource.datasets
   end
 
   def self.find(area)
@@ -15,14 +17,12 @@ class Dataset
 
   def initialize(atlas_dataset)
     @atlas_dataset = atlas_dataset
-  end
 
-  def area
-    @atlas_dataset.area
-  end
-
-  def id
-    @atlas_dataset.id
+    ATLAS_ATTRIBUTES.each do |attribute|
+      define_singleton_method attribute do
+        @atlas_dataset.public_send(attribute)
+      end
+    end
   end
 
   def editable_attributes
@@ -31,12 +31,11 @@ class Dataset
     end
   end
 
-  def dataset_edits
-    DatasetEditCollection.for(id)
+  def inputs
+    Input.all.map(&:key)
   end
 
-  def original_value_for(key)
-    atlas_dataset.init[key.to_sym] ||
-    atlas_dataset.public_send(key)
+  def dataset_edits
+    DatasetEditCollection.for(id)
   end
 end

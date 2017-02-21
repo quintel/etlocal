@@ -4,10 +4,15 @@
 
 h4= @dataset.area.humanize
 
-.attributes
-  .static.tab
-    h5 Static
+ul.tab-nav
+  li.tab= link_to 'Static', "#static", class: "active"
+  li.tab= link_to 'Area attributes', "#area_attributes"
+  li.tab= link_to 'Inputs', "#inputs"
 
+.clear
+
+.attributes
+  .static.tab.active data= { tab: "#static" }
     .non-editable
       strong.key Base dataset
       span.val= @dataset.base_dataset
@@ -16,15 +21,11 @@ h4= @dataset.area.humanize
       strong.key Analysis year
       span.val= @dataset.analysis_year
 
-  .area.tab
-    h5 Area attributes
-
+  .area.tab data= { tab: "#area_attributes" }
     - @dataset.editable_attributes.each do |attribute|
       = render 'editable', key: attribute.name, value: dataset_value_for(attribute.name)
 
-  .initializer-inputs.tab
-    h5 Inputs
-
+  .initializer-inputs.tab data= { tab: "#inputs" }
     - @dataset.inputs.each do |key, value|
       = render 'editable', key: key, value: dataset_input_value_for(key)
 

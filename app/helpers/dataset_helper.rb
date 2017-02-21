@@ -26,4 +26,8 @@ module DatasetHelper
 
     !!value == value
   end
+
+  def is_boolean_value?(value)
+    value.to_s =~ /true|false/
+  end
 end

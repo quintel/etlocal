@@ -2,20 +2,24 @@ h4 Datasets
 
 - @datasets.each do |dataset|
   .dataset
-    h5= dataset.area.humanize
+    .image
+      img src=dataset.map_image
 
-    - if dataset.dataset_edits.all.any?
-      dl.info
-        dt.label Latest edit
-        dd
-          span= I18n.l dataset.dataset_edits.latest.created_at, format: :simple
-          span by
-          span= dataset.dataset_edits.latest.user.name
+    .context
+      h5= dataset.area.humanize
 
-        dt.label Amount of edits
-        dd= dataset.dataset_edits.all.count
+      - if dataset.dataset_edits.all.any?
+        dl.info
+          dt.label Latest edit
+          dd
+            span= I18n.l dataset.dataset_edits.latest.created_at, format: :simple
+            span by
+            span= dataset.dataset_edits.latest.user.name
 
-    .actions
-      = link_to "View", dataset_path(dataset.area), class: "button"
+          dt.label Amount of edits
+          dd= dataset.dataset_edits.all.count
 
-    .clear
+      .actions
+        = link_to "View", dataset_path(dataset.area), class: "button"
+
+      .clear

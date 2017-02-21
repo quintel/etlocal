@@ -1,9 +1,16 @@
 .editable
   span.status class=('edited' if has_dataset_edit?(key))
-  strong.key= key
-  span.val= value
+  strong.key title=(key.to_s)
+    = truncate(key.to_s, length: 48)
+  span.val
+    - if is_boolean_value?(value)
+      i.fa class=(value ? "fa-check" : "fa-times")
+    - else
+      = value
 
   .actions
     = link_to "Edit", edit_dataset_dataset_edit_path(@dataset.area, key), class: "button"
     span.or or
     = link_to "Cancel", "#", class: "button cancel"
+
+  .clear

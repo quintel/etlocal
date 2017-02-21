@@ -5,21 +5,18 @@
 h4= @dataset.area.humanize
 
 ul.tab-nav
-  li.tab= link_to 'Static', "#static", class: "active"
-  li.tab= link_to 'Area attributes', "#area_attributes"
-  li.tab= link_to 'Inputs', "#inputs"
+  li.tab= link_to I18n.t("datasets.menu.static"),          "#static", class: "active"
+  li.tab= link_to I18n.t("datasets.menu.area_attributes"), "#area_attributes"
+  li.tab= link_to I18n.t("datasets.menu.inputs"),          "#inputs"
 
 .clear
 
 .attributes
   .static.tab.active data= { tab: "#static" }
-    .non-editable
-      strong.key Base dataset
-      span.val= @dataset.base_dataset
-
-    .non-editable
-      strong.key Analysis year
-      span.val= @dataset.analysis_year
+    - @dataset.static_attributes.each do |attribute|
+      .non-editable
+        strong.key= I18n.t("datasets.attributes.static.#{ attribute }")
+        span.val= @dataset.public_send(attribute)
 
   .area.tab data= { tab: "#area_attributes" }
     - @dataset.editable_attributes.each do |attribute|

@@ -43,6 +43,10 @@ class Dataset
     end
   end
 
+  def static_attributes
+    %i(base_dataset analysis_year)
+  end
+
   def inputs
     Input.all.map(&:key)
   end

@@ -4,7 +4,8 @@
 
   - if current_user
     .current-user
-      span Signed in as&nbsp;
+      span= I18n.t("user.signed_in_as")
+      span &nbsp;
       span= current_user.email
 
-      = link_to 'Sign out', destroy_user_session_path, class: 'button', method: :delete
+      = link_to I18n.t("user.sign_out"), destroy_user_session_path, class: 'button', method: :delete

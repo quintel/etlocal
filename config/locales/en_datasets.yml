@@ -1,0 +1,11 @@
+en:
+  datasets:
+    menu:
+      static: Static
+      area_attributes: Area attributes
+      inputs: Inputs
+
+    attributes:
+      static:
+        base_dataset: Base dataset
+        analysis_year: Analysis year

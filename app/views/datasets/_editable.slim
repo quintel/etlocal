@@ -2,9 +2,10 @@
   span.status class=('edited' if has_dataset_edit?(key))
   strong.key title=(key.to_s)
     = truncate(key.to_s, length: 48)
+
   span.val
     - if is_boolean_value?(value)
-      i.fa class=(value ? "fa-check" : "fa-times")
+      i.fa class=(value.to_s == "true" ? "fa-check" : "fa-times")
     - else
       = value
 

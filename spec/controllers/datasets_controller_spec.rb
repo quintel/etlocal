@@ -14,7 +14,7 @@ describe DatasetsController do
     it 'fetches the show page' do
       dataset = Atlas::Dataset::Derived.find(:ameland)
 
-      get :show, params: { id: dataset.key }
+      get :show, params: { area: dataset.area }
 
       expect(response).to be_success
     end

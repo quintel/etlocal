@@ -6,6 +6,7 @@ class DatasetsController < ApplicationController
   end
 
   def show
-    @dataset = Dataset.find(params[:id])
+    @dataset       = Dataset.find(params[:area])
+    @dataset_edits = DatasetEditCollection.for(@dataset.id)
   end
 end

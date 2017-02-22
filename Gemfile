@@ -30,6 +30,12 @@ group :development, :test do
   gem 'rspec-collection_matchers'
   gem 'rspec-rails'
   gem 'pry'
+
+  gem 'capistrano',             '~> 3.0',   require: false
+  gem 'capistrano-rbenv',       '~> 2.0',   require: false
+  gem 'capistrano-rails',       '~> 1.1',   require: false
+  gem 'capistrano-bundler',     '~> 1.1',   require: false
+  gem 'capistrano3-unicorn',    '~> 0.2',   require: false
 end
 
 group :test do
@@ -41,6 +47,11 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :production, :staging do
+  gem 'unicorn'
+  gem 'airbrake'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

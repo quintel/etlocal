@@ -38,6 +38,12 @@ ul.tab-nav
           h5= I18n.t("datasets.group.#{ group }")
 
           - grouped_inputs.each do |share_group, inputs|
+            h6
+              - if share_group
+                = I18n.t("datasets.share_group.#{ share_group }")
+              - else
+                = I18n.t("datasets.share_group.none")
+
             - inputs.each do |input|
               = render 'editable', key: input.key, value: dataset_input_value_for(input.key)
     .clear

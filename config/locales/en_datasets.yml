@@ -39,3 +39,29 @@ en:
       transport_plane: Transport plane
       transport_train: Transport train
       transport_truck: Transport truck
+
+    share_group:
+      none: Demands
+      agri_heat: Agri heat
+      buildings_appliances: Buildings appliances
+      cooling_buildings: Cooling buildings
+      district_heating_buildings: District heating buildings
+      heating_buildings: Heating buildings
+      lighting_buildings: Lighting buildings
+      cooking: Cooking
+      cooling_households: Cooling households
+      district_heating_households: District heating households
+      heating_households: Heating households
+      hot_water_households: Hot water households
+      lighting_households: Lighting households
+      chemical_fertilizers_heat: Chemical fertilizers heat
+      chemical_other_heat: Chemical other heat
+      chemical_refineries_heat: Chemical refineries heat
+      other_food_heat: Other food heat
+      other_paper_heat: Other paper heat
+      transport_car_tech: Transport car tech
+      transport_diesel: Transport diesel
+      transport_gasoline: Transport gasoline
+      transport_marine: Transport marine
+      transport_train_tech: Transport train tech
+      transport_truck_tech: Transport truck tech

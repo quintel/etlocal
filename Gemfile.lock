@@ -1,4 +1,15 @@
 GIT
+  remote: https://github.com/quintel/atlas.git
+  revision: 38248bef4cb83877ea1c8c9ceacc645e76d2e78c
+  ref: 38248be
+  specs:
+    atlas (1.0.0)
+      activemodel (>= 4.0)
+      activesupport (>= 4.0)
+      turbine-graph (>= 0.1)
+      virtus (~> 1.0)
+
+GIT
   remote: https://github.com/quintel/refinery.git
   revision: 636686c0d6cb5a76f47d5fc67c75b6f307e6f636
   ref: 636686c
@@ -14,15 +25,6 @@ GIT
   ref: ad3d44e
   specs:
     rubel (0.1.0)
-
-PATH
-  remote: ../atlas
-  specs:
-    atlas (1.0.0)
-      activemodel (~> 5.0)
-      activesupport (~> 5.0)
-      turbine-graph (>= 0.1)
-      virtus (~> 1.0)
 
 GEM
   remote: https://rubygems.org/

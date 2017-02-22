@@ -20,10 +20,9 @@ gem 'paperclip'
 gem 'devise'
 gem 'pundit'
 
-#gem 'atlas', ref: 'ff004b2', github: 'quintel/atlas'
+gem 'atlas',    ref: '38248be', github: 'quintel/atlas'
 gem 'rubel',    ref: 'ad3d44e', github: 'quintel/rubel'
 gem 'refinery', ref: '636686c', github: 'quintel/refinery'
-gem 'atlas', path: '../atlas'
 
 group :development, :test do
   gem 'byebug', platform: :mri

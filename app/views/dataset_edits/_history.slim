@@ -1,4 +1,4 @@
-strong Previous changes
+strong = I18n.t("dataset_edits.history")
 
 - @dataset_edits.previous(params[:attribute_name]).each do |dataset_edit|
   .change
@@ -6,15 +6,14 @@ strong Previous changes
       .created
         = I18n.l dataset_edit.created_at, format: :short
       .by
-        | by&nbsp;
-        = dataset_edit.user.name
+        = I18n.t("dataset_edits.changed_by", user: dataset_edit.user.name)
 
     .right
       .changed_value
-        = "Changed value to #{ dataset_edit.value }"
+        = I18n.t("dataset_edits.changed_to", value: dataset_edit.value)
       .reason
         = dataset_edit.commit
 
-      = link_to "Download source", dataset_edit.source.source_file.url, class: "button"
+      = link_to I18n.t("dataset_edits.download_source"), dataset_edit.source.source_file.url, class: "button"
 
     .clear

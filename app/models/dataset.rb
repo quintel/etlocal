@@ -1,11 +1,7 @@
 class Dataset
   ATLAS_ATTRIBUTES = %i(base_dataset analysis_year area id)
-
-  DATASET_MAPS = {
-    drenthe:          { center: "52.971641,6.702942", zoom: 8 },
-    ameland:          { center: "53.447075,5.780356", zoom: 9 },
-    noorderplantsoen: { center: "53.224561,6.556155", zoom: 14 }
-  }
+  DATASET_MAPS     = YAML.load_file(Rails.root.join("config", "maps.yml")).freeze
+  EDITABLE_TYPES   = { booleans: Axiom::Types::Boolean, floats: Axiom::Types::Float }.freeze
 
   attr_reader :atlas_dataset
 
@@ -32,14 +28,17 @@ class Dataset
   end
 
   def map_image
-    options = DATASET_MAPS[area.to_sym]
+    options = DATASET_MAPS[area] || DATASET_MAPS["default"]
+    options["size"] = "200x200"
 
-    "https://maps.googleapis.com/maps/api/staticmap?center=#{ options[:center] }&zoom=#{ options[:zoom] }&size=200x200"
+    "https://maps.googleapis.com/maps/api/staticmap?#{ options.to_query }"
   end
 
   def editable_attributes
-    @atlas_dataset.send(:attribute_set).select do |attribute|
-      [Axiom::Types::Float, Axiom::Types::Boolean].include?(attribute.type)
+    attribute_set = @atlas_dataset.send(:attribute_set)
+
+    EDITABLE_TYPES.map do |key, type|
+      [key, attribute_set.select { |attr| attr.type == type }]
     end
   end
 
@@ -48,7 +47,7 @@ class Dataset
   end
 
   def inputs
-    Input.all.map(&:key)
+    Input.sorted
   end
 
   def dataset_edits

@@ -55,9 +55,13 @@ table tbody tr td a.button
   .non-editable, .editable
     margin: 15px 0
 
+  .group
+    margin-top: 25px
+
   .editable
-    &:hover
-      cursor: pointer
+    p.key, span.val
+      &:hover
+        cursor: pointer
 
     &.enabled
       padding: 12px 18px
@@ -65,6 +69,9 @@ table tbody tr td a.button
       margin-left: -18px
       box-shadow: 0px 2px 5px 0px #ccc
       line-height: 38px
+
+      p.key:before
+        top: 22px
 
       .actions
         display: inline
@@ -85,6 +92,7 @@ table tbody tr td a.button
         border-left-color: $pending-color
 
     span.val
+      margin-left: 7px
       i.fa
         &.fa-times
           color: darken($error-color, 30)
@@ -95,11 +103,24 @@ table tbody tr td a.button
     .actions
       display: none
 
-  strong.key
-    width: 400px
-    word-wrap: break-word
+  p.key
+    width: 550px
     padding-right: 20px
     display: inline-block
+    position: relative
+    margin-bottom: 0
+
+    span
+      background: white
+      padding-right: 4px
+
+    &:before
+      content: ''
+      position: absolute
+      border-bottom: 2px dotted darken($border-color, 30)
+      width: 100%
+      top: 15px
+      z-index: -1
 
 .edit-form >
   .errors .error
@@ -211,6 +232,7 @@ ul.tab-nav
 
 div.tab
   display: none
+  padding: 0 13px
 
   &.active
     display: block

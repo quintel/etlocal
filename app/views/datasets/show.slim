@@ -15,16 +15,32 @@ ul.tab-nav
   .static.tab.active data= { tab: "#static" }
     - @dataset.static_attributes.each do |attribute|
       .non-editable
-        strong.key= I18n.t("datasets.attributes.static.#{ attribute }")
+        p.key
+          span= I18n.t("datasets.attributes.static.#{ attribute }")
+
         span.val= @dataset.public_send(attribute)
 
   .area.tab data= { tab: "#area_attributes" }
-    - @dataset.editable_attributes.each do |attribute|
-      = render 'editable', key: attribute.name, value: dataset_value_for(attribute.name)
+    .content
+      - @dataset.editable_attributes.each do |group, attributes|
+        .group
+          h5= I18n.t("datasets.group.#{ group }")
+
+          - attributes.each do |attribute|
+            = render 'editable', key: attribute.name, value: dataset_value_for(attribute.name)
+
+    .clear
 
   .initializer-inputs.tab data= { tab: "#inputs" }
-    - @dataset.inputs.each do |key, value|
-      = render 'editable', key: key, value: dataset_input_value_for(key)
+    .content
+      - @dataset.inputs.each do |group, grouped_inputs|
+        .group
+          h5= I18n.t("datasets.group.#{ group }")
+
+          - grouped_inputs.each do |share_group, inputs|
+            - inputs.each do |input|
+              = render 'editable', key: input.key, value: dataset_input_value_for(input.key)
+    .clear
 
 .actions
   = link_to "Home", datasets_path, class: "button"

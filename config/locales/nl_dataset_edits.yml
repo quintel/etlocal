@@ -1,0 +1,7 @@
+nl:
+  dataset_edits:
+    changed_by: "door %{user}"
+    changed_to: "Waarde gewijzigd naar %{value}"
+    download_source: "Download bron"
+    history: Geschiedenis
+    success: "Succesvol %{key} naar %{value} veranderd"

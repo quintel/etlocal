@@ -6,7 +6,3 @@ nl:
   time:
     formats:
       simple: "%Y-%m-%d:%H:%M"
-
-  dataset_edit:
-    success: "Succesvol %{key} naar %{value} aangepast"
-

@@ -9,3 +9,33 @@ en:
       static:
         base_dataset: Base dataset
         analysis_year: Analysis year
+
+    group:
+      agriculture: Agriculture
+      booleans: Toggles
+      buildings_appliances: Buildings appliances
+      buildings_cooling: Buildings cooling
+      buildings_district_heating: Buildings district heating
+      buildings_heating: Buildings heating
+      buildings_lighting: Buildings lighting
+      buildings_misc: Buildings misc
+      floats: Other
+      households_cooking: Households cooking
+      households_cooling: Households cooling
+      households_demand: Households demand
+      households_district_heating: Households district heating
+      households_heating: Households heating
+      households_hot_water: Households hot water
+      households_lighting: Households lighting
+      households_misc: Households misc
+      industry: Industry
+      number_of: Number of
+      other: Other
+      supply: Supply
+      transport_car: Transport car
+      transport_diesel_road: Transport diesel road
+      transport_gasoline: Transport gasoline
+      transport_marine: Transport marine
+      transport_plane: Transport plane
+      transport_train: Transport train
+      transport_truck: Transport truck

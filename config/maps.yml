@@ -1,0 +1,17 @@
+---
+  drenthe:
+    center: "52.971641,6.702942"
+    zoom: 8
+
+  ameland:
+    center: "53.447075,5.780356"
+    zoom: 9
+
+  noorderplantsoen:
+    center: "53.224561,6.556155"
+    zoom: 14
+
+  default:
+    center: "0,0"
+    zoom: 1
+

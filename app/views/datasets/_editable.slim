@@ -1,7 +1,7 @@
 .editable
   span.status class=('edited' if has_dataset_edit?(key))
-  strong.key title=(key.to_s)
-    = truncate(key.to_s, length: 48)
+  p.key title = I18n.t("activerecord.attributes.dataset_edit.#{ key }")
+    span= truncate(I18n.t("activerecord.attributes.dataset_edit.#{ key }"), length: 80)
 
   span.val
     - if is_boolean_value?(value)

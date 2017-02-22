@@ -6,6 +6,3 @@ en:
   time:
     formats:
       simple: "%Y-%m-%d:%H:%M"
-
-  dataset_edit:
-    success: "Successfully changed %{key} to %{value}"

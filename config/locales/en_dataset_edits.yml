@@ -1,0 +1,7 @@
+en:
+  dataset_edits:
+    changed_by: "by %{user}"
+    changed_to: "Changed value to %{value}"
+    download_source: "Download source"
+    history: History
+    success: "Successfully changed %{key} to %{value}"

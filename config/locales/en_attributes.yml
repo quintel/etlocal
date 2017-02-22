@@ -1,0 +1,303 @@
+en:
+  activerecord:
+    attributes:
+      dataset_edit:
+        commit: "Reason"
+        source_file: "Source file"
+
+        # Start of area attributes
+        has_agriculture: Has agriculture
+        has_buildings: Has buildings
+        has_climate: Has climate
+        has_coastline: Has coastline
+        has_cold_network: Has cold network
+        has_electricity_storage: Has electricity storage
+        has_employment: Has employment
+        has_fce: Has fce
+        has_industry: Has industry
+        has_lignite: Has lignite
+        has_merit_order: Has merit order
+        has_metal: Has metal
+        has_mountains: Has mountains
+        has_old_technologies: Has old technologies
+        has_other: Has other
+        has_solar_csp: Has solar csp
+        has_import_export: Has import export
+        use_network_calculations: Use network calculations
+        use_merit_order_demands: Use merit order demands
+        has_aggregated_chemical_industry: Has aggregated chemical industry
+        has_detailed_chemical_industry: Has detailed chemical industry
+        has_aggregated_other_industry: Has aggregated other industry
+        has_detailed_other_industry: Has detailed other industry
+        buildings_insulation_constant_1: Buildings insulation constant 1
+        buildings_insulation_constant_2: Buildings insulation constant 2
+        buildings_insulation_cost_constant: Buildings insulation cost constant
+        buildings_insulation_employment_constant: Buildings insulation employment constant
+        co2_percentage_free: Co2 percentage free
+        co2_price: Co2 price
+        economic_multiplier: Economic multiplier
+        employment_fraction_production: Employment fraction production
+        employment_local_fraction: Employment local fraction
+        export_electricity_primary_demand_factor: Export electricity primary demand factor
+        import_electricity_primary_demand_factor: Import electricity primary demand factor
+        insulation_level_buildings_max: Insulation level buildings max
+        insulation_level_buildings_min: Insulation level buildings min
+        insulation_level_new_houses_max: Insulation level new houses max
+        insulation_level_new_houses_min: Insulation level new houses min
+        insulation_level_old_houses_max: Insulation level old houses max
+        insulation_level_old_houses_min: Insulation level old houses min
+        new_houses_insulation_constant_1: New houses insulation constant 1
+        new_houses_insulation_constant_2: New houses insulation constant 2
+        new_houses_insulation_cost_constant: New houses insulation cost constant
+        new_houses_insulation_employment_constant: New houses insulation employment constant
+        old_houses_insulation_constant_1: Old houses insulation constant 1
+        old_houses_insulation_constant_2: Old houses insulation constant 2
+        old_houses_insulation_cost_constant: Old houses insulation cost constant
+        old_houses_insulation_employment_constant: Old houses insulation employment constant
+        man_hours_per_man_year: Man hours per man year
+        technical_lifetime_insulation: Technical lifetime insulation
+        investment_hv_net_low: Investment hv net low
+        investment_hv_net_high: Investment hv net high
+        investment_hv_net_per_turbine: Investment hv net per turbine
+        annual_infrastructure_cost_electricity: Annual infrastructure cost electricity
+        annual_infrastructure_cost_gas: Annual infrastructure cost gas
+        areable_land: Areable land
+        capacity_buffer_decentral_in_mj_s: Capacity buffer decentral in mj s
+        capacity_buffer_in_mj_s: Capacity buffer in mj s
+        co2_emission_1990: Co2 emission 1990
+        co2_emission_2009: Co2 emission 2009
+        coast_line: Coast line
+        interconnector_capacity: Interconnector capacity
+        land_available_for_solar: Land available for solar
+        number_of_buildings: Number of buildings
+        number_of_cars: Number of cars
+        number_of_residences: Number of residences
+        number_of_inhabitants: Number of inhabitants
+        number_of_existing_households: Number of existing households
+        number_of_new_residences: Number of new residences
+        number_of_old_residences: Number of old residences
+        offshore_suitable_for_wind: Offshore suitable for wind
+        onshore_suitable_for_wind: Onshore suitable for wind
+        residences_roof_surface_available_for_pv: Residences roof surface available for pv
+        buildings_roof_surface_available_for_pv: Buildings roof surface available for pv
+
+        # Start of input attributes
+        agriculture_burner_crude_oil_share: Agriculture burner crude oil share
+        agriculture_burner_network_gas_share: Agriculture burner network gas share
+        agriculture_burner_wood_pellets_share: Agriculture burner wood pellets share
+        agriculture_final_demand_steam_hot_water_share: Agriculture final demand steam hot water share
+        agriculture_geothermal_share: Agriculture geothermal share
+        agriculture_heatpump_water_water_ts_electricity_share: Agriculture heatpump water water ts electricity share
+        agriculture_useful_demand_electricity: Agriculture useful demand electricity
+        agriculture_useful_demand_useable_heat: Agriculture useful demand useable heat
+        number_of_agriculture_chp_engine_biogas: Number of agriculture chp engine biogas
+        number_of_agriculture_chp_engine_network_gas: Number of agriculture chp engine network gas
+        number_of_agriculture_chp_supercritical_wood_pellets: Number of agriculture chp supercritical wood pellets
+        buildings_appliances_coal_share: Buildings appliances coal share
+        buildings_appliances_crude_oil_share: Buildings appliances crude oil share
+        buildings_appliances_electricity_share: Buildings appliances electricity share
+        buildings_appliances_network_gas_share: Buildings appliances network gas share
+        buildings_appliances_wood_pellets_share: Buildings appliances wood pellets share
+        buildings_cooling_airconditioning_share: Buildings cooling airconditioning share
+        buildings_cooling_collective_heatpump_water_water_ts_electricity_share: Buildings cooling collective heatpump water water ts electricity share
+        buildings_cooling_heatpump_air_water_network_gas_share: Buildings cooling heatpump air water network gas share
+        buildings_chp_engine_biogas_share: Buildings chp engine biogas share
+        buildings_collective_chp_network_gas_share: Buildings collective chp network gas share
+        buildings_collective_chp_wood_pellets_share: Buildings collective chp wood pellets share
+        buildings_collective_geothermal_share: Buildings collective geothermal share
+        buildings_heat_network_connection_steam_hot_water_share: Buildings heat network connection steam hot water share
+        buildings_space_heater_coal_share: Buildings space heater coal share
+        buildings_space_heater_collective_heatpump_water_water_ts_electricity_share: Buildings space heater collective heatpump water water ts electricity share
+        buildings_space_heater_crude_oil_share: Buildings space heater crude oil share
+        buildings_space_heater_district_heating_steam_hot_water_share: Buildings space heater district heating steam hot water share
+        buildings_space_heater_electricity_share: Buildings space heater electricity share
+        buildings_space_heater_heatpump_air_water_network_gas_share: Buildings space heater heatpump air water network gas share
+        buildings_space_heater_network_gas_share: Buildings space heater network gas share
+        buildings_space_heater_solar_thermal_share: Buildings space heater solar thermal share
+        buildings_space_heater_wood_pellets_share: Buildings space heater wood pellets share
+        buildings_lighting_efficient_fluorescent_electricity_share: Buildings lighting efficient fluorescent electricity share
+        buildings_lighting_led_electricity_share: Buildings lighting led electricity share
+        buildings_lighting_standard_fluorescent_electricity_share: Buildings lighting standard fluorescent electricity share
+        buildings_solar_pv_solar_radiation_market_penetration: Buildings solar pv solar radiation market penetration
+        buildings_useful_demand_appliances: Buildings useful demand appliances
+        buildings_useful_demand_cooling: Buildings useful demand cooling
+        buildings_useful_demand_electricity: Buildings useful demand electricity
+        buildings_useful_demand_for_space_heating: Buildings useful demand for space heating
+        buildings_useful_demand_light: Buildings useful demand light
+        households_cooker_halogen_electricity_share: Households cooker halogen electricity share
+        households_cooker_induction_electricity_share: Households cooker induction electricity share
+        households_cooker_network_gas_share: Households cooker network gas share
+        households_cooker_resistive_electricity_share: Households cooker resistive electricity share
+        households_cooker_wood_pellets_share: Households cooker wood pellets share
+        households_cooling_airconditioning_electricity_share: Households cooling airconditioning electricity share
+        households_cooling_heatpump_air_water_electricity_share: Households cooling heatpump air water electricity share
+        households_cooling_heatpump_ground_water_electricity_share: Households cooling heatpump ground water electricity share
+        households_useful_demand_for_cooling: Households useful demand for cooling
+        households_useful_demand_cooking_per_person: Households useful demand cooking per person
+        households_useful_demand_electric_appliances_clothes_dryer: Households useful demand  electric appliances clothes dryer
+        households_useful_demand_electric_appliances_computer_media: Households useful demand electric appliances computer media
+        households_useful_demand_electric_appliances_dishwasher: Households useful demand electric appliances dishwasher
+        households_useful_demand_electric_appliances_fridge_freezer: Households useful demand electric appliances fridge freezer
+        households_useful_demand_electric_appliances_other: Households useful demand electric appliances other
+        households_useful_demand_electric_appliances_television: Households useful demand electric appliances television
+        households_useful_demand_electric_appliances_vacuum_cleaner: Households useful demand electric appliances vacuum cleaner
+        households_useful_demand_electric_appliances_washing_machine: Households useful demand electric appliances washing machine
+        households_useful_demand_for_cooling_new_houses: Households useful demand for cooling new houses
+        households_useful_demand_for_cooling_old_houses: Households useful demand for cooling old houses
+        households_useful_demand_heat_per_person: Households useful demand heat per person
+        households_useful_demand_hot_water: Households useful demand hot water
+        households_useful_demand_lighting: Households useful demand lighting
+        households_useful_demand_new_houses_heat_per_person: Households useful demand new houses heat per person
+        households_useful_demand_old_houses_heat_per_person: Households useful demand old houses heat per person
+        households_collective_chp_biogas_share: Households collective chp biogas share
+        households_collective_chp_network_gas_share: Households collective chp network gas share
+        households_collective_chp_wood_pellets_share: Households collective chp wood pellets share
+        households_collective_geothermal_share: Households collective geothermal share
+        households_heat_network_connection_steam_hot_water_share: Households heat network connection steam hot water share
+        households_space_heater_coal_share: Households space heater coal share
+        households_space_heater_combined_network_gas_share: Households space heater combined network gas share
+        households_space_heater_crude_oil_share: Households space heater crude oil share
+        households_space_heater_district_heating_steam_hot_water_share: Households space heater district heating steam hot water share
+        households_space_heater_electricity_share: Households space heater electricity share
+        households_space_heater_heatpump_air_water_electricity_share: Households space heater heatpump air water electricity share
+        households_space_heater_heatpump_ground_water_electricity_share: Households space heater heatpump ground water electricity share
+        households_space_heater_hybrid_heatpump_air_water_electricity_share: Households space heater hybrid heatpump air water electricity share
+        households_space_heater_micro_chp_network_gas_share: Households space heater micro chp network gas share
+        households_space_heater_network_gas_share: Households space heater network gas share
+        households_space_heater_wood_pellets_share: Households space heater wood pellets share
+        households_water_heater_coal_share: Households water heater coal share
+        households_water_heater_combined_network_gas_share: Households water heater combined network gas share
+        households_water_heater_crude_oil_share: Households water heater crude oil share
+        households_water_heater_district_heating_steam_hot_water_share: Households water heater district heating steam hot water share
+        households_water_heater_fuel_cell_chp_network_gas_share: Households water heater fuel cell chp network gas share
+        households_water_heater_heatpump_air_water_electricity_share: Households water heater heatpump air water electricity share
+        households_water_heater_heatpump_ground_water_electricity_share: Households water heater heatpump ground water electricity share
+        households_water_heater_hybrid_heatpump_air_water_electricity_share: Households water heater hybrid heatpump air water electricity share
+        households_water_heater_micro_chp_network_gas_share: Households water heater micro chp network gas share
+        households_water_heater_network_gas_share: Households water heater network gas share
+        households_water_heater_resistive_electricity_share: Households water heater resistive electricity share
+        households_water_heater_solar_thermal_share: Households water heater solar thermal share
+        households_water_heater_wood_pellets_share: Households water heater wood pellets share
+        households_lighting_efficient_fluorescent_electricity_share: Households lighting efficient fluorescent electricity share
+        households_lighting_incandescent_electricity_share: Households lighting incandescent electricity share
+        households_lighting_led_electricity_share: Households lighting led electricity share
+        households_solar_pv_solar_radiation_market_penetration: Households solar pv solar radiation market penetration
+        industry_aluminium_production: Industry aluminium production
+        industry_chemicals_fertilizers_burner_coal_share: Industry chemicals fertilizers burner coal share
+        industry_chemicals_fertilizers_burner_crude_oil_share: Industry chemicals fertilizers burner crude oil share
+        industry_chemicals_fertilizers_burner_network_gas_share: Industry chemicals fertilizers burner network gas share
+        industry_chemicals_fertilizers_burner_wood_pellets_share: Industry chemicals fertilizers burner wood pellets share
+        industry_chemicals_other_burner_coal_share: Industry chemicals other burner coal share
+        industry_chemicals_other_burner_crude_oil_share: Industry chemicals other burner crude oil share
+        industry_chemicals_other_burner_network_gas_share: Industry chemicals other burner network gas share
+        industry_chemicals_other_burner_wood_pellets_share: Industry chemicals other burner wood pellets share
+        industry_chemicals_refineries_burner_coal_share: Industry chemicals refineries burner coal share
+        industry_chemicals_refineries_burner_crude_oil_share: Industry chemicals refineries burner crude oil share
+        industry_chemicals_refineries_burner_network_gas_share: Industry chemicals refineries burner network gas share
+        industry_chemicals_refineries_burner_wood_pellets_share: Industry chemicals refineries burner wood pellets share
+        industry_final_demand_for_chemical_fertilizers_steam_hot_water_share: Industry final demand for chemical fertilizers steam hot water share
+        industry_final_demand_for_chemical_other_steam_hot_water_share: Industry final demand for chemical other steam hot water share
+        industry_final_demand_for_chemical_refineries_steam_hot_water_share: Industry final demand for chemical refineries steam hot water share
+        industry_final_demand_for_other_food_steam_hot_water_share: Industry final demand for other food steam hot water share
+        industry_final_demand_for_other_paper_steam_hot_water_share: Industry final demand for other paper steam hot water share
+        industry_other_food_burner_coal_share: Industry other food burner coal share
+        industry_other_food_burner_crude_oil_share: Industry other food burner crude oil share
+        industry_other_food_burner_network_gas_share: Industry other food burner network gas share
+        industry_other_food_burner_wood_pellets_share: Industry other food burner wood pellets share
+        industry_other_food_heater_electricity_share: Industry other food heater electricity share
+        industry_other_metals_production: Industry other metals production
+        industry_other_paper_burner_coal_share: Industry other paper burner coal share
+        industry_other_paper_burner_crude_oil_share: Industry other paper burner crude oil share
+        industry_other_paper_burner_network_gas_share: Industry other paper burner network gas share
+        industry_other_paper_burner_wood_pellets_share: Industry other paper burner wood pellets share
+        industry_other_paper_heater_electricity_share: Industry other paper heater electricity share
+        industry_steel_production: Industry steel production
+        industry_useful_demand_for_chemical_aggregated_industry: Industry useful demand for chemical aggregated industry
+        industry_useful_demand_for_chemical_fertilizers: Industry useful demand for chemical fertilizers
+        industry_useful_demand_for_chemical_other_coal_non_energetic: Industry useful demand for chemical other coal non energetic
+        industry_useful_demand_for_chemical_other_crude_oil_non_energetic: Industry useful demand for chemical other crude oil non energetic
+        industry_useful_demand_for_chemical_other_electricity: Industry useful demand for chemical other electricity
+        industry_useful_demand_for_chemical_other_network_gas_non_energetic: Industry useful demand for chemical other network gas non energetic
+        industry_useful_demand_for_chemical_other_useable_heat: Industry useful demand for chemical other useable heat
+        industry_useful_demand_for_chemical_other_wood_pellets_non_energetic: Industry useful demand for chemical other wood pellets non energetic
+        industry_useful_demand_for_chemical_refineries: Industry useful demand for chemical refineries
+        industry_useful_demand_for_other_aggregated_industry_nl_coal: Industry useful demand for other aggregated industry nl coal
+        industry_useful_demand_for_other_aggregated_industry_nl_coal_non_energetic: Industry useful demand for other aggregated industry nl coal non energetic
+        industry_useful_demand_for_other_aggregated_industry_nl_crude_oil: Industry useful demand for other aggregated industry nl crude oil
+        industry_useful_demand_for_other_aggregated_industry_nl_crude_oil_non_energetic: Industry useful demand for other aggregated industry nl crude oil non energetic
+        industry_useful_demand_for_other_aggregated_industry_nl_electricity: Industry useful demand for other aggregated industry nl electricity
+        industry_useful_demand_for_other_aggregated_industry_nl_network_gas: Industry useful demand for other aggregated industry nl network gas
+        industry_useful_demand_for_other_aggregated_industry_nl_network_gas_non_energetic: Industry useful demand for other aggregated industry nl network gas non energetic
+        industry_useful_demand_for_other_aggregated_industry_nl_useable_heat: Industry useful demand for other aggregated industry nl useable heat
+        industry_useful_demand_for_other_aggregated_industry_nl_wood_pellets: Industry useful demand for other aggregated industry nl wood pellets
+        industry_useful_demand_for_other_aggregated_industry_nl_wood_pellets_non_energetic: Industry useful demand for other aggregated industry nl wood pellets non energetic
+        industry_useful_demand_for_other_aggregated_industry_other: Industry useful demand for other aggregated industry other
+        industry_useful_demand_for_other_construction: Industry useful demand for other construction
+        industry_useful_demand_for_other_food: Industry useful demand for other food
+        industry_useful_demand_for_other_ict: Industry useful demand for other ict
+        industry_useful_demand_for_other_machinery: Industry useful demand for other machinery
+        industry_useful_demand_for_other_minerals: Industry useful demand for other minerals
+        industry_useful_demand_for_other_mining: Industry useful demand for other mining
+        industry_useful_demand_for_other_non_specified: Industry useful demand for other non specified
+        industry_useful_demand_for_other_paper: Industry useful demand for other paper
+        industry_useful_demand_for_other_textile: Industry useful demand for other textile
+        industry_useful_demand_for_other_transport_equipment: Industry useful demand for other transport equipment
+        industry_useful_demand_for_other_wood_products: Industry useful demand for other wood products
+        number_of_industry_chp_combined_cycle_gas_power_fuelmix: Number of industry chp combined cycle gas power fuelmix
+        number_of_industry_chp_engine_gas_power_fuelmix: Number of industry chp engine gas power fuelmix
+        number_of_industry_chp_turbine_gas_power_fuelmix: Number of industry chp turbine gas power fuelmix
+        number_of_energy_power_solar_pv_solar_radiation: Number of energy power solar pv solar radiation
+        other_useful_demand_non_energetic: Other useful demand non energetic
+        energy_distribution_woody_biomass: Energy distribution woody biomass
+        energy_extraction_crude_oil: Energy extraction crude oil
+        energy_extraction_natural_gas: Energy extraction natural gas
+        energy_production_bio_ethanol: Energy production bio ethanol
+        energy_production_bio_oil: Energy production bio oil
+        energy_production_biodiesel: Energy production biodiesel
+        energy_production_biogas: Energy production biogas
+        energy_production_wood: Energy production wood
+        energy_production_woodpellets: Energy production woodpellets
+        energy_production_woody_biomass: Energy production woody biomass
+        number_of_energy_chp_combined_cycle_network_gas: Number of energy chp combined cycle network gas
+        number_of_energy_chp_supercritical_waste_mix: Number of energy chp supercritical waste mix
+        number_of_energy_chp_ultra_supercritical_coal: Number of energy chp ultra supercritical coal
+        number_of_energy_chp_ultra_supercritical_cofiring_coal: Number of energy chp ultra supercritical cofiring coal
+        number_of_energy_heater_for_heat_network_network_gas: Number of energy heater for heat network network gas
+        number_of_energy_heater_for_heat_network_waste_mix: Number of energy heater for heat network waste mix
+        number_of_energy_heater_for_heat_network_wood_pellets: Number of energy heater for heat network wood pellets
+        number_of_energy_power_combined_cycle_coal: Number of energy power combined cycle coal
+        number_of_energy_power_combined_cycle_network_gas: Number of energy power combined cycle network gas
+        number_of_energy_power_hydro_river: Number of energy power hydro river
+        number_of_energy_power_nuclear_gen2_uranium_oxide: Number of energy power nuclear gen2 uranium oxide
+        number_of_energy_power_supercritical_coal: Number of energy power supercritical coal
+        number_of_energy_power_ultra_supercritical_coal: Number of energy power ultra supercritical coal
+        number_of_energy_power_ultra_supercritical_cofiring_coal: Number of energy power ultra supercritical cofiring coal
+        number_of_energy_power_ultra_supercritical_network_gas: Number of energy power ultra supercritical network gas
+        number_of_energy_power_wind_turbine_coastal: Number of energy power wind turbine coastal
+        number_of_energy_power_wind_turbine_inland: Number of energy power wind turbine inland
+        number_of_energy_power_wind_turbine_offshore: Number of energy power wind turbine offshore
+        transport_car_using_compressed_natural_gas_share: Transport car using compressed natural gas share
+        transport_car_using_diesel_mix_share: Transport car using diesel mix share
+        transport_car_using_electricity_share: Transport car using electricity share
+        transport_car_using_gasoline_mix_share: Transport car using gasoline mix share
+        transport_car_using_hydrogen_share: Transport car using hydrogen share
+        transport_car_using_lpg_share: Transport car using lpg share
+        transport_useful_demand_car_kms: Transport useful demand car kms
+        transport_road_mixer_diesel_biodiesel_share: Transport road mixer diesel biodiesel share
+        transport_road_mixer_diesel_diesel_share: Transport road mixer diesel diesel share
+        transport_road_mixer_gasoline_ethanol_share: Transport road mixer gasoline ethanol share
+        transport_road_mixer_gasoline_gasoline_share: Transport road mixer gasoline gasoline share
+        transport_ship_using_diesel_mix_share: Transport ship using diesel mix share
+        transport_ship_using_lng_mix_share: Transport ship using lng mix share
+        transport_useful_demand_ship_kms: Transport useful demand ship kms
+        transport_useful_demand_planes: Transport useful demand planes
+        transport_train_using_coal_share: Transport train using coal share
+        transport_train_using_diesel_share: Transport train using diesel share
+        transport_train_using_electricity_share: Transport train using electricity share
+        transport_useful_demand_trains: Transport useful demand trains
+        transport_truck_using_compressed_natural_gas_share: Transport truck using compressed natural gas share
+        transport_truck_using_diesel_mix_share: Transport truck using diesel mix share
+        transport_truck_using_electricity_share: Transport truck using electricity share
+        transport_truck_using_gasoline_mix_share: Transport truck using gasoline mix share
+        transport_truck_using_lng_mix_share: Transport truck using lng mix share
+        transport_useful_demand_truck_kms: Transport useful demand truck kms

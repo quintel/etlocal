@@ -52,7 +52,7 @@ table tbody tr td a.button
   margin-bottom: 20px
 
 .attributes
-  .non-editable, .editable
+  .input
     margin: 15px 0
 
   .group
@@ -69,6 +69,10 @@ table tbody tr td a.button
       margin-left: -18px
       box-shadow: 0px 2px 5px 0px #ccc
       line-height: 38px
+
+      .input
+        float: left
+        margin: 0
 
       p.key:before
         top: 22px
@@ -104,7 +108,7 @@ table tbody tr td a.button
       display: none
 
   p.key
-    width: 550px
+    width: 500px
     padding-right: 20px
     display: inline-block
     position: relative
@@ -206,6 +210,10 @@ table tbody tr td a.button
   .success
     background-color: $success-color
     border: 1px solid darken($success-color, 20)
+
+  .error
+    background-color: $error-color
+    border: 1px solid darken($error-color, 20)
 
 ul.tab-nav
   display: block

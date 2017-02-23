@@ -17,6 +17,8 @@ class Dataset
 
   def initialize(atlas_dataset)
     @atlas_dataset = atlas_dataset
+
+    set_attributes
   end
 
   def map_image

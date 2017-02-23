@@ -6,5 +6,6 @@
   span.val
     - if is_boolean_value?(value)
       i.fa class=(value.to_s == "true" ? "fa-check" : "fa-times")
+
     - elsif value
-      = value.round(3)
+      = value.to_f.round(3)

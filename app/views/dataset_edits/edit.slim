@@ -10,15 +10,11 @@
     .field
       = form.label @dataset_edit.key
 
-      - if is_area_attribute?(@dataset_edit.key)
-        - if is_boolean_field?(@dataset_edit.key)
-          = form.check_box :value, { checked: !!dataset_value_for(@dataset_edit.key) }, "true", "false"
-
-        - else
-          = form.text_field :value, placeholder: dataset_value_for(@dataset_edit.key).to_s
+      - if is_boolean_field?(@dataset_edit.key)
+        = form.check_box :value, { checked: !!dataset_value_for(@dataset_edit.key) }, "true", "false"
 
       - else
-        = form.text_field :value, placeholder: dataset_input_value_for(@dataset_edit.key).to_s
+        = form.text_field :value, placeholder: dataset_value_for(@dataset_edit.key).to_s
 
     .field
       = form.label :commit

@@ -20,7 +20,7 @@ ul.tab-nav
 
   .area.tab data= { tab: "#area_attributes" }
     .content
-      - @dataset.editable.each do |group, attributes|
+      - AttributesDecorator.decorate(@dataset.editable).each do |group, attributes|
         .group
           h5= I18n.t("datasets.group.#{ group }")
 
@@ -31,7 +31,7 @@ ul.tab-nav
 
   .initializer-inputs.tab data= { tab: "#inputs" }
     .content
-      - @dataset.inputs.each do |group, grouped_inputs|
+      - InputsDecorator.decorate(@dataset.inputs).each do |group, grouped_inputs|
         .group
           h5= I18n.t("datasets.group.#{ group }")
 
@@ -43,7 +43,7 @@ ul.tab-nav
 
             - else
               - inputs.each do |input|
-                = render 'editable', key: input.key, value: dataset_input_value_for(input.key)
+                = render 'editable', key: input.key, value: dataset_value_for(input.key)
     .clear
 
 .actions

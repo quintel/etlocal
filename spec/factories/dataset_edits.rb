@@ -1,9 +1,6 @@
 FactoryGirl.define do
   factory :dataset_edit do
-    user
-    source
-    commit "Some commit"
-    dataset_id 10
+    commit
     key "number_of_cars"
     value 1.0
   end

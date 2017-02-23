@@ -4,21 +4,24 @@ class DatasetEditsController < ApplicationController
   before_action :find_previous_edits
 
   def edit
-    @dataset_edit = current_user.dataset_edits.new(key: params[:attribute_name])
-    @dataset_edit.build_source
+    @commit = current_user.commits.new
+    @commit.build_source
+    @dataset_edit = @commit.dataset_edits.build(key: params[:attribute_name])
   end
 
   def update
-    @dataset_edit     = current_user.dataset_edits.new(dataset_edit_params)
-    @dataset_edit.key = params[:attribute_name]
+    @commit = current_user.commits.new(commit_params)
 
-    if @dataset_edit.save
+    if @commit.save
       redirect_to dataset_path(@dataset.area), flash: {
         success: I18n.t("dataset_edits.success",
-          key: @dataset_edit.key, value: @dataset_edit.value)
+          key: @commit.dataset_edits.last.key,
+          value: @commit.dataset_edits.last.value
+        )
       }
     else
-      @dataset_edit.build_source
+      @dataset_edit = @commit.dataset_edits.last
+      @commit.build_source
 
       render :edit
     end
@@ -39,9 +42,11 @@ class DatasetEditsController < ApplicationController
     @dataset_edits = DatasetEditCollection.for(@dataset.id)
   end
 
-  def dataset_edit_params
+  def commit_params
     params
-      .require(:dataset_edit)
-      .permit(:commit, :value, :dataset_id, source_attributes: [:source_file])
+      .require(:change)
+      .permit(:message, :dataset_area,
+              source_attributes: [:source_file],
+              dataset_edits_attributes: [:key, :value])
   end
 end

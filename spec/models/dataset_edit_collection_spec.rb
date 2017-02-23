@@ -11,7 +11,7 @@ describe DatasetEditCollection do
     FactoryGirl.create(:dataset_edit, key: 'number_of_cars', value: 15.0)
   }
 
-  let(:dataset_edit_collection) { DatasetEditCollection.for(dataset.id) }
+  let(:dataset_edit_collection) { DatasetEditCollection.for(dataset.area) }
 
   it 'fetches the edits for a dataset key' do
     expect(dataset_edit_collection.all).to include(edit_for_ameland)

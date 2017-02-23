@@ -1,6 +1,6 @@
 class DatasetEditCollection
-  def self.for(dataset_id)
-    new(DatasetEdit.where(dataset_id: dataset_id))
+  def self.for(dataset_area)
+    new(Commit.where(dataset_area: dataset_area).flat_map(&:dataset_edits))
   end
 
   def initialize(dataset_edits)

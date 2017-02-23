@@ -27,17 +27,23 @@ describe DatasetEditsController do
 
   describe 'create a new dataset edit' do
     before do
-      post :update, params: { dataset_area: dataset.key, attribute_name: 'number_of_buildings', dataset_edit: {
-        source_attributes: { source_file: fixture_file_upload('test.xls') },
-        dataset_id: dataset.id,
-        key: 'number_of_buildings',
-        commit: "Because of reasons",
-        value: 2000
-      }}
+      post :update, params: {
+        dataset_area: dataset.key,
+        attribute_name: 'number_of_buildings',
+        change: {
+          source_attributes: { source_file: fixture_file_upload('test.xls') },
+          dataset_edits_attributes: {"0"=>{
+            "key"=>"number_of_buildings",
+            "value"=>"0.25"
+          }},
+          dataset_area: dataset.key,
+          message: "Because of reasons"
+        }
+      }
     end
 
     it 'creates a single source for the dataset edit' do
-      expect(DatasetEdit.last.source).to_not be_blank
+      expect(DatasetEdit.count).to eq(1)
     end
 
     it 'creates a single source for the current user' do
@@ -46,6 +52,10 @@ describe DatasetEditsController do
 
     it 'creates a single dataset edit for the current user' do
       expect(user.dataset_edits.count).to eq(1)
+    end
+
+    it 'creates a single commit for the current user' do
+      expect(user.commits.count).to eq(1)
     end
   end
 

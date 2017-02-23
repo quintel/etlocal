@@ -10,19 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170217091922) do
+ActiveRecord::Schema.define(version: 20170223161529) do
+
+  create_table "commits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "dataset_area"
+    t.integer  "source_id"
+    t.integer  "user_id"
+    t.text     "message",                  limit: 65535
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.string   "source_file_file_name"
+    t.string   "source_file_content_type"
+    t.integer  "source_file_file_size"
+    t.datetime "source_file_updated_at"
+    t.index ["source_id"], name: "index_commits_on_source_id", using: :btree
+    t.index ["user_id"], name: "index_commits_on_user_id", using: :btree
+  end
 
   create_table "dataset_edits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "user_id"
-    t.integer  "source_id"
-    t.integer  "dataset_id"
-    t.string   "commit"
+    t.integer  "commit_id"
     t.string   "key"
     t.string   "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["source_id"], name: "index_dataset_edits_on_source_id", using: :btree
-    t.index ["user_id"], name: "index_dataset_edits_on_user_id", using: :btree
+    t.index ["commit_id"], name: "index_dataset_edits_on_commit_id", using: :btree
   end
 
   create_table "sources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

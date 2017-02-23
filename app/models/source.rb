@@ -1,7 +1,7 @@
 class Source < ApplicationRecord
   has_attached_file :source_file
 
-  has_many :dataset_edits
+  has_many :commits
 
   validates_presence_of :source_file
 

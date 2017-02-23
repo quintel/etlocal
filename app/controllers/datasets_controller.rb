@@ -7,6 +7,6 @@ class DatasetsController < ApplicationController
   end
 
   def show
-    @dataset_edits = DatasetEditCollection.for(@dataset.id)
+    @dataset_edits = DatasetEditCollection.for(@dataset.area)
   end
 end

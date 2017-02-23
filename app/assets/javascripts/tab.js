@@ -24,7 +24,10 @@ var Tab = (function () {
         },
 
         enable: function () {
-            this.toggleTab(this.localSettings.get("current"));
+            var currentDefault = this.menuItems.first().attr("href");
+
+            this.toggleTab(
+                this.localSettings.get("current") || currentDefault);
 
             this.menuItems.on("click", clickToggleTab.bind(this));
         }

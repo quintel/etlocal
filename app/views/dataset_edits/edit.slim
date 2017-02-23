@@ -1,24 +1,25 @@
 .edit-form
   .errors
-    - @dataset_edit.errors.full_messages.each do |message|
+    - @commit.errors.full_messages.each do |message|
       .error.notice= message
 
-  = form_for @dataset_edit, url: dataset_dataset_edit_path(@dataset.area, @dataset_edit.key), method: :patch do |form|
-    = form.hidden_field :dataset_id, value: @dataset.id
-    = form.hidden_field :key, value: @dataset_edit.key
+  = form_for @commit, as: :change, url: dataset_dataset_edit_path(@dataset.area, @dataset_edit.key), method: :patch do |form|
+    = form.hidden_field :dataset_area, value: @dataset.area
 
     .field
-      = form.label @dataset_edit.key
+      = form.fields_for(:dataset_edits) do |d|
+        = d.label @dataset_edit.key
+        = d.hidden_field :key, value: @dataset_edit.key
 
-      - if is_boolean_field?(@dataset_edit.key)
-        = form.check_box :value, { checked: !!dataset_value_for(@dataset_edit.key) }, "true", "false"
+        - if is_boolean_field?(@dataset_edit.key)
+          = d.check_box :value, { checked: !!dataset_value_for(@dataset_edit.key) }, "true", "false"
 
-      - else
-        = form.text_field :value, placeholder: dataset_value_for(@dataset_edit.key).to_s
+        - else
+          = d.text_field :value, placeholder: dataset_value_for(@dataset_edit.key).to_s
 
     .field
-      = form.label :commit
-      = form.text_area :commit
+      = form.label :message
+      = form.text_area :message
 
     = form.fields_for(:source) do |s|
       .field

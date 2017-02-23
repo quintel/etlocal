@@ -30,4 +30,6 @@ class Input
   def key
     @atlas_input.key
   end
+
+  alias_method :name, :key
 end

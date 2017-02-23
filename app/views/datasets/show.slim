@@ -20,18 +20,18 @@ ul.tab-nav
 
   .area.tab data= { tab: "#area_attributes" }
     .content
-      - AttributesDecorator.decorate(@dataset.editable).each do |group, attributes|
+      - @editables.each do |group, attributes|
+
         .group
           h5= I18n.t("datasets.group.#{ group }")
 
-          - attributes.each do |attribute|
-            = render 'editable', key: attribute.name, value: dataset_value_for(attribute.name)
+          = render partial: 'attribute', collection: attributes
 
     .clear
 
   .initializer-inputs.tab data= { tab: "#inputs" }
     .content
-      - InputsDecorator.decorate(@dataset.inputs).each do |group, grouped_inputs|
+      - @inputs.each do |group, grouped_inputs|
         .group
           h5= I18n.t("datasets.group.#{ group }")
 
@@ -42,8 +42,8 @@ ul.tab-nav
               = render 'multi_editable', inputs: inputs, share_group: share_group
 
             - else
-              - inputs.each do |input|
-                = render 'editable', key: input.key, value: dataset_value_for(input.key)
+              = render partial: 'attribute', collection: inputs
+
     .clear
 
 .actions

@@ -1,9 +1,0 @@
-.editable
-  = render 'input', key: key, value: value
-
-  .actions
-    = link_to I18n.t("edit"), edit_dataset_dataset_edit_path(@dataset.area, key), class: "button"
-    span.or or
-    = link_to I18n.t("cancel"), "#", class: "button cancel"
-
-  .clear

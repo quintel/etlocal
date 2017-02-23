@@ -18,5 +18,19 @@ describe DatasetsController do
 
       expect(response).to be_success
     end
+
+    describe 'redirects to root page when a dataset is not found' do
+      before do
+        get :show, params: { area: "does-not-exist" }
+      end
+
+      it 'redirects' do
+        expect(response).to redirect_to(root_path)
+      end
+
+      it 'sets flash message' do
+        expect(flash[:error]).to be_present
+      end
+    end
   end
 end

@@ -5,3 +5,6 @@ en:
     download_source: "Download source"
     history: History
     success: "Successfully changed %{key} to %{value}"
+
+    flash:
+      attribute_not_found: "Attribute not found '%{attribute}'"

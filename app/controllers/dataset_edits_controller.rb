@@ -1,5 +1,6 @@
 class DatasetEditsController < ApplicationController
   before_action :find_dataset
+  before_action :find_dataset_attribute
   before_action :find_previous_edits
 
   def edit
@@ -25,8 +26,13 @@ class DatasetEditsController < ApplicationController
 
   private
 
-  def find_dataset
-    @dataset = Dataset.find(params[:dataset_area])
+  def find_dataset_attribute
+    unless @dataset.attribute_exists?(params[:attribute_name])
+      flash[:error] = I18n.t("dataset_edits.flash.attribute_not_found",
+                              attribute: params[:attribute_name])
+
+      redirect_to dataset_path(@dataset.area)
+    end
   end
 
   def find_previous_edits

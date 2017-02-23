@@ -10,4 +10,14 @@ class ApplicationController < ActionController::Base
       user_params.permit({ roles: [] }, :name, :email, :password, :password_confirmation)
     end
   end
+
+  def find_dataset
+    @dataset = Dataset.find(params[:area] || params[:dataset_area])
+
+    unless @dataset
+      flash[:error] = I18n.t("datasets.flash.not_found", area: params[:area])
+
+      redirect_to root_path
+    end
+  end
 end

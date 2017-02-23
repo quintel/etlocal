@@ -11,6 +11,20 @@ describe DatasetEditsController do
     expect(response).to be_success
   end
 
+  describe 'visits the edit path with an unknown key' do
+    before do
+      get :edit, params: { dataset_area: dataset.key, attribute_name: 'does-not-exist' }
+    end
+
+    it 'redirects' do
+      expect(response).to redirect_to(dataset_path(dataset.key))
+    end
+
+    it 'sets a flash message' do
+      expect(flash[:error]).to be_present
+    end
+  end
+
   describe 'create a new dataset edit' do
     before do
       post :update, params: { dataset_area: dataset.key, attribute_name: 'number_of_buildings', dataset_edit: {

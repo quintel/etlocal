@@ -1,0 +1,6 @@
+.flash
+  - if flash[:success]
+    .success.notice= flash[:success]
+
+  - elsif flash[:error]
+    .error.notice= flash[:error]

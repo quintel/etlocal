@@ -10,6 +10,9 @@ nl:
         base_dataset: Base dataset
         analysis_year: Analyse jaar
 
+    flash:
+      not_found: "Gebied '%{area}' bestaat niet"
+
     group:
       agriculture: Agriculture
       booleans: Toggles

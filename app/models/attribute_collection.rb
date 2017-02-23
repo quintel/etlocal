@@ -1,11 +1,36 @@
 module AttributeCollection
-  EDITABLE_TYPES = { booleans: Axiom::Types::Boolean, floats: Axiom::Types::Float }.freeze
+  # Module which contains the attributes as methods from an Atlas dataset
+  # also includes the initializer inputs as methods. Return the original
+  # values only.
 
+  EDITABLE_TYPES   = [Axiom::Types::Boolean, Axiom::Types::Float].freeze
   ATLAS_ATTRIBUTES = %i(base_dataset analysis_year area id)
 
-  ATLAS_ATTRIBUTES.each do |attribute|
-    define_method attribute do
-      @atlas_dataset.public_send(attribute)
+  def methodize?(attribute)
+    EDITABLE_TYPES.any?{|a| a.include?(attribute.type) } ||
+    ATLAS_ATTRIBUTES.include?(attribute.name)
+  end
+
+  def set_attributes
+    set_area_attributes
+    set_input_attributes
+  end
+
+  def set_area_attributes
+    editable.each do |attribute|
+      if methodize?(attribute)
+        define_singleton_method attribute.name do
+          @atlas_dataset.public_send(attribute.name)
+        end
+      end
+    end
+  end
+
+  def set_input_attributes
+    inputs.each do |input|
+      define_singleton_method input.key do
+        @atlas_dataset.init[input.key]
+      end
     end
   end
 
@@ -14,22 +39,12 @@ module AttributeCollection
   end
 
   def editable
-    EDITABLE_TYPES.map do |key, type|
-      [key, attribute_set.select { |attr| attr.type == type }]
-    end
+    @atlas_dataset.send(:attribute_set)
   end
 
   def inputs
-    Input.sorted
+    Input.all
   end
 
-  def attribute_exists?(key)
-    (attribute_set.map(&:name) + Input.all.map(&:key)).include?(key.to_sym)
-  end
-
-  private
-
-  def attribute_set
-    @atlas_dataset.send(:attribute_set)
-  end
+  alias_method :attribute_exists?, :respond_to?
 end

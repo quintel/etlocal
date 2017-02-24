@@ -17,7 +17,7 @@ append :linked_files, "config/database.yml", "config/secrets.yml"
 
 # Default value for linked_dirs is []
 append :linked_dirs,
-  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+  %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :deploy do
   desc 'Restart application'

@@ -6,7 +6,7 @@ class DatasetEditsController < ApplicationController
   def edit
     @commit = current_user.commits.new
     @commit.build_source
-    @commit.dataset_edits.build(key: params[:attribute_name])
+    @dataset_edit = @commit.dataset_edits.build(key: params[:attribute_name])
   end
 
   def update
@@ -21,7 +21,7 @@ class DatasetEditsController < ApplicationController
       }
     else
       @commit.build_source
-      @commit.dataset_edits.build(key: params[:attribute_name])
+      @dataset_edit = @commit.dataset_edits.build(key: params[:attribute_name])
 
       render :edit
     end
@@ -39,7 +39,7 @@ class DatasetEditsController < ApplicationController
   end
 
   def find_previous_edits
-    @dataset_edits = DatasetEditCollection.for(@dataset.id)
+    @dataset_edits = DatasetEditCollection.for(@dataset.area)
   end
 
   def commit_params

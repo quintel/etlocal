@@ -2,49 +2,10 @@
 
 h4= @dataset.area.humanize
 
-ul.tab-nav
-  li.tab= link_to I18n.t("datasets.menu.static"),          "#static", class: "active"
-  li.tab= link_to I18n.t("datasets.menu.area_attributes"), "#area_attributes"
-  li.tab= link_to I18n.t("datasets.menu.inputs"),          "#inputs"
-
 .clear
 
 .attributes
-  .static.tab.active data= { tab: "#static" }
-    - @dataset.static.each do |attribute|
-      .input
-        p.key
-          span= I18n.t("datasets.attributes.static.#{ attribute }")
-
-        span.val= @dataset.public_send(attribute)
-
-  .area.tab data= { tab: "#area_attributes" }
-    .content
-      - @editables.each do |group, attributes|
-
-        .group
-          h5= I18n.t("datasets.group.#{ group }")
-
-          = render partial: 'attribute', collection: attributes
-
-    .clear
-
-  .initializer-inputs.tab data= { tab: "#inputs" }
-    .content
-      - @inputs.each do |group, grouped_inputs|
-        .group
-          h5= I18n.t("datasets.group.#{ group }")
-
-          - grouped_inputs.each do |share_group, inputs|
-            h6= I18n.t("datasets.share_group.#{ share_group || 'none' }")
-
-            - if share_group
-              = render 'multi_editable', inputs: inputs, share_group: share_group
-
-            - else
-              = render partial: 'attribute', collection: inputs
-
-    .clear
+  = render partial: "attribute", collection: @dataset.editable_attributes
 
 .actions
   = link_to "Home", datasets_path, class: "button"

@@ -6,14 +6,14 @@ strong = I18n.t("dataset_edits.history")
       .created
         = I18n.l dataset_edit.created_at, format: :short
       .by
-        = I18n.t("dataset_edits.changed_by", user: dataset_edit.user.name)
+        = I18n.t("dataset_edits.changed_by", user: dataset_edit.commit.user.name)
 
     .right
       .changed_value
         = I18n.t("dataset_edits.changed_to", value: dataset_edit.value)
       .reason
-        = dataset_edit.commit
+        = dataset_edit.commit.message
 
-      = link_to I18n.t("dataset_edits.download_source"), dataset_edit.source.source_file.url, class: "button"
+      = link_to I18n.t("dataset_edits.download_source"), dataset_edit.commit.source.source_file.url, class: "button"
 
     .clear

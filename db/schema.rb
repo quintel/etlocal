@@ -19,10 +19,6 @@ ActiveRecord::Schema.define(version: 20170223161529) do
     t.text     "message",                  limit: 65535
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
-    t.string   "source_file_file_name"
-    t.string   "source_file_content_type"
-    t.integer  "source_file_file_size"
-    t.datetime "source_file_updated_at"
     t.index ["source_id"], name: "index_commits_on_source_id", using: :btree
     t.index ["user_id"], name: "index_commits_on_user_id", using: :btree
   end

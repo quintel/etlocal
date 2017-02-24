@@ -6,7 +6,5 @@ class CreateCommits < ActiveRecord::Migration[5.0]
       t.text :message
       t.timestamps
     end
-
-    add_attachment :commits, :source_file
   end
 end

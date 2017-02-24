@@ -37,10 +37,6 @@ form
     background-color: $error-color
     border-color: darken($error-color, 20)
 
-  &.dataset
-    textarea#dataset_commit_message
-      min-width: 400px
-
 // Other
 span.or
   margin: 0 5px
@@ -51,7 +47,21 @@ table tbody tr td a.button
 .tab
   margin-bottom: 20px
 
+.container
+  .info
+    font-size: 80%
+
+    span.val
+      padding-right: 5px
+      border-right: 1px solid #000
+
+    span.key
+      padding-left: 5px
+
 .attributes
+  border-top: 1px solid $border-color
+  margin: 15px 0
+
   .input
     margin: 15px 0
 
@@ -140,7 +150,7 @@ table tbody tr td a.button
     vertical-align: top
 
   form
-    textarea#dataset_edit_commit
+    textarea#change_message
       width: 98%
       height: 200px
 

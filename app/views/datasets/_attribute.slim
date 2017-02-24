@@ -1,15 +1,11 @@
 .editable
-  .input
-    span.status class=('edited' if has_dataset_edit?(attribute.key))
-    p.key title = I18n.t("activerecord.attributes.dataset_edit.#{ attribute.key }")
-      span= truncate(I18n.t("activerecord.attributes.dataset_edit.#{ attribute.key }"), length: 80)
+  = link_to edit_dataset_dataset_edit_path(@dataset.area, attribute.key) do
+    .input
+      span.status class=('edited' if has_dataset_edit?(attribute.key))
+      p.key title = I18n.t("activerecord.attributes.dataset_edit.#{ attribute.key }")
+        span= truncate(I18n.t("activerecord.attributes.dataset_edit.#{ attribute.key }"), length: 80)
 
-    span.val=> dataset_value_for(attribute.key)
-    span.unit= attribute.unit
+      span.val=> dataset_value_for(attribute.key)
+      span.unit= attribute.unit
 
-  .actions
-    = link_to I18n.t("edit"), edit_dataset_dataset_edit_path(@dataset.area, attribute.key), class: "button"
-    span.or or
-    = link_to I18n.t("cancel"), "#", class: "button cancel"
-
-  .clear
+    .clear

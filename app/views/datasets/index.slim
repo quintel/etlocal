@@ -1,7 +1,5 @@
 = render 'shared/flash', flash: flash
 
-h4 Datasets
-
 - @datasets.each do |dataset|
   .dataset
     = link_to dataset_path(dataset.area) do

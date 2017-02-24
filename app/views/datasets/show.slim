@@ -5,13 +5,11 @@
     img src=@dataset.map_image_url('100x100') alt= "No google image available"
 
   .content
-    h4= @dataset.area.humanize
+    h5= @dataset.area.humanize
 
     = render 'details', dataset: @dataset
 
+    .attributes
+      = render partial: "attribute", collection: @dataset.editable_attributes
+
   .clear
-
-.clear
-
-.attributes
-  = render partial: "attribute", collection: @dataset.editable_attributes

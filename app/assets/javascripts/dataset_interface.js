@@ -3,7 +3,7 @@ var DatasetInterface = (function () {
 
     return {
         enable: function () {
-            $("div.editable p.key, div.editable span.val").on("click.enable", function () {
+            $("div.input").on("click.enable", function () {
                 $("div.editable").removeClass("enabled");
 
                 $(this).parents(".editable").addClass("enabled");

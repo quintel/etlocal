@@ -4,10 +4,12 @@ $pending-color: #f6a633
 $success-color: #a8ed96
 $border-color: #eee
 
+body
+  background-color: #fafafa
+
 .header
-  border-bottom: 1px solid $border-color
-  margin: 20px 0 25px
-  padding: 10px 0
+  margin: 20px 0 0
+  padding: 10px 0 20px 0
 
   div
     display: inline-block
@@ -26,6 +28,10 @@ $border-color: #eee
 h1 a
   color: black
   text-decoration: none
+
+.container  > .content
+  border-top: 3px solid $border-color
+  padding-top: 20px
 
 // Form styling
 .button.cancel
@@ -48,57 +54,54 @@ table tbody tr td a.button
   margin-bottom: 20px
 
 .container
-  .info
-    font-size: 80%
+  div.info
+    border-top: 1px solid $border-color
+    display: table
+    width: 100%
 
-    .image
-      float: left
+    h5
+      padding-top: 18px
+      margin: 0
+
+    > .image
+      display: table-cell
       margin-right: 20px
       width: 100px
       height: 100px
+      vertical-align: top
+
+    > .content
+      display: table-cell
+      float: left
+      border-left: 1px solid $border-color
+      padding-left: 20px
 
     .details
+      font-size: 80%
       span.val
         border-right: 1px solid #000
         padding-right: 5px
         margin-right: 5px
 
 .attributes
-  border-top: 1px solid $border-color
-  margin: 15px 0
+  padding: 7px 0
 
-  .input
-    margin: 15px 0
-
-  .group
-    margin-top: 25px
+  .editable:first-child
+    margin-top: 20px
 
   .editable
-    p.key, span.val
-      &:hover
-        cursor: pointer
+    .input
+      padding: 7px 0
 
-    &.enabled
-      padding: 12px 18px
-      border: 1px solid $border-color
-      margin-left: -18px
-      box-shadow: 0px 2px 5px 0px #ccc
-      line-height: 38px
+    a
+      color: black
+      text-decoration: none
 
-      .input
-        float: left
-        margin: 0
+    &:hover
+      cursor: pointer
 
-      p.key:before
-        top: 22px
-
-      .actions
-        display: inline
-        padding-left: 20px
-        float: right
-
-        .button
-          margin-bottom: 0
+      span.status
+        border-left-color: darken($border-color, 20)
 
     span.status
       border-left-width: 6px
@@ -106,6 +109,7 @@ table tbody tr td a.button
       border-left-color: transparent
       padding-left: 5px
       margin-left: -11px
+      transition: border-left-color 0.5s
 
       &.edited
         border-left-color: $pending-color
@@ -136,9 +140,9 @@ table tbody tr td a.button
     &:before
       content: ''
       position: absolute
-      border-bottom: 2px dotted darken($border-color, 30)
+      border-bottom: 1px solid darken($border-color, 10)
       width: 100%
-      top: 15px
+      top: 18px
       z-index: -1
 
 .edit-form

@@ -28,8 +28,10 @@ module AttributeCollection
   end
 
   def editable_attributes
-    EDITABLE_ATTRIBUTES.map do |name, options|
-      EditableAttribute.new(name, options)
+    @editable_attributes ||= begin
+      EDITABLE_ATTRIBUTES.map do |name, options|
+        EditableAttribute.new(name, options)
+      end
     end
   end
 

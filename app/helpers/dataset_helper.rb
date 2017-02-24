@@ -12,4 +12,8 @@ module DatasetHelper
   def has_dataset_edit?(key)
     @dataset_edits.find(key).present?
   end
+
+  def unit_for(attribute)
+    @dataset.editable_attributes.detect{ |t| t.key == attribute.key }.unit
+  end
 end

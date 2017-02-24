@@ -12,6 +12,7 @@
         = d.hidden_field :key, value: @dataset_edit.key
 
         = d.text_field :value, placeholder: dataset_value_for(@dataset_edit.key).to_s
+        span.unit= unit_for(@dataset_edit)
 
     .field
       = form.label :message

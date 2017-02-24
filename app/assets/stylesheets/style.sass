@@ -141,8 +141,8 @@ table tbody tr td a.button
       top: 15px
       z-index: -1
 
-.edit-form >
-  .errors .error
+.edit-form
+  > .errors .error
     margin-bottom: 10px
     background-color: $error-color
     border-color: darken($error-color, 20)
@@ -159,6 +159,10 @@ table tbody tr td a.button
       width: 98%
       height: 200px
 
+    .field
+      span.unit
+        margin-left: 5px
+
   .history
     border-left: 1px solid $border-color
     padding-left: 20px
@@ -170,6 +174,7 @@ table tbody tr td a.button
 
       .left
         float: left
+
       .right
         float: left
         margin-left: 20px

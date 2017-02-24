@@ -17,14 +17,15 @@ class Dataset
     set_attributes
   end
 
-  def map_image
-    options = DATASET_MAPS[area] || DATASET_MAPS["default"]
-    options["size"] = "200x200"
+  def map_image(size = '200x200')
+    options         = DATASET_MAPS[area] || DATASET_MAPS["default"]
+    options["size"] = size
+    options["key"]  = Rails.configuration.google_maps_api_key
 
     "https://maps.googleapis.com/maps/api/staticmap?#{ options.to_query }"
   end
 
   def dataset_edits
-    DatasetEditCollection.for(id)
+    DatasetEditCollection.for(area)
   end
 end

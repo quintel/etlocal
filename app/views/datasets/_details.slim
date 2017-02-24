@@ -1,0 +1,5 @@
+.details
+  - dataset.static.each do |attribute|
+    span.key= I18n.t("datasets.attributes.static.#{ attribute }")
+    span>= ':'
+    span.val= dataset.public_send(attribute)

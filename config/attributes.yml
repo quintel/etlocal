@@ -1,0 +1,11 @@
+---
+gas_consumption:
+  unit: m3
+electricity_consumption:
+  unit: kWh
+number_of_cars:
+  unit: '#'
+number_of_houses:
+  unit: '#'
+roof_surface_available_for_pv:
+  unit: m2

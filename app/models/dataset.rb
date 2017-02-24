@@ -11,10 +11,6 @@ class Dataset
     all.detect { |dataset| dataset.area == area }
   end
 
-  def self.find_by_id(id)
-    all.detect { |dataset| dataset.id == id }
-  end
-
   def initialize(atlas_dataset)
     @atlas_dataset = atlas_dataset
 

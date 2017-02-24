@@ -4,8 +4,8 @@ gas_consumption:
 electricity_consumption:
   unit: kWh
 number_of_cars:
-  unit: '#'
+  unit: ''
 number_of_houses:
-  unit: '#'
+  unit: ''
 roof_surface_available_for_pv:
   unit: m2

@@ -11,11 +11,7 @@
         = d.label @dataset_edit.key
         = d.hidden_field :key, value: @dataset_edit.key
 
-        - if is_boolean_field?(@dataset_edit.key)
-          = d.check_box :value, { checked: !!dataset_value_for(@dataset_edit.key) }, "true", "false"
-
-        - else
-          = d.text_field :value, placeholder: dataset_value_for(@dataset_edit.key).to_s
+        = d.text_field :value, placeholder: dataset_value_for(@dataset_edit.key).to_s
 
     .field
       = form.label :message

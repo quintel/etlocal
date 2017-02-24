@@ -5,4 +5,8 @@ class EditableAttribute
     @key     = key
     @options = options
   end
+
+  def unit
+    @options['unit']
+  end
 end

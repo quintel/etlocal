@@ -1,4 +1,8 @@
 ---
+  de_Biezen:
+    center: 51.627982, 4.948599
+    zoom: 15
+
   drenthe:
     center: "52.971641,6.702942"
     zoom: 8
@@ -11,7 +15,10 @@
     center: "53.224561,6.556155"
     zoom: 14
 
+  paddepoel_noord:
+    center: 53.231669, 6.538814
+    zoom: 14
+
   default:
     center: "0,0"
     zoom: 1
-

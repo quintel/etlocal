@@ -16,8 +16,7 @@ set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 append :linked_files, "config/database.yml", "config/secrets.yml"
 
 # Default value for linked_dirs is []
-append :linked_dirs,
-  %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "vendor/bundle", "public/system"
 
 namespace :deploy do
   desc 'Restart application'

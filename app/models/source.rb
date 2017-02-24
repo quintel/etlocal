@@ -3,8 +3,6 @@ class Source < ApplicationRecord
 
   has_many :commits
 
-  validates_presence_of :source_file
-
   # Validates attachments content types. The content types are in alphabetical
   # order. Please stick to that.
   validates_attachment_content_type :source_file, content_type: [

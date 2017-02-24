@@ -59,6 +59,40 @@ describe DatasetEditsController do
     end
   end
 
+  describe "create a dataset edit without specifying a source" do
+    before do
+      post :update, params: {
+        dataset_area: dataset.key,
+        attribute_name: 'gas_consumption',
+        change: {
+          source_attributes: { },
+          dataset_edits_attributes: {"0"=>{
+            "key"=>"gas_consumption",
+            "value"=>"0.25"
+          }},
+          dataset_area: dataset.key,
+          message: "Because of reasons"
+        }
+      }
+    end
+
+    it 'creates a single source for the dataset edit' do
+      expect(DatasetEdit.count).to eq(1)
+    end
+
+    it 'creates no sources for the current user' do
+      expect(user.sources.count).to eq(0)
+    end
+
+    it 'creates a single dataset edit for the current user' do
+      expect(user.dataset_edits.count).to eq(1)
+    end
+
+    it 'creates a single commit for the current user' do
+      expect(user.commits.count).to eq(1)
+    end
+  end
+
   describe "create a new dataset edit with an existing source" do
     it 'source count remains 1'
   end

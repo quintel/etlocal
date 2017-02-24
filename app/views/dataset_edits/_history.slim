@@ -14,6 +14,7 @@ strong = I18n.t("dataset_edits.history")
       .reason
         = dataset_edit.commit.message
 
-      = link_to I18n.t("dataset_edits.download_source"), dataset_edit.commit.source.source_file.url, class: "button"
+      - if dataset_edit.commit.source
+        = link_to I18n.t("dataset_edits.download_source"), dataset_edit.commit.source.source_file.url, class: "button"
 
     .clear

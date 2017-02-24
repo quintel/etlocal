@@ -15,6 +15,6 @@ module Etlocal
 
     config.encoding            = "utf-8"
     config.etsource_path       = Rails.root.dirname.join("etsource").to_s
-    config.google_maps_api_key = ENV['google_maps_api_key']
+    config.google_maps_api_key = Rails.application.secrets.google_maps_api_key
   end
 end

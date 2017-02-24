@@ -6,7 +6,7 @@ h4 Datasets
   .dataset
     = link_to dataset_path(dataset.area) do
       .image
-        img src=dataset.map_image alt= "No google image available"
+        img src=dataset.map_image_url alt= "No google image available"
 
       .context
         h5= dataset.area.humanize

@@ -8,7 +8,5 @@ class DatasetsController < ApplicationController
 
   def show
     @dataset_edits = DatasetEditCollection.for(@dataset.area)
-    @inputs        = InputsDecorator.decorate(@dataset.inputs)
-    @editables     = AttributesDecorator.decorate(@dataset.editable)
   end
 end

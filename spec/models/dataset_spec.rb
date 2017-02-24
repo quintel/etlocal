@@ -12,4 +12,12 @@ describe Dataset do
   it "expects an area attribute to be present" do
     expect(dataset.area).to eq("ameland")
   end
+
+  describe 'has editable attributes' do
+    it "is editable" do
+      dataset.editable_attributes.each do |attribute|
+        expect(dataset.public_send(attribute.key)).to eq(nil)
+      end
+    end
+  end
 end

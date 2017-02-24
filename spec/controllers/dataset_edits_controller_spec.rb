@@ -6,7 +6,7 @@ describe DatasetEditsController do
   let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
 
   it 'visits the edit path' do
-    get :edit, params: { dataset_area: dataset.key, attribute_name: 'number_of_buildings' }
+    get :edit, params: { dataset_area: dataset.key, attribute_name: 'gas_consumption' }
 
     expect(response).to be_success
   end
@@ -29,11 +29,11 @@ describe DatasetEditsController do
     before do
       post :update, params: {
         dataset_area: dataset.key,
-        attribute_name: 'number_of_buildings',
+        attribute_name: 'gas_consumption',
         change: {
           source_attributes: { source_file: fixture_file_upload('test.xls') },
           dataset_edits_attributes: {"0"=>{
-            "key"=>"number_of_buildings",
+            "key"=>"gas_consumption",
             "value"=>"0.25"
           }},
           dataset_area: dataset.key,

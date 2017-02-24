@@ -3,34 +3,33 @@ module AttributeCollection
   # also includes the initializer inputs as methods. Return the original
   # values only.
 
-  EDITABLE_TYPES   = [Axiom::Types::Boolean, Axiom::Types::Float].freeze
-  ATLAS_ATTRIBUTES = %i(base_dataset analysis_year area id)
-
-  def methodize?(attribute)
-    EDITABLE_TYPES.any?{|a| a.include?(attribute.type) } ||
-    ATLAS_ATTRIBUTES.include?(attribute.name)
-  end
+  EDITABLE_ATTRIBUTES = YAML.load_file(Rails.root.join("config", "attributes.yml"))
+  ATLAS_ATTRIBUTES    = %i(base_dataset analysis_year area id)
 
   def set_attributes
     set_area_attributes
-    set_input_attributes
+    set_editable_attributes
   end
 
   def set_area_attributes
-    editable.each do |attribute|
-      if methodize?(attribute)
-        define_singleton_method attribute.name do
-          @atlas_dataset.public_send(attribute.name)
-        end
+    ATLAS_ATTRIBUTES.each do |attribute|
+      define_singleton_method attribute do
+        @atlas_dataset.public_send(attribute)
       end
     end
   end
 
-  def set_input_attributes
-    inputs.each do |input|
-      define_singleton_method input.key do
-        @atlas_dataset.init[input.key]
+  def set_editable_attributes
+    editable_attributes.each do |attribute|
+      define_singleton_method attribute.key do
+        nil
       end
+    end
+  end
+
+  def editable_attributes
+    EDITABLE_ATTRIBUTES.map do |name, options|
+      EditableAttribute.new(name, options)
     end
   end
 
@@ -38,13 +37,7 @@ module AttributeCollection
     %i(base_dataset analysis_year)
   end
 
-  def editable
-    @atlas_dataset.send(:attribute_set)
+  def attribute_exists?(method)
+    editable_attributes.map(&:key).include?(method)
   end
-
-  def inputs
-    Input.all
-  end
-
-  alias_method :attribute_exists?, :respond_to?
 end

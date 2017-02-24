@@ -11,9 +11,10 @@ module Etlocal
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-    config.time_zone     = "Europe/Amsterdam"
+    config.time_zone           = "Europe/Amsterdam"
 
-    config.encoding      = "utf-8"
-    config.etsource_path = Rails.root.dirname.join("etsource").to_s
+    config.encoding            = "utf-8"
+    config.etsource_path       = Rails.root.dirname.join("etsource").to_s
+    config.google_maps_api_key = ENV['google_maps_api_key']
   end
 end

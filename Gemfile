@@ -30,6 +30,7 @@ group :development, :test do
   gem 'rspec-collection_matchers'
   gem 'rspec-rails'
   gem 'pry'
+  gem 'dotenv-rails'
 
   gem 'capistrano',             '~> 3.0',   require: false
   gem 'capistrano-rbenv',       '~> 2.0',   require: false

@@ -5,8 +5,9 @@ nl:
         commit: "Reden"
         source_file: "Bronbestand"
 
-        gas_consumption: Gas consumption
-        electricity_consumption: Electricity consumption
-        number_of_cars: Number of cars
-        number_of_houses: Number of houses
+        gas_consumption: Gas consumptie
+        electricity_consumption: Electriciteits consumptie
+        number_of_cars: "Hoeveelheid auto's"
+        number_of_residences: Hoeveelheid huizen
+        number_of_inhabitants: Hoeveelheid inwoners
         roof_surface_available_for_pv: Roof surface available for PV

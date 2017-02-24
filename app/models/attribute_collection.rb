@@ -22,7 +22,11 @@ module AttributeCollection
   def set_editable_attributes
     editable_attributes.each do |attribute|
       define_singleton_method attribute.key do
-        nil
+        begin
+          @atlas_dataset.public_send(attribute.key)
+        rescue NoMethodError
+          nil
+        end
       end
     end
   end

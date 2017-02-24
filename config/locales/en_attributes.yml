@@ -8,5 +8,6 @@ en:
         gas_consumption: Gas consumption
         electricity_consumption: Electricity consumption
         number_of_cars: Number of cars
-        number_of_houses: Number of houses
+        number_of_residences: Number of houses
+        number_of_inhabitants: Number of inhabitants
         roof_surface_available_for_pv: Roof surface available for PV

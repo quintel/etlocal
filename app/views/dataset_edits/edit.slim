@@ -16,7 +16,7 @@
 
     .field
       = form.label :message
-      = form.text_area :message
+      = form.text_area :message, maxlength: 500
 
     = form.fields_for(:source) do |s|
       .field

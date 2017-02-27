@@ -1,11 +1,12 @@
 // Variables
+$bg-color: #fafafa
 $error-color: #e77
 $pending-color: #f6a633
 $success-color: #a8ed96
 $border-color: #eee
 
 body
-  background-color: #fafafa
+  background-color: $bg-color
 
 .header
   margin: 20px 0 0
@@ -134,7 +135,7 @@ table tbody tr td a.button
     margin-bottom: 0
 
     span
-      background: white
+      background: $bg-color
       padding-right: 4px
 
     &:before
@@ -146,6 +147,9 @@ table tbody tr td a.button
       z-index: -1
 
 .edit-form
+  display: table
+  width: 100%
+
   > .errors .error
     margin-bottom: 10px
     background-color: $error-color
@@ -154,11 +158,12 @@ table tbody tr td a.button
     width: 43%
 
   form, .history
-    width: 45%
-    display: inline-block
+    display: table-cell
     vertical-align: top
 
   form
+    width: 47%
+
     textarea#change_message
       width: 98%
       height: 200px
@@ -173,15 +178,34 @@ table tbody tr td a.button
 
     .change
       margin-bottom: 6px
-      border-bottom: 1px solid $border-color
       padding: 12px 0
 
-      .left
-        float: left
+      .history-line
+        font-size: 80%
+        position: relative
+        text-align: center
 
-      .right
-        float: left
-        margin-left: 20px
+        &:before
+          content: ''
+          position: absolute
+          border-bottom: 1px solid darken($border-color, 10)
+          left: 0
+          width: 100%
+          top: 10px
+          z-index: -1
+
+        span.line
+          background-color: $bg-color
+          padding: 0 10px
+          color: #999
+
+      .content
+        margin-top: 5px
+        text-align: justify
+
+      .source
+        margin-top: 10px
+        text-align: right
 
 .dataset
   border: 1px solid $border-color

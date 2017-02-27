@@ -6,6 +6,9 @@ en:
       inputs: Inputs
 
     attributes:
+      source_file: Source
+      no_source_file: "No source selected"
+
       static:
         base_dataset: Base dataset
         analysis_year: Analysis year

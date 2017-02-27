@@ -1,6 +1,7 @@
 $(document).on('turbolinks:load', function () {
     'use strict';
 
+    FileUpload.setFields();
     DatasetInterface.enable();
 
     $("ul.tab-nav").each(function (i) {

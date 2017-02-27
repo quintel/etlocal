@@ -3,29 +3,33 @@
     - @commit.errors.full_messages.each do |message|
       .error.notice= message
 
-  = form_for @commit, as: :change, url: dataset_dataset_edit_path(@dataset.area, @dataset_edit.key), method: :patch do |form|
-    = form.hidden_field :dataset_area, value: @dataset.area
+  .wrapper
+    = form_for @commit, as: :change, url: dataset_dataset_edit_path(@dataset.area, @dataset_edit.key), method: :patch do |form|
+      = form.hidden_field :dataset_area, value: @dataset.area
 
-    .field
-      = form.fields_for(:dataset_edits) do |d|
-        = d.label @dataset_edit.key
-        = d.hidden_field :key, value: @dataset_edit.key
-
-        = d.text_field :value, placeholder: dataset_value_for(@dataset_edit.key).to_s
-        span.unit= unit_for(@dataset_edit)
-
-    .field
-      = form.label :message
-      = form.text_area :message, maxlength: 500
-
-    = form.fields_for(:source) do |s|
       .field
-        = s.label :source_file
-        = s.file_field :source_file
+        = form.fields_for(:dataset_edits) do |d|
+          = d.label @dataset_edit.key
+          = d.hidden_field :key, value: @dataset_edit.key
 
-    = form.submit "Save"
-    span.or or
-    = link_to "Cancel", dataset_path(@dataset.area), class: "button cancel"
+          = d.text_field :value, placeholder: dataset_value_for(@dataset_edit.key).to_s
+          span.unit= unit_for(@dataset_edit)
 
-  .history
-    = render 'history'
+      .field
+        = form.label :message
+        = form.text_area :message, maxlength: 500
+
+      = form.fields_for(:source) do |s|
+        .field.file
+          = s.file_field :source_file
+          = s.label :source_file do
+            => I18n.t("datasets.attributes.source_file")
+            i.fa.fa-upload
+            span= filename_for_source
+
+      = form.submit "Save"
+      span.or or
+      = link_to "Cancel", dataset_path(@dataset.area), class: "button cancel"
+
+    .history
+      = render 'history'

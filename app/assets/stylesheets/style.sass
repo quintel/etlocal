@@ -147,19 +147,20 @@ table tbody tr td a.button
       z-index: -1
 
 .edit-form
-  display: table
-  width: 100%
+  > .errors
+    .error
+      margin-bottom: 10px
+      background-color: $error-color
+      border-color: darken($error-color, 20)
+      padding: 5px 10px
 
-  > .errors .error
-    margin-bottom: 10px
-    background-color: $error-color
-    border-color: darken($error-color, 20)
-    padding: 5px 10px
-    width: 43%
+  .wrapper
+    display: table
+    width: 100%
 
-  form, .history
-    display: table-cell
-    vertical-align: top
+    form, .history
+      display: table-cell
+      vertical-align: top
 
   form
     width: 47%

@@ -7,4 +7,6 @@ class Commit < ApplicationRecord
   accepts_nested_attributes_for :dataset_edits
   accepts_nested_attributes_for :source,
     reject_if: proc { |s| s["source_file"].blank? }
+
+  validates_presence_of :message
 end

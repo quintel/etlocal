@@ -16,4 +16,12 @@ module DatasetHelper
   def unit_for(attribute)
     @dataset.editable_attributes.detect{ |t| t.key == attribute.key }.unit
   end
+
+  def filename_for_source
+    if params[:change] && params[:change][:source_attributes]
+      params[:change][:source_attributes][:source_file].original_filename
+    else
+      I18n.t("datasets.attributes.no_source_file")
+    end
+  end
 end

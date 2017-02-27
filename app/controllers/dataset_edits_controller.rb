@@ -21,7 +21,7 @@ class DatasetEditsController < ApplicationController
       }
     else
       @commit.build_source
-      @dataset_edit = @commit.dataset_edits.build(key: params[:attribute_name])
+      @dataset_edit = @commit.dataset_edits.last
 
       render :edit
     end

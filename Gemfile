@@ -41,9 +41,11 @@ end
 
 group :test do
   gem 'factory_girl_rails'
+  gem 'webmock'
 end
 
 group :development do
+  gem 'rest-client'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
   gem 'spring'

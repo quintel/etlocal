@@ -13,9 +13,9 @@
           dl.info
             dt.label Latest edit
             dd
-              span= I18n.l dataset.dataset_edits.latest.created_at, format: :simple
+              span= I18n.l dataset.dataset_edits.last.created_at, format: :simple
               span by
-              span= dataset.dataset_edits.latest.commit.user.name
+              span= dataset.dataset_edits.last.commit.user.name
 
             dt.label Amount of edits
             dd= dataset.dataset_edits.all.count

@@ -5,4 +5,10 @@ Rails.application.routes.draw do
   resources :datasets, only: %i(index show), param: :area do
     resources :dataset_edits, only: %i(edit update), param: :attribute_name
   end
+
+  namespace :api do
+    namespace :v1 do
+      resources :exports, only: :show, param: :area
+    end
+  end
 end

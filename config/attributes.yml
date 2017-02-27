@@ -1,3 +1,5 @@
+# Note: never ever just 'add an attribute'. This will destroy things in
+# later analyses.
 ---
 gas_consumption:
   unit: m3

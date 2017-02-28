@@ -4,3 +4,6 @@
 
   - elsif flash[:error]
     .error.notice= flash[:error]
+
+  - elsif flash[:alert]
+    .error.notice= flash[:alert]

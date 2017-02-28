@@ -1,0 +1,15 @@
+@import 'variables'
+
+form#new_user
+  #error_explanation
+    h2
+      display: none
+
+    ul
+      li
+        list-style-type: none
+        padding: 4px 10px
+        margin-bottom: 10px
+        border-radius: 4px
+        background-color: $error-color
+        border: 1px solid darken($error-color, 20)

@@ -18,6 +18,7 @@ gem 'slim'
 gem 'paperclip'
 gem 'devise'
 gem 'pundit'
+gem 'validates_email_format_of'
 
 gem 'atlas',    ref: '38248be', github: 'quintel/atlas'
 gem 'rubel',    ref: 'ad3d44e', github: 'quintel/rubel'

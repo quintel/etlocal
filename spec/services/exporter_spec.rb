@@ -5,8 +5,16 @@ describe Exporter do
   let(:ameland) { Atlas::Dataset::Derived.find('ameland') }
 
   let!(:stub_export_request) {
-    stub_request(:get, "https://beta-local.energytransitionmodel.com/api/v1/export/ameland")
-      .to_return(body: JSON.dump({'number_of_cars' => '10'}))
+    stub_request(:get, "https://beta-local.energytransitionmodel.com/api/v1/exports/ameland")
+      .to_return(body: JSON.dump({
+        'electricity_consumption' => 500,
+        'gas_consumption' => 500,
+        'roof_surface_available_for_pv' => 500,
+        'number_of_residences' => 10,
+        'number_of_residences_with_solar_pv' => 1,
+        'number_of_cars' => 10,
+        'number_of_inhabitants' => 10
+      }))
   }
 
   it "exports a dataset" do

@@ -18,8 +18,6 @@ describe DatasetEditCollection do
   end
 
   it 'find latests edit for `number_of_cars`' do
-    expect(dataset_edit_collection.find(:number_of_cars)).to eq(
-      DatasetEdit.last
-    )
+    expect(dataset_edit_collection.find(:number_of_cars).value).to eq("5.0")
   end
 end

@@ -6,6 +6,6 @@
     .current-user
       span= I18n.t("user.signed_in_as")
       span &nbsp;
-      span= current_user.email
+      span= current_user.name
 
       = link_to I18n.t("user.sign_out"), destroy_user_session_path, class: 'button', method: :delete

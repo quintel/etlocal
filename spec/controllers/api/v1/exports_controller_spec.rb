@@ -7,12 +7,13 @@ describe Api::V1::ExportsController do
     get :show, params: { area: dataset.area }, format: :json
 
     expect(JSON.parse(response.body)).to eq({
-      'gas_consumption'               => nil,
-      'electricity_consumption'       => nil,
-      'roof_surface_available_for_pv' => nil,
-      'number_of_cars'                => 1062.598515994393,
-      'number_of_residences'          => 1000,
-      'number_of_inhabitants'         => 2252.5041956973664
+      'gas_consumption'                    => nil,
+      'electricity_consumption'            => nil,
+      'roof_surface_available_for_pv'      => nil,
+      'number_of_cars'                     => 1062.598515994393,
+      'number_of_residences'               => 10.0,
+      'number_of_residences_with_solar_pv' => nil,
+      'number_of_inhabitants'              => 10.0
     })
   end
 
@@ -41,12 +42,13 @@ describe Api::V1::ExportsController do
       get :show, params: { area: dataset.area }, format: :json
 
       expect(JSON.parse(response.body)).to eq({
-        'gas_consumption'               => 0.0,
-        'electricity_consumption'       => 0.0,
-        'roof_surface_available_for_pv' => 0.0,
-        'number_of_cars'                => 1,
-        'number_of_residences'          => 1000,
-        'number_of_inhabitants'         => 2252.5041956973664
+        "gas_consumption"=>nil,
+        "electricity_consumption"=>nil,
+        "roof_surface_available_for_pv"=>nil,
+        "number_of_cars"=>1.0,
+        'number_of_residences_with_solar_pv' => nil,
+        "number_of_residences"=>10.0,
+        "number_of_inhabitants"=>10.0
       })
     end
   end

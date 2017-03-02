@@ -26,4 +26,9 @@ RSpec.configure do |config|
   config.before(:suite) do
     Atlas.data_dir = "#{ config.fixture_path }/etsource"
   end
+
+  config.before(:each) do
+    stub_const("DatasetAnalyzer::Assumptions::ASSUMPTIONS",
+      YAML.load_file(Rails.root.join("spec", "fixtures", "assumptions.yml")))
+  end
 end

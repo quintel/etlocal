@@ -3,13 +3,21 @@
 ---
 gas_consumption:
   unit: m3
+
 electricity_consumption:
   unit: kWh
+
 roof_surface_available_for_pv:
   unit: m2
+
 number_of_cars:
   unit: ''
+
 number_of_residences:
   unit: ''
+
+number_of_residences_with_solar_pv:
+  unit: ''
+
 number_of_inhabitants:
   unit: ''

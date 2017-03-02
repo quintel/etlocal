@@ -1,0 +1,252 @@
+---
+:conversions:
+  :kwh_to_mj: 3.6
+  :m3_to_mj: 31.4
+
+:ratios:
+  :electricity:
+    :space_heating: 0.0722
+    :hot_water:     0.0515
+    :cooling:       0.0722
+    :cooking:       0.0309
+    :lighting:      0.134
+    :appliances:    0.6392
+
+  :lighting:
+    :households_lighting_led_electricity:                    0.0034
+    :households_lighting_efficient_fluorescent_electricity:  0.8333
+    :households_lighting_incandescent_electricity:           0.1633
+
+  :appliances:
+    :households_useful_demand_electric_appliances_dishwasher:      0.0806
+    :households_useful_demand_electric_appliances_fridge_freezer:  0.2258
+    :households_useful_demand_electric_appliances_washing_machine: 0.0806
+    :households_useful_demand_electric_appliances_clothes_dryer:   0.1130
+    :households_useful_demand_electric_appliances_television:      0.1452
+    :households_useful_demand_electric_appliances_computer_media:  0.1936
+    :households_useful_demand_electric_appliances_vacuum_cleaner:  0.0483
+    :households_useful_demand_electric_appliances_other:           0.1130
+
+  :cooking:
+    :households_cooker_resistive_electricity: 0.0973
+    :households_cooker_halogen_electricity:   0.7137
+    :households_cooker_induction_electricity: 0.1889
+
+  :cooking_carriers:
+    :electricity: 28.3
+    :gas: 71.7
+
+  :water_heater_space_heater_gas:
+    :water_heater: 0.2
+    :space_heater: 0.8
+
+  :old_new_houses:
+    :space_heating:
+      :old: 0.9262
+      :new: 0.0738
+    :cooling:
+      :old: 0.9262
+      :new: 0.0738
+
+:demands:
+  :heatpump:
+    :households_cooling_heatpump_ground_water_electricity:      73.2427869858809
+    :households_water_heater_heatpump_air_water_electricity:    18.26657225
+    :households_water_heater_heatpump_ground_water_electricity: 82.769337
+    :households_space_heater_heatpump_air_water_electricity:    73.066289
+    :households_space_heater_heatpump_ground_water_electricity: 331.077348
+  :transport:
+    :transport_car_demand: 15066.47
+
+:effiencies:
+  :agriculture_burner_crude_oil: 0.7887
+  :agriculture_burner_network_gas: 0.9
+  :agriculture_burner_wood_pellets: 0.7608
+  :agriculture_final_demand_steam_hot_water: 1
+  :agriculture_geothermal: 24
+  :agriculture_heatpump_water_water_ts_electricity: 23
+  :buildings_chp_engine_biogas: 0.35
+  :buildings_collective_chp_network_gas: 0.43
+  :buildings_collective_chp_wood_pellets: 0.75
+  :buildings_collective_geothermal: 1
+  :buildings_cooling_airconditioning_electricity: 4
+  :buildings_cooling_collective_heatpump_water_water_ts_electricity: 19
+  :buildings_cooling_heatpump_air_water_network_gas: 17
+  :buildings_heat_network_connection_steam_hot_water: 1
+  :buildings_lighting_efficient_fluorescent_electricity: 0.2
+  :buildings_lighting_led_electricity: 0.45
+  :buildings_lighting_standard_fluorescent_electricity: 0.16
+  :buildings_space_heater_coal: 0.8
+  :buildings_space_heater_collective_heatpump_water_water_ts_electricity: 9
+  :buildings_space_heater_crude_oil: 0.85
+  :buildings_space_heater_district_heating_steam_hot_water: 1
+  :buildings_space_heater_electricity: 1
+  :buildings_space_heater_heatpump_air_water_network_gas: 2
+  :buildings_space_heater_network_gas: 1.067
+  :buildings_space_heater_solar_thermal: 0.95
+  :buildings_space_heater_wood_pellets: 0.82
+  :households_collective_chp_biogas: 0.35
+  :households_collective_chp_biogas_dumped_heat: 0.35
+  :households_collective_chp_network_gas: 0.43
+  :households_collective_chp_wood_pellets: 0.75
+  :households_collective_geothermal: 1
+  :households_cooker_halogen_electricity: 0.6
+  :households_cooker_induction_electricity: 0.85
+  :households_cooker_network_gas: 0.4
+  :households_cooker_resistive_electricity: 0.55
+  :households_cooker_wood_pellets: 0.3
+  :households_cooling_airconditioning_electricity: 4
+  :households_cooling_heatpump_air_water_electricity: 4.50
+  :households_cooling_heatpump_ground_water_electricity: 19
+  :households_heat_network_connection_steam_hot_water: 1
+  :households_lighting_efficient_fluorescent_electricity: 0.25
+  :households_lighting_incandescent_electricity: 0.05
+  :households_lighting_led_electricity: 0.5
+  :households_space_heater_coal: 0.8
+  :households_space_heater_combined_network_gas: 1.067
+  :households_space_heater_crude_oil: 0.85
+  :households_space_heater_district_heating_steam_hot_water: 1
+  :households_space_heater_electricity: 1
+  :households_space_heater_heatpump_air_water_electricity: 4.5
+  :households_space_heater_heatpump_ground_water_electricity: 4.8
+  :households_space_heater_hybrid_heatpump_air_water_electricity: 4.5
+  :households_space_heater_micro_chp_network_gas: 0.88
+  :households_space_heater_network_gas: 0.8
+  :households_space_heater_wood_pellets: 0.82
+  :households_water_heater_coal: 0.8
+  :households_water_heater_combined_network_gas: 0.9
+  :households_water_heater_crude_oil: 0.85
+  :households_water_heater_district_heating_steam_hot_water: 1
+  :households_water_heater_fuel_cell_chp_network_gas: 0.2
+  :households_water_heater_heatpump_air_water_electricity: 3
+  :households_water_heater_heatpump_ground_water_electricity: 3
+  :households_water_heater_hybrid_heatpump_air_water_electricity: 3
+  :households_water_heater_micro_chp_network_gas: 0.17
+  :households_water_heater_network_gas: 0.67
+  :households_water_heater_resistive_electricity: 0.95
+  :households_water_heater_solar_thermal: 1
+  :households_water_heater_wood_pellets: 0.82
+  :industry_burner_coal: 0.8
+  :industry_burner_crude_oil: 0.83
+  :industry_burner_network_gas: 0.9
+  :industry_burner_wood_pellets: 0.8
+  :industry_chemicals_burner_coal: 0.8
+  :industry_chemicals_burner_crude_oil: 0.83
+  :industry_chemicals_burner_network_gas: 0.9
+  :industry_chemicals_burner_wood_pellets: 0.8
+  :transport_car_using_compressed_natural_gas: 0.476
+  :transport_car_using_diesel_mix: 0.5263
+  :transport_car_using_electricity: 1.5385
+  :transport_car_using_gasoline_mix: 0.4762
+  :transport_car_using_hydrogen: 1.0204
+  :transport_car_using_lpg: 0.5
+  :transport_plane_using_bio_ethanol: 1
+  :transport_plane_using_gasoline: 1
+  :transport_plane_using_kerosene: 1
+  :transport_ship_using_diesel_mix: 0.0017
+  :transport_ship_using_lng_mix: 0.0017
+  :transport_train_using_coal: 0.3
+  :transport_train_using_diesel: 0.3
+  :transport_train_using_electricity: 0.9
+  :transport_truck_using_compressed_natural_gas: 0.1064
+  :transport_truck_using_diesel_mix: 0.1064
+  :transport_truck_using_electricity: 0.1916
+  :transport_truck_using_gasoline_mix: 0.0965
+  :transport_truck_using_lng_mix: 0.1182
+
+:number_of:
+  :number_of_energy_power_combined_cycle_network_gas:        0.0000020124185
+  :number_of_energy_power_ultra_supercritical_coal:          0.0000003273924
+  :number_of_energy_power_ultra_supercritical_cofiring_coal: 0.0000001556091
+  :number_of_energy_power_supercritical_waste_mix:           0.0000017866586
+
+:null_attributes:
+  :households_cooker_wood_pellets_share: 0
+  :households_cooling_heatpump_air_water_electricity_share: 0
+  :households_heat_network_connection_steam_hot_water_share: 0
+  :households_space_heater_coal_share: 0
+  :households_space_heater_crude_oil_share: 0
+  :households_space_heater_district_heating_steam_hot_water_share: 0
+  :households_space_heater_hybrid_heatpump_air_water_electricity_share: 0
+  :households_space_heater_micro_chp_network_gas_share: 0
+  :households_space_heater_network_gas_share: 0
+  :households_space_heater_wood_pellets_share: 0
+  :households_collective_chp_biogas_share: 0
+  :households_collective_chp_network_gas_share: 0
+  :households_collective_chp_wood_pellets_share: 0
+  :households_collective_geothermal_share: 100
+  :households_water_heater_coal_share: 0
+  :households_water_heater_crude_oil_share: 0
+  :households_water_heater_district_heating_steam_hot_water_share: 0
+  :households_water_heater_fuel_cell_chp_network_gas_share: 0
+  :households_water_heater_hybrid_heatpump_air_water_electricity_share: 0
+  :households_water_heater_micro_chp_network_gas_share: 0
+  :households_water_heater_network_gas_share: 0
+  :households_water_heater_solar_thermal_share: 0
+  :households_water_heater_wood_pellets_share: 0
+
+  :industry_other_metals_production: 0
+  :industry_aluminium_production: 0
+  :industry_steel_production: 0
+  :industry_useful_demand_for_chemical_fertilizers: 0
+  :industry_useful_demand_for_chemical_other_coal_non_energetic: 0
+  :industry_useful_demand_for_chemical_other_crude_oil_non_energetic: 0
+  :industry_useful_demand_for_chemical_other_electricity: 0
+  :industry_useful_demand_for_chemical_other_network_gas_non_energetic: 0
+  :industry_useful_demand_for_chemical_other_useable_heat: 0
+  :industry_useful_demand_for_chemical_other_wood_pellets_non_energetic: 0
+  :industry_useful_demand_for_chemical_refineries: 0
+  :industry_useful_demand_for_other_aggregated_industry_nl_coal: 0
+  :industry_useful_demand_for_other_aggregated_industry_nl_coal_non_energetic: 0
+  :industry_useful_demand_for_other_aggregated_industry_nl_crude_oil: 0
+  :industry_useful_demand_for_other_aggregated_industry_nl_crude_oil_non_energetic: 0
+  :industry_useful_demand_for_other_aggregated_industry_nl_electricity: 0
+  :industry_useful_demand_for_other_aggregated_industry_nl_network_gas: 0
+  :industry_useful_demand_for_other_aggregated_industry_nl_network_gas_non_energetic: 0
+  :industry_useful_demand_for_other_aggregated_industry_nl_useable_heat: 0
+  :industry_useful_demand_for_other_aggregated_industry_nl_wood_pellets: 0
+  :industry_useful_demand_for_other_aggregated_industry_nl_wood_pellets_non_energetic: 0
+  :industry_useful_demand_for_other_food: 0
+  :industry_useful_demand_for_other_ict: 0
+  :industry_useful_demand_for_other_minerals: 0
+  :industry_useful_demand_for_other_mining: 0
+  :industry_useful_demand_for_other_paper: 0
+
+  :transport_useful_demand_planes: 0
+  :transport_useful_demand_ship_kms: 0
+  :transport_useful_demand_trains: 0
+  :transport_useful_demand_truck_kms: 0
+
+  :agriculture_useful_demand_electricity: 0
+  :agriculture_useful_demand_useable_heat: 0
+  :number_of_agriculture_chp_engine_biogas: 0
+  :number_of_agriculture_chp_engine_network_gas: 0
+  :number_of_agriculture_chp_supercritical_wood_pellets: 0
+
+  :other_useful_demand_non_energetic: 0
+
+  :buildings_solar_pv_solar_radiation_market_penetration: 0
+  :buildings_useful_demand_cooling: 0
+  :buildings_useful_demand_light: 0
+  :buildings_useful_demand_for_space_heating: 0
+  :buildings_useful_demand_appliances: 0
+
+  :number_of_energy_chp_combined_cycle_network_gas:        0
+  :number_of_energy_chp_ultra_supercritical_coal:          0
+  :number_of_energy_chp_ultra_supercritical_cofiring_coal: 0
+  :number_of_energy_chp_supercritical_waste_mix:           0
+
+  :number_of_energy_heater_for_heat_network_network_gas: 0
+  :number_of_energy_heater_for_heat_network_waste_mix: 0.00000001
+  :number_of_energy_heater_for_heat_network_wood_pellets: 0
+  :number_of_energy_power_hydro_river: 0
+  :number_of_energy_power_nuclear_gen2_uranium_oxide: 0
+  :number_of_energy_power_solar_pv_solar_radiation: 0
+  :number_of_industry_chp_combined_cycle_gas_power_fuelmix: 0
+  :number_of_industry_chp_engine_gas_power_fuelmix: 0
+  :number_of_industry_chp_turbine_gas_power_fuelmix: 0
+  :energy_production_biodiesel: 0
+  :energy_production_bio_ethanol: 0
+  :energy_production_woody_biomass: 0
+  :energy_extraction_natural_gas: 0
+  :energy_extraction_crude_oil: 0

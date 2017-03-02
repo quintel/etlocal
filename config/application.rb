@@ -13,8 +13,9 @@ module Etlocal
     # -- all .rb files in that directory are automatically loaded.
     config.time_zone           = "Europe/Amsterdam"
 
-    config.encoding            = "utf-8"
-    config.etsource_path       = Rails.root.dirname.join("etsource").to_s
-    config.google_maps_api_key = Rails.application.secrets.google_maps_api_key
+    config.encoding             = "utf-8"
+    config.etsource_path        = Rails.root.dirname.join("etsource").to_s
+    config.etsource_export_root = "http://etlocal.dev"
+    config.google_maps_api_key  = Rails.application.secrets.google_maps_api_key
   end
 end

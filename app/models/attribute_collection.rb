@@ -11,6 +11,24 @@ module AttributeCollection
     set_editable_attributes
   end
 
+  def attribute_exists?(method)
+    editable_attributes.map(&:key).include?(method)
+  end
+
+  def editable_attributes
+    @editable_attributes ||= begin
+      EDITABLE_ATTRIBUTES.map do |name, options|
+        EditableAttribute.new(self, name, options)
+      end
+    end
+  end
+
+  def static
+    %i(base_dataset analysis_year)
+  end
+
+  private
+
   def set_area_attributes
     ATLAS_ATTRIBUTES.each do |attribute|
       define_singleton_method attribute do
@@ -19,6 +37,11 @@ module AttributeCollection
     end
   end
 
+  # Private: defines methods for editable attributes.
+  #
+  # Defaults for methods like 'number_of_cars' are directly readable from
+  # the .ad file in question. Other methods are not useable and return nil for
+  # now.
   def set_editable_attributes
     editable_attributes.each do |attribute|
       define_singleton_method attribute.key do
@@ -29,21 +52,5 @@ module AttributeCollection
         end
       end
     end
-  end
-
-  def editable_attributes
-    @editable_attributes ||= begin
-      EDITABLE_ATTRIBUTES.map do |name, options|
-        EditableAttribute.new(name, options)
-      end
-    end
-  end
-
-  def static
-    %i(base_dataset analysis_year)
-  end
-
-  def attribute_exists?(method)
-    editable_attributes.map(&:key).include?(method)
   end
 end

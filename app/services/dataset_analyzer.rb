@@ -1,18 +1,41 @@
 class DatasetAnalyzer
+  ANALYZERS = [
+    ElectricityConsumption,
+    Lighting,
+    Appliances,
+    GasConsumption,
+    Cooking,
+    Cooling,
+    WaterHeater,
+    SpaceHeater,
+    RoofSurfaceAvailableForPV,
+    Transport,
+    EnergySector,
+    NullAttributes,
+    ToAtlasAttribute,
+  ].freeze
+
   def self.analyze(dataset_edits)
-    Hash[dataset_edits.map do |key, value|
-      case key
-      when 'gas_consumption'
-        GasConsumption.analyze(key, value)
-      when 'electricity_consumption'
-        ElectricityConsumption.analyze(key, value)
-      when 'roof_surface_available_for_pv'
-        RoofSurfaceAvailableForPV.analyze(key, value)
-      when 'number_of_cars', 'number_of_inhabitants', 'number_of_residences'
-        [key, value]
-      else
-        raise ArgumentError, "no formatter available for '#{ key }'"
-      end
-    end]
+    new(dataset_edits).analyze
+  end
+
+  def initialize(dataset_edits)
+    raise ArgumentError unless valid_edits?(dataset_edits)
+
+    @dataset_edits = dataset_edits
+  end
+
+  def analyze
+    ANALYZERS.each_with_object({}) do |analyzer, object|
+      object.merge! analyzer.analyze(@dataset_edits, object)
+    end
+  end
+
+  private
+
+  def valid_edits?(dataset_edits)
+    Dataset::EDITABLE_ATTRIBUTES.keys.all? do |key|
+      dataset_edits[key].present? && dataset_edits[key].is_a?(Numeric)
+    end
   end
 end

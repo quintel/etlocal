@@ -8,10 +8,11 @@ class DatasetAnalyzer
     private
 
     def all_useful_demands
-      all_useful_demands_electricity.merge(
-        households_cooker_network_gas:
-          @analyzed_attributes.fetch(:households_cooker_network_gas)
-      )
+      @all_useful_demands ||=
+        all_useful_demands_electricity.merge(
+          households_cooker_network_gas:
+            @analyzed_attributes.fetch(:households_cooker_network_gas)
+        )
     end
 
     def all_useful_demands_electricity

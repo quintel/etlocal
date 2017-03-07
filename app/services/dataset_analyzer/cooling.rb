@@ -20,7 +20,7 @@ class DatasetAnalyzer
     private
 
     def all_useful_demands
-      {
+      @all_useful_demands ||= {
         households_cooling_airconditioning_electricity:
           households_cooling_airconditioning_electricity,
         households_cooling_heatpump_ground_water_electricity:

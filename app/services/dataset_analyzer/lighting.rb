@@ -5,9 +5,10 @@ class DatasetAnalyzer
     end
 
     def all_useful_demands
-      ratio(:lighting).each_with_object({}) do |(key, lighting_ratio), object|
-        object[key] = total_demand * lighting_ratio * efficiency_for(key)
-      end
+      @all_useful_demands ||=
+        ratio(:lighting).each_with_object({}) do |(key, lighting_ratio), object|
+          object[key] = total_demand * lighting_ratio * efficiency_for(key)
+        end
     end
 
     private

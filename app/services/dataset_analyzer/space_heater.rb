@@ -27,15 +27,17 @@ class DatasetAnalyzer
     private
 
     def all_useful_demands
-      KEYS.each_with_object({}) do |key, object|
-        object[key] = case key
-          when :households_space_heater_electricity
-            households_space_heater_electricity
-          when :households_space_heater_combined_network_gas
-            @analyzed_attributes.fetch(key) * efficiency_for(key)
-          else
-            useful_demand(key)
-          end
+      @all_useful_demands ||= begin
+        KEYS.each_with_object({}) do |key, object|
+          object[key] = case key
+            when :households_space_heater_electricity
+              households_space_heater_electricity
+            when :households_space_heater_combined_network_gas
+              @analyzed_attributes.fetch(key) * efficiency_for(key)
+            else
+              useful_demand(key)
+            end
+        end
       end
     end
 

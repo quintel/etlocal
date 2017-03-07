@@ -16,15 +16,17 @@ class DatasetAnalyzer
     private
 
     def all_useful_demands
-      KEYS.each_with_object({}) do |key, object|
-        object[key] = case key
-          when :households_water_heater_combined_network_gas
-            @analyzed_attributes.fetch(key) * efficiency_for(key)
-          when :households_water_heater_resistive_electricity
-            households_water_heater_resistive_electricity
-          else
-            useful_demand(key)
-          end
+      @all_useful_demands ||= begin
+        KEYS.each_with_object({}) do |key, object|
+          object[key] = case key
+            when :households_water_heater_combined_network_gas
+              @analyzed_attributes.fetch(key) * efficiency_for(key)
+            when :households_water_heater_resistive_electricity
+              households_water_heater_resistive_electricity
+            else
+              useful_demand(key)
+            end
+        end
       end
     end
 

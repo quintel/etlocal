@@ -4,6 +4,7 @@
   :m3_to_mj: 31.4
 
 :ratios:
+  # SHARES
   :electricity:
     :space_heating: 0.0722
     :hot_water:     0.0515
@@ -55,6 +56,7 @@
     :transport_car_demand: 15066.47
 
 :efficiencies:
+  # Per carrier output Atlas::Node
   :agriculture_burner_crude_oil: 0.7887
   :agriculture_burner_network_gas: 0.9
   :agriculture_burner_wood_pellets: 0.7608
@@ -157,10 +159,12 @@
   :number_of_energy_power_supercritical_waste_mix:           0.0000017866586
 
 :null_attributes:
+  # TODO! Fix inner working of ETEngine preferably
   :has_agriculture: false
   :has_buildings: false
   :has_industry: false
   :has_other: false
+  # ENDTODO
   :number_of_buildings: 0
 
   :households_cooker_wood_pellets_share: 0

@@ -9,4 +9,8 @@ class User < ApplicationRecord
   validates_email_format_of :email
   validates_presence_of :name
   validates :password, presence: true, confirmation: true
+
+  def self.robot
+    find_by_email("robot@quintel.com")
+  end
 end

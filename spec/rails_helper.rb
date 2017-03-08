@@ -25,10 +25,21 @@ RSpec.configure do |config|
 
   config.before(:suite) do
     Atlas.data_dir = "#{ config.fixture_path }/etsource"
+
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+
+    FactoryGirl.create(:user, email: "robot@quintel.com")
+  end
+
+  config.around(:each) do |example|
+    DatabaseCleaner.cleaning do
+      example.run
+    end
   end
 
   config.before(:each) do
     stub_const("DatasetAnalyzer::Assumptions::ASSUMPTIONS",
-      YAML.load_file(Rails.root.join("spec", "fixtures", "assumptions.yml")))
+      YAML.load_file("#{ config.fixture_path }/assumptions.yml"))
   end
 end

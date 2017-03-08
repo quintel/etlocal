@@ -1,5 +1,6 @@
 Rails.application.configure do
   config.etsource_export_root = ENV['EXPORT_ROOT'] || "http://etlocal.dev"
+  config.area_files = Rails.root.join("config", "areas")
 
   # Settings specified here will take precedence over those in config/application.rb.
 

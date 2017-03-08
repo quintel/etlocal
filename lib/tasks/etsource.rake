@@ -8,4 +8,14 @@ namespace :etsource do
 
     Exporter.export(dataset)
   end
+
+  desc "Create a new dataset"
+  task :new => :environment do
+    dataset = Dataset.find(ENV['DATASET'])
+
+    raise ArgumentError, "DATASET= argument is missing" unless ENV['DATASET']
+    raise ArgumentError, "dataset '#{ ENV['DATASET'] }' already exists" if dataset
+
+    DatasetCreator.create(ENV['DATASET'])
+  end
 end

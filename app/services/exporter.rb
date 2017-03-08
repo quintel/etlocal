@@ -15,7 +15,6 @@ module Exporter
     end
   end
 
-  # Demo: Exporter.store(:drenthe, Hash[Dataset::EDITABLE_ATTRIBUTES.keys.map{|k| [k, rand * 1000] }])
   def self.store(area, edits)
     dataset            = Atlas::Dataset::Derived.find(area)
     dataset.attributes = DatasetAnalyzer.analyze(edits)

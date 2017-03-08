@@ -15,7 +15,7 @@ class DatasetAnalyzer
     end
 
     def efficiency_for(key)
-      ASSUMPTIONS[:effiencies].fetch(key)
+      ASSUMPTIONS[:efficiencies].fetch(key)
     end
 
     def conversion(key)

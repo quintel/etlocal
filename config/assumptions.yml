@@ -58,7 +58,7 @@
   :transport:
     :transport_car_demand: 15066.47
 
-:effiencies:
+:efficiencies:
   :agriculture_burner_crude_oil: 0.7887
   :agriculture_burner_network_gas: 0.9
   :agriculture_burner_wood_pellets: 0.7608

@@ -9,6 +9,11 @@ class DatasetAnalyzer
     AREA_ATTRIBUTES = %i(
       residences_roof_surface_available_for_pv
       buildings_roof_surface_available_for_pv
+      has_agriculture
+      has_buildings
+      has_industry
+      has_other
+      number_of_buildings
     )
 
     def analyze

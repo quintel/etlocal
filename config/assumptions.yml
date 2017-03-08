@@ -161,6 +161,12 @@
   :number_of_energy_power_supercritical_waste_mix:           0.0000017866586
 
 :null_attributes:
+  :has_agriculture: false
+  :has_buildings: false
+  :has_industry: false
+  :has_other: false
+  :number_of_buildings: 0
+
   :households_cooker_wood_pellets_share: 0
   :households_cooling_heatpump_air_water_electricity_share: 0
   :households_heat_network_connection_steam_hot_water_share: 0

@@ -1,4 +1,4 @@
-class DatasetAnalyzer
+module DatasetAnalyzer
   class Transport < Base
     def analyze
       { transport_useful_demand_car_kms: transport_useful_demand_car_kms }

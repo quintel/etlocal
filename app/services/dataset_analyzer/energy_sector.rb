@@ -1,4 +1,4 @@
-class DatasetAnalyzer
+module DatasetAnalyzer
   class EnergySector < Base
     def analyze
       ASSUMPTIONS[:number_of].transform_values do |value|

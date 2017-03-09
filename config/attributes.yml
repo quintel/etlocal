@@ -16,6 +16,9 @@ number_of_cars:
 number_of_residences:
   unit: ''
 
+percentage_of_old_residences:
+  unit: '%'
+
 number_of_residences_with_solar_pv:
   unit: ''
 

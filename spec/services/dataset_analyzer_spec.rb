@@ -35,7 +35,8 @@ describe DatasetAnalyzer do
         "number_of_cars" => 5.0,
         "number_of_residences" => 5.0,
         "number_of_residences_with_solar_pv" => 5.0,
-        "number_of_inhabitants" => 5.0
+        "number_of_inhabitants" => 5.0,
+        "percentage_of_old_residences" => 10
       }
     }
 

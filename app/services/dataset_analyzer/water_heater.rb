@@ -1,4 +1,4 @@
-class DatasetAnalyzer
+module DatasetAnalyzer
   class WaterHeater < Base
     include HeatingCooling
 

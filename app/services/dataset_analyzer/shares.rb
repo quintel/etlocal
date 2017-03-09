@@ -1,4 +1,4 @@
-class DatasetAnalyzer
+module DatasetAnalyzer
   module Shares
     def to_shares
       all_useful_demands.each_with_object({}) do |(key, value), object|

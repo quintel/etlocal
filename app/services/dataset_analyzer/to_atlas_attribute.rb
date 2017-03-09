@@ -1,21 +1,5 @@
-class DatasetAnalyzer
+module DatasetAnalyzer
   class ToAtlasAttribute < Base
-    STATIC = %w(
-      number_of_cars
-      number_of_residences
-      number_of_inhabitants
-    )
-
-    AREA_ATTRIBUTES = %i(
-      residences_roof_surface_available_for_pv
-      buildings_roof_surface_available_for_pv
-      has_agriculture
-      has_buildings
-      has_industry
-      has_other
-      number_of_buildings
-    )
-
     def analyze
       static.merge(area_attributes).merge(init: initializer_inputs)
     end
@@ -31,11 +15,17 @@ class DatasetAnalyzer
     end
 
     def static
-      @dataset_edits.slice(*STATIC).symbolize_keys
+      {
+        number_of_cars: number_of_cars,
+        number_of_residences: number_of_residences,
+        number_of_inhabitants: number_of_inhabitants,
+        number_of_old_residences: number_of_old_residences,
+        number_of_new_residences: number_of_new_residences
+      }
     end
 
     def area_attributes
-      @analyzed_attributes.slice(*AREA_ATTRIBUTES)
+      @analyzed_attributes.slice(*Atlas::Dataset.attribute_set.map(&:name))
     end
   end
 end

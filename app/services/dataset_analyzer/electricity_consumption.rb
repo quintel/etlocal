@@ -1,4 +1,4 @@
-class DatasetAnalyzer
+module DatasetAnalyzer
   class ElectricityConsumption < Base
     def analyze
       ratio(:electricity).transform_values do |v|

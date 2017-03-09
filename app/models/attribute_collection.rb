@@ -4,11 +4,20 @@ module AttributeCollection
   # values only.
 
   EDITABLE_ATTRIBUTES = YAML.load_file(Rails.root.join("config", "attributes.yml"))
-  ATLAS_ATTRIBUTES    = %i(base_dataset analysis_year area id)
+  ATLAS_ATTRIBUTES    = %i(base_dataset
+                           analysis_year
+                           area
+                           id
+                           number_of_residences
+                           number_of_inhabitants
+                           number_of_cars)
 
   def set_attributes
-    set_area_attributes
-    set_editable_attributes
+    ATLAS_ATTRIBUTES.each do |attribute|
+      define_singleton_method attribute do
+        @atlas_dataset.public_send(attribute)
+      end
+    end
   end
 
   def attribute_exists?(method)
@@ -23,34 +32,25 @@ module AttributeCollection
     end
   end
 
+  def percentage_of_old_residences
+    (@atlas_dataset.number_of_old_residences / number_of_residences) * 100
+  end
+
+  def gas_consumption
+    nil
+  end
+
+  def electricity_consumption
+    nil
+  end
+
+  def roof_surface_available_for_pv
+  end
+
+  def number_of_residences_with_solar_pv
+  end
+
   def static
     %i(base_dataset analysis_year)
-  end
-
-  private
-
-  def set_area_attributes
-    ATLAS_ATTRIBUTES.each do |attribute|
-      define_singleton_method attribute do
-        @atlas_dataset.public_send(attribute)
-      end
-    end
-  end
-
-  # Private: defines methods for editable attributes.
-  #
-  # Defaults for methods like 'number_of_cars' are directly readable from
-  # the .ad file in question. Other methods are not useable and return nil for
-  # now.
-  def set_editable_attributes
-    editable_attributes.each do |attribute|
-      define_singleton_method attribute.key do
-        begin
-          @atlas_dataset.public_send(attribute.key)
-        rescue NoMethodError
-          nil
-        end
-      end
-    end
   end
 end

@@ -10,4 +10,5 @@ nl:
         number_of_cars: "Hoeveelheid auto's"
         number_of_residences: Hoeveelheid huizen
         number_of_inhabitants: Hoeveelheid inwoners
+        percentage_of_old_residences: "Huizen gebouwd voor 1992"
         roof_surface_available_for_pv: Roof surface available for PV

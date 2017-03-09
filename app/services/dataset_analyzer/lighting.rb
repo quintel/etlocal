@@ -1,4 +1,4 @@
-class DatasetAnalyzer
+module DatasetAnalyzer
   class Lighting < Base
     def analyze
       to_shares.merge(households_useful_demand_lighting: total_useful_demand)

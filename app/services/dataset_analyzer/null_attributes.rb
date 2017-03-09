@@ -1,4 +1,4 @@
-class DatasetAnalyzer
+module DatasetAnalyzer
   class NullAttributes < Base
     def analyze
       ASSUMPTIONS[:null_attributes]

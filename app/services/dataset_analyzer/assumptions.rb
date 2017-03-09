@@ -1,4 +1,4 @@
-class DatasetAnalyzer
+module DatasetAnalyzer
   module Assumptions
     ASSUMPTIONS = YAML.load_file(Rails.root.join("config", "assumptions.yml")).freeze
 

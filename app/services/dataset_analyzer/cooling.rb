@@ -1,19 +1,13 @@
-class DatasetAnalyzer
+module DatasetAnalyzer
   class Cooling < Base
     include HeatingCooling
-
-    def initialize(*)
-      super
-
-      @ratio_old_new_houses = ratio(:old_new_houses)
-    end
 
     def analyze
       to_shares.merge(
         households_useful_demand_for_cooling_new_houses:
-          (total_useful_demand * @ratio_old_new_houses.fetch(:new)),
+          (total_useful_demand * ratio_houses.fetch(:new)),
         households_useful_demand_for_cooling_old_houses:
-          (total_useful_demand * @ratio_old_new_houses.fetch(:old))
+          (total_useful_demand * ratio_houses.fetch(:old))
       )
     end
 

@@ -1,4 +1,4 @@
-class DatasetAnalyzer
+module DatasetAnalyzer
   class Appliances < Base
     # Appliances division
     def analyze

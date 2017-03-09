@@ -3,7 +3,8 @@ require 'rails_helper'
 describe DatasetAnalyzer::Cooling do
   let(:analyzer) {
     DatasetAnalyzer::Cooling.analyze({
-      'number_of_residences' => 10
+      'number_of_residences' => 10,
+      'percentage_of_old_residences' => 92.62
     }, cooling: 1000)
   }
 
@@ -47,10 +48,10 @@ describe DatasetAnalyzer::Cooling do
 
   # Percentage of total useful demand
   #
-  # 14986.418047 * 0.0738 = 1105.9976519337015
+  # 14986.418047 * 0.0738 = 1105.9976519337008
   it "specifies the total new houses demand" do
     expect(analyzer
       .fetch(:households_useful_demand_for_cooling_new_houses)
-    ).to eq(1105.9976519337015) # MJ
+    ).to eq(1105.9976519337008) # MJ
   end
 end

@@ -13,7 +13,8 @@ describe Exporter do
         'number_of_residences' => 10,
         'number_of_residences_with_solar_pv' => 1,
         'number_of_cars' => 10,
-        'number_of_inhabitants' => 10
+        'number_of_inhabitants' => 10,
+        'percentage_of_old_residences' => 10
       }))
   }
 

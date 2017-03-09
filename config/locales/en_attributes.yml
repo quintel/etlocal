@@ -11,4 +11,5 @@ en:
         number_of_residences: Number of houses
         number_of_residences_with_solar_pv: Number of houses with solar PV
         number_of_inhabitants: Number of inhabitants
+        percentage_of_old_residences: "Residences built before 1992"
         roof_surface_available_for_pv: Roof surface available for PV

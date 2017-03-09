@@ -6,15 +6,7 @@ describe Api::V1::ExportsController do
   it 'fetches a collection of dataset edits as json' do
     get :show, params: { area: dataset.area }, format: :json
 
-    expect(JSON.parse(response.body)).to eq({
-      'gas_consumption'                    => nil,
-      'electricity_consumption'            => nil,
-      'roof_surface_available_for_pv'      => nil,
-      'number_of_cars'                     => 1062.598515994393,
-      'number_of_residences'               => 10.0,
-      'number_of_residences_with_solar_pv' => nil,
-      'number_of_inhabitants'              => 10.0
-    })
+    expect(JSON.parse(response.body).fetch('number_of_residences')).to eq(10.0)
   end
 
   describe 'with edits' do
@@ -41,15 +33,13 @@ describe Api::V1::ExportsController do
     it 'should render all the editable attributes of a dataset' do
       get :show, params: { area: dataset.area }, format: :json
 
-      expect(JSON.parse(response.body)).to eq({
-        "gas_consumption"=>nil,
-        "electricity_consumption"=>nil,
-        "roof_surface_available_for_pv"=>nil,
-        "number_of_cars"=>1.0,
-        'number_of_residences_with_solar_pv' => nil,
-        "number_of_residences"=>10.0,
-        "number_of_inhabitants"=>10.0
-      })
+      expect(JSON.parse(response.body).fetch('number_of_residences')).to eq(10.0)
+    end
+
+    it 'should render all the editable attributes of a dataset' do
+      get :show, params: { area: dataset.area }, format: :json
+
+      expect(JSON.parse(response.body).fetch('number_of_cars')).to eq(1.0)
     end
   end
 end

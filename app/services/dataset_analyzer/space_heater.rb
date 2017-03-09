@@ -1,4 +1,4 @@
-class DatasetAnalyzer
+module DatasetAnalyzer
   class SpaceHeater < Base
     include HeatingCooling
 
@@ -9,18 +9,12 @@ class DatasetAnalyzer
       :households_space_heater_combined_network_gas
     ]
 
-    def initialize(*)
-      super
-
-      @ratio_old_new_houses = ratio(:old_new_houses)
-    end
-
     def analyze
       to_shares.merge(
         households_useful_demand_new_houses_heat_per_person:
-          (total_useful_demand * @ratio_old_new_houses.fetch(:new)),
+          (total_useful_demand * ratio_houses.fetch(:new)),
         households_useful_demand_old_houses_heat_per_person:
-          (total_useful_demand * @ratio_old_new_houses.fetch(:old))
+          (total_useful_demand * ratio_houses.fetch(:old))
       )
     end
 

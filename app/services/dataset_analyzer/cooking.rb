@@ -1,4 +1,4 @@
-class DatasetAnalyzer
+module DatasetAnalyzer
   class Cooking < Base
     def analyze
       to_shares.merge(

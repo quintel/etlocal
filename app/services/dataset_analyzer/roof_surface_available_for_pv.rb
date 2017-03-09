@@ -1,4 +1,4 @@
-class DatasetAnalyzer
+module DatasetAnalyzer
   class RoofSurfaceAvailableForPV < Base
     def analyze
       {

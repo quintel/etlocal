@@ -1,4 +1,4 @@
-class DatasetAnalyzer
+module DatasetAnalyzer
   class GasConsumption < Base
     def initialize(*)
       super

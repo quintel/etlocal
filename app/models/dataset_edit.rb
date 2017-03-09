@@ -8,6 +8,10 @@ class DatasetEdit < ApplicationRecord
     order('`created_at` DESC')
   end
 
+  def user
+    commit.user
+  end
+
   def as_json(*)
     super.slice('key', 'value')
   end

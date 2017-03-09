@@ -13,6 +13,12 @@ module DatasetHelper
     @dataset_edits.find(key).present?
   end
 
+  def has_dataset_edit_by_robot?(key)
+    dataset_edit = @dataset_edits.find(key)
+
+    dataset_edit.present? && dataset_edit.user == User.robot
+  end
+
   def unit_for(attribute)
     @dataset.editable_attributes.detect{ |t| t.key == attribute.key }.unit
   end

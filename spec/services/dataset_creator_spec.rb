@@ -17,11 +17,11 @@ describe DatasetCreator do
     before(:all) { DatasetCreator.create('grootebroek') }
 
     it 'creates new dataset edits' do
-      expect(DatasetEdit.count).to eq(7)
+      expect(DatasetEdit.count).to eq(8)
     end
 
     it 'creates an equal amount of commits' do
-      expect(Commit.count).to eq(7)
+      expect(Commit.count).to eq(8)
     end
 
     it 'has the amount of cars as specified' do

@@ -8,7 +8,9 @@ class DatasetCreator
     @full_dataset = full_dataset
 
     raise ArgumentError, "area config does not exist" unless area_config
-    raise ArgumentError, "invalid area config" unless area_config_valid?
+    unless AttributeValidator.valid?(area_config)
+      raise ArgumentError, "invalid area config"
+    end
   end
 
   def create
@@ -37,12 +39,6 @@ class DatasetCreator
 
   def area_config
     areas[@area]
-  end
-
-  def area_config_valid?
-    Dataset::EDITABLE_ATTRIBUTES.keys.all? do |attribute|
-      area_config[attribute].present? && area_config[attribute].is_a?(Numeric)
-    end
   end
 
   def areas

@@ -41,12 +41,8 @@
     :space_heater: 0.8
 
   :old_new_houses:
-    :space_heating:
-      :old: 0.9262
-      :new: 0.0738
-    :cooling:
-      :old: 0.9262
-      :new: 0.0738
+    :old: 0.9262
+    :new: 0.0738
 
 :demands:
   :heatpump:

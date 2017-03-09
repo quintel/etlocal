@@ -5,7 +5,7 @@ class DatasetAnalyzer
     def initialize(*)
       super
 
-      @ratio_old_new_houses = ratio(:old_new_houses).fetch(:cooling)
+      @ratio_old_new_houses = ratio(:old_new_houses)
     end
 
     def analyze

@@ -21,15 +21,11 @@ module AttributeCollection
   end
 
   def attribute_exists?(method)
-    editable_attributes.map(&:key).include?(method)
+    editable_attributes.exists?(method)
   end
 
   def editable_attributes
-    @editable_attributes ||= begin
-      EDITABLE_ATTRIBUTES.map do |name, options|
-        EditableAttribute.new(self, name, options)
-      end
-    end
+    @editable_attributes ||= EditableAttributesCollection.new(self)
   end
 
   def percentage_of_old_residences
@@ -37,11 +33,9 @@ module AttributeCollection
   end
 
   def gas_consumption
-    nil
   end
 
   def electricity_consumption
-    nil
   end
 
   def roof_surface_available_for_pv

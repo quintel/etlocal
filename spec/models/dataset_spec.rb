@@ -15,7 +15,7 @@ describe Dataset do
 
   describe 'has editable attributes' do
     it "is editable" do
-      dataset.editable_attributes.each do |attribute|
+      dataset.editable_attributes.all.each do |attribute|
         expect(dataset).to respond_to(attribute.key)
       end
     end

@@ -20,7 +20,7 @@ module DatasetHelper
   end
 
   def unit_for(attribute)
-    @dataset.editable_attributes.detect{ |t| t.key == attribute.key }.unit
+    @dataset.editable_attributes.find(attribute.key).unit
   end
 
   def filename_for_source

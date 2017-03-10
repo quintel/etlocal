@@ -13,5 +13,9 @@ en:
         base_dataset: Base dataset
         analysis_year: Analysis year
 
+    groups:
+      households: Households
+      transport: Transport
+
     flash:
       not_found: "Area '%{area}' does not exists"

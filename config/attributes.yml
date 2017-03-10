@@ -1,26 +1,34 @@
 # Note: never ever just 'add an attribute'. This will destroy things in
 # later analyses.
 ---
-gas_consumption:
-  unit: m3
-
 electricity_consumption:
   unit: kWh
+  group: households
 
-roof_surface_available_for_pv:
-  unit: m2
-
-number_of_cars:
-  unit: ''
-
-number_of_residences:
-  unit: ''
-
-percentage_of_old_residences:
-  unit: '%'
-
-number_of_residences_with_solar_pv:
-  unit: ''
+gas_consumption:
+  unit: m3
+  group: households
 
 number_of_inhabitants:
   unit: ''
+  group: households
+
+number_of_cars:
+  unit: ''
+  group: transport
+
+number_of_residences:
+  unit: ''
+  group: households
+
+number_of_residences_with_solar_pv:
+  unit: ''
+  group: households
+
+percentage_of_old_residences:
+  unit: '%'
+  group: households
+
+roof_surface_available_for_pv:
+  unit: m2
+  group: households

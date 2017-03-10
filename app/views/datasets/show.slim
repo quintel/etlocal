@@ -2,7 +2,7 @@
 
 .info
   .image
-    img src=@dataset.map_image_url('100x100') alt= "No google image available"
+    img src= @dataset.map_image_url('100x100') alt= "No google image available"
 
   .content
     h5= @dataset.area.humanize
@@ -10,6 +10,9 @@
     = render 'details', dataset: @dataset
 
     .attributes
-      = render partial: "attribute", collection: @dataset.editable_attributes
+      - @dataset.editable_attributes.grouped.each do |group, attributes|
+        strong= I18n.t("datasets.groups.#{ group }")
+
+        = render partial: "attribute", collection: attributes
 
   .clear

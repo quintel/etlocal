@@ -4,7 +4,7 @@ class Api::V1::ExportsController < ApplicationController
   before_action :find_dataset
 
   def show
-    edits = @dataset.editable_attributes.each_with_object({}) do |edit, object|
+    edits = @dataset.editable_attributes.all.each_with_object({}) do |edit, object|
       object[edit.key] = edit.value
     end
 

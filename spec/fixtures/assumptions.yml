@@ -2,8 +2,40 @@
 :conversions:
   :kwh_to_mj: 3.6
   :m3_to_mj: 31.4
+  :m2_to_no: 1
 
 :ratios:
+  :buildings_electricity:
+    :buildings_electricity_space_heating: 0.0039
+    :buildings_electricity_cooling:       0.0548
+    :buildings_electricity_appliances:    0.4605
+    :buildings_electricity_lighting:      0.4764
+
+  :buildings_gas:
+    :buildings_gas_space_heating: 0.8566
+    :buildings_gas_cooling:       0
+    :buildings_gas_appliances:    0.1434
+
+  :buildings_electricity_lighting:
+    :buildings_lighting_efficient_fluorescent_electricity: 0.0535
+    :buildings_lighting_led_electricity: 0.0057
+    :buildings_lighting_standard_fluorescent_electricity: 0.9408
+
+  :buildings_electricity_appliances:
+
+  :buildings_electricity_space_heating:
+    :buildings_space_heater_collective_heatpump_water_water_ts_electricity: 1
+    :buildings_space_heater_electricity: 0
+
+  :buildings_gas_space_heating:
+
+  :buildings_electricity_cooling:
+    :buildings_cooling_collective_heatpump_water_water_ts_electricity: 0.096
+    :buildings_cooling_airconditioning_electricity: 0.9904
+
+  :buildings_gas_cooling:
+    :buildings_cooling_heatpump_air_water_network_gas: 0
+
   :electricity:
     :space_heating: 0.0722
     :hot_water:     0.0515

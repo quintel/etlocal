@@ -6,3 +6,6 @@ number_of_residences: 50
 number_of_residences_with_solar_pv: 5
 number_of_inhabitants: 100
 percentage_of_old_residences: 1
+building_area: 20
+electricity_consumption_buildings: 1
+gas_consumption_buildings: 1

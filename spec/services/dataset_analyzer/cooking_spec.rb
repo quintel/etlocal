@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 describe DatasetAnalyzer::Cooking do
+  let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
   let(:analyzes) {
-    DatasetAnalyzer::Cooking.analyze({}, {
+    DatasetAnalyzer::Cooking.analyze(dataset, {}, {
       households_cooker_network_gas: 100,
       cooking: 1000
     })

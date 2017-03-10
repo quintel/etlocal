@@ -14,9 +14,19 @@ describe Exporter do
         'number_of_residences_with_solar_pv' => 1,
         'number_of_cars' => 10,
         'number_of_inhabitants' => 10,
-        'percentage_of_old_residences' => 10
+        'percentage_of_old_residences' => 10,
+        'building_area' => 20,
+        'electricity_consumption_buildings' => 1,
+        'gas_consumption_buildings' => 1
       }))
   }
+
+  # Stub graph nodes demand; every node demand = 5.0
+  before do
+    expect_any_instance_of(Turbine::Graph).to receive(:node)
+      .at_least(:once)
+      .and_return(OpenStruct.new(demand: 5.0))
+  end
 
   it "exports a dataset" do
     Exporter.export(dataset)

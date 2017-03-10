@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 describe DatasetAnalyzer::Lighting do
+  let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
   let(:analyzes) {
-    DatasetAnalyzer::Lighting.analyze({}, {
+    DatasetAnalyzer::Lighting.analyze(dataset, {}, {
       lighting: 100
     })
   }

@@ -5,6 +5,7 @@ nl:
         commit: "Reden"
         source_file: "Bronbestand"
 
+        building_area: Totale oppervlakte gebouwen
         gas_consumption: Gasgebruik per huishouden
         electricity_consumption: Electriciteitsgebruik per huishouden
         number_of_cars: "Aantal auto's"

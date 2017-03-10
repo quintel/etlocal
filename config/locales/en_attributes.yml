@@ -5,8 +5,11 @@ en:
         commit: "Reason"
         source_file: "Source file"
 
+        building_area: Area occupied by buildings
         gas_consumption: Gas consumption per household
+        gas_consumption_buildings: Gas consumption per building
         electricity_consumption: Electricity consumption per household
+        electricity_consumption_buildings: Electricity consumption per building
         number_of_cars: Number of cars
         number_of_residences: Number of houses
         number_of_residences_with_solar_pv: Number of houses with solar PV

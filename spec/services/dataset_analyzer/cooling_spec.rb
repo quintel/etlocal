@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 describe DatasetAnalyzer::Cooling do
+  let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
   let(:analyzer) {
-    DatasetAnalyzer::Cooling.analyze({
+    DatasetAnalyzer::Cooling.analyze(dataset, {
       'number_of_residences' => 10,
       'percentage_of_old_residences' => 92.62
     }, cooling: 1000)

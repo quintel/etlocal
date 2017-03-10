@@ -17,7 +17,7 @@ module Exporter
 
   def self.store(area, edits)
     dataset            = Atlas::Dataset::Derived.find(area)
-    dataset.attributes = DatasetAnalyzer.analyze(edits)
+    dataset.attributes = DatasetAnalyzer.analyze(dataset, edits)
     dataset.save
   end
 end

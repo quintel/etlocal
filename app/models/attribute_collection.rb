@@ -32,10 +32,19 @@ module AttributeCollection
     (@atlas_dataset.number_of_old_residences / number_of_residences) * 100
   end
 
+  def building_area
+  end
+
   def gas_consumption
   end
 
+  def gas_consumption_buildings
+  end
+
   def electricity_consumption
+  end
+
+  def electricity_consumption_buildings
   end
 
   def roof_surface_available_for_pv

@@ -1,5 +1,20 @@
 .details
-  - dataset.static.each do |attribute|
-    span.key= I18n.t("datasets.attributes.static.#{ attribute }")
+  .static
+    - dataset.static.each do |attribute|
+      span.key= I18n.t("datasets.attributes.static.#{ attribute }")
+      span>= ':'
+      span.val= dataset.public_send(attribute)
+
+  .legend
+    span.key
+      i.fa.fa-question
     span>= ':'
-    span.val= dataset.public_send(attribute)
+    span.val>
+      | Estimated by Quintel
+    span.key
+      i.fa.fa-wrench
+    span>= ':'
+    span.val>
+      | Edited
+
+  .clear

@@ -1,6 +1,10 @@
 # Note: never ever just 'add an attribute'. This will destroy things in
 # later analyses.
 ---
+building_area:
+  unit: m2
+  group: buildings
+
 electricity_consumption:
   unit: kWh
   group: households

@@ -3,11 +3,12 @@ module DatasetAnalyzer
     include DatasetAnalyzer::Assumptions
     include DatasetAnalyzer::Shares
 
-    def self.analyze(dataset_edits, analyzed_attributes)
-      new(dataset_edits, analyzed_attributes).analyze
+    def self.analyze(dataset, dataset_edits, analyzed_attributes)
+      new(dataset, dataset_edits, analyzed_attributes).analyze
     end
 
-    def initialize(dataset_edits, analyzed_attributes)
+    def initialize(dataset, dataset_edits, analyzed_attributes)
+      @dataset             = dataset
       @dataset_edits       = dataset_edits
       @analyzed_attributes = analyzed_attributes
 
@@ -40,6 +41,10 @@ module DatasetAnalyzer
     def number_of_new_residences
       @number_of_new_residences ||=
         (number_of_residences - number_of_old_residences)
+    end
+
+    def graph
+      @graph ||= Atlas::Runner.new(@dataset).calculate
     end
   end
 end

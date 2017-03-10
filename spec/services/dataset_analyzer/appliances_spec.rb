@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 describe DatasetAnalyzer::Appliances do
+  let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
+
   let(:analyzes) {
-    DatasetAnalyzer::Appliances.analyze({}, {
+    DatasetAnalyzer::Appliances.analyze(dataset, {}, {
       appliances: 100
     })
   }

@@ -14,20 +14,35 @@ describe DatasetCreator do
   end
 
   describe "correctly create a new dataset" do
-    before(:all) { DatasetCreator.create('grootebroek') }
+    let(:graph) {
+      graph = Turbine::Graph.new
+
+      %i(buildings_useful_demand_for_appliances
+         buildings_useful_demand_cooling
+         buildings_useful_demand_electricity
+         buildings_useful_demand_for_space_heating
+         buildings_useful_demand_light
+      ).each do |key|
+        graph.add(Refinery::Node.new(key, demand: 0))
+      end
+
+      graph
+    }
+
+    before do
+      expect_any_instance_of(DatasetAnalyzer::Base).to receive(:graph)
+        .at_least(:once)
+        .and_return(graph)
+    end
 
     it 'creates new dataset edits' do
-      expect(DatasetEdit.count).to eq(8)
-    end
+      DatasetCreator.create('grootebroek')
 
-    it 'creates an equal amount of commits' do
-      expect(Commit.count).to eq(8)
-    end
-
-    it 'has the amount of cars as specified' do
+      expect(Commit.count).to eq(11)
+      expect(DatasetEdit.count).to eq(11)
       expect(Atlas::Dataset.find(:grootebroek).number_of_cars).to eq(30)
     end
 
-    after(:all) { FileUtils.rm_rf("#{ Atlas.data_dir }/datasets/grootebroek") }
+    after { FileUtils.rm_rf("#{ Atlas.data_dir }/datasets/grootebroek") }
   end
 end

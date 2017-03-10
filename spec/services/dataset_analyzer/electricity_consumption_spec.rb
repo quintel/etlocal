@@ -1,8 +1,10 @@
 require 'rails_helper'
 
 describe DatasetAnalyzer::ElectricityConsumption do
+  let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
   let(:analyzes) {
     DatasetAnalyzer::ElectricityConsumption.analyze(
+      dataset,
       { 'electricity_consumption' => 138.8888888888, 'number_of_residences' => 100 }, {}
     )
   }

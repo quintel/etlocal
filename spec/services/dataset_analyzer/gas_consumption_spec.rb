@@ -1,11 +1,13 @@
 require 'rails_helper'
 
 describe DatasetAnalyzer::GasConsumption do
+  let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
   let(:analyzer) {
-    DatasetAnalyzer::GasConsumption.analyze({
-      'gas_consumption' => 500,
-      'number_of_residences' => 100
-    }, {
+    DatasetAnalyzer::GasConsumption.analyze(dataset,
+      {
+        'gas_consumption' => 500,
+        'number_of_residences' => 100
+      }, {
       cooking: 500
     })
   }

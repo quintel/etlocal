@@ -55,6 +55,12 @@
     :transport_car_demand: 15066.47
 
 :efficiencies:
+  :test_heatpump:
+    :input: :electricity
+
+  :test_carrier: :useable_heat
+  :test_static: 0.5
+
   :agriculture_burner_crude_oil: 0.7887
   :agriculture_burner_network_gas: 0.9
   :agriculture_burner_wood_pellets: 0.7608

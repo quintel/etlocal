@@ -5,10 +5,11 @@ nl:
         commit: "Reden"
         source_file: "Bronbestand"
 
-        gas_consumption: Gas consumptie
-        electricity_consumption: Electriciteits consumptie
-        number_of_cars: "Hoeveelheid auto's"
-        number_of_residences: Hoeveelheid huizen
-        number_of_inhabitants: Hoeveelheid inwoners
+        gas_consumption: Gasgebruik per huishouden
+        electricity_consumption: Electriciteitsgebruik per huishouden
+        number_of_cars: "Aantal auto's"
+        number_of_residences: Aantal huizen
+        number_of_residences_with_solar_pv: Aantal huizen met een zonnepaneel
+        number_of_inhabitants: Aantal inwoners
         percentage_of_old_residences: "Huizen gebouwd voor 1992"
-        roof_surface_available_for_pv: Roof surface available for PV
+        roof_surface_available_for_pv: Dakoppervlak beschikbaar voor PV per huishouden

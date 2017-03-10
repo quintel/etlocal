@@ -56,101 +56,115 @@
     :transport_car_demand: 15066.47
 
 :efficiencies:
-  # Per carrier output Atlas::Node
-  :agriculture_burner_crude_oil: 0.7887
-  :agriculture_burner_network_gas: 0.9
-  :agriculture_burner_wood_pellets: 0.7608
+  # Defaults to 1
   :agriculture_final_demand_steam_hot_water: 1
-  :agriculture_geothermal: 24
-  :agriculture_heatpump_water_water_ts_electricity: 23
-  :buildings_chp_engine_biogas: 0.35
-  :buildings_collective_chp_network_gas: 0.43
-  :buildings_collective_chp_wood_pellets: 0.75
-  :buildings_collective_geothermal: 1
-  :buildings_cooling_airconditioning_electricity: 4
-  :buildings_cooling_collective_heatpump_water_water_ts_electricity: 19
-  :buildings_cooling_heatpump_air_water_network_gas: 17
-  :buildings_heat_network_connection_steam_hot_water: 1
-  :buildings_lighting_efficient_fluorescent_electricity: 0.2
-  :buildings_lighting_led_electricity: 0.45
-  :buildings_lighting_standard_fluorescent_electricity: 0.16
-  :buildings_space_heater_coal: 0.8
-  :buildings_space_heater_collective_heatpump_water_water_ts_electricity: 9
-  :buildings_space_heater_crude_oil: 0.85
-  :buildings_space_heater_district_heating_steam_hot_water: 1
-  :buildings_space_heater_electricity: 1
-  :buildings_space_heater_heatpump_air_water_network_gas: 2
-  :buildings_space_heater_network_gas: 1.067
-  :buildings_space_heater_solar_thermal: 0.95
-  :buildings_space_heater_wood_pellets: 0.82
-  :households_collective_chp_biogas: 0.35
-  :households_collective_chp_biogas_dumped_heat: 0.35
-  :households_collective_chp_network_gas: 0.43
-  :households_collective_chp_wood_pellets: 0.75
-  :households_collective_geothermal: 1
-  :households_cooker_halogen_electricity: 0.6
-  :households_cooker_induction_electricity: 0.85
-  :households_cooker_network_gas: 0.4
-  :households_cooker_resistive_electricity: 0.55
-  :households_cooker_wood_pellets: 0.3
-  :households_cooling_airconditioning_electricity: 4
-  :households_cooling_heatpump_air_water_electricity: 4.50
-  :households_cooling_heatpump_ground_water_electricity: 19
-  :households_heat_network_connection_steam_hot_water: 1
-  :households_lighting_efficient_fluorescent_electricity: 0.25
-  :households_lighting_incandescent_electricity: 0.05
-  :households_lighting_led_electricity: 0.5
-  :households_space_heater_coal: 0.8
-  :households_space_heater_combined_network_gas: 1.067
-  :households_space_heater_crude_oil: 0.85
-  :households_space_heater_district_heating_steam_hot_water: 1
-  :households_space_heater_electricity: 1
-  :households_space_heater_heatpump_air_water_electricity: 4.5
-  :households_space_heater_heatpump_ground_water_electricity: 4.8
-  :households_space_heater_hybrid_heatpump_air_water_electricity: 4.5
-  :households_space_heater_micro_chp_network_gas: 0.88
-  :households_space_heater_network_gas: 0.8
-  :households_space_heater_wood_pellets: 0.82
-  :households_water_heater_coal: 0.8
-  :households_water_heater_combined_network_gas: 0.9
-  :households_water_heater_crude_oil: 0.85
-  :households_water_heater_district_heating_steam_hot_water: 1
-  :households_water_heater_fuel_cell_chp_network_gas: 0.2
-  :households_water_heater_heatpump_air_water_electricity: 3
-  :households_water_heater_heatpump_ground_water_electricity: 3
-  :households_water_heater_hybrid_heatpump_air_water_electricity: 3
-  :households_water_heater_micro_chp_network_gas: 0.17
-  :households_water_heater_network_gas: 0.67
-  :households_water_heater_resistive_electricity: 0.95
-  :households_water_heater_solar_thermal: 1
-  :households_water_heater_wood_pellets: 0.82
-  :industry_burner_coal: 0.8
-  :industry_burner_crude_oil: 0.83
-  :industry_burner_network_gas: 0.9
-  :industry_burner_wood_pellets: 0.8
-  :industry_chemicals_burner_coal: 0.8
-  :industry_chemicals_burner_crude_oil: 0.83
-  :industry_chemicals_burner_network_gas: 0.9
-  :industry_chemicals_burner_wood_pellets: 0.8
-  :transport_car_using_compressed_natural_gas: 0.476
-  :transport_car_using_diesel_mix: 0.5263
-  :transport_car_using_electricity: 1.5385
-  :transport_car_using_gasoline_mix: 0.4762
-  :transport_car_using_hydrogen: 1.0204
-  :transport_car_using_lpg: 0.5
+  :transport_car_using_electricity: 1
   :transport_plane_using_bio_ethanol: 1
   :transport_plane_using_gasoline: 1
   :transport_plane_using_kerosene: 1
-  :transport_ship_using_diesel_mix: 0.0017
-  :transport_ship_using_lng_mix: 0.0017
-  :transport_train_using_coal: 0.3
-  :transport_train_using_diesel: 0.3
-  :transport_train_using_electricity: 0.9
-  :transport_truck_using_compressed_natural_gas: 0.1064
-  :transport_truck_using_diesel_mix: 0.1064
-  :transport_truck_using_electricity: 0.1916
-  :transport_truck_using_gasoline_mix: 0.0965
-  :transport_truck_using_lng_mix: 0.1182
+
+  # Input division
+  :agriculture_geothermal:
+    :input: :electricity
+  :buildings_collective_geothermal:
+    :input: :electricity
+  :buildings_cooling_airconditioning_electricity:
+    :input: :electricity
+  :buildings_cooling_collective_heatpump_water_water_ts_electricity:
+    :input: :electricity
+  :buildings_cooling_heatpump_air_water_network_gas:
+    :input: :gas
+  :buildings_space_heater_collective_heatpump_water_water_ts_electricity:
+    :input: :electricity
+  :buildings_space_heater_heatpump_air_water_network_gas:
+    :input: :gas
+
+  :households_collective_geothermal:
+    :input: :electricity
+  :households_cooling_airconditioning_electricity:
+    :input: :electricity
+  :households_cooling_heatpump_air_water_electricity:
+    :input: :electricity
+  :households_cooling_heatpump_ground_water_electricity:
+    :input: :electricity
+  :households_space_heater_heatpump_air_water_electricity:
+    :input: :electricity
+  :households_space_heater_heatpump_ground_water_electricity:
+    :input: :electricity
+  :households_space_heater_hybrid_heatpump_air_water_electricity:
+    :input: :electricity
+  :households_water_heater_heatpump_air_water_electricity:
+    :input: :electricity
+  :households_water_heater_heatpump_ground_water_electricity:
+    :input: :electricity
+  :households_water_heater_hybrid_heatpump_air_water_electricity:
+    :input: :electricity
+  :agriculture_heatpump_water_water_ts_electricity:
+    :input: :electricity
+
+  #
+  :agriculture_burner_crude_oil: :useable_heat
+  :agriculture_burner_network_gas: :useable_heat
+  :agriculture_burner_wood_pellets: :useable_heat
+  :buildings_chp_engine_biogas: :steam_hot_water
+  :buildings_collective_chp_network_gas: :electricity
+  :buildings_collective_chp_wood_pellets: :steam_hot_water
+  :buildings_heat_network_connection_steam_hot_water: :steam_hot_water
+  :buildings_lighting_efficient_fluorescent_electricity: :light
+  :buildings_lighting_led_electricity: :light
+  :buildings_lighting_standard_fluorescent_electricity: :light
+  :buildings_space_heater_coal: :useable_heat
+  :buildings_space_heater_crude_oil: :useable_heat
+  :buildings_space_heater_district_heating_steam_hot_water: :useable_heat
+  :buildings_space_heater_electricity: :useable_heat
+  :buildings_space_heater_network_gas: :useable_heat
+  :buildings_space_heater_solar_thermal: :useable_heat
+  :buildings_space_heater_wood_pellets: :useable_heat
+  :households_collective_chp_biogas: :steam_hot_water
+  :households_collective_chp_network_gas: :electricity
+  :households_collective_chp_wood_pellets: :steam_hot_water
+  :households_cooker_halogen_electricity: :useable_heat
+  :households_cooker_induction_electricity: :useable_heat
+  :households_cooker_network_gas: :useable_heat
+  :households_cooker_resistive_electricity: :useable_heat
+  :households_cooker_wood_pellets: :useable_heat
+  :households_heat_network_connection_steam_hot_water: :steam_hot_water
+  :households_lighting_efficient_fluorescent_electricity: :light
+  :households_lighting_incandescent_electricity: :light
+  :households_lighting_led_electricity: :light
+  :households_space_heater_coal: :useable_heat
+  :households_space_heater_combined_network_gas: :useable_heat
+  :households_space_heater_crude_oil: :useable_heat
+  :households_space_heater_district_heating_steam_hot_water: :useable_heat
+  :households_space_heater_electricity: :useable_heat
+  :households_space_heater_micro_chp_network_gas: :useable_heat
+  :households_space_heater_network_gas: :useable_heat
+  :households_space_heater_wood_pellets: :useable_heat
+  :households_water_heater_coal: :useable_heat
+  :households_water_heater_combined_network_gas: :useable_heat
+  :households_water_heater_crude_oil: :useable_heat
+  :households_water_heater_district_heating_steam_hot_water: :useable_heat
+  :households_water_heater_fuel_cell_chp_network_gas: :useable_heat
+  :households_water_heater_micro_chp_network_gas: :electricity
+  :households_water_heater_network_gas: :useable_heat
+  :households_water_heater_resistive_electricity: :useable_heat
+  :households_water_heater_solar_thermal: :useable_heat
+  :households_water_heater_wood_pellets: :useable_heat
+  :transport_car_using_compressed_natural_gas: :car_kms
+  :transport_car_using_diesel_mix: :car_kms
+  :transport_car_using_gasoline_mix: :car_kms
+  :transport_car_using_hydrogen: :car_kms
+  :transport_car_using_lpg: :car_kms
+  :transport_ship_using_diesel_mix: :shipping_kms
+  :transport_ship_using_lng_mix: :shipping_kms
+  :transport_train_using_coal: :not_defined
+  :transport_train_using_diesel: :not_defined
+  :transport_train_using_electricity: :not_defined
+  :transport_truck_using_compressed_natural_gas: :truck_kms
+  :transport_truck_using_diesel_mix: :truck_kms
+  :transport_truck_using_electricity: :truck_kms
+  :transport_truck_using_gasoline_mix: :truck_kms
+  :transport_truck_using_lng_mix: :truck_kms
 
 :number_of:
   :number_of_energy_power_combined_cycle_network_gas:        0.0000020124185

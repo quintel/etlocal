@@ -37,9 +37,4 @@ RSpec.configure do |config|
       example.run
     end
   end
-
-  config.before(:each) do
-    stub_const("DatasetAnalyzer::Assumptions::ASSUMPTIONS",
-      YAML.load_file("#{ config.fixture_path }/assumptions.yml"))
-  end
 end

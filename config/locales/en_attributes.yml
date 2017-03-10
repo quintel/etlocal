@@ -5,11 +5,11 @@ en:
         commit: "Reason"
         source_file: "Source file"
 
-        gas_consumption: Gas consumption
-        electricity_consumption: Electricity consumption
+        gas_consumption: Gas consumption per household
+        electricity_consumption: Electricity consumption per household
         number_of_cars: Number of cars
         number_of_residences: Number of houses
         number_of_residences_with_solar_pv: Number of houses with solar PV
         number_of_inhabitants: Number of inhabitants
         percentage_of_old_residences: "Residences built before 1992"
-        roof_surface_available_for_pv: Roof surface available for PV
+        roof_surface_available_for_pv: Roof surface available for PV per household

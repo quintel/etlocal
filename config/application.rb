@@ -14,6 +14,7 @@ module Etlocal
     config.time_zone           = "Europe/Amsterdam"
 
     config.encoding             = "utf-8"
+    config.assumptions_path     = Rails.root.join("config", "assumptions.yml")
     config.etsource_path        = Rails.root.dirname.join("etsource").to_s
     config.etsource_export_root = "http://etlocal.dev"
     config.google_maps_api_key  = Rails.application.secrets.google_maps_api_key

@@ -1,6 +1,7 @@
 Rails.application.configure do
   config.etsource_export_root = "https://beta-local.energytransitionmodel.com"
-  config.area_files = Rails.root.join("spec", "fixtures", "areas")
+  config.assumptions_path     = Rails.root.join("spec", "fixtures", "assumptions.yml")
+  config.area_files           = Rails.root.join("spec", "fixtures", "areas")
 
   # Settings specified here will take precedence over those in config/application.rb.
 

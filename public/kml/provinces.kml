@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<GroundOverlay>
+	<name>Netherlands - Administrative - WorldMAP</name>
+	<visibility>0</visibility>
+	<description>Netherlands 
+Provinces
+www.worldmap.org</description>
+	<color>faffffff</color>
+	<Icon>
+		<href>http://worldmap.org/maps/prepared/churchstatus/netherlands/netherlands_provinces.jpg</href>
+		<viewBoundScale>0.75</viewBoundScale>
+	</Icon>
+	<LatLonBox>
+		<north>53.89730819324484</north>
+		<south>50.1178664098723</south>
+		<east>7.685606400072032</east>
+		<west>2.766690995129167</west>
+	</LatLonBox>
+</GroundOverlay>
+</kml>

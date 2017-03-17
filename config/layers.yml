@@ -1,0 +1,35 @@
+---
+- name: 'provinces'
+  id: "grdw.2yc5gbk0"
+  source: "provinces-38l90g"
+  minzoom: 5
+  maxzoom: 7
+  filter: "NAME_1"
+
+- name: 'municipality-low-res'
+  id: "grdw.96nbvtnq"
+  source: "gem_2015_compressed-c4yaoc"
+  minzoom: 7
+  maxzoom: 9
+  filter: "GM_CODE"
+
+- name: 'municipality'
+  id: "grdw.3hbvtfda"
+  source: "gem_2015-75kcmi"
+  minzoom: 9
+  maxzoom: 11
+  filter: "GM_CODE"
+
+- name: 'district'
+  id: "grdw.8lonpbnq"
+  source: "wijk_2015-5edmgp"
+  minzoom: 11
+  maxzoom: 12
+  filter: "WK_CODE"
+
+- name: 'neighborhood'
+  id: "grdw.62n9xo3v"
+  source: "buurt_2015-8rym6j"
+  minzoom: 12
+  maxzoom: 24
+  filter: "BU_CODE"

@@ -1,0 +1,6 @@
+.hidden
+  .mapbox-api-key
+    = Rails.application.secrets.mapbox_api_key
+
+  .layers
+    = YAML.load_file(Rails.root.join("config", "layers.yml")).to_json

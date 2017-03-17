@@ -15,4 +15,5 @@
  *= require normalize
  *= require skeleton
  *= require font-awesome.min
+ *= require mapbox-gl
  */

@@ -3,6 +3,7 @@ $(document).on('turbolinks:load', function () {
 
     FileUpload.setFields();
     DatasetInterface.enable();
+    Areas.init();
 
     $("ul.tab-nav").each(function (i) {
         var localSettings = new LocalSettings("t" + i);

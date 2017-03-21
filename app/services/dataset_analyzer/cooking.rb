@@ -1,5 +1,7 @@
 module DatasetAnalyzer
   class Cooking < Base
+    COOKING_KEY = :households_final_demand_for_cooking_electricity
+
     def analyze
       to_shares.merge(
         households_useful_demand_cooking_per_person: total_useful_demand)
@@ -16,11 +18,13 @@ module DatasetAnalyzer
     end
 
     def all_useful_demands_electricity
-      total_demand = @analyzed_attributes.fetch(:households_final_demand_for_cooking_electricity)
-
-      ratio(:cooking).each_with_object({}) do |(key, cooking_ratio), object|
-        object[key] = total_demand * cooking_ratio * efficiency_for(key)
+      graph.node(COOKING_KEY).edges(:out).each_with_object({}) do |edge, object|
+        object[edge.child.key] = total_demand * edge.parent_share * efficiency_for(edge.child.key)
       end
+    end
+
+    def total_demand
+      @analyzed_attributes.fetch(COOKING_KEY)
     end
   end
 end

@@ -5,12 +5,6 @@
   :m2_to_no: 1223
 
 :ratios:
-  # households_final_demand_for_cooking_electricity
-  :cooking:
-    :households_cooker_resistive_electricity: 0.0973
-    :households_cooker_halogen_electricity:   0.7137
-    :households_cooker_induction_electricity: 0.1889
-
   # households_final_demand_network_gas
   #
   #  Change this!!

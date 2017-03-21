@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'support/graph'
 
 describe DatasetAnalyzer::Cooking do
   let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
@@ -8,6 +9,11 @@ describe DatasetAnalyzer::Cooking do
       households_final_demand_for_cooking_electricity: 1000
     })
   }
+
+  before do
+    expect_any_instance_of(DatasetAnalyzer::Cooking)
+      .to receive(:graph).and_return(Graph.new("cooking").build)
+  end
 
   # Total final demand of cooking = 1000 MJ
   #                                  | Useful demand
@@ -25,6 +31,6 @@ describe DatasetAnalyzer::Cooking do
   it "determines the shares for all cooking carriers" do
     expect(
       analyzes.fetch(:households_cooker_network_gas_share)
-    ).to eq(13.47164219318335)
+    ).to eq(13.4961873270801)
   end
 end

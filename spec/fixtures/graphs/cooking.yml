@@ -1,0 +1,19 @@
+---
+nodes:
+  :households_final_demand_for_cooking_electricity:
+  :households_cooker_resistive_electricity:
+  :households_cooker_halogen_electricity:
+  :households_cooker_induction_electricity:
+
+edges:
+  - parent: :households_final_demand_for_cooking_electricity
+    child: :households_cooker_resistive_electricity
+    parent_share: 0.097
+
+  - parent: :households_final_demand_for_cooking_electricity
+    child: :households_cooker_halogen_electricity
+    parent_share: 0.713
+
+  - parent: :households_final_demand_for_cooking_electricity
+    child: :households_cooker_induction_electricity
+    parent_share: 0.188

@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'support/graph'
 
 describe DatasetAnalyzer::Appliances do
   let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
@@ -8,6 +9,11 @@ describe DatasetAnalyzer::Appliances do
       households_final_demand_for_appliances_electricity: 100
     })
   }
+
+  before do
+    expect_any_instance_of(DatasetAnalyzer::Appliances)
+      .to receive(:graph).and_return(Graph.new("appliances").build)
+  end
 
   # Total final demand of appliances = 100 MJ
   # efficiencies of appliances are always 1.0

@@ -5,17 +5,6 @@
   :m2_to_no: 1223
 
 :ratios:
-  # households_final_demand_for_appliances_electricity
-  :appliances:
-    :households_useful_demand_electric_appliances_dishwasher:      0.0806
-    :households_useful_demand_electric_appliances_fridge_freezer:  0.2258
-    :households_useful_demand_electric_appliances_washing_machine: 0.0806
-    :households_useful_demand_electric_appliances_clothes_dryer:   0.1130
-    :households_useful_demand_electric_appliances_television:      0.1452
-    :households_useful_demand_electric_appliances_computer_media:  0.1936
-    :households_useful_demand_electric_appliances_vacuum_cleaner:  0.0483
-    :households_useful_demand_electric_appliances_other:           0.1130
-
   # households_final_demand_for_cooking_electricity
   :cooking:
     :households_cooker_resistive_electricity: 0.0973

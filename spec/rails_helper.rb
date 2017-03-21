@@ -14,7 +14,8 @@ ActiveRecord::Migration.maintain_test_schema!
 ANALYZER_STUBS = [
   DatasetAnalyzer::ElectricityConsumption,
   DatasetAnalyzer::Buildings,
-  DatasetAnalyzer::Lighting
+  DatasetAnalyzer::Lighting,
+  DatasetAnalyzer::Appliances
 ]
 
 RSpec.configure do |config|

@@ -1,0 +1,9 @@
+---
+nodes:
+  :households_final_demand_for_appliances_electricity:
+  :households_useful_demand_electric_appliances_dishwasher:
+
+edges:
+  - parent: :households_final_demand_for_appliances_electricity
+    child: :households_useful_demand_electric_appliances_dishwasher
+    parent_share: 0.0806

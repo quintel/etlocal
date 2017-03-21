@@ -11,9 +11,7 @@ describe DatasetAnalyzer::Lighting do
 
   before do
     expect_any_instance_of(DatasetAnalyzer::Base)
-      .to receive(:graph).and_return(
-        Graph.new("lighting").build
-      )
+      .to receive(:graph).and_return(Graph.new("lighting").build)
   end
 
   # Total final demand of lighting = 100 MJ

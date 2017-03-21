@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
+    title= I18n.t("application")
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+    - Dir[Rails.root.join("**", "*.hdb")].each do |hdb_file|
+      script id=File.basename(hdb_file, ".hdb") type="text/x-handlebars-template" src=hdb_file
+        = File.read(hdb_file).html_safe
+
+  body
+    .container
+      = render 'layouts/header'
+
+    .content-map
+      = yield
+
+    = render 'layouts/hidden'

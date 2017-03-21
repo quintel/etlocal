@@ -3,6 +3,7 @@ strong = I18n.t("dataset_edits.history")
 - @dataset_edits.previous(params[:attribute_name]).each do |dataset_edit|
   .change
     .history-line
+      span.border
       span.line
         span.created
           => I18n.l dataset_edit.created_at, format: :short

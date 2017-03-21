@@ -1,6 +1,6 @@
 class Input
   def self.all
-    Atlas::InitializerInput.all
+    Etsource.inputs
   end
 
   def initialize(atlas_input)

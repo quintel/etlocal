@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/quintel/atlas.git
-  revision: 38248bef4cb83877ea1c8c9ceacc645e76d2e78c
-  ref: 38248be
+  revision: c736be3d0269237a709d1a8d57b35df8a63073c4
+  ref: c736be3
   specs:
     atlas (1.0.0)
       activemodel (>= 4.0)
@@ -109,7 +109,6 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     database_cleaner (1.5.3)
-    dbf (3.1.0)
     debug_inspector (0.0.2)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
@@ -134,14 +133,7 @@ GEM
     factory_girl_rails (4.8.0)
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
-    faraday (0.11.0)
-      multipart-post (>= 1.2, < 3)
     ffi (1.9.17)
-    ffi-ogr (0.1.0)
-      faraday (>= 0.8.7)
-      ffi (>= 1.6.0)
-      multi_json (>= 1.7.2)
-    georuby (2.5.2)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     hashdiff (0.3.2)
@@ -173,7 +165,6 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
-    multipart-post (2.0.0)
     mysql2 (0.4.5)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -345,12 +336,9 @@ DEPENDENCIES
   capistrano-rbenv (~> 2.0)
   capistrano3-unicorn (~> 0.2)
   database_cleaner
-  dbf
   devise
   dotenv-rails
   factory_girl_rails
-  ffi-ogr
-  georuby
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

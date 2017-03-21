@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'support/graph'
 
 describe Exporter do
-  let(:dataset) { Dataset.find('ameland') }
+  let(:dataset) { FactoryGirl.create(:dataset) }
   let(:ameland) { Atlas::Dataset::Derived.find('ameland') }
 
   let!(:stub_export_request) {

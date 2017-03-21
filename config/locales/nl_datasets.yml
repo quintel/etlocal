@@ -10,7 +10,6 @@ nl:
       no_source_file: "Geen bron geselecteerd"
 
       static:
-        base_dataset: Base dataset
         analysis_year: Analyse jaar
 
     groups:

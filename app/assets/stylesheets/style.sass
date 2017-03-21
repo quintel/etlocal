@@ -7,13 +7,12 @@ body
     display: none
 
 .header
-  margin: 20px 0 0
-  padding: 10px 0 20px 0
+  padding: 20px 0
 
   div
     display: inline-block
 
-    &.title h1
+    h1
       margin: 0
 
     &.current-user
@@ -27,10 +26,6 @@ body
 h1 a
   color: black
   text-decoration: none
-
-.container  > .content
-  border-top: 3px solid $border-color
-  padding-top: 20px
 
 // Form styling
 .button.cancel
@@ -52,29 +47,6 @@ table tbody tr td a.button
 .tab
   margin-bottom: 20px
 
-.container
-  div.info
-    border-top: 1px solid $border-color
-    display: table
-    width: 100%
-
-    h5
-      padding-top: 18px
-      margin: 0
-
-    > .image
-      display: table-cell
-      margin-right: 20px
-      width: 100px
-      height: 100px
-      vertical-align: top
-
-    > .content
-      display: table-cell
-      border-left: 1px solid $border-color
-      padding-left: 26px
-      width: 100%
-
 .heading
   margin-bottom: 5px
 
@@ -83,6 +55,9 @@ table tbody tr td a.button
       border-right: 1px solid #000
       padding-right: 5px
       margin-right: 5px
+
+      &:last-child
+        border-right: none
 
     .static
       float: left
@@ -157,14 +132,6 @@ table tbody tr td a.button
       background: $bg-color
       padding-right: 4px
 
-    &:before
-      content: ''
-      position: absolute
-      border-bottom: 1px solid darken($border-color, 10)
-      width: 100%
-      top: 18px
-      z-index: -1
-
 .edit-form
   > .errors
     .error
@@ -206,14 +173,12 @@ table tbody tr td a.button
         position: relative
         text-align: center
 
-        &:before
-          content: ''
-          position: absolute
+        span.border
           border-bottom: 1px solid darken($border-color, 10)
-          left: 0
+          height: 1px
+          display: block
           width: 100%
-          top: 10px
-          z-index: -1
+          margin-bottom: -10px
 
         span.line
           background-color: $bg-color

@@ -3,21 +3,21 @@ require 'rails_helper'
 describe DatasetEditsController do
   let(:user) { FactoryGirl.create(:user) }
   let!(:sign_in_user) { sign_in(user) }
-  let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
+  let(:dataset) { FactoryGirl.create(:dataset) }
 
   it 'visits the edit path' do
-    get :edit, params: { dataset_area: dataset.key, attribute_name: 'gas_consumption' }
+    get :edit, params: { dataset_area: dataset.geo_id, attribute_name: 'gas_consumption' }, format: :js, xhr: true
 
     expect(response).to be_success
   end
 
   describe 'visits the edit path with an unknown key' do
     before do
-      get :edit, params: { dataset_area: dataset.key, attribute_name: 'does-not-exist' }
+      get :edit, params: { dataset_area: dataset.geo_id, attribute_name: 'does-not-exist' }, format: :js, xhr: true
     end
 
     it 'redirects' do
-      expect(response).to redirect_to(dataset_path(dataset.key))
+      expect(response).to redirect_to(dataset_path(dataset.geo_id))
     end
 
     it 'sets a flash message' do
@@ -28,7 +28,7 @@ describe DatasetEditsController do
   describe 'create a new dataset edit' do
     before do
       post :update, params: {
-        dataset_area: dataset.key,
+        dataset_area: dataset.geo_id,
         attribute_name: 'gas_consumption',
         change: {
           source_attributes: { source_file: fixture_file_upload('test.xls') },
@@ -36,10 +36,10 @@ describe DatasetEditsController do
             "key"=>"gas_consumption",
             "value"=>"0.25"
           }},
-          dataset_area: dataset.key,
+          dataset_area: dataset.geo_id,
           message: "Because of reasons"
         }
-      }
+      }, format: :js, xhr: true
     end
 
     it 'creates a single source for the dataset edit' do
@@ -62,7 +62,7 @@ describe DatasetEditsController do
   describe "create a dataset edit without specifying a source" do
     before do
       post :update, params: {
-        dataset_area: dataset.key,
+        dataset_area: dataset.geo_id,
         attribute_name: 'gas_consumption',
         change: {
           source_attributes: { },
@@ -70,10 +70,10 @@ describe DatasetEditsController do
             "key"=>"gas_consumption",
             "value"=>"0.25"
           }},
-          dataset_area: dataset.key,
+          dataset_area: dataset.geo_id,
           message: "Because of reasons"
         }
-      }
+      }, format: :js, xhr: true
     end
 
     it 'creates a single source for the dataset edit' do

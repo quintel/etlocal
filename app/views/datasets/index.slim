@@ -2,24 +2,8 @@
 
 #map
 
-- @datasets.each do |dataset|
-  .dataset
-    = link_to dataset_path(dataset.area) do
-      .image
-        img src=dataset.map_image_url alt= "No google image available"
+.container#dataset-overlay
+  .button-close
+    = link_to "×", "#"
 
-      .context
-        h5= dataset.area.humanize
-
-        - if dataset.dataset_edits.all.any?
-          dl.info
-            dt.label Latest edit
-            dd
-              span= I18n.l dataset.dataset_edits.last.created_at, format: :simple
-              span by
-              span= dataset.dataset_edits.last.commit.user.name
-
-            dt.label Amount of edits
-            dd= dataset.dataset_edits.all.count
-
-        .clear
+  .content

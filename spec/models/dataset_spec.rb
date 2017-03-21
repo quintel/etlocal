@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Dataset do
   let(:dataset) {
-    Dataset.new(Atlas::Dataset::Derived.find("ameland"))
+    Dataset.new(area: "Ameland")
   }
 
   it "it initializes a dataset from an Atlas dataset" do
@@ -10,7 +10,7 @@ describe Dataset do
   end
 
   it "expects an area attribute to be present" do
-    expect(dataset.area).to eq("ameland")
+    expect(dataset.area).to eq("Ameland")
   end
 
   describe 'has editable attributes' do

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe EditableAttribute do
-  let(:dataset) { Dataset.new(Atlas::Dataset.find(:ameland)) }
+  let(:dataset) { Dataset.new }
 
   it 'has a key' do
     attribute = EditableAttribute.new(dataset, :key, 1)

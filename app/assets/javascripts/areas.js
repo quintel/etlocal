@@ -3,13 +3,12 @@ var Areas = (function () {
 
     var styles = {
         normal: {
-            "fill-outline-color": "rgba(255,0,0,1.0)",
+            "fill-outline-color": "#888888",
             "fill-color": "rgba(0,0,0,0.0)"
         },
         filled: {
-            "fill-outline-color": "#484896",
-            "fill-color": "rgba(255,0,0,0.75)",
-            "fill-opacity": 0.75
+            "fill-outline-color": "#888888",
+            "fill-color": "rgba(120,120,120,0.75)"
         }
     };
 
@@ -29,49 +28,64 @@ var Areas = (function () {
                 minzoom:        layer.minzoom,
                 maxzoom:        layer.maxzoom,
                 'source-layer': layer.source,
-                paint:          styles[level],
+                paint:          $.extend(styles[level], layer.styles),
                 filter:         level === 'filled' ? layer.mapFilter : ['all']
             });
         }.bind(this));
     }
 
-    function getFilter(bbox, layer) {
-        var features = this.map.queryRenderedFeatures(bbox, {
-            layers: [layer.name + '-normal']
-        });
+    function clearLayerFilters() {
+        this.layers.forEach(function (l) {
+            this.map.setFilter(l.name + '-filled', l.mapFilter);
+        }.bind(this));
+    }
 
-        if (features.length > 0) {
-            return [
-                '==',
-                layer.filter,
-                features[0].properties[layer.filter]
-            ];
+    function openPopUp(position, feature, layer) {
+        var source   = $('#default').html(),
+            property = feature.properties[layer.filter];
+
+        feature.properties.geoId = feature.properties[layer.filter];
+
+        if (layer.name === "provinces") {
+            feature.properties.geoId = feature.properties.geoId.toLowerCase();
         }
+
+        this.currentPopUp = new mapboxgl.Popup()
+            .setLngLat(this.map.unproject(position))
+            .setHTML(Handlebars.compile(source)(feature.properties))
+            .addTo(this.map);
     }
 
     function click(e) {
-        var layer = this.currentLayer || this.layers[0],
-            bbox  = [[e.point.x - 5, e.point.y - 5],
-                     [e.point.x + 5, e.point.y + 5]];
+        var layer    = this.currentLayer || this.layers[0],
+            bbox     = [[e.point.x - 5, e.point.y - 5],
+                        [e.point.x + 5, e.point.y + 5]],
+            features = this.map.queryRenderedFeatures(bbox, {
+                layers: [ layer.name + '-normal' ]
+            });
 
-        // Reset all filters
-        this.layers.forEach(function (l) {
-            this.map.setFilter(l.name + '-filled', layer.mapFilter);
-        }.bind(this));
+        if (features.length > 0) {
+            openPopUp.call(this, e.point, features[0], layer);
+        }
 
-        // Set filter for current filled layer
-        this.map.setFilter(layer.name + "-filled",
-            getFilter.call(this, bbox, layer));
+        this.map.setFilter(layer.name + "-filled", features.length > 0
+            ? ['==', layer.filter, features[0].properties[layer.filter]]
+            : layer.mapFilter);
     }
 
     function zoom() {
-        var currentZoom = this.map.getZoom(),
-            filtered    = this.layers.filter(function (layer) {
+        var currentZoom   = this.map.getZoom(),
+            previousLayer = this.currentLayer || this.layers[0],
+            filtered      = this.layers.filter(function (layer) {
                 return currentZoom > layer.minzoom &&
                        currentZoom < layer.maxzoom
             });
 
         this.currentLayer = filtered[0];
+
+        if (previousLayer != this.currentLayer && this.currentPopUp) {
+            this.currentPopUp.remove();
+        }
     }
 
     function loaded() {
@@ -81,30 +95,20 @@ var Areas = (function () {
     }
 
     return {
-        setColors: function () {
-            this.layers.forEach(function (layer) {
-                if (layer.name != "provinces") {
-                    this.map.setPaintProperty(layer.name + '-normal', 'fill-color',
-                        { property: 'AANTAL_HH',
-                          stops: [[20000, 'rgba(255, 255, 255, 0.0)'], [200000, 'rgba(0, 0, 255, 0.5)']] }
-                    );
-                }
-            }.bind(this));
-        },
-
         init: function () {
             mapboxgl.accessToken = $(".hidden .mapbox-api-key").text();
 
-            this.layers = JSON.parse($(".hidden .layers").html());
+            this.layers = JSON.parse($(".hidden .layers").html()).dataset_selector;
 
             this.map = new mapboxgl.Map({
                 container: 'map',
-                style: 'mapbox://styles/mapbox/light-v9',
-                center: [5.584687, 52.231560],
+                style: 'mapbox://styles/grdw/cj0l07vpv004d2qjr4s46hxcq',
+                center: [5.594687, 51.831560],
                 zoom: 6.5,
                 minZoom: 6
             });
 
+            this.map.addControl(new mapboxgl.NavigationControl());
             this.map.on('zoom', zoom.bind(this));
             this.map.on('load', loaded.bind(this));
         }

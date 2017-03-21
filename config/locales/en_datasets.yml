@@ -10,7 +10,6 @@ en:
       no_source_file: "No source selected"
 
       static:
-        base_dataset: Base dataset
         analysis_year: Analysis year
 
     groups:

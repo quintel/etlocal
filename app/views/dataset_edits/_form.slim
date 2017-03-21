@@ -3,9 +3,12 @@
     - @commit.errors.full_messages.each do |message|
       .error.notice= message
 
+  .heading
+    h5= @dataset.area.humanize
+
   .wrapper
-    = form_for @commit, as: :change, url: dataset_dataset_edit_path(@dataset.area, @dataset_edit.key), method: :patch do |form|
-      = form.hidden_field :dataset_area, value: @dataset.area
+    = form_for @commit, as: :change, url: dataset_dataset_edit_path(@dataset.geo_id, @dataset_edit.key, format: :js), remote: true, method: :patch do |form|
+      = form.hidden_field :dataset_area, value: @dataset.geo_id
 
       .field
         = form.fields_for(:dataset_edits) do |d|
@@ -29,7 +32,7 @@
 
       = form.submit "Save"
       span.or or
-      = link_to "Cancel", dataset_path(@dataset.area), class: "button cancel"
+      = link_to "Cancel", dataset_path(@dataset.geo_id, format: :js), remote: true, class: "button cancel"
 
     .history
       = render 'history'

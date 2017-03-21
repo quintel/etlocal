@@ -5,8 +5,9 @@ $(document).on('turbolinks:load', function () {
     DatasetInterface.enable();
     Areas.init();
 
-    $("ul.tab-nav").each(function (i) {
-        var localSettings = new LocalSettings("t" + i);
-        new Tab(this, localSettings).enable();
+    $("#dataset-overlay .button-close a").on("click", function (e) {
+        e.preventDefault();
+
+        $("#dataset-overlay").hide();
     });
 });

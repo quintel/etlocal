@@ -20,7 +20,7 @@ gem 'devise'
 gem 'pundit'
 gem 'validates_email_format_of'
 
-gem 'atlas',    ref: '38248be', github: 'quintel/atlas'
+gem 'atlas',    ref: 'c736be3', github: 'quintel/atlas'
 gem 'rubel',    ref: 'ad3d44e', github: 'quintel/rubel'
 gem 'refinery', ref: '636686c', github: 'quintel/refinery'
 
@@ -51,9 +51,6 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'georuby'
-  gem 'dbf'
-  gem 'ffi-ogr'
 end
 
 group :production, :staging do

@@ -1,4 +1,7 @@
 class DatasetsController < ApplicationController
+  format 'js', only: :show
+  layout 'map', only: :index
+
   before_action :authenticate_user!
   before_action :find_dataset, only: :show
 
@@ -7,6 +10,8 @@ class DatasetsController < ApplicationController
   end
 
   def show
-    @dataset_edits = DatasetEditCollection.for(@dataset.area)
+    @dataset_edits = DatasetEditCollection.for(@dataset.geo_id)
+
+    render layout: false
   end
 end

@@ -14,10 +14,12 @@ class ApplicationController < ActionController::Base
   end
 
   def find_dataset
-    @dataset = Dataset.find(params[:area] || params[:dataset_area])
+    geo_id = (params[:area] || params[:dataset_area])
+
+    @dataset = Dataset.find_by(geo_id: geo_id)
 
     unless @dataset
-      flash[:error] = I18n.t("datasets.flash.not_found", area: params[:area])
+      flash[:error] = I18n.t("datasets.flash.not_found", area: geo_id)
 
       redirect_to root_path
     end

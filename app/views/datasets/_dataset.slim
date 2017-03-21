@@ -1,0 +1,17 @@
+.heading
+  h5= @dataset.area.humanize
+
+  = render 'datasets/details', dataset: @dataset
+
+= render 'shared/flash', flash: flash
+
+.info
+  .content
+    .attributes
+      - @dataset.editable_attributes.grouped.each do |group, attributes|
+        .group
+          strong= I18n.t("datasets.groups.#{ group }")
+
+          = render partial: "datasets/attribute", collection: attributes
+
+  .clear

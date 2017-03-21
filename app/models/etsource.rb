@@ -1,8 +1,8 @@
 module Etsource
   def self.datasets
-    @datasets ||= Atlas::Dataset::Derived.all.map do |dataset|
-      Dataset.new(dataset)
-    end
+    @datasets ||= Hash[Atlas::Dataset::Derived.all.map do |dataset|
+      [dataset.geo_id, dataset]
+    end]
   end
 
   def self.inputs

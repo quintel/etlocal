@@ -1,19 +1,8 @@
-class Dataset
+class Dataset < ApplicationRecord
   include AttributeCollection
-  include GoogleMaps
 
-  def self.all
-    Etsource.datasets
-  end
-
-  def self.find(area)
-    all.detect { |dataset| dataset.area == area }
-  end
-
-  def initialize(atlas_dataset)
-    @atlas_dataset = atlas_dataset
-
-    set_attributes
+  def atlas_dataset
+    Etsource.datasets[geo_id]
   end
 
   def dataset_edits

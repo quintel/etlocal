@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'support/graph'
 
 describe DatasetAnalyzer do
   let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
@@ -29,11 +30,15 @@ describe DatasetAnalyzer do
   end
 
   describe "correct working" do
-    # Stub graph nodes demand; every node demand = 5.0
     before do
-      expect_any_instance_of(Turbine::Graph).to receive(:node)
-        .at_least(:once)
-        .and_return(OpenStruct.new(demand: 5.0))
+      graph = Graph.new("dataset_analyzer_base").build
+
+      [
+        DatasetAnalyzer::ElectricityConsumption,
+        DatasetAnalyzer::Buildings
+      ].each do |analyzer|
+        expect_any_instance_of(analyzer).to receive(:graph).at_least(:once).and_return(graph)
+      end
     end
 
     let(:inputs) {
@@ -51,7 +56,7 @@ describe DatasetAnalyzer do
     }
 
     it 'spews out attributes of a local dataset' do
-      analyzer = DatasetAnalyzer.analyze(dataset, inputs)
+      DatasetAnalyzer.analyze(dataset, inputs)
 
       inputs.slice(:number_of_residences, :number_of_cars, :number_of_inhabitants).each do |key, val|
         expect(analyzer[key]).to eq(val)

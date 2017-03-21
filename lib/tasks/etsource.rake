@@ -7,6 +7,8 @@ namespace :etsource do
     raise ArgumentError, "dataset '#{ ENV['DATASET'] }' does not exist" unless dataset
 
     Exporter.export(dataset)
+
+    puts "Successfully analyzed and exported #{ dataset.area }"
   end
 
   desc "Create a new dataset"

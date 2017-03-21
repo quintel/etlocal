@@ -1,0 +1,10 @@
+---
+nodes:
+  :households_final_demand_electricity:
+  :households_final_demand_for_appliances_electricity:
+
+edges:
+  - parent: :households_final_demand_electricity
+    child: :households_final_demand_for_appliances_electricity
+    carrier: :electricity
+    parent_share: 0.6392

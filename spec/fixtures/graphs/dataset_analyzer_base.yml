@@ -1,0 +1,38 @@
+---
+nodes:
+  :households_final_demand_electricity:
+  :households_final_demand_for_appliances_electricity:
+  :households_final_demand_for_cooking_electricity:
+  :households_final_demand_for_cooling_electricity:
+  :households_final_demand_for_hot_water_electricity:
+  :households_final_demand_for_lighting_electricity:
+  :households_final_demand_for_space_heating_electricity:
+  :buildings_useful_demand_for_appliances: 5.0
+  :buildings_useful_demand_cooling: 5.0
+  :buildings_useful_demand_for_space_heating: 5.0
+  :buildings_useful_demand_light: 5.0
+
+edges:
+  - parent: :households_final_demand_electricity
+    child: :households_final_demand_for_appliances_electricity
+    carrier: :electricity
+
+  - parent: :households_final_demand_electricity
+    child: :households_final_demand_for_cooking_electricity
+    carrier: :electricity
+
+  - parent: :households_final_demand_electricity
+    child: :households_final_demand_for_cooling_electricity
+    carrier: :electricity
+
+  - parent: :households_final_demand_electricity
+    child: :households_final_demand_for_hot_water_electricity
+    carrier: :electricity
+
+  - parent: :households_final_demand_electricity
+    child: :households_final_demand_for_lighting_electricity
+    carrier: :electricity
+
+  - parent: :households_final_demand_electricity
+    child: :households_final_demand_for_space_heating_electricity
+    carrier: :electricity

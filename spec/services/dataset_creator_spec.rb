@@ -14,25 +14,13 @@ describe DatasetCreator do
   end
 
   describe "correctly create a new dataset" do
-    let(:graph) {
-      graph = Turbine::Graph.new
-
-      %i(buildings_useful_demand_for_appliances
-         buildings_useful_demand_cooling
-         buildings_useful_demand_electricity
-         buildings_useful_demand_for_space_heating
-         buildings_useful_demand_light
-      ).each do |key|
-        graph.add(Refinery::Node.new(key, demand: 0))
-      end
-
-      graph
-    }
+    let(:graph) { Graph.new("dataset_analyzer_base").build }
 
     before do
-      expect_any_instance_of(DatasetAnalyzer::Base).to receive(:graph)
-        .at_least(:once)
-        .and_return(graph)
+      [ DatasetAnalyzer::ElectricityConsumption,
+        DatasetAnalyzer::Buildings ].each do |analyzer|
+        expect_any_instance_of(analyzer).to receive(:graph).at_least(:once).and_return(graph)
+      end
     end
 
     it 'creates new dataset edits' do

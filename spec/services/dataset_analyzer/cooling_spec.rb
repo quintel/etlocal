@@ -6,7 +6,7 @@ describe DatasetAnalyzer::Cooling do
     DatasetAnalyzer::Cooling.analyze(dataset, {
       'number_of_residences' => 10,
       'percentage_of_old_residences' => 92.62
-    }, cooling: 1000)
+    }, households_final_demand_for_cooling_electricity: 1000)
   }
 
   # Cooling heatpump share

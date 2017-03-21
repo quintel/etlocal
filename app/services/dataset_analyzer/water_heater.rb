@@ -34,7 +34,7 @@ module DatasetAnalyzer
     # water_heater_resistive_electricity converter.
     def households_water_heater_resistive_electricity
       (
-        @analyzed_attributes.fetch(:hot_water) -
+        @analyzed_attributes.fetch(:households_final_demand_for_hot_water_electricity) -
         final_demand(:households_water_heater_heatpump_air_water_electricity) -
         final_demand(:households_water_heater_heatpump_ground_water_electricity)
       ) * efficiency_for(__method__)

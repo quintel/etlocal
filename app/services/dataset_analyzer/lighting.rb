@@ -14,7 +14,7 @@ module DatasetAnalyzer
     private
 
     def total_demand
-      @analyzed_attributes.fetch(:lighting)
+      @analyzed_attributes.fetch(:households_final_demand_for_lighting_electricity)
     end
   end
 end

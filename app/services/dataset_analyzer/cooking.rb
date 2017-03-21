@@ -16,7 +16,7 @@ module DatasetAnalyzer
     end
 
     def all_useful_demands_electricity
-      total_demand = @analyzed_attributes.fetch(:cooking)
+      total_demand = @analyzed_attributes.fetch(:households_final_demand_for_cooking_electricity)
 
       ratio(:cooking).each_with_object({}) do |(key, cooking_ratio), object|
         object[key] = total_demand * cooking_ratio * efficiency_for(key)

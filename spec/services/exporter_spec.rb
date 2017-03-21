@@ -23,9 +23,12 @@ describe Exporter do
 
   # Stub graph nodes demand; every node demand = 5.0
   before do
-    expect_any_instance_of(Turbine::Graph).to receive(:node)
-      .at_least(:once)
-      .and_return(OpenStruct.new(demand: 5.0))
+    graph = Graph.new("dataset_analyzer_base").build
+
+    [ DatasetAnalyzer::ElectricityConsumption,
+      DatasetAnalyzer::Buildings ].each do |analyzer|
+      expect_any_instance_of(analyzer).to receive(:graph).at_least(:once).and_return(graph)
+    end
   end
 
   it "exports a dataset" do

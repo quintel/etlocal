@@ -5,7 +5,7 @@ describe DatasetAnalyzer::Cooking do
   let(:analyzes) {
     DatasetAnalyzer::Cooking.analyze(dataset, {}, {
       households_cooker_network_gas: 100,
-      cooking: 1000
+      households_final_demand_for_cooking_electricity: 1000
     })
   }
 

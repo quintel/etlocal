@@ -21,7 +21,7 @@ module DatasetAnalyzer
     private
 
     def households_cooker_network_gas
-      (@analyzed_attributes.fetch(:cooking) / @ratio_cooking.fetch(:electricity)) *
+      (@analyzed_attributes.fetch(:households_final_demand_for_cooking_electricity) / @ratio_cooking.fetch(:electricity)) *
         @ratio_cooking.fetch(:gas) *
         efficiency_for(:households_cooker_network_gas)
     end

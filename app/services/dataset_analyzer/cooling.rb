@@ -23,7 +23,7 @@ module DatasetAnalyzer
     end
 
     def households_cooling_airconditioning_electricity
-      (@analyzed_attributes.fetch(:cooling) -
+      (@analyzed_attributes.fetch(:households_final_demand_for_cooling_electricity) -
         final_demand(:households_cooling_heatpump_ground_water_electricity)) *
         efficiency_for(__method__)
     end

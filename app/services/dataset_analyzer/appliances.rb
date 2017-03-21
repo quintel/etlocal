@@ -10,7 +10,7 @@ module DatasetAnalyzer
     private
 
     def total_demand
-      @analyzed_attributes.fetch(:appliances)
+      @analyzed_attributes.fetch(:households_final_demand_for_appliances_electricity)
     end
   end
 end

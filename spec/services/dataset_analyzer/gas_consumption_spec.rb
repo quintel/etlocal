@@ -8,7 +8,7 @@ describe DatasetAnalyzer::GasConsumption do
         'gas_consumption' => 500,
         'number_of_residences' => 100
       }, {
-      cooking: 500
+      households_final_demand_for_cooking_electricity: 500
     })
   }
 

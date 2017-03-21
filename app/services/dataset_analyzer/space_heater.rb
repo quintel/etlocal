@@ -37,7 +37,7 @@ module DatasetAnalyzer
 
     def households_space_heater_electricity
       (
-        @analyzed_attributes.fetch(:space_heating) -
+        @analyzed_attributes.fetch(:households_final_demand_for_space_heating_electricity) -
         final_demand(:households_space_heater_heatpump_air_water_electricity) -
         final_demand(:households_space_heater_heatpump_ground_water_electricity)
       ) * efficiency_for(__method__)

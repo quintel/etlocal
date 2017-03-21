@@ -5,15 +5,6 @@
   :m2_to_no: 1223
 
 :ratios:
-  # households_final_demand_electricity
-  :electricity:
-    :space_heating: 0.0722
-    :hot_water:     0.0515
-    :cooling:       0.0722
-    :cooking:       0.0309
-    :lighting:      0.134
-    :appliances:    0.6392
-
   # households_final_demand_for_lighting_electricity
   :lighting:
     :households_lighting_led_electricity:                    0.0034

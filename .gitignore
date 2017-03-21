@@ -19,3 +19,4 @@ public/system/
 .~lock.*
 
 config/database.yml
+db/shapes/*

@@ -5,7 +5,7 @@ describe DatasetAnalyzer::Cooking do
   let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
   let(:analyzes) {
     DatasetAnalyzer::Cooking.analyze(dataset, {}, {
-      households_cooker_network_gas: 100,
+      households_final_demand_for_cooking_network_gas: 250,
       households_final_demand_for_cooking_electricity: 1000
     })
   }

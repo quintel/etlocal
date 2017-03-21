@@ -5,18 +5,6 @@
   :m2_to_no: 1223
 
 :ratios:
-  # households_final_demand_network_gas
-  #
-  #  Change this!!
-
-  :cooking_carriers:
-    :electricity: 28.3
-    :gas: 71.7
-
-  :water_heater_space_heater_gas:
-    :water_heater: 0.2
-    :space_heater: 0.8
-
   :old_new_houses:
     :old: 0.9262
     :new: 0.0738

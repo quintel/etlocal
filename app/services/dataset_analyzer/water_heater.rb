@@ -20,7 +20,7 @@ module DatasetAnalyzer
         KEYS.each_with_object({}) do |key, object|
           object[key] = case key
             when :households_water_heater_combined_network_gas
-              @analyzed_attributes.fetch(key) * efficiency_for(key)
+              households_water_heater_combined_network_gas
             when :households_water_heater_resistive_electricity
               households_water_heater_resistive_electricity
             else
@@ -28,6 +28,10 @@ module DatasetAnalyzer
             end
         end
       end
+    end
+
+    def households_water_heater_combined_network_gas
+      @analyzed_attributes.fetch(:households_final_demand_for_hot_water_network_gas) * efficiency_for(__method__)
     end
 
     # Public: puts the rest of the final demand to the

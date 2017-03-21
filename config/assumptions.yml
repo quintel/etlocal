@@ -5,12 +5,6 @@
   :m2_to_no: 1223
 
 :ratios:
-  # households_final_demand_for_lighting_electricity
-  :lighting:
-    :households_lighting_led_electricity:                    0.0034
-    :households_lighting_efficient_fluorescent_electricity:  0.8333
-    :households_lighting_incandescent_electricity:           0.1633
-
   # households_final_demand_for_appliances_electricity
   :appliances:
     :households_useful_demand_electric_appliances_dishwasher:      0.0806

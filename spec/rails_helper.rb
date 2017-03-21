@@ -10,6 +10,13 @@ require 'webmock/rspec'
 
 ActiveRecord::Migration.maintain_test_schema!
 
+# Analyzer classes that needs a graph stubbed
+ANALYZER_STUBS = [
+  DatasetAnalyzer::ElectricityConsumption,
+  DatasetAnalyzer::Buildings,
+  DatasetAnalyzer::Lighting
+]
+
 RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include FactoryGirl::Syntax::Methods

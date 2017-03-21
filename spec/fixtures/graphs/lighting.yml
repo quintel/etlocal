@@ -1,0 +1,22 @@
+---
+nodes:
+  :households_final_demand_for_lighting_electricity:
+  :households_lighting_led_electricity:
+  :households_lighting_efficient_fluorescent_electricity:
+  :households_lighting_incandescent_electricity:
+
+edges:
+  - parent: :households_final_demand_for_lighting_electricity
+    child: :households_lighting_led_electricity
+    carrier: :electricity
+    parent_share: 0.0034
+
+  - parent: :households_final_demand_for_lighting_electricity
+    child: :households_lighting_efficient_fluorescent_electricity
+    carrier: :electricity
+    parent_share: 0.8333
+
+  - parent: :households_final_demand_for_lighting_electricity
+    child: :households_lighting_incandescent_electricity
+    carrier: :electricity
+    parent_share: 0.1633

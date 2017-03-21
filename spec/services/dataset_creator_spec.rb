@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'support/graph'
 
 describe DatasetCreator do
   it 'does not create a new dataset for a non-existing area' do
@@ -17,8 +18,7 @@ describe DatasetCreator do
     let(:graph) { Graph.new("dataset_analyzer_base").build }
 
     before do
-      [ DatasetAnalyzer::ElectricityConsumption,
-        DatasetAnalyzer::Buildings ].each do |analyzer|
+      ANALYZER_STUBS.each do |analyzer|
         expect_any_instance_of(analyzer).to receive(:graph).at_least(:once).and_return(graph)
       end
     end

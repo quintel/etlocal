@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'support/graph'
 
 describe Exporter do
   let(:dataset) { Dataset.find('ameland') }
@@ -25,8 +26,7 @@ describe Exporter do
   before do
     graph = Graph.new("dataset_analyzer_base").build
 
-    [ DatasetAnalyzer::ElectricityConsumption,
-      DatasetAnalyzer::Buildings ].each do |analyzer|
+    ANALYZER_STUBS.each do |analyzer|
       expect_any_instance_of(analyzer).to receive(:graph).at_least(:once).and_return(graph)
     end
   end

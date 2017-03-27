@@ -18,6 +18,7 @@ gem 'slim'
 gem 'paperclip'
 gem 'devise'
 gem 'pundit'
+gem 'rest-client'
 gem 'validates_email_format_of'
 
 gem 'atlas',    ref: 'c736be3', github: 'quintel/atlas'
@@ -46,7 +47,6 @@ group :test do
 end
 
 group :development do
-  gem 'rest-client'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
   gem 'spring'

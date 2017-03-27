@@ -6,27 +6,31 @@ dataset_selector:
     minzoom: 5
     maxzoom: 9
     filter: "NAME_1"
+    search: "NAME_1"
 
-  - name: 'municipality'
-    id: "grdw.3hbvtfda"
-    source: "gem_2015-75kcmi"
+  - name: 'gem_2015'
+    id: "grdw.2779dku7"
+    source: "gem_2015_crs_84-dm3urg"
     minzoom: 9
     maxzoom: 11
     filter: "GM_CODE"
+    search: "GM_NAAM"
 
-  - name: 'district'
-    id: "grdw.8lonpbnq"
-    source: "wijk_2015-5edmgp"
+  - name: 'wijk_2015'
+    id: "grdw.51ikm70q"
+    source: "wijk_2015_crs_84-4m557y"
     minzoom: 11
     maxzoom: 12
     filter: "WK_CODE"
+    search: "WK_NAAM"
 
-  - name: 'neighborhood'
-    id: "grdw.62n9xo3v"
-    source: "buurt_2015-8rym6j"
+  - name: 'buurt_2015'
+    id: "grdw.bg029u41"
+    source: "buurt_2015_crs_84-45f5dp"
     minzoom: 12
     maxzoom: 24
     filter: "BU_CODE"
+    search: "BU_NAAM"
 
 chart:
   - name: 'municipality-low-res'

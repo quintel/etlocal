@@ -33,9 +33,10 @@ dataset_selector:
     search: "BU_NAAM"
 
 chart:
-  - name: 'municipality-low-res'
+  - name: 'provinces_visual'
+    id: "grdw.2yc5gbk0"
+    source: "provinces-38l90g"
+
+  - name: 'municipality_visual'
     id: "grdw.96nbvtnq"
     source: "gem_2015_compressed-c4yaoc"
-    minzoom: 7
-    maxzoom: 9
-    filter: "GM_CODE"

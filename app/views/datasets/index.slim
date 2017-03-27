@@ -2,8 +2,27 @@
 
 #map
 
-.container#dataset-overlay
-  .button-close
-    = link_to "×", "#"
+.container
+  #interfaces
+    .interface.dataset_selector
+      #search-bar
+        .form
+          form#search
+            = text_field_tag :q, nil, id: "search-bar"
+            input#search-submit type='submit' value='Search'
 
-  .content
+    .interface.chart
+      = select_tag "layers", layer_options
+      = select_tag "display_options", display_options
+
+  #dataset-overlay
+    .button-close
+      = link_to "×", "#"
+
+    .content
+
+.interface-bottom
+  #buttons-bottom
+    .button-group.toggle-editor
+      button.enabled data-interface='dataset_selector' Dataset editor
+      button data-interface='chart' Visual mode

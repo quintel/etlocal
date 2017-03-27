@@ -26,30 +26,88 @@ $map-height: 900px
   border-top: 1px solid $border-color
   position: relative
 
-  #dataset-overlay
-    display: none
+  .container
     margin-top: -$map-height + 20px
-    padding: 25px 30px
-    background-color: $bg-color
-    box-shadow: 0 1px 2px rgba(0,0,0,0.10)
 
-    .button-close
-      position: absolute
-      top: 0
-      right: 0
+    #interfaces
+      .chart
+        display: none
 
-      a
-        padding: 0 15px
-        height: 38px
-        line-height: 38px
-        display: block
-        color: black
-        text-decoration: none
+        select#layers
+          border-radius: 4px 0 0 4px
 
-        &:hover
-          background-color: darken($bg-color, 5)
+        select#display_options
+          border-radius: 0
+
+        button.apply-options
+          background-color: $bg-color
+          border-radius: 0 4px 4px 0
+
+    #search-bar
+      .form
+        display: table
+        width: 100%
+
+        input
+          display: table-cell
+          vertical-align: top
+
+        input#search-bar
+          border: 1px solid #bbb
+          line-height: 34px
+          border-radius: 4px 0 0 4px
+
+        input#search-submit
+          background-color: $bg-color
+          border-radius: 0 4px 4px 0
+
+    #dataset-overlay
+      position: relative
+      display: none
+      padding: 25px 30px
+      background-color: $bg-color
+      box-shadow: 0 1px 2px rgba(0,0,0,0.10)
+      z-index: 1
+
+      .button-close
+        position: absolute
+        top: 0
+        right: 0
+
+        a
+          padding: 0 15px
+          height: 38px
+          line-height: 38px
+          display: block
+          color: black
+          text-decoration: none
+
+          &:hover
+            background-color: darken($bg-color, 5)
 
   #map
     height: $map-height
     position: relative
     width: 100%
+
+.interface-bottom
+  position: fixed
+  bottom: 10px
+  width: 100%
+
+  #buttons-bottom
+    .button-group
+      text-align: center
+
+      button
+        background-color: $bg-color
+
+        &:first-child
+          border-radius: 4px 0 0 4px
+
+        &:last-child
+          border-radius: 0 4px 4px 0
+
+        &.enabled
+          background-color: $selected-color
+          color: white

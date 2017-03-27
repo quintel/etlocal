@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :dataset_edits, only: %i(edit update), param: :attribute_name
   end
 
+  post :search, to: "search#search"
+
   namespace :api do
     namespace :v1 do
       resources :exports, only: :show, param: :area

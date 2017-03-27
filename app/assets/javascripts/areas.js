@@ -96,6 +96,8 @@ var Areas = (function () {
 
     return {
         init: function () {
+            if ($("#map").length < 1) { return; }
+
             mapboxgl.accessToken = $(".hidden .mapbox-api-key").text();
 
             this.layers = JSON.parse($(".hidden .layers").html()).dataset_selector;

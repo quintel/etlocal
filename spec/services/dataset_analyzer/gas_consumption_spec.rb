@@ -1,49 +1,49 @@
 require 'rails_helper'
+require 'support/graph'
 
 describe DatasetAnalyzer::GasConsumption do
   let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
   let(:analyzer) {
-    DatasetAnalyzer::GasConsumption.analyze(dataset,
-      {
-        'gas_consumption' => 500,
-        'number_of_residences' => 100
-      }, {
-      households_final_demand_for_cooking_electricity: 500
-    })
+    DatasetAnalyzer::GasConsumption.analyze(dataset, {
+      'gas_consumption'      => 500,
+      'number_of_residences' => 100
+    }, {})
   }
 
-  # Households cooker network gas (UD)
+  before do
+    expect_any_instance_of(DatasetAnalyzer::GasConsumption)
+      .to receive(:graph).and_return(Graph.new("gas_consumption").build)
+  end
+
+  # Households cooker network gas (FD)
   #
-  #   total_final_demand_cooking = 500 MJ
-  #   ratio_cooking_electricity  = 28.3
-  #   ratio_cooking_gas          = 71.7
-  #   efficiency_cooking_gas     = 0.4
+  #   total_demand_gas = 500 * 100 * 31.4 = 1_570_000 MJ
   #
-  #   (500 / 28.3) * 71.7 * 0.4 = 506.71 MJ
+  #   1_570_000 * 0.0214 = 33_598 MJ
   #
   it 'determines the gas consumption for cooking' do
-    expect(analyzer.fetch(:households_cooker_network_gas)).to eq(506.71378091872793)
+    expect(analyzer.fetch(:households_final_demand_for_cooking_network_gas)).to eq(33598.0)
   end
 
   # Water heater gas final demand
   #
   #   total_demand_gas = 500 * 100 * 31.4 = 1_570_000 MJ
   #
-  #   1_570_000 - 506.71 = 1_569_493.29 * 0.2 = 313_898.658 MJ
+  #   1_570_000 * 0.1957 = 307_249 MJ
   #
   it 'determines the gas consumption for water heater' do
     expect(analyzer
-      .fetch(:households_water_heater_combined_network_gas)).to eq(313898.6572438163)
+      .fetch(:households_final_demand_for_hot_water_network_gas)).to eq(307249.0)
   end
 
   # Soace heater gas final demand
   #
   #   total_demand_gas = 500 * 100 * 31.4 = 1_570_000 MJ
   #
-  #   1_570_000 - 506.71 = 1_569_493.29 * 0.8 = 1_255_594.632 MJ
+  #   1_570_000 * 0.7829 = 1_229_153.0 MJ
   #
   it 'determines the gas consumption for space heater' do
     expect(analyzer
-      .fetch(:households_space_heater_combined_network_gas)).to eq(1255594.6289752652)
+      .fetch(:households_final_demand_for_space_heating_network_gas)).to eq(1229153.0)
   end
 end

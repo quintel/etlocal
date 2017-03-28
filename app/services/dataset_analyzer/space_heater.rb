@@ -27,12 +27,16 @@ module DatasetAnalyzer
             when :households_space_heater_electricity
               households_space_heater_electricity
             when :households_space_heater_combined_network_gas
-              @analyzed_attributes.fetch(key) * efficiency_for(key)
+              households_space_heater_combined_network_gas
             else
               useful_demand(key)
             end
         end
       end
+    end
+
+    def households_space_heater_combined_network_gas
+      @analyzed_attributes.fetch(:households_final_demand_for_space_heating_network_gas) * efficiency_for(__method__)
     end
 
     def households_space_heater_electricity

@@ -4,5 +4,6 @@ env:
 script:
   - RAILS_ENV=test bundle exec rake db:create
   - RAILS_ENV=test bundle exec rake db:schema:load
+  - RAILS_ENV=test bundle exec rspec
 before_script:
   - cp config/database.sample.yml config/database.yml

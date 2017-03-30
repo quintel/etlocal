@@ -22,14 +22,14 @@ Areas.ChartSelector = (function () {
             bbox     = [[e.point.x - 5, e.point.y - 5],
                         [e.point.x + 5, e.point.y + 5]],
             features = this.areas.map.queryRenderedFeatures(bbox, {
-                layers: [ layer.name + '-normal' ]
+                layers: [ layer.name + 'normal' ]
             });
 
         if (features.length > 0) {
             openPopup.call(this, e.point, features[0], layer);
         }
 
-        this.areas.map.setFilter(layer.name + "-filled", features.length > 0
+        this.areas.map.setFilter(layer.name + "filled", features.length > 0
             ? ['==', layer.filter, features[0].properties[layer.filter]]
             : layer.mapFilter);
     }

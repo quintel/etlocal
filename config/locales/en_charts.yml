@@ -1,0 +1,13 @@
+en:
+  layers:
+    municipalities: Municipalities
+    districts: Districts
+    provinces: Provinces
+
+  charts:
+    electricity_consumption: "Electricity consumption per household"
+    gas_consumption: "Gas consumption per household"
+    number_of_inhabitants: "Number of inhabitants"
+    number_of_cars: "Number of cars"
+    number_of_residences: "Number of residences"
+    roof_surface_available_for_pv: "Roof available for PV per household"

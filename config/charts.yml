@@ -1,0 +1,34 @@
+---
+electricity_consumption:
+  color_stops:
+    - "#00FF00"
+    - "#FF0000"
+
+gas_consumption:
+  color_stops:
+    - "#00FF00"
+    - "#FF0000"
+
+number_of_inhabitants:
+  scale: log10
+  color_stops:
+    - "#009cff"
+    - "#000000"
+
+number_of_cars:
+  scale: log10
+  color_stops:
+    - "#009cff"
+    - "#000000"
+
+number_of_residences:
+  scale: log10
+  color_stops:
+    - "#009cff"
+    - "#000000"
+
+roof_surface_available_for_pv:
+  scale: log10
+  color_stops:
+    - "#FF0000"
+    - "#00FF00"

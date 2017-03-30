@@ -43,6 +43,36 @@ $map-height: 900px
           background-color: $bg-color
           border-radius: 0 4px 4px 0
 
+        .legend
+          position: relative
+
+          span
+            line-height: 20px
+            vertical-align: top
+
+            &.min_value, &.max_value
+              position: absolute
+
+            &.min_value
+              bottom: 0
+
+            &.max_value
+              top: 0
+
+          .colors
+            background-color: #f3f3f3
+            margin: 0 5px 0 0
+            height: 200px
+            display: none
+
+            .color-gradient
+              width: 25px
+              height: 100%
+              display: inline-block
+
+    .dataset-selector
+      width: 300px
+
     #search-bar
       .form
         display: table
@@ -101,6 +131,7 @@ $map-height: 900px
 
       button
         background-color: $bg-color
+        box-shadow: 0 1px 2px rgba(0,0,0,0.10)
 
         &:first-child
           border-radius: 4px 0 0 4px

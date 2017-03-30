@@ -1,46 +1,45 @@
 ---
 dataset_selector:
-  - name: 'provinces'
+  - name: 'provinces_ds'
     id: "grdw.2yc5gbk0"
     source: "provinces-38l90g"
     minzoom: 5
     maxzoom: 9
     filter: "NAME_1"
-    search: "NAME_1"
 
-  - name: 'gem_2015'
+  - name: 'municipalities_ds'
     id: "grdw.2779dku7"
     source: "gem_2015_crs_84-dm3urg"
     minzoom: 9
     maxzoom: 11
     filter: "GM_CODE"
-    search: "GM_NAAM"
 
-  - name: 'wijk_2015'
+  - name: 'districts_ds'
     id: "grdw.51ikm70q"
     source: "wijk_2015_crs_84-4m557y"
     minzoom: 11
     maxzoom: 12
     filter: "WK_CODE"
-    search: "WK_NAAM"
 
-  - name: 'buurt_2015'
+  - name: 'neighborhoods_ds'
     id: "grdw.bg029u41"
     source: "buurt_2015_crs_84-45f5dp"
     minzoom: 12
     maxzoom: 24
     filter: "BU_CODE"
-    search: "BU_NAAM"
 
 chart:
-  - name: 'provinces_visual'
+  - name: 'provinces'
     id: "grdw.2yc5gbk0"
     source: "provinces-38l90g"
+    filter: "NAME_1"
 
-  - name: 'municipality_visual'
+  - name: 'municipalities'
     id: "grdw.61n1g5zm"
     source: "gem_2015_crs_84_compressed-a2i5uo"
+    filter: "GM_CODE"
 
-  - name: 'district_visual'
+  - name: 'districts'
     id: "grdw.6sgqzalv"
     source: "wijk_2015_crs_84_compressed-9oj71w"
+    filter: "WK_CODE"

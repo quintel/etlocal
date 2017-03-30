@@ -20,6 +20,7 @@ gem 'devise'
 gem 'pundit'
 gem 'rest-client'
 gem 'validates_email_format_of'
+gem 'gradients'
 
 gem 'atlas',    ref: 'c736be3', github: 'quintel/atlas'
 gem 'rubel',    ref: 'ad3d44e', github: 'quintel/rubel'

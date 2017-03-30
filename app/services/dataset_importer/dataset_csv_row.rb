@@ -24,6 +24,9 @@ class DatasetImporter
       when "BU"
         [ "BU#{ municipality_code }#{ district_code }#{ neighborhood_code }",
           @attributes.fetch('area_name') ]
+      when "PV"
+        [ @attributes.fetch('province').downcase,
+          @attributes.fetch('province') ]
       end
     end
 

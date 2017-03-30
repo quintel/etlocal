@@ -11,7 +11,6 @@ Areas.Layers = (function () {
             "fill-color":         "rgba(135,160,160,0.75)"
         },
         visual: {
-            "fill-outline-color": "#87a0a0",
             "fill-color":         "rgba(135,160,160,0.25)"
         }
     };
@@ -24,19 +23,19 @@ Areas.Layers = (function () {
     }
 
     function buildLayer(layer, type, level) {
-        if (type === 'dataset_selector') {
+        if (level === 'filled') {
             layer.mapFilter = ["==", layer.filter, ''];
         }
 
         return {
-            id:             layer.name + '-' + level,
+            id:             [layer.name, level].join(''),
             type:           'fill',
             source:         layer.name,
             minzoom:        layer.minzoom || 0,
             maxzoom:        layer.maxzoom || 12,
             'source-layer': layer.source,
             paint:          $.extend(styles[level], layer.styles),
-            filter:         level === 'filled' ? layer.mapFilter : ['all'],
+            filter:         layer.mapFilter ? layer.mapFilter : ['all'],
             layout: {
                 visibility: 'none'
             }
@@ -56,7 +55,7 @@ Areas.Layers = (function () {
             this.layers[layers].forEach(function (layer) {
                 this.layerStyles[layers].forEach(function(style) {
                     this.areas.map.setLayoutProperty(
-                        layer.name + '-' + style, 'visibility', property);
+                        [layer.name, style].join(''), 'visibility', property);
                 }.bind(this));
             }.bind(this));
         },
@@ -110,7 +109,7 @@ Areas.Layers = (function () {
         this.areas       = areas;
         this.layerStyles = {
             dataset_selector: ['normal', 'filled'],
-            chart:            ['visual']
+            chart:            ['']
         };
     }
 

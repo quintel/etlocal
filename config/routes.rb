@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :dataset_edits, only: %i(edit update), param: :attribute_name
   end
 
+  post :charts, to: "charts#data"
   post :search, to: "search#search"
 
   namespace :api do

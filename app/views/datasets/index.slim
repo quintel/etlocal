@@ -15,6 +15,12 @@
       = select_tag "layers", layer_options
       = select_tag "display_options", display_options
 
+      .legend
+        span.colors
+          span.color-gradient
+        span.min_value
+        span.max_value
+
   #dataset-overlay
     .button-close
       = link_to "×", "#"

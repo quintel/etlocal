@@ -136,6 +136,7 @@ GEM
     ffi (1.9.17)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
+    gradients (0.0.2)
     hashdiff (0.3.2)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -339,6 +340,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   factory_girl_rails
+  gradients
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
@@ -368,4 +370,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.14.3
+   1.14.6

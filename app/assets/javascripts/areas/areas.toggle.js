@@ -17,6 +17,7 @@ Areas.Toggle = (function () {
             $(".mapboxgl-ctrl-group").hide();
         } else if (scope === 'dataset_selector') {
             this.areas.enableZoom();
+            $(".legend .colors").css({ "display": "none"});
             $(".mapboxgl-ctrl-group").show();
         }
     }

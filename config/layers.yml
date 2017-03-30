@@ -38,5 +38,9 @@ chart:
     source: "provinces-38l90g"
 
   - name: 'municipality_visual'
-    id: "grdw.96nbvtnq"
-    source: "gem_2015_compressed-c4yaoc"
+    id: "grdw.61n1g5zm"
+    source: "gem_2015_crs_84_compressed-a2i5uo"
+
+  - name: 'district_visual'
+    id: "grdw.6sgqzalv"
+    source: "wijk_2015_crs_84_compressed-9oj71w"

@@ -2,7 +2,7 @@ FactoryGirl.define do
   factory :commit do
     user
     source
-    dataset_area 'ameland'
+    dataset
     message "test"
   end
 end

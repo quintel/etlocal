@@ -1,4 +1,5 @@
 class Commit < ApplicationRecord
+  belongs_to :dataset
   belongs_to :source, optional: true
   belongs_to :user
 

@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :dataset do
     area "ameland"
-    geo_id "test"
+    geo_id "ameland"
   end
 end

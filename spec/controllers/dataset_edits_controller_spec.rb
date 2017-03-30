@@ -36,7 +36,7 @@ describe DatasetEditsController do
             "key"=>"gas_consumption",
             "value"=>"0.25"
           }},
-          dataset_area: dataset.geo_id,
+          dataset_id: dataset.id,
           message: "Because of reasons"
         }
       }, format: :js, xhr: true
@@ -70,7 +70,7 @@ describe DatasetEditsController do
             "key"=>"gas_consumption",
             "value"=>"0.25"
           }},
-          dataset_area: dataset.geo_id,
+          dataset_id: dataset.id,
           message: "Because of reasons"
         }
       }, format: :js, xhr: true

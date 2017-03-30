@@ -1,9 +1,6 @@
 class DatasetEditCollection
-  def self.for(dataset_area)
-    new(DatasetEdit
-          .joins(:commit)
-          .where("`commits`.`dataset_area` = ?", dataset_area)
-          .sorted)
+  def self.for(geo_id)
+    new(Dataset.find_by(geo_id: geo_id).edits.sorted)
   end
 
   def initialize(dataset_edits)

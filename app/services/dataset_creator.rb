@@ -34,7 +34,7 @@ class DatasetCreator
   end
 
   def commit_attributes
-    { dataset_area: @area, user: User.robot, message: "Initial value" }
+    { dataset_id: @area, user: User.robot, message: "Initial value" }
   end
 
   def area_config

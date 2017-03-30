@@ -44,7 +44,7 @@ class DatasetEditsController < ApplicationController
   def commit_params
     params
       .require(:change)
-      .permit(:message, :dataset_area,
+      .permit(:message, :dataset_id,
               source_attributes: [:source_file],
               dataset_edits_attributes: [:key, :value])
   end

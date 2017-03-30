@@ -1,4 +1,6 @@
 class Dataset < ApplicationRecord
+  EDITABLE_ATTRIBUTES = YAML.load_file(Rails.root.join("config", "attributes.yml"))
+
   include AttributeCollection
 
   has_many :commits

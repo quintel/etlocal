@@ -1,8 +1,6 @@
 class EditableAttributesCollection
-  EDITABLE_ATTRIBUTES = YAML.load_file(Rails.root.join("config", "attributes.yml"))
-
   def initialize(dataset)
-    @attributes = EDITABLE_ATTRIBUTES.map do |name, options|
+    @attributes = Dataset::EDITABLE_ATTRIBUTES.map do |name, options|
       EditableAttribute.new(dataset, name, options)
     end
   end

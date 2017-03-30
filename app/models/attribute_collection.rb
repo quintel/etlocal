@@ -3,8 +3,6 @@ module AttributeCollection
   # also includes the initializer inputs as methods. Return the original
   # values only.
 
-  EDITABLE_ATTRIBUTES = YAML.load_file(Rails.root.join("config", "attributes.yml"))
-
   def editable_attributes
     @editable_attributes ||= EditableAttributesCollection.new(self)
   end

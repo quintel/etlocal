@@ -7,6 +7,10 @@ class DatasetImporter
       @geo_id, @area = set_attributes
     end
 
+    def editable_attributes
+      @attributes.slice(*Dataset::EDITABLE_ATTRIBUTES.keys)
+    end
+
     private
 
     def set_attributes

@@ -10,20 +10,12 @@ class DatasetImporter
       dataset = Dataset.find_or_create_by(geo_id: dataset_row.geo_id)
       dataset.area = dataset_row.area
       dataset.save
-    end
 
-    provinces.each do |key|
-      dataset = Dataset.find_or_create_by(geo_id: key.downcase)
-      dataset.area = key.downcase
-      dataset.save
+      Defaults.set(dataset, dataset_row)
     end
   end
 
   private
-
-  def provinces
-    dataset.group_by { |row| row['province'] }.keys
-  end
 
   def dataset
     CSV.read(Rails.root.join("db", "datasets", "#{ @country }_datasets.csv"),

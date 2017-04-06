@@ -4,11 +4,6 @@
   :m3_to_mj: 31.4
   :m2_to_no: 1223
 
-:ratios:
-  :old_new_houses:
-    :old: 0.9262
-    :new: 0.0738
-
 :demands:
   :heatpump:
     :households_cooling_heatpump_ground_water_electricity:      73.2427869858809

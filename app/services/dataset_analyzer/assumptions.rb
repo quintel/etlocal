@@ -2,10 +2,6 @@ module DatasetAnalyzer
   module Assumptions
     ASSUMPTIONS = YAML.load_file(Rails.configuration.assumptions_path).freeze
 
-    def ratio(key)
-      ASSUMPTIONS[:ratios].fetch(key)
-    end
-
     def conversion(key)
       ASSUMPTIONS[:conversions].fetch(key)
     end

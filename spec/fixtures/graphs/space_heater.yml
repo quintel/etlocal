@@ -1,0 +1,65 @@
+---
+nodes:
+  # Electricity
+  :households_final_demand_for_space_heating_electricity:
+  :households_space_heater_electricity:
+  :households_space_heater_heatpump_air_water_electricity:
+  :households_space_heater_heatpump_ground_water_electricity:
+  :households_space_heater_hybrid_heatpump_air_water_electricity:
+
+  # Gas
+  :households_final_demand_for_space_heating_network_gas:
+  :households_space_heater_network_gas:
+  :households_space_heater_combined_network_gas:
+  :households_space_heater_micro_chp_network_gas:
+  :households_space_heater_hybrid_heatpump_air_water_electricity:
+
+  # Steam hot water
+  :households_final_demand_for_space_heating_steam_hot_water: 1
+  :households_space_heater_district_heating_steam_hot_water:
+
+edges:
+  - parent: :households_final_demand_for_space_heating_electricity
+    child: :households_space_heater_electricity
+    carrier: :electricity
+    parent_share: 0.4223
+
+  - parent: :households_final_demand_for_space_heating_electricity
+    child: :households_space_heater_heatpump_air_water_electricity
+    carrier: :electricity
+    parent_share: 0.1025
+
+  - parent: :households_final_demand_for_space_heating_electricity
+    child: :households_space_heater_heatpump_ground_water_electricity
+    carrier: :electricity
+    parent_share: 0.4651
+
+  - parent: :households_final_demand_for_space_heating_electricity
+    child: :households_space_heater_hybrid_heatpump_air_water_electricity
+    carrier: :electricity
+    parent_share: 0.0001
+
+  - parent: :households_final_demand_for_space_heating_steam_hot_water
+    child: :households_space_heater_district_heating_steam_hot_water
+    carrier: :steam_hot_water
+    parent_share: 1.0
+
+  - parent: :households_final_demand_for_space_heating_network_gas
+    child: :households_space_heater_network_gas
+    carrier: network_gas
+    parent_share: 0.0
+
+  - parent: :households_final_demand_for_space_heating_network_gas
+    child: :households_space_heater_combined_network_gas
+    carrier: network_gas
+    parent_share: 0.9
+
+  - parent: :households_final_demand_for_space_heating_network_gas
+    child: :households_space_heater_micro_chp_network_gas
+    carrier: network_gas
+    parent_share: 0.0
+
+  - parent: :households_final_demand_for_space_heating_network_gas
+    child: :households_space_heater_hybrid_heatpump_air_water_electricity
+    carrier: network_gas
+    parent_share: 0.1

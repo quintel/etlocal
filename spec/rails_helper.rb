@@ -17,6 +17,7 @@ ANALYZER_STUBS = [
   DatasetAnalyzer::Buildings,
   DatasetAnalyzer::Lighting,
   DatasetAnalyzer::Cooking,
+  DatasetAnalyzer::Cooling,
   DatasetAnalyzer::Appliances
 ]
 

@@ -1,7 +1,7 @@
 class ChartRenderer
   include ActiveModel::Validations
 
-  validates :type, inclusion: { in: Dataset::EDITABLE_ATTRIBUTES.keys }
+  validates :type, inclusion: { in: Chart.all.map(&:key) }
 
   validates :layer, inclusion: {
     in: LAYERS.fetch('chart').map { |layer| layer.fetch('name') }

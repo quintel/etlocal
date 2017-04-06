@@ -7,16 +7,16 @@ module Exporter
   # inside of ETSource.
   def self.export(dataset)
     begin
-      response = RestClient.get "#{ DATASET_URL }/exports/#{ dataset.area }", accept: :json, content_type: :json
+      response = RestClient.get "#{ DATASET_URL }/exports/#{ dataset.geo_id }", accept: :json, content_type: :json
 
-      store(dataset.area, JSON.parse(response))
+      store(dataset.geo_id, JSON.parse(response))
     rescue RestClient::ExceptionWithResponse => e
       puts e.response
     end
   end
 
-  def self.store(area, edits)
-    dataset            = Atlas::Dataset::Derived.find(area)
+  def self.store(geo_id, edits)
+    dataset            = Atlas::Dataset::Derived.find_by_geo_id(geo_id)
     dataset.attributes = DatasetAnalyzer.analyze(dataset, edits)
     dataset.save
   end

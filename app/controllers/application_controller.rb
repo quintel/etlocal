@@ -9,7 +9,8 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up) do |user_params|
-      user_params.permit({ roles: [] }, :name, :email, :password, :password_confirmation)
+      user_params.permit({ roles: [] }, :name, :email, :password,
+                         :password_confirmation)
     end
   end
 
@@ -19,7 +20,7 @@ class ApplicationController < ActionController::Base
     @dataset = Dataset.find_by(geo_id: geo_id)
 
     unless @dataset
-      flash[:error] = I18n.t("datasets.flash.not_found", area: geo_id)
+      flash[:error] = I18n.t('datasets.flash.not_found', area: geo_id)
 
       redirect_to root_path
     end

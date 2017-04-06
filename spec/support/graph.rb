@@ -8,15 +8,15 @@ class Graph
   def build
     graph = Turbine::Graph.new
 
-    build_nodes!
-    build_edges!
+    build_nodes!(graph)
+    build_edges!(graph)
 
     graph
   end
 
   private
 
-  def build_nodes!
+  def build_nodes!(graph)
     @graph['nodes'].each_pair do |node, demand|
       node = Refinery::Node.new(node)
       node.set(:demand, demand)
@@ -25,7 +25,7 @@ class Graph
     end
   end
 
-  def build_edges!
+  def build_edges!(graph)
     @graph['edges'].each do |edge_attr|
       parent = graph.node(edge_attr['parent'])
       child  = graph.node(edge_attr['child'])

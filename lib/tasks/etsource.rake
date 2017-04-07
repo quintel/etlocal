@@ -8,7 +8,5 @@ namespace :etsource do
     raise ArgumentError, "dataset '#{ ENV['DATASET'] }' is missing a geo id" unless dataset.geo_id.present?
 
     Exporter.export(dataset)
-
-    puts "Successfully analyzed and exported #{ dataset.area }"
   end
 end

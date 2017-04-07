@@ -32,7 +32,7 @@ describe Exporter do
   end
 
   it "exports a dataset" do
-    Exporter.export(dataset)
+    Exporter.export(ameland)
 
     expect(ameland.number_of_cars).to eq(10)
   end

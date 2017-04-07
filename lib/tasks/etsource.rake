@@ -1,7 +1,7 @@
 namespace :etsource do
   desc "Exports changes of a dataset to ETSource"
   task :export => :environment do
-    dataset = Dataset.find_by(geo_id: ENV['DATASET'])
+    dataset = Atlas::Dataset::Derived.find(ENV['DATASET'])
 
     raise ArgumentError, "DATASET= argument is missing" unless ENV['DATASET']
     raise ArgumentError, "dataset '#{ ENV['DATASET'] }' does not exist" unless dataset
@@ -9,15 +9,5 @@ namespace :etsource do
     Exporter.export(dataset)
 
     puts "Successfully analyzed and exported #{ dataset.area }"
-  end
-
-  desc "Create a new dataset"
-  task :new => :environment do
-    dataset = Dataset.find_by(geo_id: ENV['DATASET'])
-
-    raise ArgumentError, "DATASET= argument is missing" unless ENV['DATASET']
-    raise ArgumentError, "dataset '#{ ENV['DATASET'] }' already exists" if dataset
-
-    DatasetCreator.create(ENV['DATASET'])
   end
 end

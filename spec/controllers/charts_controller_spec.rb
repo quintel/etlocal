@@ -11,7 +11,7 @@ describe ChartsController do
 
       FactoryGirl.create(:dataset_edit,
         key: 'electricity_consumption',
-        value: value,
+        value: value + 1,
         commit: commit
       )
     end

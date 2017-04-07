@@ -138,6 +138,7 @@ GEM
       activesupport (>= 4.1.0)
     gradients (0.0.2)
     hashdiff (0.3.2)
+    highline (1.7.8)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.8.0)
@@ -174,6 +175,7 @@ GEM
     nio4r (1.2.1)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
+    options (2.3.2)
     orm_adapter (0.5.0)
     paperclip (5.1.0)
       activemodel (>= 4.2.0)
@@ -181,6 +183,9 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
+    progress_bar (1.1.0)
+      highline (~> 1.6)
+      options (~> 2.3.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -346,6 +351,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   mysql2
   paperclip
+  progress_bar
   pry
   puma (~> 3.0)
   pundit

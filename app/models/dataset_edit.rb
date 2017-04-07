@@ -3,6 +3,7 @@ class DatasetEdit < ApplicationRecord
 
   validates_presence_of :key
   validates_presence_of :value
+  validates :value, numericality: { greater_than: 0 }
 
   def self.sorted
     order('`created_at` DESC')

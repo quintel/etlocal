@@ -43,7 +43,7 @@ describe DatasetImporter do
 
         let!(:dataset_edit) {
           FactoryGirl.create(:dataset_edit, commit: commit,
-            key: 'roof_surface_available_for_pv', value: 1.0)
+            key: 'roof_surface_available_for_pv', value: '1.0')
         }
 
         it "dataset edit counts are still 6" do
@@ -55,7 +55,7 @@ describe DatasetImporter do
         it "doesn't update value of the existing dataset" do
           dataset_importer.import
 
-          expect(dataset_edit.reload.value).to eq("1.0")
+          expect(dataset_edit.reload.value).to eq(1.0)
         end
       end
 
@@ -69,7 +69,7 @@ describe DatasetImporter do
 
         let!(:dataset_edit) {
           FactoryGirl.create(:dataset_edit, commit: commit,
-            key: 'roof_surface_available_for_pv', value: 1.0)
+            key: 'roof_surface_available_for_pv', value: '1.0')
         }
 
         it "dataset edit counts are still 6" do
@@ -81,7 +81,7 @@ describe DatasetImporter do
         it "updates value of the existing dataset" do
           dataset_importer.import
 
-          expect(dataset_edit.reload.value).to eq("41.09719359")
+          expect(dataset_edit.reload.value).to eq(41.0972)
         end
       end
     end

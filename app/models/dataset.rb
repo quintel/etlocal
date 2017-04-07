@@ -31,6 +31,6 @@ class Dataset < ApplicationRecord
   end
 
   def dataset_edits
-    DatasetEditCollection.for(area)
+    DatasetEditCollection.for(geo_id)
   end
 end

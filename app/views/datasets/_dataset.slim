@@ -1,5 +1,6 @@
 .heading
-  h5= @dataset.area.humanize
+  h5 title= @dataset.geo_id
+    = @dataset.area.humanize
 
   = render 'datasets/details', dataset: @dataset
 

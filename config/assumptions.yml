@@ -5,12 +5,6 @@
   :m2_to_no: 1223
 
 :demands:
-  :heatpump:
-    :households_cooling_heatpump_ground_water_electricity:      73.2427869858809
-    :households_water_heater_heatpump_air_water_electricity:    18.26657225
-    :households_water_heater_heatpump_ground_water_electricity: 82.769337
-    :households_space_heater_heatpump_air_water_electricity:    73.066289
-    :households_space_heater_heatpump_ground_water_electricity: 331.077348
   :transport:
     :transport_car_demand: 15066.47
 
@@ -139,28 +133,10 @@
   # ENDTODO
 
   :households_cooker_wood_pellets_share: 0
-  :households_cooling_heatpump_air_water_electricity_share: 0
-  :households_heat_network_connection_steam_hot_water_share: 0
-  :households_space_heater_coal_share: 0
-  :households_space_heater_crude_oil_share: 0
-  :households_space_heater_district_heating_steam_hot_water_share: 0
-  :households_space_heater_hybrid_heatpump_air_water_electricity_share: 0
-  :households_space_heater_micro_chp_network_gas_share: 0
-  :households_space_heater_network_gas_share: 0
-  :households_space_heater_wood_pellets_share: 0
   :households_collective_chp_biogas_share: 0
   :households_collective_chp_network_gas_share: 0
   :households_collective_chp_wood_pellets_share: 0
   :households_collective_geothermal_share: 100
-  :households_water_heater_coal_share: 0
-  :households_water_heater_crude_oil_share: 0
-  :households_water_heater_district_heating_steam_hot_water_share: 0
-  :households_water_heater_fuel_cell_chp_network_gas_share: 0
-  :households_water_heater_hybrid_heatpump_air_water_electricity_share: 0
-  :households_water_heater_micro_chp_network_gas_share: 0
-  :households_water_heater_network_gas_share: 0
-  :households_water_heater_solar_thermal_share: 0
-  :households_water_heater_wood_pellets_share: 0
 
   :industry_other_metals_production: 0
   :industry_aluminium_production: 0

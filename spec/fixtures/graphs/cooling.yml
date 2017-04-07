@@ -1,0 +1,22 @@
+---
+nodes:
+  :households_final_demand_for_cooling_electricity:
+  :households_cooling_heatpump_air_water_electricity:
+  :households_cooling_heatpump_ground_water_electricity:
+  :households_cooling_airconditioning_electricity:
+
+edges:
+  - parent: :households_final_demand_for_cooling_electricity
+    child: :households_cooling_heatpump_air_water_electricity
+    carrier: :electricity
+    parent_share: 0.0
+
+  - parent: :households_final_demand_for_cooling_electricity
+    child: :households_cooling_heatpump_ground_water_electricity
+    carrier: :electricity
+    parent_share: 0.7337
+
+  - parent: :households_final_demand_for_cooling_electricity
+    child: :households_cooling_airconditioning_electricity
+    carrier: :electricity
+    parent_share: 0.2863

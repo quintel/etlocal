@@ -23,6 +23,13 @@ module DatasetAnalyzer
 
     private
 
+    def ratio_houses
+      {
+        old: number_of_old_residences / number_of_residences,
+        new: number_of_new_residences / number_of_residences
+      }
+    end
+
     def total_demand_electricity
       @total_demand_electricity ||=
         electricity_consumption * conversion(:kwh_to_mj) * number_of_residences

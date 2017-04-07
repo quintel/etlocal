@@ -17,7 +17,6 @@ describe DatasetAnalyzer::ElectricityConsumption do
       )
   end
 
-
   # total electricity consumption =
   #
   #   138.88888888888 kWh * 3.6 =~ 500 MJ * 100 = 50.000 MJ

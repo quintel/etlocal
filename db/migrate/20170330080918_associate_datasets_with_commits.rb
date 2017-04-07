@@ -3,9 +3,10 @@ class AssociateDatasetsWithCommits < ActiveRecord::Migration[5.0]
     add_reference :commits, :dataset, index: true
 
     Commit.all.each do |commit|
-      dataset = Dataset.find_by(geo_id: commit.dataset_area)
-      commit.dataset_id = dataset.id
-      commit.save
+      if dataset = Dataset.find_by(geo_id: commit.dataset_area)
+        commit.dataset_id = dataset.id
+        commit.save
+      end
     end
 
     remove_column :commits, :dataset_area

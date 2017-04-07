@@ -19,6 +19,9 @@ nodes:
   :households_final_demand_for_cooking_network_gas:
   :households_final_demand_for_space_heating_network_gas:
   :households_final_demand_for_cooling_network_gas:
+  :households_cooling_heatpump_air_water_electricity:
+  :households_cooling_heatpump_ground_water_electricity:
+  :households_cooling_airconditioning_electricity:
 
 edges:
   - parent: :households_final_demand_electricity
@@ -68,3 +71,15 @@ edges:
 
   - parent: :households_final_demand_network_gas
     child: :households_final_demand_for_cooling_network_gas
+
+  - parent: :households_final_demand_for_cooling_electricity
+    child: :households_cooling_heatpump_air_water_electricity
+    carrier: :electricity
+
+  - parent: :households_final_demand_for_cooling_electricity
+    child: :households_cooling_heatpump_ground_water_electricity
+    carrier: :electricity
+
+  - parent: :households_final_demand_for_cooling_electricity
+    child: :households_cooling_airconditioning_electricity
+    carrier: :electricity

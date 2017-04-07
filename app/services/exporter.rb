@@ -9,14 +9,15 @@ module Exporter
     begin
       response = RestClient.get "#{ DATASET_URL }/exports/#{ dataset.geo_id }", accept: :json, content_type: :json
 
-      store(dataset.geo_id, JSON.parse(response))
+      store(dataset, JSON.parse(response))
+
+      puts "Successfully analyzed and exported #{ dataset.area }"
     rescue RestClient::ExceptionWithResponse => e
-      puts e.response
+      puts "Something went wrong with the analyzes and or exporting of #{ dataset.area }"
     end
   end
 
-  def self.store(geo_id, edits)
-    dataset            = Atlas::Dataset::Derived.find_by_geo_id(geo_id)
+  def self.store(dataset, edits)
     dataset.attributes = DatasetAnalyzer.analyze(dataset, edits)
     dataset.save
   end

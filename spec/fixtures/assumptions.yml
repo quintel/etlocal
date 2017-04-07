@@ -5,12 +5,6 @@
   :m2_to_no: 1
 
 :demands:
-  :heatpump:
-    :households_cooling_heatpump_ground_water_electricity:      73.2427869858809
-    :households_water_heater_heatpump_air_water_electricity:    18.26657225
-    :households_water_heater_heatpump_ground_water_electricity: 82.769337
-    :households_space_heater_heatpump_air_water_electricity:    73.066289
-    :households_space_heater_heatpump_ground_water_electricity: 331.077348
   :transport:
     :transport_car_demand: 15066.47
 

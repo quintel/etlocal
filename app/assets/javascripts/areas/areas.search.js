@@ -33,7 +33,7 @@ Areas.Search = (function () {
             this.result = $(e.target).serializeArray()[0];
 
             $.ajax({
-                url:  "http://nominatim.openstreetmap.org/search",
+                url:  "https://nominatim.openstreetmap.org/search",
                 type: "GET",
                 data: {
                     format: 'json', q: this.result.value, countrycodes: 'nl'

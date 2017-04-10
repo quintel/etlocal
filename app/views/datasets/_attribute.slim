@@ -1,17 +1,20 @@
 .editable
   = link_to edit_dataset_dataset_edit_path(@dataset.geo_id, attribute.key, format: :js), remote: true do
+    .border
     .input
-      span.status
-        - if has_dataset_edit_by_robot?(attribute.key)
-          i.fa.fa-question title= "as estimated by Quintel"
+      .left
+        span.status
+          - if has_dataset_edit_by_robot?(attribute.key)
+            i.fa.fa-question title= "as estimated by Quintel"
 
-        - elsif has_dataset_edit?(attribute.key)
-          i.fa.fa-wrench title= "is edited"
+          - elsif has_dataset_edit?(attribute.key)
+            i.fa.fa-wrench title= "is edited"
 
-      p.key
-        span= truncate(I18n.t("activerecord.attributes.dataset_edit.#{ attribute.key }"), length: 80)
+        span.key
+          = truncate(I18n.t("activerecord.attributes.dataset_edit.#{ attribute.key }"), length: 80)
 
-      span.val=> dataset_value_for(attribute.key)
-      span.unit= attribute.unit
+      .right
+        span.val=> dataset_value_for(attribute.key)
+        span.unit= attribute.unit
 
     .clear

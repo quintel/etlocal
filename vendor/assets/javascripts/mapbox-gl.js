@@ -441,5 +441,3 @@ module.exports={"$version":8,"$root":{"version":{"required":true,"type":"enum","
 },{"../":65,"./web_worker":193}]},{},[65])(65)
 });
 
-
-//# sourceMappingURL=mapbox-gl.js.map

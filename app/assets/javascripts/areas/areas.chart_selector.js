@@ -15,6 +15,11 @@ Areas.ChartSelector = (function () {
             .setLngLat(this.areas.map.unproject(position))
             .setHTML(Handlebars.compile(source)(feature.properties))
             .addTo(this.areas.map);
+
+        // Prevent people from clicking on the ETModel link
+        $("a[disabled='disabled']").on("click", function (e) {
+            e.preventDefault()
+        });
     }
 
     function click(e) {

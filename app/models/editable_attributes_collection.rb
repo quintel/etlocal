@@ -1,4 +1,6 @@
 class EditableAttributesCollection
+  ORDER = %w(households buildings transport).freeze
+
   def initialize(dataset)
     @attributes = Dataset::EDITABLE_ATTRIBUTES.map do |name, options|
       EditableAttribute.new(dataset, name, options)
@@ -16,7 +18,7 @@ class EditableAttributesCollection
   end
 
   def grouped
-    all.group_by(&:group)
+    all.sort_by { |attribute| ORDER.index(attribute.group) }.group_by(&:group)
   end
 
   def exists?(method)

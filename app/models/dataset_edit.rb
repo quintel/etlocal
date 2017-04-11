@@ -13,7 +13,17 @@ class DatasetEdit < ApplicationRecord
     commit.user
   end
 
+  def unit
+    options['unit']
+  end
+
   def as_json(*)
     super.slice('key', 'value')
+  end
+
+  private
+
+  def options
+    Dataset::EDITABLE_ATTRIBUTES[key]
   end
 end

@@ -1,18 +1,16 @@
-.heading
-  h5 title= @dataset.geo_id
-    = @dataset.area.humanize
+.errors
+  - commit.errors.full_messages.each do |message|
+    .error.notice= message
 
-  = render 'datasets/details', dataset: @dataset
+.heading
+  h5 title= dataset.geo_id
+    = dataset.area.humanize
 
 = render 'shared/flash', flash: flash
 
 .info
   .content
     .attributes
-      - @dataset.editable_attributes.grouped.each do |group, attributes|
-        .group
-          strong= I18n.t("datasets.groups.#{ group }")
-
-          = render partial: "datasets/attribute", collection: attributes
+      = render 'commits/form', dataset: dataset, commit: commit
 
   .clear

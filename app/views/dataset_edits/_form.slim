@@ -1,39 +1,47 @@
+.errors
+  - @commit.errors.full_messages.each do |message|
+    .error.notice= message
+
+.heading
+  h5 title= @dataset.geo_id
+    = @dataset.area.humanize
+
+= render 'shared/flash', flash: flash
+
 .edit-form
-  .errors
-    - @commit.errors.full_messages.each do |message|
-      .error.notice= message
+  .content
+    | You changed the following attributes:
 
-  .heading
-    h5 title= @dataset.geo_id
-      = @dataset.area.humanize
+    - @filter.changed_edits.each do |edit|
+      .edit
+        span.key>
+          = I18n.t("activerecord.attributes.dataset_edit.#{ edit.key }")
 
-  .wrapper
-    = form_for @commit, as: :change, url: dataset_dataset_edit_path(@dataset.geo_id, @dataset_edit.key, format: :js), remote: true, method: :patch do |form|
-      = form.hidden_field :dataset_id, value: @dataset.id
+        span.to> to
+        span.val= edit.value
+        span.unit= edit.unit
 
-      .field
+    .attributes
+      = form_for [dataset, commit], as: :change, url: dataset_commits_path(dataset.geo_id), remote: true do |form|
+        = form.hidden_field :dataset_id, value: dataset.id
         = form.fields_for(:dataset_edits) do |d|
-          = d.label @dataset_edit.key
-          = d.hidden_field :key, value: @dataset_edit.key
+          - if @filter.include?(d.object.key)
+            = d.hidden_field :key, value: d.object.key
+            = d.hidden_field :value, value: d.object.value
 
-          = d.text_field :value, placeholder: dataset_value_for(@dataset_edit.key).to_s
-          span.unit= unit_for(@dataset_edit)
+        .field
+          = form.label :message, "Reason for changes"
+          = form.text_area :message, maxlength: 500
 
-      .field
-        = form.label :message
-        = form.text_area :message, maxlength: 500
+        = form.fields_for(:source) do |s|
+          .field.file
+            = s.file_field :source_file
+            = s.label :source_file do
+              => I18n.t("datasets.attributes.source_file")
+              i.fa.fa-upload
+              span= filename_for_source
 
-      = form.fields_for(:source) do |s|
-        .field.file
-          = s.file_field :source_file
-          = s.label :source_file do
-            => I18n.t("datasets.attributes.source_file")
-            i.fa.fa-upload
-            span= filename_for_source
-
-      = form.submit "Save"
-      span.or or
-      = link_to "Cancel", dataset_path(@dataset.geo_id, format: :js), remote: true, class: "button cancel"
-
-    .history
-      = render 'history'
+        .field
+          = form.submit "Save"
+          span.or OR
+          = link_to "Cancel", new_dataset_commit_path(dataset.geo_id, format: :js), remote: true, class: "button"

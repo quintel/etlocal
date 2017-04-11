@@ -10,7 +10,12 @@ class DatasetsController < ApplicationController
   end
 
   def show
+    @commit        = @dataset.commits.new
     @dataset_edits = DatasetEditCollection.for(@dataset.geo_id)
+
+    Dataset::EDITABLE_ATTRIBUTES.each do |key, _|
+      @commit.dataset_edits.build(key: key)
+    end
 
     render layout: false
   end

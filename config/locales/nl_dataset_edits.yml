@@ -5,6 +5,7 @@ nl:
     download_source: "Download bron"
     history: Geschiedenis
     success: "Succesvol %{key} naar %{value} veranderd"
+    success: "%{dataset} is succesvol geüpdatet"
 
     flash:
       attribute_not_found: "Attribuut niet gevonden '%{attribute}'"

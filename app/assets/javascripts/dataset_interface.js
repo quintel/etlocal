@@ -3,16 +3,12 @@ var DatasetInterface = (function () {
 
     return {
         enable: function () {
-            $("div.input").on("click.enable", function () {
-                $("div.editable").removeClass("enabled");
+            var scope = $("form#new_edits");
 
-                $(this).parents(".editable").addClass("enabled");
-            });
+            $("div.input span.val input[type='text']").on("change", function () {
+                $(this).addClass("changed");
 
-            $("div.editable .button.cancel").on("click.disable", function (e) {
-                e.preventDefault();
-
-                $(this).parents(".editable").removeClass("enabled");
+                scope.find("input[type='submit']").prop('disabled', false);
             });
         }
     }

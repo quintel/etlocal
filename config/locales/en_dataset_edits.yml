@@ -4,7 +4,7 @@ en:
     changed_to: "Changed value to %{value}"
     download_source: "Download source"
     history: History
-    success: "Successfully changed %{key} to %{value}"
+    success: "Succesfully updated dataset %{dataset}"
 
     flash:
       attribute_not_found: "Attribute not found '%{attribute}'"

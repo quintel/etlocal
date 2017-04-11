@@ -1,0 +1,8 @@
+| $('#dataset-overlay .content').html("
+- if @commit.valid?
+  = j render("datasets/dataset", dataset: @dataset, commit: Commit.new)
+- else
+  = j render("dataset_edits/form", dataset: @dataset, commit: @commit)
+| ");
+
+| DatasetInterface.enable();

@@ -9,7 +9,7 @@ Areas.Toggle = (function () {
 
         $(e.target).addClass("enabled");
 
-        $("#interfaces .interface").hide();
+        $("#interfaces .interface, #dataset-overlay").hide();
         $("#interfaces .interface." + scope).show();
 
         if (scope === 'chart') {

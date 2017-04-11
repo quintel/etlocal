@@ -33,4 +33,18 @@ class Dataset < ApplicationRecord
   def dataset_edits
     DatasetEditCollection.for(geo_id)
   end
+
+  def chart_id
+    if is_province?
+      geo_id.titleize.sub(/\s/, '-')
+    else
+      geo_id
+    end
+  end
+
+  private
+
+  def is_province?
+    !(geo_id =~ /^(BU|GM|WK)/)
+  end
 end

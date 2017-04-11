@@ -31,7 +31,7 @@ class ChartRenderer
 
     def stops
       datasets.map do |dataset|
-        [dataset.geo_id, color_for(scale(dataset.value.to_f))]
+        [dataset.chart_id, color_for(scale(dataset.value.to_f))]
       end
     end
 

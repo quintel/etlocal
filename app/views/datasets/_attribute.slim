@@ -2,6 +2,10 @@
   .border
   .input
     .left
+      span.key
+        = truncate(I18n.t("activerecord.attributes.dataset_edit.#{ attribute.key }"), length: 80)
+
+    .right
       span.status
         - if has_dataset_edit_by_robot?(attribute.key)
           i.fa.fa-question title= "as estimated by Quintel"
@@ -9,10 +13,6 @@
         - elsif has_dataset_edit?(attribute.key)
           i.fa.fa-wrench title= "is edited"
 
-      span.key
-        = truncate(I18n.t("activerecord.attributes.dataset_edit.#{ attribute.key }"), length: 80)
-
-    .right
       span.history data-key= attribute.key
         i.fa.fa-history
 

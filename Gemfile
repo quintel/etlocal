@@ -22,6 +22,7 @@ gem 'rest-client'
 gem 'validates_email_format_of'
 gem 'gradients'
 gem 'progress_bar'
+gem 'remotipart', '~> 1.2'
 
 gem 'atlas',    ref: 'c736be3', github: 'quintel/atlas'
 gem 'rubel',    ref: 'ad3d44e', github: 'quintel/rubel'

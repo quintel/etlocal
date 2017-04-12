@@ -2,5 +2,6 @@
 - if @filter.changed_edits.any?
   = j render("dataset_edits/form", dataset: @dataset, commit: @commit)
 - else
-  = j render("datasets/dataset", dataset: @dataset, commit: @commit)
+  = j render("commits/form", dataset: @dataset, commit: @commit)
 | ");
+| FileUpload.setFields();

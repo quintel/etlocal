@@ -1,38 +1,27 @@
-= form_for [dataset, commit], url: dataset_edits_dataset_commits_path(dataset.geo_id), as: :edits, remote: true do |f|
-  = f.hidden_field :dataset_id, value: dataset.id
+.errors
+  - commit.errors.full_messages.each do |message|
+    .error.notice= message
 
-  .edits
-    - dataset.editable_attributes.grouped.each do |group, attributes|
-      .group
-        strong= I18n.t("datasets.groups.#{ group }")
+.heading
+  h5 title= dataset.geo_id
+    = dataset.area.humanize
 
-        - attributes.each do |attribute|
-          .editable
-            .border
-            .input
-              .left
-                span.status
-                  - if has_dataset_edit_by_robot?(attribute.key)
-                    i.fa.fa-question title= "as estimated by Quintel"
+= render 'shared/flash', flash: flash
 
-                  - elsif has_dataset_edit?(attribute.key)
-                    i.fa.fa-wrench title= "is edited"
+.info
+  .content
+    .attributes
+      = form_for [dataset, commit], url: dataset_edits_dataset_commits_path(dataset.geo_id), as: :edits, remote: true do |f|
+        = f.hidden_field :dataset_id, value: dataset.id
 
-                span.key
-                  = truncate(I18n.t("activerecord.attributes.dataset_edit.#{ attribute.key }"), length: 80)
+        .edits
+          - dataset.editable_attributes.grouped.each do |group, attributes|
+            .group
+              strong= I18n.t("datasets.groups.#{ group }")
 
-              .right
-                span.history
-                  i.fa.fa-history
+              = render partial: "datasets/attribute", collection: attributes, locals: { form: f, commit: commit }
 
-                span.val
-                  = f.fields_for(:dataset_edits, commit.dataset_edits.build(key: attribute.key)) do |d|
-                    = d.hidden_field :key, value: attribute.key
-                    = d.text_field :value, value: dataset_value_for(attribute.key)
+          .apply
+            = f.submit "Apply", disabled: 'disabled'
 
-                span.unit= attribute.unit
-
-              .clear
-
-    .apply
-      = f.submit "Apply", disabled: 'disabled'
+  .clear

@@ -122,6 +122,9 @@ table tbody tr td a.button
           padding-left: 5px
 
       span
+        &.history
+          cursor: pointer
+
         &.status
           display: inline-block
           padding: 0 10px 0 0
@@ -133,22 +136,22 @@ table tbody tr td a.button
           width: 30px
           display: inline-block
 
-    span.val
-      margin-left: 7px
+        &.val
+          margin-left: 7px
 
-      .field_with_errors
-        display: inline
+          .field_with_errors
+            display: inline
 
-      i.fa
-        &.fa-times
-          color: darken($error-color, 30)
+          i.fa
+            &.fa-times
+              color: darken($error-color, 30)
 
-        &.fa-check
-          color: darken($success-color, 30)
+            &.fa-check
+              color: darken($success-color, 30)
 
-      input
-        &.changed
-          border-color: #ffcf28
+          input
+            &.changed
+              border-color: #ffcf28
 
     .actions
       display: none
@@ -163,9 +166,27 @@ table tbody tr td a.button
       background: $bg-color
       padding-right: 4px
 
-.history
-  border-left: 1px solid $border-color
-  padding-left: 20px
+div.history
+  padding: 20px 26px 0 26px
+  border-top: 1px solid #ccc
+  margin: 0 35px 35px 20px
+  position: relative
+  background-color: #eee
+
+  .line-arrow
+    position: absolute
+    overflow: hidden
+    display: inline-block
+    font-size: 4px
+    width: 4em
+    height: 4em
+    margin-top: -9px
+    top: 0
+    border-top: 1px solid #ccc
+    border-left: 1px solid #ccc
+    transform: rotate(48deg) skew(5deg)
+    right: 190px
+    background-color: #eee
 
   .change
     margin-bottom: 6px
@@ -184,7 +205,7 @@ table tbody tr td a.button
         margin-bottom: -10px
 
       span.line
-        background-color: $bg-color
+        background-color: #eee
         padding: 0 10px
         color: #999
 

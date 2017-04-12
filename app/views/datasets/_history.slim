@@ -1,0 +1,27 @@
+.history.hidden class= attribute.key
+  .line-arrow
+
+  strong = I18n.t("dataset_edits.history")
+
+  - @dataset_edits.previous(attribute.key).each do |dataset_edit|
+    .change
+      .history-line
+        span.border
+        span.line
+          span.created
+            => I18n.l dataset_edit.created_at, format: :short
+          span.by
+            => I18n.t("dataset_edits.changed_by", user: dataset_edit.commit.user.name)
+          span.to
+            => "&rarr;".html_safe
+            = dataset_edit.value
+
+      .content
+        .reason
+          = simple_format dataset_edit.commit.message
+
+        - if dataset_edit.commit.source
+          .source
+            = link_to I18n.t("dataset_edits.download_source"), dataset_edit.commit.source.source_file.url, class: "button"
+
+      .clear

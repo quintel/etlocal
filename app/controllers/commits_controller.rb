@@ -4,7 +4,6 @@ class CommitsController < ApplicationController
 
   before_action :authenticate_user!
   before_action :find_dataset
-  before_action :find_edits
 
   # GET new
   def new
@@ -14,7 +13,7 @@ class CommitsController < ApplicationController
   # POST dataset_edits
   def dataset_edits
     @commit = current_user.commits.new(edit_params)
-    @filter = DatasetEditFilter.new(@commit, @dataset_edits)
+    @filter = DatasetEditFilter.new(@dataset, @commit)
 
     if @filter.changed_edits.any?
       @commit.build_source
@@ -24,7 +23,7 @@ class CommitsController < ApplicationController
   # POST create
   def create
     @commit = current_user.commits.new(commit_params)
-    @filter = DatasetEditFilter.new(@commit, @dataset_edits)
+    @filter = DatasetEditFilter.new(@dataset, @commit)
 
     if @commit.save
       flash.now[:success] = I18n.t("dataset_edits.success", dataset: @dataset.area)
@@ -34,10 +33,6 @@ class CommitsController < ApplicationController
   end
 
   private
-
-  def find_edits
-    @dataset_edits = DatasetEditCollection.for(@dataset.geo_id)
-  end
 
   def edit_params
     params

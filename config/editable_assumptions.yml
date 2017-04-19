@@ -1,0 +1,9 @@
+# Note: never ever just 'add an attribute'. This will destroy things in
+# later analyses.
+---
+households_final_demand_electricity:
+households_final_demand_for_cooking_electricity:
+households_final_demand_for_cooling_electricity:
+households_final_demand_for_lighting_electricity:
+households_final_demand_network_gas:
+

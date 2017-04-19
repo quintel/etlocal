@@ -13,9 +13,15 @@ nl:
         analysis_year: Analyse jaar
 
     groups:
+      assumptions: Aannames
       buildings: Gebouwen
       households: Huishoudens
       transport: Transport
+      households_final_demand_electricity: Electriciteitsconsumptie
+      households_final_demand_for_cooking_electricity: Koken
+      households_final_demand_for_cooling_electricity: Koeling
+      households_final_demand_for_lighting_electricity: Licht
+      households_final_demand_network_gas: Gas
 
     flash:
       not_found: "Gebied '%{area}' bestaat niet"

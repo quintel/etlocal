@@ -11,11 +11,15 @@ module DatasetAnalyzer
     #
     def analyze
       edges.each_with_object({}) do |edge, object|
-        object[edge.child.key] = edge.parent_share * total_demand_electricity
+        object[edge.child.key] = share_for(edge) * total_demand_electricity
       end
     end
 
     private
+
+    def share_for(edge)
+      @dataset_edits[edge.child.key.to_s] || edge.parent_share
+    end
 
     def edges
       graph.node(:households_final_demand_electricity).edges(:out)

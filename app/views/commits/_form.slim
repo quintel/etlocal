@@ -10,16 +10,25 @@
 
 .info
   .content
+    ul.tab-nav
+      - dataset.editable_attributes.grouped.each do |group, _|
+        li.tab
+          = link_to I18n.t("datasets.groups.#{ group }"), "##{ group }"
+
+    .clear
+
     .attributes
       = form_for [dataset, commit], url: dataset_edits_dataset_commits_path(dataset.geo_id), as: :edits, remote: true do |f|
         = f.hidden_field :dataset_id, value: dataset.id
 
         .edits
           - dataset.editable_attributes.grouped.each do |group, attributes|
-            .group
-              strong= I18n.t("datasets.groups.#{ group }")
+            .group.tab data-tab= "##{ group }" class=('slider-group' if slider_group?(group))
+              - if slider_group?(group)
+                = render partial: "datasets/slider", collection: attributes, locals: { form: f, commit: commit, dataset: dataset }
 
-              = render partial: "datasets/attribute", collection: attributes, locals: { form: f, commit: commit }
+              - else
+                = render partial: "datasets/attribute", collection: attributes, locals: { form: f, commit: commit, dataset: dataset }
 
           .apply
             = f.submit "Apply", disabled: 'disabled'

@@ -23,11 +23,21 @@ describe DatasetEdit do
     end
   end
 
-  describe "must be bigger than 0" do
-    let(:dataset) { DatasetEdit.new(value: 0) }
+  describe "must be bigger than or 0" do
+    describe "for regular attribute" do
+      let(:dataset) { DatasetEdit.new(value: -1) }
 
-    it "is invalid" do
-      expect(dataset).to have(1).errors_on(:value)
+      it "is invalid" do
+        expect(dataset).to have(1).errors_on(:value)
+      end
+    end
+
+    describe "for regular attribute" do
+      let(:dataset) { DatasetEdit.new(value: 0) }
+
+      it "is invalid" do
+        expect(dataset).to have(0).errors_on(:value)
+      end
     end
   end
 end

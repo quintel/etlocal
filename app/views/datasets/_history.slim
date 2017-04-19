@@ -3,7 +3,7 @@
 
   strong = I18n.t("dataset_edits.history")
 
-  - @dataset_edits.previous(attribute.key).each do |dataset_edit|
+  - dataset.editable_attributes.find(attribute.key).previous.each do |dataset_edit|
     .change
       .history-line
         span.border

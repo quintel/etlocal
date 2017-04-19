@@ -13,9 +13,15 @@ en:
         analysis_year: Analysis year
 
     groups:
+      assumptions: Assumptions
       buildings: Buildings
       households: Households
       transport: Transport
+      households_final_demand_electricity: Electricity
+      households_final_demand_for_cooking_electricity: Cooking
+      households_final_demand_for_cooling_electricity: Cooling
+      households_final_demand_for_lighting_electricity: Lighting
+      households_final_demand_network_gas: Gas
 
     flash:
       not_found: "Area '%{area}' does not exists"

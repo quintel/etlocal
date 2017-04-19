@@ -16,11 +16,13 @@ var Tab = (function () {
                 return $(this).attr("href") === current;
             });
 
-            $(".tab").add(this.menuItems)
+            $("div.tab").add(this.menuItems)
                 .removeClass("active");
 
-            $(".tab[data-tab='" + current + "'").add(currentLink)
+            $("div.tab[data-tab='" + current + "']").add(currentLink)
                 .addClass("active");
+
+            this.toggleCallback(current);
         },
 
         enable: function () {
@@ -33,10 +35,11 @@ var Tab = (function () {
         }
     };
 
-    function Tab(nav, localSettings) {
-        this.nav           = nav;
-        this.menuItems     = $(this.nav).find("li a");
-        this.localSettings = localSettings;
+    function Tab(nav, localSettings, toggleCallback) {
+        this.nav            = nav;
+        this.menuItems      = $(this.nav).find("li a");
+        this.localSettings  = localSettings;
+        this.toggleCallback = toggleCallback || function () { return; };
     }
 
     return Tab;

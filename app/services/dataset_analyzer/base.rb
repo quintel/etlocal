@@ -7,6 +7,13 @@ module DatasetAnalyzer
       new(dataset, dataset_edits, analyzed_attributes).analyze
     end
 
+    # Initializing an analyzer
+    #
+    # Arguments:
+    # - dataset             = Atlas::Dataset
+    # - dataset_edits       = Hash[key, val]
+    # - analyzed_attributes = Hash[key, val]
+    #
     def initialize(dataset, dataset_edits, analyzed_attributes)
       @dataset             = dataset
       @dataset_edits       = dataset_edits

@@ -1,12 +1,12 @@
 class DatasetEditFilter
-  def initialize(commit, dataset_edits)
-    @commit        = commit
-    @dataset_edits = dataset_edits
+  def initialize(dataset, commit)
+    @dataset = dataset
+    @commit  = commit
   end
 
   def changed_edits
     @commit.dataset_edits.select do |edit|
-      previous_edit = @dataset_edits.find(edit.key)
+      previous_edit = @dataset.editable_attributes.find(edit.key)
 
       !previous_edit || edit.value != previous_edit.value
     end

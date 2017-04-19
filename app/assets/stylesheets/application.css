@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require quinn
  *= require normalize
  *= require skeleton
  *= require font-awesome.min

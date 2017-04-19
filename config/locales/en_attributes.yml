@@ -16,3 +16,27 @@ en:
         number_of_inhabitants: Number of inhabitants
         percentage_of_old_residences: "Residences built before 1992"
         roof_surface_available_for_pv: Roof surface available for PV per household
+
+        households_cooker_resistive_electricity: Resistive cooker
+        households_cooker_halogen_electricity: Halogen cooker
+        households_cooker_induction_electricity: Induction
+
+        households_cooling_airconditioning_electricity: Airconditioning
+        households_cooling_heatpump_ground_water_electricity: Heatpump ground water
+        households_cooling_heatpump_air_water_electricity: Heatpump air water
+
+        households_final_demand_for_cooking_network_gas: Cooking (gas)
+        households_final_demand_for_cooling_network_gas: Cooling (gas)
+        households_final_demand_for_space_heating_network_gas: Space heating (gas)
+        households_final_demand_for_hot_water_network_gas: Hot water (gas)
+
+        households_lighting_incandescent_electricity: "Lighting 1"
+        households_lighting_efficient_fluorescent_electricity: "Lighting 2"
+        households_lighting_led_electricity: "LED"
+
+        households_final_demand_for_appliances_electricity: Appliances
+        households_final_demand_for_cooking_electricity: Cooking
+        households_final_demand_for_cooling_electricity: Cooling
+        households_final_demand_for_hot_water_electricity: Hot water
+        households_final_demand_for_lighting_electricity: Lighting
+        households_final_demand_for_space_heating_electricity: Space heating

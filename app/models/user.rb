@@ -11,6 +11,6 @@ class User < ApplicationRecord
   validates :password, presence: true, confirmation: true
 
   def self.robot
-    find_by_email("robot@quintel.com")
+    @robot ||= find_by_email("robot@quintel.com")
   end
 end

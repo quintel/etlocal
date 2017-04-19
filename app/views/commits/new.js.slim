@@ -1,4 +1,4 @@
 | $('#dataset-overlay').show();
 | $('#dataset-overlay .content').html("#{ j render("commits/form", dataset: @dataset, commit: @commit) }");
 | $('.content-map .container #search-bar').hide();
-| DatasetInterface.enable();
+| new DatasetInterface("#{ @dataset.geo_id }").enable();

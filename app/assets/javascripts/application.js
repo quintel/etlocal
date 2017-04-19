@@ -13,6 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.remotipart
+//= require underscore-1.3.1
+//= require jquery.quinn.min
+//= require jquery.quinn.balancer
 //= require turbolinks
 //= require mapbox-gl
 //= require handlebars-v4.0.5

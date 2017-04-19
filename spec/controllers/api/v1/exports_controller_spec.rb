@@ -11,23 +11,17 @@ describe Api::V1::ExportsController do
 
   describe 'with edits' do
     let!(:dataset_edits) {
-      commit = FactoryGirl.create(:commit)
+      2.times do |i|
+        Timecop.freeze(Time.now + i)
 
-      FactoryGirl.create(:dataset_edit,
-        key: 'number_of_cars',
-        value: 2,
-        commit: commit
-      )
+        commit = FactoryGirl.create(:commit)
 
-      # Make sure that the later dataset edit is created a bit later than the
-      # previous one.
-      sleep 1
-
-      FactoryGirl.create(:dataset_edit,
-        key: 'number_of_cars',
-        value: 1,
-        commit: commit
-      )
+        FactoryGirl.create(:dataset_edit,
+          key: 'number_of_cars',
+          value: i + 1,
+          commit: commit
+        )
+      end
     }
 
     it 'should render all the editable attributes of a dataset' do

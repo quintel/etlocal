@@ -61,9 +61,6 @@ table tbody tr td a.button
   margin-bottom: 20px
 
 .heading
-  h5
-    margin-bottom: 0
-
   .details
     span.val
       border-right: 1px solid #000
@@ -86,11 +83,32 @@ table tbody tr td a.button
     margin: 0
 
   .apply
-    float: right
-    margin-right: 35px
+    float: left
+    margin-left: 17px
 
   .group
-    margin-top: 5px
+    .slider-wrapper
+      margin-right: 35px
+
+      input[type=text]
+        height: 34px
+        width: 60px
+        margin-bottom: 0
+
+      .title, .slider
+        display: inline-block
+
+      .title
+        width: 332px
+
+      .history
+        margin-right: 5px
+
+      .slider
+        width: 300px
+
+      .value
+        margin-left: 10px
 
     strong
       margin-bottom: 20px
@@ -104,6 +122,9 @@ table tbody tr td a.button
     text-decoration: none
     display: block
     padding: 10px 0
+
+    &.slider:first-child
+      margin-top: 3px
 
     .border
       width: 100%
@@ -319,7 +340,7 @@ ul.tab-nav
 
 div.tab
   display: none
-  padding: 0 13px
+  padding: 10px 13px 0 17px
 
   &.active
     display: block

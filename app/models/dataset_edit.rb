@@ -3,7 +3,11 @@ class DatasetEdit < ApplicationRecord
 
   validates_presence_of :key
   validates_presence_of :value
-  validates :value, numericality: { greater_than: 0 }
+  validates :value, numericality: { greater_than_or_equal_to: 0 },
+    if: proc {|f| f.key != 'number_of_households' }
+
+  validates :value, numericality: { greater_than: 0 },
+    if: proc { |f| f.key == 'number_of_households' }
 
   def self.sorted
     order('`created_at` DESC')
@@ -24,6 +28,6 @@ class DatasetEdit < ApplicationRecord
   private
 
   def options
-    Dataset::EDITABLE_ATTRIBUTES[key]
+    Dataset::EDITABLE_ATTRIBUTES[key] || {}
   end
 end

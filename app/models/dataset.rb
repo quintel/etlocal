@@ -1,7 +1,6 @@
 class Dataset < ApplicationRecord
-  EDITABLE_ATTRIBUTES = YAML.load_file(Rails.root.join("config", "attributes.yml"))
-
-  include AttributeCollection
+  EDITABLE_ATTRIBUTES  = YAML.load_file(Rails.root.join("config", "attributes.yml"))
+  EDITABLE_ASSUMPTIONS = YAML.load_file(Rails.root.join("config", "editable_assumptions.yml"))
 
   has_many :commits
   has_many :edits, through: :commits, source: :dataset_edits
@@ -30,16 +29,16 @@ class Dataset < ApplicationRecord
     Etsource.datasets[geo_id]
   end
 
-  def dataset_edits
-    DatasetEditCollection.for(geo_id)
-  end
-
   def chart_id
     if is_province?
       geo_id.titleize.sub(/\s/, '-')
     else
       geo_id
     end
+  end
+
+  def editable_attributes
+    @editable_attributes ||= EditableAttributesCollection.new(self)
   end
 
   private

@@ -1,5 +1,9 @@
 module DatasetAnalyzer
   class Heater < Base
+    # Takes all edges of all carrier nodes and produces a list
+    # of shares as a Hash.
+    #
+
     def analyze
       to_shares
     end

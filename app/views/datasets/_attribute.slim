@@ -7,10 +7,10 @@
 
     .right
       span.status
-        - if has_dataset_edit_by_robot?(attribute.key)
+        - if has_dataset_edit_by_robot?(attribute)
           i.fa.fa-question title= "as estimated by Quintel"
 
-        - elsif has_dataset_edit?(attribute.key)
+        - elsif attribute.present?
           i.fa.fa-wrench title= "is edited"
 
       span.history data-key= attribute.key
@@ -19,10 +19,10 @@
       span.val
         = form.fields_for(:dataset_edits, commit.dataset_edits.build(key: attribute.key)) do |d|
           = d.hidden_field :key, value: attribute.key
-          = d.text_field :value, value: dataset_value_for(attribute.key)
+          = d.text_field :value, value: attribute.value
 
       span.unit= attribute.unit
 
     .clear
 
-= render "datasets/history", attribute: attribute
+= render "datasets/history", attribute: attribute, dataset: dataset

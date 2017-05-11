@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root 'datasets#index'
 
   resources :datasets, only: %i(index), param: :area do
+    get :defaults, on: :collection
+
     resources :commits, only: %i(new create) do
       post :dataset_edits, on: :collection
     end

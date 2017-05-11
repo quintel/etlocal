@@ -1,6 +1,14 @@
 var SliderGroupCollection = (function () {
     'use strict';
 
+    function setDefaults(sliderGroup) {
+        $.when(SliderDefaults.fetch()).done(function () {
+            sliderGroup.updateSliderDefaults(
+                SliderDefaults.defaults[sliderGroup.key.replace('#', '')]
+            );
+        });
+    }
+
     SliderGroupCollection.prototype = {
         render: function (group) {
             var sliderGroup = this.sliderGroups.find(function (el) {
@@ -9,6 +17,7 @@ var SliderGroupCollection = (function () {
 
             if (sliderGroup) {
                 sliderGroup.render();
+                setDefaults.call(this, sliderGroup);
             }
         }
     }

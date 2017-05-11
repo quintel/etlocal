@@ -1,11 +1,13 @@
 class GraphAssumptions
-  def self.get(dataset_key = :nl)
-    new(dataset_key).get
+  def self.get(dataset_key = :nl, calculated = false)
+    new(dataset_key, calculated).get
   end
 
-  def initialize(dataset_key)
+  def initialize(dataset_key, calculated)
     dataset = Atlas::Dataset.find(dataset_key)
-    @graph  = Atlas::Runner.new(dataset).calculate
+    runner  = Atlas::Runner.new(dataset)
+
+    @graph  = calculated ? runner.calculate : runner.graph
   end
 
   def get

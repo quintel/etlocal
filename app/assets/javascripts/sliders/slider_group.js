@@ -16,9 +16,7 @@ var SliderGroup = (function () {
 
         updateSliderDefaults: function (defaults) {
             this.sliders.forEach(function (slider) {
-                if (slider.input.val() === "") {
-                    slider.slider.setValue(defaults[slider.key].default * 100);
-                }
+                slider.setDefaultValue(defaults[slider.key].default * 100);
             });
         }
     };

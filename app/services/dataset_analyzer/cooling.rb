@@ -1,5 +1,14 @@
 module DatasetAnalyzer
   class Cooling < Base
+    # Cooling takes the outer edges of electricity shares
+    #
+    # - households_cooling_airconditioning_electricity
+    # - households_cooling_heatpump_ground_water_electricity
+    # - households_cooling_heatpump_air_water_electricity
+    #
+    # - households_useful_demand_for_cooling_new_houses
+    # - households_useful_demand_for_cooling_old_houses
+
     KEY = :households_final_demand_for_cooling_electricity
 
     def analyze

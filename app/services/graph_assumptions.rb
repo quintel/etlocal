@@ -11,9 +11,10 @@ class GraphAssumptions
   end
 
   def get
-    nodes.compact.each_with_object({}) do |node, obj|
-      obj[node.key] = edges_for(node)
-    end
+    {}
+    #nodes.compact.each_with_object({}) do |node, obj|
+    #  obj[node.key] = edges_for(node)
+    #end
   end
 
   private

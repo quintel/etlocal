@@ -27,8 +27,7 @@ $map-height: 900px
   position: relative
 
   .container
-    margin-top: -$map-height + 20px
-
+    margin-top: 20px
     #interfaces
       .chart
         display: none
@@ -75,11 +74,10 @@ $map-height: 900px
 
     #search-bar
       .form
-        display: table
-        width: 100%
+        form, input
+          margin-bottom: 0
 
         input
-          display: table-cell
           vertical-align: top
 
         input#search-bar
@@ -117,8 +115,12 @@ $map-height: 900px
 
   #map
     height: $map-height
-    position: relative
+    position: absolute
     width: 100%
+
+    &.wrapped
+      position: fixed
+      top: 0
 
 .interface-bottom
   position: fixed

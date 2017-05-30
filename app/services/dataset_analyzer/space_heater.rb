@@ -1,5 +1,8 @@
 module DatasetAnalyzer
   class SpaceHeater < Heater
+    # - households_useful_demand_new_houses_heat_per_person
+    # - households_useful_demand_old_houses_heat_per_person
+
     def analyze
       super.merge(
         households_useful_demand_new_houses_heat_per_person:

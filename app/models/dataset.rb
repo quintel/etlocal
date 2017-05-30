@@ -1,6 +1,5 @@
 class Dataset < ApplicationRecord
-  EDITABLE_ATTRIBUTES  = YAML.load_file(Rails.root.join("config", "attributes.yml"))
-  EDITABLE_ASSUMPTIONS = YAML.load_file(Rails.root.join("config", "editable_assumptions.yml"))
+  EDITABLE_ATTRIBUTES = YAML.load_file(Rails.root.join("config", "attributes.yml"))
 
   has_many :commits
   has_many :edits, through: :commits, source: :dataset_edits

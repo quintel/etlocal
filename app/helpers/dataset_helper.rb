@@ -16,6 +16,12 @@ module DatasetHelper
   end
 
   def slider_group?(group)
-    Dataset::EDITABLE_ASSUMPTIONS.keys.include?(group)
+    Dataset::EDITABLE_ATTRIBUTES
+      .select { |_, opts| opts['slider_group'] }
+      .keys.include?(group)
+  end
+
+  def toggle_value_for(dataset, key)
+    dataset.editable_attributes.find(key).value
   end
 end

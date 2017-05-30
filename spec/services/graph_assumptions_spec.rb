@@ -12,10 +12,7 @@ describe GraphAssumptions do
   it 'renders defaults for graph values' do
     expect(GraphAssumptions.get('ameland')).to eq({
       households_final_demand_electricity: {
-        'households_final_demand_for_appliances_electricity' => {
-          "default" => 0.6392,
-          "group"   => "households_final_demand_electricity"
-        }
+        'households_final_demand_for_appliances_electricity' => 0.6392
       }
     })
   end

@@ -1,0 +1,12 @@
+households:
+  - households_final_demand_electricity
+  - households_final_demand_for_cooking_electricity
+  - households_final_demand_for_cooling_electricity
+  - households_final_demand_for_lighting_electricity
+  - households_final_demand_network_gas
+
+buildings:
+transport:
+industry:
+agriculture:
+supply:

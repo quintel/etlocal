@@ -1,17 +1,18 @@
-# Note: never ever just 'add an attribute'. This will destroy things in
-# later analyses.
 ---
 electricity_consumption:
   unit: kWh
   group: households
+  mandatory: true
 
 gas_consumption:
   unit: m3
   group: households
+  mandatory: true
 
 number_of_inhabitants:
   unit: ''
   group: households
+  mandatory: true
 
 number_of_cars:
   unit: ''
@@ -24,15 +25,466 @@ number_of_residences:
 number_of_residences_with_solar_pv:
   unit: ''
   group: households
+  mandatory: true
 
 percentage_of_old_residences:
   unit: '%'
   group: households
+  mandatory: true
 
 roof_surface_available_for_pv:
   unit: m2
   group: households
+  mandatory: true
 
 building_area:
   unit: m2
   group: buildings
+  mandatory: true
+
+households_final_demand_electricity:
+  unit: '%'
+  slider_group: true
+
+households_final_demand_for_cooking_electricity:
+  unit: '%'
+  slider_group: true
+
+households_final_demand_for_cooling_electricity:
+  unit: '%'
+  slider_group: true
+
+households_final_demand_for_lighting_electricity:
+  unit: '%'
+  slider_group: true
+
+households_final_demand_network_gas:
+  unit: '%'
+  slider_group: true
+
+# Industry
+has_industry:
+  unit: 'bool'
+  group: industry_toggle
+
+industry_aluminium_production:
+  unit: '%'
+  group: industry_grouped
+
+industry_chemicals_fertilizers_burner_coal_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_chemicals_fertilizers_burner_crude_oil_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_chemicals_fertilizers_burner_network_gas_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_chemicals_fertilizers_burner_wood_pellets_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_chemicals_other_burner_coal_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_chemicals_other_burner_crude_oil_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_chemicals_other_burner_network_gas_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_chemicals_other_burner_wood_pellets_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_chemicals_refineries_burner_coal_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_chemicals_refineries_burner_crude_oil_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_chemicals_refineries_burner_network_gas_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_chemicals_refineries_burner_wood_pellets_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_final_demand_for_chemical_fertilizers_steam_hot_water_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_final_demand_for_chemical_other_steam_hot_water_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_final_demand_for_chemical_refineries_steam_hot_water_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_final_demand_for_other_food_steam_hot_water_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_final_demand_for_other_paper_steam_hot_water_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_other_food_burner_coal_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_other_food_burner_crude_oil_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_other_food_burner_network_gas_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_other_food_burner_wood_pellets_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_other_food_heater_electricity_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_other_metals_production:
+  unit: '%'
+  group: industry_grouped
+
+industry_other_paper_burner_coal_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_other_paper_burner_crude_oil_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_other_paper_burner_network_gas_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_other_paper_burner_wood_pellets_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_other_paper_heater_electricity_share:
+  unit: '%'
+  group: industry_grouped
+
+industry_steel_production:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_chemical_fertilizers:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_chemical_other_coal_non_energetic:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_chemical_other_crude_oil_non_energetic:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_chemical_other_electricity:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_chemical_other_network_gas_non_energetic:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_chemical_other_useable_heat:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_chemical_other_wood_pellets_non_energetic:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_chemical_refineries:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_aggregated_industry_nl_coal:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_aggregated_industry_nl_coal_non_energetic:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_aggregated_industry_nl_crude_oil:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_aggregated_industry_nl_crude_oil_non_energetic:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_aggregated_industry_nl_electricity:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_aggregated_industry_nl_network_gas:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_aggregated_industry_nl_network_gas_non_energetic:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_aggregated_industry_nl_useable_heat:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_aggregated_industry_nl_wood_pellets:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_aggregated_industry_nl_wood_pellets_non_energetic:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_construction:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_food:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_ict:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_machinery:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_minerals:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_mining:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_non_specified:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_paper:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_textile:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_transport_equipment:
+  unit: '%'
+  group: industry_grouped
+
+industry_useful_demand_for_other_wood_products:
+  unit: '%'
+  group: industry_grouped
+
+number_of_industry_chp_combined_cycle_gas_power_fuelmix:
+  unit: ''
+  group: industry_grouped
+
+number_of_industry_chp_engine_gas_power_fuelmix:
+  unit: ''
+  group: industry_grouped
+
+number_of_industry_chp_turbine_gas_power_fuelmix:
+  unit: ''
+  group: industry_grouped
+
+# Agriculture
+has_agriculture:
+  unit: 'bool'
+  group: agriculture_toggle
+
+agriculture_burner_crude_oil_share:
+  unit: '%'
+  group: agriculture_grouped
+
+agriculture_burner_network_gas_share:
+  unit: '%'
+  group: agriculture_grouped
+
+agriculture_burner_wood_pellets_share:
+  unit: '%'
+  group: agriculture_grouped
+
+agriculture_final_demand_steam_hot_water_share:
+  unit: '%'
+  group: agriculture_grouped
+
+agriculture_geothermal_share:
+  unit: '%'
+  group: agriculture_grouped
+
+agriculture_heatpump_water_water_ts_electricity_share:
+  unit: '%'
+  group: agriculture_grouped
+
+agriculture_useful_demand_electricity:
+  unit: ''
+  group: agriculture_grouped
+
+agriculture_useful_demand_useable_heat:
+  unit: ''
+  group: agriculture_grouped
+
+number_of_agriculture_chp_engine_biogas:
+  unit: ''
+  group: agriculture_grouped
+
+number_of_agriculture_chp_engine_network_gas:
+  unit: ''
+  group: agriculture_grouped
+
+number_of_agriculture_chp_supercritical_wood_pellets:
+  unit: ''
+  group: agriculture_grouped
+
+# Supply
+co_firing_biocoal_share:
+  unit: ''
+  group: supply
+
+co_firing_coal_share:
+  unit: ''
+  group: supply
+
+energy_distribution_woody_biomass:
+  unit: ''
+  group: supply
+
+energy_extraction_crude_oil:
+  unit: ''
+  group: supply
+
+energy_extraction_natural_gas:
+  unit: ''
+  group: supply
+
+energy_production_bio_ethanol:
+  unit: ''
+  group: supply
+
+energy_production_bio_oil:
+  unit: ''
+  group: supply
+
+energy_production_biodiesel:
+  unit: ''
+  group: supply
+
+energy_production_biogas:
+  unit: ''
+  group: supply
+
+energy_production_wood:
+  unit: ''
+  group: supply
+
+energy_production_woodpellets:
+  unit: ''
+  group: supply
+
+energy_production_woody_biomass:
+  unit: ''
+  group: supply
+
+number_of_energy_chp_combined_cycle_network_gas:
+  unit: ''
+  group: supply
+
+number_of_energy_chp_supercritical_waste_mix:
+  unit: ''
+  group: supply
+
+number_of_energy_chp_ultra_supercritical_coal:
+  unit: ''
+  group: supply
+
+number_of_energy_chp_ultra_supercritical_cofiring_coal:
+  unit: ''
+  group: supply
+
+number_of_energy_heater_for_heat_network_network_gas:
+  unit: ''
+  group: supply
+
+number_of_energy_heater_for_heat_network_waste_mix:
+  unit: ''
+  group: supply
+
+number_of_energy_heater_for_heat_network_wood_pellets:
+  unit: ''
+  group: supply
+
+number_of_energy_power_combined_cycle_coal:
+  unit: ''
+  group: supply
+
+number_of_energy_power_combined_cycle_network_gas:
+  unit: ''
+  group: supply
+
+number_of_energy_power_hydro_river:
+  unit: ''
+  group: supply
+
+number_of_energy_power_nuclear_gen2_uranium_oxide:
+  unit: ''
+  group: supply
+
+number_of_energy_power_supercritical_coal:
+  unit: ''
+  group: supply
+
+number_of_energy_power_supercritical_waste_mix:
+  unit: ''
+  group: supply
+
+number_of_energy_power_ultra_supercritical_coal:
+  unit: ''
+  group: supply
+
+number_of_energy_power_ultra_supercritical_cofiring_coal:
+  unit: ''
+  group: supply
+
+number_of_energy_power_ultra_supercritical_network_gas:
+  unit: ''
+  group: supply
+
+number_of_energy_power_wind_turbine_coastal:
+  unit: ''
+  group: supply
+
+number_of_energy_power_wind_turbine_inland:
+  unit: ''
+  group: supply
+
+number_of_energy_power_wind_turbine_offshore:
+  unit: ''
+  group: supply

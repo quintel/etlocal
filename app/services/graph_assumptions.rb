@@ -21,16 +21,15 @@ class GraphAssumptions
 
   def edges_for(node)
     Hash[node.edges(:out).map do |edge|
-      [edge.child.key.to_s, {
-        'default' => edge.parent_share.to_f,
-        'group'   => node.key.to_s
-      }]
+      [edge.child.key.to_s, edge.parent_share.to_f]
     end]
   end
 
   def nodes
-    Dataset::EDITABLE_ASSUMPTIONS.keys.map do |key|
-      @graph.node(key.to_sym)
-    end
+    Dataset::EDITABLE_ATTRIBUTES
+      .select { |_, opts| opts['slider_group'] }
+      .keys.map do |key|
+        @graph.node(key.to_sym)
+      end
   end
 end

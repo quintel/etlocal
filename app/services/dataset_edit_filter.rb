@@ -8,7 +8,7 @@ class DatasetEditFilter
     @commit.dataset_edits.select do |edit|
       previous_edit = @dataset.editable_attributes.find(edit.key)
 
-      !previous_edit || edit.value != previous_edit.value
+      !previous_edit || edit.parsed_value != previous_edit.value
     end
   end
 

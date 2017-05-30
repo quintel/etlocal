@@ -87,6 +87,15 @@ table tbody tr td a.button
     margin-left: 17px
 
   .group
+    &.sub
+      margin-top: 40px
+
+    .toggle-group
+      display: none
+
+      &.active
+        display: block
+
     .slider-wrapper
       margin-right: 35px
 
@@ -318,12 +327,34 @@ div.history
 ul.tab-nav
   display: block
   margin-bottom: 0
-  border-bottom: 1px solid darken($border-color, 20)
+  position: relative
 
   li.tab
     display: inline-block
     list-style-type: none
     margin-bottom: -1px
+    vertical-align: top
+    border-bottom: 1px solid darken($border-color, 20)
+
+    ul.sub-nav
+      display: none
+      margin: 0
+      position: absolute
+      left: 0
+
+      &.active
+        display: block
+
+      li.tab
+        background-color: #e7e7e7
+
+    &.active
+      border-bottom: none
+
+      > a
+        border: 1px solid darken($border-color, 20)
+        border-bottom: 1px solid #fff
+        margin-top: -1px
 
     a
       text-decoration: none
@@ -333,10 +364,6 @@ ul.tab-nav
 
       &:hover
         background-color: $border-color
-
-      &.active
-        border: 1px solid darken($border-color, 20)
-        border-bottom: 1px solid #fff
 
 div.tab
   display: none

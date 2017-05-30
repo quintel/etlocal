@@ -16,7 +16,7 @@ module DatasetAnalyzer
     #
     def initialize(dataset, dataset_edits, analyzed_attributes)
       @dataset             = dataset
-      @dataset_edits       = dataset_edits
+      @dataset_edits       = defaults.merge(dataset_edits)
       @analyzed_attributes = analyzed_attributes
 
       @dataset_edits.each_pair do |key, value|
@@ -29,6 +29,10 @@ module DatasetAnalyzer
     end
 
     private
+
+    def defaults
+      { 'has_industry' => false, 'has_agriculture' => false }
+    end
 
     def ratio_houses
       {

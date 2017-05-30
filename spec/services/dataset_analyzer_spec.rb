@@ -53,10 +53,25 @@ describe DatasetAnalyzer do
     }
 
     it 'spews out attributes of a local dataset' do
-      DatasetAnalyzer.analyze(dataset, inputs)
+      analyzer = DatasetAnalyzer.analyze(dataset, inputs)
 
       inputs.slice(:number_of_residences, :number_of_cars, :number_of_inhabitants).each do |key, val|
         expect(analyzer[key]).to eq(val)
+      end
+    end
+
+    describe "direct initializer inputs should be accepeted" do
+      let(:inputs_with_initializers) {
+        inputs.merge(
+          'has_industry' => true,
+          'industry_useful_demand_for_chemical_aggregated_industry' => 5.0
+        )
+      }
+
+      it 'flows through to the end' do
+        analyzer = DatasetAnalyzer.analyze(dataset, inputs_with_initializers)
+
+        expect(analyzer.fetch(:industry_useful_demand_for_chemical_aggregated_industry)).to eq(5.0)
       end
     end
   end

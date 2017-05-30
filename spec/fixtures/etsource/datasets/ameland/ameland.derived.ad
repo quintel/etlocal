@@ -83,4 +83,6 @@
 - scaling.has_energy = 
 - scaling.has_industry = 
 - scaling.value = 1000
+- init.agriculture_useful_demand_electricity = 0.0
+- init.industry_useful_demand_for_chemical_aggregated_industry = 0.0
 - geo_id = ameland

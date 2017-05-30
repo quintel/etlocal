@@ -20,3 +20,4 @@ public/system/
 
 config/database.yml
 db/shapes/*
+coverage/*

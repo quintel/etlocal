@@ -11,6 +11,7 @@ module DatasetAnalyzer
     RoofSurfaceAvailableForPV,
     Transport,
     Buildings,
+    Industry,
     EnergySector,
     NullAttributes,
     ToAtlasAttribute,
@@ -28,7 +29,7 @@ module DatasetAnalyzer
     end
 
     ANALYZERS.each_with_object({}) do |analyzer, object|
-      object.merge! analyzer.analyze(dataset, dataset_edits, object)
+      object.merge! analyzer.analyze(dataset, dataset_edits.symbolize_keys, object)
     end
   end
 end

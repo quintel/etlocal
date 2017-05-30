@@ -17,7 +17,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'slim'
 gem 'paperclip'
 gem 'devise'
-gem 'pundit'
 gem 'rest-client'
 gem 'validates_email_format_of'
 gem 'gradients'
@@ -48,6 +47,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'webmock'
   gem 'timecop'
+  gem 'simplecov', require: false
 end
 
 group :development do

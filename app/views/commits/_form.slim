@@ -10,10 +10,17 @@
 
 .info
   .content
-    ul.tab-nav
-      - dataset.editable_attributes.grouped.each do |group, _|
-        li.tab
-          = link_to I18n.t("datasets.groups.#{ group }"), "##{ group }"
+    .nav
+      ul.tab-nav
+        - menu_structure.each_pair do |group, subgroups|
+          li.tab
+            = link_to I18n.t("datasets.groups.#{ group }"), "##{ group }", data: { group: group }
+
+            - if subgroups
+              ul.sub-nav id=group
+                - subgroups.each do |subgroup|
+                  li.tab
+                    = link_to I18n.t("datasets.subgroups.#{ group }.#{ subgroup }"), "##{ subgroup }", data: { group: group }
 
     .clear
 
@@ -22,13 +29,32 @@
         = f.hidden_field :dataset_id, value: dataset.id
 
         .edits
-          - dataset.editable_attributes.grouped.each do |group, attributes|
-            .group.tab data-tab= "##{ group }" class=('slider-group' if slider_group?(group))
-              - if slider_group?(group)
-                = render partial: "datasets/slider", collection: attributes, locals: { form: f, commit: commit, dataset: dataset }
+          - EditableAttributesCollection::ORDER.each do |group|
+            .group.tab data-tab= "##{ group }"
+              = render partial: "datasets/attribute", collection: dataset.editable_attributes.grouped[group], locals: { form: f, commit: commit, dataset: dataset }
 
-              - else
+          - dataset.editable_attributes.grouped.each do |group, attributes|
+            - if slider_group?(group)
+              .group.tab data-tab= "##{ group }" class='slider-group'
                 = render partial: "datasets/attribute", collection: attributes, locals: { form: f, commit: commit, dataset: dataset }
+
+          .group.tab data-tab= "#industry"
+            = f.fields_for(:dataset_edits, commit.dataset_edits.build(key: 'has_industry')) do |d|
+              = d.label :has_industry
+              = d.hidden_field :key, value: 'has_industry'
+              = d.check_box :value, checked: toggle_value_for(dataset, 'has_industry'), class: "toggle", data: { open: "industry_grouped" }
+
+            .toggle-group.industry_grouped class=('active' if toggle_value_for(dataset, 'has_industry'))
+              = render partial: "datasets/attribute", collection: dataset.editable_attributes.grouped['industry_grouped'], locals: { form: f, commit: commit, dataset: dataset }
+
+          .group.tab data-tab= "#agriculture"
+            = f.fields_for(:dataset_edits, commit.dataset_edits.build(key: 'has_agriculture')) do |d|
+              = d.label :has_agriculture
+              = d.hidden_field :key, value: 'has_agriculture'
+              = d.check_box :value, checked: toggle_value_for(dataset, 'has_agriculture'), class: "toggle", data: { open: "agriculture_grouped" }
+
+            .toggle-group.agriculture_grouped class=('active' if toggle_value_for(dataset, 'has_agriculture'))
+              = render partial: "datasets/attribute", collection: dataset.editable_attributes.grouped['agriculture_grouped'], locals: { form: f, commit: commit, dataset: dataset }
 
           .apply
             = f.submit "Apply", disabled: 'disabled'

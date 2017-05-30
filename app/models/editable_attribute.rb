@@ -20,8 +20,12 @@ class EditableAttribute
     @options['default']
   end
 
+  def slider?
+    !!@options['slider']
+  end
+
   def previous
-    @edits
+    @edits[@key] || []
   end
 
   def latest
@@ -37,7 +41,7 @@ class EditableAttribute
   # If a dataset has an edit - give that value. If it doesn't have an edit,
   # fall back to the default value.
   def value
-    latest ? latest.value : default
+    latest ? latest.parsed_value : default
   end
 
   private

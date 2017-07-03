@@ -2,25 +2,48 @@
 
 $map-height: 900px
 
-.mapboxgl-ctrl-group > button
-  margin: 0
+.ol-popup
+  position: absolute
+  background-color: white
+  -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2))
+  filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2))
+  padding: 15px
+  border-radius: 10px
+  border: 1px solid #cccccc
+  bottom: 12px
+  left: -50px
+  min-width: 280px
 
-.mapboxgl-popup
-  .mapboxgl-popup-content
-    padding: 15px
-    border-radius: 0
+.ol-popup:after, .ol-popup:before
+  top: 100%
+  border: solid transparent
+  content: " "
+  height: 0
+  width: 0
+  position: absolute
+  pointer-events: none
 
-    > .content
-      text-align: left
+.ol-popup:after
+  border-top-color: white
+  border-width: 10px
+  left: 48px
+  margin-left: -10px
 
-      > a.button
-        display: block
+.ol-popup:before
+  border-top-color: #cccccc
+  border-width: 11px
+  left: 48px
+  margin-left: -11px
 
-    > button
-      padding: 0 10px
-      line-height: 25px
-      margin: 0
-      height: auto
+.ol-popup-closer
+  text-decoration: none
+  position: absolute
+  top: 2px
+  right: 8px
+  color: black
+
+.ol-popup-closer:after
+  content: "✖"
 
 .content-map
   border-top: 1px solid $border-color

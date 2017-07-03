@@ -2,6 +2,7 @@ en:
   layers:
     municipalities: Municipalities
     districts: Districts
+    potential_heat_wko_neighborhood: "Potential heat storage WKO system per neighborhood"
     provinces: Provinces
 
   charts:

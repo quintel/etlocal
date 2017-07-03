@@ -1,61 +1,75 @@
+/*globals ol*/
+
 var Areas = (function () {
     'use strict';
 
     function zoom() {
-        var currentZoom   = this.map.getZoom(),
+        var currentRes    = this.view.getResolution(),
             previousLayer = this.layers.current(),
             filtered      = this.layers.filter(function (layer) {
-                return currentZoom > layer.minzoom &&
-                       currentZoom < layer.maxzoom
+                return currentRes > layer.minres &&
+                       currentRes < layer.maxres;
             });
 
         this.layers.setCurrent(filtered[0]);
 
-        if (previousLayer != filtered[0]) {
+        if (previousLayer !== filtered[0]) {
             this.closePopup();
         }
     }
 
-    function loaded() {
-        this.toggle.enable();
-        this.layers.draw();
-        this.switchMode('dataset_selector');
+    function getPopup() {
+        var popup      = document.getElementById("popup"),
+            closer     = document.getElementById("popup-closer"),
+            overlay    = new ol.Overlay({
+                element: popup,
+                autoPan: true,
+                autoPanAnimation: {
+                    duration: 250
+                }
+            });
+
+        $(closer).on('click', this.closePopup.bind(this));
+
+        return overlay;
     }
 
     function drawMap() {
-        this.center = [5.594687, 52.031560];
-        this.zoom   = 6.8;
+        this.center = [5.494687, 52.231560];
+        this.zoom   = 7.9;
 
-        this.map = new mapboxgl.Map({
-            container: 'map',
-            style: 'mapbox://styles/grdw/cj0l07vpv004d2qjr4s46hxcq',
-            center: this.center,
-            zoom: this.zoom,
-            minZoom: 6
+        this.view = new ol.View({
+            center: ol.proj.fromLonLat(this.center),
+            zoom: this.zoom
         });
 
-        this.map.addControl(new mapboxgl.NavigationControl());
-        this.map.on('zoom', zoom.bind(this));
-        this.map.on('load', loaded.bind(this));
+        this.map = new ol.Map({
+            target: 'map',
+            overlays: [getPopup.call(this)],
+            view: this.view
+        });
+
+        this.map.on('moveend', zoom.bind(this));
+        this.toggle.enable();
+        this.switchMode('dataset_selector');
     }
 
     return {
-        disableZoomAndReset: function () {
-            this.map.scrollZoom.disable();
-            this.map.doubleClickZoom.disable();
-            this.map.flyTo({ center: this.center, zoom: this.zoom });
-        },
-
-        enableZoom: function () {
-            this.map.scrollZoom.enable();
-            this.map.doubleClickZoom.enable();
+        resetPosition: function () {
+            this.view.animate({
+                center: ol.proj.fromLonLat(this.center),
+                zoom: this.zoom,
+                duration: 2000
+            });
         },
 
         switchMode: function (mode) {
-            this.layers.switchMode.call(this.layers, mode);
+            var key;
+
+            this.layers.switchMode(mode);
             this.closePopup();
 
-            for (var key in this.interfaces) {
+            for (key in this.interfaces) {
                 if (this.interfaces.hasOwnProperty(key)) {
                     this.interfaces[key].disable();
                 }
@@ -65,15 +79,16 @@ var Areas = (function () {
         },
 
         closePopup: function () {
-            if (this.currentPopup) {
-                this.currentPopup.remove();
-            }
+            var closer = document.getElementById("popup-closer"),
+                popup  = this.map.getOverlays().item(0);
+
+            popup.setPosition(undefined);
+            closer.blur();
+            return false;
         },
 
         init: function () {
             if ($("#map").length < 1) { return; }
-
-            mapboxgl.accessToken = $(".hidden .mapbox-api-key").text();
 
             this.layers       = new Areas.Layers(this);
             this.searchBox    = new Areas.Search(this, $("form#search"));
@@ -88,5 +103,5 @@ var Areas = (function () {
 
             return this;
         }
-    }
+    };
 }());

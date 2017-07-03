@@ -10,7 +10,6 @@
             input#search-submit type='submit' value='Search'
 
     .interface.chart
-      = select_tag "layers", layer_options
       = select_tag "display_options", display_options
 
       .legend
@@ -24,6 +23,17 @@
       = link_to "×", "#"
 
     .content
+
+  #popup.ol-popup
+    = link_to "", "#", id: 'popup-closer', class: 'ol-popup-closer'
+    #popup-content
+      .content
+        h5
+          | Empty
+        = link_to "#", class: 'button dataset-open' do
+          | Open dataset
+        = link_to "#!", disabled: 'disabled', class: 'button' do
+          | Open scenario in ETM
 
 .interface-bottom
   #buttons-bottom

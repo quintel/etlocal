@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'jbuilder', '~> 2.5'
-gem 'jquery-rails'
+gem 'jquery-rails', '>= 1.0.3'
 gem 'mysql2'
 gem 'puma', '~> 3.0'
 gem 'rails', '~> 5.0.1'

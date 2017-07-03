@@ -14,6 +14,14 @@ class Chart
     @options['color_stops']
   end
 
+  def layers
+    @options['layers']
+  end
+
+  def source
+    @options['source']
+  end
+
   def self.all
     records
   end

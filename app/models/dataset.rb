@@ -4,20 +4,16 @@ class Dataset < ApplicationRecord
   has_many :commits
   has_many :edits, through: :commits, source: :dataset_edits
 
-  def self.provinces
-    where("`geo_id` NOT LIKE 'BU%' AND `geo_id` NOT LIKE 'WK%' AND `geo_id` NOT LIKE 'GM%'")
-  end
-
-  def self.neighborhoods
-    where("`geo_id` LIKE 'BU%'")
-  end
-
-  def self.districts
-    where("`geo_id` LIKE 'WK%'")
-  end
-
-  def self.municipalities
-    where("`geo_id` LIKE 'GM%'")
+  def group
+    if geo_id =~ /^GM/
+      'municipalities'
+    elsif geo_id =~ /^WK/
+      'districts'
+    elsif geo_id =~ /^BU/
+      'neighborhoods'
+    else
+      'provinces'
+    end
   end
 
   def as_json(*)

@@ -1,82 +1,91 @@
+/*globals Areas,Layers,ol*/
+
 Areas.Layers = (function () {
     'use strict';
 
-    var styles = {
-        normal: {
-            "fill-outline-color": "#87a0a0",
-            "fill-color":         "rgba(0,0,0,0.0)"
-        },
-        filled: {
-            "fill-outline-color": "#87a0a0",
-            "fill-color":         "rgba(135,160,160,0.75)"
-        },
-        visual: {
-            "fill-color":         "rgba(135,160,160,0.25)"
-        }
-    };
+    var NL_EXTENT = [378486.2686971302, 6568397.781293049,
+                     801500.3337115699, 7094762.123545771];
 
-    function addSource(layer) {
-        this.areas.map.addSource(layer.name, {
-            type: 'vector',
-            url: 'mapbox://' + layer.id
-        });
-    }
-
-    function buildLayer(layer, type, level) {
-        if (level === 'filled') {
-            layer.mapFilter = ["==", layer.filter, ''];
-        }
-
+    function setStyles() {
         return {
-            id:             [layer.name, level].join(''),
-            type:           'fill',
-            source:         layer.name,
-            minzoom:        layer.minzoom || 0,
-            maxzoom:        layer.maxzoom || 12,
-            'source-layer': layer.source,
-            paint:          $.extend(styles[level], layer.styles),
-            filter:         layer.mapFilter ? layer.mapFilter : ['all'],
-            layout: {
-                visibility: 'none'
+            normal: new ol.style.Style({
+                stroke: new ol.style.Stroke({
+                    color: "#CC6060",
+                    width: 2
+                })
+            }),
+            filled: {
+                stroke: new ol.style.Stroke({
+                    color: "#FFFFFF"
+                }),
+                fill: new ol.style.Fill({
+                    color: 'rgba(135,160,160,0.75)'
+                })
             }
-        }
+        };
     }
 
-    function addLayer(layer, type) {
-        addSource.call(this, layer);
+    function transformLayers(layers, visible) {
+        return layers.map(function (layer) {
+            var source = new ol.source.VectorTile({
+                format: new ol.format.MVT(),
+                tilePixelRatio: 16,
+                url: 'https://{a-d}.tiles.mapbox.com/v4/' + layer.id + '/{z}/{x}/{y}.vector.pbf?access_token=' + this.mapboxGlToken
+            });
 
-        this.layerStyles[type].forEach(function (level) {
-            this.areas.map.addLayer(buildLayer(layer, type, level));
+            return new ol.layer.VectorTile({
+                source:        source,
+                extent:        NL_EXTENT,
+                minResolution: layer.minres,
+                maxResolution: layer.maxres,
+                visible:       visible,
+                style:         this.styles.normal,
+                filter:        layer.filter,
+                name:          layer.name,
+                name_attr:     layer.name_attr
+            });
         }.bind(this));
     }
 
+    function transformChartLayers(layers) {
+        return layers.map(function (layer) {
+            return new ol.layer.Tile({
+                name: layer.name,
+                id: layer.id,
+                visible: false,
+                opacity: 0.7,
+                source: new ol.source.TileWMS({
+                    url: layer.url,
+                    params: layer.params
+                })
+            })
+        });
+    }
+
+    function setLayers() {
+        var base = [new ol.layer.Tile({
+            source: new ol.source.OSM()
+        })];
+
+        return {
+            dataset_selector: new ol.layer.Group({
+                layers: base.concat(transformLayers.call(this, this.layers.dataset_selector, true))
+            }),
+            chart: new ol.layer.Group({
+                layers: base
+                    .concat(transformLayers.call(this, this.layers.dataset_selector, false))
+                    .concat(transformChartLayers.call(this, this.layers.chart))
+            })
+        };
+    }
+
     Layers.prototype = {
-        setVisibilityLayers: function (layers, property) {
-            this.layers[layers].forEach(function (layer) {
-                this.layerStyles[layers].forEach(function(style) {
-                    this.areas.map.setLayoutProperty(
-                        [layer.name, style].join(''), 'visibility', property);
-                }.bind(this));
-            }.bind(this));
-        },
-
-        setVisibility: function (layers, layerId, property) {
-            this.setVisibilityLayers(layers, 'none');
-
-            this.areas.map.setLayoutProperty(layerId, 'visibility', property);
-        },
-
         setCurrent: function (layer) {
             this.currentLayer = layer;
         },
 
         switchMode: function (mode) {
-            if (mode === "chart") {
-                this.setVisibilityLayers('dataset_selector', 'none');
-            } else if (mode === "dataset_selector") {
-                this.setVisibilityLayers(mode, 'visible');
-                this.setVisibilityLayers('chart', 'none');
-            }
+            this.areas.map.setLayerGroup(this.layerGroups[mode]);
         },
 
         current: function () {
@@ -89,28 +98,15 @@ Areas.Layers = (function () {
 
         eachDatasetLayer: function (method) {
             this.layers.dataset_selector.forEach(method);
-        },
-
-        draw: function () {
-            for (var layerKey in this.layers) {
-                if (this.layers.hasOwnProperty(layerKey)) {
-                    this.layers[layerKey].forEach(function (layer) {
-                        addLayer.call(this, layer, layerKey);
-                    }.bind(this));
-                }
-            }
-
-            this.setCurrent(this.layers.dataset_selector[0]);
         }
     };
 
     function Layers(areas) {
-        this.layers      = JSON.parse($(".hidden .layers").html());
-        this.areas       = areas;
-        this.layerStyles = {
-            dataset_selector: ['normal', 'filled'],
-            chart:            ['']
-        };
+        this.areas         = areas;
+        this.mapboxGlToken = $(".hidden .mapbox-api-key").text();
+        this.layers        = JSON.parse($(".hidden .layers").html());
+        this.styles        = setStyles.call(this);
+        this.layerGroups   = setLayers.call(this);
     }
 
     return Layers;

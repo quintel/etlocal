@@ -11,6 +11,6 @@
     {{/if}}
   </h5>
 
-  <a href="datasets/{{ geoId }}/commits/new.js" class="button" data-remote="true">Open dataset</a>
+  <a href="datasets/{{ geoId }}/commits/new.js" class="button" data-remote='true'>Open dataset</a>
   <a href="#!" disabled="disabled" class="button">Open scenario in ETM</a>
 </div>

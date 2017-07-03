@@ -1,5 +1,7 @@
+/*globals Areas,Toggle*/
+
 Areas.Toggle = (function () {
-    'use strict'
+    'use strict';
 
     function clickHandle(e) {
         var scope = $(e.target).data('interface');
@@ -13,10 +15,9 @@ Areas.Toggle = (function () {
         $("#interfaces .interface." + scope).show();
 
         if (scope === 'chart') {
-            this.areas.disableZoomAndReset();
+            this.areas.resetPosition();
             $(".mapboxgl-ctrl-group").hide();
         } else if (scope === 'dataset_selector') {
-            this.areas.enableZoom();
             $(".legend .colors").css({ "display": "none"});
             $(".mapboxgl-ctrl-group").show();
         }

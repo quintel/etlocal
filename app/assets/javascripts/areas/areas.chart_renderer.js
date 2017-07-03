@@ -1,36 +1,57 @@
+/*globals Areas,ChartRenderer*/
+
 Areas.ChartRenderer = (function () {
     'use strict';
 
+    function colorAreas(layer, stops) {
+        var region,
+            colorStops = stops[layer.get('name')];
+
+        layer.setStyle(function (feature) {
+            region = feature.get(layer.get('filter'));
+
+            return [new ol.style.Style({
+                fill: new ol.style.Fill({
+                    color: colorStops.stops[region] || [0, 0, 0, 0]
+                })
+            })];
+        });
+
+        //drawLegend.call(this, data.legend);
+    }
+
+    function updateLayer(layer, data) {
+        var isVisible = (data.layers.indexOf(layer.get('name')) > -1);
+
+        layer.setVisible(isVisible);
+
+        if (data.stops && isVisible) {
+            colorAreas.call(this, layer, data.stops);
+        }
+    }
+
     function updateChart(data) {
-        var filter = ["in", data.layer_info.filter].concat(data.stops.map(function (stop) {
-            return stop[0];
-        }));
-
-        this.areas.map.setPaintProperty(data.layer_info.name, 'fill-color', {
-            type:     "categorical",
-            property: data.layer_info.filter,
-            stops:    data.stops
-        });
-
-        this.areas.map.setFilter(data.layer_info.name, filter);
-
-        drawLegend.call(this, data.legend);
+        this.areas.map.getLayers().forEach(function (layer) {
+            if (layer.get('name')) {
+                updateLayer.call(this, layer, data);
+            }
+        }.bind(this));
     }
 
-    function drawLegend(legend) {
-        var styles = [];
+    //function drawLegend(legend) {
+    //    var styles = [];
 
-        $(".legend .colors").css({ "display": "inline-block"});
-        $(".legend .max_value").text(legend.max + legend.unit);
-        $(".legend .min_value").text(legend.min + legend.unit);
+    //    $(".legend .colors").css({ "display": "inline-block"});
+    //    $(".legend .max_value").text(legend.max + legend.unit);
+    //    $(".legend .min_value").text(legend.min + legend.unit);
 
-        ["-webkit-", "-o-", "-moz-", ""].forEach(function(prefix) {
-            styles.push(prefix + "linear-gradient("
-                + legend.max_color + ", " + legend.min_color + ")");
-        });
+    //    ["-webkit-", "-o-", "-moz-", ""].forEach(function (prefix) {
+    //        styles.push(prefix + "linear-gradient("
+    //            + legend.max_color + ", " + legend.min_color + ")");
+    //    });
 
-        $(".legend .color-gradient").attr("style", "background: " + styles.join(";"));
-    }
+    //    $(".legend .color-gradient").attr("style", "background: " + styles.join(";"));
+    //}
 
     ChartRenderer.prototype = {
         render: function () {
@@ -39,8 +60,7 @@ Areas.ChartRenderer = (function () {
                 type: "POST",
                 data: {
                     chart: {
-                        type: this.scope.chartType,
-                        layer: this.scope.layerId
+                        type: this.scope.chartType
                     }
                 },
                 success: updateChart.bind(this)

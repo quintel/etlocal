@@ -16,6 +16,6 @@ class ChartsController < ApplicationController
   private
 
   def chart_params
-    params.require(:chart).permit(:type, :layer)
+    params.require(:chart).permit(:type)
   end
 end

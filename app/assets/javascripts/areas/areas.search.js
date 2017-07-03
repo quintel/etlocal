@@ -1,3 +1,5 @@
+/*globals Areas,Search,ol*/
+
 Areas.Search = (function () {
     'use strict';
 
@@ -6,13 +8,12 @@ Areas.Search = (function () {
 
         if (data.length > 0) {
             var boundingBox = data[0].boundingbox.map(function (value) {
-                return parseFloat(value);
-            })
+                    return parseFloat(value);
+                }),
+                c1 = ol.proj.fromLonLat([boundingBox[2], boundingBox[0]]),
+                c2 = ol.proj.fromLonLat([boundingBox[3], boundingBox[1]]);
 
-            this.areas.map.fitBounds([
-                [boundingBox[2], boundingBox[0]],
-                [boundingBox[3], boundingBox[1]]
-            ], { maxZoom: 17 })
+            this.areas.view.fit(c1.concat(c2), { duration: 500 });
         } else {
             console.log("No results for: " + this.results.value);
         }
@@ -36,7 +37,9 @@ Areas.Search = (function () {
                 url:  "https://nominatim.openstreetmap.org/search",
                 type: "GET",
                 data: {
-                    format: 'json', q: this.result.value, countrycodes: 'nl'
+                    format: 'json',
+                    q: this.result.value,
+                    countrycodes: 'nl'
                 },
                 success: flyToMap.bind(this)
             });

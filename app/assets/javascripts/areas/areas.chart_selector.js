@@ -1,49 +1,50 @@
+/*globals Areas,ChartSelector*/
+
 Areas.ChartSelector = (function () {
     'use strict';
 
     function openPopup(position, feature, layer) {
-        var source   = $('#default').html(),
-            property = feature.properties[layer.filter];
+        var source     = $('#default').html(),
+            geoId      = feature.get(layer.get('filter')),
+            name       = feature.get(layer.get('name_attr')),
+            properties = feature.getProperties(),
+            popup      = this.areas.map.getOverlays().item(0),
+            content    = document.getElementById('popup-content');
 
-        feature.properties.geoId = feature.properties[layer.filter];
-
-        if (layer.name === "provinces") {
-            feature.properties.geoId = feature.properties.geoId.toLowerCase();
+        if (layer.get('name') === "provinces_ds") {
+            geoId = geoId.toLowerCase();
         }
 
-        this.areas.currentPopup = new mapboxgl.Popup()
-            .setLngLat(this.areas.map.unproject(position))
-            .setHTML(Handlebars.compile(source)(feature.properties))
-            .addTo(this.areas.map);
+        $(content).find('h5').html(name);
+        $(content).find('a.dataset-open').off('click').on('click', function (e) {
+            e.preventDefault();
+
+            $.ajax({
+                type: "GET",
+                dataType: 'script',
+                url: 'datasets/' + geoId + '/commits/new.js'
+            });
+        })
+
+        popup.setPosition(position);
 
         // Prevent people from clicking on the ETModel link
         $("a[disabled='disabled']").on("click", function (e) {
-            e.preventDefault()
+            e.preventDefault();
         });
     }
 
     function click(e) {
-        var layer    = this.areas.layers.current(),
-            bbox     = [[e.point.x - 5, e.point.y - 5],
-                        [e.point.x + 5, e.point.y + 5]],
-            features = this.areas.map.queryRenderedFeatures(bbox, {
-                layers: [ layer.name + 'normal' ]
-            });
-
-        if (features.length > 0) {
-            openPopup.call(this, e.point, features[0], layer);
-        }
-
-        this.areas.map.setFilter(layer.name + "filled", features.length > 0
-            ? ['==', layer.filter, features[0].properties[layer.filter]]
-            : layer.mapFilter);
+        // We'll assume for now that there will be only one feature to click
+        // on. If this changes, please do so here.
+        this.areas.map.forEachFeatureAtPixel(e.pixel, function (feature, layer) {
+            openPopup.call(this, e.coordinate, feature, layer);
+        }.bind(this));
     }
 
     ChartSelector.prototype = {
         enable: function () {
-            if(!this.areas.map.listens('click')) {
-                this.areas.map.on('click', click.bind(this));
-            }
+            this.areas.map.on('click', click.bind(this));
 
             this.closeButtonOverlay.on("click", function (e) {
                 e.preventDefault();

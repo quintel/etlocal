@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   end
 
   post :charts, to: "charts#data"
-  post :search, to: "search#search"
 
   namespace :api do
     namespace :v1 do

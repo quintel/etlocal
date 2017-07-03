@@ -1,45 +1,42 @@
 ---
 dataset_selector:
-  - name: 'provinces_ds'
+  - name: provinces
     id: "grdw.2yc5gbk0"
-    source: "provinces-38l90g"
-    minzoom: 5
-    maxzoom: 9
+    source: "provinces"
+    minres: 300
+    maxres: 700
     filter: "NAME_1"
+    name_attr: 'NAME_1'
 
-  - name: 'municipalities_ds'
+  - name: municipalities
     id: "grdw.2779dku7"
     source: "gem_2015_crs_84-dm3urg"
-    minzoom: 9
-    maxzoom: 11
+    minres: 100
+    maxres: 300
     filter: "GM_CODE"
+    name_attr: 'GM_NAAM'
 
-  - name: 'districts_ds'
+  - name: districts
     id: "grdw.51ikm70q"
     source: "wijk_2015_crs_84-4m557y"
-    minzoom: 11
-    maxzoom: 12
+    minres: 40
+    maxres: 100
     filter: "WK_CODE"
+    name_attr: 'WK_NAAM'
 
-  - name: 'neighborhoods_ds'
+  - name: neighborhoods
     id: "grdw.bg029u41"
-    source: "buurt_2015_crs_84-45f5dp"
-    minzoom: 12
-    maxzoom: 24
+    source: "buurt_2015_crs_84"
+    minres: 0
+    maxres: 40
     filter: "BU_CODE"
+    name_attr: 'BU_NAAM'
 
 chart:
-  - name: 'provinces'
-    id: "grdw.2yc5gbk0"
-    source: "provinces-38l90g"
-    filter: "NAME_1"
-
-  - name: 'municipalities'
-    id: "grdw.61n1g5zm"
-    source: "gem_2015_crs_84_compressed-a2i5uo"
-    filter: "GM_CODE"
-
-  - name: 'districts'
-    id: "grdw.6sgqzalv"
-    source: "wijk_2015_crs_84_compressed-9oj71w"
-    filter: "WK_CODE"
+  - name: potential_heat_wko_neighborhood
+    type: 'wms'
+    id: potential_heat_wko_neighborhood
+    url: "http://geodata.nationaalgeoregister.nl/omgevingswarmte/wms"
+    params:
+      layers: "warmtegeslotenwkobuurt"
+      srs: "EPSG:28992"

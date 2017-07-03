@@ -17,6 +17,6 @@
 //= require jquery.quinn.min
 //= require jquery.quinn.balancer
 //= require turbolinks
-//= require mapbox-gl
+//= require ol
 //= require handlebars-v4.0.5
 //= require_tree .

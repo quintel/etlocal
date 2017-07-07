@@ -14,24 +14,8 @@ var Areas = (function () {
         this.layers.setCurrent(filtered[0]);
 
         if (previousLayer !== filtered[0]) {
-            this.closePopup();
+            this.popup.close();
         }
-    }
-
-    function getPopup() {
-        var popup      = document.getElementById("popup"),
-            closer     = document.getElementById("popup-closer"),
-            overlay    = new ol.Overlay({
-                element: popup,
-                autoPan: true,
-                autoPanAnimation: {
-                    duration: 250
-                }
-            });
-
-        $(closer).on('click', this.closePopup.bind(this));
-
-        return overlay;
     }
 
     function drawMap() {
@@ -45,14 +29,14 @@ var Areas = (function () {
 
         this.map = new ol.Map({
             target: 'map',
-            overlays: [getPopup.call(this)],
+            overlays: [this.popup.get()],
             layers: this.layers.layerGroups,
             view: this.view
         });
 
         this.map.on('moveend', zoom.bind(this));
         this.toggle.enable();
-        this.switchMode('dataset_selector');
+        this.toggle.switchMode('dataset_selector');
     }
 
     return {
@@ -64,38 +48,13 @@ var Areas = (function () {
             });
         },
 
-        switchMode: function (mode) {
-            var key,
-                modus = this.interfaces[mode];
-
-            this.resetPosition();
-            this.layers.switchMode(mode);
-            this.closePopup();
-
-            for (key in this.interfaces) {
-                if (this.interfaces.hasOwnProperty(key)) {
-                    this.interfaces[key].disable();
-                }
-            }
-
-            modus.enable();
-        },
-
-        closePopup: function () {
-            var closer = document.getElementById("popup-closer"),
-                popup  = this.map.getOverlays().item(0);
-
-            popup.setPosition(undefined);
-            closer.blur();
-            return false;
-        },
-
         init: function () {
             if ($("#map").length < 1) { return; }
 
             this.layers       = new Areas.Layers(this);
             this.searchBox    = new Areas.Search(this, $("form#search"));
             this.toggle       = new Areas.Toggle(this);
+            this.popup        = new Areas.Popup(this);
 
             this.interfaces   = {
                 chart:            new Areas.VisualMode(this),

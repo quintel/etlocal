@@ -4,7 +4,7 @@ Areas.Search = (function () {
     'use strict';
 
     function flyToMap(data) {
-        this.areas.closePopup();
+        this.areas.popup.close();
 
         if (data.length > 0) {
             var boundingBox = data[0].boundingbox.map(function (value) {

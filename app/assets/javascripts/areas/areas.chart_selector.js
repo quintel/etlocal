@@ -37,14 +37,22 @@ Areas.ChartSelector = (function () {
     function click(e) {
         // We'll assume for now that there will be only one feature to click
         // on. If this changes, please do so here.
-        this.areas.map.forEachFeatureAtPixel(e.pixel, function (feature, layer) {
-            openPopup.call(this, e.coordinate, feature, layer);
+        this.areas.map.forEachFeatureAtPixel(e.pixel, function (selectedFeature, layer) {
+            layer.setStyle(function (feature) {
+                var filter   = layer.get('filter'),
+                    isFilled = feature.get(filter) === selectedFeature.get(filter),
+                    style    = isFilled ? 'filled' : 'normal';
+
+                return [this.areas.layers.styles[style]];
+            }.bind(this));
+
+            openPopup.call(this, e.coordinate, selectedFeature, layer);
         }.bind(this));
     }
 
     ChartSelector.prototype = {
         enable: function () {
-            this.areas.map.on('click', click.bind(this));
+            this.eventKey = this.areas.map.on('click', click.bind(this));
 
             this.closeButtonOverlay.on("click", function (e) {
                 e.preventDefault();
@@ -55,6 +63,8 @@ Areas.ChartSelector = (function () {
         },
 
         disable: function () {
+            ol.Observable.unByKey(this.eventKey);
+
             this.closeButtonOverlay.off("click");
         }
     };

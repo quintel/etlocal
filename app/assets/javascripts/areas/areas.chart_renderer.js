@@ -32,8 +32,12 @@ Areas.ChartRenderer = (function () {
 
     function updateChart(data) {
         this.areas.map.getLayers().forEach(function (layer) {
-            if (layer.get('name')) {
-                updateLayer.call(this, layer, data);
+            if (layer instanceof ol.layer.Group) {
+                layer.getLayers().forEach(function (layer) {
+                    if (layer.get('name')) {
+                        updateLayer.call(this, layer, data);
+                    }
+                }.bind(this));
             }
         }.bind(this));
     }

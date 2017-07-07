@@ -46,6 +46,7 @@ var Areas = (function () {
         this.map = new ol.Map({
             target: 'map',
             overlays: [getPopup.call(this)],
+            layers: this.layers.layerGroups,
             view: this.view
         });
 
@@ -64,8 +65,10 @@ var Areas = (function () {
         },
 
         switchMode: function (mode) {
-            var key;
+            var key,
+                modus = this.interfaces[mode];
 
+            this.resetPosition();
             this.layers.switchMode(mode);
             this.closePopup();
 
@@ -75,7 +78,7 @@ var Areas = (function () {
                 }
             }
 
-            this.interfaces[mode].enable();
+            modus.enable();
         },
 
         closePopup: function () {

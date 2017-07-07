@@ -4,28 +4,30 @@ Areas.Layers = (function () {
     'use strict';
 
     var NL_EXTENT = [378486.2686971302, 6568397.781293049,
-                     801500.3337115699, 7094762.123545771];
+                     801500.3337115699, 7094762.123545771],
+        COLOR     = [210, 115, 115];
 
     function setStyles() {
         return {
             normal: new ol.style.Style({
                 stroke: new ol.style.Stroke({
-                    color: "#CC6060",
+                    color: COLOR,
                     width: 2
                 })
             }),
-            filled: {
+            filled: new ol.style.Style({
                 stroke: new ol.style.Stroke({
-                    color: "#FFFFFF"
+                    color: COLOR,
+                    width: 2
                 }),
                 fill: new ol.style.Fill({
-                    color: 'rgba(135,160,160,0.75)'
+                    color: COLOR.concat([0.75])
                 })
-            }
+            })
         };
     }
 
-    function transformLayers(layers, visible) {
+    function transformLayers(layers) {
         return layers.map(function (layer) {
             var source = new ol.source.VectorTile({
                 format: new ol.format.MVT(),
@@ -38,7 +40,7 @@ Areas.Layers = (function () {
                 extent:        NL_EXTENT,
                 minResolution: layer.minres,
                 maxResolution: layer.maxres,
-                visible:       visible,
+                visible:       false,
                 style:         this.styles.normal,
                 filter:        layer.filter,
                 name:          layer.name,
@@ -63,20 +65,18 @@ Areas.Layers = (function () {
     }
 
     function setLayers() {
-        var base = [new ol.layer.Tile({
-            source: new ol.source.OSM()
-        })];
-
-        return {
-            dataset_selector: new ol.layer.Group({
-                layers: base.concat(transformLayers.call(this, this.layers.dataset_selector, true))
+        return [
+            new ol.layer.Tile({
+                source: new ol.source.OSM()
             }),
-            chart: new ol.layer.Group({
-                layers: base
-                    .concat(transformLayers.call(this, this.layers.dataset_selector, false))
-                    .concat(transformChartLayers.call(this, this.layers.chart))
+            new ol.layer.Group({
+                group: 'dataset_selector',
+                layers: transformLayers.call(this, this.layers.dataset_selector)
+            }),
+            new ol.layer.Group({
+                layers: transformChartLayers.call(this, this.layers.chart)
             })
-        };
+        ];
     }
 
     Layers.prototype = {
@@ -85,7 +85,18 @@ Areas.Layers = (function () {
         },
 
         switchMode: function (mode) {
-            this.areas.map.setLayerGroup(this.layerGroups[mode]);
+            var group;
+
+            this.areas.map.getLayers().forEach(function (layer) {
+                group = layer.get('group');
+
+                if (group) {
+                    layer.getLayers().forEach(function (layer) {
+                        layer.setVisible(group === mode);
+                        layer.setStyle(this.styles.normal);
+                    }.bind(this));
+                }
+            }.bind(this));
         },
 
         current: function () {

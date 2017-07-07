@@ -7,6 +7,7 @@ Areas.Toggle = (function () {
         var scope = $(e.target).data('interface');
 
         this.buttons.removeClass("enabled");
+
         this.areas.switchMode(scope);
 
         $(e.target).addClass("enabled");
@@ -14,12 +15,8 @@ Areas.Toggle = (function () {
         $("#interfaces .interface, #dataset-overlay").hide();
         $("#interfaces .interface." + scope).show();
 
-        if (scope === 'chart') {
-            this.areas.resetPosition();
-            $(".mapboxgl-ctrl-group").hide();
-        } else if (scope === 'dataset_selector') {
+        if (scope === 'dataset_selector') {
             $(".legend .colors").css({ "display": "none"});
-            $(".mapboxgl-ctrl-group").show();
         }
     }
 

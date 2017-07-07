@@ -52,6 +52,9 @@ $map-height: 900px
   .container
     margin-top: 20px
     #interfaces
+      .interface
+        float: left
+
       .chart
         display: none
 
@@ -68,29 +71,28 @@ $map-height: 900px
         .legend
           position: relative
 
-          span
-            line-height: 20px
-            vertical-align: top
+          .dynamic
+            width: 60%
+            background-color: white
+            padding: 6px 15px
 
-            &.min_value, &.max_value
-              position: absolute
+            .legend-item
+              .bar
+                display: table-row
+                span
+                  vertical-align: middle
+                  display: table-cell
+                  padding: 3px 0
 
-            &.min_value
-              bottom: 0
+                  &.min
+                    padding-right: 5px
 
-            &.max_value
-              top: 0
+                  &.max
+                    padding-left: 5px
 
-          .colors
-            background-color: #f3f3f3
-            margin: 0 5px 0 0
-            height: 200px
-            display: none
-
-            .color-gradient
-              width: 25px
-              height: 100%
-              display: inline-block
+                  &.color > .color-div
+                    width: 60px
+                    height: 20px
 
     .dataset-selector
       width: 300px
@@ -102,6 +104,10 @@ $map-height: 900px
 
         input
           vertical-align: top
+
+        form.no-results
+          input#search-bar
+            border: 1px solid $error-color
 
         input#search-bar
           border: 1px solid #bbb

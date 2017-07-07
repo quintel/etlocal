@@ -1,6 +1,7 @@
 class ChartRenderer
   class ColorGenerator
     OPACITY = 0.7
+    LEGEND_ITEMS_COUNT = 6
 
     def initialize(chart, datasets)
       @chart    = chart
@@ -10,31 +11,33 @@ class ChartRenderer
 
     def generate
       {
-        stops: stops#,
-        #legend: {
-        #  max: values.max,
-        #  max_color: color_for(max),
-        #  min: values.min,
-        #  min_color: color_for(min),
-        #  unit: unit
-        #}
+        stops: stops,
+        legend: {
+          scale: @chart.scale,
+          bars: bars
+        }
       }
     end
 
     private
 
-    def unit
-      Dataset::EDITABLE_ATTRIBUTES[@chart.key]['unit']
+    def bars
+      step = (values.max - values.min) / LEGEND_ITEMS_COUNT
+
+      (values.min..values.max).step(step).map do |val|
+        { min: val.round(2),
+          max: (val + step).round(2),
+          color: color_for(scale(val)) }
+      end
     end
 
     def stops
       @datasets.each_with_object({}) do |dataset, object|
-        object[dataset.chart_id] = color_for(dataset.value.to_f)
+        object[dataset.chart_id] = color_for(scale(dataset.value.to_f))
       end
     end
 
     def color_for(value)
-      value = scale(value)
       color = @gradient.at(((value - min) / (max - min)) * 1.0).to_s(:hex)
 
       color.scan(/.{2}/).map(&:hex) << OPACITY

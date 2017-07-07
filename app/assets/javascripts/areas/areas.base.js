@@ -15,6 +15,10 @@ var Areas = (function () {
 
         if (previousLayer !== filtered[0]) {
             this.popup.close();
+
+            // TODO: Not so nice ... or maybe this is the nicest way...
+            $(".dynamic .legend-item").hide();
+            $(".dynamic .legend-item." + filtered[0].name).show();
         }
     }
 

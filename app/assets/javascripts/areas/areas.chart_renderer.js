@@ -16,8 +16,6 @@ Areas.ChartRenderer = (function () {
                 })
             })];
         });
-
-        //drawLegend.call(this, data.legend);
     }
 
     function updateLayer(layer, data) {
@@ -27,6 +25,10 @@ Areas.ChartRenderer = (function () {
 
         if (data.stops && isVisible) {
             colorAreas.call(this, layer, data.stops);
+        }
+
+        if (isVisible) {
+            new Areas.Legend(this.areas, data).draw();
         }
     }
 
@@ -41,21 +43,6 @@ Areas.ChartRenderer = (function () {
             }
         }.bind(this));
     }
-
-    //function drawLegend(legend) {
-    //    var styles = [];
-
-    //    $(".legend .colors").css({ "display": "inline-block"});
-    //    $(".legend .max_value").text(legend.max + legend.unit);
-    //    $(".legend .min_value").text(legend.min + legend.unit);
-
-    //    ["-webkit-", "-o-", "-moz-", ""].forEach(function (prefix) {
-    //        styles.push(prefix + "linear-gradient("
-    //            + legend.max_color + ", " + legend.min_color + ")");
-    //    });
-
-    //    $(".legend .color-gradient").attr("style", "background: " + styles.join(";"));
-    //}
 
     ChartRenderer.prototype = {
         render: function () {

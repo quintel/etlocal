@@ -8,7 +8,7 @@ Areas.Toggle = (function () {
 
         this.buttons.removeClass("enabled");
 
-        this.areas.switchMode(scope);
+        this.switchMode(scope);
 
         $(e.target).addClass("enabled");
 
@@ -21,6 +21,23 @@ Areas.Toggle = (function () {
     }
 
     Toggle.prototype = {
+        switchMode: function (mode) {
+            var key,
+                modus = this.areas.interfaces[mode];
+
+            this.areas.resetPosition();
+            this.areas.layers.switchMode(mode);
+            this.areas.popup.close();
+
+            for (key in this.areas.interfaces) {
+                if (this.areas.interfaces.hasOwnProperty(key)) {
+                    this.areas.interfaces[key].disable();
+                }
+            }
+
+            modus.enable();
+        },
+
         enable: function () {
             this.buttons = this.scope.find("button");
 

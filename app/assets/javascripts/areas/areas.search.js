@@ -14,8 +14,15 @@ Areas.Search = (function () {
                 c2 = ol.proj.fromLonLat([boundingBox[3], boundingBox[1]]);
 
             this.areas.view.fit(c1.concat(c2), { duration: 500 });
+
+            this.scope
+                .removeClass("no-results")
+                .removeAttr("title");
+
         } else {
-            console.log("No results for: " + this.results.value);
+            this.scope
+                .addClass("no-results")
+                .attr('title', "No results for: " + this.result.value);
         }
     }
 

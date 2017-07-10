@@ -1,5 +1,6 @@
 ---
 electricity_consumption:
+  legend_type: dynamic
   color_stops:
     - "#00FF00"
     - "#FF0000"
@@ -10,6 +11,7 @@ electricity_consumption:
     - neighborhoods
 
 gas_consumption:
+  legend_type: dynamic
   color_stops:
     - "#00FF00"
     - "#FF0000"
@@ -20,6 +22,7 @@ gas_consumption:
     - neighborhoods
 
 number_of_inhabitants:
+  legend_type: dynamic
   scale: log10
   color_stops:
     - "#009cff"
@@ -31,6 +34,7 @@ number_of_inhabitants:
     - neighborhoods
 
 number_of_cars:
+  legend_type: dynamic
   scale: log10
   color_stops:
     - "#009cff"
@@ -42,6 +46,7 @@ number_of_cars:
     - neighborhoods
 
 number_of_residences:
+  legend_type: dynamic
   scale: log10
   color_stops:
     - "#009cff"
@@ -53,6 +58,7 @@ number_of_residences:
     - neighborhoods
 
 roof_surface_available_for_pv:
+  legend_type: dynamic
   scale: log10
   color_stops:
     - "#FF0000"
@@ -64,5 +70,16 @@ roof_surface_available_for_pv:
     - neighborhoods
 
 potential_heat_wko_neighborhood:
+  legend_type: static
   layers:
     - potential_heat_wko_neighborhood
+
+heat_networks:
+  legend_type: static
+  layers:
+    - heat_networks
+
+bag:
+  legend_type: none
+  layers:
+    - bag

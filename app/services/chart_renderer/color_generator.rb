@@ -1,7 +1,7 @@
 class ChartRenderer
   class ColorGenerator
     OPACITY = 0.7
-    LEGEND_ITEMS_COUNT = 6
+    LEGEND_ITEMS_COUNT = 5
 
     def initialize(chart, datasets)
       @chart    = chart
@@ -22,9 +22,9 @@ class ChartRenderer
     private
 
     def bars
-      step = (values.max - values.min) / LEGEND_ITEMS_COUNT
+      step = ((values.max - values.min) / LEGEND_ITEMS_COUNT).floor
 
-      (values.min..values.max).step(step).map do |val|
+      (values.min...values.max).step(step).map do |val|
         { min: val.round(2),
           max: (val + step).round(2),
           color: color_for(scale(val)) }

@@ -51,17 +51,45 @@ Areas.Layers = (function () {
 
     function transformChartLayers(layers) {
         return layers.map(function (layer) {
-            return new ol.layer.Tile({
-                name: layer.name,
-                id: layer.id,
-                visible: false,
-                opacity: 0.7,
-                source: new ol.source.TileWMS({
-                    url: layer.url,
-                    params: layer.params
-                })
-            })
-        });
+            var olLayer;
+
+            if (layer.type === 'wms') {
+                olLayer = new ol.layer.Tile({
+                    name:    layer.name,
+                    id:      layer.id,
+                    visible: false,
+                    opacity: 0.7,
+                    source:  new ol.source.TileWMS({
+                        url: layer.url,
+                        params: layer.params
+                    })
+                });
+            } else if (layer.type === 'wfs') {
+                var source = new ol.source.Vector({
+                    format: new ol.format.GeoJSON(),
+                    strategy: ol.loadingstrategy.tile(ol.tilegrid.createXYZ({ maxZoom: 16 })),
+                    url: function (extent, resolution, projection) {
+                        return layer.url.interpolate({
+                            bbox: extent.join(',')
+                        });
+                    }
+                });
+
+                olLayer = new ol.layer.Vector({
+                    name:          layer.name,
+                    id:            layer.id,
+                    minResolution: layer.minres,
+                    maxResolution: layer.maxres,
+                    visible:       false,
+                    style:         this.styles.normal,
+                    source:        source
+                });
+            } else {
+                throw "Uknown chart type: " + layer.type;
+            }
+
+            return olLayer;
+        }.bind(this));
     }
 
     function setLayers() {

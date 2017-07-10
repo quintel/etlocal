@@ -2,13 +2,6 @@
 
 .container
   #interfaces
-    .interface.dataset_selector
-      #search-bar
-        .form
-          form#search
-            = text_field_tag :q, nil, id: "search-bar"
-            input#search-submit type='submit' value='Search'
-
     .interface.chart
       = select_tag "display_options", display_options
 
@@ -17,6 +10,13 @@
           span.color-gradient
         span.min_value
         span.max_value
+
+    .interface.dataset_selector
+      #search-bar
+        .form
+          form#search
+            = text_field_tag :q, nil, id: "search-bar"
+            input#search-submit type='submit' value='Search'
 
   #dataset-overlay
     .button-close

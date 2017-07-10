@@ -1,5 +1,5 @@
 class Chart
-  attr_reader :key
+  attr_reader :key, :options
 
   def initialize(key, options)
     @key     = key
@@ -18,8 +18,8 @@ class Chart
     @options['layers']
   end
 
-  def source
-    @options['source']
+  def legend_type
+    @options['legend_type']
   end
 
   def self.all

@@ -25,9 +25,9 @@ class ChartRenderer
       step = ((values.max - values.min) / LEGEND_ITEMS_COUNT).floor
 
       (values.min...values.max).step(step).map do |val|
-        { min: val.round(2),
-          max: (val + step).round(2),
-          color: color_for(scale(val)) }
+        { min:   val.round(2),
+          max:   (val + step).round(2),
+          color: color_for(scale(val)).join(',') }
       end
     end
 

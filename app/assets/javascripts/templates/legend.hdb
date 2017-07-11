@@ -1,0 +1,22 @@
+<div class="dynamic">
+  {{#each stops}}
+    <div class="{{@key}} legend-item">
+      <div>
+        <span>{{@key}}</span>
+        {{#if ../unit }}
+          <span>({{../unit}})</span>
+        {{/if}}
+      </div>
+
+      {{#each legend.bars}}
+        <div class="bar">
+          <span class="min">{{min}}</span>
+          <span class="color">
+            <div class="color-div" style="background-color: rgba({{ color }});"></div>
+          </span>
+          <span class="max">{{max}}</span>
+        </div>
+      {{/each}}
+    </div>
+  {{/each}}
+</div>

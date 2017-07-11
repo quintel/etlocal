@@ -1,7 +1,9 @@
 en:
   charts:
+    bag: "BAG"
     electricity_consumption: "Electricity consumption per household"
     gas_consumption: "Gas consumption per household"
+    heat_networks: "Heat networks"
     number_of_inhabitants: "Number of inhabitants"
     number_of_cars: "Number of cars"
     number_of_residences: "Number of residences"

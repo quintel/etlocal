@@ -1,13 +1,13 @@
-/*globals Areas,ChartSelector*/
+/*globals Areas,DatasetSelector,ol*/
 
-Areas.ChartSelector = (function () {
+Areas.DatasetSelector = (function () {
     'use strict';
 
+    var GROUP = 'dataset_selector';
+
     function openPopup(position, feature, layer) {
-        var source     = $('#default').html(),
-            geoId      = feature.get(layer.get('filter')),
+        var geoId      = feature.get(layer.get('filter')),
             name       = feature.get(layer.get('name_attr')),
-            properties = feature.getProperties(),
             popup      = this.areas.map.getOverlays().item(0),
             content    = document.getElementById('popup-content');
 
@@ -24,7 +24,7 @@ Areas.ChartSelector = (function () {
                 dataType: 'script',
                 url: 'datasets/' + geoId + '/commits/new.js'
             });
-        })
+        });
 
         popup.setPosition(position);
 
@@ -50,9 +50,17 @@ Areas.ChartSelector = (function () {
         }.bind(this));
     }
 
-    ChartSelector.prototype = {
+    DatasetSelector.prototype = {
         enable: function () {
             this.eventKey = this.areas.map.on('click', click.bind(this));
+
+            this.areas.layers.eachLayer(function (layer, group) {
+                layer.setVisible(group === GROUP);
+
+                if (group === GROUP) {
+                    layer.setStyle(this.styles.normal);
+                }
+            });
 
             this.closeButtonOverlay.on("click", function (e) {
                 e.preventDefault();
@@ -69,10 +77,10 @@ Areas.ChartSelector = (function () {
         }
     };
 
-    function ChartSelector(areas) {
+    function DatasetSelector(areas) {
         this.areas = areas;
         this.closeButtonOverlay = $("#dataset-overlay .button-close a");
     }
 
-    return ChartSelector;
+    return DatasetSelector;
 }());

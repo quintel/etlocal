@@ -1,4 +1,4 @@
-/*globals Areas,Legend*/
+/*globals Areas,Handlebars,Legend*/
 
 Areas.Legend = (function () {
     'use strict';
@@ -27,17 +27,16 @@ Areas.Legend = (function () {
             clear.call(this);
 
             switch (this.data.legend_type) {
-                case 'static':
-                    drawStaticLegend.call(this);
-                    break;
-                case 'dynamic':
-                    drawDynamicLegend.call(this);
-                    break;
-                case 'none':
-                    break;
-                default:
-                    throw "unknown type: " + this.data.type;
-                    break;
+            case 'static':
+                drawStaticLegend.call(this);
+                break;
+            case 'dynamic':
+                drawDynamicLegend.call(this);
+                break;
+            case 'none':
+                break;
+            default:
+                throw "unknown type: " + this.data.type;
             }
         }
     };

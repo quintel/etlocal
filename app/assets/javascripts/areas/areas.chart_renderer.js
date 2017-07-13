@@ -1,4 +1,4 @@
-/*globals Areas,ChartRenderer*/
+/*globals Areas,ChartRenderer,ol*/
 
 Areas.ChartRenderer = (function () {
     'use strict';

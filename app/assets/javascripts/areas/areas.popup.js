@@ -1,4 +1,4 @@
-/*globals Areas,Popup*/
+/*globals Areas,Popup,ol*/
 
 Areas.Popup = (function () {
     'use strict';
@@ -27,13 +27,11 @@ Areas.Popup = (function () {
             popup.setPosition(undefined);
             closer.blur();
             return false;
-        },
-
-        open: function () {}
+        }
     };
 
     function Popup(scope) {
-        this.scope = scope
+        this.scope = scope;
     }
 
     return Popup;

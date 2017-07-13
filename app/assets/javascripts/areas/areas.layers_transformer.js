@@ -82,12 +82,12 @@ Areas.LayersTransformer = (function () {
             return this.layerData.map(function (layer) {
                 source = this.sources[layer.type];
 
-                if (source) {
-                    return this.layers[layer.type]
-                        .call(this, layer, source.call(this, layer));
-                } else {
+                if (!source) {
                     throw "No source for layer type: " + layer.type;
                 }
+
+                return this.layers[layer.type]
+                    .call(this, layer, source.call(this, layer));
             }.bind(this));
         }
     };

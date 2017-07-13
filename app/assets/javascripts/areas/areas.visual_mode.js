@@ -14,6 +14,12 @@ Areas.VisualMode = (function () {
             this.displaySelect
                 .on("change", selectDisplayOption.bind(this));
 
+            this.areas.layers.eachLayer(function (layer, group) {
+                if (group === 'dataset_selector') {
+                    layer.setVisible(false);
+                }
+            });
+
             selectDisplayOption.call(this, { target: this.displaySelect });
         },
 

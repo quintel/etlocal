@@ -25,8 +25,6 @@ Areas.Toggle = (function () {
             var key,
                 modus = this.areas.interfaces[mode];
 
-            this.areas.resetPosition();
-            this.areas.layers.switchMode(mode);
             this.areas.popup.close();
 
             for (key in this.areas.interfaces) {

@@ -32,12 +32,11 @@ Areas.Layers = (function () {
             }),
             new ol.layer.Group({
                 group: 'dataset_selector',
-                layers: new Areas.LayersTransformer(
-                    this, this.layers.dataset_selector).transform()
+                layers: new Areas.LayersTransformer(this, this.layers.dataset_selector).transform()
             }),
             new ol.layer.Group({
-                layers: new Areas.LayersTransformer(
-                    this, this.layers.chart).transform()
+                group: 'chart',
+                layers: new Areas.LayersTransformer(this, this.layers.chart).transform()
             })
         ];
     }
@@ -47,16 +46,16 @@ Areas.Layers = (function () {
             this.currentLayer = layer;
         },
 
-        switchMode: function (mode) {
-            var group;
+        eachLayer: function (func) {
+            var group,
+                func = func || function () { return; };
 
             this.areas.map.getLayers().forEach(function (layer) {
-                group = layer.get('group');
+                if (layer instanceof ol.layer.Group) {
+                    group = layer.get('group');
 
-                if (group) {
                     layer.getLayers().forEach(function (layer) {
-                        layer.setVisible(group === mode);
-                        layer.setStyle(this.styles.normal);
+                        func.call(this, layer, group);
                     }.bind(this));
                 }
             }.bind(this));

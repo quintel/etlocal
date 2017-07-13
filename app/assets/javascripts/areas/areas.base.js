@@ -16,7 +16,6 @@ var Areas = (function () {
         if (previousLayer !== filtered[0]) {
             this.popup.close();
 
-            // TODO: Not so nice ... or maybe this is the nicest way...
             $(".dynamic .legend-item").hide();
             $(".dynamic .legend-item." + filtered[0].name).show();
         }
@@ -32,6 +31,9 @@ var Areas = (function () {
         });
 
         this.map = new ol.Map({
+            controls: ol.control.defaults().extend([
+                new Areas.ResetButton({ scope: this })
+            ]),
             target: 'map',
             overlays: [this.popup.get()],
             layers: this.layers.layerGroups,
@@ -44,16 +46,10 @@ var Areas = (function () {
     }
 
     return {
-        resetPosition: function () {
-            this.view.animate({
-                center: ol.proj.fromLonLat(this.center),
-                zoom: this.zoom,
-                duration: 2000
-            });
-        },
-
         init: function () {
             if ($("#map").length < 1) { return; }
+
+            ol.inherits(Areas.ResetButton, ol.control.Control);
 
             this.layers       = new Areas.Layers(this);
             this.searchBox    = new Areas.Search(this, $("form#search"));
@@ -62,7 +58,7 @@ var Areas = (function () {
 
             this.interfaces   = {
                 chart:            new Areas.VisualMode(this),
-                dataset_selector: new Areas.ChartSelector(this)
+                dataset_selector: new Areas.DatasetSelector(this)
             };
 
             drawMap.call(this);

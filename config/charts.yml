@@ -74,11 +74,6 @@ potential_heat_wko_neighborhood:
   layers:
     - potential_heat_wko_neighborhood
 
-heat_networks:
-  legend_type: static
-  layers:
-    - heat_networks
-
 bag:
   legend_type: none
   layers:

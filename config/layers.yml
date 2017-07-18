@@ -56,16 +56,6 @@ chart:
       layers: "warmtegeslotenwkobuurt"
       srs: "EPSG:28992"
 
-  - name: heat_networks
-    type: 'wfs'
-    id: heat_networks
-    url: "http://acceptatie.geodata.rivm.nl/geoserver/wms"
-    minres: 0
-    maxres: 700
-    params:
-      layers: "rivm:vw_zp_pc4"
-      styles: "zp_pc4_kWpiek_ha"
-
   - name: bag
     type: 'wfs'
     id: bag

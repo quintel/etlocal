@@ -18,23 +18,17 @@ describe ChartsController do
   end
 
   it "fetches a chart" do
-    post :data, params: { chart: { type: "electricity_consumption", layer: "municipalities" }}, format: :json
+    post :data, params: { chart: { type: "electricity_consumption" }}, format: :json
 
     body = JSON.parse(response.body)
 
-    expect(body).to have_key("layer_info")
-    expect(body).to have_key("legend")
+    expect(body).to have_key("legend_type")
+    expect(body).to have_key("layers")
     expect(body).to have_key("stops")
   end
 
   it "renders a 404 with incorrect type" do
-    post :data, params: { chart: { type: "not_found", layer: "municipalities" }}, format: :json
-
-    expect(response.code).to eq('404')
-  end
-
-  it "renders a 404 with incorrect layer" do
-    post :data, params: { chart: { type: "electricity_consumption", layer: "not_found" }}, format: :json
+    post :data, params: { chart: { type: "not_found"  }}, format: :json
 
     expect(response.code).to eq('404')
   end

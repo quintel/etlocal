@@ -22,7 +22,7 @@ class ChartRenderer
     private
 
     def bars
-      step = ((values.max - values.min) / LEGEND_ITEMS_COUNT).floor
+      step = ((values.max - values.min) / LEGEND_ITEMS_COUNT).ceil
 
       (values.min...values.max).step(step).map do |val|
         { min:   val.round(2),

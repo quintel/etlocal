@@ -14,10 +14,6 @@ Areas.Toggle = (function () {
 
         $("#interfaces .interface.chart, #dataset-overlay").hide();
         $("#interfaces .interface." + scope).show();
-
-        if (scope === 'dataset_selector') {
-            $(".legend .colors").css({ "display": "none"});
-        }
     }
 
     Toggle.prototype = {

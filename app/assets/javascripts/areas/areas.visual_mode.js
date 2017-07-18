@@ -20,6 +20,7 @@ Areas.VisualMode = (function () {
                 }
             });
 
+            $('.content-map .container #search-bar').show();
             selectDisplayOption.call(this, { target: this.displaySelect });
         },
 

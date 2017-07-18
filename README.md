@@ -1,5 +1,7 @@
 # ETLocal
 
+[![Build Status](https://travis-ci.org/quintel/etlocal.svg?branch=master)](https://travis-ci.org/quintel/etlocal)
+
 Provinces, municipalities, districts and neighborhoods have their own unique
 questions for their energy systems. ETLocal provides a way to get meaningful
 insight into their current situation and allows to customize and create stable,

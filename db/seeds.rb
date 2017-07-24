@@ -6,4 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 #
-User.create!(email: "robot@quintel.com", name: "Robot", password: SecureRandom.hex)
+
+Dir["#{ Rails.root }/db/seeds/**/*.rb"].each do |file|
+  require file
+end
+
+DatasetImporter.new.import
+
+unless User.find_by(email: "robot@quintel.com")
+  User.create!(email: "robot@quintel.com", name: "Robot", password: SecureRandom.hex)
+end

@@ -8,6 +8,10 @@ require 'rspec/rails'
 require "paperclip/matchers"
 require 'webmock/rspec'
 
+Dir["#{ Rails.root }/db/seeds/**/*.rb"].each do |file|
+  require file
+end
+
 ActiveRecord::Migration.maintain_test_schema!
 
 # Analyzer classes that needs a graph stubbed

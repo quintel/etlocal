@@ -4,6 +4,7 @@ en:
     changed_to: "Changed value to %{value}"
     download_source: "Download source"
     history: History
+    no_history: No history available for this attribute
     success: "Succesfully updated dataset %{dataset}"
 
     flash:

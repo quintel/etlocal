@@ -11,6 +11,9 @@ $(document).on('turbolinks:load', function () {
     });
 });
 
+/* Polyfills
+ *
+ */
 String.prototype.interpolate = function (opts) {
     var reg = /\$\{(.*?)\}/g,
         str = this,

@@ -29,6 +29,9 @@
         = f.hidden_field :dataset_id, value: dataset.id
 
         .edits
+          .group.tab data-tab= "#intro"
+            | Lots of text.
+
           - EditableAttributesCollection::ORDER.each do |group|
             .group.tab data-tab= "##{ group }"
               = render partial: "datasets/attribute", collection: dataset.editable_attributes.grouped[group], locals: { form: f, commit: commit, dataset: dataset }
@@ -56,7 +59,119 @@
             .toggle-group.agriculture_grouped class=('active' if toggle_value_for(dataset, 'has_agriculture'))
               = render partial: "datasets/attribute", collection: dataset.editable_attributes.grouped['agriculture_grouped'], locals: { form: f, commit: commit, dataset: dataset }
 
-          .apply
-            = f.submit "Apply", disabled: 'disabled'
+          .group.tab data-tab= "#overview"
+            .boxes
+              strong data-key='overview-edits' Overview edits
+              .box.overview-edits.open
+                .edits
+                  .editable
+                    .border
+                    .input
+                      .left
+                        span.key
+                          | households_cooling_airconditioning_electricity_share
+
+                      .right
+                        span.info data-key= 'households_cooling_airconditioning_electricity_share'
+                          i.fa.fa-info
+                        span.val
+                          | 40
+                        span.unit
+                          | %
+
+                      .clear
+
+                  .information.hidden.households_cooling_airconditioning_electricity_share
+                    .line-arrow
+                    strong Test
+                    .change
+                      .content
+                        | The share of cooling that will go to airconditioning is 40%, this number is based on the
+                        |  electricity demand which is set to 1000kWh, the share of x, the share of y, which results in
+                        |  1000kWh * x * y = 40%.
+
+                  .editable
+                    .border
+                    .input
+                      .left
+                        span.key
+                          | households_cooling_heatpump_air_water_electricity_share
+
+                      .right
+                        span.info data-key= 'households_cooling_heatpump_air_water_electricity_share'
+                          i.fa.fa-info
+                        span.val
+                          | 30
+                        span.unit
+                          | %
+
+                      .clear
+
+                  .information.hidden.households_cooling_heatpump_air_water_electricity_share
+                    .line-arrow
+                    .change
+                      .content
+                        | The share of cooling that will go to airconditioning is 40%, this number is based on the
+                        |  electricity demand which is set to 1000kWh, the share of x, the share of y, which results in
+                        |  1000kWh * x * y = 40%.
+
+                  .editable
+                    .border
+                    .input
+                      .left
+                        span.key
+                          | households_cooling_heatpump_ground_water_electricity_share
+
+                      .right
+                        span.info data-key= 'households_cooling_heatpump_ground_water_electricity_share'
+                          i.fa.fa-info
+                        span.val
+                          | 30
+                        span.unit
+                          | %
+
+                      .clear
+
+                  .information.hidden.households_cooling_heatpump_ground_water_electricity_share
+                    .line-arrow
+                    .change
+                      .content
+                        | The share of cooling that will go to airconditioning is 40%, this number is based on the
+                        |  electricity demand which is set to 1000kWh, the share of x, the share of y, which results in
+                        |  1000kWh * x * y = 40%.
+
+                  .editable
+                    .border
+                    .input
+                      .left
+                        span.key
+                          | households_useful_demand_for_cooling
+
+                      .right
+                        span.info data-key= 'households_useful_demand_for_cooling'
+                          i.fa.fa-info
+                        span.val
+                          | 1.200.000,54
+                        span.unit
+                          | kWh
+
+                      .clear
+
+                  .information.hidden.households_useful_demand_for_cooling
+                    .line-arrow
+                    strong Test
+                    .change
+                      .content
+                        | The share of cooling that will go to airconditioning is 40%, this number is based on the
+                        |  electricity demand which is set to 1000kWh, the share of x, the share of y, which results in
+                        |  1000kWh * x * y = 200kWh.
+
+                .apply
+                  = f.submit "Apply", disabled: 'disabled'
+
+              strong data-key='other-values' Other values
+              .box.other-values
+                .edits
+                  | Lorum ipsum
 
   .clear

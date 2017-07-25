@@ -4,6 +4,7 @@ nl:
     changed_to: "Waarde gewijzigd naar %{value}"
     download_source: "Download bron"
     history: Geschiedenis
+    no_history: Geen geschiedenis beschikbaar voor deze waarde
     success: "Succesvol %{key} naar %{value} veranderd"
     success: "%{dataset} is succesvol geüpdatet"
 

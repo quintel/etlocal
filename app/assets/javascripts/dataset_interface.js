@@ -21,12 +21,21 @@ var DatasetInterface = (function () {
     }
 
     function addClickListenerToHistory() {
-        var key;
+        var key, left, information;
 
         $("div.input span.history").on("click", function () {
             key = $(this).data('key');
 
             $("div.history." + key).toggleClass("hidden");
+        });
+
+        $("div.input span.info").on("click", function () {
+            key         = $(this).data('key'),
+            left        = $(this).position().left - 35, // 35 is the padding of the bounding box + the padding between the unit and the value
+            information = $("div.information." + key);
+
+            information.toggleClass("hidden");
+            information.find(".line-arrow").css({ left: left });
         });
     }
 

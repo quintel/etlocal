@@ -50,6 +50,9 @@ form
     background-color: $error-color
     border-color: darken($error-color, 20)
 
+  input[disabled]
+    background-color: darken($bg-color, 5)
+
 // Other
 span.or
   margin: 0 5px
@@ -78,10 +81,6 @@ table tbody tr td a.button
 
   form
     margin: 0
-
-  .apply
-    float: left
-    margin-left: 17px
 
   .group
     &.sub
@@ -119,9 +118,6 @@ table tbody tr td a.button
     strong
       margin-bottom: 20px
       display: block
-
-  .editable:first-child
-    margin-top: 20px
 
   .editable
     color: black
@@ -196,11 +192,10 @@ table tbody tr td a.button
       background: $bg-color
       padding-right: 4px
 
-div.history
+div.history, div.information
   padding: 20px 26px 0 26px
-  border-top: 1px solid #ccc
-  border-bottom: 1px solid #ccc
-  margin: 0 35px 35px 0
+  border: 1px solid #ccc
+  margin: -20px 35px 35px 0
   position: relative
   background-color: #eee
 
@@ -216,7 +211,7 @@ div.history
     border-top: 1px solid #ccc
     border-left: 1px solid #ccc
     transform: rotate(48deg) skew(5deg)
-    right: 190px
+    right: 198px
     background-color: #eee
 
   .change
@@ -247,6 +242,22 @@ div.history
     .source
       margin-top: 10px
       text-align: right
+
+.boxes
+  .editable .input
+    div.right
+      .info
+        cursor: pointer
+      .val
+        display: inline-block
+        margin-bottom: 18px
+        text-align: right
+
+  div.information
+    div.line-arrow
+      right: 27px
+    div.change
+      padding-top: 0
 
 #dataset-overlay
   .errors .error
@@ -364,7 +375,7 @@ ul.tab-nav
 
 div.tab
   display: none
-  padding: 10px 13px 0 17px
+  padding: 30px 13px 0 0
 
   &.active
     display: block

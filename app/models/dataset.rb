@@ -20,6 +20,13 @@ class Dataset < ApplicationRecord
     super.except('created_at', 'updated_at')
   end
 
+  # Public: country
+  #
+  # All the regions of ETLocal currently lie within the borders of Holland.
+  def country
+    'nl'.freeze
+  end
+
   def atlas_dataset
     Etsource.datasets[geo_id]
   end

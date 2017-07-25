@@ -13,13 +13,15 @@ nl:
         analysis_year: Analyse jaar
 
     groups:
+      agriculture: Landbouw
       assumptions: Aannames
       buildings: Gebouwen
       households: Huishoudens
       industry: Industrie
-      transport: Transport
-      agriculture: Agriculture
+      intro: Introductie
+      overview: Overzicht
       supply: Supply
+      transport: Transport
 
     subgroups:
       households:

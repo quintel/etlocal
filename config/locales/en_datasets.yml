@@ -13,13 +13,15 @@ en:
         analysis_year: Analysis year
 
     groups:
+      agriculture: Agriculture
       assumptions: Assumptions
       buildings: Buildings
       households: Households
       industry: Industry
-      transport: Transport
-      agriculture: Agriculture
+      intro: Intro
+      overview: Overview
       supply: Supply
+      transport: Transport
 
     subgroups:
       households:

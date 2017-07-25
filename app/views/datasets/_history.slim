@@ -1,7 +1,7 @@
 .history.hidden class= attribute.key
   .line-arrow
 
-  strong = I18n.t("dataset_edits.history")
+  strong = I18n.t("dataset_edits.#{ attributes.previous.any? ? "history" : "no_history" }")
 
   - attribute.previous.each do |dataset_edit|
     .change

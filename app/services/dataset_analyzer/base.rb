@@ -22,6 +22,10 @@ module DatasetAnalyzer
       @dataset_edits.each_pair do |key, value|
         define_singleton_method(key) { value }
       end
+
+      unless @dataset.is_a?(Atlas::Dataset)
+        raise ArgumentError, 'dataset argument is not an Atlas dataset'
+      end
     end
 
     def analyze

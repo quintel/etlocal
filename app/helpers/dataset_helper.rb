@@ -3,8 +3,8 @@ module DatasetHelper
     dataset_edit.latest.present? && dataset_edit.latest.user == User.robot
   end
 
-  def unit_for(attribute)
-    @dataset.editable_attributes.find(attribute.key).unit
+  def unit_for(key)
+    (Dataset::EDITABLE_ATTRIBUTES[key.to_s] || {})[:unit]
   end
 
   def filename_for_source

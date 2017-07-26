@@ -2,3 +2,4 @@
 | $('#dataset-overlay .content').html("#{ j render("commits/form", dataset: @dataset, commit: @commit) }");
 | $('.content-map .container #search-bar').hide();
 | DatasetInterface.enable("#{ @dataset.geo_id }");
+| DatasetInterface.Analyzer.analyze();

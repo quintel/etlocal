@@ -1,0 +1,41 @@
+- if @error
+  strong= @error
+
+- else
+  .boxes
+    strong data-key='overview-edits' Overview edits
+    .box.overview-edits.open
+      .edits
+        | No edits have been made
+
+      .apply
+        = submit_tag "Apply"
+
+    strong data-key='other-values' Other values
+    .box.other-values
+      .edits
+        - @analyzes[:init].each_pair do |key, val|
+          .editable
+            .border
+            .input
+              .left
+                span.key= key
+
+              .right
+                span.info data-key= key
+                  i.fa.fa-info
+                span.val
+                  = val
+                span.unit
+                  = unit_for(key)
+
+              .clear
+
+          .information.hidden class= key
+            .line-arrow
+            strong Test
+            .change
+              .content
+                | The share of cooling that will go to airconditioning is 40%, this number is based on the
+                |  electricity demand which is set to 1000kWh, the share of x, the share of y, which results in
+                |  1000kWh * x * y = 40%.

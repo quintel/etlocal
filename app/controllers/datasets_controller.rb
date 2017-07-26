@@ -12,14 +12,21 @@ class DatasetsController < ApplicationController
     @atlas_dataset = Atlas::Dataset.find(@dataset.country)
 
     begin
-      render json: DatasetAnalyzer.analyze(
-        @atlas_dataset, @dataset.editable_attributes.as_json)
-    rescue ArgumentError => e
-      render json: { error: e }
+      @analyzes = DatasetAnalyzer.analyze(@atlas_dataset, params_for_calculation)
+    rescue ArgumentError => error
+      @error = error
     end
+
+    render layout: false
   end
 
   def defaults
     render json: GraphAssumptions.get(:nl, true)
+  end
+
+  private
+
+  def params_for_calculation
+    JSON.parse(params.permit(:edits).fetch(:edits))
   end
 end

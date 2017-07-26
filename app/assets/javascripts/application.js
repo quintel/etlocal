@@ -10,9 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require polyfills
 //= require jquery
 //= require jquery_ujs
 //= require jquery.remotipart
+//= require jquery-extensions
 //= require underscore-1.3.1
 //= require jquery.quinn.min
 //= require jquery.quinn.balancer

@@ -14,10 +14,11 @@ module DatasetAnalyzer
     Industry,
     EnergySector,
     NullAttributes,
-    ToAtlasAttribute,
+    ToAtlasAttribute
   ].freeze
 
-  # Overall analyze method
+  # Overall analyze method. Analyzes a set of attributes to initializer
+  # inputs and a set of values needed to create a dataset.
   #
   # Arguments:
   # - dataset       = Atlas::Dataset::Derived
@@ -31,8 +32,8 @@ module DatasetAnalyzer
 
     graph = Atlas::Runner.new(dataset).calculate
 
-    ANALYZERS.each_with_object({}) do |analyzer, object|
-      object.merge! analyzer.analyze(dataset, graph, dataset_edits.symbolize_keys, object)
+    ANALYZERS.reduce({}) do |object, analyzer|
+      (ANALYZERS.last == analyzer ? {} : object).merge(analyzer.analyze(dataset, graph, dataset_edits.symbolize_keys, object))
     end
   end
 

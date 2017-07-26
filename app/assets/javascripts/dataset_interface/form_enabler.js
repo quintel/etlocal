@@ -1,4 +1,4 @@
-var FormEnabler = {
+DatasetInterface.FormEnabler = {
     enable: function (attribute) {
         $('form#new_edits')
             .find("input[type='submit']")

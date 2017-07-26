@@ -4,4 +4,4 @@
 - else
   = j render("dataset_edits/form", dataset: @dataset, commit: @commit)
 | ");
-| new DatasetInterface("#{ @dataset.geo_id }").enable();
+| DatasetInterface.enable("#{ @dataset.geo_id }");

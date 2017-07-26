@@ -25,7 +25,7 @@
     .clear
 
     .attributes
-      = form_for [dataset, commit], url: dataset_edits_dataset_commits_path(dataset.geo_id), as: :edits, remote: true do |f|
+      = form_for [dataset, commit], url: dataset_edits_dataset_commits_path(dataset.geo_id), as: :edits, remote: true, html: { data: { calculate_url: dataset_calculate_path(dataset.geo_id) }, class: "dataset_editor" } do |f|
         = f.hidden_field :dataset_id, value: dataset.id
 
         .edits

@@ -14,7 +14,7 @@ var Slider = (function () {
 
         this.input.val(val);
 
-        FormEnabler.enable(this.sliderEl);
+        DatasetInterface.ChangeTrigger.trigger(this.sliderEl);
     }
 
     function showInput() {

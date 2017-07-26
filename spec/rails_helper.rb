@@ -14,17 +14,6 @@ end
 
 ActiveRecord::Migration.maintain_test_schema!
 
-# Analyzer classes that needs a graph stubbed
-ANALYZER_STUBS = [
-  DatasetAnalyzer::ElectricityConsumption,
-  DatasetAnalyzer::GasConsumption,
-  DatasetAnalyzer::Buildings,
-  DatasetAnalyzer::Lighting,
-  DatasetAnalyzer::Cooking,
-  DatasetAnalyzer::Cooling,
-  DatasetAnalyzer::Appliances
-]
-
 RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include FactoryGirl::Syntax::Methods

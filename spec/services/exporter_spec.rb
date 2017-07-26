@@ -26,9 +26,7 @@ describe Exporter do
   before do
     graph = Graph.new("dataset_analyzer_base").build
 
-    ANALYZER_STUBS.each do |analyzer|
-      expect_any_instance_of(analyzer).to receive(:graph).at_least(:once).and_return(graph)
-    end
+    expect_any_instance_of(Atlas::Runner).to receive(:calculate).and_return(graph)
   end
 
   it "exports a dataset" do

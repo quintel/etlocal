@@ -36,19 +36,36 @@ describe DatasetsController do
         before do
           graph = Graph.new("dataset_analyzer_base").build
 
-          ANALYZER_STUBS.each do |analyzer|
-            expect_any_instance_of(analyzer).to receive(:graph).at_least(:once).and_return(graph)
-          end
+          expect_any_instance_of(Atlas::Runner).to receive(:calculate).and_return(graph)
         end
 
-        let!(:create_edits) {
+        let(:commit) {
           FactoryGirl.create(:initial_commit, dataset: dataset)
         }
 
-        it 'and returns a set of initializer inputs' do
-          post :calculate, params: { dataset_area: dataset.geo_id }
+        let(:edits) {
+          commit.dataset_edits.reduce({}) do |object, edit|
+            object[edit.key] = edit.value
+            object
+          end
+        }
 
-          expect(JSON.parse(response.body)).to eq({})
+        it 'and returns a set of initializer inputs' do
+          post :calculate, params: { dataset_area: dataset.geo_id, edits: JSON.dump(edits) }
+
+          expect(JSON.parse(response.body)).to eq({
+            "number_of_cars"=>1.0,
+            "number_of_residences"=>1.0,
+            "number_of_inhabitants"=>1.0,
+            "number_of_new_residences" => 0.99,
+            "number_of_old_residences" => 0.01,
+            "buildings_roof_surface_available_for_pv"=>0,
+            "residences_roof_surface_available_for_pv" => 1.0e-06,
+            "init"=>{
+              "agriculture_useful_demand_electricity"=>0,
+              "industry_useful_demand_for_chemical_aggregated_industry"=>0
+            }
+          })
         end
       end
     end

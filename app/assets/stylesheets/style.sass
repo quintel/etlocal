@@ -244,6 +244,15 @@ div.history, div.information
       text-align: right
 
 .boxes
+  strong[data-key]
+    cursor: pointer
+
+  .box
+    display: none
+
+    &.open
+      display: block
+
   .editable .input
     div.right
       .info

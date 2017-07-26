@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe DatasetAnalyzer::Agriculture do
   let(:dataset)  { Atlas::Dataset::Derived.find(:ameland) }
-  let(:analyzer) { DatasetAnalyzer::Agriculture.new(dataset, edits, {}) }
+  let(:analyzer) { DatasetAnalyzer::Agriculture.new(dataset, nil, edits, {}) }
 
   describe 'has_agriculture default' do
     let(:edits) { { } }

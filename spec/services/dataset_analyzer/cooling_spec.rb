@@ -4,7 +4,7 @@ require 'support/graph'
 describe DatasetAnalyzer::Cooling do
   let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
   let(:analyzer) {
-    DatasetAnalyzer::Cooling.analyze(dataset, {
+    DatasetAnalyzer::Cooling.analyze(dataset, nil, {
       'number_of_residences' => 10,
       'percentage_of_old_residences' => 92.62
     }, households_final_demand_for_cooling_electricity: 1000)

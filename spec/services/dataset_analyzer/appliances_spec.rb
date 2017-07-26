@@ -5,7 +5,7 @@ describe DatasetAnalyzer::Appliances do
   let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
 
   let(:analyzes) {
-    DatasetAnalyzer::Appliances.analyze(dataset, {}, {
+    DatasetAnalyzer::Appliances.analyze(dataset, nil, {}, {
       households_final_demand_for_appliances_electricity: 100
     })
   }

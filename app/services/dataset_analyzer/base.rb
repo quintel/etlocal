@@ -3,19 +3,23 @@ module DatasetAnalyzer
     include DatasetAnalyzer::Assumptions
     include DatasetAnalyzer::Shares
 
-    def self.analyze(dataset, dataset_edits, analyzed_attributes)
-      new(dataset, dataset_edits, analyzed_attributes).analyze
+    def self.analyze(dataset, graph, dataset_edits, analyzed_attributes)
+      new(dataset, graph, dataset_edits, analyzed_attributes).analyze
     end
+
+    attr_reader :graph
 
     # Initializing an analyzer
     #
     # Arguments:
     # - dataset             = Atlas::Dataset
+    # - graph               = Turbine::Graph
     # - dataset_edits       = Hash[key, val]
     # - analyzed_attributes = Hash[key, val]
     #
-    def initialize(dataset, dataset_edits, analyzed_attributes)
+    def initialize(dataset, graph, dataset_edits, analyzed_attributes)
       @dataset             = dataset
+      @graph               = graph
       @dataset_edits       = defaults.merge(dataset_edits)
       @analyzed_attributes = analyzed_attributes
 
@@ -63,10 +67,6 @@ module DatasetAnalyzer
     def number_of_new_residences
       @number_of_new_residences ||=
         (number_of_residences - number_of_old_residences)
-    end
-
-    def graph
-      @graph ||= Atlas::Runner.new(@dataset).calculate
     end
   end
 end

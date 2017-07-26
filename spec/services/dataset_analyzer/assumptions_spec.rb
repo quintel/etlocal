@@ -3,7 +3,7 @@ require 'rails_helper'
 describe DatasetAnalyzer::Assumptions do
   let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
 
-  let(:analyzer) { DatasetAnalyzer::Base.new(dataset, {}, {}) }
+  let(:analyzer) { DatasetAnalyzer::Base.new(dataset, nil, {}, {}) }
 
   it 'asks the efficiency of a converter' do
     expect(analyzer

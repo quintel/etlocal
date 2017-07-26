@@ -4,7 +4,7 @@ require 'support/graph'
 describe DatasetAnalyzer::Lighting do
   let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
   let(:analyzes) {
-    DatasetAnalyzer::Lighting.analyze(dataset, {}, {
+    DatasetAnalyzer::Lighting.analyze(dataset, nil, {}, {
       households_final_demand_for_lighting_electricity: 100
     })
   }

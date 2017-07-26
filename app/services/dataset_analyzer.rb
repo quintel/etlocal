@@ -29,8 +29,10 @@ module DatasetAnalyzer
         "missing attributes #{ missing(dataset_edits).keys.join(', ') } for analyzes"
     end
 
+    graph = Atlas::Runner.new(dataset).calculate
+
     ANALYZERS.each_with_object({}) do |analyzer, object|
-      object.merge! analyzer.analyze(dataset, dataset_edits.symbolize_keys, object)
+      object.merge! analyzer.analyze(dataset, graph, dataset_edits.symbolize_keys, object)
     end
   end
 

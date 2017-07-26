@@ -2,13 +2,14 @@ require 'rails_helper'
 
 describe DatasetAnalyzer::Buildings do
   let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
-  let(:analyzer) { DatasetAnalyzer::Buildings.analyze(dataset, {
+  let(:graph) { Turbine::Graph.new }
+  let(:analyzer) { DatasetAnalyzer::Buildings.analyze(dataset, graph, {
     building_area: 100
   }, {}) }
 
   # Stub graph nodes demand; every node demand = 5.0
   before do
-    expect_any_instance_of(Turbine::Graph).to receive(:node)
+    expect(graph).to receive(:node)
       .at_least(:once)
       .and_return(OpenStruct.new(demand: 5.0))
   end

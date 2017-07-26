@@ -4,13 +4,18 @@ require 'support/graph'
 RSpec.describe DatasetAnalyzer::SpaceHeater do
   let(:dataset) { Atlas::Dataset::Derived.find(:ameland) }
   let(:analyzer) {
-    DatasetAnalyzer::SpaceHeater.analyze(dataset, {
-      'number_of_residences' => 10,
-      'percentage_of_old_residences' => 92.62
-    }, {
-      households_final_demand_for_space_heating_electricity: 100,
-      households_final_demand_for_space_heating_network_gas: 100
-    })
+    DatasetAnalyzer::SpaceHeater.analyze(
+      dataset,
+      nil,
+      {
+        'number_of_residences' => 10,
+        'percentage_of_old_residences' => 92.62
+      },
+      {
+        households_final_demand_for_space_heating_electricity: 100,
+        households_final_demand_for_space_heating_network_gas: 100
+      }
+    )
   }
 
   before do

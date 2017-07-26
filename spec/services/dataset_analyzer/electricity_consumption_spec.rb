@@ -15,6 +15,7 @@ describe DatasetAnalyzer::ElectricityConsumption do
     let(:analyzes) {
       DatasetAnalyzer::ElectricityConsumption.analyze(
         dataset,
+        nil,
         { 'electricity_consumption' => 138.8888888888, 'number_of_residences' => 100 }, {}
       )
     }
@@ -35,6 +36,7 @@ describe DatasetAnalyzer::ElectricityConsumption do
     let(:analyzes) {
       DatasetAnalyzer::ElectricityConsumption.analyze(
         dataset,
+        nil,
         {
           'electricity_consumption' => 138.8888888888,
           'number_of_residences' => 100,

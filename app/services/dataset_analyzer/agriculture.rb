@@ -4,7 +4,7 @@ module DatasetAnalyzer
 
     def analyze
       AGRICULTURE_ANALYZERS.each_with_object({}) do |analyzer, object|
-        object.merge! analyzer.analyze(@dataset, @dataset_edits, @analyzed_attributes)
+        object.merge! analyzer.analyze(@dataset, graph, @dataset_edits, @analyzed_attributes)
       end
     end
   end

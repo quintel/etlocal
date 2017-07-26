@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe DatasetAnalyzer::Industry do
   let(:dataset)  { Atlas::Dataset::Derived.find(:ameland) }
-  let(:analyzer) { DatasetAnalyzer::Industry.new(dataset, edits, {}) }
+  let(:analyzer) { DatasetAnalyzer::Industry.new(dataset, nil, edits, {}) }
 
   describe 'has_industry default' do
     let(:edits) { { } }

@@ -17,10 +17,12 @@ number_of_inhabitants:
 number_of_cars:
   unit: ''
   group: transport
+  mandatory: true
 
 number_of_residences:
   unit: ''
   group: households
+  mandatory: true
 
 number_of_residences_with_solar_pv:
   unit: ''

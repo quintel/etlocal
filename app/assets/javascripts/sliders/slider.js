@@ -13,7 +13,6 @@ var Slider = (function () {
         setVal.call(this, val);
 
         this.input.val(val);
-
         DatasetInterface.ChangeTrigger.trigger(this.sliderEl);
     }
 

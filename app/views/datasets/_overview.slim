@@ -2,17 +2,14 @@
   strong= @error
 
 - else
-  .boxes
+  .boxes.previous data-analyzes= JSON.dump(@analyzes)
     strong data-key='overview-edits' Overview edits
     .box.overview-edits.open
-      .edits
-        | No edits have been made
-
       .apply
         = submit_tag "Apply"
 
     strong data-key='other-values' Other values
-    .box.other-values
+    .box.other-values.open
       .edits
         - @analyzes[:init].each_pair do |key, val|
           .editable

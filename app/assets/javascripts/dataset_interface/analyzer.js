@@ -20,17 +20,28 @@ DatasetInterface.Analyzer = (function () {
     }
 
     return {
+        isRunning: false,
         analyze: function () {
-            var form = $("form.dataset_editor");
+            var form = $("form.dataset_editor"),
+                previousAnalyzes = $(".boxes.previous").data('analyzes');
 
-            $.ajax({
-                url: form.data('calculateUrl'),
-                type: "POST",
-                data: {
-                    previous: {},
-                    edits: formAttributesToJSON(form)
-                },
-            });
+            if (!this.isRunning) {
+                this.isRunning = true;
+
+                $.ajax({
+                    url: form.data('calculateUrl'),
+                    type: "POST",
+                    data: {
+                        calculate: {
+                            previous_analyzes: previousAnalyzes,
+                            edits: formAttributesToJSON(form)
+                        }
+                    },
+                    success: function () {
+                        this.isRunning = false;
+                    }.bind(this)
+                });
+            }
         }
     }
 }());

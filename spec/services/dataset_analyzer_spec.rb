@@ -69,7 +69,7 @@ describe DatasetAnalyzer do
       it 'flows through to the end' do
         analyzer = DatasetAnalyzer.analyze(dataset, inputs_with_initializers)
 
-        expect(analyzer.fetch(:industry_useful_demand_for_chemical_aggregated_industry)).to eq(5.0)
+        expect(analyzer.fetch(:init).fetch(:industry_useful_demand_for_chemical_aggregated_industry)).to eq(5.0)
       end
     end
   end

@@ -25,10 +25,12 @@ describe DatasetsController do
 
       describe "faulty" do
         it 'and gives a json error' do
-          post :calculate, params: { dataset_area: dataset.geo_id }
+          post :calculate, params: {
+            dataset_area: dataset.geo_id,
+            calculate: { edits: JSON.dump({ test: 1 }) }
+          }, format: :js
 
-          expect(JSON.parse(response.body)).to eq({
-            "error" => "missing attributes electricity_consumption, gas_consumption, number_of_residences_with_solar_pv, percentage_of_old_residences, roof_surface_available_for_pv, building_area for analyzes"})
+          expect(controller.instance_variable_get(:"@error").message).to include("missing attributes")
         end
       end
 
@@ -51,19 +53,22 @@ describe DatasetsController do
         }
 
         it 'and returns a set of initializer inputs' do
-          post :calculate, params: { dataset_area: dataset.geo_id, edits: JSON.dump(edits) }
+          post :calculate, params: {
+            dataset_area: dataset.geo_id,
+            calculate: { edits: JSON.dump(edits) },
+          }, format: 'js'
 
-          expect(JSON.parse(response.body)).to eq({
-            "number_of_cars"=>1.0,
-            "number_of_residences"=>1.0,
-            "number_of_inhabitants"=>1.0,
-            "number_of_new_residences" => 0.99,
-            "number_of_old_residences" => 0.01,
-            "buildings_roof_surface_available_for_pv"=>0,
-            "residences_roof_surface_available_for_pv" => 1.0e-06,
-            "init"=>{
-              "agriculture_useful_demand_electricity"=>0,
-              "industry_useful_demand_for_chemical_aggregated_industry"=>0
+          expect(controller.instance_variable_get(:"@analyzes")).to eq({
+            number_of_cars: 1.0,
+            number_of_residences: 1.0,
+            number_of_inhabitants: 1.0,
+            number_of_new_residences: 0.99,
+            number_of_old_residences: 0.01,
+            buildings_roof_surface_available_for_pv: 0,
+            residences_roof_surface_available_for_pv: 1.0e-06,
+            init: {
+              agriculture_useful_demand_electricity: 0,
+              industry_useful_demand_for_chemical_aggregated_industry: 0
             }
           })
         end

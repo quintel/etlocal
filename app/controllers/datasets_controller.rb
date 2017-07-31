@@ -27,6 +27,10 @@ class DatasetsController < ApplicationController
   private
 
   def params_for_calculation
-    JSON.parse(params.permit(:edits).fetch(:edits))
+    JSON.parse(permitted_params.fetch(:edits))
+  end
+
+  def permitted_params
+    params.require(:calculate).permit(:edits, :previous_analyzes)
   end
 end

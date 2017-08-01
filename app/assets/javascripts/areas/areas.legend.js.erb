@@ -8,8 +8,8 @@ Areas.Legend = (function () {
     }
 
     function drawStaticLegend() {
-        var img = "/assets/" + this.data.chart_type + ".png",
-            imgTag = $("<img/>").attr("src", img);
+        var img = "assets/" + this.data.chart_type + ".png",
+            imgTag = $("<img/>").attr("src", "<%= asset_path('" + img + "') %>");
 
         this.scope.html(imgTag);
     }

@@ -12,6 +12,7 @@ module DatasetAnalyzer
     Transport,
     Buildings,
     Industry,
+    Agriculture,
     EnergySector,
     NullAttributes,
     ToAtlasAttribute

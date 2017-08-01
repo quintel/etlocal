@@ -58,19 +58,7 @@ describe DatasetsController do
             calculate: { edits: JSON.dump(edits) },
           }, format: 'js'
 
-          expect(controller.instance_variable_get(:"@analyzes")).to eq({
-            number_of_cars: 1.0,
-            number_of_residences: 1.0,
-            number_of_inhabitants: 1.0,
-            number_of_new_residences: 0.99,
-            number_of_old_residences: 0.01,
-            buildings_roof_surface_available_for_pv: 0,
-            residences_roof_surface_available_for_pv: 1.0e-06,
-            init: {
-              agriculture_useful_demand_electricity: 0,
-              industry_useful_demand_for_chemical_aggregated_industry: 0
-            }
-          })
+          expect(response).to be_success
         end
       end
     end

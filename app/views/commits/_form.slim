@@ -60,9 +60,9 @@
               = render partial: "datasets/attribute", collection: dataset.editable_attributes.grouped['agriculture_grouped'], locals: { form: f, commit: commit, dataset: dataset }
 
           .group.tab data-tab= "#overview"
-            .boxes.previous
+            .overview
               strong data-key='overview-edits' Overview edits
-              .box.overview-edits.open
+              .overview-edits
                 .apply
                   = button_tag class: 'button run_analyzes', type: 'button' do
                     | Run analyzes
@@ -71,6 +71,6 @@
                     | or
                   = f.submit "Apply edits"
 
-              .box.analyzes.open
+              .analyzes
 
   .clear

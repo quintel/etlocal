@@ -3,6 +3,12 @@ class Input
     Etsource.inputs
   end
 
+  def self.find_all(keys)
+    all.select do |input|
+      keys.include?(input.key)
+    end
+  end
+
   def initialize(atlas_input)
     @atlas_input = atlas_input
   end

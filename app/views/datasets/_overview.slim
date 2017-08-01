@@ -2,29 +2,16 @@
   strong= @error
 
 - else
-  .edits
-    - @analyzes[:init].each_pair do |key, val|
-      .editable
-        .border
-        .input
-          .left
-            span.key= key
+  .boxes.edits
+    strong data-key='area_attributes' Area attributes
+    .box.area_attributes.open
+      = render partial: 'datasets/editable', collection: @analyzes.area_attributes
 
-          .right
-            span.info data-key= key
-              i.fa.fa-info
-            span.val
-              = val
-            span.unit
-              = unit_for(key)
+    strong Initializer inputs
+    - @analyzes.initializer_inputs.each_pair do |group, inputs|
+      div.group
+        i data-key=group
+          = I18n.t("initializer_inputs.groups.#{ group }")
 
-          .clear
-
-      .information.hidden class= key
-        .line-arrow
-        strong Test
-        .change
-          .content
-            | The share of cooling that will go to airconditioning is 40%, this number is based on the
-            |  electricity demand which is set to 1000kWh, the share of x, the share of y, which results in
-            |  1000kWh * x * y = 40%.
+      .box.open class=group
+        = render partial: 'datasets/editable', collection: inputs

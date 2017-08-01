@@ -1,0 +1,25 @@
+.editable
+  .border
+  .input
+    .left
+      span.key= editable[0]
+
+    .right
+      span.info data-key= editable[0]
+        i.fa.fa-info
+      span.val
+        = editable[1]
+      span.unit
+        = unit_for(editable[0])
+
+    .clear
+
+.information.hidden class= editable[0]
+
+  .line-arrow
+  strong Test
+  .change
+    .content
+      | The share of cooling that will go to airconditioning is 40%, this number is based on the
+      |  electricity demand which is set to 1000kWh, the share of x, the share of y, which results in
+      |  1000kWh * x * y = 40%.

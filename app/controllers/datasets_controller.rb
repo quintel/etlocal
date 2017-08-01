@@ -12,7 +12,9 @@ class DatasetsController < ApplicationController
     @atlas_dataset = Atlas::Dataset.find(@dataset.country)
 
     begin
-      @analyzes = DatasetAnalyzer.analyze(@atlas_dataset, params_for_calculation)
+      @analyzes = AnalyzesDecorator.decorate(
+        DatasetAnalyzer.analyze(@atlas_dataset, params_for_calculation)
+      )
     rescue ArgumentError => error
       @error = error
     end

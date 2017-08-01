@@ -243,13 +243,15 @@ div.history, div.information
       margin-top: 10px
       text-align: right
 
-.boxes
-  strong[data-key]
+.overview
+  strong[data-key], i[data-key]
     cursor: pointer
 
-  .box
-    display: none
+  i[data-key]
+    margin-bottom: 20px
+    display: block
 
+  .overview-edits
     .apply
       margin: 20px 0
 
@@ -261,9 +263,6 @@ div.history, div.information
           width: 23px
           right: 5px
           top: 5px
-
-    &.open
-      display: block
 
   .editable .input
     div.right
@@ -279,6 +278,12 @@ div.history, div.information
       right: 27px
     div.change
       padding-top: 0
+
+.boxes
+  .box
+    display: none
+    &.open
+      display: block
 
 #dataset-overlay
   .errors .error

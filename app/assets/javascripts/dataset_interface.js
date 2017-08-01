@@ -50,9 +50,11 @@ var DatasetInterface = (function () {
     }
 
     function addClickListenerToBoxes() {
-        $(".boxes strong[data-key]").off("click").on("click", function () {
-            $(".box." + $(this).data('key')).toggleClass("open");
-        });
+        $(".boxes strong[data-key], .boxes i[data-key]")
+            .off("click")
+            .on("click", function () {
+                $(".box." + $(this).data('key')).toggleClass("open");
+            });
     }
 
     return {

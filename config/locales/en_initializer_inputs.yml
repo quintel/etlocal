@@ -1,0 +1,22 @@
+en:
+  initializer_inputs:
+    groups:
+      agriculture: Agriculture
+      buildings_misc: Buildings
+      households_cooking: Households cooking
+      households_cooling: Households cooling
+      households_demand: Households demand
+      households_district_heating: Households district heating
+      households_heating: Households heating
+      households_hot_water: Households hot water
+      households_lighting: Households lighting
+      households_misc: Households misc
+      industry: Industry
+      number_of: Number of
+      other: Other
+      supply: Supply
+      transport_car: Transport car
+      transport_marine: Transport marine
+      transport_plane: Transport plane
+      transport_train: Transport train
+      transport_truck: Transport truck

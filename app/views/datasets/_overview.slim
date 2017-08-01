@@ -2,37 +2,29 @@
   strong= @error
 
 - else
-  .boxes.previous data-analyzes= JSON.dump(@analyzes)
-    strong data-key='overview-edits' Overview edits
-    .box.overview-edits.open
-      .apply
-        = submit_tag "Apply"
+  .edits
+    - @analyzes[:init].each_pair do |key, val|
+      .editable
+        .border
+        .input
+          .left
+            span.key= key
 
-    strong data-key='other-values' Other values
-    .box.other-values.open
-      .edits
-        - @analyzes[:init].each_pair do |key, val|
-          .editable
-            .border
-            .input
-              .left
-                span.key= key
+          .right
+            span.info data-key= key
+              i.fa.fa-info
+            span.val
+              = val
+            span.unit
+              = unit_for(key)
 
-              .right
-                span.info data-key= key
-                  i.fa.fa-info
-                span.val
-                  = val
-                span.unit
-                  = unit_for(key)
+          .clear
 
-              .clear
-
-          .information.hidden class= key
-            .line-arrow
-            strong Test
-            .change
-              .content
-                | The share of cooling that will go to airconditioning is 40%, this number is based on the
-                |  electricity demand which is set to 1000kWh, the share of x, the share of y, which results in
-                |  1000kWh * x * y = 40%.
+      .information.hidden class= key
+        .line-arrow
+        strong Test
+        .change
+          .content
+            | The share of cooling that will go to airconditioning is 40%, this number is based on the
+            |  electricity demand which is set to 1000kWh, the share of x, the share of y, which results in
+            |  1000kWh * x * y = 40%.

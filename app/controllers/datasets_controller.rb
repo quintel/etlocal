@@ -31,6 +31,6 @@ class DatasetsController < ApplicationController
   end
 
   def permitted_params
-    params.require(:calculate).permit(:edits, :previous_analyzes)
+    params.require(:calculate).permit(:edits)
   end
 end

@@ -41,6 +41,14 @@ var DatasetInterface = (function () {
         });
     }
 
+    function addClickListenerToAnalyzesButton() {
+        $(".apply button.run_analyzes").off("click").on("click", function (e) {
+            e.preventDefault();
+
+            DatasetInterface.Analyzer.analyze(this);
+        });
+    }
+
     function addClickListenerToBoxes() {
         $(".boxes strong[data-key]").off("click").on("click", function () {
             $(".box." + $(this).data('key')).toggleClass("open");
@@ -61,6 +69,7 @@ var DatasetInterface = (function () {
             addChangeListenerToInputs.call(this);
             addClickListenerToToggles.call(this);
             addClickListenerToBoxes.call(this);
+            addClickListenerToAnalyzesButton.call(this);
             addClickListenerToHistory.call(this);
             addClickListenerToInfo.call(this);
         }

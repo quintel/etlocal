@@ -21,9 +21,12 @@ DatasetInterface.Analyzer = (function () {
 
     return {
         isRunning: false,
-        analyze: function () {
-            var form = $("form.dataset_editor"),
-                previousAnalyzes = $(".boxes.previous").data('analyzes');
+        analyze: function (el) {
+            var form = $("form.dataset_editor");
+
+            $(el).prop('disabled', true)
+                .find("img")
+                .show();
 
             if (!this.isRunning) {
                 this.isRunning = true;
@@ -33,11 +36,14 @@ DatasetInterface.Analyzer = (function () {
                     type: "POST",
                     data: {
                         calculate: {
-                            previous_analyzes: previousAnalyzes,
                             edits: formAttributesToJSON(form)
                         }
                     },
                     success: function () {
+                        $(el).prop('disabled', false)
+                            .find("img")
+                            .hide();
+
                         this.isRunning = false;
                     }.bind(this)
                 });

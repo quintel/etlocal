@@ -33,8 +33,12 @@ class EditableAttribute
   end
 
   def default
-    if is_atlas_attribute?
+    return unless is_atlas_attribute?
+
+    if @dataset.atlas_dataset
       @dataset.atlas_dataset.public_send(@key)
+    else
+      Dataset.defaults.fetch(@key)
     end
   end
 
@@ -47,7 +51,8 @@ class EditableAttribute
   private
 
   def is_atlas_attribute?
-    @dataset.atlas_dataset &&
-      @dataset.atlas_dataset.attributes.keys.include?(@key.to_sym)
+    Atlas::Dataset.attribute_set
+      .map(&:name)
+      .include?(@key.to_sym)
   end
 end

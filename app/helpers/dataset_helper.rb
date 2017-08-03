@@ -24,4 +24,7 @@ module DatasetHelper
   def toggle_value_for(dataset, key)
     dataset.editable_attributes.find(key).value
   end
+
+  def enabled_for_group?(group, analyzes)
+  end
 end

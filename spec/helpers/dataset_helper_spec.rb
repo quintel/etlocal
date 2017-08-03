@@ -5,7 +5,7 @@ describe DatasetHelper, type: :helper do
     describe 'with existing ETsource dataset' do
       let(:dataset) { FactoryGirl.create(:dataset) }
 
-      it 'has_industry = false' do
+      it 'has_industry = true' do
         expect(helper.toggle_value_for(dataset, 'has_industry')).to be true
       end
     end

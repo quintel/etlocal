@@ -18,7 +18,9 @@ describe Exporter do
         'percentage_of_old_residences' => 10,
         'building_area' => 20,
         'electricity_consumption_buildings' => 1,
-        'gas_consumption_buildings' => 1
+        'gas_consumption_buildings' => 1,
+        'has_industry' => true,
+        'has_agriculture' => true
       }))
   }
 

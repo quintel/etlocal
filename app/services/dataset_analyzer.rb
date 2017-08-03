@@ -22,7 +22,7 @@ module DatasetAnalyzer
   # inputs and a set of values needed to create a dataset.
   #
   # Arguments:
-  # - dataset       = Atlas::Dataset::Derived
+  # - dataset       = Atlas::Dataset
   # - dataset_edits = Hash[<key> => Float]
   #
   def self.analyze(dataset, dataset_edits)

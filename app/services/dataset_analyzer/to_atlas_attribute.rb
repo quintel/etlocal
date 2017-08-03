@@ -20,7 +20,9 @@ module DatasetAnalyzer
         number_of_residences: number_of_residences,
         number_of_inhabitants: number_of_inhabitants,
         number_of_old_residences: number_of_old_residences,
-        number_of_new_residences: number_of_new_residences
+        number_of_new_residences: number_of_new_residences,
+        has_industry: @dataset_edits.fetch(:has_industry),
+        has_agriculture: @dataset_edits.fetch(:has_agriculture)
       }
     end
 

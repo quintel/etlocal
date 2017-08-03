@@ -18,7 +18,7 @@
         ul.sub-nav id='initializer_inputs'
           - @analyzes.initializer_inputs.each_pair do |group, _|
             li.tab
-              = link_to I18n.t("initializer_inputs.groups.#{ group }"), "##{ group }", data: { group: group }
+              = link_to I18n.t("initializer_inputs.groups.#{ group }"), "##{ group }", data: { group: group }, class: enabled_for_group?(group, @analyzes)
 
   .attributes data-tab-key='overview'
     .group.tab data-tab="#area_attributes"

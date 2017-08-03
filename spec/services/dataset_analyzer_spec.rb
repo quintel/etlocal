@@ -23,7 +23,7 @@ describe DatasetAnalyzer do
           "roof_surface_available_for_pv" => 5.0,
           "number_of_cars" => 5.0,
           "number_of_residences" => 5.0,
-          "number_of_inhabitants" => "test"
+          "number_of_inhabitants" => "test" # <---
         })
       }.to raise_error(ArgumentError)
     end
@@ -58,7 +58,28 @@ describe DatasetAnalyzer do
       end
     end
 
-    describe "direct initializer inputs should be accepeted" do
+    describe "has industry -> false" do
+      let(:inputs_with_initializers) {
+        inputs.merge(
+          'has_industry' => false,
+          'industry_useful_demand_for_chemical_aggregated_industry' => 5.0
+        )
+      }
+
+      let(:analyzer) {
+        DatasetAnalyzer.analyze(dataset, inputs_with_initializers)
+      }
+
+      it 'sets has industry to false' do
+        expect(analyzer.fetch(:has_industry)).to eq(false)
+      end
+
+      it 'flows through to the end' do
+        expect(analyzer.fetch(:init).fetch(:industry_useful_demand_for_chemical_aggregated_industry)).to eq(0.0)
+      end
+    end
+
+    describe "has industry -> true" do
       let(:inputs_with_initializers) {
         inputs.merge(
           'has_industry' => true,
@@ -66,9 +87,15 @@ describe DatasetAnalyzer do
         )
       }
 
-      it 'flows through to the end' do
-        analyzer = DatasetAnalyzer.analyze(dataset, inputs_with_initializers)
+      let(:analyzer) {
+        DatasetAnalyzer.analyze(dataset, inputs_with_initializers)
+      }
 
+      it 'sets has industry to true' do
+        expect(analyzer.fetch(:has_industry)).to eq(true)
+      end
+
+      it 'flows through to the end' do
         expect(analyzer.fetch(:init).fetch(:industry_useful_demand_for_chemical_aggregated_industry)).to eq(5.0)
       end
     end

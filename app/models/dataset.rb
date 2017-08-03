@@ -4,6 +4,10 @@ class Dataset < ApplicationRecord
   has_many :commits
   has_many :edits, through: :commits, source: :dataset_edits
 
+  def self.defaults
+    { has_industry: false, has_agriculture: false }
+  end
+
   def group
     if geo_id =~ /^GM/
       'municipalities'

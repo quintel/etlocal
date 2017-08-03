@@ -39,7 +39,7 @@ module DatasetAnalyzer
     private
 
     def defaults
-      { 'has_industry' => false, 'has_agriculture' => false }
+      Dataset.defaults
     end
 
     def ratio_houses

@@ -49,28 +49,20 @@ var DatasetInterface = (function () {
         });
     }
 
-    function addClickListenerToBoxes() {
-        $(".boxes strong[data-key], .boxes i[data-key]")
-            .off("click")
-            .on("click", function () {
-                $(".box." + $(this).data('key')).toggleClass("open");
-            });
-    }
-
     return {
         enable: function (geoId) {
             var sliderGroupCollection = new SliderGroupCollection(),
                 localSettings = new LocalSettings(geoId);
 
+            new Tab($("div.tab-nav")).enable();
+
             this.tab = new Tab(
-                $(".nav"),
-                localSettings,
+                $(".nav#input-nav"),
                 sliderGroupCollection.render.bind(sliderGroupCollection)
             ).enable();
 
             addChangeListenerToInputs.call(this);
             addClickListenerToToggles.call(this);
-            addClickListenerToBoxes.call(this);
             addClickListenerToAnalyzesButton.call(this);
             addClickListenerToHistory.call(this);
             addClickListenerToInfo.call(this);

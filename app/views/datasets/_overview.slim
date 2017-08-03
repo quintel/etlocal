@@ -2,16 +2,30 @@
   strong= @error
 
 - else
-  .boxes.edits
-    strong data-key='area_attributes' Area attributes
-    .box.area_attributes.open
+  .nav#overview-nav data-key='overview'
+    ul.tab-nav
+      li.tab
+        = link_to "Area attributes", "#area_attributes", data: { group: 'area_attributes' }
+      li.tab
+        = link_to "Initializer inputs", "#initializer_inputs", data: { group: 'initializer_inputs' }
+        ul.sub-nav id='initializer_inputs'
+          - @analyzes.initializer_inputs.each_pair do |group, _|
+            li.tab
+              = link_to I18n.t("initializer_inputs.groups.#{ group }"), "##{ group }", data: { group: group }
+
+  .attributes data-tab-key='overview'
+    .group.tab data-tab="#area_attributes"
+      strong Area attributes
       = render partial: 'datasets/editable', collection: @analyzes.area_attributes
 
-    strong Initializer inputs
+    .group.tab data-tab="#initializer_inputs"
+      strong Initializer inputs
+
     - @analyzes.initializer_inputs.each_pair do |group, inputs|
-      div.group
-        i data-key=group
+      .group.tab data-tab= "##{ group }"
+        strong
           = I18n.t("initializer_inputs.groups.#{ group }")
 
-      .box.open class=group
         = render partial: 'datasets/editable', collection: inputs
+
+  .clear

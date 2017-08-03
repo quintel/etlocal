@@ -4,58 +4,53 @@ var Tab = (function () {
     function clickToggleTab (e) {
         e.preventDefault();
 
-        var current = $(e.target).attr("href");
-
-        this.localSettings.set("current", current);
-        this.toggleTab(current);
+        this.toggleTab(e);
     }
 
-    function openSubmenu (e) {
-        $("ul.sub-nav" + $(e.target).attr('href')).addClass("active");
-    }
+    function deactivateMenuItems() {
+        var tabScope = this.tabScope;
 
-    function closeSubmenu (e) {
-        $("ul.sub-nav").removeClass("active");
+        this.menuItems.each(function () {
+            tabScope
+                .find("div.tab[data-tab='" + $(this).attr('href') + "']")
+                .add($(this))
+                .removeClass('active');
+        });
     }
 
     Tab.prototype = {
-        toggleTab: function (current) {
-            var currentLink = this.menuItems.filter(function () {
-                return $(this).attr("href") === current;
-            });
+        toggleTab: function (e) {
+            var target  = $(e.target),
+                current = target.attr("href");
 
-            $("div.tab, ul.sub-nav")
-                .add(this.listItems)
-                .removeClass("active");
+            deactivateMenuItems.call(this);
 
-            $("div.tab[data-tab='" + current + "']")
-                .add(currentLink.parent())
+            this.tabScope.find("div.tab[data-tab='" + current + "']")
+                .add(target)
                 .addClass("active");
+
+            if (target.parents("ul.sub-nav").length < 1) {
+                $(this.nav).find("ul.sub-nav").removeClass("active");
+            }
+
+            $(this.nav).find("ul.sub-nav" + current).addClass("active");
 
             this.toggleCallback(current);
         },
 
         enable: function () {
-            var currentDefault = this.menuItems.first().attr("href");
+            var currentDefault = this.menuItems.first();
 
-            this.toggleTab(
-                this.localSettings.get("current") || currentDefault);
-
+            this.toggleTab({ target: currentDefault });
             this.menuItems.on("click", clickToggleTab.bind(this));
-
-            $(this.nav).find("ul.tab-nav li > a")
-                .on("mouseover", openSubmenu.bind(this));
-
-            $(this.nav).find("ul.sub-nav")
-                .on("mouseleave", closeSubmenu.bind(this));
         }
     };
 
-    function Tab(nav, localSettings, toggleCallback) {
+    function Tab(nav, toggleCallback) {
         this.nav            = nav;
-        this.listItems      = $(this.nav).find("li");
-        this.menuItems      = $(this.nav).find("li a");
-        this.localSettings  = localSettings;
+        this.key            = $(this.nav).data('key');
+        this.tabScope       = $("div[data-tab-key='" + this.key + "']");
+        this.menuItems      = $(this.nav).find("a");
         this.toggleCallback = toggleCallback || function () { return; };
     }
 

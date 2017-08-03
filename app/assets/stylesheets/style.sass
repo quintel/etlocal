@@ -3,9 +3,6 @@
 body
   background-color: $bg-color
 
-  .flash
-    margin-top: 10px
-
   .hidden
     display: none
 
@@ -76,8 +73,14 @@ table tbody tr td a.button
     .legend
       float: right
 
+.edit-form
+  .attributes
+    float: none
+
 .attributes
-  padding: 7px 0
+  padding: 0 15px 30px 25px
+  float: left
+  width: 675px
 
   form
     margin: 0
@@ -104,7 +107,7 @@ table tbody tr td a.button
         display: inline-block
 
       .title
-        width: 332px
+        width: 260px
 
       .history
         margin-right: 5px
@@ -124,9 +127,6 @@ table tbody tr td a.button
     text-decoration: none
     display: block
     padding: 10px 0
-
-    &.slider:first-child
-      margin-top: 3px
 
     .border
       width: 100%
@@ -211,7 +211,7 @@ div.history, div.information
     border-top: 1px solid #ccc
     border-left: 1px solid #ccc
     transform: rotate(48deg) skew(5deg)
-    right: 198px
+    right: 191px
     background-color: #eee
 
   .change
@@ -243,6 +243,26 @@ div.history, div.information
       margin-top: 10px
       text-align: right
 
+.slider-group
+  div.history
+    margin-top: 0
+    margin-bottom: 0
+    .line-arrow
+      right: 135px
+
+.overview-edits
+  position: absolute
+  bottom: 0
+
+  .apply button.run_analyzes
+    position: relative
+    img
+      display: none
+      position: absolute
+      width: 23px
+      right: 5px
+      top: 5px
+
 .overview
   strong[data-key], i[data-key]
     cursor: pointer
@@ -250,19 +270,6 @@ div.history, div.information
   i[data-key]
     margin-bottom: 20px
     display: block
-
-  .overview-edits
-    .apply
-      margin: 20px 0
-
-      button.run_analyzes
-        position: relative
-        img
-          display: none
-          position: absolute
-          width: 23px
-          right: 5px
-          top: 5px
 
   .editable .input
     div.right
@@ -284,23 +291,6 @@ div.history, div.information
     display: none
     &.open
       display: block
-
-#dataset-overlay
-  .errors .error
-    margin-bottom: 10px
-    background-color: $error-color
-    border-color: darken($error-color, 20)
-    padding: 5px 10px
-
-  .edit-form
-    form
-      textarea#change_message
-        width: 98%
-        height: 200px
-
-      .field
-        span.unit
-          margin-left: 5px
 
 .dataset
   border: 1px solid $border-color
@@ -353,28 +343,29 @@ div.history, div.information
   .success
     background-color: $success-color
     border: 1px solid darken($success-color, 20)
+    margin-bottom: 10px
 
   .error
     background-color: $error-color
     border: 1px solid darken($error-color, 20)
+    margin-bottom: 10px
 
 ul.tab-nav
   display: block
   margin-bottom: 0
   position: relative
+  float: left
+  width: 230px
 
   li.tab
-    display: inline-block
     list-style-type: none
     margin-bottom: -1px
     vertical-align: top
-    border-bottom: 1px solid darken($border-color, 20)
+    border: 1px solid darken($border-color, 20)
 
     ul.sub-nav
       display: none
       margin: 0
-      position: absolute
-      left: 0
 
       &.active
         display: block
@@ -382,13 +373,9 @@ ul.tab-nav
       li.tab
         background-color: #e7e7e7
 
-    &.active
-      border-bottom: none
-
-      > a
-        border: 1px solid darken($border-color, 20)
-        border-bottom: 1px solid #fff
-        margin-top: -1px
+    a.active
+      border-right: 2px solid darken($border-color, 20)
+      margin-top: -1px
 
     a
       text-decoration: none
@@ -401,7 +388,10 @@ ul.tab-nav
 
 div.tab
   display: none
-  padding: 30px 13px 0 0
+  padding: 15px 13px 30px 0
+
+  &.slider-group
+    padding-top: 0px
 
   &.active
     display: block

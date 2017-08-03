@@ -10,22 +10,22 @@
 
 .edit-form
   .content
-    | You changed the following attributes:
-
-    - @filter.changed_edits.each do |edit|
-      .edit
-        span.key>
-          = I18n.t("activerecord.attributes.dataset_edit.#{ edit.key }", default: edit.key.humanize)
-
-        span.to> to
-        span.val
-          = edit.parsed_value
-
-        span.unit
-          - unless edit.unit == 'bool'
-            = edit.unit
-
     .attributes
+      | You changed the following attributes:
+
+      - @filter.changed_edits.each do |edit|
+        .edit
+          span.key>
+            = I18n.t("activerecord.attributes.dataset_edit.#{ edit.key }", default: edit.key.humanize)
+
+          span.to> to
+          span.val
+            = edit.parsed_value
+
+          span.unit
+            - unless edit.unit == 'bool'
+              = edit.unit
+
       = form_for [dataset, commit], as: :change, url: dataset_commits_path(dataset.geo_id), remote: true do |form|
         = form.hidden_field :dataset_id, value: dataset.id
         = form.fields_for(:dataset_edits) do |d|

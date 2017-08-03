@@ -49,12 +49,29 @@ var DatasetInterface = (function () {
         });
     }
 
+    function addClickToBackButton() {
+        $(".overview .buttons button.back")
+            .off("click").on("click", function (e) {
+                e.preventDefault();
+
+                $(".content.tab#overview").hide();
+                $(".content.tab#input").show();
+            });
+    }
+
     return {
+        enableAnalyzesTab: function () {
+            new Tab($(".nav#overview-nav")).enable();
+
+            $(".content.tab#overview").show();
+            $(".content.tab#input").hide();
+
+            addClickToBackButton.call(this);
+        },
+
         enable: function (geoId) {
             var sliderGroupCollection = new SliderGroupCollection(),
                 localSettings = new LocalSettings(geoId);
-
-            new Tab($("div.tab-nav")).enable();
 
             this.tab = new Tab(
                 $(".nav#input-nav"),

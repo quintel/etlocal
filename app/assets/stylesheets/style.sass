@@ -82,6 +82,10 @@ table tbody tr td a.button
   float: left
   width: 675px
 
+  &.errors
+    padding-bottom: 0
+    width: auto
+
   form
     margin: 0
 
@@ -251,11 +255,9 @@ div.history, div.information
       right: 135px
 
 .overview-edits
-  position: absolute
-  bottom: 0
-
   .apply button.run_analyzes
     position: relative
+    float: right
     img
       display: none
       position: absolute
@@ -389,6 +391,10 @@ ul.tab-nav
 div.tab
   display: none
   padding: 15px 13px 30px 0
+
+  .overview > .analyzes > .error
+    padding-left: 13px
+    margin-left: 13px
 
   &.slider-group
     padding-top: 0px

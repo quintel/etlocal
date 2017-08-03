@@ -1,5 +1,12 @@
 - if @error
-  strong= @error
+  .attributes.errors
+    .error.notice
+      strong= @error
+
+    .buttons
+      = button_tag "Back to edits", type: 'button', class: "back"
+
+  .clear
 
 - else
   .nav#overview-nav data-key='overview'
@@ -27,5 +34,8 @@
           = I18n.t("initializer_inputs.groups.#{ group }")
 
         = render partial: 'datasets/editable', collection: inputs
+
+    .buttons
+      = button_tag "Back to edits", type: 'button', class: "back"
 
   .clear

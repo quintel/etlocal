@@ -8,7 +8,10 @@
       span.info data-key= editable[0]
         i.fa.fa-info
       span.val
-        = editable[1]
+        - if editable[1].is_a?(Float)
+          = editable[1].round(2)
+        - else
+          = editable[1]
       span.unit
         = unit_for(editable[0])
 

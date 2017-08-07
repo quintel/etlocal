@@ -38,7 +38,7 @@ class EditableAttribute
     if @dataset.atlas_dataset
       @dataset.atlas_dataset.public_send(@key)
     else
-      Dataset.defaults.fetch(@key)
+      Dataset.defaults.fetch(@key.to_sym)
     end
   end
 

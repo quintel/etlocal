@@ -25,6 +25,7 @@ module DatasetHelper
     dataset.editable_attributes.find(key).value
   end
 
-  def enabled_for_group?(group, analyzes)
+  def download_button_disabled?(dataset)
+    !Transformer::AttributeValidator.new(dataset.editable_attributes.as_json).valid?
   end
 end

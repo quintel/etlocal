@@ -26,21 +26,17 @@ module DatasetAnalyzer
   # - dataset_edits = Hash[<key> => Float]
   #
   def self.analyze(dataset, dataset_edits)
-    if missing(dataset_edits).any?
+    validator = AttributeValidator.new(dataset_edits)
+
+    unless validator.valid?
       raise ArgumentError,
-        "missing attributes #{ missing(dataset_edits).keys.join(', ') } for analyzes"
+        "missing attributes #{ validator.message } for analyzes"
     end
 
     graph = Atlas::Runner.new(dataset).calculate
 
     ANALYZERS.reduce({}) do |object, analyzer|
       (ANALYZERS.last == analyzer ? {} : object).merge(analyzer.analyze(dataset, graph, dataset_edits.symbolize_keys, object))
-    end
-  end
-
-  def self.missing(edits)
-    Dataset::EDITABLE_ATTRIBUTES.select do |key, opts|
-      opts['mandatory'] && edits[key].blank?
     end
   end
 end

@@ -1,4 +1,15 @@
 @import 'variables'
+@import 'css3-mixins'
+
+@mixin disabled
+  &[disabled]
+    background-color: darken($bg-color, 5)
+    color: #aaa
+    cursor: default
+
+    &:hover
+      border-color: #bbb
+      color: #aaa
 
 body
   background-color: $bg-color
@@ -29,26 +40,15 @@ h1 a
 
 // Form styling
 .button, input[type=submit]
+  @include disabled
   &.cancel
     background-color: $error-color
     border-color: darken($error-color, 20)
-
-  &[disabled]
-    background-color: darken($bg-color, 5)
-    color: #aaa
-    cursor: default
-
-    &:hover
-      border-color: #bbb
-      color: #aaa
 
 form
   .error
     background-color: $error-color
     border-color: darken($error-color, 20)
-
-  input[disabled]
-    background-color: darken($bg-color, 5)
 
 // Other
 span.or
@@ -76,6 +76,7 @@ table tbody tr td a.button
 .edit-form
   .attributes
     float: none
+    padding: 15px 0 0 13px
 
 .attributes
   padding: 0 15px 30px 25px
@@ -181,7 +182,7 @@ table tbody tr td a.button
 
           input
             &.changed
-              border-color: #ffcf28
+              border-color: $changed-color
 
     .actions
       display: none
@@ -252,18 +253,52 @@ div.history, div.information
     margin-top: 0
     margin-bottom: 0
     .line-arrow
-      right: 135px
+      right: 45px
+
+.button.download-dataset,
+button.run_analyzes
+  position: relative
+
+  &[disabled] img
+    display: block
+
+  img
+    display: none
+    position: absolute
+    width: 23px
+    right: 5px
+    top: 5px
+
+.overview-edits .apply button.run_analyzes
+  float: right
 
 .overview-edits
-  .apply button.run_analyzes
-    position: relative
-    float: right
-    img
+  margin-top: 15px
+  border-top: 1px solid $border-color
+
+  .apply
+    padding: 10px 13px 10px 13px
+    background-color: $selected-color
+    @include transition(background-color, .5s, ease-in)
+
+    .button, button, input[type=submit]
+      @include disabled
+      color: white
+      background-color: darken($selected-color, 5)
+      margin-bottom: 0
+
+    .button.danger
+      background-color: darken($error-color, 5)
+      float: right
+
+    &.changes
       display: none
-      position: absolute
-      width: 23px
-      right: 5px
-      top: 5px
+      background-color: $changed-color
+
+      .button, input[type=submit]
+        @include disabled
+        background-color: lighten($changed-color, 10)
+        color: #555
 
 .overview
   strong[data-key], i[data-key]
@@ -390,7 +425,7 @@ ul.tab-nav
 
 div.tab
   display: none
-  padding: 15px 13px 30px 0
+  padding: 15px 0 0 0
 
   .overview > .analyzes > .error
     padding-left: 13px

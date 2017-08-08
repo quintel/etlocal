@@ -13,7 +13,7 @@ describe EditableAttribute do
       dataset = Dataset.new
       attribute = EditableAttribute.new(dataset, :has_industry, {})
 
-      expect(attribute.default).to eq(false)
+      expect(attribute.default).to eq(true)
     end
 
     it 'has a default for Etsource dataset' do

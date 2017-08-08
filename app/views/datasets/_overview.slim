@@ -3,9 +3,6 @@
     .error.notice
       strong= @error
 
-    .buttons
-      = button_tag "Back to edits", type: 'button', class: "back"
-
   .clear
 
 - else
@@ -18,7 +15,7 @@
         ul.sub-nav id='initializer_inputs'
           - @analyzes.initializer_inputs.each_pair do |group, _|
             li.tab
-              = link_to I18n.t("initializer_inputs.groups.#{ group }"), "##{ group }", data: { group: group }, class: enabled_for_group?(group, @analyzes)
+              = link_to I18n.t("initializer_inputs.groups.#{ group }"), "##{ group }", data: { group: group }
 
   .attributes data-tab-key='overview'
     .group.tab data-tab="#area_attributes"
@@ -35,7 +32,8 @@
 
         = render partial: 'datasets/editable', collection: inputs
 
-    .buttons
-      = button_tag "Back to edits", type: 'button', class: "back"
-
   .clear
+
+.overview-edits
+  .apply.buttons
+    = button_tag "Back to edits", type: 'button', class: "back"

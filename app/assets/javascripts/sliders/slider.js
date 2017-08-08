@@ -3,16 +3,21 @@ var Slider = (function () {
 
     var ENTER_KEY = 13;
 
+    function setValue(value) {
+        this.input.val(value);
+
+        setVal.call(this, Math.round(value * 100) / 100);
+    }
+
     // Update span text value next to the slider
-    function setVal(val) {
-        this.spanVal.text(val);
+    function setVal(value) {
+        this.spanVal.text(value);
     }
 
     // Callback for dragging the slider
-    function drag(val) {
-        setVal.call(this, val);
+    function drag(value) {
+        setValue.call(this, value);
 
-        this.input.val(val);
         DatasetInterface.ChangeTrigger.trigger(this.sliderEl);
     }
 
@@ -79,7 +84,13 @@ var Slider = (function () {
             // when there's no previously edited value present.
             if (this.input.val() === "") {
                 this.slider.enable();
-                this.slider.setValue(value);
+
+                // Oddly specific: the last argument is a silent call so
+                // no changes are being triggered (which is what we want
+                // when setting the defaults).
+                this.slider.setTentativeValue(value, true, true);
+
+                setValue.call(this, value);
             }
         }
     };

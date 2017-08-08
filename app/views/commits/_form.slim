@@ -9,6 +9,10 @@
 
 = render 'shared/flash', flash: flash
 
+.hidden
+  = form_tag dataset_download_path(dataset.geo_id), method: :get, class: 'download-dataset' do
+    .hidden
+
 = form_for [dataset, commit], url: dataset_edits_dataset_commits_path(dataset.geo_id), as: :edits, remote: true, html: { data: { calculate_url: dataset_calculate_path(dataset.geo_id, format: :js) }, class: "dataset_editor" } do |f|
   = f.hidden_field :dataset_id, value: dataset.id
 
@@ -58,12 +62,20 @@
             .toggle-group.agriculture_grouped class=('active' if toggle_value_for(dataset, 'has_agriculture'))
               = render partial: "datasets/attribute", collection: dataset.editable_attributes.grouped['agriculture_grouped'], locals: { form: f, commit: commit, dataset: dataset }
 
-          .overview-edits
-            .apply
-              = f.submit "Save edits"
-              = button_tag class: 'button run_analyzes', type: 'button' do
-                | Analyze
-                = image_tag 'wait.gif'
+      .clear
+
+      .overview-edits
+        .apply.no-changes
+          = button_tag class: 'button download-dataset', type: 'button', disabled: download_button_disabled?(dataset) do
+            | Download dataset
+            | &nbsp;
+            i.fa.fa-download
+
+        .apply.changes
+          = f.submit "Save changes"
+          = button_tag class: 'button run_analyzes', type: 'button' do
+            | Analyze
+            = image_tag 'wait.gif'
 
     .clear
 

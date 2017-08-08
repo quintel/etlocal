@@ -59,6 +59,16 @@ var DatasetInterface = (function () {
             });
     }
 
+    function addClickListenerToDownloadDataset() {
+        var button = $("button.button.download-dataset");
+
+        button.off('click').on('click', function () {
+            button.prop('disabled', true);
+
+            $("form.download-dataset").submit();
+        });
+    }
+
     return {
         enableAnalyzesTab: function () {
             new Tab($(".nav#overview-nav")).enable();
@@ -78,6 +88,7 @@ var DatasetInterface = (function () {
                 sliderGroupCollection.render.bind(sliderGroupCollection)
             ).enable();
 
+            addClickListenerToDownloadDataset.call(this);
             addChangeListenerToInputs.call(this);
             addClickListenerToToggles.call(this);
             addClickListenerToAnalyzesButton.call(this);

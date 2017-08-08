@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require css3-mixins
  *= require quinn
  *= require normalize
  *= require skeleton

@@ -2,13 +2,13 @@ class DatasetsController < ApplicationController
   layout 'map', only: :index
 
   before_action :authenticate_user!
+  before_action :find_dataset, only: %i(calculate download)
 
   def index
     @datasets = Dataset.all
   end
 
   def calculate
-    @dataset = Dataset.find_by(geo_id: params[:dataset_area])
     @atlas_dataset = Atlas::Dataset.find(@dataset.country)
 
     begin
@@ -20,6 +20,17 @@ class DatasetsController < ApplicationController
     end
 
     render layout: false
+  end
+
+  def download
+    @dataset_downloader = DatasetDownloader.new(@dataset)
+
+    if @dataset_downloader.validator.valid?
+      send_data @dataset_downloader.download,
+        filename: @dataset_downloader.zip_filename
+    else
+      render json: { error: @dataset_downloader.validator.message }
+    end
   end
 
   def defaults

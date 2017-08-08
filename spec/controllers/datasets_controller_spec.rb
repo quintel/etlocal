@@ -62,5 +62,25 @@ describe DatasetsController do
         end
       end
     end
+
+    describe '#download' do
+      before do
+        graph = Graph.new("dataset_analyzer_base").build
+
+        expect_any_instance_of(Atlas::Runner).to receive(:calculate).and_return(graph)
+      end
+
+      let(:dataset) { FactoryGirl.create(:dataset, geo_id: 'test_1', area: "Test") }
+
+      let!(:commit) {
+        FactoryGirl.create(:initial_commit, dataset: dataset)
+      }
+
+      it 'downloads the dataset as a zip file' do
+        get :download, params: { dataset_area: dataset.geo_id }
+
+
+      end
+    end
   end
 end

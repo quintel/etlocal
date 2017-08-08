@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :datasets, only: %i(index), param: :area do
     get :defaults, on: :collection
+    get :download
+
     post :calculate
 
     resources :commits, only: %i(new create) do

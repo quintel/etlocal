@@ -147,8 +147,8 @@ $map-height: 900px
         border-color: darken($error-color, 20)
         padding: 5px 10px
 
-      .edit-form
-        form
+      form
+        .edit-form
           textarea#change_message
             width: 98%
             height: 200px
@@ -202,5 +202,5 @@ $map-height: 900px
           border-radius: 0 4px 4px 0
 
         &.enabled
-          background-color: $selected-color
+          background-color: darken($selected-color, 5)
           color: white

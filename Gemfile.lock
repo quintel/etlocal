@@ -73,6 +73,8 @@ GEM
     airbrake-ruby (1.7.1)
     airbrussh (1.1.2)
       sshkit (>= 1.6.1, != 1.7.0)
+    archive-zip (0.9.0)
+      io-like (~> 0.3.0)
     arel (7.1.4)
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
@@ -144,6 +146,7 @@ GEM
       domain_name (~> 0.5)
     i18n (0.8.0)
     ice_nine (0.11.2)
+    io-like (0.3.0)
     jbuilder (2.6.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -341,6 +344,7 @@ PLATFORMS
 
 DEPENDENCIES
   airbrake
+  archive-zip (~> 0.9.0)
   atlas!
   byebug
   capistrano (~> 3.0)

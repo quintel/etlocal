@@ -64,22 +64,32 @@ describe DatasetsController do
     end
 
     describe '#download' do
-      before do
-        graph = Graph.new("dataset_analyzer_base").build
-
-        expect_any_instance_of(Atlas::Runner).to receive(:calculate).and_return(graph)
-      end
-
       let(:dataset) { FactoryGirl.create(:dataset, geo_id: 'test_1', area: "Test") }
 
-      let!(:commit) {
-        FactoryGirl.create(:initial_commit, dataset: dataset)
-      }
+      describe "insufficient data for an analyzes" do
+        it 'downloads the dataset as a zip file' do
+          get :download, params: { dataset_area: dataset.geo_id }
 
-      it 'downloads the dataset as a zip file' do
-        get :download, params: { dataset_area: dataset.geo_id }
+          expect(JSON.parse(response.body)['error']).to include("missing attributes")
+        end
+      end
 
+      describe "succesfully" do
+        before do
+          graph = Graph.new("dataset_analyzer_base").build
 
+          expect_any_instance_of(Atlas::Runner).to receive(:calculate).and_return(graph)
+        end
+
+        let!(:commit) {
+          FactoryGirl.create(:initial_commit, dataset: dataset)
+        }
+
+        it 'downloads the dataset as a zip file' do
+          get :download, params: { dataset_area: dataset.geo_id }
+
+          expect(response).to be_success
+        end
       end
     end
   end

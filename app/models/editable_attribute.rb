@@ -38,7 +38,10 @@ class EditableAttribute
     if @dataset.atlas_dataset
       @dataset.atlas_dataset.public_send(@key)
     else
-      Dataset.defaults.fetch(@key.to_sym)
+      parent_dataset = Atlas::Dataset.find(@dataset.country)
+
+      parent_dataset.public_send(@key) ||
+        Dataset.defaults.fetch(@key.to_sym)
     end
   end
 

@@ -29,6 +29,7 @@ RSpec.configure do |config|
 
   config.before(:suite) do
     Atlas.data_dir = "#{ config.fixture_path }/etsource"
+    Transformer.root = config.fixture_path
 
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)

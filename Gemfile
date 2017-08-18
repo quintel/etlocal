@@ -24,7 +24,7 @@ gem 'progress_bar'
 gem 'remotipart', '~> 1.2'
 gem 'archive-zip', '~> 0.9.0'
 
-gem 'transformer', ref: 'f4d6142', github: 'quintel/transformer'
+gem 'transformer', ref: '267c241', github: 'quintel/transformer'
 gem 'atlas',    ref: 'c736be3', github: 'quintel/atlas'
 gem 'rubel',    ref: 'ad3d44e', github: 'quintel/rubel'
 gem 'refinery', ref: '636686c', github: 'quintel/refinery'

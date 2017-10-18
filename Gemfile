@@ -37,11 +37,11 @@ group :development, :test do
   gem 'pry'
   gem 'dotenv-rails'
 
-  gem 'capistrano',             '~> 3.0',   require: false
-  gem 'capistrano-rbenv',       '~> 2.0',   require: false
-  gem 'capistrano-rails',       '~> 1.1',   require: false
-  gem 'capistrano-bundler',     '~> 1.1',   require: false
-  gem 'capistrano3-unicorn',    '~> 0.2',   require: false
+  gem 'capistrano',         '~> 3.0',   require: false
+  gem 'capistrano-rbenv',   '~> 2.0',   require: false
+  gem 'capistrano-rails',   '~> 1.1',   require: false
+  gem 'capistrano-bundler', '~> 1.1',   require: false
+  gem 'capistrano3-puma',   '~> 3.1.1', require: false
 end
 
 group :test do
@@ -60,7 +60,6 @@ group :development do
 end
 
 group :production, :staging do
-  gem 'unicorn'
   gem 'airbrake'
 end
 

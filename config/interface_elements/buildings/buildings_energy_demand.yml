@@ -1,0 +1,9 @@
+key: buildings_energy_demand
+groups:
+  - items:
+      buildings_local_production_electricity_demand:
+      buildings_final_demand_network_gas_demand:
+      buildings_final_demand_steam_hot_water_demand:
+      buildings_final_demand_wood_pellets_demand:
+      buildings_final_demand_crude_oil_demand:
+      buildings_final_demand_coal_demand:

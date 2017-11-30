@@ -7,7 +7,7 @@ describe DatasetEdit do
     let(:dataset) { DatasetEdit.new }
 
     it "can't have a blank value" do
-      expect(dataset).to have(2).errors_on(:value)
+      expect(dataset).to have(1).errors_on(:value)
     end
 
     it "can't have a blank key" do
@@ -15,23 +15,7 @@ describe DatasetEdit do
     end
   end
 
-  describe "wrong value type" do
-    let(:dataset) { DatasetEdit.new(value: "test") }
-
-    it "can't have a string as a value" do
-      expect(dataset).to have(1).errors_on(:value)
-    end
-  end
-
   describe "must be bigger than or 0" do
-    describe "for regular attribute" do
-      let(:dataset) { DatasetEdit.new(value: -1) }
-
-      it "is invalid" do
-        expect(dataset).to have(1).errors_on(:value)
-      end
-    end
-
     describe "for regular attribute" do
       let(:dataset) { DatasetEdit.new(value: 0) }
 

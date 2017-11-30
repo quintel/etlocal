@@ -1,0 +1,13 @@
+key: households_energy_supply
+groups:
+  - header: local_production
+    items:
+      households_solar_pv_solar_radiation_demand:
+      households_final_demand_solar_thermal_demand:
+
+  - header: heat_network_supply
+    items:
+      households_collective_chp_network_gas_demand:
+      households_collective_chp_wood_pellets_demand:
+      households_collective_chp_biogas_demand:
+      households_collective_geothermal_demand:

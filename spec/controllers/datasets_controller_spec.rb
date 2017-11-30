@@ -30,17 +30,11 @@ describe DatasetsController do
             calculate: { edits: JSON.dump({ test: 1 }) }
           }, format: :js
 
-          expect(controller.instance_variable_get(:"@error").message).to include("missing attributes")
+          expect(controller.instance_variable_get(:"@error").message).to include("can't be blank")
         end
       end
 
       describe "correctly" do
-        before do
-          graph = Graph.new("dataset_analyzer_base").build
-
-          expect_any_instance_of(Atlas::Runner).to receive(:calculate).and_return(graph)
-        end
-
         let(:commit) {
           FactoryGirl.create(:initial_commit, dataset: dataset)
         }
@@ -70,17 +64,11 @@ describe DatasetsController do
         it 'downloads the dataset as a zip file' do
           get :download, params: { dataset_area: dataset.geo_id }
 
-          expect(JSON.parse(response.body)['error']).to include("missing attributes")
+          expect(JSON.parse(response.body)['error']).to include("can't be blank")
         end
       end
 
       describe "succesfully" do
-        before do
-          graph = Graph.new("dataset_analyzer_base").build
-
-          expect_any_instance_of(Atlas::Runner).to receive(:calculate).and_return(graph)
-        end
-
         let!(:commit) {
           FactoryGirl.create(:initial_commit, dataset: dataset)
         }

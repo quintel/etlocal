@@ -30,8 +30,12 @@ class Graph
       parent = graph.node(edge_attr['parent'])
       child  = graph.node(edge_attr['child'])
 
+      key = "#{ parent.key }-#{ child.key }@#{ edge_attr['carrier'] }"
+
       edge = parent.connect_to(child, edge_attr['carrier'])
 
+      # Fake an Atlas edge
+      edge.set(:model, OpenStruct.new(key: key))
       edge.set(:parent_share, edge_attr['parent_share'] || 1.0)
     end
   end

@@ -1,0 +1,64 @@
+key: buildings_advanced
+groups:
+  - header: electricity_distribution
+    type: slider
+    items:
+      buildings_local_production_electricity_industry_final_demand_for_other_ict_electricity_parent_share:
+      buildings_local_production_electricity_buildings_final_demand_electricity_parent_share: flex
+
+  - type: slider
+    items:
+      buildings_final_demand_electricity_buildings_final_demand_for_lighting_electricity_parent_share:
+      buildings_final_demand_electricity_buildings_final_demand_for_space_heating_electricity_parent_share:
+      buildings_final_demand_electricity_buildings_final_demand_for_appliances_electricity_parent_share:
+      buildings_final_demand_electricity_buildings_final_demand_for_cooling_electricity_parent_share: flex
+
+  - header: gas_distribution
+    type: slider
+    items:
+      buildings_final_demand_network_gas_buildings_final_demand_for_appliances_network_gas_parent_share:
+      buildings_final_demand_network_gas_buildings_final_demand_for_space_heating_network_gas_parent_share:
+      buildings_final_demand_network_gas_buildings_final_demand_for_cooling_network_gas_parent_share: flex
+
+  - header: biomass_distribution
+    type: slider
+    items:
+      buildings_final_demand_wood_pellets_buildings_final_demand_for_space_heating_wood_pellets_parent_share:
+      buildings_final_demand_wood_pellets_buildings_final_demand_for_appliances_wood_pellets_parent_share: flex
+
+  - header: coal_distribution
+    type: slider
+    items:
+      buildings_final_demand_coal_buildings_final_demand_for_space_heating_coal_parent_share:
+      buildings_final_demand_coal_buildings_final_demand_for_appliances_coal_parent_share: flex
+
+  - header: oil_distribution
+    type: slider
+    items:
+      buildings_final_demand_crude_oil_buildings_final_demand_for_space_heating_crude_oil_parent_share:
+      buildings_final_demand_crude_oil_buildings_final_demand_for_appliances_crude_oil_parent_share: flex
+
+  - header: space_heating_technologies_using_gas
+    type: slider
+    items:
+      buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_heatpump_air_water_network_gas_parent_share:
+      buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_network_gas_parent_share: flex
+
+  - header: space_heating_technologies_using_electricity
+    type: slider
+    items:
+      buildings_final_demand_for_space_heating_electricity_buildings_space_heater_collective_heatpump_water_water_ts_electricity_parent_share:
+      buildings_final_demand_for_space_heating_electricity_buildings_space_heater_electricity_parent_share: flex
+
+  - header: lighting
+    type: slider
+    items:
+      buildings_final_demand_for_lighting_electricity_buildings_lighting_efficient_fluorescent_electricity_parent_share:
+      buildings_final_demand_for_lighting_electricity_buildings_lighting_led_electricity_parent_share: flex
+      buildings_final_demand_for_lighting_electricity_buildings_lighting_standard_fluorescent_electricity_parent_share:
+
+  - header: cooling
+    type: slider
+    items:
+      buildings_final_demand_for_cooling_electricity_buildings_cooling_airconditioning_electricity_parent_share:
+      buildings_final_demand_for_cooling_electricity_buildings_cooling_collective_heatpump_water_water_ts_electricity_parent_share: flex

@@ -4,13 +4,6 @@ require 'support/graph'
 describe Api::V1::ExportsController do
   let(:dataset) { FactoryGirl.create(:dataset) }
 
-  before do
-    expect_any_instance_of(Atlas::Runner)
-      .to receive(:graph).and_return(
-        Graph.new("electricity_consumption").build
-      )
-  end
-
   it 'fetches a collection of dataset edits as json' do
     get :show, params: { area: dataset.geo_id }, format: :json
 

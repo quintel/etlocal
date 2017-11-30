@@ -22,6 +22,10 @@ class Chart
     @options['legend_type']
   end
 
+  def editable_key
+    @options['editable'] || @key
+  end
+
   def self.all
     records
   end

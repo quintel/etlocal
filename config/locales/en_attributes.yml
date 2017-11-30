@@ -1,15 +1,7 @@
 en:
-  activerecord:
+  activemodel:
     attributes:
-      dataset_edit:
-        commit: "Reason"
-        source_file: "Source file"
-
-        building_area: Area occupied by buildings
-        gas_consumption: Gas consumption per household
-        gas_consumption_buildings: Gas consumption per building
-        electricity_consumption: Electricity consumption per household
-        electricity_consumption_buildings: Electricity consumption per building
+      dataset_edit_form:
         number_of_cars: Number of cars
         number_of_residences: Number of houses
         number_of_residences_with_solar_pv: Number of houses with solar PV
@@ -17,26 +9,117 @@ en:
         percentage_of_old_residences: "Residences built before 1992"
         roof_surface_available_for_pv: Roof surface available for PV per household
 
-        households_cooker_resistive_electricity: Resistive cooker
-        households_cooker_halogen_electricity: Halogen cooker
-        households_cooker_induction_electricity: Induction
+        # Appliances
+        households_final_demand_for_appliances_electricity_households_appliances_clothes_dryer_electricity_parent_share: Clothes dryer
+        households_final_demand_for_appliances_electricity_households_appliances_computer_media_electricity_parent_share: Computer media
+        households_final_demand_for_appliances_electricity_households_appliances_dishwasher_electricity_parent_share: Dishwasher
+        households_final_demand_for_appliances_electricity_households_appliances_fridge_freezer_electricity_parent_share: Fridge
+        households_final_demand_for_appliances_electricity_households_appliances_other_electricity_parent_share: Other
+        households_final_demand_for_appliances_electricity_households_appliances_television_electricity_parent_share: Television
+        households_final_demand_for_appliances_electricity_households_appliances_vacuum_cleaner_electricity_parent_share: Vacuum
+        households_final_demand_for_appliances_electricity_households_appliances_washing_machine_electricity_parent_share: Washing machine
 
-        households_cooling_airconditioning_electricity: Airconditioning
-        households_cooling_heatpump_ground_water_electricity: Heatpump ground water
-        households_cooling_heatpump_air_water_electricity: Heatpump air water
+        # households_district_heating_distribution:
+        households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share: Hot water
+        households_final_demand_steam_hot_water_households_final_demand_for_space_heating_steam_hot_water_parent_share: Space heating
 
-        households_final_demand_for_cooking_network_gas: Cooking (gas)
-        households_final_demand_for_cooling_network_gas: Cooling (gas)
-        households_final_demand_for_space_heating_network_gas: Space heating (gas)
-        households_final_demand_for_hot_water_network_gas: Hot water (gas)
+        # households_biomass_distribution:
+        households_final_demand_wood_pellets_households_final_demand_for_cooking_wood_pellets_parent_share: Cooking
+        households_final_demand_wood_pellets_households_final_demand_for_hot_water_wood_pellets_parent_share: Hot water
+        households_final_demand_wood_pellets_households_final_demand_for_space_heating_wood_pellets_parent_share: Space heating
 
-        households_lighting_incandescent_electricity: "Lighting 1"
-        households_lighting_efficient_fluorescent_electricity: "Lighting 2"
-        households_lighting_led_electricity: "LED"
+        # households_coal_distribution:
+        households_final_demand_coal_households_final_demand_for_hot_water_coal_parent_share: Hot water
+        households_final_demand_coal_households_final_demand_for_space_heating_coal_parent_share: Space heating
 
-        households_final_demand_for_appliances_electricity: Appliances
-        households_final_demand_for_cooking_electricity: Cooking
-        households_final_demand_for_cooling_electricity: Cooling
-        households_final_demand_for_hot_water_electricity: Hot water
-        households_final_demand_for_lighting_electricity: Lighting
-        households_final_demand_for_space_heating_electricity: Space heating
+        # households_oil_distribution:
+        households_final_demand_crude_oil_households_final_demand_for_hot_water_crude_oil_parent_share: Hot water
+        households_final_demand_crude_oil_households_final_demand_for_space_heating_crude_oil_parent_share: Space heating
+
+        # households_solar_thermal_distribution:
+        households_water_heater_solar_thermal_households_useful_demand_for_hot_water_for_houses_with_solar_heater_parent_share: Hot water
+        households_water_heater_solar_thermal_households_useful_demand_for_space_heating_after_insulation_for_houses_with_solar_heater_parent_share: Space heating
+
+        # households_space_heating_technologies_using_gas:
+        households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share: Combi boiler
+        households_final_demand_for_space_heating_network_gas_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share: Hybrid heatpump (air water)
+        households_final_demand_for_space_heating_network_gas_households_space_heater_micro_chp_network_gas_parent_share: Micro CHP
+        households_final_demand_for_space_heating_network_gas_households_space_heater_network_gas_parent_share: Space heater network gas
+
+        # households_space_heating_technologies_using_electricity:
+        households_final_demand_for_space_heating_electricity_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share: Hybrid heatpump (air water)
+        households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_air_water_electricity_parent_share: Heatpump (air water)
+        households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_ground_water_electricity_parent_share: Heatpump (ground water)
+        households_final_demand_for_space_heating_electricity_households_space_heater_electricity_parent_share: Space heater electricity
+
+        households_final_demand_for_hot_water_network_gas_households_water_heater_combined_network_gas_parent_share: Combi-boiler
+        households_final_demand_for_hot_water_network_gas_households_water_heater_fuel_cell_chp_network_gas_parent_share: Fuel cell CHP
+        households_final_demand_for_hot_water_network_gas_households_water_heater_hybrid_heatpump_air_water_electricity_parent_share: Hybrid heatpump (air water)
+        households_final_demand_for_hot_water_network_gas_households_water_heater_micro_chp_network_gas_parent_share: Micro CHP
+        households_final_demand_for_hot_water_network_gas_households_water_heater_network_gas_parent_share: Water heater network gas
+
+        # households_hot_water_technologies_using_electricity:
+        households_final_demand_for_hot_water_electricity_households_water_heater_heatpump_air_water_electricity_parent_share: Heatpump (air water)
+        households_final_demand_for_hot_water_electricity_households_water_heater_heatpump_ground_water_electricity_parent_share: Heatpump (ground water)
+        households_final_demand_for_hot_water_electricity_households_water_heater_hybrid_heatpump_air_water_electricity_parent_share: Hybrid heatpump
+        households_final_demand_for_hot_water_electricity_households_water_heater_resistive_electricity_parent_share: Resistive
+
+        # Cooking
+        households_final_demand_for_cooking_electricity_households_cooker_resistive_electricity_parent_share: Resistive cooker
+        households_final_demand_for_cooking_electricity_households_cooker_halogen_electricity_parent_share: Halogen cooker
+        households_final_demand_for_cooking_electricity_households_cooker_induction_electricity_parent_share: Induction
+
+        # Cooling
+        households_final_demand_for_cooling_electricity_households_cooling_airconditioning_electricity_parent_share: Airconditioning
+        households_final_demand_for_cooling_electricity_households_cooling_heatpump_ground_water_electricity_parent_share: Heatpump ground water
+        households_final_demand_for_cooling_electricity_households_cooling_heatpump_air_water_electricity_parent_share: Heatpump air water
+
+        # households_lighting:
+        households_final_demand_for_lighting_electricity_households_lighting_efficient_fluorescent_electricity_parent_share: Fluorescent
+        households_final_demand_for_lighting_electricity_households_lighting_incandescent_electricity_parent_share: Incandescent
+        households_final_demand_for_lighting_electricity_households_lighting_led_electricity_parent_share: LED
+
+        # Network gas
+        households_final_demand_network_gas_households_final_demand_for_cooking_network_gas_parent_share: Cooking (gas)
+        households_final_demand_network_gas_households_final_demand_for_cooling_network_gas_parent_share: Cooling (gas)
+        households_final_demand_network_gas_households_final_demand_for_space_heating_network_gas_parent_share: Space heating (gas)
+        households_final_demand_network_gas_households_final_demand_for_hot_water_network_gas_parent_share: Hot water (gas)
+
+        # Electricity
+        households_final_demand_electricity_households_final_demand_for_appliances_electricity_parent_share: Appliances
+        households_final_demand_electricity_households_final_demand_for_cooking_electricity_parent_share: Cooking
+        households_final_demand_electricity_households_final_demand_for_cooling_electricity_parent_share: Cooling
+        households_final_demand_electricity_households_final_demand_for_hot_water_electricity_parent_share: Hot water
+        households_final_demand_electricity_households_final_demand_for_lighting_electricity_parent_share: Lighting
+        households_final_demand_electricity_households_final_demand_for_space_heating_electricity_parent_share: Space heating
+
+        # Electricity
+        buildings_final_demand_for_appliances_electricity_parent_share: Appliances (electricity)
+        buildings_final_demand_for_cooling_electricity_parent_share: Cooling (electricity)
+        buildings_final_demand_for_space_heating_electricity_parent_share: Space heating (electricity)
+        buildings_final_demand_for_lighting_electricity_parent_share: Lighting (electricity)
+
+        # Crude oil
+        buildings_final_demand_for_appliances_crude_oil_parent_share: Appliances (crude oil)
+        buildings_final_demand_for_space_heating_crude_oil_parent_share: Space heating (crude oil)
+
+        # Cooling
+        buildings_cooling_airconditioning_electricity_parent_share: Airconditioning
+        buildings_cooling_collective_heatpump_water_water_ts_electricity_parent_share: Heatpump water ts
+
+        # Buildings -> Lighting
+        buildings_lighting_efficient_fluorescent_electricity_parent_share: Fluorescent
+        buildings_lighting_led_electricity_parent_share: LED
+        buildings_lighting_standard_fluorescent_electricity_parent_share: Standard fluorescent
+
+        # Agriculture -> Electricity
+        agriculture_heatpump_water_water_ts_electricity_parent_share: Heatpump water ts
+        agriculture_geothermal_parent_share: Geothermal
+        agriculture_useful_demand_electricity_parent_share: Useful demand
+
+  activerecord:
+    attributes:
+      dataset_edit:
+        commit: "Reason"
+        source_file: "Source file"
+

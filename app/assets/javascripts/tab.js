@@ -20,14 +20,13 @@ var Tab = (function () {
 
     Tab.prototype = {
         toggleTab: function (e) {
-            var target  = $(e.target),
-                current = target.attr("href");
+            var target     = $(e.target),
+                current    = target.attr("href"),
+                currentTab = this.tabScope.find("div.tab[data-tab='" + current + "']");
 
             deactivateMenuItems.call(this);
 
-            this.tabScope.find("div.tab[data-tab='" + current + "']")
-                .add(target)
-                .addClass("active");
+            currentTab.add(target).addClass("active");
 
             if (target.parents("ul.sub-nav").length < 1) {
                 $(this.nav).find("ul.sub-nav").removeClass("active");
@@ -35,7 +34,7 @@ var Tab = (function () {
 
             $(this.nav).find("ul.sub-nav" + current).addClass("active");
 
-            this.toggleCallback(current);
+            this.toggleCallback(current, currentTab);
         },
 
         enable: function () {

@@ -12,11 +12,6 @@ describe EditableAttributesCollection do
 
       FactoryGirl.create(:dataset_edit, value: (i + 1), commit: commit)
     end
-
-    expect_any_instance_of(Atlas::Runner)
-      .to receive(:graph).and_return(
-        Graph.new("electricity_consumption").build
-      )
   end
 
   let(:editable_attributes) { EditableAttributesCollection.new(dataset) }
@@ -25,10 +20,10 @@ describe EditableAttributesCollection do
     expect(editable_attributes.find('number_of_cars').previous.size).to eq(2)
   end
 
-  it 'expands on the graph edges' do
+  it 'expands on the graph methods' do
     expect(
       editable_attributes
-        .find('households_final_demand_for_appliances_electricity')
+        .find('households_final_demand_electricity_demand')
     ).to be_a(EditableAttribute)
   end
 
@@ -41,6 +36,7 @@ describe EditableAttributesCollection do
   end
 
   it 'does not have a default value for electricity_consumption' do
-    expect(editable_attributes.find('electricity_consumption').value).to eq(nil)
+    expect(editable_attributes
+      .find('households_final_demand_electricity_demand').value).to eq(nil)
   end
 end

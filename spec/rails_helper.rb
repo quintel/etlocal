@@ -12,6 +12,7 @@ Dir["#{ Rails.root }/db/seeds/**/*.rb"].each do |file|
   require file
 end
 
+Atlas.data_dir = "#{ ::Rails.root }/spec/fixtures/etsource"
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
@@ -28,9 +29,6 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
 
   config.before(:suite) do
-    Atlas.data_dir = "#{ config.fixture_path }/etsource"
-    Transformer.root = config.fixture_path
-
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
 

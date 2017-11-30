@@ -1,6 +1,6 @@
 ---
 nodes:
-  :households_final_demand_electricity:
+  :households_final_demand_electricity: 200
   :households_final_demand_for_appliances_electricity:
 
 edges:

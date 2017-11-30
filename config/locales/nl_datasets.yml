@@ -25,11 +25,9 @@ nl:
 
     subgroups:
       households:
-        households_final_demand_electricity: Electriciteitsconsumptie
-        households_final_demand_for_cooking_electricity: Koken
-        households_final_demand_for_cooling_electricity: Koeling
-        households_final_demand_for_lighting_electricity: Licht
-        households_final_demand_network_gas: Gas
+        households_energy_demand: Energy demand
+        households_energy_supply: Energy supply
+        households_advanced: Advanced
 
     flash:
       not_found: "Gebied '%{area}' bestaat niet"

@@ -2,9 +2,11 @@ require 'rails_helper'
 
 describe AnalyzesDecorator do
   let(:input) {
-    { number_of_households: 25,
-      init: {
-        agriculture_useful_demand_electricity: 0
+    { area: { number_of_households: 25 },
+      graph_values: {
+        preset_demand_setter: {
+          agriculture_useful_demand_electricity: 0
+        }
       }
     }
   }
@@ -18,9 +20,9 @@ describe AnalyzesDecorator do
       })
     end
 
-    it 'the initializer inputs' do
-      expect(decorator.initializer_inputs).to eq({
-        'agriculture' => {
+    it 'the graph values' do
+      expect(decorator.graph_values).to eq({
+        preset_demand_setter: {
           agriculture_useful_demand_electricity: 0
         }
       })

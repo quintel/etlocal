@@ -17,14 +17,6 @@ describe DatasetImporter do
     expect(Dataset.count).to eq(8)
   end
 
-  it "expects at least 7 edits per dataset" do
-    dataset_importer.import
-
-    dataset = Dataset.last
-
-    expect(dataset.edits.count).to eq(6)
-  end
-
   describe "re-importing" do
     let!(:dataset) { FactoryGirl.create(:dataset, geo_id: 'BU16800000') }
     let!(:robot_commit) {
@@ -49,14 +41,8 @@ describe DatasetImporter do
 
         let!(:dataset_edit) {
           FactoryGirl.create(:dataset_edit, commit: commit,
-            key: 'roof_surface_available_for_pv', value: '1.0')
+            key: 'residences_roof_surface_available_for_pv', value: '1.0')
         }
-
-        it "dataset edit counts are still 6" do
-          dataset_importer.import
-
-          expect(dataset.edits.count).to eq(6)
-        end
 
         it "doesn't update value of the existing dataset" do
           dataset_importer.import
@@ -65,24 +51,16 @@ describe DatasetImporter do
         end
       end
 
-      describe "doesn't change a value if it isn't changed by another user" do
-        let(:dataset) { FactoryGirl.create(:dataset, geo_id: 'BU16800000') }
-
-        let(:commit) {
+      describe "does change a value if the first change was by robot" do
+        let!(:commit) {
           FactoryGirl.create(:commit,
             user: User.robot, dataset: dataset, message: "Test")
         }
 
         let!(:dataset_edit) {
           FactoryGirl.create(:dataset_edit, commit: commit,
-            key: 'roof_surface_available_for_pv', value: '1.0')
+            key: 'residences_roof_surface_available_for_pv', value: 2.0)
         }
-
-        it "dataset edit counts are still 6" do
-          dataset_importer.import
-
-          expect(dataset.edits.count).to eq(6)
-        end
 
         it "updates value of the existing dataset" do
           dataset_importer.import

@@ -14,6 +14,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
+gem 'virtus'
 gem 'slim'
 gem 'paperclip'
 gem 'devise'
@@ -24,10 +25,10 @@ gem 'progress_bar'
 gem 'remotipart', '~> 1.2'
 gem 'archive-zip', '~> 0.9.0'
 
-gem 'transformer', ref: '267c241', github: 'quintel/transformer'
-gem 'atlas',    ref: 'c736be3', github: 'quintel/atlas'
-gem 'rubel',    ref: 'ad3d44e', github: 'quintel/rubel'
-gem 'refinery', ref: '636686c', github: 'quintel/refinery'
+gem 'transformer', ref: 'a76e1ab', github: 'quintel/transformer'
+gem 'atlas',       ref: '32ccfd8', github: 'quintel/atlas'
+gem 'rubel',       ref: 'ad3d44e', github: 'quintel/rubel'
+gem 'refinery',    ref: '636686c', github: 'quintel/refinery'
 
 group :development, :test do
   gem 'byebug', platform: :mri

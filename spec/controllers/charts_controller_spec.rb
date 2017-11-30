@@ -4,21 +4,12 @@ describe ChartsController do
   let(:user) { FactoryGirl.create(:user) }
   let!(:sign_in_user) { sign_in(user) }
 
-  before do
-    2.times do |value|
-      dataset = FactoryGirl.create(:dataset, geo_id: "GM000#{ value }")
-      commit  = FactoryGirl.create(:commit, dataset: dataset)
-
-      FactoryGirl.create(:dataset_edit,
-        key: 'electricity_consumption',
-        value: value + 1,
-        commit: commit
-      )
-    end
-  end
-
   it "fetches a chart" do
-    post :data, params: { chart: { type: "electricity_consumption" }}, format: :json
+    post :data, params: {
+      chart: {
+        type: 'households_final_demand_electricity_demand'
+      }
+    }, format: :json
 
     body = JSON.parse(response.body)
 

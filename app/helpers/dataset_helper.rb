@@ -3,10 +3,6 @@ module DatasetHelper
     dataset_edit.latest.present? && dataset_edit.latest.user == User.robot
   end
 
-  def unit_for(key)
-    (Dataset::EDITABLE_ATTRIBUTES[key.to_s] || {})[:unit]
-  end
-
   def filename_for_source
     if params[:change] && params[:change][:source_attributes]
       params[:change][:source_attributes][:source_file].original_filename
@@ -15,17 +11,7 @@ module DatasetHelper
     end
   end
 
-  def slider_group?(group)
-    Dataset::EDITABLE_ATTRIBUTES
-      .select { |_, opts| opts['slider_group'] }
-      .keys.include?(group)
-  end
-
-  def toggle_value_for(dataset, key)
-    dataset.editable_attributes.find(key).value
-  end
-
   def download_button_disabled?(dataset)
-    !Transformer::AttributeValidator.new(dataset.editable_attributes.as_json).valid?
+    !Transformer::DatasetCast.new(dataset.editable_attributes.as_json).valid?
   end
 end

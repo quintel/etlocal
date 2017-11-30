@@ -1,0 +1,116 @@
+key: households_advanced
+groups:
+  - header: electricity_distribution
+    type: slider
+    items:
+      households_final_demand_electricity_households_final_demand_for_cooking_electricity_parent_share:
+      households_final_demand_electricity_households_final_demand_for_cooling_electricity_parent_share:
+      households_final_demand_electricity_households_final_demand_for_hot_water_electricity_parent_share:
+      households_final_demand_electricity_households_final_demand_for_lighting_electricity_parent_share:
+      households_final_demand_electricity_households_final_demand_for_space_heating_electricity_parent_share:
+      households_final_demand_electricity_households_final_demand_for_appliances_electricity_parent_share: flex
+
+  - header: gas_distribution
+    type: slider
+    items:
+      households_final_demand_network_gas_households_final_demand_for_cooking_network_gas_parent_share:
+      households_final_demand_network_gas_households_final_demand_for_hot_water_network_gas_parent_share:
+      households_final_demand_network_gas_households_final_demand_for_space_heating_network_gas_parent_share:
+      households_final_demand_network_gas_households_final_demand_for_cooling_network_gas_parent_share: flex
+
+  - header: district_heating_distribution
+    type: slider
+    items:
+      households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share:
+      households_final_demand_steam_hot_water_households_final_demand_for_space_heating_steam_hot_water_parent_share: flex
+
+  - header: biomass_distribution
+    type: slider
+    items:
+      households_final_demand_wood_pellets_households_final_demand_for_cooking_wood_pellets_parent_share: flex
+      households_final_demand_wood_pellets_households_final_demand_for_hot_water_wood_pellets_parent_share:
+      households_final_demand_wood_pellets_households_final_demand_for_space_heating_wood_pellets_parent_share:
+
+  - header: coal_distribution
+    type: slider
+    items:
+      households_final_demand_coal_households_final_demand_for_hot_water_coal_parent_share: flex
+      households_final_demand_coal_households_final_demand_for_space_heating_coal_parent_share:
+
+  - header: oil_distribution
+    type: slider
+    items:
+      households_final_demand_crude_oil_households_final_demand_for_hot_water_crude_oil_parent_share: flex
+      households_final_demand_crude_oil_households_final_demand_for_space_heating_crude_oil_parent_share:
+
+  - header: solar_thermal_distribution
+    type: slider
+    items:
+      households_water_heater_solar_thermal_households_useful_demand_for_hot_water_for_houses_with_solar_heater_parent_share:
+      households_water_heater_solar_thermal_households_useful_demand_for_space_heating_after_insulation_for_houses_with_solar_heater_parent_share: flex
+
+  - header: space_heating_technologies_using_gas
+    type: slider
+    items:
+      households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share:
+      households_final_demand_for_space_heating_network_gas_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share:
+      households_final_demand_for_space_heating_network_gas_households_space_heater_micro_chp_network_gas_parent_share:
+      households_final_demand_for_space_heating_network_gas_households_space_heater_network_gas_parent_share: flex
+
+  - header: space_heating_technologies_using_electricity
+    type: slider
+    items:
+      households_final_demand_for_space_heating_electricity_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share:
+      households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_air_water_electricity_parent_share:
+      households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_ground_water_electricity_parent_share:
+      households_final_demand_for_space_heating_electricity_households_space_heater_electricity_parent_share: flex
+
+  - header: hot_water_technologies_using_gas
+    type: slider
+    items:
+      households_final_demand_for_hot_water_network_gas_households_water_heater_combined_network_gas_parent_share:
+      households_final_demand_for_hot_water_network_gas_households_water_heater_fuel_cell_chp_network_gas_parent_share:
+      households_final_demand_for_hot_water_network_gas_households_water_heater_hybrid_heatpump_air_water_electricity_parent_share:
+      households_final_demand_for_hot_water_network_gas_households_water_heater_micro_chp_network_gas_parent_share:
+      households_final_demand_for_hot_water_network_gas_households_water_heater_network_gas_parent_share: flex
+
+  - header: hot_water_technologies_using_electricity
+    type: slider
+    items:
+      households_final_demand_for_hot_water_electricity_households_water_heater_heatpump_air_water_electricity_parent_share:
+      households_final_demand_for_hot_water_electricity_households_water_heater_heatpump_ground_water_electricity_parent_share:
+      households_final_demand_for_hot_water_electricity_households_water_heater_hybrid_heatpump_air_water_electricity_parent_share:
+      households_final_demand_for_hot_water_electricity_households_water_heater_resistive_electricity_parent_share: flex
+
+  - header: cooking
+    type: slider
+    items:
+      households_final_demand_for_cooking_electricity_households_cooker_halogen_electricity_parent_share:
+      households_final_demand_for_cooking_electricity_households_cooker_induction_electricity_parent_share:
+      households_final_demand_for_cooking_electricity_households_cooker_resistive_electricity_parent_share: flex
+
+  - header: lighting
+    type: slider
+    items:
+      households_final_demand_for_lighting_electricity_households_lighting_efficient_fluorescent_electricity_parent_share:
+      households_final_demand_for_lighting_electricity_households_lighting_incandescent_electricity_parent_share:
+      households_final_demand_for_lighting_electricity_households_lighting_led_electricity_parent_share: flex
+
+  - header: cooling
+    type: slider
+    items:
+      households_final_demand_for_cooling_electricity_households_cooling_airconditioning_electricity_parent_share:
+      households_final_demand_for_cooling_electricity_households_cooling_heatpump_air_water_electricity_parent_share: flex
+      households_final_demand_for_cooling_electricity_households_cooling_heatpump_ground_water_electricity_parent_share:
+
+  - header: appliances
+    type: slider
+    items:
+      households_final_demand_for_appliances_electricity_households_appliances_clothes_dryer_electricity_parent_share:
+      households_final_demand_for_appliances_electricity_households_appliances_computer_media_electricity_parent_share:
+      households_final_demand_for_appliances_electricity_households_appliances_dishwasher_electricity_parent_share:
+      households_final_demand_for_appliances_electricity_households_appliances_fridge_freezer_electricity_parent_share:
+      households_final_demand_for_appliances_electricity_households_appliances_other_electricity_parent_share:
+      households_final_demand_for_appliances_electricity_households_appliances_television_electricity_parent_share:
+      households_final_demand_for_appliances_electricity_households_appliances_vacuum_cleaner_electricity_parent_share:
+      households_final_demand_for_appliances_electricity_households_appliances_washing_machine_electricity_parent_share: flex

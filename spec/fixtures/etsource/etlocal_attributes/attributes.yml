@@ -3,11 +3,21 @@ electricity_consumption:
   unit: kWh
   group: households
   mandatory: true
+  export:
+    type: graph
+    unit: TJ
+    key: households_final_demand_electricity
+    graph_method: preset_demand_setter
 
 gas_consumption:
   unit: m3
   group: households
   mandatory: true
+  export:
+    type: graph
+    unit: TJ
+    key: households_final_demand_network_gas
+    graph_method: preset_demand_setter
 
 number_of_inhabitants:
   unit: ''
@@ -44,25 +54,45 @@ building_area:
   group: buildings
   mandatory: true
 
-households_final_demand_electricity:
-  unit: '%'
-  slider_group: true
-
 households_final_demand_for_cooking_electricity:
   unit: '%'
-  slider_group: true
+  group: households_final_demand_electricity
+  slider_group: households_final_demand_electricity
+  export:
+    graph_method: share_setter
+    key: 'households_final_demand_electricity-households_final_demand_for_cooking_electricity@electricity'
 
 households_final_demand_for_cooling_electricity:
   unit: '%'
-  slider_group: true
+  group: households_final_demand_electricity
+  slider_group: households_final_demand_electricity
+  export:
+    graph_method: share_setter
+    key: 'households_final_demand_electricity-households_final_demand_for_cooling_electricity@electricity'
 
 households_final_demand_for_lighting_electricity:
   unit: '%'
-  slider_group: true
+  group: households_final_demand_electricity
+  slider_group: households_final_demand_electricity
+  export:
+    graph_method: share_setter
+    key: 'households_final_demand_electricity-households_final_demand_for_lighting_electricity@electricity'
 
-households_final_demand_network_gas:
+households_final_demand_for_appliances_electricity:
   unit: '%'
-  slider_group: true
+  group: households_final_demand_electricity
+  slider_group: households_final_demand_electricity
+  export:
+    graph_method: share_setter
+    key: 'households_final_demand_electricity-households_final_demand_for_appliances_electricity@electricity'
+
+households_final_demand_for_hot_water_electricity:
+  unit: '%'
+  group: households_final_demand_electricity
+  slider_group: households_final_demand_electricity
+  export:
+    graph_method: share_setter
+    key: 'households_final_demand_electricity-households_final_demand_for_hot_water_electricity@electricity'
 
 # Industry
 has_industry:

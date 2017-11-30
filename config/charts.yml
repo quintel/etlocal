@@ -1,6 +1,7 @@
 ---
-electricity_consumption:
+households_final_demand_electricity_demand:
   legend_type: dynamic
+  unit: 'kWh'
   color_stops:
     - "#00FF00"
     - "#FF0000"
@@ -10,8 +11,9 @@ electricity_consumption:
     - districts
     - neighborhoods
 
-gas_consumption:
+households_final_demand_network_gas_demand:
   legend_type: dynamic
+  unit: 'm3'
   color_stops:
     - "#00FF00"
     - "#FF0000"
@@ -23,6 +25,7 @@ gas_consumption:
 
 number_of_inhabitants:
   legend_type: dynamic
+  unit: '#'
   scale: log10
   color_stops:
     - "#009cff"
@@ -35,6 +38,7 @@ number_of_inhabitants:
 
 number_of_cars:
   legend_type: dynamic
+  unit: '#'
   scale: log10
   color_stops:
     - "#009cff"
@@ -47,6 +51,7 @@ number_of_cars:
 
 number_of_residences:
   legend_type: dynamic
+  unit: '#'
   scale: log10
   color_stops:
     - "#009cff"
@@ -59,6 +64,7 @@ number_of_residences:
 
 roof_surface_available_for_pv:
   legend_type: dynamic
+  unit: '#'
   scale: log10
   color_stops:
     - "#FF0000"

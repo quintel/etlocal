@@ -1,7 +1,7 @@
 | $('#dataset-overlay .content').html("
-- if @filter.changed_edits.any?
-  = j render("dataset_edits/form", dataset: @dataset, commit: @commit)
-- else
+- if @dataset_edit_form.errors.any?
   = j render("commits/form", dataset: @dataset, commit: @commit)
+- else
+  = j render("dataset_edits/form", dataset: @dataset)
 | ");
 | FileUpload.setFields();

@@ -1,6 +1,6 @@
-- if commit.errors.any?
+- if @dataset_edit_form.errors.any?
   .errors
-    - commit.errors.full_messages.each do |message|
+    - @dataset_edit_form.errors.full_messages.each do |message|
       .error.notice= message
 
 .heading
@@ -13,8 +13,8 @@
   = form_tag dataset_download_path(dataset.geo_id), method: :get, class: 'download-dataset' do
     .hidden
 
-= form_for [dataset, commit], url: dataset_edits_dataset_commits_path(dataset.geo_id), as: :edits, remote: true, html: { data: { calculate_url: dataset_calculate_path(dataset.geo_id, format: :js) }, class: "dataset_editor" } do |f|
-  = f.hidden_field :dataset_id, value: dataset.id
+= form_for @dataset_edit_form, url: dataset_edits_dataset_commits_path(dataset.geo_id), as: :edits, remote: true, html: { data: { calculate_url: dataset_calculate_path(dataset.geo_id, format: :js) }, class: "dataset_editor" } do |form|
+  = form.hidden_field :dataset_id, value: dataset.id
 
   .wrapper data-tab-key='main'
     .content.tab#input data-tab="#input"
@@ -28,39 +28,14 @@
                 ul.sub-nav id=group
                   - subgroups.each do |subgroup|
                     li.tab
-                      = link_to I18n.t("datasets.subgroups.#{ group }.#{ subgroup }"), "##{ subgroup }", data: { group: group }
+                      = link_to "##{ subgroup }", data: { group: group } do
+                        | &#8627
+                        | &nbsp;
+                        = I18n.t("datasets.subgroups.#{ group }.#{ subgroup }")
 
       .attributes data-tab-key='input'
         .edits
-          .group.tab data-tab= "#intro"
-            | Placeholder
-
-          - EditableAttributesCollection::ORDER.each do |group|
-            .group.tab data-tab= "##{ group }"
-              = render partial: "datasets/attribute", collection: dataset.editable_attributes.grouped[group], locals: { form: f, commit: commit, dataset: dataset }
-
-          - dataset.editable_attributes.grouped.each do |group, attributes|
-            - if slider_group?(group)
-              .group.tab data-tab= "##{ group }" class='slider-group'
-                = render partial: "datasets/attribute", collection: attributes, locals: { form: f, commit: commit, dataset: dataset }
-
-          .group.tab data-tab= "#industry"
-            = f.fields_for(:dataset_edits, commit.dataset_edits.build(key: 'has_industry')) do |d|
-              = d.label :has_industry
-              = d.hidden_field :key, value: 'has_industry'
-              = d.check_box :value, checked: toggle_value_for(dataset, 'has_industry'), class: "toggle", data: { open: "industry_grouped" }
-
-            .toggle-group.industry_grouped class=('active' if toggle_value_for(dataset, 'has_industry'))
-              = render partial: "datasets/attribute", collection: dataset.editable_attributes.grouped['industry_grouped'], locals: { form: f, commit: commit, dataset: dataset }
-
-          .group.tab data-tab= "#agriculture"
-            = f.fields_for(:dataset_edits, commit.dataset_edits.build(key: 'has_agriculture')) do |d|
-              = d.label :has_agriculture
-              = d.hidden_field :key, value: 'has_agriculture'
-              = d.check_box :value, checked: toggle_value_for(dataset, 'has_agriculture'), class: "toggle", data: { open: "agriculture_grouped" }
-
-            .toggle-group.agriculture_grouped class=('active' if toggle_value_for(dataset, 'has_agriculture'))
-              = render partial: "datasets/attribute", collection: dataset.editable_attributes.grouped['agriculture_grouped'], locals: { form: f, commit: commit, dataset: dataset }
+          = render InterfaceElement.all, form: form
 
       .clear
 
@@ -72,7 +47,7 @@
             i.fa.fa-download
 
         .apply.changes
-          = f.submit "Save changes"
+          = form.submit "Save changes"
           = button_tag class: 'button run_analyzes', type: 'button' do
             | Analyze
             = image_tag 'wait.gif'

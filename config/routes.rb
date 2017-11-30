@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   root 'datasets#index'
 
   resources :datasets, only: %i(index), param: :area do
-    get :defaults, on: :collection
-    get :download
+    get :defaults, :download
 
     post :calculate
 

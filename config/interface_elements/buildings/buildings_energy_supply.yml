@@ -1,0 +1,13 @@
+key: buildings_energy_supply
+groups:
+  - header: local_production
+    items:
+      buildings_solar_pv_solar_radiation_demand:
+      buildings_final_demand_solar_thermal_demand:
+
+  - header: heat_network_supply
+    items:
+      buildings_collective_chp_network_gas_demand:
+      buildings_collective_chp_wood_pellets_demand:
+      buildings_chp_engine_biogas_demand:
+      buildings_collective_geothermal_demand:

@@ -10,10 +10,10 @@ class ChartRenderer
   end
 
   def data
-    case @chart_type
-    when *Dataset::EDITABLE_ATTRIBUTES.keys
-      chart.options.merge(stops: stops, chart_type: @chart_type, unit: unit)
-    when *%w(potential_heat_wko_neighborhood heat_networks bag)
+    case @chart_type.to_sym
+    when *chart_keys
+      chart.options.merge(stops: stops, chart_type: @chart_type)
+    when *%i(potential_heat_wko_neighborhood heat_networks bag)
       chart.options.merge(chart_type: @chart_type)
     else
       raise ArgumentError, "chart not found #{ @chart_type }"
@@ -22,12 +22,12 @@ class ChartRenderer
 
   private
 
-  def stops
-    ChartRenderer::EditableStops.for(chart)
+  def chart_keys
+    Transformer::GraphMethods.all.keys
   end
 
-  def unit
-    Dataset::EDITABLE_ATTRIBUTES[chart.key]['unit']
+  def stops
+    ChartRenderer::EditableStops.for(chart)
   end
 
   def chart

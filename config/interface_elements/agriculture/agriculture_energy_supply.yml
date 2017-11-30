@@ -1,0 +1,13 @@
+key: agriculture_energy_supply
+groups:
+  - header: gas_chp
+    items:
+      agriculture_chp_engine_network_gas_demand:
+
+  - header: biomass_chp
+    items:
+      agriculture_chp_supercritical_wood_pellets_demand:
+
+  - header: biogas_chp
+    items:
+      agriculture_chp_engine_biogas_demand:

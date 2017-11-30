@@ -69,6 +69,30 @@ var DatasetInterface = (function () {
         });
     }
 
+    // This method set the default 'scaled NL' values for
+    // attributes which were otherwise unknown.
+    function setDefaultsForTab(tab) {
+        var id, input;
+
+        $.when(this.defaults).done(function () {
+            tab.find('.editable').each(function() {
+                id = $(this).data('key');
+                input = $(this).find('input');
+
+                if (!input.val()) {
+                    input.attr('placeholder', GraphDefaults.defaults[id]);
+                }
+            });
+        });
+    }
+
+    function switchTab(group, tab) {
+        setDefaultsForTab.call(this, tab);
+
+        this.sliderGroupCollection.render
+            .call(this.sliderGroupCollection, group);
+    }
+
     return {
         enableAnalyzesTab: function () {
             new Tab($(".nav#overview-nav")).enable();
@@ -80,12 +104,13 @@ var DatasetInterface = (function () {
         },
 
         enable: function (geoId) {
-            var sliderGroupCollection = new SliderGroupCollection(),
-                localSettings = new LocalSettings(geoId);
+            var localSettings = new LocalSettings(geoId);
 
+            this.defaults = GraphDefaults.fetch(geoId);
+            this.sliderGroupCollection = new SliderGroupCollection(geoId);
             this.tab = new Tab(
                 $(".nav#input-nav"),
-                sliderGroupCollection.render.bind(sliderGroupCollection)
+                switchTab.bind(this)
             ).enable();
 
             addClickListenerToDownloadDataset.call(this);

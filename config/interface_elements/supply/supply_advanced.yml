@@ -1,0 +1,23 @@
+key: supply_advanced
+groups:
+  - header: bio_fuel_production
+    items:
+      energy_production_bio_ethanol_demand:
+      energy_production_bio_oil_demand:
+      energy_production_biodiesel_demand:
+      energy_production_biogas_demand:
+
+  - header: natural_resource_extraction
+    items:
+      energy_production_wood_demand:
+      energy_extraction_natural_gas_demand:
+      energy_extraction_coal_demand:
+      energy_extraction_crude_oil_demand:
+      energy_extraction_lignite_demand:
+      energy_extraction_uranium_oxide_demand:
+
+  - header: wood_distribution
+    type: slider
+    items:
+      energy_distribution_wood_energy_production_wood_pellets_parent_share:
+      energy_distribution_wood_energy_torrefaction_wood_parent_share: flex

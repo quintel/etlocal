@@ -1,0 +1,42 @@
+key: transport_road_transport
+groups:
+  - header: transport_road_transport_gasoline
+    type: slider
+    items:
+      transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share:
+      transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share:
+      transport_road_mixer_gasoline_transport_truck_using_gasoline_mix_parent_share:
+      transport_road_mixer_gasoline_transport_motorcycle_using_gasoline_mix_parent_share: flex
+
+  - header: transport_road_transport_diesel
+    type: slider
+    items:
+      transport_road_mixer_diesel_transport_car_using_diesel_mix_parent_share:
+      transport_road_mixer_diesel_transport_bus_using_diesel_mix_parent_share:
+      transport_road_mixer_diesel_transport_trucks_using_diesel_mix_parent_share: flex
+
+  - header: transport_road_transport_electricity
+    type: slider
+    items:
+      transport_final_demand_for_road_electricity_transport_car_using_electricity_parent_share:
+      transport_final_demand_for_road_electricity_transport_bus_using_electricity_parent_share:
+      transport_final_demand_for_road_electricity_transport_trucks_using_electricity_parent_share: flex
+      transport_final_demand_for_road_electricity_transport_motorcycle_using_electricity_parent_share:
+      transport_final_demand_for_road_electricity_transport_bicycle_using_electricity_parent_share:
+
+  - header: transport_road_transport_hydrogen
+    items:
+      transport_car_using_hydrogen_demand:
+
+  - header: transport_road_transport_lng
+    type: slider
+    items:
+      transport_road_mixer_lng_transport_bus_using_lng_mix_parent_share:
+      transport_road_mixer_lng_transport_truck_using_lng_mix_parent_share: flex
+
+  - header: transport_road_transport_cng
+    type: slider
+    items:
+      transport_road_mixer_compressed_network_gas_transport_car_using_compressed_natural_gas_parent_share: flex
+      transport_road_mixer_compressed_network_gas_transport_bus_using_compressed_natural_gas_parent_share:
+      transport_road_mixer_compressed_network_gas_transport_truck_using_compressed_natural_gas_parent_share:

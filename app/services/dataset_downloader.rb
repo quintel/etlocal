@@ -6,7 +6,7 @@ class DatasetDownloader
   end
 
   def validator
-    Transformer::AttributeValidator.new(@editable_attributes.as_json)
+    @validator ||= Transformer::DatasetCast.new(@editable_attributes.as_json)
   end
 
   def download
@@ -40,9 +40,14 @@ class DatasetDownloader
 
   # Analyzing
   def analyze_dataset!
-    dataset = Atlas::Dataset::Derived.find(@area_name)
-    dataset.attributes = DatasetAnalyzer.analyze(dataset, @editable_attributes.as_json)
+    dataset  = Atlas::Dataset::Derived.find(@area_name)
+    analyzer = DatasetAnalyzer.analyze(dataset, @editable_attributes.as_json)
+
+    dataset.attributes = analyzer.fetch(:area)
     dataset.save
+
+    dataset.graph_values.values = analyzer.fetch(:graph_values)
+    dataset.graph_values.save
   end
 
   # Moving

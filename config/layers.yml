@@ -3,9 +3,9 @@ mapbox_defaults: &mapbox_defaults
   type: 'mvt'
   url: "https://{a-d}.tiles.mapbox.com/v4/${layer_id}/{z}/{x}/{y}.vector.pbf?access_token=${access_token}"
   extent:
-    - 378486.2686971302
+    - 368486.2686971302
     - 6568397.781293049
-    - 801500.3337115699
+    - 811500.3337115699
     - 7094762.123545771
 
 dataset_selector:

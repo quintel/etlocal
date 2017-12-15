@@ -11,8 +11,8 @@
 = form_for [dataset, @commit], as: :change, url: dataset_commits_path(dataset.geo_id), remote: true do |form|
   .edit-form
     .content
-      .attributes
-        | You changed the following attributes:
+      .attributes-changed
+        strong You changed the following attributes:
 
         - @commit.dataset_edits.each do |edit|
           .edit
@@ -25,6 +25,8 @@
 
             span.unit
               = ''
+
+        hr
 
         = form.hidden_field :dataset_id, value: dataset.id
         = form.fields_for(:dataset_edits) do |d|

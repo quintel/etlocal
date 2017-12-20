@@ -13,7 +13,7 @@ class DatasetsController < ApplicationController
 
     begin
       @analyzes = AnalyzesDecorator.decorate(
-        DatasetAnalyzer.analyze(@atlas_dataset, params_for_calculation)
+        Transformer::Caster.cast(@atlas_dataset, params_for_calculation)
       )
     rescue ArgumentError => error
       @error = error

@@ -41,7 +41,7 @@ class DatasetDownloader
   # Analyzing
   def analyze_dataset!
     dataset  = Atlas::Dataset::Derived.find(@area_name)
-    analyzer = DatasetAnalyzer.analyze(dataset, @editable_attributes.as_json)
+    analyzer = Transformer::Caster.cast(dataset, @editable_attributes.as_json)
 
     dataset.attributes = analyzer.fetch(:area)
     dataset.save

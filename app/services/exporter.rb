@@ -18,7 +18,7 @@ module Exporter
   end
 
   def self.store(dataset, edits)
-    analyzer = DatasetAnalyzer.analyze(dataset, edits)
+    analyzer = Transformer::Caster.cast(dataset, edits)
 
     # Set area attributes
     dataset.attributes = analyzer.fetch(:area)

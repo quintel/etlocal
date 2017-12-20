@@ -1,30 +1,28 @@
-class GraphAssumptions
-  def self.get(dataset, dataset_key = :nl, calculated = false)
-    new(dataset, dataset_key, calculated).get
-  end
+module GraphAssumptions
+  module_function
 
-  def initialize(dataset, dataset_key, calculated)
-    @dataset = dataset
+  def get(dataset, dataset_key = :nl)
+    @dataset  = dataset
     @atlas_ds = Atlas::Dataset.find(dataset_key)
+    @graph    = Atlas::Runner.new(@atlas_ds).calculate
 
-    runner = Atlas::Runner.new(@atlas_ds)
-
-    @graph = calculated ? runner.calculate : runner.graph
+    scaled_area_attributes.merge(scaled_graph_values)
   end
 
-  def get
-    result = {}
+  def scaled_area_attributes
+    @atlas_ds.attributes.slice(*proportional_attributes)
+      .each_with_object({}) do |(key, value), result|
+        next unless value
 
-    methods.each_pair do |key, options|
-      result[key] = value_for(
-        options.export_method, options.export_key
-      )
+        result[key] = scale(value)
+      end
+  end
+
+  def scaled_graph_values
+    Transformer::GraphMethods.all.each_with_object({}) do |(key, opts), result|
+      result[key] = value_for(opts.export_method, opts.export_key)
     end
-
-    result
   end
-
-  private
 
   def value_for(method, key)
     case method
@@ -33,31 +31,25 @@ class GraphAssumptions
     when 'child_share', 'parent_share'
       edge = Atlas::Edge.find(key)
 
-      edge = @graph.node(edge.supplier)
-        .edges(:out)
-        .detect{ |e| e.to.key == edge.consumer }
+      if refinery_edge = @graph.node(edge.supplier)
+                           .edges(:out)
+                           .detect{ |e| e.to.key == edge.consumer }
 
-      if edge
-        edge.get(method.to_sym).to_f
+        refinery_edge.get(method.to_sym).to_f
       end
     end
   end
 
   def scale(value)
-    (value * scaling_factor).round(2)
+    @scaling_factor ||= @dataset.editable_attributes
+      .find('number_of_residences').value / @atlas_ds.number_of_residences
+
+    (value * @scaling_factor).round(2)
   end
 
-  def scaling_factor
-    base_value = @dataset.editable_attributes
-      .find('number_of_residences')
-      .value
-
-    parent_value = @atlas_ds.number_of_residences
-
-    (base_value / parent_value)
-  end
-
-  def methods
-    Transformer::GraphMethods.all
+  def proportional_attributes
+    Atlas::Dataset::Derived.attribute_set
+      .select{ |a| a.options[:proportional] }
+      .map(&:name)
   end
 end

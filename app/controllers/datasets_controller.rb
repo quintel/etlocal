@@ -36,7 +36,7 @@ class DatasetsController < ApplicationController
   end
 
   def defaults
-    render json: GraphAssumptions.get(@dataset, :nl, true)
+    render json: GraphAssumptions.get(@dataset, :nl)
   end
 
   private

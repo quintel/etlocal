@@ -43,8 +43,4 @@ class EditableAttributesCollection
       EditableAttribute.new(dataset, key.to_s, edits)
     end
   end
-
-  def graph_assumptions
-    @graph_assumptions ||= GraphAssumptions.get
-  end
 end

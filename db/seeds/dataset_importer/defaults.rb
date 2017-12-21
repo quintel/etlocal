@@ -11,35 +11,36 @@ class DatasetImporter
 
     def update_defaults
       @csv_row.editable_attributes.each do |key, value|
-        if dataset_edit = find_edit_from_commit(key)
-          dataset_edit.update_attribute(:value, value)
-        elsif dataset_edit_changed?(key)
-          DatasetEdit.create(key: key, value: value, commit: Commit.new(
-            user:    User.robot,
-            dataset: @dataset,
-            message: "Initial value Quintel"
-          ))
+        edit = @dataset.edits.find_by(key: key)
+
+        # If we have an older dataset edit
+        if edit
+          # If the commit is from the Robot user and the value is changed
+          if edit.commit.user == User.robot && edit.value != value
+            edit.update_attribute(:value, value)
+          end
+        elsif value =~ /\A[-+]?[0-9]*\.?[0-9]+\Z/
+          commit.dataset_edits.create!(key: key, value: value)
         end
       end
     end
 
     private
 
-    def find_edit_from_commit(key)
-      find_edits(key).where("`commits`.`user_id` = ?", User.robot).first
-    end
+    def commit
+      @commit ||= begin
+        commit = @dataset.commits.find_by(user: User.robot)
 
-    def dataset_edit_changed?(key)
-      find_edits(key).where("`commits`.`user_id` != ?", User.robot).empty?
-    end
+        if commit.nil?
+          commit = @dataset.commits.new
+          commit.user = User.robot
+          commit.message = "Initial value Quintel <a href='https://www.cbs.nl' target='_blank'>CBS</a>"
+          commit.save
+          commit
+        end
 
-    def find_edits(key)
-      dataset_edits.where(key: key)
-    end
-
-    def dataset_edits
-      @dataset_edits ||= DatasetEdit.joins(:commit)
-        .where("`commits`.`dataset_id` = ?", @dataset)
+        commit
+      end
     end
   end
 end

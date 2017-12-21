@@ -6,19 +6,21 @@ class DatasetImporter
   end
 
   def import
-    bar = ProgressBar.new(datasets.size)
+    bar   = ProgressBar.new(datasets.size)
+    scope = Dataset.includes(:edits).each_with_object({}) do |el, hash|
+      hash[el.geo_id] = el
+    end
 
     datasets.each do |row|
       dataset_row = DatasetCSVRow.new(row.to_h)
-
-      unless dataset = Dataset.find_by(geo_id: dataset_row.geo_id)
-        dataset = Dataset.find_or_create_by(geo_id: dataset_row.geo_id)
-        dataset.area = dataset_row.area
-        dataset.save
-      end
+      dataset     = (
+        scope[dataset_row.geo_id] ||
+        Dataset.create!(geo_id: dataset_row.geo_id, area: dataset_row.area)
+      )
 
       Defaults.set(dataset, dataset_row)
-      bar.increment!
+
+      bar.increment! if Rails.env.development?
     end
   end
 

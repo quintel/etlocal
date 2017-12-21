@@ -4,7 +4,7 @@ describe DatasetImporter do
   before do
     csv = [fixture_path, 'nl_datasets.csv'].join('/')
 
-    expect(dataset_importer).to receive(:dataset)
+    expect(dataset_importer).to receive(:datasets)
       .at_least(:once)
       .and_return(CSV.read(csv, headers: true))
   end
@@ -27,6 +27,10 @@ describe DatasetImporter do
 
   describe "re-importing" do
     let!(:dataset) { FactoryGirl.create(:dataset, geo_id: 'BU16800000') }
+    let!(:robot_commit) {
+      FactoryGirl.create(:commit,
+        user: User.robot, dataset: dataset, message: "Test")
+    }
 
     # Brings the total to: 7 + 1
     it "imports 7 datasets" do
@@ -37,6 +41,8 @@ describe DatasetImporter do
 
     describe "with existing changes" do
       describe "doesn't change a value if it is changed by another user" do
+        # Robot commit (that is always present)
+        # New commit
         let(:commit) {
           FactoryGirl.create(:commit, dataset: dataset, message: "Test")
         }

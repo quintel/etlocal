@@ -192,7 +192,7 @@
   .quinn .delta-bar .left, .quinn .delta-bar .main, .quinn
   .delta-bar .right, .quinn .handle,
   .quinn .reset, .quinn .minus, .quinn .plus, .quinn .help {
-    background-image: url(images/default-hidpi.png);
+    background-image: asset-url('default-hidpi.png');
     background-size: 130px 250px;
   }
 

@@ -16,15 +16,17 @@
 
         - @commit.dataset_edits.each do |edit|
           .edit
+            span.arrow>
+              | &rarr;
             span.key>
-              = I18n.t("activerecord.attributes.dataset_edit.#{ edit.key }", default: edit.key.humanize)
+              = I18n.t("activemodel.attributes.dataset_edit_form.#{ edit.key }", default: edit.key.humanize)
 
             span.to> to
-            span.val
+            span.val>
               = edit.value
 
             span.unit
-              = ''
+              = I18n.t("units.#{ edit.key }.to")
 
         hr
 

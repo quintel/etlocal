@@ -1,6 +1,4 @@
 class EditableAttributesCollection
-  ORDER = %w(households buildings transport energy other).freeze
-
   def self.keys
     @keys ||= Transformer::GraphMethods.all.keys +
       Transformer::DatasetCast.new.attributes.keys

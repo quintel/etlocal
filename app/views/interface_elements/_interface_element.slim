@@ -1,4 +1,8 @@
 .group.tab data-tab= "##{ interface_element.key }"
+  - if I18n.exists?("descriptions.groups.#{ interface_element.key }")
+    p.information
+      = I18n.t("descriptions.groups.#{ interface_element.key }")
+
   - interface_element.groups.each do |interface_group|
     - if interface_group.header
       strong= I18n.t("dataset_edits.groups.#{ interface_group.header }")

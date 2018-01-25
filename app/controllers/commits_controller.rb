@@ -7,25 +7,26 @@ class CommitsController < ApplicationController
 
   # GET new
   def new
-    @commit = current_user.commits.new
+    @dataset_edit_form = DatasetEditForm.new(
+      @dataset.editable_attributes.as_json
+    )
   end
 
   # POST dataset_edits
   def dataset_edits
-    @commit = current_user.commits.new(edit_params)
-    @filter = DatasetEditFilter.new(@dataset, @commit)
-
-    if @filter.changed_edits.any?
-      @commit.build_source
-    end
+    @dataset_edit_form = DatasetEditForm.new(edit_params)
+    @commit = @dataset_edit_form.submit(@dataset)
   end
 
   # POST create
   def create
     @commit = current_user.commits.new(commit_params)
-    @filter = DatasetEditFilter.new(@dataset, @commit)
 
     if @commit.save
+      @dataset_edit_form = DatasetEditForm.new(
+        @dataset.editable_attributes.as_json
+      )
+
       flash.now[:success] = I18n.t("dataset_edits.success", dataset: @dataset.area)
     else
       @commit.build_source
@@ -38,7 +39,7 @@ class CommitsController < ApplicationController
     params
       .require(:edits)
       .permit(:dataset_id,
-              dataset_edits_attributes: [:key, :value])
+        *EditableAttributesCollection.keys)
   end
 
   def commit_params

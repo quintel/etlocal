@@ -8,30 +8,32 @@
 
 = render 'shared/flash', flash: flash
 
-= form_for [dataset, commit], as: :change, url: dataset_commits_path(dataset.geo_id), remote: true do |form|
+= form_for [dataset, @commit], as: :change, url: dataset_commits_path(dataset.geo_id), remote: true do |form|
   .edit-form
     .content
-      .attributes
-        | You changed the following attributes:
+      .attributes-changed
+        strong You changed the following attributes:
 
-        - @filter.changed_edits.each do |edit|
+        - @commit.dataset_edits.each do |edit|
           .edit
+            span.arrow>
+              | &rarr;
             span.key>
-              = I18n.t("activerecord.attributes.dataset_edit.#{ edit.key }", default: edit.key.humanize)
+              = I18n.t("activemodel.attributes.dataset_edit_form.#{ edit.key }", default: edit.key.humanize)
 
             span.to> to
-            span.val
-              = edit.parsed_value
+            span.val>
+              = edit.value
 
             span.unit
-              - unless edit.unit == 'bool'
-                = edit.unit
+              = I18n.t("units.#{ edit.key }.to")
+
+        hr
 
         = form.hidden_field :dataset_id, value: dataset.id
         = form.fields_for(:dataset_edits) do |d|
-          - if @filter.include?(d.object.key)
-            = d.hidden_field :key, value: d.object.key
-            = d.hidden_field :value, value: d.object.value
+          = d.hidden_field :key, value: d.object.key
+          = d.hidden_field :value, value: d.object.value
 
         .field
           = form.label :message, "Reason for changes"

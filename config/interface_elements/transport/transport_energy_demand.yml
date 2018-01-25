@@ -1,0 +1,45 @@
+key: transport_energy_demand
+groups:
+  - header: transport_energy_demand_gasoline
+    items:
+      transport_final_demand_gasoline_demand:
+
+  - header: transport_energy_demand_diesel
+    items:
+      transport_final_demand_diesel_demand:
+
+  - header: transport_energy_demand_electricity
+    items:
+      transport_final_demand_electricity_demand:
+
+  - header: transport_energy_demand_lng
+    items:
+      transport_final_demand_lng_demand:
+      transport_final_demand_for_road_lng_demand:
+      transport_final_demand_for_shipping_lng_demand:
+
+  - header: transport_energy_demand_cng
+    items:
+      transport_final_demand_compressed_network_gas_demand:
+      transport_final_demand_for_road_compressed_network_gas_demand:
+
+  - header: transport_energy_demand_lpg
+    items:
+      transport_final_demand_lpg_demand:
+      transport_final_demand_hydrogen_demand:
+      transport_final_demand_heavy_fuel_oil_demand:
+      transport_final_demand_kerosene_demand:
+      transport_final_demand_coal_demand:
+      transport_final_demand_crude_oil_non_energetic_demand:
+
+  - header: transport_energy_demand_biodiesel
+    items:
+      transport_final_demand_biodiesel_demand:
+
+  - header: transport_energy_demand_bio_ethanol
+    items:
+      transport_final_demand_bio_ethanol_demand:
+
+  - header: transport_energy_demand_bio_lng
+    items:
+      transport_final_demand_bio_lng_demand:

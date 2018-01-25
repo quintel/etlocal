@@ -7,20 +7,11 @@ class AnalyzesDecorator
     @analyzes = analyzes
   end
 
-  def initializer_inputs
-    init = @analyzes.fetch(:init)
-
-    Input
-      .find_all(init.keys)
-      .group_by(&:group)
-      .each_with_object({}) do |(group, inputs), object|
-        object[group] = Hash[inputs.map do |input|
-          [input.key, init[input.key]]
-        end]
-      end
+  def graph_values
+    @analyzes.fetch(:graph_values)
   end
 
   def area_attributes
-    @analyzes.except(:init)
+    @analyzes.fetch(:area)
   end
 end

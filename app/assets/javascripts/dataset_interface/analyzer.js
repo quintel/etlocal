@@ -3,18 +3,17 @@ DatasetInterface.Analyzer = (function () {
 
     function formAttributesToJSON(form) {
         var value,
+            key,
             result = {},
             object = form.serializeObject();
 
-        object.edits.dataset_edits_attributes.forEach(function (el) {
-            if (/^has/.test(el.key)) {
-                value = (el.value === '1');
-            } else {
-                value = parseFloat(el.value);
+        for (key in object.edits) {
+            if (object.edits.hasOwnProperty(key)) {
+                if (key != 'dataset_id') {
+                    result[key] = object.edits[key];
+                }
             }
-
-            result[el.key] = value;
-        });
+        }
 
         return JSON.stringify(result);
     }

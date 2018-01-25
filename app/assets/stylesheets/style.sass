@@ -49,6 +49,8 @@ h1 a
     border-color: darken($error-color, 20)
 
 form
+  label
+    font-weight: normal
   .error
     background-color: $error-color
     border-color: darken($error-color, 20)
@@ -81,6 +83,9 @@ table tbody tr td a.button
     float: none
     padding: 15px 0 0 13px
 
+.attributes-changed
+  padding: 25px
+
 .attributes
   padding: 0 15px 30px 25px
   float: left
@@ -94,6 +99,9 @@ table tbody tr td a.button
     margin: 0
 
   .group
+    &.slider-group
+      margin-bottom: 20px
+
     &.sub
       margin-top: 40px
 
@@ -106,22 +114,26 @@ table tbody tr td a.button
     .slider-wrapper
       margin-right: 35px
 
+      label
+        display: inline-block
+        width: 260px
+
       input[type=text]
+        display: inline
         height: 34px
-        width: 60px
+        width: 40px
         margin-bottom: 0
 
       .title, .slider
         display: inline-block
 
-      .title
-        width: 260px
-
       .history
-        margin-right: 5px
+        margin: 0 5px
+        display: inline-block
+        width: 7px
 
       .slider
-        width: 300px
+        width: 270px
 
       .value
         margin-left: 10px
@@ -244,7 +256,7 @@ div.history, div.information
         color: #999
 
     .content
-      margin-top: 5px
+      margin-top: 10px
       text-align: justify
 
     .source
@@ -256,7 +268,7 @@ div.history, div.information
     margin-top: 0
     margin-bottom: 0
     .line-arrow
-      right: 45px
+      right: 89px
 
 .button.download-dataset,
 button.run_analyzes
@@ -411,11 +423,16 @@ ul.tab-nav
         display: block
 
       li.tab
-        background-color: #e7e7e7
+        background-color: #d7d7d7
 
     a.active
-      border-right: 2px solid darken($border-color, 20)
       margin-top: -1px
+      background-color: $selected-color
+      color: white
+
+      &:hover
+        background-color: $selected-color
+        color: white
 
     a
       text-decoration: none

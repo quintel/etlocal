@@ -6,12 +6,12 @@ var Slider = (function () {
     function setValue(value) {
         this.input.val(value);
 
-        setVal.call(this, Math.round(value * 100) / 100);
+        setVal.call(this, value);
     }
 
     // Update span text value next to the slider
     function setVal(value) {
-        this.spanVal.text(value);
+        this.spanVal.text(Math.round(value * 100) / 100);
     }
 
     // Callback for dragging the slider
@@ -82,7 +82,7 @@ var Slider = (function () {
         setDefaultValue: function (value) {
             // Enable slider from a default graph value, only do this
             // when there's no previously edited value present.
-            if (this.input.val() === "") {
+            if (!this.input.val()) {
                 this.slider.enable();
 
                 // Oddly specific: the last argument is a silent call so
@@ -90,7 +90,7 @@ var Slider = (function () {
                 // when setting the defaults).
                 this.slider.setTentativeValue(value, true, true);
 
-                setValue.call(this, value);
+                setVal.call(this, value);
             }
         }
     };
@@ -100,6 +100,8 @@ var Slider = (function () {
         this.sliderEl   = this.scope.find('.slider');
         this.spanVal    = this.scope.find('span.value');
         this.key        = this.sliderEl.data('key');
+        this.flexible   = this.sliderEl.data('flexible') === 'flex';
+        this.edited     = this.sliderEl.data('edited') === 'edited';
         this.input      = this.scope.find('input.' + this.key);
     }
 

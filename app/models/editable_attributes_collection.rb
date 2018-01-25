@@ -1,5 +1,8 @@
 class EditableAttributesCollection
-  ORDER = %w(households buildings transport supply).freeze
+  def self.keys
+    @keys ||= Transformer::GraphMethods.all.keys +
+      Transformer::DatasetCast.new.attributes.keys
+  end
 
   def initialize(dataset)
     @dataset    = dataset
@@ -10,10 +13,6 @@ class EditableAttributesCollection
     @attributes.detect do |attribute|
       attribute.key == key
     end
-  end
-
-  def grouped
-    sorted.group_by(&:group)
   end
 
   def exists?(method)
@@ -29,6 +28,8 @@ class EditableAttributesCollection
 
   def as_json(*)
     @attributes.each_with_object({}) do |edit, object|
+      next unless edit.value
+
       object[edit.key] = edit.value
     end
   end
@@ -36,22 +37,8 @@ class EditableAttributesCollection
   private
 
   def setup_attributes(dataset)
-    Dataset::EDITABLE_ATTRIBUTES.flat_map do |key, options|
-      if graph_assumptions[key.to_sym]
-        SliderGroup.expand(dataset, graph_assumptions, edits, key)
-      else
-        EditableAttribute.new(dataset, key, edits, options)
-      end
+    self.class.keys.flatten.map do |key|
+      EditableAttribute.new(dataset, key.to_s, edits)
     end
-  end
-
-  def sorted
-    @attributes.sort_by do |attribute|
-      ORDER.index(attribute.group) || Float::INFINITY
-    end
-  end
-
-  def graph_assumptions
-    @graph_assumptions ||= GraphAssumptions.get
   end
 end

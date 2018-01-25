@@ -33,6 +33,27 @@ describe CommitsController do
     end
   end
 
+  # POST dataset_edits.js
+  #
+  # This is a substep. In the next step you'll
+  # see your changed edits and you can specify
+  # a commit message.
+  describe "#dataset_edits" do
+    before do
+      post :dataset_edits, params: {
+        dataset_area: dataset.geo_id,
+        edits: {
+          dataset_id: dataset.id,
+          number_of_residences: 15,
+          number_of_inhabitants: 50
+        }
+      }, format: :js, xhr: true
+    end
+
+    it "is succesful" do
+    end
+  end
+
   describe "#create" do
     before do
       post :create, params: {

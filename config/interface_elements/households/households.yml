@@ -1,0 +1,7 @@
+key: households
+groups:
+  - items:
+      number_of_inhabitants:
+      number_of_residences:
+      percentage_of_old_residences:
+      residences_roof_surface_available_for_pv:

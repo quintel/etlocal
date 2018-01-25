@@ -1,12 +1,22 @@
+general:
 households:
-  - households_final_demand_electricity
-  - households_final_demand_for_cooking_electricity
-  - households_final_demand_for_cooling_electricity
-  - households_final_demand_for_lighting_electricity
-  - households_final_demand_network_gas
-
+  - households_energy_demand
+  - households_energy_supply
+  - households_advanced
 buildings:
+  - buildings_energy_demand
+  - buildings_energy_supply
+  - buildings_advanced
 transport:
-industry:
+  - transport_energy_demand
+  - transport_road_transport
+  - transport_rail_transport
+  - transport_technologies
 agriculture:
-supply:
+  - agriculture_energy_supply
+  - agriculture_advanced
+industry:
+energy:
+  - supply_renewable_production
+  - supply_fossil_production
+  - supply_advanced

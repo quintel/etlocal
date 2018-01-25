@@ -8,7 +8,8 @@ class DatasetImporter
     end
 
     def editable_attributes
-      @attributes.slice(*Dataset::EDITABLE_ATTRIBUTES.keys)
+      @attributes.slice(
+        *Transformer::DatasetCast.new.attributes.keys.map(&:to_s))
     end
 
     private

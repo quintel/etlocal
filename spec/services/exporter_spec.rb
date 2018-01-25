@@ -24,13 +24,6 @@ describe Exporter do
       }))
   }
 
-  # Stub graph nodes demand; every node demand = 5.0
-  before do
-    graph = Graph.new("dataset_analyzer_base").build
-
-    expect_any_instance_of(Atlas::Runner).to receive(:calculate).and_return(graph)
-  end
-
   it "exports a dataset" do
     Exporter.export(ameland)
 

@@ -1,34 +1,55 @@
-class GraphAssumptions
-  def self.get(dataset_key = :nl, calculated = false)
-    new(dataset_key, calculated).get
+module GraphAssumptions
+  module_function
+
+  def get(dataset, dataset_key = :nl)
+    @dataset  = dataset
+    @atlas_ds = Atlas::Dataset.find(dataset_key)
+    @graph    = Atlas::Runner.new(@atlas_ds).calculate
+
+    scaled_area_attributes.merge(scaled_graph_values)
   end
 
-  def initialize(dataset_key, calculated)
-    dataset = Atlas::Dataset.find(dataset_key)
-    runner  = Atlas::Runner.new(dataset)
+  def scaled_area_attributes
+    @atlas_ds.attributes.slice(*proportional_attributes)
+      .each_with_object({}) do |(key, value), result|
+        next unless value
 
-    @graph  = calculated ? runner.calculate : runner.graph
+        result[key] = scale(value)
+      end
   end
 
-  def get
-    nodes.compact.each_with_object({}) do |node, obj|
-      obj[node.key] = edges_for(node)
+  def scaled_graph_values
+    Transformer::GraphMethods.all.each_with_object({}) do |(key, opts), result|
+      result[key] = value_for(opts.export_method, opts.export_key)
     end
   end
 
-  private
+  def value_for(method, key)
+    case method
+    when 'demand', 'number_of_units'
+      scale(@graph.node(key).get(method.to_sym))
+    when 'child_share', 'parent_share'
+      edge = Atlas::Edge.find(key)
 
-  def edges_for(node)
-    Hash[node.edges(:out).map do |edge|
-      [edge.child.key.to_s, edge.parent_share.to_f]
-    end]
+      if refinery_edge = @graph.node(edge.supplier)
+                           .edges(:out)
+                           .detect{ |e| e.to.key == edge.consumer }
+
+        refinery_edge.get(method.to_sym).to_f
+      end
+    end
   end
 
-  def nodes
-    Dataset::EDITABLE_ATTRIBUTES
-      .select { |_, opts| opts['slider_group'] }
-      .keys.map do |key|
-        @graph.node(key.to_sym)
-      end
+  def scale(value)
+    @scaling_factor ||= @dataset.editable_attributes
+      .find('number_of_residences').value / @atlas_ds.number_of_residences
+
+    (value * @scaling_factor).round(2)
+  end
+
+  def proportional_attributes
+    Atlas::Dataset::Derived.attribute_set
+      .select{ |a| a.options[:proportional] }
+      .map(&:name)
   end
 end

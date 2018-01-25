@@ -1,0 +1,75 @@
+.group.tab data-tab= "##{ interface_element.key }"
+  - if I18n.exists?("descriptions.groups.#{ interface_element.key }")
+    p.information
+      = I18n.t("descriptions.groups.#{ interface_element.key }")
+
+  - interface_element.groups.each do |interface_group|
+    - if interface_group.header
+      strong= I18n.t("dataset_edits.groups.#{ interface_group.header }")
+
+    .group class= ('slider-group' if interface_group.type == :slider)
+      - interface_group.items.each do |key, flexible|
+        - if interface_group.type == :slider
+          .editable.slider
+            .slider-wrapper.input
+              = form.label key
+
+              .slider data-key= key data-flexible= flexible data-edited= ('edited' if @dataset.editable_attributes.edits[key])
+              span.history data-key= key
+                - if flexible == 'flex'
+                  i.fa
+                - else
+                  i.fa.fa-history
+
+              span.value= '0'
+              - unless flexible == 'flex'
+                = form.hidden_field key, class: key
+
+              span.unit
+                = '%'
+
+              .clear
+
+        - else
+          .editable data-key=key
+            .border
+            .input
+              .left
+                = form.label key
+              .right
+                span.history data-key= key
+                  i.fa.fa-history
+                span.val
+                  = form.text_field key
+                span.unit data-to= I18n.t("units.#{ key }.to")
+                  = I18n.t("units.#{ key }.from", default: I18n.t("units.#{ key }.to")).html_safe
+              .clear
+
+        - unless flexible == 'flex'
+          .history.hidden class= key
+            .line-arrow
+
+            strong = I18n.t("dataset_edits.history")
+
+            - (@dataset.editable_attributes.edits[key] || []).each do |dataset_edit|
+              .change
+                .history-line
+                  span.border
+                  span.line
+                    span.created
+                      => I18n.l dataset_edit.created_at, format: :short
+                    span.by
+                      => I18n.t("dataset_edits.changed_by", user: dataset_edit.commit.user.name)
+                    span.to
+                      | &rarr;
+                      = dataset_edit.value
+
+                .content
+                  .reason
+                    = simple_format dataset_edit.commit.message
+
+                  - if dataset_edit.commit.source
+                    .source
+                      = link_to I18n.t("dataset_edits.download_source"), dataset_edit.commit.source.source_file.url, class: "button"
+
+                .clear

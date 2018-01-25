@@ -1,0 +1,5 @@
+key: buildings
+groups:
+  - items:
+      number_of_buildings:
+      buildings_roof_surface_available_for_pv:

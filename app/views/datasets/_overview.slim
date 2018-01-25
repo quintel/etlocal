@@ -11,26 +11,21 @@
       li.tab
         = link_to "Area attributes", "#area_attributes", data: { group: 'area_attributes' }
       li.tab
-        = link_to "Initializer inputs", "#initializer_inputs", data: { group: 'initializer_inputs' }
-        ul.sub-nav id='initializer_inputs'
-          - @analyzes.initializer_inputs.each_pair do |group, _|
-            li.tab
-              = link_to I18n.t("initializer_inputs.groups.#{ group }"), "##{ group }", data: { group: group }
+        = link_to "Initializer inputs", "#graph_values", data: { group: 'graph_values' }
 
   .attributes data-tab-key='overview'
     .group.tab data-tab="#area_attributes"
       strong Area attributes
       = render partial: 'datasets/editable', collection: @analyzes.area_attributes
 
-    .group.tab data-tab="#initializer_inputs"
-      strong Initializer inputs
+    .group.tab data-tab="#graph_values"
+      strong Graph values
 
-    - @analyzes.initializer_inputs.each_pair do |group, inputs|
-      .group.tab data-tab= "##{ group }"
-        strong
-          = I18n.t("initializer_inputs.groups.#{ group }")
+    - @analyzes.graph_values.each_pair do |group, inputs|
+      strong
+        = I18n.t("graph_values.groups.#{ group }", default: group.to_s.humanize)
 
-        = render partial: 'datasets/editable', collection: inputs
+      = render partial: 'datasets/editable', collection: inputs
 
   .clear
 

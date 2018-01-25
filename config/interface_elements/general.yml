@@ -1,0 +1,9 @@
+key: general
+groups:
+  - items:
+      areable_land:
+      coast_line:
+      onshore_suitable_for_wind:
+      offshore_suitable_for_wind:
+      land_available_for_solar:
+      co2_emission_1990:

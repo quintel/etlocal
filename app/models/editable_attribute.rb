@@ -1,27 +1,10 @@
 class EditableAttribute
   attr_reader :key
 
-  def initialize(dataset, key, edits, options = {})
+  def initialize(dataset, key, edits)
     @dataset = dataset
     @key     = key
     @edits   = edits
-    @options = options
-  end
-
-  def unit
-    @options['unit']
-  end
-
-  def group
-    @options['group']
-  end
-
-  def default_value
-    @options['default']
-  end
-
-  def slider?
-    !!@options['slider']
   end
 
   def previous
@@ -32,23 +15,26 @@ class EditableAttribute
     previous.first
   end
 
+  # Defaults for atlas attributes
+  #
+  # If the dataset already exists in ETSource, assume from that dataset.
+  # If there's a default specified in the default value options on the
+  # attribute (like `has_industry` or `has_agriculture`) use that one.
+  #
   def default
     return unless is_atlas_attribute?
 
     if @dataset.atlas_dataset
       @dataset.atlas_dataset.public_send(@key)
-    else
-      parent_dataset = Atlas::Dataset.find(@dataset.country)
-
-      parent_dataset.public_send(@key) ||
-        Dataset.defaults.fetch(@key.to_sym)
+    elsif %w(has_industry has_agriculture).include?(@key)
+      @dataset.public_send(@key)
     end
   end
 
   # If a dataset has an edit - give that value. If it doesn't have an edit,
   # fall back to the default value.
   def value
-    latest ? latest.parsed_value : default
+    latest ? latest.value : default
   end
 
   private

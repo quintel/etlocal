@@ -9,11 +9,11 @@ FactoryGirl.define do
       message "Initial commit"
 
       after(:create) do |commit|
-        Dataset::EDITABLE_ATTRIBUTES.each_pair do |key, opts|
-          if opts['mandatory']
-            FactoryGirl.create(:dataset_edit, key: key, value: 1.0, commit: commit)
-          end
-        end
+        FactoryGirl.create(:dataset_edit,
+          key: 'number_of_residences',
+          value: 1.0,
+          commit: commit
+        )
       end
     end
   end

@@ -2,7 +2,7 @@ class DatasetsController < ApplicationController
   layout 'map', only: :index
 
   before_action :authenticate_user!
-  before_action :find_dataset, only: %i(calculate download)
+  before_action :find_dataset, only: %i(calculate download defaults)
 
   def index
     @datasets = Dataset.all
@@ -13,7 +13,7 @@ class DatasetsController < ApplicationController
 
     begin
       @analyzes = AnalyzesDecorator.decorate(
-        DatasetAnalyzer.analyze(@atlas_dataset, params_for_calculation)
+        Transformer::Caster.cast(@atlas_dataset, params_for_calculation)
       )
     rescue ArgumentError => error
       @error = error
@@ -29,12 +29,14 @@ class DatasetsController < ApplicationController
       send_data @dataset_downloader.download,
         filename: @dataset_downloader.zip_filename
     else
-      render json: { error: @dataset_downloader.validator.message }
+      render json: {
+        error: @dataset_downloader.validator.errors.full_messages.join(', ')
+      }
     end
   end
 
   def defaults
-    render json: GraphAssumptions.get(:nl, true)
+    render json: GraphAssumptions.get(@dataset, :nl)
   end
 
   private

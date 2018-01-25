@@ -3,10 +3,28 @@ require 'rails_helper'
 describe DatasetEditForm do
   let(:dataset) { FactoryGirl.create(:dataset) }
 
-  it "is invalid" do
-    commit_form = DatasetEditForm.new
+  context "invalid" do
+    it "empty form" do
+      commit_form = DatasetEditForm.new
 
-    expect(commit_form.valid?).to eq(false)
+      expect(commit_form.valid?).to eq(false)
+    end
+
+    it "has a negative number of residences" do
+      commit_form = DatasetEditForm.new(
+        number_of_residences: -1
+      )
+
+      expect(commit_form.valid?).to eq(false)
+    end
+
+    it "number of residences is 0" do
+      commit_form = DatasetEditForm.new(
+        number_of_residences: 0
+      )
+
+      expect(commit_form.valid?).to eq(false)
+    end
   end
 
   it 'has all the attributes of the transformer dataset cast' do

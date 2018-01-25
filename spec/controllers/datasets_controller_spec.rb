@@ -20,43 +20,6 @@ describe DatasetsController do
       end
     end
 
-    describe "#calculate" do
-      let(:dataset) { FactoryGirl.create(:dataset) }
-
-      describe "faulty" do
-        it 'and gives a json error' do
-          post :calculate, params: {
-            dataset_area: dataset.geo_id,
-            calculate: { edits: JSON.dump({ test: 1 }) }
-          }, format: :js
-
-          expect(controller.instance_variable_get(:"@error").message).to include("can't be blank")
-        end
-      end
-
-      describe "correctly" do
-        let(:commit) {
-          FactoryGirl.create(:initial_commit, dataset: dataset)
-        }
-
-        let(:edits) {
-          commit.dataset_edits.reduce({}) do |object, edit|
-            object[edit.key] = edit.value
-            object
-          end
-        }
-
-        it 'and returns a set of initializer inputs' do
-          post :calculate, params: {
-            dataset_area: dataset.geo_id,
-            calculate: { edits: JSON.dump(edits) },
-          }, format: 'js'
-
-          expect(response).to be_success
-        end
-      end
-    end
-
     describe '#download' do
       let(:dataset) { FactoryGirl.create(:dataset, geo_id: 'test_1', area: "Test") }
 

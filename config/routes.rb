@@ -2,12 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   root 'datasets#index'
 
-  resources :datasets, only: %i(index), param: :area do
+  resources :datasets, only: %i(index edit), param: :area do
     get :defaults, :download
 
-    post :calculate
-
-    resources :commits, only: %i(new create) do
+    resources :commits, only: %i(create) do
       post :dataset_edits, on: :collection
     end
   end

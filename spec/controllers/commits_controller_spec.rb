@@ -5,34 +5,6 @@ describe CommitsController do
   let!(:sign_in_user) { sign_in(user) }
   let(:dataset) { FactoryGirl.create(:dataset) }
 
-  describe "when signed in" do
-    it 'fetches the show page' do
-      get :new, params: { dataset_area: dataset.geo_id }, format: :js, xhr: true
-
-      expect(response).to be_success
-    end
-
-    it 'fetches the show page as js' do
-      get :new, params: { dataset_area: dataset.geo_id }, format: :js, xhr: true
-
-      expect(response).to be_success
-    end
-
-    describe 'redirects to root page when a dataset is not found' do
-      before do
-        get :new, params: { dataset_area: "does-not-exist" }, format: :js, xhr: true
-      end
-
-      it 'redirects' do
-        expect(response).to redirect_to(root_path)
-      end
-
-      it 'sets flash message' do
-        expect(flash[:error]).to be_present
-      end
-    end
-  end
-
   # POST dataset_edits.js
   #
   # This is a substep. In the next step you'll
@@ -42,7 +14,7 @@ describe CommitsController do
     before do
       post :dataset_edits, params: {
         dataset_area: dataset.geo_id,
-        edits: {
+        dataset_edit_form: {
           dataset_id: dataset.id,
           number_of_residences: 15,
           number_of_inhabitants: 50
@@ -51,6 +23,7 @@ describe CommitsController do
     end
 
     it "is succesful" do
+      expect(response).to be_success
     end
   end
 

@@ -18,10 +18,9 @@ class ChartRenderer
 
     def datasets
       @dataset ||= Dataset
-        .select("`datasets`.`geo_id`, `dataset_edits`.`key`, `dataset_edits`.`value`")
+        .select("`datasets`.`id`, `datasets`.`geo_id`, `dataset_edits`.`key`, `dataset_edits`.`value`")
         .joins(:edits)
         .where("`dataset_edits`.`key` = ?", @chart.editable_key)
-        .group(:geo_id)
     end
   end
 end

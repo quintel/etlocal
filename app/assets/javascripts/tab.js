@@ -28,6 +28,8 @@ var Tab = (function () {
 
             currentTab.add(target).addClass("active");
 
+            localSettings.set('current', current);
+
             if (target.parents("ul.sub-nav").length < 1) {
                 $(this.nav).find("ul.sub-nav").removeClass("active");
             }
@@ -38,19 +40,22 @@ var Tab = (function () {
         },
 
         enable: function () {
-            var currentDefault = this.menuItems.first();
+            var currentDefault = localSettings.get('current') ?
+                this.menuItems.find("a[href='" + localSettings.get('current') + "']") :
+                this.menuItems.first();
 
             this.toggleTab({ target: currentDefault });
             this.menuItems.on("click", clickToggleTab.bind(this));
         }
     };
 
-    function Tab(nav, toggleCallback) {
+    function Tab(nav, toggleCallback, localSettings) {
         this.nav            = nav;
         this.key            = $(this.nav).data('key');
         this.tabScope       = $("div[data-tab-key='" + this.key + "']");
         this.menuItems      = $(this.nav).find("a");
         this.toggleCallback = toggleCallback || function () { return; };
+        this.localSettings  = localSettings;
     }
 
     return Tab;

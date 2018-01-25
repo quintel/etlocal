@@ -149,6 +149,25 @@ $map-height: 100%
         padding: 5px 10px
 
       form
+        .attributes .editable .input span.val input.changed
+          &.valid
+            border-color: $success-color
+          &.invalid
+            border-color: $error-color
+
+        .overview-edits .apply.changes
+          &.valid
+            background-color: $success-color
+
+            .button, button, input[type=submit]
+              background-color: darken($success-color, 5)
+
+          &.invalid
+            background-color: $error-color
+
+            .button, button, input[type=submit]
+              background-color: darken($error-color, 5)
+
         .edit-form
           textarea#change_message
             width: 98%

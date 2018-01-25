@@ -1,27 +1,25 @@
 class DatasetsController < ApplicationController
-  layout 'map', only: :index
+  layout false, only: :edit
+  format 'js', only: :edit
 
   before_action :authenticate_user!
-  before_action :find_dataset, only: %i(calculate download defaults)
+  before_action :find_dataset, only: %i(validate edit download defaults)
 
+  # GET index
   def index
     @datasets = Dataset.all
+
+    render layout: 'map'
   end
 
-  def calculate
-    @atlas_dataset = Atlas::Dataset.find(@dataset.country)
-
-    begin
-      @analyzes = AnalyzesDecorator.decorate(
-        Transformer::Caster.cast(@atlas_dataset, params_for_calculation)
-      )
-    rescue ArgumentError => error
-      @error = error
-    end
-
-    render layout: false
+  # GET edit.js
+  def edit
+    @dataset_edit_form = DatasetEditForm.new(
+      @dataset.editable_attributes.as_json
+    )
   end
 
+  # POST download
   def download
     @dataset_downloader = DatasetDownloader.new(@dataset)
 
@@ -35,17 +33,16 @@ class DatasetsController < ApplicationController
     end
   end
 
+  # GET defaults
   def defaults
     render json: GraphAssumptions.get(@dataset, :nl)
   end
 
   private
 
-  def params_for_calculation
-    JSON.parse(permitted_params.fetch(:edits))
-  end
-
   def permitted_params
-    params.require(:calculate).permit(:edits)
+    params.require(:dataset_edit_form).permit(
+      :dataset_id, *EditableAttributesCollection.keys
+    ).reject{|_, v| v.blank? }
   end
 end

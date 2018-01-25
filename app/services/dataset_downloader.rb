@@ -1,8 +1,8 @@
 class DatasetDownloader
   def initialize(dataset)
     @dataset             = dataset
-    @editable_attributes = @dataset.editable_attributes
-    @area_name           = area_name
+    @editable_attributes = dataset.editable_attributes
+    @area_name           = dataset.temp_name
   end
 
   def validator
@@ -11,8 +11,8 @@ class DatasetDownloader
 
   def download
     begin
-      scale_dutch_dataset!
-      analyze_dataset!
+      Dataset::Scaler.scale!(@dataset, @dataset.editable_attributes.as_json)
+      Dataset::Analyzer.analyze!(@dataset, @dataset.editable_attributes.as_json)
       move_dataset_to_temp!
       compress_dataset!
       File.read(zip_file_path.to_s)
@@ -27,29 +27,7 @@ class DatasetDownloader
 
   private
 
-  # Scaling
-  def scale_dutch_dataset!
-    Atlas::Scaler
-      .new(@dataset.country, @area_name, number_of_residences)
-      .create_scaled_dataset
-  end
-
-  def number_of_residences
-    @editable_attributes.find('number_of_residences').value
-  end
-
   # Analyzing
-  def analyze_dataset!
-    dataset  = Atlas::Dataset::Derived.find(@area_name)
-    analyzer = Transformer::Caster.cast(dataset, @editable_attributes.as_json)
-
-    dataset.attributes = analyzer.fetch(:area)
-    dataset.save
-
-    dataset.graph_values.values = analyzer.fetch(:graph_values)
-    dataset.graph_values.save
-  end
-
   # Moving
   def move_dataset_to_temp!
     FileUtils.mv(
@@ -79,9 +57,5 @@ class DatasetDownloader
 
   def tmp_folder
     Rails.root.join('tmp')
-  end
-
-  def area_name
-    "#{ Time.now.to_i }-#{ @dataset.area.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '') }"
   end
 end

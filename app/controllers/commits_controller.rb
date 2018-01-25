@@ -14,7 +14,7 @@ class CommitsController < ApplicationController
 
   # POST dataset_edits
   def dataset_edits
-    @dataset_edit_form = DatasetEditForm.new(edit_params)
+    @dataset_edit_form = DatasetEditForm.new(dataset_edit_params.to_h)
     @commit = @dataset_edit_form.submit(@dataset)
   end
 
@@ -35,9 +35,9 @@ class CommitsController < ApplicationController
 
   private
 
-  def edit_params
+  def dataset_edit_params
     params
-      .require(:edits)
+      .require(:dataset_edit_form)
       .permit(:dataset_id,
         *EditableAttributesCollection.keys)
   end

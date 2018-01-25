@@ -22,7 +22,7 @@ Areas.DatasetSelector = (function () {
             $.ajax({
                 type: "GET",
                 dataType: 'script',
-                url: '/datasets/' + geoId + '/commits/new.js'
+                url: '/datasets/' + geoId + '/edit.js'
             });
         });
 

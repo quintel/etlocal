@@ -41,11 +41,9 @@ var DatasetInterface = (function () {
         });
     }
 
-    function addClickListenerToAnalyzesButton() {
-        $(".apply button.run_analyzes").off("click").on("click", function (e) {
-            e.preventDefault();
-
-            DatasetInterface.Analyzer.analyze(this);
+    function addClickListenerToValidateButton() {
+        $(".apply button[type=submit]").off("click").on("click", function (e) {
+            $(this).find('img').show();
         });
     }
 
@@ -110,13 +108,14 @@ var DatasetInterface = (function () {
             this.sliderGroupCollection = new SliderGroupCollection(geoId);
             this.tab = new Tab(
                 $(".nav#input-nav"),
-                switchTab.bind(this)
+                switchTab.bind(this),
+                localSettings
             ).enable();
 
             addClickListenerToDownloadDataset.call(this);
             addChangeListenerToInputs.call(this);
             addClickListenerToToggles.call(this);
-            addClickListenerToAnalyzesButton.call(this);
+            addClickListenerToValidateButton.call(this);
             addClickListenerToHistory.call(this);
             addClickListenerToInfo.call(this);
         }

@@ -20,6 +20,7 @@ class Graph
     @graph['nodes'].each_pair do |node, demand|
       node = Refinery::Node.new(node)
       node.set(:demand, demand)
+      node.set(:model, OpenStruct.new(key: node, out_slots: [], in_slots: []))
 
       graph.add(node)
     end

@@ -1,12 +1,12 @@
-.errors
-  - @commit.errors.full_messages.each do |message|
-    .error.notice= message
-
 .heading
   h5 title= @dataset.geo_id
     = @dataset.area.humanize
 
 = render 'shared/flash', flash: flash
+
+.errors
+  - @commit.errors.full_messages.each do |message|
+    .error.notice= message
 
 = form_for [dataset, @commit], as: :change, url: dataset_commits_path(dataset.geo_id), remote: true do |form|
   .edit-form
@@ -19,14 +19,14 @@
             span.arrow>
               | &rarr;
             span.key>
-              = I18n.t("activemodel.attributes.dataset_edit_form.#{ edit.key }", default: edit.key.humanize)
+              = I18n.t("activemodel.attributes.dataset_edit_form.#{ edit.key }", default: edit.key.humanize).html_safe
 
             span.to> to
             span.val>
               = edit.value
 
             span.unit
-              = I18n.t("units.#{ edit.key }.to")
+              = I18n.t("units.#{ edit.key }.to").html_safe
 
         hr
 
@@ -50,4 +50,4 @@
       .overview-edits
         .apply
           = form.submit "Save"
-          = link_to "Cancel", new_dataset_commit_path(dataset.geo_id, format: :js), remote: true, class: "button danger"
+          = link_to "Cancel", edit_dataset_path(dataset.geo_id, format: :js), remote: true, class: "button danger"

@@ -41,6 +41,11 @@ class Dataset < ApplicationRecord
     @editable_attributes ||= EditableAttributesCollection.new(self)
   end
 
+  def temp_name
+    @temp_name ||= "#{ SecureRandom.hex(10) }\
+                   -#{ area.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '') }"
+  end
+
   private
 
   def is_province?

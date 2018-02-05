@@ -20,29 +20,34 @@ var Tab = (function () {
 
     Tab.prototype = {
         toggleTab: function (e) {
-            var target     = $(e.target),
-                current    = target.attr("href"),
-                currentTab = this.tabScope.find("div.tab[data-tab='" + current + "']");
+            var target      = $(e.target),
+                group       = target.data('group'),
+                current     = target.attr("href"),
+                isSubItem   = (target.parents("ul.sub-nav").length > 0),
+                currentTab  = this.tabScope.find("div.tab[data-tab='" + current + "']");
 
             deactivateMenuItems.call(this);
 
             currentTab.add(target).addClass("active");
 
-            localSettings.set('current', current);
+            this.localSettings.set('current', current);
 
-            if (target.parents("ul.sub-nav").length < 1) {
+            if (isSubItem) {
+                $(this.nav).find("ul.sub-nav#" + group).addClass("active");
+            } else {
                 $(this.nav).find("ul.sub-nav").removeClass("active");
-            }
 
-            $(this.nav).find("ul.sub-nav" + current).addClass("active");
+                $(this.nav).find("ul.sub-nav" + current).addClass("active");
+            }
 
             this.toggleCallback(current, currentTab);
         },
 
         enable: function () {
-            var currentDefault = localSettings.get('current') ?
-                this.menuItems.find("a[href='" + localSettings.get('current') + "']") :
-                this.menuItems.first();
+            var current = this.localSettings.get('current'),
+                currentDefault = current ?
+                    this.nav.find("a[href='" + current + "']") :
+                    this.menuItems.first();
 
             this.toggleTab({ target: currentDefault });
             this.menuItems.on("click", clickToggleTab.bind(this));

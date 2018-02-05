@@ -7,12 +7,12 @@ h2
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   .field
     = f.label :name
-    br
     = f.text_field :name, autofocus: true
+
   .field
     = f.label :email
-    br
     = f.email_field :email
+
   .field
     = f.label :password
     - if @minimum_password_length
@@ -20,12 +20,13 @@ h2
         | (
         = @minimum_password_length
         |  characters minimum)
-    br
     = f.password_field :password, autocomplete: "off"
+
   .field
     = f.label :password_confirmation
-    br
     = f.password_field :password_confirmation, autocomplete: "off"
+
   .actions
     = f.submit "Sign up"
+
 = render "devise/shared/links"

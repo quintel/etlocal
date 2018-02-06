@@ -1,5 +1,0 @@
-- if @datasets.count > 0
-  | $('#dataset-overlay').show();
-  | $('#dataset-overlay .content').html("#{ j render(partial: "search_results", collection: @datasets, as: :dataset) }");
-- else
-  | $('#dataset-overlay').hide();

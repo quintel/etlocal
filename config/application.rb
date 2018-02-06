@@ -17,5 +17,7 @@ module Etlocal
     config.assumptions_path     = Rails.root.join("config", "assumptions.yml")
     config.etsource_path        = Rails.root.dirname.join("etsource").to_s
     config.google_maps_api_key  = Rails.application.secrets.google_maps_api_key
+
+    config.i18n.fallbacks       = [:en]
   end
 end

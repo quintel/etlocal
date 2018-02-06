@@ -8,7 +8,7 @@
   - @commit.errors.full_messages.each do |message|
     .error.notice= message
 
-= form_for [dataset, @commit], as: :change, url: dataset_commits_path(dataset.geo_id), remote: true do |form|
+= form_for [dataset, @commit], as: :change, url: dataset_commits_path(dataset), remote: true do |form|
   .edit-form
     .content
       .attributes-changed
@@ -50,4 +50,4 @@
       .overview-edits
         .apply
           = form.submit "Save"
-          = link_to "Cancel", edit_dataset_path(dataset.geo_id, format: :js), remote: true, class: "button danger"
+          = link_to "Cancel", edit_dataset_path(dataset, format: :js), remote: true, class: "button danger"

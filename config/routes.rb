@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'datasets#index'
 
-  resources :datasets, only: %i(index edit), param: :area do
+  resources :datasets, only: %i(index edit show) do
     get :defaults, :download
 
     resources :commits, only: %i(create) do
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :exports, only: :show, param: :area
+      resources :exports, only: :show
     end
   end
 end

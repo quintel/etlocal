@@ -1,15 +1,15 @@
 var GraphDefaults = {
-    fetch: function (geoId) {
-        if (this.defaults) {
-            // When it's done loading, don't return a promise.
-            // Just return nothing.
-            return null;
-        } else {
+    fetch: function (datasetId) {
+        'use strict';
+
+        var result = null;
+
+        if (!this.defaults) {
             // If not pending and no data yet, request it.
             // If it's still pending. Return the Ajax request itself.
             if (!this.request) {
                 this.request = $.ajax({
-                    url: "/datasets/" + geoId + "/defaults",
+                    url: "/datasets/" + datasetId + "/defaults",
                     dataType: "json",
                     success: function (data) {
                         this.defaults = data;
@@ -22,7 +22,9 @@ var GraphDefaults = {
                 });
             }
 
-            return this.request;
+            result = this.request;
         }
+
+        return result;
     }
 };

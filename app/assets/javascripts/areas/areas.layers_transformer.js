@@ -46,9 +46,6 @@ Areas.LayersTransformer = (function () {
                     maxResolution: layer.maxres,
                     visible:       false,
                     style:         this.scope.styles.normal,
-                    filter:        layer.filter,
-                    name:          layer.name,
-                    name_attr:     layer.name_attr,
                     source:        source
                 });
             },

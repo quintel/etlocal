@@ -25,7 +25,7 @@ describe DatasetsController do
 
       describe "insufficient data for an analyzes" do
         it 'downloads the dataset as a zip file' do
-          get :download, params: { dataset_area: dataset.geo_id }
+          get :download, params: { dataset_id: dataset.id }
 
           expect(JSON.parse(response.body)['error']).to include("can't be blank")
         end
@@ -37,7 +37,7 @@ describe DatasetsController do
         }
 
         it 'downloads the dataset as a zip file' do
-          get :download, params: { dataset_area: dataset.geo_id }
+          get :download, params: { dataset_id: dataset.id }
 
           expect(response).to be_success
         end

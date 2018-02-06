@@ -5,26 +5,26 @@ Areas.DatasetSelector = (function () {
 
     var GROUP = 'dataset_selector';
 
-    function openPopup(position, feature, layer) {
-        var geoId      = feature.get(layer.get('filter')),
-            name       = feature.get(layer.get('name_attr')),
-            popup      = this.areas.map.getOverlays().item(0),
-            content    = document.getElementById('popup-content');
-
-        if (layer.get('name') === "provinces_ds") {
-            geoId = geoId.toLowerCase();
-        }
-
-        $(content).find('h5').html(name);
-        $(content).find('a.dataset-open').off('click').on('click', function (e) {
-            e.preventDefault();
-
-            $.ajax({
-                type: "GET",
-                dataType: 'script',
-                url: '/datasets/' + geoId + '/edit.js'
-            });
+    function openDataset(id) {
+        $.ajax({
+            type: "GET",
+            dataType: 'script',
+            url: '/datasets/' + id + '/edit.js'
         });
+    }
+
+    function openPopup(position, data) {
+        var popup   = this.areas.map.getOverlays().item(0),
+            content = document.getElementById('popup-content');
+
+        $(content).find('h5').html(data.area);
+        $(content).find('a.dataset-open')
+            .off('click')
+            .on('click', function (e) {
+                e.preventDefault();
+
+                openDataset(data.id);
+            });
 
         popup.setPosition(position);
 
@@ -34,19 +34,40 @@ Areas.DatasetSelector = (function () {
         });
     }
 
+    // Private: findDataset()
+    //
+    // Finds a dataset based on the 'id' feature property.
+    // All layer features needs an 'id' attribute. See
+    // https://github.com/quintel/etlayers why that is.
+    //
+    function findDataset(position, feature) {
+        var geoId = feature.get('id');
+
+        $.ajax({
+            url: "/datasets/" + geoId + ".json",
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                openPopup.call(this, position, data);
+            }.bind(this),
+            error: function (e) {
+                alert(e);
+            }
+        });
+    }
+
     function click(e) {
         // We'll assume for now that there will be only one feature to click
         // on. If this changes, please do so here.
         this.areas.map.forEachFeatureAtPixel(e.pixel, function (selectedFeature, layer) {
             layer.setStyle(function (feature) {
-                var filter   = layer.get('filter'),
-                    isFilled = feature.get(filter) === selectedFeature.get(filter),
+                var isFilled = feature.get('id') === selectedFeature.get('id'),
                     style    = isFilled ? 'filled' : 'normal';
 
                 return [this.areas.layers.styles[style]];
             }.bind(this));
 
-            openPopup.call(this, e.coordinate, selectedFeature, layer);
+            findDataset.call(this, e.coordinate, selectedFeature);
         }.bind(this));
     }
 

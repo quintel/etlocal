@@ -5,7 +5,7 @@ describe Api::V1::ExportsController do
   let(:dataset) { FactoryGirl.create(:dataset) }
 
   it 'fetches a collection of dataset edits as json' do
-    get :show, params: { area: dataset.geo_id }, format: :json
+    get :show, params: { id: dataset.id }, format: :json
 
     expect(JSON.parse(response.body).fetch('number_of_residences')).to eq(10.0)
   end
@@ -15,7 +15,7 @@ describe Api::V1::ExportsController do
       2.times do |i|
         Timecop.freeze(Time.now + i)
 
-        commit = FactoryGirl.create(:commit)
+        commit = FactoryGirl.create(:commit, dataset: dataset)
 
         FactoryGirl.create(:dataset_edit,
           key: 'number_of_cars',
@@ -26,15 +26,15 @@ describe Api::V1::ExportsController do
     }
 
     it 'should render all the editable attributes of a dataset' do
-      get :show, params: { area: dataset.geo_id }, format: :json
+      get :show, params: { id: dataset.id }, format: :json
 
       expect(JSON.parse(response.body).fetch('number_of_residences')).to eq(10.0)
     end
 
     it 'should render all the editable attributes of a dataset' do
-      get :show, params: { area: dataset.geo_id }, format: :json
+      get :show, params: { id: dataset.id }, format: :json
 
-      expect(JSON.parse(response.body).fetch('number_of_cars')).to eq(1.0)
+      expect(JSON.parse(response.body).fetch('number_of_cars')).to eq(2.0)
     end
   end
 end

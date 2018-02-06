@@ -13,7 +13,7 @@ describe CommitsController do
   describe "#dataset_edits" do
     before do
       post :dataset_edits, params: {
-        dataset_area: dataset.geo_id,
+        dataset_id: dataset.id,
         dataset_edit_form: {
           dataset_id: dataset.id,
           number_of_residences: 15,
@@ -30,7 +30,7 @@ describe CommitsController do
   describe "#create" do
     before do
       post :create, params: {
-        dataset_area: dataset.geo_id,
+        dataset_id: dataset.id,
         change: {
           dataset_id: dataset.id,
           message: "Because of reasons"

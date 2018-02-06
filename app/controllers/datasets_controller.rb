@@ -19,6 +19,13 @@ class DatasetsController < ApplicationController
     )
   end
 
+  # GET show.json
+  def show
+    dataset = Dataset.find_by(geo_id: params[:id])
+
+    render json: dataset
+  end
+
   # POST download
   def download
     @dataset_downloader = DatasetDownloader.new(@dataset)

@@ -1,8 +1,10 @@
+/*globals GraphDefaults,SliderGroup*/
+
 var SliderGroupCollection = (function () {
     'use strict';
 
     function setDefaults(sliderGroup) {
-        $.when(GraphDefaults.fetch(this.geoId)).done(function () {
+        $.when(GraphDefaults.fetch(this.datasetId)).done(function () {
             sliderGroup.updateSliderDefaults(
                 GraphDefaults.defaults
             );
@@ -16,16 +18,16 @@ var SliderGroupCollection = (function () {
             });
 
             if (sliderGroups.length > 0) {
-                sliderGroups.forEach(function(sliderGroup) {
+                sliderGroups.forEach(function (sliderGroup) {
                     sliderGroup.render();
                     setDefaults.call(this, sliderGroup);
                 }.bind(this));
             }
         }
-    }
+    };
 
-    function SliderGroupCollection (geoId) {
-        this.geoId        = geoId;
+    function SliderGroupCollection(datasetId) {
+        this.datasetId    = datasetId;
         this.scope        = $('.group.slider-group');
         this.sliderGroups = $.map(this.scope, function (scope) {
             return new SliderGroup(scope);

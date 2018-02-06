@@ -1,4 +1,4 @@
-/*globals ChangeTrigger,LocalSettings,SliderGroupCollection,Tab*/
+/*globals ChangeTrigger,GraphDefaults,LocalSettings,SliderGroupCollection,Tab*/
 
 var DatasetInterface = (function () {
     'use strict';
@@ -42,7 +42,7 @@ var DatasetInterface = (function () {
     }
 
     function addClickListenerToValidateButton() {
-        $(".apply button[type=submit]").off("click").on("click", function (e) {
+        $(".apply button[type=submit]").off("click").on("click", function () {
             $(this).find('img').show();
         });
     }
@@ -73,7 +73,7 @@ var DatasetInterface = (function () {
         var id, input;
 
         $.when(this.defaults).done(function () {
-            tab.find('.editable').each(function() {
+            tab.find('.editable').each(function () {
                 id = $(this).data('key');
                 input = $(this).find('input');
 
@@ -87,8 +87,7 @@ var DatasetInterface = (function () {
     function switchTab(group, tab) {
         setDefaultsForTab.call(this, tab);
 
-        this.sliderGroupCollection.render
-            .call(this.sliderGroupCollection, group);
+        this.sliderGroupCollection.render(group);
     }
 
     return {
@@ -101,11 +100,11 @@ var DatasetInterface = (function () {
             addClickToBackButton.call(this);
         },
 
-        enable: function (geoId) {
-            var localSettings = new LocalSettings(geoId);
+        enable: function (datasetId) {
+            var localSettings = new LocalSettings(datasetId);
 
-            this.defaults = GraphDefaults.fetch(geoId);
-            this.sliderGroupCollection = new SliderGroupCollection(geoId);
+            this.defaults = GraphDefaults.fetch(datasetId);
+            this.sliderGroupCollection = new SliderGroupCollection(datasetId);
             this.tab = new Tab(
                 $(".nav#input-nav"),
                 switchTab.bind(this),

@@ -1,6 +1,6 @@
 .heading
   h5 title= dataset.geo_id
-    = dataset.area.humanize
+    = dataset.area
 
 - if @dataset_edit_form.errors.any?
   .errors
@@ -10,10 +10,10 @@
 = render 'shared/flash', flash: flash
 
 .hidden
-  = form_tag dataset_download_path(dataset.geo_id), method: :get, class: 'download-dataset' do
+  = form_tag dataset_download_path(dataset), method: :get, class: 'download-dataset' do
     .hidden
 
-= form_for @dataset_edit_form, url: dataset_edits_dataset_commits_path(dataset.geo_id), remote: true, html: { class: "dataset_editor" } do |form|
+= form_for @dataset_edit_form, url: dataset_edits_dataset_commits_path(dataset), remote: true, html: { class: "dataset_editor" } do |form|
   = form.hidden_field :dataset_id, value: dataset.id
 
   .wrapper data-tab-key='main'
@@ -49,7 +49,7 @@
         .apply.changes
           = button_tag type: 'submit', class: 'button' do
             | Save changes
-            = image_tag 'wait.gif'
+            = image_tag 'wait.gif', class: 'wait'
 
           .clear
 

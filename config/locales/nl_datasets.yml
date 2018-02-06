@@ -30,4 +30,4 @@ nl:
         households_advanced: Advanced
 
     flash:
-      not_found: "Gebied '%{area}' bestaat niet"
+      not_found: "Gebied bestaat niet"

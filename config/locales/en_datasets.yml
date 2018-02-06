@@ -55,4 +55,4 @@ en:
         transport_technologies: Technologies
 
     flash:
-      not_found: "Area '%{area}' does not exists"
+      not_found: "Area does not exists"

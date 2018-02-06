@@ -24,6 +24,7 @@ gem 'gradients'
 gem 'progress_bar'
 gem 'remotipart', '~> 1.2'
 gem 'archive-zip', '~> 0.9.0'
+gem 'airbrake', '~> 7.2'
 
 gem 'transformer', ref: '7b2fbf1', github: 'quintel/transformer'
 gem 'atlas',       ref: '96596d7', github: 'quintel/atlas'
@@ -58,10 +59,6 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-end
-
-group :production, :staging do
-  gem 'airbrake'
 end
 
 gem 'therubyracer'

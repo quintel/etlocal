@@ -15,7 +15,7 @@ set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :bundle_binstubs, (-> { shared_path.join('sbin') })
 
 # Default value for :linked_files is []
-append :linked_files, "config/database.yml", "config/secrets.yml"
+append :linked_files, "config/database.yml", "config/email.yml", "config/secrets.yml"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "sbin", "log", "tmp/pids", "tmp/cache", "vendor/bundle", "public/system"

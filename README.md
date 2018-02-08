@@ -9,7 +9,12 @@ transparent present situations for usage inside of ETModel.
 
 ### To install:
 
-1. `cp config/database.sample.yml config/database.yml`
+1. Config files:
+
+```
+cp config/database.sample.yml config/database.yml
+cp config/email.sample.yml config/email.yml
+```
 
 2. Run `rake db:create`, `rake db:schema:load` and `rake db:seed`
 

@@ -19,5 +19,6 @@ public/system/
 .~lock.*
 
 config/database.yml
+config/email.yml
 db/shapes/*
 coverage/*

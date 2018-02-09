@@ -30,19 +30,6 @@ var DatasetInterface = (function () {
         });
     }
 
-    function addClickListenerToInfo() {
-        var key, left, information;
-
-        $("div.input span.info").off("click").on("click", function () {
-            key         = $(this).data('key');
-            left        = $(this).position().left - 35;
-            information = $("div.information." + key);
-
-            information.toggleClass("hidden");
-            information.find(".line-arrow").css({ left: left });
-        });
-    }
-
     function addClickListenerToValidateButton() {
         $(".apply button[type=submit]").off("click").on("click", function () {
             $(this).find('img').show();
@@ -113,7 +100,6 @@ var DatasetInterface = (function () {
             addClickListenerToToggles.call(this);
             addClickListenerToValidateButton.call(this);
             addClickListenerToHistory.call(this);
-            addClickListenerToInfo.call(this);
         }
     };
 }());

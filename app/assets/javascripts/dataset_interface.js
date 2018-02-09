@@ -12,14 +12,16 @@ var DatasetInterface = (function () {
                     .find('.toggle-group')
                     .toggleClass('active', $(e.target).is(':checked'));
 
-                DatasetInterface.ChangeTrigger.trigger(this);
+                DatasetInterface.ChangeTrigger.trigger(e.target);
             });
     }
 
     function addChangeListenerToInputs() {
         $("div.input span.val input[type='text']")
             .off("change")
-            .on("change", DatasetInterface.ChangeTrigger.trigger);
+            .on("change", function (e) {
+                DatasetInterface.ChangeTrigger.trigger(e.target);
+            });
     }
 
     function addClickListenerToHistory() {

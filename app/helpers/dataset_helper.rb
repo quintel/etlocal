@@ -14,4 +14,12 @@ module DatasetHelper
   def download_button_disabled?(dataset)
     !Transformer::DatasetCast.new(dataset.editable_attributes.as_json).valid?
   end
+
+  def default_unit_for(key)
+    if key =~ /share/
+      "%"
+    else
+      ''
+    end
+  end
 end

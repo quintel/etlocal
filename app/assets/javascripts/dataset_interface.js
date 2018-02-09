@@ -72,16 +72,11 @@ var DatasetInterface = (function () {
     // This method set the default 'scaled NL' values for
     // attributes which were otherwise unknown.
     function setDefaultsForTab(tab) {
-        var id, input;
-
         $.when(this.defaults).done(function () {
             tab.find('.editable').each(function () {
-                id = $(this).data('key');
-                input = $(this).find('input');
-
-                if (!input.val()) {
-                    input.attr('placeholder', GraphDefaults.defaults[id]);
-                }
+                $(this).find('input').attr('placeholder',
+                    GraphDefaults.defaults[$(this).data('key')]
+                );
             });
         });
     }

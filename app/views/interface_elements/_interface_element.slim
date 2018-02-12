@@ -14,14 +14,14 @@
             .slider-wrapper.input
               = form.label key
 
-              .slider data-key= key data-flexible= flexible data-edited= ('edited' if @dataset.editable_attributes.edits[key])
+              .slider data-key= key data-flexible= flexible
               span.history data-key= key
                 - if flexible == 'flex'
                   i.fa
                 - else
                   i.fa.fa-history
 
-              span.value= '0'
+              span.value
               - unless flexible == 'flex'
                 = form.hidden_field key, class: key
 

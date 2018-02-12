@@ -21,11 +21,11 @@ var SliderGroup = (function () {
                 flex = 1.0;
 
             this.sliders.forEach(function (slider) {
-                value = defaults[slider.key];
+                value    = defaults[slider.key];
                 oldValue = slider.input.val() / 100.0;
 
                 if (!slider.flexible) {
-                    if (slider.edited) {
+                    if (slider.isEdited()) {
                         flex -= oldValue
                     } else {
                         flex -= value;

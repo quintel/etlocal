@@ -2,7 +2,6 @@ DatasetInterface.ChangeTrigger = {
     trigger: function (attribute) {
         var showChanges;
 
-        console.log(attribute);
         $(attribute).toggleClass("changed", $(attribute).val() !== '');
 
         showChanges = $('input.changed, div.slider.changed').length > 0;

@@ -4,9 +4,11 @@
 - else
   = j render("dataset_edits/form", dataset: @dataset)
 | ");
-| FileUpload.setFields();
 
 - if @dataset_edit_form.errors.any?
   | $('#dataset-overlay, .content.tab#input').show();
   | $('.content-map .container #search-bar').hide();
   | DatasetInterface.enable("#{ @dataset.id }");
+- else
+  | FileUpload.setFields();
+  | CommitForm.convertValues();

@@ -22,10 +22,11 @@
               = I18n.t("activemodel.attributes.dataset_edit_form.#{ edit.key }", default: edit.key.humanize).html_safe
 
             span.to> to
-            span.val>
+            span.val data= conversions_for(edit.key)
               = edit.value
 
             span.unit
+              | &nbsp;
               = I18n.t("units.#{ edit.key }.to", default: default_unit_for(edit.key)).html_safe
 
         hr

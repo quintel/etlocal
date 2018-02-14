@@ -92,8 +92,9 @@ var Quantity = (function() {
     };
 
     function Quantity (value1, unitName) {
-        this.value = value1;
-        this.unit = getUnit(unitName);
+        this.value        = value1;
+        this.roundedValue = Math.round(value1 * 100) / 100;
+        this.unit         = getUnit(unitName);
     }
 
     return Quantity;

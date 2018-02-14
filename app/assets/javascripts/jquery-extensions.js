@@ -72,7 +72,7 @@
             if (data.from === data.to) {
                 return value;
             } else {
-                return new Quantity(value, data.to).to(data.from).value
+                return new Quantity(value, data.to).to(data.from).roundedValue;
             }
         });
     };
@@ -90,7 +90,7 @@
                 if (data.from === data.to) {
                     return value;
                 } else {
-                    return new Quantity(value, data.to).to(data.from).value
+                    return new Quantity(value, data.to).to(data.from).roundedValue;
                 }
             });
         }
@@ -105,7 +105,7 @@
             if (data.from === data.to) {
                 return value;
             } else {
-                return new Quantity(value, data.from).to(data.to).value
+                return new Quantity(value, data.from).to(data.to).roundedValue;
             }
         });
     };

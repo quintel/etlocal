@@ -22,4 +22,11 @@ module DatasetHelper
       ''
     end
   end
+
+  def conversions_for(key)
+    {
+      to: I18n.t("units.#{ key }.to"),
+      from: I18n.t("units.#{ key }.from", default: I18n.t("units.#{ key }.to")).html_safe
+    }
+  end
 end

@@ -63,4 +63,50 @@
 
         return json;
     };
+
+    // Used when loading the defaults from ETLocal into the interface.
+    $.fn.setConvertedDefault = function (value) {
+        var data = $(this).data();
+
+        $(this).attr('placeholder', function () {
+            if (data.from === data.to) {
+                return value;
+            } else {
+                return new Quantity(value, data.to).to(data.from).value
+            }
+        });
+    };
+
+    // Used when initially loading the dataset interface. Convert the saved
+    // values from the database into their correct unit.
+    $.fn.setInitialConvertedValue = function () {
+        var data,
+            value = $(this).val();
+
+        if (value) {
+            $(this).prev(".display_input").val(function () {
+                data = $(this).data();
+
+                if (data.from === data.to) {
+                    return value;
+                } else {
+                    return new Quantity(value, data.to).to(data.from).value
+                }
+            });
+        }
+    };
+
+    $.fn.setConvertedValue = function () {
+        var quantity,
+            data  = $(this).data(),
+            value = $(this).val();
+
+        $(this).next("[type='hidden']").val(function () {
+            if (data.from === data.to) {
+                return value;
+            } else {
+                return new Quantity(value, data.from).to(data.to).value
+            }
+        });
+    };
 })(jQuery);

@@ -39,8 +39,11 @@
               .right
                 span.history data-key= key
                   i.fa.fa-history
+
                 span.val
-                  = form.text_field key
+                  = text_field_tag key, nil, data: conversions_for(key), class: 'display_input'
+                  = form.hidden_field key, class: 'value_input'
+
                 span.unit data-to= I18n.t("units.#{ key }.to")
                   = I18n.t("units.#{ key }.from", default: I18n.t("units.#{ key }.to")).html_safe
               .clear

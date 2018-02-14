@@ -4,10 +4,10 @@ var SliderGroupCollection = (function () {
     'use strict';
 
     function setDefaults(sliderGroup) {
-        $.when(GraphDefaults.fetch(this.datasetId)).done(function () {
-            sliderGroup.updateSliderDefaults(
-                GraphDefaults.defaults
-            );
+        var defaults = this.defaults;
+
+        $.when(defaults.fetch()).done(function () {
+            sliderGroup.updateSliderDefaults(defaults.data);
         });
     }
 
@@ -26,7 +26,8 @@ var SliderGroupCollection = (function () {
         }
     };
 
-    function SliderGroupCollection(datasetId) {
+    function SliderGroupCollection(datasetId, defaults) {
+        this.defaults     = defaults;
         this.datasetId    = datasetId;
         this.scope        = $('.group.slider-group');
         this.sliderGroups = $.map(this.scope, function (scope) {

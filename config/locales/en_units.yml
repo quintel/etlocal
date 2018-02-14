@@ -152,6 +152,7 @@ en:
     households_final_demand_crude_oil_demand:
       to: TJ
     households_final_demand_electricity_demand:
+      from: kWh
       to: TJ
     households_final_demand_for_cooking_electricity_parent_share:
       to: '%'
@@ -170,6 +171,7 @@ en:
     households_final_demand_steam_hot_water_demand:
       to: TJ
     households_final_demand_wood_pellets_demand:
+      from: kWh
       to: TJ
     households_solar_pv_solar_radiation_demand:
       to: TJ

@@ -21,6 +21,7 @@ var DatasetInterface = (function () {
             .off("change")
             .on("change", function (e) {
                 DatasetInterface.ChangeTrigger.trigger(e.target);
+                $(e.target).setConvertedValue();
             });
     }
 
@@ -59,10 +60,12 @@ var DatasetInterface = (function () {
     // This method set the default 'scaled NL' values for
     // attributes which were otherwise unknown.
     function setDefaultsForTab(tab) {
-        $.when(this.defaults).done(function () {
+        var defaults = this.defaults;
+
+        $.when(defaults.fetch()).done(function () {
             tab.find('.editable').each(function () {
-                $(this).find('input').attr('placeholder',
-                    GraphDefaults.defaults[$(this).data('key')]
+                $(this).find('input.display_input').setConvertedDefault(
+                    defaults.data[$(this).data('key')]
                 );
             });
         });
@@ -74,32 +77,45 @@ var DatasetInterface = (function () {
         this.sliderGroupCollection.render(group);
     }
 
-    return {
-        enableAnalyzesTab: function () {
-            new Tab($(".nav#overview-nav")).enable();
+    function loadValues() {
+        var prevInput, data, value;
 
-            $(".content.tab#overview").show();
-            $(".content.tab#input").hide();
+        $('input.value_input').each(function () {
+            $(this).setInitialConvertedValue();
+        });
+    }
 
-            addClickToBackButton.call(this);
-        },
-
-        enable: function (datasetId) {
-            var localSettings = new LocalSettings(datasetId);
-
-            this.defaults = GraphDefaults.fetch(datasetId);
-            this.sliderGroupCollection = new SliderGroupCollection(datasetId);
+    DatasetInterface.prototype = {
+        enable: function () {
             this.tab = new Tab(
                 $(".nav#input-nav"),
                 switchTab.bind(this),
-                localSettings
+                this.localSettings
             ).enable();
 
+            loadValues.call(this);
             addClickListenerToDownloadDataset.call(this);
             addChangeListenerToInputs.call(this);
             addClickListenerToToggles.call(this);
             addClickListenerToValidateButton.call(this);
             addClickListenerToHistory.call(this);
+        }
+    }
+
+    function DatasetInterface(datasetId) {
+        this.datasetId             = datasetId;
+        this.localSettings         = new LocalSettings(datasetId);
+        this.defaults              = new GraphDefaults(datasetId);
+        this.sliderGroupCollection = new SliderGroupCollection(datasetId, this.defaults);
+    }
+
+    return {
+        restart: function (datasetId) {
+            var datasetInterface = new DatasetInterface(datasetId);
+
+            datasetInterface.enable();
+
+            return datasetInterface;
         }
     };
 }());

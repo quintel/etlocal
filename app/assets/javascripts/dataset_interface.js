@@ -20,7 +20,7 @@ var DatasetInterface = (function () {
         $("div.input span.val input[type='text']")
             .off("change")
             .on("change", function (e) {
-                DatasetInterface.ChangeTrigger.trigger(e.target);
+                window.DatasetInterface.ChangeTrigger.trigger(e.target);
                 $(e.target).setConvertedValue();
             });
     }
@@ -110,7 +110,7 @@ var DatasetInterface = (function () {
     }
 
     return {
-        restart: function (datasetId) {
+        enable: function (datasetId) {
             var datasetInterface = new DatasetInterface(datasetId);
 
             datasetInterface.enable();

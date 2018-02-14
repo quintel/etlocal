@@ -2,9 +2,12 @@ module GraphAssumptions
   module_function
 
   def get(dataset, dataset_key = :nl)
-    @dataset  = dataset
-    @atlas_ds = Atlas::Dataset.find(dataset_key)
-    @graph    = Atlas::Runner.new(@atlas_ds).calculate
+    @dataset        = dataset
+    @atlas_ds       = Atlas::Dataset.find(dataset_key)
+    @graph          = Atlas::Runner.new(@atlas_ds).calculate
+    @scaling_factor = @dataset.editable_attributes
+                              .find('number_of_residences')
+                              .value / @atlas_ds.number_of_residences
 
     scaled_area_attributes.merge(scaled_graph_values)
   end
@@ -41,9 +44,6 @@ module GraphAssumptions
   end
 
   def scale(value)
-    @scaling_factor ||= @dataset.editable_attributes
-      .find('number_of_residences').value / @atlas_ds.number_of_residences
-
     (value * @scaling_factor).round(2)
   end
 

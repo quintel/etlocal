@@ -30,6 +30,8 @@ class DatasetsController < ApplicationController
   def download
     @dataset_downloader = DatasetDownloader.new(@dataset)
 
+    authorize @dataset
+
     if @dataset_downloader.validator.valid?
       send_data @dataset_downloader.download,
         filename: @dataset_downloader.zip_filename

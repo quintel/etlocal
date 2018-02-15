@@ -66,47 +66,11 @@
 
     // Used when loading the defaults from ETLocal into the interface.
     $.fn.setConvertedDefault = function (value) {
-        var data = $(this).data();
-
-        $(this).attr('placeholder', function () {
-            if (data.from === data.to) {
-                return value;
-            } else {
-                return new Quantity(value, data.to).to(data.from).roundedValue;
-            }
-        });
-    };
-
-    // Used when initially loading the dataset interface. Convert the saved
-    // values from the database into their correct unit.
-    $.fn.setInitialConvertedValue = function () {
-        var data,
-            value = $(this).val();
-
-        if (value) {
-            $(this).prev(".display_input").val(function () {
-                data = $(this).data();
-
-                if (data.from === data.to) {
-                    return value;
-                } else {
-                    return new Quantity(value, data.to).to(data.from).roundedValue;
-                }
-            });
-        }
     };
 
     $.fn.setConvertedValue = function () {
-        var quantity,
-            data  = $(this).data(),
-            value = $(this).val();
-
-        $(this).next("[type='hidden']").val(function () {
-            if (data.from === data.to) {
-                return value;
-            } else {
-                return new Quantity(value, data.from).to(data.to).value;
-            }
-        });
+        $(this).next("[type='hidden']").val(
+            Convert.reverseConvert.call(this, $(this).val())
+        );
     };
 })(jQuery);

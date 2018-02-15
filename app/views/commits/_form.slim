@@ -41,10 +41,11 @@
 
       .overview-edits
         .apply.no-changes
-          = button_tag class: 'button download-dataset', type: 'button', disabled: download_button_disabled?(dataset) do
-            | Download dataset
-            | &nbsp;
-            i.fa.fa-download
+          - if policy(@dataset).download?
+            = button_tag class: 'button download-dataset', type: 'button', disabled: download_button_disabled?(dataset) do
+              | Download dataset
+              | &nbsp;
+              i.fa.fa-download
 
         .apply.changes
           = button_tag type: 'submit', class: 'button' do

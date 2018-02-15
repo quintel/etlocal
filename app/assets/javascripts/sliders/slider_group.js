@@ -25,7 +25,7 @@ var SliderGroup = (function () {
                 oldValue = slider.input.val() / 100.0;
 
                 if (!slider.flexible) {
-                    if (slider.isEdited()) {
+                    if (slider.isEnabled()) {
                         flex -= oldValue
                     } else {
                         flex -= value;

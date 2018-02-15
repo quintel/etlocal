@@ -16,6 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'virtus'
 gem 'slim'
+gem 'pundit'
 gem 'paperclip'
 gem 'devise'
 gem 'rest-client'

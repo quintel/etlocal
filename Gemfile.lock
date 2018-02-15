@@ -208,6 +208,8 @@ GEM
       slop (~> 3.4)
     public_suffix (2.0.5)
     puma (3.7.0)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -372,6 +374,7 @@ DEPENDENCIES
   progress_bar
   pry
   puma (~> 3.0)
+  pundit
   rails (~> 5.0.1)
   refinery!
   remotipart (~> 1.2)

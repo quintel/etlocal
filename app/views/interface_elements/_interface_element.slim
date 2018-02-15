@@ -14,16 +14,20 @@
             .slider-wrapper.input
               = form.label key
 
-              .slider data-key= key data-flexible= flexible
+              .slider data-key= key data-flexible= flexible data-editable= (policy(@dataset).edit? ? '1' : '0')
               span.history data-key= key
                 - if flexible == 'flex'
                   i.fa
                 - else
                   i.fa.fa-history
 
-              span.value
-              - unless flexible == 'flex'
-                = form.hidden_field key, class: key
+              span.val data= conversions_for(key)
+                - if policy(@dataset).edit?
+                  - unless flexible == 'flex'
+                    = form.hidden_field key, class: key
+                - else
+                  span.read-only
+                    | &nbsp;
 
               span.unit
                 = '%'
@@ -40,9 +44,15 @@
                 span.history data-key= key
                   i.fa.fa-history
 
-                span.val
-                  = text_field_tag key, nil, data: conversions_for(key), class: 'display_input'
-                  = form.hidden_field key, class: 'value_input'
+                span.val data= conversions_for(key)
+                  - if policy(@dataset).edit?
+                    = text_field_tag key, nil, class: 'display_input'
+                    = form.hidden_field key, class: 'value_input'
+
+                  - else
+                    span.read-only
+                      = form.object.public_send(key)
+                      | &nbsp;
 
                 span.unit data-to= I18n.t("units.#{ key }.to")
                   = I18n.t("units.#{ key }.from", default: I18n.t("units.#{ key }.to")).html_safe

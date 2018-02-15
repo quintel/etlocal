@@ -60,13 +60,31 @@ var DatasetInterface = (function () {
     // This method set the default 'scaled NL' values for
     // attributes which were otherwise unknown.
     function setDefaultsForTab(tab) {
-        var defaults = this.defaults;
+        var key,
+            converted,
+            displayInput,
+            span,
+            readOnly,
+            defaultVal,
+            defaults = this.defaults;
 
         $.when(defaults.fetch()).done(function () {
             tab.find('.editable').each(function () {
-                $(this).find('input.display_input').setConvertedDefault(
-                    defaults.data[$(this).data('key')]
-                );
+                span         = $(this).find('span.val');
+                displayInput = span.find('input.display_input');
+                readOnly     = span.find('.read-only');
+                defaultVal   = defaults.data[$(this).data('key')];
+                converted    = Converter.convertRounded.call(span, defaultVal);
+
+                if (defaultVal) {
+                    if (displayInput.length > 0) {
+                        displayInput.attr('placeholder', converted);
+                    }
+
+                    if (readOnly.length > 0) {
+                        readOnly.text(converted);
+                    }
+                }
             });
         });
     }
@@ -78,10 +96,16 @@ var DatasetInterface = (function () {
     }
 
     function loadValues() {
-        var prevInput, data, value;
+        var value;
 
         $('input.value_input').each(function () {
-            $(this).setInitialConvertedValue();
+            value = $(this).val();
+
+            if (value) {
+                $(this).prev(".display_input").val(
+                    Converter.convertRounded.call(this, value)
+                );
+            }
         });
     }
 

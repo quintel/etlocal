@@ -20,6 +20,26 @@ describe DatasetsController do
       end
     end
 
+    describe "#edit" do
+      let(:dataset) { FactoryGirl.create(:dataset, geo_id: 'test_1', area: "Test") }
+
+      it "visits edit" do
+        get :edit, params: { id: dataset.id }, format: :js, xhr: true
+
+        expect(response).to be_success
+      end
+    end
+
+    describe "#show" do
+      let(:dataset) { FactoryGirl.create(:dataset, geo_id: 'test_1', area: "Test") }
+
+      it "visits show" do
+        get :show, params: { id: dataset.id }, format: :js, xhr: true
+
+        expect(response).to be_success
+      end
+    end
+
     describe '#download' do
       let(:dataset) { FactoryGirl.create(:dataset, geo_id: 'test_1', area: "Test") }
 

@@ -66,9 +66,11 @@ var Slider = (function () {
                 disable: true
             });
 
+            console.log(this.editable);
+
             // Enable slider when a default value is already present from
             // previously edited values.
-            if (this.isEdited()) {
+            if (this.isEnabled() && this.editable) {
                 this.slider.enable();
             }
 
@@ -79,15 +81,17 @@ var Slider = (function () {
             return this.slider;
         },
 
-        isEdited: function () {
+        isEnabled: function () {
             return this.input.val();
         },
 
         setDefaultValue: function (value) {
             // Enable slider from a default graph value, only do this
             // when there's no previously edited value present.
-            if (!this.isEdited()) {
-                this.slider.enable();
+            if (!this.isEnabled()) {
+                if (this.editable) {
+                    this.slider.enable();
+                }
 
                 // Oddly specific: the last argument is a silent call so
                 // no changes are being triggered (which is what we want
@@ -102,8 +106,9 @@ var Slider = (function () {
     function Slider(scope) {
         this.scope      = $(scope);
         this.sliderEl   = this.scope.find('.slider');
-        this.spanVal    = this.scope.find('span.value');
+        this.spanVal    = this.scope.find('span.val');
         this.key        = this.sliderEl.data('key');
+        this.editable   = this.sliderEl.data('editable') === 1;
         this.flexible   = this.sliderEl.data('flexible') === 'flex';
         this.input      = this.scope.find('input.' + this.key);
     }

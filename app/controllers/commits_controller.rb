@@ -14,6 +14,8 @@ class CommitsController < ApplicationController
 
   # POST dataset_edits
   def dataset_edits
+    authorize @dataset, :update?
+
     @dataset_edit_form = DatasetEditForm.new(dataset_edit_params.to_h)
     @commit = @dataset_edit_form.submit(@dataset)
   end

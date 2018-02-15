@@ -16,3 +16,7 @@ DatasetImporter.new.import
 unless User.find_by(email: "robot@quintel.com")
   User.create!(email: "robot@quintel.com", name: "Robot", password: SecureRandom.hex)
 end
+
+unless Group.find_by(key: 'quintel')
+  Group.create!(key: 'quintel')
+end

@@ -41,7 +41,11 @@ describe DatasetsController do
     end
 
     describe '#download' do
-      let(:dataset) { FactoryGirl.create(:dataset, geo_id: 'test_1', area: "Test") }
+      let(:user) { FactoryGirl.create(:user) }
+      let(:dataset) { FactoryGirl.create(:dataset,
+                                         geo_id: 'test_1',
+                                         area: "Test",
+                                         user: user) }
 
       describe "insufficient data for an analyzes" do
         it 'downloads the dataset as a zip file' do

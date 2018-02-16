@@ -66,8 +66,6 @@ var Slider = (function () {
                 disable: true
             });
 
-            console.log(this.editable);
-
             // Enable slider when a default value is already present from
             // previously edited values.
             if (this.isEnabled() && this.editable) {

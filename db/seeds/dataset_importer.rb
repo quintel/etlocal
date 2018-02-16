@@ -15,7 +15,11 @@ class DatasetImporter
       dataset_row = DatasetCSVRow.new(row.to_h)
       dataset     = (
         scope[dataset_row.geo_id] ||
-        Dataset.create!(geo_id: dataset_row.geo_id, area: dataset_row.area)
+        Dataset.create!(
+          geo_id: dataset_row.geo_id,
+          area: dataset_row.area,
+          user: User.robot
+        )
       )
 
       Defaults.set(dataset, dataset_row)

@@ -32,7 +32,8 @@ RSpec.configure do |config|
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
 
-    FactoryGirl.create(:user, email: "robot@quintel.com")
+    group = FactoryGirl.create(:group)
+    FactoryGirl.create(:user, email: "robot@quintel.com", group: group)
   end
 
   config.around(:each) do |example|

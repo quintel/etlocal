@@ -11,7 +11,7 @@ describe CommitsController do
   # see your changed edits and you can specify
   # a commit message.
   describe "#dataset_edits" do
-    before do
+    def request_dataset_edits
       post :dataset_edits, params: {
         dataset_id: dataset.id,
         dataset_edit_form: {
@@ -22,8 +22,22 @@ describe CommitsController do
       }, format: :js, xhr: true
     end
 
-    it "is succesful" do
-      expect(response).to be_success
+    describe " -> valid" do
+      let(:dataset) { FactoryGirl.create(:dataset, user: user) }
+
+      it "is succesful" do
+        request_dataset_edits
+
+        expect(response).to be_success
+      end
+    end
+
+    describe " -> unauthorized" do
+      let(:dataset) { FactoryGirl.create(:dataset) }
+
+      it "requires a user" do
+        expect { request_dataset_edits }.to raise_error(Pundit::NotAuthorizedError)
+      end
     end
   end
 

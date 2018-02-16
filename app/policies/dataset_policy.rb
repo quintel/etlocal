@@ -1,13 +1,8 @@
 class DatasetPolicy < ApplicationPolicy
   def edit?
-    true
+    (record.user == user) || (record.user.group == user.group)
   end
 
-  def update?
-    true
-  end
-
-  def download?
-    true
-  end
+  alias_method :update?, :edit?
+  alias_method :download?, :edit?
 end

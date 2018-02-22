@@ -4,6 +4,11 @@ class Dataset < ApplicationRecord
   has_many :commits
   has_many :edits, through: :commits, source: :dataset_edits
 
+  def self.clones(dataset, user)
+    where(geo_id: dataset.geo_id)
+      .order("FIELD(`id`, #{dataset.id}) DESC, `created_at` DESC")
+  end
+
   def group
     if geo_id =~ /^GM/
       'municipalities'
@@ -46,6 +51,16 @@ class Dataset < ApplicationRecord
   def temp_name
     @temp_name ||= "#{ SecureRandom.hex(10) }\
                    -#{ area.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '') }"
+  end
+
+  def creator
+    @creator ||= begin
+      if user.group
+        user.group.key.humanize
+      else
+        user.name
+      end
+    end
   end
 
   private

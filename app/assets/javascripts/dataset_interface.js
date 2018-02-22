@@ -18,10 +18,26 @@ var DatasetInterface = (function () {
 
     function addChangeListenerToInputs() {
         $("div.input span.val input[type='text']")
-            .off("change")
-            .on("change", function (e) {
+            .off("change.convert")
+            .on("change.convert", function (e) {
                 window.DatasetInterface.ChangeTrigger.trigger(e.target);
-                $(e.target).setConvertedValue();
+
+                $(this).next("[type='hidden']").val(
+                    Converter.reverseConvert.call(this, $(this).val())
+                );
+            });
+    }
+
+    /* Private: addChangeListenerToDatasetSwitch
+     *
+     * Add change listener to select#datasets. This select box is there to
+     * switch between dataset versions.
+     */
+    function addChangeListenerToDatasetSwitch() {
+        $('.switch-dataset select#datasets')
+            .off('change')
+            .on('change', function (e) {
+                window.DatasetInterface.open($(this).val());
             });
     }
 
@@ -54,6 +70,16 @@ var DatasetInterface = (function () {
             button.prop('disabled', true);
 
             $("form.download-dataset").submit();
+        });
+    }
+
+    function addClickListenerToCloneDataset() {
+        var button = $("button.button.clone-dataset");
+
+        button.off('click').on('click', function () {
+            button.prop('disabled', true);
+
+            $("form.clone-dataset").submit();
         });
     }
 
@@ -119,6 +145,8 @@ var DatasetInterface = (function () {
 
             loadValues.call(this);
             addClickListenerToDownloadDataset.call(this);
+            addClickListenerToCloneDataset.call(this);
+            addChangeListenerToDatasetSwitch.call(this);
             addChangeListenerToInputs.call(this);
             addClickListenerToToggles.call(this);
             addClickListenerToValidateButton.call(this);
@@ -134,6 +162,14 @@ var DatasetInterface = (function () {
     }
 
     return {
+        open: function (datasetId) {
+            $.ajax({
+                type: "GET",
+                dataType: 'script',
+                url: '/datasets/' + datasetId + '/edit.js'
+            });
+        },
+
         enable: function (datasetId) {
             var datasetInterface = new DatasetInterface(datasetId);
 

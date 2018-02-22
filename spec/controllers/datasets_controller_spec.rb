@@ -67,5 +67,53 @@ describe DatasetsController do
         end
       end
     end
+
+    describe "#clone" do
+      let(:user) { FactoryGirl.create(:user) }
+
+      def clone_dataset
+        post :clone, params: { dataset_id: dataset.id }
+      end
+
+      describe "clones the dataset - when public" do
+        let(:dataset) { FactoryGirl.create(:dataset,
+                                           geo_id: 'test_1',
+                                           area: "Test",
+                                           user: user,
+                                           public: true) }
+
+        it "counts datasets to 2" do
+          clone_dataset
+
+          expect(Dataset.count).to eq(2)
+        end
+      end
+
+      describe "can clone the dataset - when private - and the user's" do
+        let(:dataset) { FactoryGirl.create(:dataset,
+                                           geo_id: 'test_1',
+                                           area: "Test",
+                                           user: user,
+                                           public: false) }
+
+        it "counts datasets to 1" do
+          clone_dataset
+
+          expect(Dataset.count).to eq(2)
+        end
+      end
+
+      describe "can't clone the dataset - when private - and not the user's" do
+        let(:dataset) { FactoryGirl.create(:dataset,
+                                           geo_id: 'test_1',
+                                           area: "Test",
+                                           user: FactoryGirl.create(:user),
+                                           public: false) }
+
+        it "counts datasets to 1" do
+          expect { clone_dataset }.to raise_error(Pundit::NotAuthorizedError)
+        end
+      end
+    end
   end
 end

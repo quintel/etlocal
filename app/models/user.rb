@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable
 
-  belongs_to :group
+  belongs_to :group, optional: true
 
   has_many :commits
   has_many :dataset_edits, through: :commits

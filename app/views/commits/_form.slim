@@ -2,6 +2,8 @@
   h5 title= dataset.geo_id
     = dataset.area
 
+  em= I18n.t("user.created_by", group: dataset.creator)
+
 - if @dataset_edit_form.errors.any?
   .errors
     - @dataset_edit_form.errors.full_messages.each do |message|
@@ -11,6 +13,9 @@
 
 .hidden
   = form_tag dataset_download_path(dataset), method: :get, class: 'download-dataset' do
+    .hidden
+
+  = form_tag dataset_clone_path(dataset, format: :js), remote: true, class: 'clone-dataset' do
     .hidden
 
 = form_for @dataset_edit_form, url: dataset_edits_dataset_commits_path(dataset), remote: true, html: { class: "dataset_editor" } do |form|
@@ -41,11 +46,19 @@
 
       .overview-edits
         .apply.no-changes
+          - if policy(@dataset).clone?
+            = button_tag class: 'button clone-dataset', type: 'button' do
+              | Clone dataset
+
           - if policy(@dataset).download?
             = button_tag class: 'button download-dataset', type: 'button', disabled: download_button_disabled?(dataset) do
               | Download dataset
               | &nbsp;
               i.fa.fa-download
+
+          .switch-dataset
+            - if @dataset_clones.any?
+              = select_tag "datasets", version_options
 
         .apply.changes
           = button_tag type: 'submit', class: 'button' do

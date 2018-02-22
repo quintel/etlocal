@@ -29,6 +29,8 @@ class CommitsController < ApplicationController
         @dataset.editable_attributes.as_json
       )
 
+      @dataset_clones = policy_scope(Dataset).clones(@dataset, current_user)
+
       flash.now[:success] = I18n.t("dataset_edits.success", dataset: @dataset.area)
     else
       @commit.build_source

@@ -63,14 +63,4 @@
 
         return json;
     };
-
-    // Used when loading the defaults from ETLocal into the interface.
-    $.fn.setConvertedDefault = function (value) {
-    };
-
-    $.fn.setConvertedValue = function () {
-        $(this).next("[type='hidden']").val(
-            Convert.reverseConvert.call(this, $(this).val())
-        );
-    };
 })(jQuery);

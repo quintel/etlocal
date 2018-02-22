@@ -5,14 +5,6 @@ Areas.DatasetSelector = (function () {
 
     var GROUP = 'dataset_selector';
 
-    function openDataset(id) {
-        $.ajax({
-            type: "GET",
-            dataType: 'script',
-            url: '/datasets/' + id + '/edit.js'
-        });
-    }
-
     function openPopup(position, data) {
         var popup   = this.areas.map.getOverlays().item(0),
             content = document.getElementById('popup-content');
@@ -23,7 +15,7 @@ Areas.DatasetSelector = (function () {
             .on('click', function (e) {
                 e.preventDefault();
 
-                openDataset(data.id);
+                DatasetInterface.open(data.id);
             });
 
         popup.setPosition(position);

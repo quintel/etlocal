@@ -1,3 +1,4 @@
 nl:
   user:
+    created_by: "Gemaakt door %{group}"
     signed_in_as: Ingelogd als

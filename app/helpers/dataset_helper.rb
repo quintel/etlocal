@@ -1,4 +1,12 @@
 module DatasetHelper
+  def version_options
+    versions = @dataset_clones
+
+    options_from_collection_for_select(versions, 'id', 'creator').prepend(
+      "<option value='' disabled='disabled'>Switch dataset</option>".html_safe
+    )
+  end
+
   def has_dataset_edit_by_robot?(dataset_edit)
     dataset_edit.latest.present? && dataset_edit.latest.user == User.robot
   end

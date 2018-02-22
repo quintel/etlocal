@@ -1,4 +1,5 @@
 en:
   user:
+    created_by: "Created by %{group}"
     sign_out: Sign out
     signed_in_as: Signed in as

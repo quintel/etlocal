@@ -1,9 +1,9 @@
 class DatasetsController < ApplicationController
-  layout false, only: :edit
-  format 'js', only: :edit
+  layout false, only: %i(edit clone)
+  format 'js', only: %i(edit :clone)
 
   before_action :authenticate_user!
-  before_action :find_dataset, only: %i(validate edit download defaults)
+  before_action :find_dataset, only: %i(validate edit download defaults clone)
 
   # GET index
   def index
@@ -17,6 +17,8 @@ class DatasetsController < ApplicationController
     @dataset_edit_form = DatasetEditForm.new(
       @dataset.editable_attributes.as_json
     )
+
+    @dataset_clones = policy_scope(Dataset).clones(@dataset, current_user)
   end
 
   # GET show.json
@@ -40,6 +42,13 @@ class DatasetsController < ApplicationController
         error: @dataset_downloader.validator.errors.full_messages.join(', ')
       }
     end
+  end
+
+  # POST clone
+  def clone
+    authorize @dataset
+
+    @cloned_dataset = DatasetCloner.clone!(@dataset, current_user)
   end
 
   # GET defaults

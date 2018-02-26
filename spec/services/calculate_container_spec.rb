@@ -2,17 +2,17 @@ require 'rails_helper'
 require 'support/graph'
 
 RSpec.describe CalculateContainer do
-  let(:dataset) { FactoryGirl.create(:dataset) }
-
   it "raises an error" do
-    expect { CalculateContainer.new(dataset, {}) }.to raise_error(ArgumentError)
+    expect { CalculateContainer.new({}).tryout! }.to raise_error(ArgumentError)
   end
 
   context "calculate" do
-    let(:container) { CalculateContainer.new(dataset, dataset_params) }
+    let(:container) { CalculateContainer.new(dataset_params) }
 
     let(:dataset_params) {
-      { 'number_of_residences' => 10 }
+      { 'area' => 'test123',
+        'base_dataset' => 'nl',
+        'number_of_residences' => 10 }
     }
 
     describe "refinery succeeds" do

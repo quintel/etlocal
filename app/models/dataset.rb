@@ -49,8 +49,11 @@ class Dataset < ApplicationRecord
   end
 
   def temp_name
-    @temp_name ||= "#{ SecureRandom.hex(10) }\
-                   -#{ area.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '') }"
+    @temp_name ||= begin
+      stripped = area.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+
+      "#{ SecureRandom.hex(10) }-#{ stripped }"
+    end
   end
 
   def creator

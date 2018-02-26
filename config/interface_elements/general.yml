@@ -7,3 +7,5 @@ groups:
       offshore_suitable_for_wind:
       land_available_for_solar:
       co2_emission_1990:
+      # For testing purposes:
+      etlocal_test_key:

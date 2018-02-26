@@ -34,13 +34,15 @@ class DatasetsController < ApplicationController
 
     authorize @dataset
 
-    if @dataset_downloader.validator.valid?
+    begin
       send_data @dataset_downloader.download,
         filename: @dataset_downloader.zip_filename
-    else
-      render json: {
-        error: @dataset_downloader.validator.errors.full_messages.join(', ')
-      }
+    rescue Refinery::IncalculableGraphError,
+           Refinery::FailedValidationError,
+           ArgumentError => error
+      render json: { error: error }
+    ensure
+      @dataset_downloader.prune!
     end
   end
 

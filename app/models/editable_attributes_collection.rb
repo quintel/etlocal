@@ -1,7 +1,6 @@
 class EditableAttributesCollection
   def self.keys
-    @keys ||= Transformer::GraphMethods.all.keys +
-      Transformer::DatasetCast.new.attributes.keys
+    @keys ||= InterfaceElement.keys
   end
 
   def initialize(dataset)

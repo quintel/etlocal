@@ -1,24 +1,27 @@
 class DatasetDownloader
   def initialize(dataset)
-    @dataset             = dataset
-    @editable_attributes = dataset.editable_attributes
-    @area_name           = dataset.temp_name
-  end
-
-  def validator
-    @validator ||= Transformer::DatasetCast.new(@editable_attributes.as_json)
+    @area_name = dataset.temp_name
+    @attributes = dataset.editable_attributes.as_json.merge(
+      area: @area_name,
+      base_dataset: dataset.country
+    )
   end
 
   def download
-    begin
-      Dataset::Scaler.scale!(@dataset, @dataset.editable_attributes.as_json)
-      Dataset::Analyzer.analyze!(@dataset, @dataset.editable_attributes.as_json)
-      move_dataset_to_temp!
-      compress_dataset!
-      File.read(zip_file_path.to_s)
-    ensure
-      remove_temporary_files
-    end
+    Transformer::DatasetGenerator.new(@attributes).generate(
+      [ Transformer::DatasetGenerator::Validator ]
+    )
+
+    Archive::Zip.archive(zip_file_path.to_s, dataset_dir.to_s)
+    File.read(zip_file_path.to_s)
+  end
+
+  # Removing
+  def prune!
+    return unless File.directory?(dataset_dir)
+
+    FileUtils.rm_rf(dataset_dir)
+    FileUtils.rm(zip_file_path)
   end
 
   def zip_filename
@@ -27,35 +30,11 @@ class DatasetDownloader
 
   private
 
-  # Analyzing
-  # Moving
-  def move_dataset_to_temp!
-    FileUtils.mv(
-      Pathname.new(Atlas.data_dir).join('datasets', @area_name),
-      tmp_folder
-    )
-  end
-
-  # Compressing
-  def compress_dataset!
-    Archive::Zip.archive(zip_file_path.to_s, dataset_tmp_folder.to_s)
-  end
-
-  # Removing
-  def remove_temporary_files
-    FileUtils.rm_rf(dataset_tmp_folder)
-    FileUtils.rm(zip_file_path)
+  def dataset_dir
+    Pathname.new(Atlas.data_dir).join('datasets', @area_name)
   end
 
   def zip_file_path
-    tmp_folder.join(zip_filename)
-  end
-
-  def dataset_tmp_folder
-    tmp_folder.join(@area_name)
-  end
-
-  def tmp_folder
-    Rails.root.join('tmp')
+    Rails.root.join('tmp').join(zip_filename)
   end
 end

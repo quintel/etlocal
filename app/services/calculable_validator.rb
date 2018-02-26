@@ -1,12 +1,18 @@
 class CalculableValidator < ActiveModel::Validator
   def validate(record)
-    dataset    = Dataset.new(area: 'calculation_shell')
     calc_attrs = record.attributes.slice(
       *EditableAttributesCollection.keys
     ).stringify_keys
 
     begin
-      CalculateContainer.new(dataset, calc_attrs).tryout!
+      dataset = Dataset.new(area: 'calculation_shell')
+      CalculateContainer.new(
+        calc_attrs.merge(
+          area: dataset.temp_name,
+          base_dataset: dataset.country
+        )
+      ).tryout!
+
     rescue Refinery::IncalculableGraphError,
            Refinery::FailedValidationError,
            ArgumentError => error

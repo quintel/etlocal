@@ -3,7 +3,7 @@ class InterfaceGroup
 
   attribute :header, String
   attribute :type, Symbol, default: :static
-  attribute :items, Hash
+  attribute :items, Hash[Symbol => String]
   attribute :subgroups, Array[InterfaceGroup]
 end
 
@@ -13,4 +13,10 @@ class InterfaceElement < YmlReadOnlyRecord
 
   attribute :key, Symbol
   attribute :groups, Array[InterfaceGroup]
+
+  def self.keys
+    InterfaceElement.all.flat_map(&:groups).flat_map do |group|
+      group.items.keys
+    end
+  end
 end

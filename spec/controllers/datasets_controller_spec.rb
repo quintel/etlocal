@@ -72,7 +72,7 @@ describe DatasetsController do
       let(:user) { FactoryGirl.create(:user) }
 
       def clone_dataset
-        post :clone, params: { dataset_id: dataset.id }
+        post :clone, params: { dataset_id: dataset.id, format: 'js' }
       end
 
       describe "clones the dataset - when public" do

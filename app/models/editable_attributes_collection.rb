@@ -18,11 +18,8 @@ class EditableAttributesCollection
     @attributes.map(&:key).include?(method)
   end
 
-  def edits
-    @edits ||= @dataset.edits
-      .includes(commit: :user)
-      .order("`created_at` DESC")
-      .group_by(&:key)
+  def edits_for(key)
+    edits[key.to_s] || []
   end
 
   def as_json(*)
@@ -34,6 +31,13 @@ class EditableAttributesCollection
   end
 
   private
+
+  def edits
+    @edits ||= @dataset.edits
+      .includes(commit: :user)
+      .order("`created_at` DESC")
+      .group_by(&:key)
+  end
 
   def setup_attributes(dataset)
     self.class.keys.flatten.map do |key|

@@ -138,6 +138,8 @@ en:
       to: TJ
     energy_production_wood_demand:
       to: TJ
+    etlocal_test_key:
+      to: TJ
 
     households_collective_chp_biogas_demand:
       to: TJ

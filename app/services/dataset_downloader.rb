@@ -18,10 +18,8 @@ class DatasetDownloader
 
   # Removing
   def prune!
-    return unless File.directory?(dataset_dir)
-
-    FileUtils.rm_rf(dataset_dir)
-    FileUtils.rm(zip_file_path)
+    FileUtils.rm_rf(dataset_dir) if File.directory?(dataset_dir)
+    FileUtils.rm(zip_file_path)  if File.file?(zip_file_path)
   end
 
   def zip_filename

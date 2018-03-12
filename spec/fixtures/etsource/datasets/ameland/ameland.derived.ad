@@ -57,6 +57,9 @@
 - investment_hv_net_low = 0.2
 - investment_hv_net_high = 0.25
 - investment_hv_net_per_turbine = 1.2
+- electric_vehicle_profile_1_share = 1.0
+- electric_vehicle_profile_2_share = 0.0
+- electric_vehicle_profile_3_share = 0.0
 - annual_infrastructure_cost_electricity = 0.24297591531443635
 - annual_infrastructure_cost_gas = 0.19491769560031028
 - areable_land = 2.480193435676758
@@ -76,6 +79,7 @@
 - onshore_suitable_for_wind = 3.6968584153835704
 - residences_roof_surface_available_for_pv = 0.005
 - buildings_roof_surface_available_for_pv = 0.0
+- init.agriculture_useful_demand_electricity = 0.0
 - base_dataset = nl
 - scaling.area_attribute = number_of_residences
 - scaling.base_value = 7449298
@@ -83,5 +87,5 @@
 - scaling.has_energy = 
 - scaling.has_industry = 
 - scaling.value = 1000
-- init.agriculture_useful_demand_electricity = 0.0
 - geo_id = ameland
+- uses_deprecated_initializer_inputs = false

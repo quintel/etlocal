@@ -11,12 +11,17 @@ Dir["#{ Rails.root }/db/seeds/**/*.rb"].each do |file|
   require file
 end
 
-DatasetImporter.new.import
+unless quintel = Group.find_by(key: 'quintel')
+  quintel = Group.create!(key: 'quintel')
+end
 
 unless User.find_by(email: "robot@quintel.com")
-  User.create!(email: "robot@quintel.com", name: "Robot", password: SecureRandom.hex)
+  User.create!(
+    email: "robot@quintel.com",
+    group: quintel,
+    name: "Robot",
+    password: SecureRandom.hex
+  )
 end
 
-unless Group.find_by(key: 'quintel')
-  Group.create!(key: 'quintel')
-end
+DatasetImporter.new.import

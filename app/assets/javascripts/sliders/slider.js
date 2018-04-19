@@ -104,7 +104,7 @@ var Slider = (function () {
     function Slider(scope) {
         this.scope      = $(scope);
         this.sliderEl   = this.scope.find('.slider');
-        this.spanVal    = this.scope.find('span.val');
+        this.spanVal    = this.scope.find('span.val > span.display_value');
         this.key        = this.sliderEl.data('key');
         this.editable   = this.sliderEl.data('editable') === 1;
         this.flexible   = this.sliderEl.data('flexible') === 'flex';

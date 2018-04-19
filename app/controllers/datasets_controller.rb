@@ -55,12 +55,4 @@ class DatasetsController < ApplicationController
   def defaults
     render json: GraphAssumptions.get(@dataset, :nl)
   end
-
-  private
-
-  def permitted_params
-    params.require(:dataset_edit_form).permit(
-      :dataset_id, *EditableAttributesCollection.keys
-    ).reject{|_, v| v.blank? }
-  end
 end

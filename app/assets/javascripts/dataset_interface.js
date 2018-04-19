@@ -73,6 +73,7 @@ var DatasetInterface = (function () {
         });
     }
 
+    // Click listener to clone a dataset
     function addClickListenerToCloneDataset() {
         var button = $("button.button.clone-dataset");
 

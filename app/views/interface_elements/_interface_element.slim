@@ -22,12 +22,10 @@
                   i.fa.fa-history
 
               span.val data= conversions_for(key)
+                span.display_value
                 - if policy(@dataset).edit?
                   - unless flexible == 'flex'
                     = form.hidden_field key, class: key
-                - else
-                  span.read-only
-                    | &nbsp;
 
               span.unit
                 = '%'

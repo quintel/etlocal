@@ -8,24 +8,24 @@
       strong= I18n.t("dataset_edits.groups.#{ interface_group.header }")
 
     .group class= ('slider-group' if interface_group.type == :slider)
-      - interface_group.items.each do |key, flexible|
+      - interface_group.items.each do |interface_item|
         - if interface_group.type == :slider
           .editable.slider
             .slider-wrapper.input
-              = form.label key
+              = form.label interface_item.key
 
-              .slider data-key= key data-flexible= flexible data-editable= (policy(@dataset).edit? ? '1' : '0')
-              span.history data-key= key
-                - if flexible == 'flex'
+              .slider data-key= interface_item.key data-flexible= ('flex' if interface_item.flexible) data-editable= (policy(@dataset).edit? ? '1' : '0')
+              span.history data-key= interface_item.key
+                - if interface_item.flexible
                   i.fa
                 - else
                   i.fa.fa-history
 
-              span.val data= conversions_for(key)
+              span.val data= conversions_for(interface_item.key)
                 span.display_value
                 - if policy(@dataset).edit?
-                  - unless flexible == 'flex'
-                    = form.hidden_field key, class: key
+                  - unless interface_item.flexible
+                    = form.hidden_field interface_item.key, class: interface_item.key
 
               span.unit
                 = '%'
@@ -33,36 +33,36 @@
               .clear
 
         - else
-          .editable data-key=key
+          .editable data-key=interface_item.key
             .border
             .input
               .left
-                = form.label key
+                = form.label interface_item.key
               .right
-                span.history data-key= key
+                span.history data-key= interface_item.key
                   i.fa.fa-history
 
-                span.val data= conversions_for(key)
+                span.val data= conversions_for(interface_item.key)
                   - if policy(@dataset).edit?
-                    = text_field_tag key, nil, class: 'display_input'
-                    = form.hidden_field key, class: 'value_input'
+                    = text_field_tag interface_item.key, nil, class: 'display_input'
+                    = form.hidden_field interface_item.key, class: 'value_input'
 
                   - else
                     span.read-only
-                      = form.object.public_send(key)
+                      = form.object.public_send(interface_item.key)
                       | &nbsp;
 
-                span.unit data-to= I18n.t("units.#{ key }.to")
-                  = I18n.t("units.#{ key }.from", default: I18n.t("units.#{ key }.to")).html_safe
+                span.unit data-to= interface_item.unit
+                  = I18n.t("units.#{ interface_item.key }.from", default: interface_item.unit).html_safe
               .clear
 
-        - unless flexible == 'flex'
-          .history.hidden class= key
+        - unless interface_item.flexible
+          .history.hidden class= interface_item.key
             .line-arrow
 
             strong = I18n.t("dataset_edits.history")
 
-            - @dataset.editable_attributes.edits_for(key).each do |dataset_edit|
+            - @dataset.editable_attributes.edits_for(interface_item.key).each do |dataset_edit|
               .change
                 .history-line
                   span.border

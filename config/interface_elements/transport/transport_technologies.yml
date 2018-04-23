@@ -1,4 +1,5 @@
 key: transport_technologies
 groups:
   - items:
-      transport_useful_demand_bicycles_demand:
+    - key: transport_useful_demand_bicycles_demand
+      unit: TJ

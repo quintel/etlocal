@@ -3,6 +3,10 @@ groups:
   - header: electricity_distribution
     type: slider
     items:
-      agriculture_final_demand_electricity_agriculture_useful_demand_electricity_parent_share: flex
-      agriculture_final_demand_electricity_agriculture_geothermal_parent_share:
-      agriculture_final_demand_electricity_agriculture_heatpump_water_water_ts_electricity_parent_share:
+      - key: agriculture_final_demand_electricity_agriculture_useful_demand_electricity_parent_share
+        flexible: true
+        unit: '%'
+      - key: agriculture_final_demand_electricity_agriculture_geothermal_parent_share
+        unit: '%'
+      - key: agriculture_final_demand_electricity_agriculture_heatpump_water_water_ts_electricity_parent_share
+        unit: '%'

@@ -2,19 +2,5 @@ key: supply_renewable_production
 groups:
   - header: electricity
     items:
-      energy_power_wind_turbine_inland_demand:
-      energy_power_wind_turbine_coastal_demand:
-      energy_power_wind_turbine_offshore_demand:
-      energy_power_solar_pv_solar_radiation_demand:
-      energy_power_solar_csp_solar_radiation_demand:
-      energy_power_geothermal_demand:
-      energy_power_hydro_mountain_demand:
-      energy_power_hydro_river_demand:
-      energy_power_supercritical_waste_mix_demand:
-
-  - header: central_production_heat_networks
-    items:
-      energy_heater_for_heat_network_wood_pellets_demand:
-      energy_heater_for_heat_network_waste_mix_demand:
-      energy_chp_supercritical_waste_mix_demand:
-      energy_heater_for_heat_network_geothermal_demand:
+      - key: energy_power_wind_turbine_inland_demand
+        unit: TJ

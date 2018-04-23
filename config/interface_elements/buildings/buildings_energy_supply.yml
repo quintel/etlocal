@@ -2,12 +2,18 @@ key: buildings_energy_supply
 groups:
   - header: local_production
     items:
-      buildings_solar_pv_solar_radiation_demand:
-      buildings_final_demand_solar_thermal_demand:
+      - key: buildings_solar_pv_solar_radiation_demand
+        unit: TJ
+      - key: buildings_final_demand_solar_thermal_demand
+        unit: TJ
 
   - header: heat_network_supply
     items:
-      buildings_collective_chp_network_gas_demand:
-      buildings_collective_chp_wood_pellets_demand:
-      buildings_chp_engine_biogas_demand:
-      buildings_collective_geothermal_demand:
+      - key: buildings_collective_chp_network_gas_demand
+        unit: TJ
+      - key: buildings_collective_chp_wood_pellets_demand
+        unit: TJ
+      - key: buildings_chp_engine_biogas_demand
+        unit: TJ
+      - key: buildings_collective_geothermal_demand
+        unit: TJ

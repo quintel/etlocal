@@ -1,11 +1,18 @@
 key: general
 groups:
   - items:
-      areable_land:
-      coast_line:
-      onshore_suitable_for_wind:
-      offshore_suitable_for_wind:
-      land_available_for_solar:
-      co2_emission_1990:
+    - key: areable_land
+      unit: "<span>km<sup>2</sup></span>"
+    - key: coast_line
+      unit: km
+    - key: onshore_suitable_for_wind
+      unit: "<span>km<sup>2</sup></span>"
+    - key: offshore_suitable_for_wind
+      unit: "<span>km<sup>2</sup></span>"
+    - key: land_available_for_solar
+      unit: "<span>km<sup>2</sup></span>"
+    - key: co2_emission_1990
+      unit: Mton
       # For testing purposes:
-      etlocal_test_key:
+    - key: etlocal_test_key
+      unit: TJ

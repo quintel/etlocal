@@ -3,12 +3,6 @@ groups:
   - header: transport_rail_transport_electricity
     type: slider
     items:
-      transport_final_demand_for_rail_electricity_transport_passenger_train_using_electricity_parent_share: flex
-      transport_final_demand_for_rail_electricity_transport_freight_train_using_electricity_parent_share:
-      transport_final_demand_for_rail_electricity_transport_tram_using_electricity_parent_share:
-
-  - header: transport_rail_transport_diesel
-    type: slider
-    items:
-      transport_rail_mixer_diesel_transport_passenger_train_using_diesel_mix_parent_share: flex
-      transport_rail_mixer_diesel_transport_freight_train_using_diesel_mix_parent_share:
+      - key: transport_final_demand_for_rail_electricity_transport_passenger_train_using_electricity_parent_share
+        flexible: true
+        unit: '%'

@@ -16,8 +16,6 @@ en:
       to: TJ
     agriculture_final_demand_wood_pellets_demand:
       to: TJ
-    areable_land:
-      to: "<span>km<sup>2</sup></span>"
     buildings_chp_engine_biogas_demand:
       to: TJ
     buildings_collective_chp_network_gas_demand:
@@ -40,14 +38,8 @@ en:
       to: TJ
     buildings_local_production_electricity_demand:
       to: TJ
-    buildings_roof_surface_available_for_pv:
-      to: "<span>km<sup>2</sup></span>"
     buildings_solar_pv_solar_radiation_demand:
       to: TJ
-    co2_emission_1990:
-      to: Mton
-    coast_line:
-      to: km
 
 
     energy_chp_combined_cycle_network_gas_demand:
@@ -191,11 +183,6 @@ en:
       to: ''
     number_of_residences:
       to: ''
-
-    offshore_suitable_for_wind:
-      to: "<span>km<sup>2</sup></span>"
-    onshore_suitable_for_wind:
-      to: "<span>km<sup>2</sup></span>"
 
     percentage_of_old_residences:
       to: '%'

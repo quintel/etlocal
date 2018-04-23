@@ -2,12 +2,15 @@ key: agriculture_energy_supply
 groups:
   - header: gas_chp
     items:
-      agriculture_chp_engine_network_gas_demand:
+      - key: agriculture_chp_engine_network_gas_demand
+        unit: TJ
 
   - header: biomass_chp
     items:
-      agriculture_chp_supercritical_wood_pellets_demand:
+      - key: agriculture_chp_supercritical_wood_pellets_demand
+        unit: TJ
 
   - header: biogas_chp
     items:
-      agriculture_chp_engine_biogas_demand:
+      - key: agriculture_chp_engine_biogas_demand
+        unit: TJ

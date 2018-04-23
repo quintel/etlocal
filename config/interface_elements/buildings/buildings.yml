@@ -1,5 +1,7 @@
 key: buildings
 groups:
   - items:
-      number_of_buildings:
-      buildings_roof_surface_available_for_pv:
+    - key: number_of_buildings
+      unit: '#'
+    - key: buildings_roof_surface_available_for_pv
+      unit: "<span>km<sup>2</sup></span>"

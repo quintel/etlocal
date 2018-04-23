@@ -1,4 +1,5 @@
 key: transport
 groups:
   - items:
-      number_of_cars:
+    - key: number_of_cars
+      unit: '#'

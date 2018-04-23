@@ -1,8 +1,13 @@
 key: agriculture
 groups:
   - items:
-      agriculture_final_demand_electricity_demand:
-      agriculture_final_demand_network_gas_demand:
-      agriculture_final_demand_steam_hot_water_demand:
-      agriculture_final_demand_wood_pellets_demand:
-      agriculture_final_demand_crude_oil_demand:
+    - key: agriculture_final_demand_electricity_demand
+      unit: TJ
+    - key: agriculture_final_demand_network_gas_demand
+      unit: TJ
+    - key: agriculture_final_demand_steam_hot_water_demand
+      unit: TJ
+    - key: agriculture_final_demand_wood_pellets_demand
+      unit: TJ
+    - key: agriculture_final_demand_crude_oil_demand
+      unit: TJ

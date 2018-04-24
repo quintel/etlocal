@@ -21,7 +21,6 @@ RSpec.configure do |config|
   config.include Paperclip::Shoulda::Matchers
 
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
-  config.filter_run_excluding :etsource => true
 
   config.use_transactional_fixtures = true
 

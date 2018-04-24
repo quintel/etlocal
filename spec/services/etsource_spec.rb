@@ -1,24 +1,16 @@
 require 'rails_helper'
+require 'support/remote_helper'
 
 WebMock.allow_net_connect!
 
-def fetch_remote(suffix)
-  JSON.parse(
-    begin
-      RestClient.get(
-        "#{ Rails.configuration.etsource_export_root }/api/v1/etsource/#{ suffix }"
-      ).body
-    rescue RestClient::ExceptionWithResponse => e
-      "[]"
-    end
-  )
-end
+dataset_inputs = RemoteHelper.fetch('sparse_graph_queries')
+transformers   = RemoteHelper.fetch('transformers')
 
-RSpec.describe 'ETLocal interface', :etsource => true do
+RSpec.describe 'ETLocal interface', :if => dataset_inputs && transformers do
   # Validates DATASET_INPUT's used in sparse graph query upon their existence
   # in ETLocal.
   #
-  fetch_remote('sparse_graph_queries').each do |input|
+  dataset_inputs.each do |input|
     it "has a present DATASET_INPUT for #{ input }" do
       expect(InterfaceElement.items.detect do |item|
         item.key == input
@@ -35,7 +27,7 @@ RSpec.describe 'ETLocal interface', :etsource => true do
   # Validates if there's a key available that can set something in the
   # sparse graph. Skip attributes that have a sparse graph query attached.
   #
-  fetch_remote('transformers').each do |key, attribute|
+  transformers.each do |key, attribute|
     if attribute['sparse_graph_query'].blank?
       it "has a present sparse graph query for #{ key }" do
         expect(InterfaceElement.items.detect do |item|

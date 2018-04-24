@@ -3,10 +3,20 @@ class InterfaceItem
   include ActiveModel::Validations
 
   validates_presence_of :unit, :key
+  validate :used_in_sparse_graph_query
 
   attribute :key, Symbol
   attribute :unit, String
   attribute :flexible, Boolean, default: false
+
+  private
+
+  def used_in_sparse_graph_query
+    return unless key =~ /^input_/
+    return if Etsource.dataset_inputs.include?(key.to_s)
+
+    errors.add(:key, "#{ key } is not used within a sparse graph query 'DATASET_INPUT'")
+  end
 end
 
 class InterfaceGroup

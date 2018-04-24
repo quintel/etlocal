@@ -1,6 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe InterfaceElement do
+  # Switch Atlas to the real Atlas
+  before :all do
+    Atlas.data_dir = Rails.configuration.etsource_path
+  end
+
   InterfaceElement.all.each do |interface_element|
     it "#{ interface_element.key } is valid" do
       expect(interface_element).to be_valid
@@ -17,5 +22,9 @@ RSpec.describe InterfaceElement do
         end
       end
     end
+  end
+
+  after :all do
+    Atlas.data_dir = "#{ ::Rails.root }/spec/fixtures/etsource"
   end
 end

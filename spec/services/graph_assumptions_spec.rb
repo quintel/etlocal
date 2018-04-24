@@ -22,7 +22,7 @@ describe GraphAssumptions do
   }
 
   it 'renders defaults for demands' do
-    expect(graph_assumptions.fetch(:households_final_demand_electricity_demand)).to eq(
+    expect(graph_assumptions.fetch(:'households_final_demand_electricity+demand')).to eq(
       0.0)
   end
 end

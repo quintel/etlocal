@@ -7,7 +7,7 @@ describe ChartsController do
   it "fetches a chart" do
     post :data, params: {
       chart: {
-        type: 'households_final_demand_electricity_demand'
+        type: 'households_final_demand_electricity+demand'
       }
     }, format: :json
 

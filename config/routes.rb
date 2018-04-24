@@ -17,6 +17,12 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :exports, only: :show
+
+      resources :etsource, only: [] do
+        collection do
+          get :sparse_graph_queries, :transformers
+        end
+      end
     end
   end
 end

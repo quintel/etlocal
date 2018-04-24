@@ -3,6 +3,7 @@ class InterfaceItem
   include ActiveModel::Validations
 
   validates_presence_of :unit, :key
+  validates_inclusion_of :unit, in: %w(# km TJ % Mton <span>km<sup>2</sup></span>)
   validate :used_in_sparse_graph_query
 
   attribute :key, Symbol
@@ -40,6 +41,10 @@ class InterfaceElement < YmlReadOnlyRecord
 
   attribute :key, Symbol
   attribute :groups, Array[InterfaceGroup]
+
+  def self.items
+    @items ||= all.flat_map(&:groups).flat_map(&:items)
+  end
 
   def self.keys
     InterfaceElement.all.flat_map(&:groups).flat_map do |group|

@@ -28,8 +28,8 @@ GIT
 
 GIT
   remote: https://github.com/quintel/transformer.git
-  revision: a6a43342110cddb2f7bece6bb4a7072633f58cb3
-  ref: a6a4334
+  revision: 482a6af6b3beb87748ba419bd41a174f7ca529ef
+  ref: 482a6af
   specs:
     transformer (1.0.0)
       atlas (~> 1.0)

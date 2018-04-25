@@ -40,7 +40,11 @@ Areas.DatasetSelector = (function () {
             type: 'GET',
             dataType: 'json',
             success: function (data) {
-                openPopup.call(this, position, data);
+                if (data) {
+                    openPopup.call(this, position, data);
+                } else if (console) {
+                    console.log("No dataset with " + geoId + " found");
+                }
             }.bind(this),
             error: function (e) {
                 alert(e);

@@ -1,5 +1,5 @@
 ---
-households_final_demand_electricity+demand:
+households_final_demand_electricity_demand:
   legend_type: dynamic
   unit: 'kWh'
   color_stops:
@@ -11,7 +11,7 @@ households_final_demand_electricity+demand:
     - districts
     - neighborhoods
 
-households_final_demand_network_gas+demand:
+households_final_demand_network_gas_demand:
   legend_type: dynamic
   unit: 'm3'
   color_stops:

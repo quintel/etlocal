@@ -2,7 +2,7 @@ class Api::V1::EtsourceController < ApplicationController
   format 'json'
 
   def sparse_graph_queries
-    render json: Etsource.dataset_inputs
+    render json: Etsource.dataset_inputs.uniq
   end
 
   def transformers

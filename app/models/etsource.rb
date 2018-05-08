@@ -9,9 +9,7 @@ module Etsource
   # Used to check if an interface element is still required.
   def self.dataset_inputs
     @dataset_inputs ||= Atlas::SparseGraphQuery.all.flat_map do |query|
-      match = /DATASET_INPUT\(['"]?([a-z_]+)['"]?\)/.match(query.query)
-
-      match ? match.captures : []
+      query.query.scan(/DATASET_INPUT\(['"]?([a-z_]+)['"]?\)/).flatten
     end
   end
 end

@@ -5,12 +5,391 @@ nl:
         commit: "Reden"
         source_file: "Bronbestand"
 
-        building_area: Totale oppervlakte gebouwen
-        gas_consumption: Gasgebruik per huishouden
-        electricity_consumption: Electriciteitsgebruik per huishouden
-        number_of_cars: "Aantal auto's"
-        number_of_residences: Aantal huizen
-        number_of_residences_with_solar_pv: Aantal huizen met een zonnepaneel
+        analysis_year: Startjaar
+        land_available_for_solar: Beschikbaar gebied voor zonnevelden
+        offshore_suitable_for_wind: Beschikbaar gebied voor windturbines op zee
+        onshore_suitable_for_wind: Beschikbaar gebied voor windturbines op land
+        coast_line: Kustlijn
+        areable_land: Beschikbare landbouwgrond
         number_of_inhabitants: Aantal inwoners
-        percentage_of_old_residences: "Huizen gebouwd voor 1992"
-        roof_surface_available_for_pv: Dakoppervlak beschikbaar voor PV per huishouden
+
+        co2_emission_1990: 'CO<sub>2</sub>-emissies in 1990'
+        other_emission_built_environment: 'Overige broeikasgassen (niet CO<sub>2</sub>) in de gebouwde omgeving'
+        other_emission_transport: 'Overige broeikasgassen (niet CO<sub>2</sub>) in de transportsector'
+        other_emission_industry_energy: 'Overige broeikasgassen (niet CO<sub>2</sub>) in de industrie and energiesector'
+        other_emission_agriculture: 'Overige broeikasgassen (niet CO<sub>2</sub>) in de landbouw'
+        lv_net_total_costs_present: Laagspanningsnet
+        lv_mv_trafo_total_costs_present: LS-MS transformatoren
+        mv_net_total_costs_present: Middenspanningsnet
+        mv_hv_trafo_total_costs_present: MV-HV transformatoren
+        hv_net_total_costs_present: Hoogspanningsnet
+        offshore_net_costs_present: Offshore wind grid
+        interconnection_net_costs_present: Interconnector capacity
+        lv_net_spare_capacity: Laagspanningsnet
+        lv_mv_trafo_spare_capacity: LS-MS transformatoren
+        mv_net_spare_capacity: Middenspanningsnet
+        mv_hv_trafo_spare_capacity: MV-HV transformatoren
+        hv_net_spare_capacity: Hoogspanningsnet
+        lv_net_capacity_per_step: Step size of low voltage grid reinforcement
+        lv_net_costs_per_capacity_step: Costs of low voltage grid reinforcement per step
+        lv_mv_trafo_capacity_per_step: Step size of lv-mv transformer reinforcement
+        lv_mv_trafo_costs_per_capacity_step: Costs of lv-mv transformer reinforcement per step
+        mv_net_capacity_per_step: Step size of medium voltage grid reinforcement
+        mv_net_costs_per_capacity_step: Costs of medium voltage grid reinforcement per step
+        mv_hv_trafo_capacity_per_step: Step size of mv-hv transformer reinforcement
+        mv_hv_trafo_costs_per_capacity_step: Costs of mv-hv transformer reinforcement per step
+        hv_net_capacity_per_step: Step size of high voltage grid reinforcement
+        hv_net_costs_per_capacity_step: Costs of high voltage grid reinforcement per step
+
+        #households
+        number_of_residences: Aantal woningen
+        input_percentage_of_old_residences: Percentage woningen gebouwd voor 1992
+        residences_roof_surface_available_for_pv: Geschikt dakoppervlak voor zon-PV
+
+        input_households_electricity_demand: Elektriciteitsgebruik
+        households_final_demand_network_gas_demand: Gasgebruik
+        households_final_demand_steam_hot_water_demand: Warmtegebruik
+        households_final_demand_wood_pellets_demand: Biomassagebruik
+        households_final_demand_crude_oil_demand: Oliegebruik
+        households_final_demand_coal_demand: Kolengebruik
+
+        input_households_solar_pv_demand: Zon-PV-productie
+        input_households_solar_pv_own_use_share: Eigen gebruik zon-PV-productie
+        households_final_demand_solar_thermal_demand: Zonthermieproductie
+        input_households_district_heating_heater_network_gas_share: Gasketel
+        input_households_district_heating_chp_network_gas_share: Gas-WKK
+        input_households_district_heating_chp_wood_pellets_share: Biomassa-WKK
+        input_households_district_heating_chp_biogas_share: Biogas-WKK
+        input_households_district_heating_heatpump_electricity_share: Elektrische warmtepomp
+        input_households_district_heating_geothermal_share: Geothermie
+        input_households_district_heating_heater_hydrogen_share: Waterstofketel
+        input_households_district_heating_central_heat_network_share: Grootschalige stadsverwarming
+
+        households_final_demand_for_appliances_electricity_households_appliances_clothes_dryer_electricity_parent_share: Droger
+        households_final_demand_for_appliances_electricity_households_appliances_computer_media_electricity_parent_share: Computer
+        households_final_demand_for_appliances_electricity_households_appliances_dishwasher_electricity_parent_share: Vaatwasser
+        households_final_demand_for_appliances_electricity_households_appliances_fridge_freezer_electricity_parent_share: Koelkast
+        households_final_demand_for_appliances_electricity_households_appliances_other_electricity_parent_share: Overig
+        households_final_demand_for_appliances_electricity_households_appliances_television_electricity_parent_share: Televisie
+        households_final_demand_for_appliances_electricity_households_appliances_vacuum_cleaner_electricity_parent_share: Stofzuiger
+        households_final_demand_for_appliances_electricity_households_appliances_washing_machine_electricity_parent_share: Wasmachine
+
+        households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share: Warm water
+        households_final_demand_steam_hot_water_households_final_demand_for_space_heating_steam_hot_water_parent_share: Ruimteverwarming
+
+        households_final_demand_wood_pellets_households_final_demand_for_cooking_wood_pellets_parent_share: Koken
+        households_final_demand_wood_pellets_households_final_demand_for_hot_water_wood_pellets_parent_share: Warm water
+        households_final_demand_wood_pellets_households_final_demand_for_space_heating_wood_pellets_parent_share: Ruimteverwarming
+
+        households_final_demand_coal_households_final_demand_for_hot_water_coal_parent_share: Warm water
+        households_final_demand_coal_households_final_demand_for_space_heating_coal_parent_share: Ruimteverwarming
+
+        households_final_demand_crude_oil_households_final_demand_for_hot_water_crude_oil_parent_share: Warm water
+        households_final_demand_crude_oil_households_final_demand_for_space_heating_crude_oil_parent_share: Ruimteverwarming
+
+        households_water_heater_solar_thermal_households_useful_demand_for_hot_water_for_houses_met_solar_heater_parent_share: Warm water
+        households_water_heater_solar_thermal_households_useful_demand_for_space_heating_after_insulation_for_houses_met_solar_heater_parent_share: Ruimteverwarming
+
+        households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share: Combi-boiler
+        households_final_demand_for_space_heating_network_gas_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share: Hybride warmtepomp
+        households_final_demand_for_space_heating_network_gas_households_space_heater_micro_chp_network_gas_parent_share: Micro-WKK
+        households_final_demand_for_space_heating_network_gas_households_space_heater_network_gas_parent_share: Gasketel
+
+        households_final_demand_for_space_heating_electricity_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share: Hybride warmtepomp
+        households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_air_water_electricity_parent_share: Warmtepomp (lucht)
+        households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_ground_water_electricity_parent_share: Warmtepomp (bodem)
+        households_final_demand_for_space_heating_electricity_households_space_heater_electricity_parent_share: Elektrische ketel
+
+        households_final_demand_for_hot_water_network_gas_households_water_heater_combined_network_gas_parent_share: Combi-boiler
+        households_final_demand_for_hot_water_network_gas_households_water_heater_fuel_cell_chp_network_gas_parent_share: Fuel cell-WKK
+        households_final_demand_for_hot_water_network_gas_households_water_heater_hybrid_heatpump_air_water_electricity_parent_share: Hybride warmtepomp
+        households_final_demand_for_hot_water_network_gas_households_water_heater_micro_chp_network_gas_parent_share: Micro-WKK
+        households_final_demand_for_hot_water_network_gas_households_water_heater_network_gas_parent_share: Gasketel
+
+        households_final_demand_for_hot_water_electricity_households_water_heater_heatpump_air_water_electricity_parent_share: Warmtepomp (lucht)
+        households_final_demand_for_hot_water_electricity_households_water_heater_heatpump_ground_water_electricity_parent_share: Warmtepomp (bodem)
+        households_final_demand_for_hot_water_electricity_households_water_heater_hybrid_heatpump_air_water_electricity_parent_share: Hybride warmtepomp
+        households_final_demand_for_hot_water_electricity_households_water_heater_resistive_electricity_parent_share: Elektrische ketel
+
+        households_final_demand_for_cooking_electricity_households_cooker_resistive_electricity_parent_share: Elektrisch
+        households_final_demand_for_cooking_electricity_households_cooker_halogen_electricity_parent_share: Halogeen
+        households_final_demand_for_cooking_electricity_households_cooker_induction_electricity_parent_share: Inductie
+
+        households_final_demand_for_cooling_electricity_households_cooling_airconditioning_electricity_parent_share: Airconditioning
+        households_final_demand_for_cooling_electricity_households_cooling_heatpump_ground_water_electricity_parent_share: Warmtepomp (bodem)
+        households_final_demand_for_cooling_electricity_households_cooling_heatpump_air_water_electricity_parent_share: Warmtepomp (lucht)
+
+        households_final_demand_for_lighting_electricity_households_lighting_efficient_fluorescent_electricity_parent_share: Spaarlamp
+        households_final_demand_for_lighting_electricity_households_lighting_incandescent_electricity_parent_share: Gloeilamp
+        households_final_demand_for_lighting_electricity_households_lighting_led_electricity_parent_share: LED-lamp
+
+        households_final_demand_network_gas_households_final_demand_for_cooking_network_gas_parent_share: Koken
+        households_final_demand_network_gas_households_final_demand_for_cooling_network_gas_parent_share: Koeling
+        households_final_demand_network_gas_households_final_demand_for_space_heating_network_gas_parent_share: Ruimteverwarming
+        households_final_demand_network_gas_households_final_demand_for_hot_water_network_gas_parent_share: Warm water
+
+        households_final_demand_electricity_households_final_demand_for_appliances_electricity_parent_share: Apparaten
+        households_final_demand_electricity_households_final_demand_for_cooking_electricity_parent_share: Koken
+        households_final_demand_electricity_households_final_demand_for_cooling_electricity_parent_share: Koeling
+        households_final_demand_electricity_households_final_demand_for_hot_water_electricity_parent_share: Warm water
+        households_final_demand_electricity_households_final_demand_for_lighting_electricity_parent_share: Verlichting
+        households_final_demand_electricity_households_final_demand_for_space_heating_electricity_parent_share: Ruimteverwarming
+
+
+
+        #buildings
+        number_of_buildings: Aantal gebouwen
+        buildings_roof_surface_available_for_pv: Geschikt dakoppervlak voor zon-PV
+
+        input_buildings_electricity_demand: Elektriciteitsgebruik
+        buildings_final_demand_network_gas_demand: Gasgebruik
+        buildings_final_demand_steam_hot_water_demand: Warmtegebruik
+        buildings_final_demand_wood_pellets_demand: Biomassagebruik
+        buildings_final_demand_coal_demand: Kolengebruik
+        buildings_final_demand_crude_oil_demand: Oliegebruik
+
+        input_buildings_solar_pv_demand: Zon-PV-productie
+        input_buildings_solar_pv_own_use_share: Eigen gebruik zon-PV-productie
+        buildings_final_demand_solar_thermal_demand: Zonthermieproductie
+        input_buildings_district_heating_heater_network_gas_share: Gasketel
+        input_buildings_district_heating_chp_network_gas_share: Gas-WKK
+        input_buildings_district_heating_chp_wood_pellets_share: Biomassa-WKK
+        input_buildings_district_heating_chp_biogas_share: Biogas-WKK
+        input_buildings_district_heating_heatpump_electricity_share: Elektrische warmtepomp
+        input_buildings_district_heating_geothermal_share: Geothermie
+        input_buildings_district_heating_heater_hydrogen_share: Waterstofketel
+        input_buildings_district_heating_central_heat_network_share: Grootschalige stadsverwarming
+
+        buildings_final_demand_electricity_buildings_final_demand_for_lighting_electricity_parent_share: Verlichting
+        buildings_final_demand_electricity_buildings_final_demand_for_space_heating_electricity_parent_share: Ruimteverwarming
+        buildings_final_demand_electricity_buildings_final_demand_for_appliances_electricity_parent_share: Apparaten
+        buildings_final_demand_electricity_buildings_final_demand_for_cooling_electricity_parent_share: Koeling
+
+        buildings_final_demand_network_gas_buildings_final_demand_for_appliances_network_gas_parent_share: Apparaten
+        buildings_final_demand_network_gas_buildings_final_demand_for_space_heating_network_gas_parent_share: Ruimteverwarming
+        buildings_final_demand_network_gas_buildings_final_demand_for_cooling_network_gas_parent_share: Koeling
+
+        buildings_final_demand_wood_pellets_buildings_final_demand_for_space_heating_wood_pellets_parent_share: Ruimteverwarming
+        buildings_final_demand_wood_pellets_buildings_final_demand_for_appliances_wood_pellets_parent_share: Apparaten
+
+        buildings_final_demand_coal_buildings_final_demand_for_space_heating_coal_parent_share: Ruimteverwarming
+        buildings_final_demand_coal_buildings_final_demand_for_appliances_coal_parent_share: Apparaten
+
+        buildings_final_demand_crude_oil_buildings_final_demand_for_space_heating_crude_oil_parent_share: Ruimteverwarming
+        buildings_final_demand_crude_oil_buildings_final_demand_for_appliances_crude_oil_parent_share: Apparaten
+
+        buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_heatpump_air_water_network_gas_parent_share: Gaswarmtepomp
+        buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_network_gas_parent_share: Gasketel
+
+        buildings_final_demand_for_space_heating_electricity_buildings_space_heater_collective_heatpump_water_water_ts_electricity_parent_share: Warmtepomp (bodem) met WKO
+        buildings_final_demand_for_space_heating_electricity_buildings_space_heater_electricity_parent_share: Elektrische ketel
+
+        buildings_final_demand_for_lighting_electricity_buildings_lighting_efficient_fluorescent_electricity_parent_share: Gloeilamp
+        buildings_final_demand_for_lighting_electricity_buildings_lighting_led_electricity_parent_share: LED-lamp
+        buildings_final_demand_for_lighting_electricity_buildings_lighting_standard_fluorescent_electricity_parent_share: Spaarlamp
+
+        buildings_final_demand_for_cooling_electricity_buildings_cooling_airconditioning_electricity_parent_share: Airconditioning
+        buildings_final_demand_for_cooling_electricity_buildings_cooling_collective_heatpump_water_water_ts_electricity_parent_share: Warmtepomp (bodem) met WKO
+
+
+        # transport
+        number_of_cars: Aantal auto's
+        input_transport_road_human_powered_bicycle_demand: Fietskilometers (niet-elektrisch)
+
+        input_transport_road_gasoline_demand: Benzine
+        input_transport_road_diesel_demand: Diesel
+        transport_final_demand_lpg_demand: LPG
+        input_transport_road_electricity_demand: Elektriciteit
+        input_transport_road_bio_ethanol_demand: Bio-ethanol
+        input_transport_road_biodiesel_demand: Biodiesel
+        transport_final_demand_for_road_compressed_network_gas_demand: CNG (gas-onder-druk)
+        transport_final_demand_hydrogen_demand: Waterstof
+        transport_final_demand_for_road_lng_demand: LNG (liquefied natural gas)
+        transport_final_demand_for_road_bio_lng_demand: Bio-LNG
+
+        input_transport_rail_electricity_demand: Elektriciteit
+        input_transport_rail_diesel_demand: Diesel
+        input_transport_rail_biodiesel_demand: Biodiesel
+        transport_final_demand_coal_demand: Kolen
+
+        input_transport_ship_diesel_demand: Diesel
+        input_transport_ship_biodiesel_demand: Biodiesel
+        transport_final_demand_for_shipping_lng_demand: LNG
+        transport_final_demand_for_shipping_bio_lng_demand: Bio-LNG
+        transport_final_demand_heavy_fuel_oil_demand: Stookolie
+
+        transport_final_demand_kerosene_demand: Kerosine
+        input_transport_plane_gasoline_demand: Benzine
+        input_transport_plane_bio_ethanol_demand: Bio-ethanol
+
+        transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share: Auto's
+        transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share: Bussen
+        transport_road_mixer_gasoline_transport_truck_using_gasoline_mix_parent_share: Vrachtwagens
+        transport_road_mixer_gasoline_transport_motorcycle_using_gasoline_mix_parent_share: Motorfietsen
+
+        transport_road_mixer_diesel_transport_car_using_diesel_mix_parent_share: Auto's
+        transport_road_mixer_diesel_transport_bus_using_diesel_mix_parent_share: Bussen
+        transport_road_mixer_diesel_transport_truck_using_diesel_mix_parent_share: Vrachtwagens
+
+        transport_final_demand_for_road_electricity_transport_car_using_electricity_parent_share: Auto's
+        transport_final_demand_for_road_electricity_transport_bus_using_electricity_parent_share: Bussen
+        transport_final_demand_for_road_electricity_transport_truck_using_electricity_parent_share: Vrachtwagens
+        transport_final_demand_for_road_electricity_transport_motorcycle_using_electricity_parent_share: Motorfietsen
+        transport_final_demand_for_road_electricity_transport_bicycle_using_electricity_parent_share: Fietsen
+
+        transport_road_mixer_compressed_network_gas_transport_car_using_compressed_natural_gas_parent_share: Auto's
+        transport_road_mixer_compressed_network_gas_transport_bus_using_compressed_natural_gas_parent_share: Bussen
+        transport_road_mixer_compressed_network_gas_transport_truck_using_compressed_natural_gas_parent_share: Vrachtwagens
+
+        input_transport_road_car_hydrogen_share: Auto's
+        transport_final_demand_for_road_hydrogen_transport_bus_using_hydrogen_parent_share: Bussen
+        transport_final_demand_for_road_hydrogen_transport_truck_using_hydrogen_parent_share: Vrachtwagens
+
+        transport_road_mixer_lng_transport_bus_using_lng_mix_parent_share: Bussen
+        transport_road_mixer_lng_transport_truck_using_lng_mix_parent_share: Vrachtwagens
+
+        transport_final_demand_for_rail_electricity_transport_passenger_train_using_electricity_parent_share: Passagierstreinen
+        transport_final_demand_for_rail_electricity_transport_freight_train_using_electricity_parent_share: Goederentreinen
+        transport_final_demand_for_rail_electricity_transport_tram_using_electricity_parent_share: Trams
+
+        transport_rail_mixer_diesel_transport_passenger_train_using_diesel_mix_parent_share: Passagierstreinen
+        transport_rail_mixer_diesel_transport_freight_train_using_diesel_mix_parent_share: Goederentreinen
+
+        transport_energy_demand_crude_oil_non_energetic: Olie (niet-energetisch)
+
+        # agriculture
+        input_agriculture_electricity_demand: Elektriciteitsgebruik
+        agriculture_final_demand_network_gas_demand: Gasgebruik
+        agriculture_final_demand_wood_pellets_demand: Biomassagebruik
+        agriculture_final_demand_crude_oil_demand: Oliegebruik
+        agriculture_final_demand_hydrogen_demand: Waterstofgebruik
+        agriculture_chp_engine_network_gas_demand: Gebruik gas voor WKK
+        agriculture_chp_supercritical_wood_pellets_demand: Gebruik biomassa voor WKK
+        agriculture_chp_engine_biogas_demand: Gebruik biogas voor WKK
+        input_agriculture_central_heat_demand: Warmtegebruik geleverd door grootschalige warmteketels
+
+        agriculture_final_demand_electricity_agriculture_heatpump_water_water_ts_electricity_parent_share: Warmtepomp (WKO)
+        agriculture_final_demand_electricity_agriculture_geothermal_parent_share: Geothermie
+        agriculture_final_demand_electricity_agriculture_useful_demand_electricity_parent_share: Overig elektriciteitsgebruik
+
+        # industry
+        industry_chp_combined_cycle_gas_power_fuelmix_demand: Gas-WKK
+        industry_chp_engine_gas_power_fuelmix_demand: Gasmotor-WKK
+        industry_chp_turbine_gas_power_fuelmix_demand: Gasturbine-WKK
+        industry_chp_ultra_supercritical_coal_demand: Kolen-WKK
+
+        input_industry_metal_steel_scaling_factor: Percentage van de nationale staalindustrie
+        input_industry_metal_aluminium_scaling_factor: Percentage van de nationale aluminiumindustrie
+        input_industry_metal_other_electricity_demand: Elektriciteit
+        input_industry_metal_other_network_gas_demand: Gas
+        input_industry_metal_other_steam_hot_water_demand: Warmte
+        input_industry_metal_other_wood_pellets_demand: Biomassa
+        input_industry_metal_other_crude_oil_demand: Olie
+        input_industry_metal_other_coal_demand: Kolen
+
+        input_industry_chemical_fertilizers_scaling_factor: Percentage van de nationale kunstmestsector
+        input_industry_chemical_refineries_scaling_factor: Percentage van de nationale raffinaderijensector
+        input_industry_chemical_other_electricity_demand: Elektriciteit
+        input_industry_chemical_other_network_gas_demand: Gas
+        input_industry_chemical_other_steam_hot_water_demand: Warmte
+        input_industry_chemical_other_wood_pellets_demand: Biomassa
+        input_industry_chemical_other_crude_oil_demand: Olie
+        input_industry_chemical_other_hydrogen_demand: Waterstof
+        input_industry_chemical_other_coal_demand: Kolen
+        input_industry_chemical_other_network_gas_non_energetic_demand: Gas (niet-energetisch)
+        input_industry_chemical_other_wood_pellets_non_energetic_demand: Biomassa (niet-energetisch)
+        input_industry_chemical_other_crude_oil_non_energetic_demand: Olie (niet-energetisch)
+        input_industry_chemical_other_coal_non_energetic_demand: Kolen (niet-energetisch)
+
+        input_industry_food_electricity_demand: Elektriciteit
+        input_industry_food_network_gas_demand: Gas
+        input_industry_food_steam_hot_water_demand: Warmte
+        input_industry_food_wood_pellets_demand: Biomassa
+        input_industry_food_crude_oil_demand: Olie
+        input_industry_food_hydrogen_demand: Waterstof
+        input_industry_food_coal_demand: Kolen
+
+        input_industry_paper_electricity_demand: Elektriciteit
+        input_industry_paper_network_gas_demand: Gas
+        input_industry_paper_steam_hot_water_demand: Warmte
+        input_industry_paper_wood_pellets_demand: Biomassa
+        input_industry_paper_crude_oil_demand: Olie
+        input_industry_paper_hydrogen_demand: Waterstof
+        input_industry_paper_coal_demand: Kolen
+
+        input_industry_ict_electricity_demand: Elektriciteit
+
+        input_industry_other_electricity_demand: Elektriciteit
+        input_industry_other_network_gas_demand: Gas
+        input_industry_other_steam_hot_water_demand: Warmte
+        input_industry_other_wood_pellets_demand: Biomassa
+        input_industry_other_crude_oil_demand: Olie
+        input_industry_other_coal_demand: Kolen
+        input_industry_other_network_gas_non_energetic_demand: Gas (niet-energetisch)
+        input_industry_other_wood_pellets_non_energetic_demand: Biomassa (niet-energetisch)
+        input_industry_other_crude_oil_non_energetic_demand: Olie (niet-energetisch)
+        input_industry_other_coal_non_energetic_demand: Kolen (niet-energetisch)
+
+        # Energy
+        energy_power_sector_own_use_electricity_demand: Elektriciteit
+        input_energy_greengas_production: Lokale groengasproductie
+        energy_import_greengas_demand: Import van groengas
+
+        energy_production_bio_ethanol_demand: Bio-ethanolproductie
+        energy_production_bio_oil_demand: Bio-olieproductie
+        energy_production_biodiesel_demand: Biodieselproductie
+        energy_production_biogas_demand: Biogasproductie
+        energy_production_wood_demand: Houtsoortige biomassaproductie
+        energy_extraction_natural_gas_demand: Aardgaswinning
+        energy_extraction_coal_demand: Kolenwinning
+        energy_extraction_crude_oil_demand: Oliewinning
+        energy_extraction_uranium_oxide_demand: Uraniumwinning
+
+        input_energy_power_wind_turbine_inland_production: Wind (op land)
+        input_energy_power_wind_turbine_coastal_production: Wind (aan de kust)
+        input_energy_power_wind_turbine_offshore_production: Wind (op zee)
+        input_energy_power_solar_pv_solar_radiation_production: Zon-PV plant
+        input_energy_power_supercritical_waste_mix_production: Afvalverbrander
+        input_energy_chp_supercritical_waste_mix_production: Afvalverbrander met warmtelevering voor warmtenet (WKK)
+        input_energy_power_hydro_river_production: Waterkracht (rivier)
+        input_energy_power_geothermal_production: Geothermie
+
+        input_energy_power_ultra_supercritical_coal_production: Poederkolen
+        input_energy_power_supercritical_coal_production: Kolen conventioneel
+        input_energy_power_combined_cycle_coal_production: Kolenvergassing
+        input_energy_power_ultra_supercritical_cofiring_coal_production: Poederkolen met biomassabijstook
+        input_energy_power_combined_cycle_ccs_coal_production: Kolenvergassing met CCS
+        input_energy_power_ultra_supercritical_ccs_coal_production: Poederkolen met CCS
+        input_energy_chp_ultra_supercritical_coal_production: Kolencentrale met warmtelevering voor warmtenet (WKK)
+        input_energy_chp_ultra_supercritical_cofiring_coal_production: Kolencentrale met biomassabijstook en warmtelevering voor warmtenet (WKK)
+
+        input_energy_power_ultra_supercritical_network_gas_production: Gas conventioneel
+        input_energy_power_turbine_network_gas_production: Gasturbine
+        input_energy_power_engine_network_gas_production: Gasmotor
+        input_energy_power_combined_cycle_network_gas_production: Gas STEG
+        input_energy_power_combined_cycle_ccs_network_gas_production: Gas STEG met CCS
+        input_energy_chp_combined_cycle_network_gas_production: Gascentrale met warmtelevering voor warmtenet (WKK)
+
+        input_energy_power_nuclear_gen2_uranium_oxide_production: Conventionele kerncentrale
+        input_energy_power_nuclear_gen3_uranium_oxide_production: 3e generatie kerncentrale
+
+        input_energy_power_ultra_supercritical_crude_oil_production: Oliecentrale
+        input_energy_power_engine_diesel_production: Dieselgenerator
+
+        input_energy_heater_for_heat_network_wood_pellets_production: Biomassaketel
+        input_energy_heater_for_heat_network_geothermal_production: Geothermieketel
+        input_energy_heater_for_heat_network_waste_mix_production: Afvalketel
+        input_energy_heater_for_heat_network_network_gas_production: Gasketel
+        input_energy_heater_for_heat_network_coal_production: Kolenketel
+        input_energy_heater_for_heat_network_crude_oil_production: Olieketel
+        energy_heat_network_loss_demand: Warmteverlies
+
+
+        #Other
+        other_final_demand_electricity_demand: Elektriciteit
+        other_final_demand_network_gas_demand: Gas
+        other_final_demand_steam_hot_water_demand: Warmte
+        other_final_demand_wood_pellets_demand: Biomassa
+        other_final_demand_coal_demand: Kolen
+        other_final_demand_crude_oil_demand: Olie
+        other_final_demand_crude_oil_non_energetic_demand: Olie (niet-energetisch)

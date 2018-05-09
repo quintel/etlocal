@@ -23,9 +23,8 @@
 
               span.val data= conversions_for(interface_item.key)
                 span.display_value
-                - if policy(@dataset).edit?
-                  - unless interface_item.flexible
-                    = form.hidden_field interface_item.key, class: interface_item.key
+                - if policy(@dataset).edit? && interface_item.whitelisted?
+                  = form.hidden_field interface_item.key, class: interface_item.key
 
               span.unit
                 = '%'

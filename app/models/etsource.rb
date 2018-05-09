@@ -12,4 +12,8 @@ module Etsource
       query.query.scan(/DATASET_INPUT\(['"]?([a-z0-9_]+)['"]?\)/).flatten
     end
   end
+
+  def self.transformers
+    @transformers ||= Transformer::GraphMethods.all
+  end
 end

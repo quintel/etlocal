@@ -10,6 +10,10 @@ class InterfaceItem
   attribute :flexible, Boolean, default: false
   attribute :default, Float
   attribute :skip_validation, Float, default: false
+
+  def whitelisted?
+    Etsource.transformers.keys.include?(key) || key =~ /^input/
+  end
 end
 
 class InterfaceGroup

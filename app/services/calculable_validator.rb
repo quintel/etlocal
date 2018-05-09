@@ -1,7 +1,7 @@
 class CalculableValidator < ActiveModel::Validator
   def validate(record)
     calc_attrs = record.attributes.slice(
-      *InterfaceElement.items.reject(&:flexible).map(&:key)
+      *InterfaceElement.items.map(&:key)
     )
 
     begin

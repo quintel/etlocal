@@ -21,14 +21,14 @@ nl:
         lv_net_total_costs_present: Laagspanningsnet
         lv_mv_trafo_total_costs_present: LS-MS-transformatoren
         mv_net_total_costs_present: Middenspanningsnet
-        mv_hv_trafo_total_costs_present: MV-HV-transformatoren
+        mv_hv_trafo_total_costs_present: MS-HS-transformatoren
         hv_net_total_costs_present: Hoogspanningsnet
-        offshore_net_costs_present: Net wind op zee
+        offshore_net_costs_present: Elektriciteitsnet wind op zee
         interconnection_net_costs_present: Interconnectorcapaciteit
         lv_net_spare_capacity: Laagspanningsnet
         lv_mv_trafo_spare_capacity: LS-MS-transformatoren
         mv_net_spare_capacity: Middenspanningsnet
-        mv_hv_trafo_spare_capacity: MV-HV-transformatoren
+        mv_hv_trafo_spare_capacity: MS-HS-transformatoren
         hv_net_spare_capacity: Hoogspanningsnet
         lv_net_capacity_per_step: Stapgrootte van laagspanningsnetverzwaring
         lv_net_costs_per_capacity_step: Kosten van laagspanningsnetverzwaring per stap

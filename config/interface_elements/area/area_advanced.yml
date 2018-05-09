@@ -2,8 +2,6 @@ key: area_advanced
 groups:
   - header: area_other_ghg
     items:
-      - key: co2_emission_1990
-        unit: 'Mton'
       - key: other_emission_built_environment
         unit: 'Mton'
       - key: other_emission_transport
@@ -11,6 +9,8 @@ groups:
       - key: other_emission_industry_energy
         unit: 'Mton'
       - key: other_emission_agriculture
+        unit: 'Mton'
+      - key: co2_emission_1990
         unit: 'Mton'
 
   - header: area_electricity_grid_costs

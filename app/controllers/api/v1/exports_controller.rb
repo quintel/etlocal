@@ -6,7 +6,7 @@ class Api::V1::ExportsController < ApplicationController
   def show
     render json: @dataset.editable_attributes.as_json.merge(
       area: @dataset.area,
-      base_datset: @dataset.country
+      base_dataset: @dataset.country
     )
   end
 end

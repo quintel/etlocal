@@ -21,4 +21,5 @@ public/system/
 config/database.yml
 config/email.yml
 db/shapes/*
+db/datasets/*.csv
 coverage/*

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180216115825) do
+ActiveRecord::Schema.define(version: 20180508072310) do
 
   create_table "commits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "source_id"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20180216115825) do
   create_table "dataset_edits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "commit_id"
     t.string   "key"
-    t.float    "value",      limit: 24
+    t.float    "value",      limit: 53
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
     t.index ["commit_id"], name: "index_dataset_edits_on_commit_id", using: :btree

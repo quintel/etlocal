@@ -50,24 +50,6 @@ describe DatasetImporter do
           expect(dataset_edit.reload.value).to eq(1.0)
         end
       end
-
-      describe "does change a value if the first change was by robot" do
-        let!(:commit) {
-          FactoryGirl.create(:commit,
-            user: User.robot, dataset: dataset, message: "Test")
-        }
-
-        let!(:dataset_edit) {
-          FactoryGirl.create(:dataset_edit, commit: commit,
-            key: 'residences_roof_surface_available_for_pv', value: 2.0)
-        }
-
-        it "updates value of the existing dataset" do
-          dataset_importer.import
-
-          expect(dataset_edit.reload.value).to eq(41.0972)
-        end
-      end
     end
   end
 end

@@ -1,12 +1,14 @@
 require 'rails_helper'
-require 'support/remote_helper'
 
-WebMock.allow_net_connect!
+Atlas.data_dir = ENV['ETSOURCE_PATH'] || "#{ ::Rails.root }/spec/fixtures/etsource"
 
-dataset_inputs = RemoteHelper.fetch('sparse_graph_queries')
-transformers   = RemoteHelper.fetch('transformers')
+dataset_inputs = Etsource.dataset_inputs.uniq
+transformers   = Transformer::GraphMethods.all
 
-RSpec.describe "ETLocal's interface", :if => dataset_inputs && transformers do
+Atlas.data_dir = "#{ ::Rails.root }/spec/fixtures/etsource"
+
+
+RSpec.describe "ETLocal's interface", :if => dataset_inputs.any? do
   # Validates DATASET_INPUT's used in sparse graph query upon their existence
   # in ETLocal.
   #

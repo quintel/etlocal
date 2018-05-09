@@ -11,45 +11,88 @@ en:
       attribute_not_found: "Attribute not found '%{attribute}'"
 
     groups:
-      appliances: Appliances
-      bio_fuel_production: Bio fuel production
-      biogas_chp: Biogas CHP
-      biomass_chp: Biomass CHP
-      biomass_distribution: Biomass distribution
-      central_production_heat_networks: Central production heat networks
-      coal_distribution: Coal distribution
-      cooling: Cooling
-      cooking: Cooking
-      district_heating_distribution: District heating distribution
-      electricity: Electricity
-      electricity_distribution: Electricity distribution
-      gas_chp: Gas CHP
-      gas_distribution: Gas distribution
-      heat_network_supply: Heat network supply
-      hot_water_technologies_using_electricity: Hot water (Electricity)
-      hot_water_technologies_using_gas: Hot water (Gas)
-      lighting: Lighting
-      local_production: Local production
-      natural_resource_extraction: Natural resource extraction
-      oil_distribution: Oil distribution
-      solar_thermal_distribution: Solar thermal distribution
-      space_heating_technologies_using_electricity: Space heating (Electricity)
-      space_heating_technologies_using_gas: Space heating (Gas)
-      transport_energy_demand_bio_ethanol: Bio-ethanol
-      transport_energy_demand_bio_lng: Bio LNG
-      transport_energy_demand_biodiesel: Biodiesel
-      transport_energy_demand_cng: CNG
-      transport_energy_demand_diesel: Diesel
-      transport_energy_demand_electricity: Electricity
-      transport_energy_demand_gasoline: Gasoline
-      transport_energy_demand_lng: LNG
-      transport_energy_demand_lpg: LPG
-      transport_rail_transport_diesel: Diesel
-      transport_rail_transport_electricity: Electricity
-      transport_road_transport_cng: CNG
-      transport_road_transport_diesel: Diesel
-      transport_road_transport_electricity: Electricity
-      transport_road_transport_hydrogen: Hydrogen
-      transport_road_transport_gasoline: Gasoline
-      transport_road_transport_lng: LNG
-      wood_distribution: Wood distribution
+      #area
+      area_other_ghg: Greenhouse gas emissions
+      area_electricity_grid_costs: Present electricity grid costs
+      area_electricity_grid_capacity: Present electricity grid capacity
+      area_electricity_grid_reinforcement: Electricity grid reinforcement
+
+      #households
+      households_local_production: Local energy production
+      households_district_heating: District heating
+      households_electricity_distribution: Electricity distribution
+      households_network_gas_distribution: Gas distribution
+      households_steam_hot_water_distribution: Heat distribution
+      households_wood_pellets_distribution: Biomass distribution
+      households_crude_oil_distribution: Oil distribution
+      households_coal_distribution: Coal distribution
+      households_network_gas_space_heating_distribution: Space heating technologies - gas
+      households_electricity_space_heating_distribution: Space heating technologies - electricity
+      households_network_gas_hot_water_distribution: Tap water heating technologies - gas
+      households_electricity_hot_water_distribution: Tap water heating technologies - electricity
+      households_electricity_cooking_distribution: Cooking technologies - electricity
+      households_electricity_lighting_distribution: Lighting technologies - electricity
+      households_electricity_appliances_distribution: Appliances - electricity
+      households_electricity_cooling_distribution: Cooling technologies - electricity
+      households_solar_thermal_distribution: Solar thermal distribution
+
+      #buildings
+      buildings_local_production: Local energy production
+      buildings_district_heating: District heating
+      buildings_electricity_distribution: Electricity distribution
+      buildings_network_gas_distribution: Gas distribution
+      buildings_wood_pellets_distribution: Biomass distribution
+      buildings_crude_oil_distribution: Oil distribution
+      buildings_coal_distribution: Coal distribution
+      buildings_network_gas_space_heating_distribution: Space heating technologies - gas
+      buildings_electricity_space_heating_distribution: Space heating technologies - electricity
+      buildings_electricity_lighting_distribution: Lighting technologies - electricity
+      buildings_electricity_cooling_distribution: Cooling technologies - electricity
+
+      # transport
+      transport_road_fuels: Road fuels
+      transport_rail_fuels: Train fuels
+      transport_ship_fuels: Ship fuels
+      transport_plane_fuels: Plane fuels
+      transport_road_gasoline_distribution: Road gasoline distribution
+      transport_road_diesel_distribution: Road diesel distribution
+      transport_road_electricity_distribution: Road electricity distribution
+      transport_road_cng_distribution: Road CNG distribution
+      transport_road_hydrogen_distribution: Road hydrogen distribution
+      transport_road_lng_distribution: Road LNG distribution
+      transport_rail_electricity_distribution: Rail electricity distribution
+      transport_rail_diesel_distribution: Rail diesel distribution
+      transport_energy_demand_crude_oil_non_energetic: Non-energetic oil use
+
+      # agriculture
+      agriculture_chps: CHPs
+      agriculture_central_heat: Central heat
+      agriculture_electricity_distribution: Electricity distribution
+
+      # industry
+      industry_chps: CHPs
+      industry_metal_steel: Steel
+      industry_metal_aluminium: Aluminium
+      industry_metal_other: Other metal industry
+      industry_chemical_fertilizers: Fertilizers
+      industry_chemical_refineries: Refineries
+      industry_chemical_other: Other chemical industry
+      industry_food: Food
+      industry_paper: Paper
+      industry_ict: Central ICT services
+      industry_other: Other industry sectors
+
+      # energy
+      energy_demand_power_sector: Energy use of the power sector
+      energy_greengas: Greengas
+      energy_extraction: Fuel production and natural resource extraction
+      energy_electricity_wind: Wind electricty production
+      energy_electricity_solar: Solar electricity production
+      energy_electricity_other_renewable: Other renewable electricity production
+      energy_electricity_coal: Coal electricity production
+      energy_electricity_gas: Gas electricity production
+      energy_electricity_waste: Waste electricity production
+      energy_electricity_other_fossil: Other fossil electricity production
+      energy_renewable_heat: Renewable heat production
+      energy_fossil_heat: Fossil heat production
+      energy_heat_loss: Losses of heat networks

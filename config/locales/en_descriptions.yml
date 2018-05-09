@@ -2,8 +2,8 @@ en:
   descriptions:
     groups:
       energy: |
-        Supply is currently split up into three sections: renewable production,
-        fossil production and advanced.
+        Supply is currently split up into three sections: renewable electricity production,
+        fossil electricity production and heat production.
 
       industry: |
-        Industry is currently not available.
+

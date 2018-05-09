@@ -10,7 +10,7 @@ nl:
       no_source_file: "Geen bron geselecteerd"
 
       static:
-        analysis_year: Analyse jaar
+        analysis_year: Startjaar
 
     groups:
       agriculture: Landbouw
@@ -20,14 +20,50 @@ nl:
       industry: Industrie
       intro: Introductie
       overview: Overzicht
-      supply: Supply
+      supply: Aanbod
       transport: Transport
 
     subgroups:
+      area:
+        area_advanced: Geavanceerd
+
+      agriculture:
+        agriculture_advanced: Geavanceerd
+
+      buildings:
+        buildings_advanced: Geavanceerd
+        buildings_energy_demand: Energievraag
+        buildings_energy_supply: Energieaanbod
+        buildings_final_demand_electricity: Elektriciteit
+        buildings_final_demand_for_cooling_electricity: Koeling
+        buildings_final_demand_for_lighting_electricity: Verlichting
+        buildings_final_demand_crude_oil: Olie
+
+      energy:
+        energy_heat_production: Warmteproductie
+        energy_fossil_electricity_production: Fossiele elektriciteitsopwek
+        energy_renewable_electricity_production: Duurzame elektriciteitsopwek
+
       households:
-        households_energy_demand: Energy demand
-        households_energy_supply: Energy supply
-        households_advanced: Advanced
+        households_energy_demand: Energievraag
+        households_energy_supply: Energieaanbod
+        households_advanced: Geavanceerd
+
+      industry:
+        industry_metal: Metaal
+        industry_chemical: Chemie
+        industry_food: Voedsel
+        industry_paper: Papier
+        industry_ict: ICT
+        industry_other: Overige industrie
+
+      transport:
+        transport_energy_demand: Energievraag
+        transport_rail_transport: Treinverkeer
+        transport_road_transport: Wegverkeer
+        transport_ship_transport: Scheepvaart
+        transport_plane_transport: Luchtvaart
+        transport_advanced: Geavanceerd
 
     flash:
-      not_found: "Gebied bestaat niet"
+      not_found: "Regio bestaat niet"

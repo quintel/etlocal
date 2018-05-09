@@ -10,3 +10,90 @@ nl:
 
     flash:
       attribute_not_found: "Attribuut niet gevonden '%{attribute}'"
+
+    groups:
+      #area
+      area_other_ghg: Broeikasgassen
+      area_electricity_grid_costs: Kosten elektriciteitsnetwerk
+      area_electricity_grid_capacity: Capaciteit elektriciteitsnetwerk
+      area_electricity_grid_reinforcement: Verzwaring elektriciteitsnetwerk
+
+      #households
+      households_local_production: Lokale energieproductie
+      households_district_heating: Warmtenet
+      households_electricity_distribution: Verdeling elektriciteit
+      households_network_gas_distribution: Verdeling gas
+      households_steam_hot_water_distribution: Verdeling warmte
+      households_wood_pellets_distribution: Verdeling biomassa
+      households_crude_oil_distribution: Verdeling olie
+      households_coal_distribution: Verdeling kolen
+      households_network_gas_space_heating_distribution: Ruimteverwarming - gas
+      households_electricity_space_heating_distribution: Ruimteverwarming - elektriciteit
+      households_network_gas_hot_water_distribution: Warmwatersysteem - gas
+      households_electricity_hot_water_distribution: Warmwatersysteem - elektriciteit
+      households_electricity_cooking_distribution: Kooktoestel - elektriciteit
+      households_electricity_lighting_distribution: Verlichting - elektriciteit
+      households_electricity_appliances_distribution: Apparaten - elektriciteit
+      households_electricity_cooling_distribution: Koelsysteem - elektriciteit
+      households_solar_thermal_distribution: Verdeling zonthermie
+
+      #buildings
+      buildings_local_production: Lokale energieproductie
+      buildings_district_heating: Warmtenet
+      buildings_electricity_distribution: Verdeling elektriciteit
+      buildings_network_gas_distribution: Verdeling gas
+      buildings_wood_pellets_distribution: Verderling biomassa
+      buildings_crude_oil_distribution: Verdeling olie
+      buildings_coal_distribution: Verdeling kolen
+      buildings_network_gas_space_heating_distribution: Ruimteverwarming - gas
+      buildings_electricity_space_heating_distribution: Ruimteverwarming - elektriciteit
+      buildings_electricity_lighting_distribution: Verlichting - elektriciteit
+      buildings_electricity_cooling_distribution: Koeling - elektriciteit
+
+      # transport
+      transport_road_fuels: Brandstoffen wegverkeer
+      transport_rail_fuels: Brandstoffen treinverkeer
+      transport_ship_fuels: Brandstoffen scheepvaart
+      transport_plane_fuels: Brandstoffen luchtvaart
+      transport_road_gasoline_distribution: Verdeling benzine wegverkeer
+      transport_road_diesel_distribution: Verdeling diesel wegverkeer
+      transport_road_electricity_distribution: Verdeling elektriciteit wegverkeer
+      transport_road_cng_distribution: Verdeling CNG wegverkeer
+      transport_road_hydrogen_distribution: Verdeling waterstof wegverkeer
+      transport_road_lng_distribution: Verdeling LNG wegverkeer
+      transport_rail_electricity_distribution: Verdeling elektriciteit wegverkeer
+      transport_rail_diesel_distribution: Verdeling diesel treinverkeer
+      transport_energy_demand_crude_oil_non_energetic: Non-energetisch oliegebruik
+
+      # agriculture
+      agriculture_chps: WKK's
+      agriculture_central_heat: Warmte
+      agriculture_electricity_distribution: Elektriciteit
+
+      # industry
+      industry_chps: WKK's
+      industry_metal_steel: Staal
+      industry_metal_aluminium: Aluminium
+      industry_metal_other: Overige metaalindustrie
+      industry_chemical_fertilizers: Kunstmest
+      industry_chemical_refineries: Raffinaderijen
+      industry_chemical_other: Overige chemische industrie
+      industry_food: Voedsel
+      industry_paper: Papier
+      industry_ict: Centrale ICT-diensten
+      industry_other: Overige industrie
+
+      # energy
+      energy_demand_power_sector: Energiegebruik elektriciteitsopwek
+      energy_greengas: Groengas
+      energy_extraction: Brandstofproductie en winning natuurlijke bronnen
+      energy_electricity_wind: Elektriciteitsopwek wind
+      energy_electricity_solar: Elektriciteitsopwek zon
+      energy_electricity_other_renewable: Overige duurzame elektriciteitsopwek
+      energy_electricity_coal: Elektriciteitsopwek kolen
+      energy_electricity_gas: Elektriciteitsopwek gas
+      energy_electricity_waste: Elektriciteitsopwek afvalverbranding
+      energy_electricity_other_fossil: Overige fossiele elektriciteitsopwek
+      energy_renewable_heat: Duurzame warmteproductie
+      energy_fossil_heat: Fossiele warmteproductie
+      energy_heat_loss: Verlies warmenetten

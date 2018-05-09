@@ -67,4 +67,4 @@ en:
         transport_advanced: Advanced
 
     flash:
-      not_found: "Area does not exists"
+      not_found: "Area does not exist"

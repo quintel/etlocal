@@ -1,9 +1,33 @@
 en:
   descriptions:
     groups:
+      agriculture: |
+
+      area: |
+
+      assumptions: |
+
+      buildings: |
+        Buildings are defined as all non-residential buildings like offices,
+        hospitals, swimming pools, restaurants etc. Note that buildings for ICT
+        services are not included here, these can be set in the industry
+        subsection.
+
       energy: |
-        Supply is currently split up into three sections: renewable electricity production,
-        fossil electricity production and heat production.
+        Energy production is split into three sections: renewable electricity
+        production, fossil electricity production and heat production.
+
+      households: |
+        Households are divided into energy demand and supply. In energy demand
+        the demands for different energy sources can be edited and in energy
+        suppply the local energy production and district heating can be set.
 
       industry: |
+        Industry is split into six different sectors: metal, chemical, food,
+        paper, ICT and other industry.
 
+      overview: |
+
+      other: |
+
+      transport: |

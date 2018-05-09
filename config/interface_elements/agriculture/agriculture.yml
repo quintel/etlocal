@@ -5,15 +5,15 @@ groups:
       unit: 'TJ'
     - key: agriculture_final_demand_network_gas_demand
       unit: 'TJ'
+    - key: agriculture_chp_engine_network_gas_demand
+      unit: 'TJ'
     - key: agriculture_final_demand_wood_pellets_demand
+      unit: 'TJ'
+    - key: agriculture_chp_supercritical_wood_pellets_demand
       unit: 'TJ'
     - key: agriculture_final_demand_crude_oil_demand
       unit: 'TJ'
     - key: agriculture_final_demand_hydrogen_demand
-      unit: 'TJ'
-    - key: agriculture_chp_engine_network_gas_demand
-      unit: 'TJ'
-    - key: agriculture_chp_supercritical_wood_pellets_demand
       unit: 'TJ'
     - key: agriculture_chp_engine_biogas_demand
       unit: 'TJ'

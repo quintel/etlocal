@@ -259,8 +259,8 @@ nl:
 
         # agriculture
         input_agriculture_electricity_demand: Elektriciteitsgebruik
-        agriculture_final_demand_network_gas_demand: Gasgebruik
-        agriculture_final_demand_wood_pellets_demand: Biomassagebruik
+        agriculture_final_demand_network_gas_demand: Gasgebruik (exclusief WKK)
+        agriculture_final_demand_wood_pellets_demand: Biomassagebruik (exclusief WKK)
         agriculture_final_demand_crude_oil_demand: Oliegebruik
         agriculture_final_demand_hydrogen_demand: Waterstofgebruik
         agriculture_chp_engine_network_gas_demand: Gebruik gas voor WKK

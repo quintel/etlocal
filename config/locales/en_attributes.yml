@@ -258,8 +258,8 @@ en:
 
         # agriculture
         input_agriculture_electricity_demand: Electricity demand
-        agriculture_final_demand_network_gas_demand: Natural gas demand
-        agriculture_final_demand_wood_pellets_demand: Biomass demand
+        agriculture_final_demand_network_gas_demand: Natural gas demand (excluding CHP)
+        agriculture_final_demand_wood_pellets_demand: Biomass demand (excluding CHP)
         agriculture_final_demand_crude_oil_demand: Oil demand
         agriculture_final_demand_hydrogen_demand: Hydrogen demand
         agriculture_chp_engine_network_gas_demand: Gas CHP demand

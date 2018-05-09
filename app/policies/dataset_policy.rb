@@ -7,6 +7,9 @@ class DatasetPolicy < ApplicationPolicy
     record.public? || edit?
   end
 
+  def download?
+    false
+  end
+
   alias_method :update?, :edit?
-  alias_method :download?, :edit?
 end

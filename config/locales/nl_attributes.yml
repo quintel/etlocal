@@ -1,7 +1,7 @@
 nl:
-  activerecord:
+  activemodel:
     attributes:
-      dataset_edit:
+      dataset_edit_form:
         commit: "Reden"
         source_file: "Bronbestand"
 

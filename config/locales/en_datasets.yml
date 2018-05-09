@@ -13,6 +13,7 @@ en:
         analysis_year: Analysis year
 
     groups:
+      area: General
       agriculture: Agriculture
       assumptions: Assumptions
       buildings: Buildings

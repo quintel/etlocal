@@ -2,7 +2,7 @@ nl:
   datasets:
     menu:
       static: Statisch
-      area_attributes: Area attributen
+      area_attributes: Regio-attributen
       inputs: Inputs
 
     attributes:
@@ -13,6 +13,7 @@ nl:
         analysis_year: Startjaar
 
     groups:
+      area: Algemeen
       agriculture: Landbouw
       assumptions: Aannames
       buildings: Gebouwen
@@ -20,8 +21,9 @@ nl:
       industry: Industrie
       intro: Introductie
       overview: Overzicht
-      supply: Aanbod
+      energy: Energieproductie
       transport: Transport
+      other: Overig
 
     subgroups:
       area:

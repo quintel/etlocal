@@ -13,7 +13,5 @@ groups:
         unit: 'TJ'
       - key: input_industry_food_crude_oil_demand
         unit: 'TJ'
-      - key: input_industry_food_hydrogen_demand
-        unit: 'TJ'
       - key: input_industry_food_coal_demand
         unit: 'TJ'

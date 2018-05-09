@@ -13,7 +13,5 @@ groups:
         unit: 'TJ'
       - key: input_industry_paper_crude_oil_demand
         unit: 'TJ'
-      - key: input_industry_paper_hydrogen_demand
-        unit: 'TJ'
       - key: input_industry_paper_coal_demand
         unit: 'TJ'

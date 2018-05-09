@@ -1,49 +1,57 @@
-module GraphAssumptions
-  module_function
+class GraphAssumptions
+  PROPORTIONAL_ATTRIBUTES = Atlas::Dataset::Derived.attribute_set
+    .select { |a| a.options[:proportional] }
 
-  def get(atlas_ds, graph, csv_row)
-    nor = csv_row.editable_attributes['number_of_residences'].to_f
+  NON_PROPORTIONAL_ATTRIBUTES = Atlas::Dataset::Derived.attribute_set
+    .select { |a| !a.options[:proportional] }
 
-    scaling_factor = nor / atlas_ds.number_of_residences
+  def self.get(atlas_ds, graph, csv_row)
+    new(atlas_ds, graph, csv_row).get
+  end
 
+  def initialize(atlas_ds, graph, csv_row)
+    @atlas_ds = atlas_ds
+    @graph = graph
+    @number_of_residences = csv_row['number_of_residences'].to_f
+  end
+
+  def get
     InterfaceElement.items.reject(&:flexible).map do |item|
       case item.key
-      when *Atlas::Dataset::Derived.attribute_set.map(&:name)
-        scale_atlas_attribute(scaling_factor, item.key, atlas_ds)
+      when *PROPORTIONAL_ATTRIBUTES.map(&:name)
+        @atlas_ds.public_send(item.key) * factor
+      when *NON_PROPORTIONAL_ATTRIBUTES.map(&:name)
+        @atlas_ds.public_send(item.key)
       when *Transformer::GraphMethods.all.keys
-        scale_graph_default(scaling_factor, item.key, graph)
+        scale_graph_default(item.key)
       when /^input_.+demand$/
         1
       when /^input_/
         0
-      else
-        # These are keys which are not used
       end
     end
   end
 
-  def scale_atlas_attribute(factor, key, atlas_ds)
-    atlas_ds.public_send(key) * factor
+  private
+
+  def factor
+    @factor ||= @number_of_residences / @atlas_ds.number_of_residences
   end
 
-  def scale_graph_default(factor, key, graph)
+  def scale_graph_default(key)
     opts = Transformer::GraphMethods.all[key]
 
-    value_for(opts.export_method, opts.export_key, graph, factor)
-  end
-
-  def value_for(method, key, graph, factor)
-    case method
+    case opts.export_method
     when 'demand', 'number_of_units'
-      graph.node(key).get(method.to_sym) * factor
+      @graph.node(opts.export_key).get(opts.export_method.to_sym) * factor
     when 'child_share', 'parent_share'
-      edge = Atlas::Edge.find(key)
+      edge = Atlas::Edge.find(opts.export_key)
 
-      if refinery_edge = graph.node(edge.supplier)
+      if refinery_edge = @graph.node(edge.supplier)
                            .edges(:out)
                            .detect{ |e| e.to.key == edge.consumer }
 
-        refinery_edge.get(method.to_sym).to_f
+        refinery_edge.get(opts.export_method.to_sym).to_f
       end
     end
   end

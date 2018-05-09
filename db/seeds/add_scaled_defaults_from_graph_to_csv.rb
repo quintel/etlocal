@@ -14,10 +14,7 @@ class AddScaledDefaultsFromGraphToCSV
 
     CSV.open("#{@country}_datasets.csv", 'wb', write_headers: true, headers: headers) do |csv|
       datasets.each do |dataset|
-        row = DatasetImporter::DatasetCSVRow.new(dataset.to_h)
-        assumptions = GraphAssumptions.get(atlas_ds, graph, row)
-
-        csv << dataset.fields + assumptions
+        csv << dataset.fields + GraphAssumptions.get(atlas_ds, graph, dataset)
 
         bar.increment!
       end

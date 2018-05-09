@@ -1,0 +1,19 @@
+key: industry_food
+
+groups:
+  - header: industry_food
+    items:
+      - key: input_industry_food_electricity_demand
+        unit: 'TJ'
+      - key: input_industry_food_network_gas_demand
+        unit: 'TJ'
+      - key: input_industry_food_steam_hot_water_demand
+        unit: 'TJ'
+      - key: input_industry_food_wood_pellets_demand
+        unit: 'TJ'
+      - key: input_industry_food_crude_oil_demand
+        unit: 'TJ'
+      - key: input_industry_food_hydrogen_demand
+        unit: 'TJ'
+      - key: input_industry_food_coal_demand
+        unit: 'TJ'

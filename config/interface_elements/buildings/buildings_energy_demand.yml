@@ -1,15 +1,15 @@
 key: buildings_energy_demand
 groups:
   - items:
-    - key: buildings_local_production_electricity_demand
-      unit: TJ
+    - key: input_buildings_electricity_demand
+      unit: 'TJ'
     - key: buildings_final_demand_network_gas_demand
-      unit: TJ
+      unit: 'TJ'
     - key: buildings_final_demand_steam_hot_water_demand
-      unit: TJ
+      unit: 'TJ'
     - key: buildings_final_demand_wood_pellets_demand
-      unit: TJ
-    - key: buildings_final_demand_crude_oil_demand
-      unit: TJ
+      unit: 'TJ'
     - key: buildings_final_demand_coal_demand
-      unit: TJ
+      unit: 'TJ'
+    - key: buildings_final_demand_crude_oil_demand
+      unit: 'TJ'

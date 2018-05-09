@@ -1,7 +1,197 @@
 key: households_advanced
 groups:
-  - header: electricity_distribution
+  - header: households_electricity_distribution
     type: slider
     items:
       - key: households_final_demand_electricity_households_final_demand_for_cooking_electricity_parent_share
         unit: '%'
+      - key: households_final_demand_electricity_households_final_demand_for_cooling_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_electricity_households_final_demand_for_hot_water_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_electricity_households_final_demand_for_lighting_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_electricity_households_final_demand_for_space_heating_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_electricity_households_final_demand_for_appliances_electricity_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: households_network_gas_distribution
+    type: slider
+    items:
+      - key: households_final_demand_network_gas_households_final_demand_for_cooking_network_gas_parent_share
+        unit: '%'
+      - key: households_final_demand_network_gas_households_final_demand_for_hot_water_network_gas_parent_share
+        unit: '%'
+      - key: households_final_demand_network_gas_households_final_demand_for_space_heating_network_gas_parent_share
+        unit: '%'
+      - key: households_final_demand_network_gas_households_final_demand_for_cooling_network_gas_parent_share
+        unit: '%'
+        flexible: true
+
+  - header: households_steam_hot_water_distribution
+    type: slider
+    items:
+      - key: households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share
+        unit: '%'
+      - key: households_final_demand_steam_hot_water_households_final_demand_for_space_heating_steam_hot_water_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: households_wood_pellets_distribution
+    type: slider
+    items:
+      - key: households_final_demand_wood_pellets_households_final_demand_for_hot_water_wood_pellets_parent_share
+        unit: '%'
+      - key: households_final_demand_wood_pellets_households_final_demand_for_space_heating_wood_pellets_parent_share
+        unit: '%'
+      - key: households_final_demand_wood_pellets_households_final_demand_for_cooking_wood_pellets_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: households_crude_oil_distribution
+    type: slider
+    items:
+      - key: households_final_demand_crude_oil_households_final_demand_for_space_heating_crude_oil_parent_share
+        unit: '%'
+      - key: households_final_demand_crude_oil_households_final_demand_for_hot_water_crude_oil_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: households_coal_distribution
+    type: slider
+    items:
+      - key: households_final_demand_coal_households_final_demand_for_space_heating_coal_parent_share
+        unit: '%'
+      - key: households_final_demand_coal_households_final_demand_for_hot_water_coal_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: households_network_gas_space_heating_distribution
+    type: slider
+    items:
+      - key: households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share
+        unit: '%'
+      - key: households_final_demand_for_space_heating_network_gas_households_space_heater_network_gas_parent_share
+        unit: '%'
+      - key: households_final_demand_for_space_heating_network_gas_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_space_heating_network_gas_households_space_heater_micro_chp_network_gas_parent_share
+        unit: '%'
+        flexible: true
+
+  - header: households_electricity_space_heating_distribution
+    type: slider
+    items:
+      - key: households_final_demand_for_space_heating_electricity_households_space_heater_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_air_water_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_space_heating_electricity_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_ground_water_electricity_parent_share
+        unit: '%'
+        flexible: true
+
+  - header: households_network_gas_hot_water_distribution
+    type: slider
+    items:
+      - key: households_final_demand_for_hot_water_network_gas_households_water_heater_combined_network_gas_parent_share
+        unit: '%'
+      - key: households_final_demand_for_hot_water_network_gas_households_water_heater_hybrid_heatpump_air_water_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_hot_water_network_gas_households_water_heater_micro_chp_network_gas_parent_share
+        unit: '%'
+      - key: households_final_demand_for_hot_water_network_gas_households_water_heater_fuel_cell_chp_network_gas_parent_share
+        unit: '%'
+      - key: households_final_demand_for_hot_water_network_gas_households_water_heater_network_gas_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: households_electricity_hot_water_distribution
+    type: slider
+    items:
+      - key: households_final_demand_for_hot_water_electricity_households_water_heater_heatpump_air_water_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_hot_water_electricity_households_water_heater_heatpump_ground_water_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_hot_water_electricity_households_water_heater_hybrid_heatpump_air_water_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_hot_water_electricity_households_water_heater_resistive_electricity_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: households_electricity_cooking_distribution
+    type: slider
+    items:
+      - key: households_final_demand_for_cooking_electricity_households_cooker_halogen_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_cooking_electricity_households_cooker_induction_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_cooking_electricity_households_cooker_resistive_electricity_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: households_electricity_lighting_distribution
+    type: slider
+    items:
+      - key: households_final_demand_for_lighting_electricity_households_lighting_incandescent_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_lighting_electricity_households_lighting_efficient_fluorescent_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_lighting_electricity_households_lighting_led_electricity_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: households_electricity_appliances_distribution
+    type: slider
+    items:
+      - key: households_final_demand_for_appliances_electricity_households_appliances_clothes_dryer_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_appliances_electricity_households_appliances_computer_media_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_appliances_electricity_households_appliances_dishwasher_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_appliances_electricity_households_appliances_fridge_freezer_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_appliances_electricity_households_appliances_other_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_appliances_electricity_households_appliances_television_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_appliances_electricity_households_appliances_vacuum_cleaner_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_appliances_electricity_households_appliances_washing_machine_electricity_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: households_electricity_cooling_distribution
+    type: slider
+    items:
+      - key: households_final_demand_for_cooling_electricity_households_cooling_airconditioning_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_cooling_electricity_households_cooling_heatpump_ground_water_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_cooling_electricity_households_cooling_heatpump_air_water_electricity_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: households_solar_thermal_distribution
+    type: slider
+    items:
+      - key: households_water_heater_solar_thermal_households_useful_demand_for_space_heating_after_insulation_for_houses_with_solar_heater_parent_share
+        unit: '%'
+      - key: households_water_heater_solar_thermal_households_useful_demand_for_hot_water_for_houses_with_solar_heater_parent_share
+        unit: '%'
+        flexible: true

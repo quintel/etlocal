@@ -1,0 +1,10 @@
+key: transport_plane_transport
+groups:
+    - header: transport_plane_fuels
+      items:
+        - key: transport_final_demand_kerosene_demand
+          unit: 'TJ'
+        - key: input_transport_plane_gasoline_demand
+          unit: 'TJ'
+        - key: input_transport_plane_bio_ethanol_demand
+          unit: 'TJ'

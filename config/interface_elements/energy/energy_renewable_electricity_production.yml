@@ -1,0 +1,29 @@
+key: energy_renewable_electricity_production
+groups:
+  - header: energy_electricity_wind
+    items:
+      - key: input_energy_power_wind_turbine_inland_production
+        unit: 'TJ'
+      - key: input_energy_power_wind_turbine_coastal_production
+        unit: 'TJ'
+      - key: input_energy_power_wind_turbine_offshore_production
+        unit: 'TJ'
+
+  - header: energy_electricity_solar
+    items:
+      - key: input_energy_power_solar_pv_solar_radiation_production
+        unit: 'TJ'
+
+  - header: energy_electricity_waste
+    items:
+      - key: input_energy_power_supercritical_waste_mix_production
+        unit: 'TJ'
+      - key: input_energy_chp_supercritical_waste_mix_production
+        unit: 'TJ'
+
+  - header: energy_electricity_other_renewable
+    items:
+      - key: input_energy_power_hydro_river_production
+        unit: 'TJ'
+      - key: input_energy_power_geothermal_production
+        unit: 'TJ'

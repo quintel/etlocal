@@ -1,6 +1,0 @@
-key: supply_renewable_production
-groups:
-  - header: electricity
-    items:
-      - key: energy_power_wind_turbine_inland_demand
-        unit: TJ

@@ -1,15 +1,7 @@
 key: buildings_advanced
 groups:
-  - header: electricity_distribution
+  - header: buildings_electricity_distribution
     type: slider
-    items:
-      - key: buildings_local_production_electricity_industry_final_demand_for_other_ict_electricity_parent_share
-        unit: '%'
-      - key: buildings_local_production_electricity_buildings_final_demand_electricity_parent_share
-        unit: '%'
-        flexible: true
-
-  - type: slider
     items:
       - key: buildings_final_demand_electricity_buildings_final_demand_for_lighting_electricity_parent_share
         unit: '%'
@@ -21,7 +13,7 @@ groups:
         unit: '%'
         flexible: true
 
-  - header: gas_distribution
+  - header: buildings_network_gas_distribution
     type: slider
     items:
       - key: buildings_final_demand_network_gas_buildings_final_demand_for_appliances_network_gas_parent_share
@@ -32,7 +24,7 @@ groups:
         unit: '%'
         flexible: true
 
-  - header: biomass_distribution
+  - header: buildings_wood_pellets_distribution
     type: slider
     items:
       - key: buildings_final_demand_wood_pellets_buildings_final_demand_for_space_heating_wood_pellets_parent_share
@@ -41,7 +33,7 @@ groups:
         unit: '%'
         flexible: true
 
-  - header: coal_distribution
+  - header: buildings_coal_distribution
     type: slider
     items:
       - key: buildings_final_demand_coal_buildings_final_demand_for_space_heating_coal_parent_share
@@ -50,7 +42,7 @@ groups:
         unit: '%'
         flexible: true
 
-  - header: oil_distribution
+  - header: buildings_crude_oil_distribution
     type: slider
     items:
       - key: buildings_final_demand_crude_oil_buildings_final_demand_for_space_heating_crude_oil_parent_share
@@ -59,7 +51,7 @@ groups:
         unit: '%'
         flexible: true
 
-  - header: space_heating_technologies_using_gas
+  - header: buildings_network_gas_space_heating_distribution
     type: slider
     items:
       - key: buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_heatpump_air_water_network_gas_parent_share
@@ -68,7 +60,7 @@ groups:
         unit: '%'
         flexible: true
 
-  - header: space_heating_technologies_using_electricity
+  - header: buildings_electricity_space_heating_distribution
     type: slider
     items:
       - key: buildings_final_demand_for_space_heating_electricity_buildings_space_heater_collective_heatpump_water_water_ts_electricity_parent_share
@@ -77,18 +69,18 @@ groups:
         unit: '%'
         flexible: true
 
-  - header: lighting
+  - header: buildings_electricity_lighting_distribution
     type: slider
     items:
       - key: buildings_final_demand_for_lighting_electricity_buildings_lighting_efficient_fluorescent_electricity_parent_share
         unit: '%'
+      - key: buildings_final_demand_for_lighting_electricity_buildings_lighting_standard_fluorescent_electricity_parent_share
+        unit: '%'
       - key: buildings_final_demand_for_lighting_electricity_buildings_lighting_led_electricity_parent_share
         unit: '%'
         flexible: true
-      - key: buildings_final_demand_for_lighting_electricity_buildings_lighting_standard_fluorescent_electricity_parent_share
-        unit: '%'
 
-  - header: cooling
+  - header: buildings_electricity_cooling_distribution
     type: slider
     items:
       - key: buildings_final_demand_for_cooling_electricity_buildings_cooling_airconditioning_electricity_parent_share

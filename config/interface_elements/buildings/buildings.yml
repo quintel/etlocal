@@ -4,4 +4,4 @@ groups:
     - key: number_of_buildings
       unit: '#'
     - key: buildings_roof_surface_available_for_pv
-      unit: "<span>km<sup>2</sup></span>"
+      unit: "km<sup>2</sup>"

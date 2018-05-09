@@ -12,7 +12,7 @@
         - if interface_group.type == :slider
           .editable.slider
             .slider-wrapper.input
-              = form.label interface_item.key
+              = form.label interface_item.key, DatasetEditForm.human_attribute_name(interface_item.key).html_safe
 
               .slider data-key= interface_item.key data-flexible= ('flex' if interface_item.flexible) data-editable= (policy(@dataset).edit? ? '1' : '0')
               span.history data-key= interface_item.key
@@ -36,7 +36,8 @@
             .border
             .input
               .left
-                = form.label interface_item.key
+                = form.label interface_item.key, DatasetEditForm.human_attribute_name(interface_item.key).html_safe
+
               .right
                 span.history data-key= interface_item.key
                   i.fa.fa-history

@@ -19,27 +19,27 @@ nl:
         other_emission_industry_energy: 'Overige broeikasgassen (niet CO<sub>2</sub>) in de industrie and energiesector'
         other_emission_agriculture: 'Overige broeikasgassen (niet CO<sub>2</sub>) in de landbouw'
         lv_net_total_costs_present: Laagspanningsnet
-        lv_mv_trafo_total_costs_present: LS-MS transformatoren
+        lv_mv_trafo_total_costs_present: LS-MS-transformatoren
         mv_net_total_costs_present: Middenspanningsnet
-        mv_hv_trafo_total_costs_present: MV-HV transformatoren
+        mv_hv_trafo_total_costs_present: MV-HV-transformatoren
         hv_net_total_costs_present: Hoogspanningsnet
-        offshore_net_costs_present: Offshore wind grid
-        interconnection_net_costs_present: Interconnector capacity
+        offshore_net_costs_present: Net wind op zee
+        interconnection_net_costs_present: Interconnectorcapaciteit
         lv_net_spare_capacity: Laagspanningsnet
-        lv_mv_trafo_spare_capacity: LS-MS transformatoren
+        lv_mv_trafo_spare_capacity: LS-MS-transformatoren
         mv_net_spare_capacity: Middenspanningsnet
-        mv_hv_trafo_spare_capacity: MV-HV transformatoren
+        mv_hv_trafo_spare_capacity: MV-HV-transformatoren
         hv_net_spare_capacity: Hoogspanningsnet
-        lv_net_capacity_per_step: Step size of low voltage grid reinforcement
-        lv_net_costs_per_capacity_step: Costs of low voltage grid reinforcement per step
-        lv_mv_trafo_capacity_per_step: Step size of lv-mv transformer reinforcement
-        lv_mv_trafo_costs_per_capacity_step: Costs of lv-mv transformer reinforcement per step
-        mv_net_capacity_per_step: Step size of medium voltage grid reinforcement
-        mv_net_costs_per_capacity_step: Costs of medium voltage grid reinforcement per step
-        mv_hv_trafo_capacity_per_step: Step size of mv-hv transformer reinforcement
-        mv_hv_trafo_costs_per_capacity_step: Costs of mv-hv transformer reinforcement per step
-        hv_net_capacity_per_step: Step size of high voltage grid reinforcement
-        hv_net_costs_per_capacity_step: Costs of high voltage grid reinforcement per step
+        lv_net_capacity_per_step: Stapgrootte van laagspanningsnetverzwaring
+        lv_net_costs_per_capacity_step: Kosten van laagspanningsnetverzwaring per stap
+        lv_mv_trafo_capacity_per_step: Stapgrootte van capaciteitsuitbreiding LS-MS-transformatoren
+        lv_mv_trafo_costs_per_capacity_step: Kosten van capaciteitsuitbreiding LS-MStransformatoren per stap
+        mv_net_capacity_per_step: Stapgrootte van middenspanningsnetverzwaring
+        mv_net_costs_per_capacity_step: Kosten van middenspanningsnetverzwaring per stap
+        mv_hv_trafo_capacity_per_step: Stapgrootte van capaciteitsuitbreiding MS-HS-transformatoren
+        mv_hv_trafo_costs_per_capacity_step: Kosten van capaciteitsuitbreiding MS-HS-transformatoren per stap
+        hv_net_capacity_per_step: Stapgrootte van hoogspanningsnetverzwaring
+        hv_net_costs_per_capacity_step: Kosten van hoogspanningsnetverzwaring per stap
 
         #households
         number_of_residences: Aantal woningen

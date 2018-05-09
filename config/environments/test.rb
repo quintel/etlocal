@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.etsource_path        = ENV['ETSOURCE_PATH'] || Rails.root.join("spec", "fixtures", "etsource")
+  config.etsource_path        = ENV['ETSOURCE_PATH'] ? Rails.root.join(ENV['ETSOURCE_PATH']) : Rails.root.join("spec", "fixtures", "etsource")
   config.etsource_export_root = "https://beta-local.energytransitionmodel.com"
   config.assumptions_path     = Rails.root.join("spec", "fixtures", "assumptions.yml")
   config.area_files           = Rails.root.join("spec", "fixtures", "areas")

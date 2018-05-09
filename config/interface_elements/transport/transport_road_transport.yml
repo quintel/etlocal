@@ -1,14 +1,24 @@
 key: transport_road_transport
 groups:
-  - header: transport_road_transport_gasoline
-    type: slider
-    items:
-      - key: transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share
-        unit: '%'
-      - key: transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share
-        unit: '%'
-      - key: transport_road_mixer_gasoline_transport_truck_using_gasoline_mix_parent_share
-        unit: '%'
-      - key: transport_road_mixer_gasoline_transport_motorcycle_using_gasoline_mix_parent_share
-        unit: '%'
-        flexible: true
+    - header: transport_road_fuels
+      items:
+        - key: input_transport_road_gasoline_demand
+          unit: 'TJ'
+        - key: input_transport_road_diesel_demand
+          unit: 'TJ'
+        - key: transport_final_demand_lpg_demand
+          unit: 'TJ'
+        - key: input_transport_road_electricity_demand
+          unit: 'TJ'
+        - key: input_transport_road_bio_ethanol_demand
+          unit: 'TJ'
+        - key: input_transport_road_biodiesel_demand
+          unit: 'TJ'
+        - key: transport_final_demand_for_road_compressed_network_gas_demand
+          unit: 'TJ'
+        - key: transport_final_demand_hydrogen_demand
+          unit: 'TJ'
+        - key: transport_final_demand_for_road_lng_demand
+          unit: 'TJ'
+        - key: transport_final_demand_for_road_bio_lng_demand
+          unit: 'TJ'

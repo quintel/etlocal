@@ -1,0 +1,24 @@
+key: energy_heat_production
+groups:
+  - header: energy_renewable_heat
+    items:
+      - key: input_energy_heater_for_heat_network_wood_pellets_production
+        unit: 'TJ'
+      - key: input_energy_heater_for_heat_network_geothermal_production
+        unit: 'TJ'
+      - key: input_energy_heater_for_heat_network_waste_mix_production
+        unit: 'TJ'  
+
+  - header: energy_fossil_heat
+    items:
+      - key: input_energy_heater_for_heat_network_network_gas_production
+        unit: 'TJ'
+      - key: input_energy_heater_for_heat_network_coal_production
+        unit: 'TJ'
+      - key: input_energy_heater_for_heat_network_crude_oil_production
+        unit: 'TJ'
+
+  - header: energy_heat_loss
+    items:
+      - key: energy_heat_network_loss_demand
+        unit: 'TJ'

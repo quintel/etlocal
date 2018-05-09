@@ -4,7 +4,7 @@ var Slider = (function () {
     var ENTER_KEY = 13;
 
     function setValue(value) {
-        this.input.val(value);
+        this.input.val(value / 100.0);
 
         setVal.call(this, value);
     }
@@ -59,10 +59,11 @@ var Slider = (function () {
     Slider.prototype = {
         create: function () {
             this.slider = new $.Quinn(this.sliderEl, {
-                value:   this.input.val(),
+                value:   this.input.val() * 100,
                 step:    0.01,
                 setup:   setVal.bind(this),
                 drag:    drag.bind(this),
+                max:     100,
                 disable: true
             });
 
@@ -94,9 +95,9 @@ var Slider = (function () {
                 // Oddly specific: the last argument is a silent call so
                 // no changes are being triggered (which is what we want
                 // when setting the defaults).
-                this.slider.setTentativeValue(value, true, true);
+                this.slider.setTentativeValue(value * 100.0, true, true);
 
-                setVal.call(this, value);
+                setVal.call(this, value * 100.0);
             }
         }
     };

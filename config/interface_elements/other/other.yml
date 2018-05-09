@@ -1,0 +1,19 @@
+key: other
+
+groups:
+  - items:
+    - key: other_final_demand_electricity_demand
+      unit: 'TJ'
+    - key: other_final_demand_network_gas_demand
+      unit: 'TJ'
+    - key: other_final_demand_steam_hot_water_demand
+      unit: 'TJ'
+    - key: other_final_demand_wood_pellets_demand
+      unit: 'TJ'
+    - key: other_final_demand_coal_demand
+      unit: 'TJ'
+    - key: other_final_demand_crude_oil_demand
+      unit: 'TJ'
+    - key: other_final_demand_crude_oil_non_energetic_demand
+      unit: 'TJ'
+

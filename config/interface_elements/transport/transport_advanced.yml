@@ -1,0 +1,102 @@
+key: transport_advanced
+groups:
+  - header: transport_road_gasoline_distribution
+    type: slider
+    items:
+      - key: transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share
+        unit: '%'
+      - key: transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share
+        unit: '%'
+      - key: transport_road_mixer_gasoline_transport_truck_using_gasoline_mix_parent_share
+        unit: '%'
+      - key: transport_road_mixer_gasoline_transport_motorcycle_using_gasoline_mix_parent_share
+        unit: '%'
+        flexible: true
+
+  - header: transport_road_diesel_distribution
+    type: slider
+    items:
+      - key: transport_road_mixer_diesel_transport_car_using_diesel_mix_parent_share
+        unit: '%'
+      - key: transport_road_mixer_diesel_transport_bus_using_diesel_mix_parent_share
+        unit: '%'
+      - key: transport_road_mixer_diesel_transport_truck_using_diesel_mix_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: transport_road_electricity_distribution
+    type: slider
+    items:
+      - key: transport_final_demand_for_road_electricity_transport_car_using_electricity_parent_share
+        unit: '%'
+      - key: transport_final_demand_for_road_electricity_transport_bus_using_electricity_parent_share
+        unit: '%'
+      - key: transport_final_demand_for_road_electricity_transport_motorcycle_using_electricity_parent_share
+        unit: '%'
+      - key: transport_final_demand_for_road_electricity_transport_bicycle_using_electricity_parent_share
+        unit: '%'
+      - key: transport_final_demand_for_road_electricity_transport_truck_using_electricity_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: transport_road_cng_distribution
+    type: slider
+    items:
+      - key: transport_road_mixer_compressed_network_gas_transport_bus_using_compressed_natural_gas_parent_share
+        unit: '%'
+      - key: transport_road_mixer_compressed_network_gas_transport_car_using_compressed_natural_gas_parent_share
+        unit: '%'
+      - key: transport_road_mixer_compressed_network_gas_transport_truck_using_compressed_natural_gas_parent_share
+        unit: '%'
+        flexible: true
+
+  - header: transport_road_hydrogen_distribution
+    type: slider
+    items:
+      - key: input_transport_road_car_hydrogen_share
+        unit: '%'
+      - key: transport_final_demand_for_road_hydrogen_transport_bus_using_hydrogen_parent_share
+        unit: '%'
+      - key: transport_final_demand_for_road_hydrogen_transport_truck_using_hydrogen_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: transport_road_lng_distribution
+    type: slider
+    items:
+      - key: transport_road_mixer_lng_transport_bus_using_lng_mix_parent_share
+        unit: '%'
+      - key: transport_road_mixer_lng_transport_truck_using_lng_mix_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: transport_rail_electricity_distribution
+    type: slider
+    items:
+      - key: transport_final_demand_for_rail_electricity_transport_freight_train_using_electricity_parent_share
+        unit: '%'
+      - key: transport_final_demand_for_rail_electricity_transport_tram_using_electricity_parent_share
+        unit: '%'
+      - key: transport_final_demand_for_rail_electricity_transport_passenger_train_using_electricity_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: transport_rail_diesel_distribution
+    type: slider
+    items:
+      - key: transport_rail_mixer_diesel_transport_freight_train_using_diesel_mix_parent_share
+        unit: '%'
+      - key: transport_rail_mixer_diesel_transport_passenger_train_using_diesel_mix_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: transport_energy_demand_crude_oil_non_energetic
+    items:
+      - key: transport_final_demand_crude_oil_non_energetic_demand
+        unit: 'TJ'

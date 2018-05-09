@@ -16,18 +16,20 @@ en:
       agriculture: Agriculture
       assumptions: Assumptions
       buildings: Buildings
-      general: General
+      area: General
       households: Households
       industry: Industry
       overview: Overview
       other: Other
-      energy: Supply
+      energy: Energy production
       transport: Transport
 
     subgroups:
+      area:
+        area_advanced: Advanced
+
       agriculture:
         agriculture_advanced: Advanced
-        agriculture_energy_supply: Energy supply
 
       buildings:
         buildings_advanced: Advanced
@@ -39,20 +41,30 @@ en:
         buildings_final_demand_crude_oil: Crude oil
 
       energy:
-        supply_advanced: Advanced
-        supply_fossil_production: Fossil production
-        supply_renewable_production: Renewable production
+        energy_heat_production: Heat production
+        energy_fossil_electricity_production: Fossil electricity production
+        energy_renewable_electricity_production: Renewable electricity production
 
       households:
         households_advanced: Advanced
         households_energy_demand: Energy demand
         households_energy_supply: Energy supply
 
+      industry:
+        industry_metal: Metal
+        industry_chemical: Chemical
+        industry_food: Food
+        industry_paper: Paper
+        industry_ict: ICT
+        industry_other: Other industry
+
       transport:
         transport_energy_demand: Energy demand
-        transport_rail_transport: Rail transport
-        transport_road_transport: Road transport
-        transport_technologies: Technologies
+        transport_rail_transport: Trains
+        transport_road_transport: Road vehicles
+        transport_ship_transport: Ships
+        transport_plane_transport: Planes
+        transport_advanced: Advanced
 
     flash:
       not_found: "Area does not exists"

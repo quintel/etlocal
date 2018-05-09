@@ -1,19 +1,32 @@
 key: buildings_energy_supply
 groups:
-  - header: local_production
+  - header: buildings_local_production
     items:
-      - key: buildings_solar_pv_solar_radiation_demand
-        unit: TJ
+      - key: input_buildings_solar_pv_demand
+        unit: 'TJ'
+      - key: input_buildings_solar_pv_own_use_share
+        unit: '%'
       - key: buildings_final_demand_solar_thermal_demand
-        unit: TJ
+        unit: 'TJ'
 
-  - header: heat_network_supply
+  - header: buildings_district_heating
+    type: slider
     items:
-      - key: buildings_collective_chp_network_gas_demand
-        unit: TJ
-      - key: buildings_collective_chp_wood_pellets_demand
-        unit: TJ
-      - key: buildings_chp_engine_biogas_demand
-        unit: TJ
-      - key: buildings_collective_geothermal_demand
-        unit: TJ
+      - key: input_buildings_district_heating_heater_network_gas_share
+        unit: '%'
+      - key: input_buildings_district_heating_chp_network_gas_share
+        unit: '%'
+      - key: input_buildings_district_heating_chp_wood_pellets_share
+        unit: '%'
+      - key: input_buildings_district_heating_chp_biogas_share
+        unit: '%'
+      - key: input_buildings_district_heating_heatpump_electricity_share
+        unit: '%'
+      - key: input_buildings_district_heating_geothermal_share
+        unit: '%'
+      - key: input_buildings_district_heating_heater_hydrogen_share
+        unit: '%'
+      - key: input_buildings_district_heating_central_heat_network_share
+        unit: '%'
+        flexible: true
+        skip_validation: true

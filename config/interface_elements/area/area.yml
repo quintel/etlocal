@@ -1,0 +1,17 @@
+key: area
+groups:
+  - items:
+    - key: analysis_year
+      unit: '#'
+    - key: number_of_inhabitants
+      unit: '#'
+    - key: areable_land
+      unit: 'km<sup>2</sup>'
+    - key: coast_line
+      unit: 'km'
+    - key: land_available_for_solar
+      unit: 'km<sup>2</sup>'
+    - key: onshore_suitable_for_wind
+      unit: 'km<sup>2</sup>'
+    - key: offshore_suitable_for_wind
+      unit: 'km<sup>2</sup>'

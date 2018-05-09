@@ -1,7 +1,0 @@
-key: transport_energy_demand
-groups:
-  - header: transport_energy_demand_gasoline
-    items:
-      - key: transport_final_demand_gasoline_demand
-        unit: TJ
-

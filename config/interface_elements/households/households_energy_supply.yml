@@ -1,6 +1,32 @@
 key: households_energy_supply
 groups:
-  - header: local_production
+  - header: households_local_production
     items:
-      - key: households_solar_pv_solar_radiation_demand
-        unit: TJ
+      - key: input_households_solar_pv_demand
+        unit: 'TJ'
+      - key: input_households_solar_pv_own_use_share
+        unit: '%'
+      - key: households_final_demand_solar_thermal_demand
+        unit: 'TJ'
+
+  - header: households_district_heating
+    type: slider
+    items:
+      - key: input_households_district_heating_heater_network_gas_share
+        unit: '%'
+      - key: input_households_district_heating_chp_network_gas_share
+        unit: '%'
+      - key: input_households_district_heating_chp_wood_pellets_share
+        unit: '%'
+      - key: input_households_district_heating_chp_biogas_share
+        unit: '%'
+      - key: input_households_district_heating_heatpump_electricity_share
+        unit: '%'
+      - key: input_households_district_heating_geothermal_share
+        unit: '%'
+      - key: input_households_district_heating_heater_hydrogen_share
+        unit: '%'
+      - key: input_households_district_heating_central_heat_network_share
+        unit: '%'
+        flexible: true
+        skip_validation: true

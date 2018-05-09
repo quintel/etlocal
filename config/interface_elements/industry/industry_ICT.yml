@@ -1,0 +1,7 @@
+key: industry_ict
+
+groups:
+  - header: industry_ict
+    items:
+      - key: input_industry_ict_electricity_demand
+        unit: 'TJ'

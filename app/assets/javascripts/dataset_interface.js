@@ -1,4 +1,4 @@
-/*globals ChangeTrigger,GraphDefaults,LocalSettings,SliderGroupCollection,Tab*/
+/*globals ChangeTrigger,LocalSettings,SliderGroupCollection,Tab*/
 
 var DatasetInterface = (function () {
     'use strict';
@@ -104,8 +104,8 @@ var DatasetInterface = (function () {
                 converted    = Converter.convertRounded.call(span, defaultVal);
 
                 if (defaultVal) {
-                    if (displayInput.length > 0) {
-                        displayInput.attr('placeholder', converted);
+                    if (displayInput.length > 0 && !displayInput.val()) {
+                        displayInput.val(converted);
                     }
 
                     if (readOnly.length > 0) {
@@ -114,12 +114,6 @@ var DatasetInterface = (function () {
                 }
             });
         });
-    }
-
-    function switchTab(group, tab) {
-        setDefaultsForTab.call(this, tab);
-
-        this.sliderGroupCollection.render(group);
     }
 
     function loadValues() {
@@ -140,7 +134,9 @@ var DatasetInterface = (function () {
         enable: function () {
             this.tab = new Tab(
                 $(".nav#input-nav"),
-                switchTab.bind(this),
+                function (group, tab) {
+                    this.sliderGroupCollection.render(group);
+                }.bind(this),
                 this.localSettings
             ).enable();
 
@@ -158,8 +154,7 @@ var DatasetInterface = (function () {
     function DatasetInterface(datasetId) {
         this.datasetId             = datasetId;
         this.localSettings         = new LocalSettings(datasetId);
-        this.defaults              = new GraphDefaults(datasetId);
-        this.sliderGroupCollection = new SliderGroupCollection(datasetId, this.defaults);
+        this.sliderGroupCollection = new SliderGroupCollection(datasetId);
     }
 
     return {

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'datasets#index'
 
   resources :datasets, only: %i(index edit show) do
-    get :defaults, :download
+    get :download
 
     post :clone
 

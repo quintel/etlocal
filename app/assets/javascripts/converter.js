@@ -26,7 +26,7 @@ var Converter = (function (){
             var data = $(this).data();
 
             if (data.from === data.to) {
-                return value;
+                return Math.round(value * 100) / 100;
             } else {
                 return new Quantity(value, data.to).to(data.from).roundedValue;
             }

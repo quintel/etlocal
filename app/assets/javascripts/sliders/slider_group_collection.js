@@ -1,15 +1,7 @@
-/*globals GraphDefaults,SliderGroup*/
+/*globals SliderGroup*/
 
 var SliderGroupCollection = (function () {
     'use strict';
-
-    function setDefaults(sliderGroup) {
-        var defaults = this.defaults;
-
-        $.when(defaults.fetch()).done(function () {
-            sliderGroup.updateSliderDefaults(defaults.data);
-        });
-    }
 
     SliderGroupCollection.prototype = {
         render: function (group) {
@@ -20,14 +12,13 @@ var SliderGroupCollection = (function () {
             if (sliderGroups.length > 0) {
                 sliderGroups.forEach(function (sliderGroup) {
                     sliderGroup.render();
-                    setDefaults.call(this, sliderGroup);
+                    sliderGroup.setFlexSlider();
                 }.bind(this));
             }
         }
     };
 
-    function SliderGroupCollection(datasetId, defaults) {
-        this.defaults     = defaults;
+    function SliderGroupCollection(datasetId) {
         this.datasetId    = datasetId;
         this.scope        = $('.group.slider-group');
         this.sliderGroups = $.map(this.scope, function (scope) {

@@ -8,8 +8,9 @@ class DatasetImporter
     end
 
     def editable_attributes
-      @attributes.slice(
-        *Transformer::DatasetCast.new.attributes.keys.map(&:to_s))
+      @attributes.slice(*InterfaceElement.items.map do |item|
+        item.key.to_s
+      end)
     end
 
     private
@@ -26,7 +27,7 @@ class DatasetImporter
         [ "BU#{ municipality_code }#{ district_code }#{ neighborhood_code }",
           @attributes.fetch('area_name') ]
       when "PV"
-        [ @attributes.fetch('province').downcase,
+        [ @attributes.fetch('province').downcase.sub(/-/, '_'),
           @attributes.fetch('province') ]
       end
     end

@@ -4,25 +4,23 @@ class DatasetImporter
 
     NUMBER_REGEX = /\A[-+]?[0-9]*\.?[0-9]+\Z/
 
-    def set(dataset, csv_row)
-      @dataset = dataset
-
-      commit = find_or_create_commit!
+    def get(dataset, csv_row)
+      commit = find_or_create_commit!(dataset)
+      new_edits = []
+      time = Time.now.to_s(:db)
 
       csv_row.editable_attributes.each do |key, value|
-        if edit = @dataset.edits.detect{ |e| e.key == key }
-          next unless edit.commit.user == User.robot && edit.value != value
-
-          edit.update_attribute(:value, value)
-        elsif value =~ NUMBER_REGEX
-          commit.dataset_edits.create!(key: key, value: value)
+        if value =~ NUMBER_REGEX
+          new_edits.push("('#{key}', #{value}, #{commit.id}, '#{time}', '#{time}')")
         end
       end
+
+      new_edits
     end
 
-    def find_or_create_commit!
-      @dataset.commits.detect{ |c| c.user == User.robot } ||
-      @dataset.commits.create!(
+    def find_or_create_commit!(dataset)
+      dataset.commits.detect{ |c| c.user == User.robot } ||
+      dataset.commits.create!(
         user:    User.robot,
         message: "Initial value Quintel <a href='https://www.cbs.nl' target='_blank'>CBS</a>"
       )

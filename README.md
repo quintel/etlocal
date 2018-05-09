@@ -16,9 +16,11 @@ cp config/database.sample.yml config/database.yml
 cp config/email.sample.yml config/email.yml
 ```
 
-2. Run `rake db:create`, `rake db:schema:load` and `rake db:seed`
+2. Copy the [dataset defaults](db/datasets/README.md)
 
-3. Add a `.env` file with a mapbox api key to enable the map on your local environment. Like such:
+3. Run `rake db:create`, `rake db:schema:load` and `rake db:seed`
+
+4. Add a `.env` file with a mapbox api key to enable the map on your local environment. Like such:
 
 ```bash
 echo "MAPBOX_API_KEY=xx.xxxxxxxxxxxxxxxxxxxxxxxxx" >> .env

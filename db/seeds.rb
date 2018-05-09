@@ -24,4 +24,8 @@ unless User.find_by(email: "robot@quintel.com")
   )
 end
 
-DatasetImporter.new.import
+dataset_importer = DatasetImporter.new
+
+if dataset_importer.valid?
+  dataset_importer.import
+end

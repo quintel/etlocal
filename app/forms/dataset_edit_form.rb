@@ -2,8 +2,8 @@ class DatasetEditForm
   include ActiveModel::Model
   include Virtus.model
 
-  EditableAttributesCollection.keys.each do |attr_name|
-    attribute attr_name, Float
+  EditableAttributesCollection.items.each do |item|
+    attribute item.key, Float, default: item.default
   end
 
   validates_presence_of :number_of_residences

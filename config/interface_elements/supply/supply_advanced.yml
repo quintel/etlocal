@@ -1,6 +1,0 @@
-key: supply_advanced
-groups:
-  - header: bio_fuel_production
-    items:
-      - key: energy_production_bio_ethanol_demand
-        unit: TJ

@@ -1,10 +1,11 @@
 class EditableAttribute
   attr_reader :key
 
-  def initialize(dataset, key, edits)
+  def initialize(dataset, key, edits, default = nil)
     @dataset = dataset
     @key     = key
     @edits   = edits
+    @default = default
   end
 
   def previous
@@ -22,13 +23,7 @@ class EditableAttribute
   # attribute (like `has_industry` or `has_agriculture`) use that one.
   #
   def default
-    return unless is_atlas_attribute?
-
-    if @dataset.atlas_dataset
-      @dataset.atlas_dataset.public_send(@key)
-    elsif %w(has_industry has_agriculture).include?(@key)
-      @dataset.public_send(@key)
-    end
+    @default || atlas_default
   end
 
   # If a dataset has an edit - give that value. If it doesn't have an edit,
@@ -38,6 +33,16 @@ class EditableAttribute
   end
 
   private
+
+  def atlas_default
+    return unless is_atlas_attribute?
+
+    if @dataset.atlas_dataset
+      @dataset.atlas_dataset.public_send(@key)
+    elsif %w(has_industry has_agriculture).include?(@key)
+      @dataset.public_send(@key)
+    end
+  end
 
   def is_atlas_attribute?
     Atlas::Dataset.attribute_set

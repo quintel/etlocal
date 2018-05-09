@@ -1,0 +1,67 @@
+key: area_advanced
+groups:
+  - header: area_other_ghg
+    items:
+      - key: co2_emission_1990
+        unit: 'Mton'
+      - key: other_emission_built_environment
+        unit: 'Mton'
+      - key: other_emission_transport
+        unit: 'Mton'
+      - key: other_emission_industry_energy
+        unit: 'Mton'
+      - key: other_emission_agriculture
+        unit: 'Mton'
+
+  - header: area_electricity_grid_costs
+    items:
+      - key: lv_net_total_costs_present
+        unit: '€'
+      - key: mv_net_total_costs_present
+        unit: '€'
+      - key: hv_net_total_costs_present
+        unit: '€'
+      - key: lv_mv_trafo_total_costs_present
+        unit: '€'
+      - key: mv_hv_trafo_total_costs_present
+        unit: '€'
+      - key: offshore_net_costs_present
+        unit: '€'
+      - key: interconnection_net_costs_present
+        unit: '€'
+
+  - header: area_electricity_grid_capacity
+    items:
+      - key: lv_net_spare_capacity
+        unit: '%'
+      - key: mv_net_spare_capacity
+        unit: '%'
+      - key: hv_net_spare_capacity
+        unit: '%'
+      - key: lv_mv_trafo_spare_capacity
+        unit: '%'
+      - key: mv_hv_trafo_spare_capacity
+        unit: '%'
+
+  - header: area_electricity_grid_reinforcement
+    items:
+      - key: lv_net_capacity_per_step
+        unit: 'MW'
+      - key: lv_net_costs_per_capacity_step
+        unit: '€'
+      - key: mv_net_capacity_per_step
+        unit: 'MW'
+      - key: mv_net_costs_per_capacity_step
+        unit: '€'
+      - key: hv_net_capacity_per_step
+        unit: 'MW'
+      - key: hv_net_costs_per_capacity_step
+        unit: '€'
+      - key: lv_mv_trafo_capacity_per_step
+        unit: 'MW'
+      - key: lv_mv_trafo_costs_per_capacity_step
+        unit: '€'
+      - key: mv_hv_trafo_capacity_per_step
+        unit: 'MW'
+      - key: mv_hv_trafo_costs_per_capacity_step
+        unit: '€'

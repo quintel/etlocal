@@ -1,0 +1,19 @@
+key: industry_paper
+
+groups:
+  - header: industry_paper
+    items:
+      - key: input_industry_paper_electricity_demand
+        unit: 'TJ'
+      - key: input_industry_paper_network_gas_demand
+        unit: 'TJ'
+      - key: input_industry_paper_steam_hot_water_demand
+        unit: 'TJ'
+      - key: input_industry_paper_wood_pellets_demand
+        unit: 'TJ'
+      - key: input_industry_paper_crude_oil_demand
+        unit: 'TJ'
+      - key: input_industry_paper_hydrogen_demand
+        unit: 'TJ'
+      - key: input_industry_paper_coal_demand
+        unit: 'TJ'

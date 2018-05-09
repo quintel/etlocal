@@ -15,7 +15,7 @@ module Exporter
 
       Transformer::DatasetGenerator.new(response).generate
 
-      puts "Successfully analyzed and exported #{response['area']}"
+      puts "Successfully analyzed and exported #{response[:area]}"
     rescue RestClient::ExceptionWithResponse => e
       puts "Something went wrong with the analyzes and or exporting of #{dataset_id}"
     end

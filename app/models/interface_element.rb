@@ -3,11 +3,13 @@ class InterfaceItem
   include ActiveModel::Validations
 
   validates_presence_of :unit, :key
-  validates_inclusion_of :unit, in: %w(# km TJ % Mton <span>km<sup>2</sup></span>)
+  validates_inclusion_of :unit, in: %w(# km TJ % Mton km<sup>2</sup> € MW)
 
   attribute :key, Symbol
   attribute :unit, String
   attribute :flexible, Boolean, default: false
+  attribute :default, Float
+  attribute :skip_validation, Float, default: false
 end
 
 class InterfaceGroup
@@ -34,11 +36,5 @@ class InterfaceElement < YmlReadOnlyRecord
 
   def self.items
     @items ||= all.flat_map(&:groups).flat_map(&:items)
-  end
-
-  def self.keys
-    InterfaceElement.all.flat_map(&:groups).flat_map do |group|
-      group.items.map(&:key)
-    end
   end
 end

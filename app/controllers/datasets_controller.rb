@@ -3,7 +3,7 @@ class DatasetsController < ApplicationController
   format 'js', only: %i(edit :clone)
 
   before_action :authenticate_user!
-  before_action :find_dataset, only: %i(validate edit download defaults clone)
+  before_action :find_dataset, only: %i(validate edit download clone)
 
   # GET index
   def index
@@ -39,6 +39,7 @@ class DatasetsController < ApplicationController
         filename: @dataset_downloader.zip_filename
     rescue Refinery::IncalculableGraphError,
            Refinery::FailedValidationError,
+           Atlas::QueryError,
            ArgumentError => error
       render json: { error: error }
     ensure
@@ -51,10 +52,5 @@ class DatasetsController < ApplicationController
     authorize @dataset
 
     @cloned_dataset = DatasetCloner.clone!(@dataset, current_user)
-  end
-
-  # GET defaults
-  def defaults
-    render json: GraphAssumptions.get(@dataset, :nl)
   end
 end

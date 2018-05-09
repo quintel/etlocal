@@ -1,8 +1,8 @@
 class CalculableValidator < ActiveModel::Validator
   def validate(record)
     calc_attrs = record.attributes.slice(
-      *EditableAttributesCollection.keys
-    ).stringify_keys
+      *InterfaceElement.items.reject(&:flexible).map(&:key)
+    )
 
     begin
       dataset = Dataset.new(area: 'calculation_shell')
@@ -15,8 +15,9 @@ class CalculableValidator < ActiveModel::Validator
 
     rescue Refinery::IncalculableGraphError,
            Refinery::FailedValidationError,
+           Atlas::QueryError,
            ArgumentError => error
-      record.errors.add(:calculation, error)
+      record.errors.add(:calculation, error.message)
     end
   end
 end

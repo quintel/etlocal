@@ -42,7 +42,7 @@ class CommitsController < ApplicationController
     params
       .require(:dataset_edit_form)
       .permit(:dataset_id,
-        *EditableAttributesCollection.keys
+        *EditableAttributesCollection.items.map(&:key)
       )
       .reject { |_, val| val.blank? }
   end

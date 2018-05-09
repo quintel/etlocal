@@ -1,6 +1,6 @@
 class EditableAttributesCollection
-  def self.keys
-    @keys ||= InterfaceElement.keys
+  def self.items
+    @items ||= InterfaceElement.items
   end
 
   def initialize(dataset)
@@ -24,8 +24,6 @@ class EditableAttributesCollection
 
   def as_json(*)
     @attributes.each_with_object({}) do |edit, object|
-      next unless edit.value
-
       object[edit.key] = edit.value
     end
   end
@@ -40,8 +38,8 @@ class EditableAttributesCollection
   end
 
   def setup_attributes(dataset)
-    self.class.keys.flatten.map do |key|
-      EditableAttribute.new(dataset, key.to_s, edits)
+    self.class.items.flatten.map do |item|
+      EditableAttribute.new(dataset, item.key.to_s, edits, item.default)
     end
   end
 end

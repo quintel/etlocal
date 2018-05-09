@@ -2,7 +2,10 @@
   h5 title= dataset.geo_id
     = dataset.area
 
-  em= I18n.t("user.created_by", group: dataset.creator)
+  em
+    = I18n.t("user.created_by", group: dataset.creator)
+    = " (#{dataset.id})"
+
 
 - if @dataset_edit_form.errors.any?
   .errors

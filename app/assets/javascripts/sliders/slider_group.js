@@ -14,30 +14,21 @@ var SliderGroup = (function () {
             }.bind(this));
         },
 
-        updateSliderDefaults: function (defaults) {
+        setFlexSlider: function () {
             var flexibleSlider,
-                value,
-                oldValue,
                 flex = 1.0;
 
             this.sliders.forEach(function (slider) {
-                value    = defaults[slider.key];
-                oldValue = slider.input.val() / 100.0;
-
-                if (!slider.flexible) {
-                    if (slider.isEnabled()) {
-                        flex -= oldValue
-                    } else {
-                        flex -= value;
-                    }
-
-                    slider.setDefaultValue(value * 100.0);
-                } else {
+                if (slider.flexible) {
                     flexibleSlider = slider;
+                }
+
+                if (!slider.flexible && slider.isEnabled()) {
+                    flex -= slider.input.val();
                 }
             });
 
-            flexibleSlider.setDefaultValue(flex * 100.0);
+            flexibleSlider.setDefaultValue(flex);
         }
     };
 

@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/quintel/atlas.git
-  revision: c6450eb86c692b6df3524419d5bf79f4ad5c7e29
-  ref: c6450eb
+  revision: c3856240412a900cd604878d2b4cdf1b3f8ac62b
+  ref: c385624
   specs:
     atlas (1.0.0)
       activemodel (>= 4.1.14.1)
@@ -28,8 +28,8 @@ GIT
 
 GIT
   remote: https://github.com/quintel/transformer.git
-  revision: e92deeeac5f7ec9d5e64ca1a8f11e482d449701b
-  ref: e92deee
+  revision: 96dcf9f1ca56afd09709465f9dba43b3b3c27108
+  ref: 96dcf9f
   specs:
     transformer (1.0.0)
       atlas (~> 1.0)
@@ -405,4 +405,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.16.0
+   1.16.1

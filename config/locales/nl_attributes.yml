@@ -87,8 +87,8 @@ nl:
         households_final_demand_crude_oil_households_final_demand_for_hot_water_crude_oil_parent_share: Warm water
         households_final_demand_crude_oil_households_final_demand_for_space_heating_crude_oil_parent_share: Ruimteverwarming
 
-        households_water_heater_solar_thermal_households_useful_demand_for_hot_water_for_houses_met_solar_heater_parent_share: Warm water
-        households_water_heater_solar_thermal_households_useful_demand_for_space_heating_after_insulation_for_houses_met_solar_heater_parent_share: Ruimteverwarming
+        households_water_heater_solar_thermal_households_useful_demand_for_hot_water_for_houses_with_solar_heater_parent_share: Warm water
+        households_water_heater_solar_thermal_households_useful_demand_for_space_heating_after_insulation_for_houses_with_solar_heater_parent_share: Ruimteverwarming
 
         households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share: Combi-boiler
         households_final_demand_for_space_heating_network_gas_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share: Hybride warmtepomp

@@ -21,8 +21,6 @@ groups:
         unit: 'TJ'
       - key: input_industry_chemical_other_crude_oil_demand
         unit: 'TJ'
-      - key: input_industry_chemical_other_hydrogen_demand
-        unit: 'TJ'
       - key: input_industry_chemical_other_coal_demand
         unit: 'TJ'
       - key: input_industry_chemical_other_network_gas_non_energetic_demand

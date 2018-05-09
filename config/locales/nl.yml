@@ -6,3 +6,4 @@ nl:
   time:
     formats:
       simple: "%Y-%m-%d:%H:%M"
+      short: "%d-%m-%Y"

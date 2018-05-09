@@ -86,7 +86,7 @@ en:
       energy_demand_power_sector: Energy use of the power sector
       energy_greengas: Greengas
       energy_extraction: Fuel production and natural resource extraction
-      energy_electricity_wind: Wind electricty production
+      energy_electricity_wind: Wind electricity production
       energy_electricity_solar: Solar electricity production
       energy_electricity_other_renewable: Other renewable electricity production
       energy_electricity_coal: Coal electricity production

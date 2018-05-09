@@ -10,14 +10,12 @@ class AddScaledDefaultsFromGraphToCSV
   def run!
     atlas_ds = Atlas::Dataset.find(@country)
     graph    = Atlas::Runner.new(atlas_ds).calculate
-    scope    = Dataset.where(public: true, user: User.robot)
-    bar      = ProgressBar.new(scope.count)
+    bar      = ProgressBar.new(datasets.count)
 
-    CSV.open('test.csv', 'wb', write_headers: true, headers: headers) do |csv|
+    CSV.open("#{@country}_datasets.csv", 'wb', write_headers: true, headers: headers) do |csv|
       datasets.each do |dataset|
         row = DatasetImporter::DatasetCSVRow.new(dataset.to_h)
-        ar_dataset = scope.find_by(geo_id: row.geo_id)
-        assumptions = GraphAssumptions.get(atlas_ds, graph, ar_dataset)
+        assumptions = GraphAssumptions.get(atlas_ds, graph, row)
 
         csv << dataset.fields + assumptions
 

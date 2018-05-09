@@ -1,10 +1,10 @@
 module GraphAssumptions
   module_function
 
-  def get(atlas_ds, graph, dataset)
-    nor = dataset.editable_attributes.find('number_of_residences').value
+  def get(atlas_ds, graph, csv_row)
+    nor = csv_row.editable_attributes['number_of_residences'].to_f
 
-    scaling_factor = (nor || 0) / atlas_ds.number_of_residences
+    scaling_factor = nor / atlas_ds.number_of_residences
 
     InterfaceElement.items.reject(&:flexible).map do |item|
       case item.key

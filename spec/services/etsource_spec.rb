@@ -1,14 +1,9 @@
 require 'rails_helper'
 
-Atlas.data_dir = ENV['ETSOURCE_PATH'] || "#{ ::Rails.root }/spec/fixtures/etsource"
-
 dataset_inputs = Etsource.dataset_inputs.uniq
 transformers   = Transformer::GraphMethods.all
 
-Atlas.data_dir = "#{ ::Rails.root }/spec/fixtures/etsource"
-
-
-RSpec.describe "ETLocal's interface", :if => dataset_inputs.any? do
+RSpec.describe "ETLocal's interface", :if => dataset_inputs.any?, type: :interface do
   # Validates DATASET_INPUT's used in sparse graph query upon their existence
   # in ETLocal.
   #
@@ -31,8 +26,8 @@ RSpec.describe "ETLocal's interface", :if => dataset_inputs.any? do
       it "#{item.key} is included in one-to-one transformer or is an area attribute" do
         expect(
           transformers.keys +
-          Atlas::Dataset::Derived.attribute_set.map{ |a| a.name.to_s }
-        ).to include(item.key.to_s)
+          Atlas::Dataset::Derived.attribute_set.map(&:name)
+        ).to include(item.key)
       end
     end
   end

@@ -3,10 +3,9 @@ require 'support/graph'
 
 describe Exporter do
   let(:dataset) { FactoryGirl.create(:dataset) }
-  let(:ameland) { Atlas::Dataset::Derived.find('ameland') }
 
   let!(:stub_export_request) {
-    stub_request(:get, "https://beta-local.energytransitionmodel.com/api/v1/exports/ameland")
+    stub_request(:get, "https://beta-local.energytransitionmodel.com/api/v1/exports/#{dataset.id}")
       .to_return(body: JSON.dump({
         'electricity_consumption' => 500,
         'gas_consumption' => 500,
@@ -25,9 +24,9 @@ describe Exporter do
   }
 
   it "exports a dataset" do
-    Exporter.export(ameland)
+    Exporter.export(dataset)
 
-    expect(ameland.number_of_cars).to eq(10)
+    expect(Atlas::Dataset::Derived.find('ameland').number_of_cars).to eq(10)
   end
 
   # Reset values to old values

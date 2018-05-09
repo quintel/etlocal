@@ -7,21 +7,23 @@ module Exporter
   # inside of ETSource.
   def self.export(dataset)
     begin
-      response = RestClient.get "#{ DATASET_URL }/exports/#{ dataset.geo_id }", accept: :json, content_type: :json
+      response = RestClient.get("#{DATASET_URL}/exports/#{dataset.id}",
+                                accept: :json,
+                                content_type: :json)
 
       store(dataset, JSON.parse(response))
 
-      puts "Successfully analyzed and exported #{ dataset.area }"
+      puts "Successfully analyzed and exported #{dataset.area}"
     rescue RestClient::ExceptionWithResponse => e
-      puts "Something went wrong with the analyzes and or exporting of #{ dataset.area }"
+      puts "Something went wrong with the analyzes and or exporting of #{dataset.area}"
     end
   end
 
   def self.store(dataset, edits)
     Transformer::DatasetGenerator.new(
       edits.merge(
-        area: dataset.area,
-        base_dataset: dataset.base_dataset
+        area: dataset.area.downcase,
+        base_dataset: dataset.country
       )
     ).generate
   end

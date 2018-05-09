@@ -10,7 +10,7 @@ nl:
       no_source_file: "Geen bron geselecteerd"
 
       static:
-        analysis_year: Analyse jaar
+        analysis_year: Startjaar
 
     groups:
       agriculture: Landbouw
@@ -37,7 +37,7 @@ nl:
         buildings_final_demand_electricity: Elektriciteit
         buildings_final_demand_for_cooling_electricity: Koeling
         buildings_final_demand_for_lighting_electricity: Verlichting
-        buildings_final_demand_crude_oil: Ruwe olie
+        buildings_final_demand_crude_oil: Olie
 
       energy:
         energy_heat_production: Warmteproductie
@@ -66,4 +66,4 @@ nl:
         transport_advanced: Geavanceerd
 
     flash:
-      not_found: "Area bestaat niet"
+      not_found: "Regio bestaat niet"

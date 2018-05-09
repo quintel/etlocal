@@ -35,7 +35,7 @@ nl:
       households_electricity_lighting_distribution: Verlichting - elektriciteit
       households_electricity_appliances_distribution: Apparaten - elektriciteit
       households_electricity_cooling_distribution: Koelsysteem - elektriciteit
-      households_solar_thermal_distribution: Zonnethermische distributie
+      households_solar_thermal_distribution: Verdeling zonthermie
 
       #buildings
       buildings_local_production: Lokale energieproductie
@@ -63,7 +63,7 @@ nl:
       transport_road_lng_distribution: Verdeling LNG wegverkeer
       transport_rail_electricity_distribution: Verdeling elektriciteit wegverkeer
       transport_rail_diesel_distribution: Verdeling diesel treinverkeer
-      transport_energy_demand_crude_oil_non_energetic: Non-energetische oliegebruik
+      transport_energy_demand_crude_oil_non_energetic: Non-energetisch oliegebruik
 
       # agriculture
       agriculture_chps: WKK's
@@ -80,19 +80,19 @@ nl:
       industry_chemical_other: Overige chemische industrie
       industry_food: Voedsel
       industry_paper: Papier
-      industry_ict: Centrale ICT services
+      industry_ict: Centrale ICT-diensten
       industry_other: Overige industrie
 
       # energy
       energy_demand_power_sector: Energiegebruik elektriciteitsopwek
       energy_greengas: Groengas
-      energy_extraction: Brandstofproductie en extractie natuurlijke bronnen
-      energy_electricity_wind: Elektriciteitsopwek d.m.v. wind
-      energy_electricity_solar: Elektriciteitsopwek d.m.v. zon
+      energy_extraction: Brandstofproductie en winning natuurlijke bronnen
+      energy_electricity_wind: Elektriciteitsopwek wind
+      energy_electricity_solar: Elektriciteitsopwek zon
       energy_electricity_other_renewable: Overige duurzame elektriciteitsopwek
-      energy_electricity_coal: Elektriciteitsopwek d.m.v. kolen
-      energy_electricity_gas: Elektriciteitsopwek d.m.v. gas
-      energy_electricity_waste: Elektriciteitsopwek d.m.v. afvalverbranding
+      energy_electricity_coal: Elektriciteitsopwek kolen
+      energy_electricity_gas: Elektriciteitsopwek gas
+      energy_electricity_waste: Elektriciteitsopwek afvalverbranding
       energy_electricity_other_fossil: Overige fossiele elektriciteitsopwek
       energy_renewable_heat: Duurzame warmteproductie
       energy_fossil_heat: Fossiele warmteproductie

@@ -14,8 +14,7 @@ namespace :etsource do
   eos
   task :export => :environment do
     raise ArgumentError, "DATASET= argument is missing" unless ENV['DATASET']
-    raise ArgumentError, "dataset '#{ ENV['DATASET'] }' does not exist" unless dataset
 
-    Exporter.export(dataset)
+    Exporter.export(ENV['DATASET'])
   end
 end

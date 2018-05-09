@@ -7,6 +7,8 @@ describe Exporter do
   let!(:stub_export_request) {
     stub_request(:get, "https://beta-local.energytransitionmodel.com/api/v1/exports/#{dataset.id}")
       .to_return(body: JSON.dump({
+        'area' => 'ameland',
+        'country' => 'nl',
         'electricity_consumption' => 500,
         'gas_consumption' => 500,
         'roof_surface_available_for_pv' => 500,
@@ -24,7 +26,7 @@ describe Exporter do
   }
 
   it "exports a dataset" do
-    Exporter.export(dataset)
+    Exporter.export(dataset.id)
 
     expect(Atlas::Dataset::Derived.find('ameland').number_of_cars).to eq(10)
   end

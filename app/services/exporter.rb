@@ -5,26 +5,19 @@ module Exporter
 
   # Module that exports a set of changes from a dataset directly to changes
   # inside of ETSource.
-  def self.export(dataset)
+  def self.export(dataset_id)
     begin
-      response = RestClient.get("#{DATASET_URL}/exports/#{dataset.id}",
-                                accept: :json,
-                                content_type: :json)
-
-      store(dataset, JSON.parse(response))
-
-      puts "Successfully analyzed and exported #{dataset.area}"
-    rescue RestClient::ExceptionWithResponse => e
-      puts "Something went wrong with the analyzes and or exporting of #{dataset.area}"
-    end
-  end
-
-  def self.store(dataset, edits)
-    Transformer::DatasetGenerator.new(
-      edits.merge(
-        area: dataset.area.downcase,
-        base_dataset: dataset.country
+      response = JSON.parse(
+        RestClient.get("#{DATASET_URL}/exports/#{dataset_id}",
+                       accept: :json,
+                       content_type: :json)
       )
-    ).generate
+
+      Transformer::DatasetGenerator.new(response).generate
+
+      puts "Successfully analyzed and exported #{response['area']}"
+    rescue RestClient::ExceptionWithResponse => e
+      puts "Something went wrong with the analyzes and or exporting of #{dataset_id}"
+    end
   end
 end

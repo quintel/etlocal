@@ -4,6 +4,9 @@ class Api::V1::ExportsController < ApplicationController
   before_action :find_dataset
 
   def show
-    render json: @dataset.editable_attributes
+    render json: @dataset.editable_attributes.as_json.merge(
+      area: @dataset.area,
+      base_datset: @dataset.country
+    )
   end
 end

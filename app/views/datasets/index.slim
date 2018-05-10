@@ -34,6 +34,9 @@
           | Open dataset
         = link_to "#!", disabled: 'disabled', class: 'button' do
           | Open scenario in ETM
+        - if policy(Dataset).sandbox?
+          = link_to '#', class: 'button dataset-sandbox' do
+            | Open in sandbox
 
 .interface-bottom
   #buttons-bottom

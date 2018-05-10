@@ -29,7 +29,7 @@ gem 'airbrake', '~> 7.2'
 gem 'deep_cloneable', '~> 2.3.0'
 
 gem 'transformer', ref: '96dcf9f', github: 'quintel/transformer'
-gem 'atlas',       ref: 'c385624', github: 'quintel/atlas'
+gem 'atlas',       ref: 'fc5f609', github: 'quintel/atlas'
 gem 'rubel',       ref: 'ad3d44e', github: 'quintel/rubel'
 gem 'refinery',    ref: '636686c', github: 'quintel/refinery'
 

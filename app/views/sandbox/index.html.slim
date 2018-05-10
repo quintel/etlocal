@@ -1,0 +1,16 @@
+#sandbox
+  h4 Sandbox for #{dataset.area}
+
+  = form_tag dataset_sandbox_path(dataset.id), method: :post do
+    textarea name="query"
+      = @query
+    input type="submit" class="button" value="Run query"
+
+  - if @result
+    h4 Result
+    pre class="result"
+      = format_result(@result)
+  - elsif @error
+    h4 Error
+    pre class="error"
+      = @error.message

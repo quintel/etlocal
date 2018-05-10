@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     resources :commits, only: %i(create) do
       post :dataset_edits, on: :collection
     end
+
+    get 'sandbox', to: 'sandbox#index', as: :dataset_sandbox
+    post 'sandbox', to: 'sandbox#execute'
   end
 
   post :charts, to: "charts#data"

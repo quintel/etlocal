@@ -8,5 +8,9 @@ FactoryGirl.define do
     name "Tester"
     password "******"
     group
+
+    factory :quintel_user do
+      group { Group.find_by_key(:quintel) }
+    end
   end
 end

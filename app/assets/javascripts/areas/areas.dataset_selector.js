@@ -18,6 +18,9 @@ Areas.DatasetSelector = (function () {
                 DatasetInterface.open(data.id);
             });
 
+        $(content).find('a.dataset-sandbox')
+            .attr('href', '/datasets/' + data.id + '/sandbox');
+
         popup.setPosition(position);
 
         // Prevent people from clicking on the ETModel link

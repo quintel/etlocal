@@ -11,5 +11,9 @@ class DatasetPolicy < ApplicationPolicy
     false
   end
 
+  def sandbox?
+    user.group_id == quintel_group.id
+  end
+
   alias_method :update?, :edit?
 end

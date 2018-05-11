@@ -7,7 +7,7 @@ class DatasetImporter
     def get(dataset, csv_row)
       commit = find_or_create_commit!(dataset)
       new_edits = []
-      time = Time.now.to_s(:db)
+      time = (Time.now - 2.hours).to_s(:db)
 
       csv_row.editable_attributes.each do |key, value|
         if value =~ NUMBER_REGEX

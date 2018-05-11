@@ -33,7 +33,7 @@ nl:
         lv_net_capacity_per_step: Stapgrootte van laagspanningsnetverzwaring
         lv_net_costs_per_capacity_step: Kosten van laagspanningsnetverzwaring per stap
         lv_mv_trafo_capacity_per_step: Stapgrootte van capaciteitsuitbreiding LS-MS-transformatoren
-        lv_mv_trafo_costs_per_capacity_step: Kosten van capaciteitsuitbreiding LS-MStransformatoren per stap
+        lv_mv_trafo_costs_per_capacity_step: Kosten van capaciteitsuitbreiding LS-MS-transformatoren per stap
         mv_net_capacity_per_step: Stapgrootte van middenspanningsnetverzwaring
         mv_net_costs_per_capacity_step: Kosten van middenspanningsnetverzwaring per stap
         mv_hv_trafo_capacity_per_step: Stapgrootte van capaciteitsuitbreiding MS-HS-transformatoren

@@ -1,33 +1,26 @@
 en:
   descriptions:
     groups:
-      agriculture: |
-
       area: |
-
-      assumptions: |
-
-      buildings: |
-        Buildings are defined as all non-residential buildings like offices,
-        hospitals, swimming pools, restaurants etc. Note that buildings for ICT
-        services are not included here, these can be set in the industry
-        subsection.
-
-      energy: |
-        Energy production is split into three sections: renewable electricity
-        production, fossil electricity production and heat production.
+        Below you can specify some (geografical) characteristics of this area. In the 'Advanced' tab you provide information about the emissions of greenhouse gasses and the electrical grid.
 
       households: |
-        Households are divided into energy demand and supply. In energy demand
-        the demands for different energy sources can be edited and in energy
-        suppply the local energy production and district heating can be set.
+        In this section you can provide information about the household sector in this area. You can specify the current energy use per energy carrier in the 'Energy demand' tab. In the 'Energy supply' tab you can indicate how much energy is produced locally and how district heating networks are supplied (if applicable). In the 'Advanced' tab you can identify what energy is used for and which technologies are present.
 
-      industry: |
-        Industry is split into six different sectors: metal, chemical, food,
-        paper, ICT and other industry.
-
-      overview: |
-
-      other: |
+      buildings: |
+        In this section you can provide information about the buildings sector in this area. In the Energy Transition Model 'buildings' are non-residential constructions like office spaces, hospitals, schools, stores etc. You can specify the current energy use per energy carrier in the 'Energy demand' tab. In the 'Energy supply' tab you can indicate how much energy is produced locally and how district heating networks are supplied (if applicable). In the 'Advanced' tab you can identify what energy is used for and which technologies are present. Note: In the ETM not all services are part of the buildings sector. The energy use of transport services (like public transport) and central ICT services (like data centers) can be provided in the 'Transport' and 'Industry' tabs respectively.
 
       transport: |
+        In this section you can provide information about the transport sector in this area. The transport sector consists of four categories: road vehicles, trains, ships and planes. You can specify the energy use per category. Note: the energy use of international aviation and shipping is out of scope here. In the Energy Transition Model you can choose to allocate a certain share of the total national energy use of these sectors to this area.
+
+      agriculture: |
+        In this section you can provide information about the agriculture sector in this area. Below you can specify the current energy use per energy carrier. In the 'Advanced' tab you can identify what energy is used for and which technologies are present.
+
+      industry: |
+        In this section you can provide information about the industry sector in this area. The industry sector consists of six categories: metal, chemical, food, paper, ICT and other. You can specify the energy use per category. Below you can indicate how much energy is used for Combined Heat and Power (CHP).
+
+      energy: |
+        In this section you can provide information about the (central) energy sector in this area. Energy production is split into three parts: sustainable electricity production, fossil electricity production and heat production.
+
+      other: |
+        In this section you can provide information about other energy use in this area. This all energy that is not taken into account in any of the above sections.

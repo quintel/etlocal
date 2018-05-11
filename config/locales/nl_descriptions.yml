@@ -1,0 +1,27 @@
+nl:
+  descriptions:
+    groups:
+      area: |
+        Hieronder kun je een aantal (geografische) karakteristieken over het gebied invullen. In het tabblad 'Geavanceerd' kun je informatie invullen over de uitstoot van broeikasgassen en het elektriciteitsnet.
+
+      households: |
+        In deze sectie kun je informatie invullen over huishoudens in het gebied. Bij het tabblad 'Energievraag' kun je per energiedrager aangeven hoe hoog het huidige gebruik is. Bij 'Energieaanbod' kun je invullen hoeveel energie er lokaal geproduceerd wordt en hoe eventuele warmtenetten gevoed worden. Bij 'Geavanceerd' kun je specificeren waar energie precies voor gebruikt wordt en welke apparaten en technologieën aanwezig zijn.
+
+      buildings: |
+        In deze sectie kun je informatie invullen over de gebouwensector. Onder gebouwen verstaan we de utiliteitsbouw (niet-woningen) in het gebied, zoals kantoren, ziekenhuizen, scholen, winkels etc. Bij het tabblad 'Energievraag' kun je per energiedrager aangeven hoe hoog het huidige gebruik is. Bij 'Energieaanbod' kun je invullen hoeveel energie er lokaal geproduceerd wordt en hoe eventuele warmtenetten gevoed worden. Bij 'Geavanceerd' kun je specificeren waar energie precies voor gebruikt wordt en welke apparaten en technologieën aanwezig zijn. Let op: Niet alle dienstverlening valt onder de sectie Gebouwen in het Energietransitiemodel. Het energiegebruik van transportdiensten (zoals openbaar vervoer) en centrale ICT-diensten (zoals datacenters) staat respectievelijk bij Transport en Industrie.
+
+      transport: |
+        In deze sectie kun je informatie invullen over de transportsector. De transportsector is opgedeeld in vier categorieën: wegverkeer, treinverkeer, scheepvaart en luchtvaart. Per categorie kun je aangeven hoe hoog het energieverbruik is. Let op: Het energiegebruik van internationale lucht- en scheepvaart valt hier buiten. In het Energietransitiemodel kun je ervoor kiezen om een deel van het totale nationale verbruik van deze sectoren aan het gebied toe te kennen.
+
+      agriculture: |
+        In deze sectie kun je informatie invullen over de landbouwsector. Hieronder kun je per energiedrager aangeven hoe hoog het huidige gebruik is. Bij 'Geavanceerd' kun je specificeren waar energie precies voor gebruikt wordt en welke apparaten en technologieën aanwezig zijn.
+
+      industry: |
+        In deze sectie kun je informatie invullen over de industriesector. Industrie is opgesplitst in zes verschillende sectoren: metaal, chemie, voedsel, papier, ICT en overig. Per sector kun je aangeven hoeveel energie er verbruikt wordt. Hieronder kun je aangeven hoeveel energie er gebruikt wordt in warmtekrachtkoppelingen (WKK).
+
+      energy: |
+        In deze sectie kun je informatie invullen over de (centrale) energieproductie in het gebied. Energieproductie is opgedeeld in drie categorieën: duurzame elektriciteitsopwek, fossiele elektriciteitsopwek en warmteproductie.
+
+      other: |
+        In deze sectie kun je het overige energiegebruik in het gebied invullen. Dit is al het energiegebruik dat niet in een van de bovenstaande secties aan bod is gekomen.
+

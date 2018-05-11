@@ -263,9 +263,9 @@ nl:
         agriculture_final_demand_wood_pellets_demand: Biomassagebruik (exclusief WKK)
         agriculture_final_demand_crude_oil_demand: Oliegebruik
         agriculture_final_demand_hydrogen_demand: Waterstofgebruik
-        agriculture_chp_engine_network_gas_demand: Gebruik gas voor WKK
-        agriculture_chp_supercritical_wood_pellets_demand: Gebruik biomassa voor WKK
-        agriculture_chp_engine_biogas_demand: Gebruik biogas voor WKK
+        agriculture_chp_engine_network_gas_demand: Gasgebruik voor WKK
+        agriculture_chp_supercritical_wood_pellets_demand: Biomassagebruik voor WKK
+        agriculture_chp_engine_biogas_demand: Biogasgebruik voor WKK
         input_agriculture_central_heat_demand: Warmtegebruik geleverd door grootschalige warmteketels
 
         agriculture_final_demand_electricity_agriculture_heatpump_water_water_ts_electricity_parent_share: Warmtepomp (WKO)

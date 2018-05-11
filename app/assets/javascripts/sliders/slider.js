@@ -60,7 +60,7 @@ var Slider = (function () {
         create: function () {
             this.slider = new $.Quinn(this.sliderEl, {
                 value:   this.input.val() * 100,
-                step:    0.01,
+                step:    1,
                 setup:   setVal.bind(this),
                 drag:    drag.bind(this),
                 max:     100,

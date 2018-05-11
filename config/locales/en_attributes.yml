@@ -46,7 +46,7 @@ en:
         residences_roof_surface_available_for_pv: Roof surface suitable for solar PV
 
         input_households_electricity_demand: Electricity demand
-        households_final_demand_network_gas_demand: Natural gas demand
+        households_final_demand_network_gas_demand: Gas demand
         households_final_demand_steam_hot_water_demand: Heat demand
         households_final_demand_wood_pellets_demand: Biomass demand
         households_final_demand_crude_oil_demand: Oil demand
@@ -258,7 +258,7 @@ en:
 
         # agriculture
         input_agriculture_electricity_demand: Electricity demand
-        agriculture_final_demand_network_gas_demand: Natural gas demand (excluding CHP)
+        agriculture_final_demand_network_gas_demand: Gas demand (excluding CHP)
         agriculture_final_demand_wood_pellets_demand: Biomass demand (excluding CHP)
         agriculture_final_demand_crude_oil_demand: Oil demand
         agriculture_final_demand_hydrogen_demand: Hydrogen demand

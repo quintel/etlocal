@@ -30,6 +30,7 @@ groups:
       - key: households_final_demand_network_gas_households_final_demand_for_cooling_network_gas_parent_share
         unit: '%'
         flexible: true
+        skip_validation: true
 
   - header: households_steam_hot_water_distribution
     type: slider
@@ -85,6 +86,7 @@ groups:
       - key: households_final_demand_for_space_heating_network_gas_households_space_heater_micro_chp_network_gas_parent_share
         unit: '%'
         flexible: true
+        skip_validation: true
 
   - header: households_electricity_space_heating_distribution
     type: slider
@@ -98,6 +100,7 @@ groups:
       - key: households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_ground_water_electricity_parent_share
         unit: '%'
         flexible: true
+        skip_validation: true
 
   - header: households_network_gas_hot_water_distribution
     type: slider
@@ -195,3 +198,4 @@ groups:
       - key: households_water_heater_solar_thermal_households_useful_demand_for_hot_water_for_houses_with_solar_heater_parent_share
         unit: '%'
         flexible: true
+        skip_validation: true

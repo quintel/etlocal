@@ -12,6 +12,7 @@ groups:
       - key: transport_road_mixer_gasoline_transport_motorcycle_using_gasoline_mix_parent_share
         unit: '%'
         flexible: true
+        skip_validation: true
 
   - header: transport_road_diesel_distribution
     type: slider
@@ -51,6 +52,7 @@ groups:
       - key: transport_road_mixer_compressed_network_gas_transport_truck_using_compressed_natural_gas_parent_share
         unit: '%'
         flexible: true
+        skip_validation: true
 
   - header: transport_road_hydrogen_distribution
     type: slider

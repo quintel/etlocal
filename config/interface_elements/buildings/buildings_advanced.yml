@@ -12,6 +12,7 @@ groups:
       - key: buildings_final_demand_electricity_buildings_final_demand_for_cooling_electricity_parent_share
         unit: '%'
         flexible: true
+        skip_validation: true
 
   - header: buildings_network_gas_distribution
     type: slider
@@ -23,6 +24,7 @@ groups:
       - key: buildings_final_demand_network_gas_buildings_final_demand_for_cooling_network_gas_parent_share
         unit: '%'
         flexible: true
+        skip_validation: true
 
   - header: buildings_wood_pellets_distribution
     type: slider
@@ -32,6 +34,7 @@ groups:
       - key: buildings_final_demand_wood_pellets_buildings_final_demand_for_appliances_wood_pellets_parent_share
         unit: '%'
         flexible: true
+        skip_validation: true
 
   - header: buildings_coal_distribution
     type: slider
@@ -41,6 +44,7 @@ groups:
       - key: buildings_final_demand_coal_buildings_final_demand_for_appliances_coal_parent_share
         unit: '%'
         flexible: true
+        skip_validation: true
 
   - header: buildings_crude_oil_distribution
     type: slider
@@ -50,6 +54,7 @@ groups:
       - key: buildings_final_demand_crude_oil_buildings_final_demand_for_appliances_crude_oil_parent_share
         unit: '%'
         flexible: true
+        skip_validation: true
 
   - header: buildings_network_gas_space_heating_distribution
     type: slider
@@ -59,6 +64,7 @@ groups:
       - key: buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_network_gas_parent_share
         unit: '%'
         flexible: true
+        skip_validation: true
 
   - header: buildings_electricity_space_heating_distribution
     type: slider
@@ -68,6 +74,7 @@ groups:
       - key: buildings_final_demand_for_space_heating_electricity_buildings_space_heater_electricity_parent_share
         unit: '%'
         flexible: true
+        skip_validation: true
 
   - header: buildings_electricity_lighting_distribution
     type: slider
@@ -79,6 +86,7 @@ groups:
       - key: buildings_final_demand_for_lighting_electricity_buildings_lighting_led_electricity_parent_share
         unit: '%'
         flexible: true
+        skip_validation: true
 
   - header: buildings_electricity_cooling_distribution
     type: slider
@@ -88,3 +96,4 @@ groups:
       - key: buildings_final_demand_for_cooling_electricity_buildings_cooling_collective_heatpump_water_water_ts_electricity_parent_share
         unit: '%'
         flexible: true
+        skip_validation: true

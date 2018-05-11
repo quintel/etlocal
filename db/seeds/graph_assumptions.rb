@@ -16,14 +16,14 @@ class GraphAssumptions
   end
 
   def get
-    InterfaceElement.items.reject(&:flexible).map do |item|
+    InterfaceElement.items.reject(&:skip_validation).map do |item|
       case item.key
       when *PROPORTIONAL_ATTRIBUTES.map(&:name)
         @atlas_ds.public_send(item.key) * factor
       when *NON_PROPORTIONAL_ATTRIBUTES.map(&:name)
         @atlas_ds.public_send(item.key)
       when *Transformer::GraphMethods.all.keys
-        scale_graph_default(item.key)
+        scale_graph_default(item)
       when /^input_.+demand$/
         1
       when /^input_/
@@ -38,8 +38,8 @@ class GraphAssumptions
     @factor ||= @number_of_residences / @atlas_ds.number_of_residences
   end
 
-  def scale_graph_default(key)
-    opts = Transformer::GraphMethods.all[key]
+  def scale_graph_default(item)
+    opts = Transformer::GraphMethods.all[item.key]
 
     case opts.export_method
     when 'demand', 'number_of_units'
@@ -51,7 +51,19 @@ class GraphAssumptions
                            .edges(:out)
                            .detect{ |e| e.to.key == edge.consumer }
 
-        refinery_edge.get(opts.export_method.to_sym).to_f
+        if item.flexible
+          total = @graph.node(edge.supplier).edges(:out).sum do |e|
+            if e.to.key == edge.consumer
+              0
+            else
+              e.get(opts.export_method.to_sym).round(2)
+            end
+          end
+
+          (1 - total).to_f.round(2)
+        else
+          refinery_edge.get(opts.export_method.to_sym).to_f.round(2)
+        end
       end
     end
   end

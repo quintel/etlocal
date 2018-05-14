@@ -266,11 +266,10 @@ nl:
         agriculture_chp_engine_network_gas_demand: Gasgebruik voor WKK
         agriculture_chp_supercritical_wood_pellets_demand: Biomassagebruik voor WKK
         agriculture_chp_engine_biogas_demand: Biogasgebruik voor WKK
+        input_agriculture_geothermal_demand: Warmtegebruik geothermie
+        input_agriculture_heatpump_demand: Warmtegebruik (diepe) bodemwarmtepomp
         input_agriculture_central_heat_demand: Warmtegebruik geleverd door grootschalige warmteketels
 
-        agriculture_final_demand_electricity_agriculture_heatpump_water_water_ts_electricity_parent_share: Warmtepomp (WKO)
-        agriculture_final_demand_electricity_agriculture_geothermal_parent_share: Geothermie
-        agriculture_final_demand_electricity_agriculture_useful_demand_electricity_parent_share: Overig elektriciteitsgebruik
 
         # industry
         industry_chp_combined_cycle_gas_power_fuelmix_demand: Gas-WKK

@@ -15,7 +15,6 @@ transport:
   - transport_plane_transport
   - transport_advanced
 agriculture:
-  - agriculture_advanced
 industry:
   - industry_metal
   - industry_chemical

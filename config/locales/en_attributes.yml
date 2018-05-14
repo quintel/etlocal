@@ -265,11 +265,10 @@ en:
         agriculture_chp_engine_network_gas_demand: Gas CHP demand
         agriculture_chp_supercritical_wood_pellets_demand: Biomass CHP demand
         agriculture_chp_engine_biogas_demand: Biogas CHP demand
+        input_agriculture_geothermal_demand: Heat demand from geothermal
+        input_agriculture_heatpump_demand: Heat demand from heat pump with thermal storage
         input_agriculture_central_heat_demand: Heat demand from large-scale heat plants
 
-        agriculture_final_demand_electricity_agriculture_heatpump_water_water_ts_electricity_parent_share: Heatpump (with thermal storage)
-        agriculture_final_demand_electricity_agriculture_geothermal_parent_share: Geothermal
-        agriculture_final_demand_electricity_agriculture_useful_demand_electricity_parent_share: Other electricity use
 
         # industry
         industry_chp_combined_cycle_gas_power_fuelmix_demand: Gas CHP

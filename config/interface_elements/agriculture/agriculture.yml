@@ -13,9 +13,13 @@ groups:
       unit: 'TJ'
     - key: agriculture_final_demand_crude_oil_demand
       unit: 'TJ'
-    - key: agriculture_final_demand_hydrogen_demand
-      unit: 'TJ'
     - key: agriculture_chp_engine_biogas_demand
       unit: 'TJ'
+    - key: input_agriculture_geothermal_demand
+      unit: 'TJ'
+    - key: input_agriculture_heatpump_demand
+      unit: 'TJ'
     - key: input_agriculture_central_heat_demand
+      unit: 'TJ'
+    - key: agriculture_final_demand_hydrogen_demand
       unit: 'TJ'

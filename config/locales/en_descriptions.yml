@@ -2,25 +2,91 @@ en:
   descriptions:
     groups:
       area: |
-        Below you can specify some (geografical) characteristics of this area. In the 'Advanced' tab you provide information about the emissions of greenhouse gasses and the electrical grid.
+        Below you can specify some (geographical) characteristics of this area.
 
       households: |
-        In this section you can provide information about the household sector in this area. You can specify the current energy use per energy carrier in the 'Energy demand' tab. In the 'Energy supply' tab you can indicate how much energy is produced locally and how district heating networks are supplied (if applicable). In the 'Advanced' tab you can identify what energy is used for and which technologies are present.
+        In this section you can provide information about the household sector in this area.
 
       buildings: |
-        In this section you can provide information about the buildings sector in this area. In the Energy Transition Model 'buildings' are non-residential constructions like office spaces, hospitals, schools, stores etc. You can specify the current energy use per energy carrier in the 'Energy demand' tab. In the 'Energy supply' tab you can indicate how much energy is produced locally and how district heating networks are supplied (if applicable). In the 'Advanced' tab you can identify what energy is used for and which technologies are present. Note: In the ETM not all services are part of the buildings sector. The energy use of transport services (like public transport) and central ICT services (like data centers) can be provided in the 'Transport' and 'Industry' tabs respectively.
+        In this section you can provide information about the buildings sector in this area. In the Energy Transition Model 'buildings' are non-residential constructions like office spaces, hospitals, schools and stores.
 
       transport: |
-        In this section you can provide information about the transport sector in this area. The transport sector consists of four categories: road vehicles, trains, ships and planes. You can specify the energy use per category. Note: the energy use of international aviation and shipping is out of scope here. In the Energy Transition Model you can choose to allocate a certain share of the total national energy use of these sectors to this area.
+        In this section you can provide information about the transport sector in this area.
 
       agriculture: |
-        In this section you can provide information about the agriculture sector in this area. Below you can specify the current energy use per energy carrier. In the 'Advanced' tab you can identify what energy is used for and which technologies are present.
+        In this section you can provide information about the energy use of the agricultural sector in this area.
 
       industry: |
-        In this section you can provide information about the industry sector in this area. The industry sector consists of six categories: metal, chemical, food, paper, ICT and other. You can specify the energy use per category. Below you can indicate how much energy is used for Combined Heat and Power (CHP).
+        In this section you can provide information about the industry sector in this area. Below you can indicate how much energy is used for Combined Heat and Power (CHP) in industrial firms.
 
       energy: |
-        In this section you can provide information about the (central) energy sector in this area. Energy production is split into three parts: sustainable electricity production, fossil electricity production and heat production.
+        In this section you can provide information about the (central) energy sector in this area.
 
       other: |
         In this section you can provide information about other energy use in this area. This all energy that is not taken into account in any of the above sections.
+
+      subgroups:
+
+      area_advanced: |
+        In this tab you can specify how many greenhouse gasses are emitted in this area. Aditionally, you can provide information about the current costs and spare capacity of the power grid and costs of future grid reinforcements.
+
+      households_energy_demand: |
+        In this tab you can specify how much energy is used in the households sector per energy carrier.
+
+      households_energy_supply: |
+        In this tab you can provide information about solar PV and solar thermal production in the households sector. In addition, you can specify how district heating networks are supplied (if applicable).
+
+      households_advanced: |
+        In this tab you can specify how energy is used by households per energy carrier. E.g. What percentage of natural gas demand in households is used for space heating? And what percentage of natural gas demand is used for cooking? In addition, you can specify which technologies are used by households. E.g. How many households that use gas for heating their homes own a combi boiler? And how many own a hybrid heat pump?
+
+      buildings_energy_demand: |
+        In this tab you can specify how energy is used in the buildings sector per energy carrier. Note: In the ETM not all services are part of the buildings sector. The energy use of transport services (like public transport) and central ICT services (like data centers) can be provided in the 'Transport' and 'Industry' tabs respectively.
+
+      buildings_energy_supply: |
+        In this tab you can provide information about solar PV and solar thermal production in the buildings sector. In addition, you can specify how district heating networks are supplied (if applicable).
+
+      buildings_advanced: |
+        In this tab you can specify how energy is used in the buildings sector per energy carrier. E.g. What percentage of electricity demand in buildings is used for space heating? And what percentage of electricity demand is used for lighting? In addition, you can specify the technologies used. E.g. What percentage of lighting is provided by low-energy light bulbs? And what percentage by LED light bulbs?
+
+      transport_road_transport: |
+        In this tab you can specify the fuel use by road transport.
+
+      transport_rail_transport: |
+        In this tab you can specify the energy use by rail transport.
+
+      transport_ship_transport: |
+        In this tab you can specify the fuel use of inland ship transport in this area. Note: the energy use of international shipping is out of scope here. In the Energy Transition Model you can choose to allocate a certain share of the total national energy use of this sector to this area.
+
+      transport_plane_transport: |
+        In this tab you can specify the fuel use of domestic aviation in this area. Note: the energy use of international aviation is out of scope here. In the Energy Transition Model you can choose to allocate a certain share of the total national energy use of this sector to this area.
+
+      transport_advanced: |
+        In this tab you can specify how much energy is used by different modes of transport. E.g. how much of gasoline for road transport is used by cars? And how much by busses? In addition, you can specify the non-energetic oil use in the transport sector (such as lubricants).
+
+      industry_metal: |
+        In this tab you can specify how much energy is used by the metal sector in this area. You can allocate a certain percentage of the total energy use of the Dutch steel and aluminium sectors to your area. For other metals you can specify the energy use per energy carrier.
+
+      industry_chemical: |
+        In this tab you can specify how much energy is used by the chemical sector in this area. You can allocate a certain percentage of the total energy use of the Dutch fertilizers and oil refinery sectors to your area. For other chemical industry you can specify the energy use per energy carrier.
+
+      industry_food: |
+        In this tab you can specify how much energy is used by the food sector in this area.
+
+      industry_paper: |
+        In this tab you can specify how much energy is used by the paper sector in this area.
+
+      industry_ict: |
+        In this tab you can specify how much electricity is used by the ICT services sector (like data centers and telecom) in this area.
+
+      industry_other: |
+        In this tab you can specify how much energy is used by 'other' industry in this area. Other industry includes all industry sectors not covered by the above tabs, like construction, machinery or textile.
+
+      energy_renewable_electricity_production: |
+        In this tab you can specify how much electricity is produced from renewable sources in this area.
+
+      energy_fossil_electricity_production: |
+        In this tab you can specify how much electricity is produced by fossil power plants in this area.
+
+      energy_heat_production: |
+        In this tab you can specify how much heat is produced in this area by large-scale heat plants. This heat can be used for district heating in households and buildings, in agriculture and in industry.
+

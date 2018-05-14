@@ -1,25 +1,30 @@
 key: agriculture
 groups:
-  - items:
-    - key: input_agriculture_electricity_demand
-      unit: 'TJ'
-    - key: agriculture_final_demand_network_gas_demand
-      unit: 'TJ'
-    - key: agriculture_chp_engine_network_gas_demand
-      unit: 'TJ'
-    - key: agriculture_final_demand_wood_pellets_demand
-      unit: 'TJ'
-    - key: agriculture_chp_supercritical_wood_pellets_demand
-      unit: 'TJ'
-    - key: agriculture_final_demand_crude_oil_demand
-      unit: 'TJ'
-    - key: agriculture_chp_engine_biogas_demand
-      unit: 'TJ'
-    - key: input_agriculture_geothermal_demand
-      unit: 'TJ'
-    - key: input_agriculture_heatpump_demand
-      unit: 'TJ'
-    - key: input_agriculture_central_heat_demand
-      unit: 'TJ'
-    - key: agriculture_final_demand_hydrogen_demand
-      unit: 'TJ'
+
+  - header: agriculture_energy_demand
+    items:
+      - key: input_agriculture_electricity_demand
+        unit: 'TJ'
+      - key: agriculture_final_demand_network_gas_demand
+        unit: 'TJ'
+      - key: agriculture_final_demand_wood_pellets_demand
+        unit: 'TJ'
+      - key: agriculture_final_demand_crude_oil_demand
+        unit: 'TJ'
+      - key: agriculture_final_demand_hydrogen_demand
+        unit: 'TJ'
+
+  - header: agriculture_chp_demand
+    items:
+      - key: agriculture_chp_engine_network_gas_demand
+        unit: 'TJ'
+      - key: agriculture_chp_supercritical_wood_pellets_demand
+        unit: 'TJ'
+      - key: agriculture_chp_engine_biogas_demand
+        unit: 'TJ'
+      - key: input_agriculture_geothermal_demand
+        unit: 'TJ'
+      - key: input_agriculture_heatpump_demand
+        unit: 'TJ'
+      - key: input_agriculture_central_heat_demand
+        unit: 'TJ'

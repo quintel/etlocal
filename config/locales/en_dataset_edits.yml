@@ -71,9 +71,8 @@ en:
       transport_energy_demand_crude_oil_non_energetic: Non-energetic oil use
 
       # agriculture
-      agriculture_chps: CHPs
-      agriculture_central_heat: Central heat
-      agriculture_electricity_distribution: Electricity distribution
+      agriculture_energy_demand: Energy use (excluding CHP)
+      agriculture_chp_demand: CHP and heat
 
       # industry
       industry_chps: CHPs

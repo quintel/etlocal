@@ -258,17 +258,17 @@ nl:
         transport_final_demand_crude_oil_non_energetic_demand: Oliegebruik (smeermiddelen e.d.)
 
         # agriculture
-        input_agriculture_electricity_demand: Elektriciteitsgebruik
-        agriculture_final_demand_network_gas_demand: Gasgebruik (exclusief WKK)
-        agriculture_final_demand_wood_pellets_demand: Biomassagebruik (exclusief WKK)
-        agriculture_final_demand_crude_oil_demand: Oliegebruik
-        agriculture_final_demand_hydrogen_demand: Waterstofgebruik
-        agriculture_chp_engine_network_gas_demand: Gasgebruik voor WKK
-        agriculture_chp_supercritical_wood_pellets_demand: Biomassagebruik voor WKK
-        agriculture_chp_engine_biogas_demand: Biogasgebruik voor WKK
+        input_agriculture_electricity_demand: Elektriciteit
+        agriculture_final_demand_network_gas_demand: Gas
+        agriculture_final_demand_wood_pellets_demand: Biomassa
+        agriculture_final_demand_crude_oil_demand: Olie
+        agriculture_final_demand_hydrogen_demand: Waterstof
+        agriculture_chp_engine_network_gas_demand: Gas voor WKK
+        agriculture_chp_supercritical_wood_pellets_demand: Biomassa  voor WKK
+        agriculture_chp_engine_biogas_demand: Biogas voor WKK
         input_agriculture_geothermal_demand: Warmtegebruik geothermie
         input_agriculture_heatpump_demand: Warmtegebruik (diepe) bodemwarmtepomp
-        input_agriculture_central_heat_demand: Warmtegebruik geleverd door grootschalige warmteketels
+        input_agriculture_central_heat_demand: Warmtegebruik grootschalige warmteketels
 
 
         # industry

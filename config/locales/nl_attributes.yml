@@ -14,10 +14,10 @@ nl:
         number_of_inhabitants: Aantal inwoners
 
         co2_emission_1990: 'CO<sub>2</sub>-emissies in 1990'
-        other_emission_built_environment: 'Overige broeikasgassen (niet CO<sub>2</sub>) in de gebouwde omgeving'
-        other_emission_transport: 'Overige broeikasgassen (niet CO<sub>2</sub>) in de transportsector'
-        other_emission_industry_energy: 'Overige broeikasgassen (niet CO<sub>2</sub>) in de industrie en energiesector'
-        other_emission_agriculture: 'Overige broeikasgassen (niet CO<sub>2</sub>) in de landbouw'
+        other_emission_built_environment: 'Gebouwde omgeving'
+        other_emission_transport: 'Transportsector'
+        other_emission_industry_energy: 'Industrie en energiesector'
+        other_emission_agriculture: 'Landbouw'
         lv_net_total_costs_present: Laagspanningsnet
         lv_mv_trafo_total_costs_present: LS-MS-transformatoren
         mv_net_total_costs_present: Middenspanningsnet
@@ -31,15 +31,15 @@ nl:
         mv_hv_trafo_spare_capacity: MS-HS-transformatoren
         hv_net_spare_capacity: Hoogspanningsnet
         lv_net_capacity_per_step: Stapgrootte van laagspanningsnetverzwaring
-        lv_net_costs_per_capacity_step: Kosten van laagspanningsnetverzwaring per stap
+        lv_net_costs_per_capacity_step: Kosten laagspanningsnetverzwaring per stap
         lv_mv_trafo_capacity_per_step: Stapgrootte van capaciteitsuitbreiding LS-MS-transformatoren
-        lv_mv_trafo_costs_per_capacity_step: Kosten van capaciteitsuitbreiding LS-MS-transformatoren per stap
+        lv_mv_trafo_costs_per_capacity_step: Kosten capaciteitsuitbreiding LS-MS-transformatoren per stap
         mv_net_capacity_per_step: Stapgrootte van middenspanningsnetverzwaring
-        mv_net_costs_per_capacity_step: Kosten van middenspanningsnetverzwaring per stap
+        mv_net_costs_per_capacity_step: Kosten middenspanningsnetverzwaring per stap
         mv_hv_trafo_capacity_per_step: Stapgrootte van capaciteitsuitbreiding MS-HS-transformatoren
-        mv_hv_trafo_costs_per_capacity_step: Kosten van capaciteitsuitbreiding MS-HS-transformatoren per stap
+        mv_hv_trafo_costs_per_capacity_step: Kosten capaciteitsuitbreiding MS-HS-transformatoren per stap
         hv_net_capacity_per_step: Stapgrootte van hoogspanningsnetverzwaring
-        hv_net_costs_per_capacity_step: Kosten van hoogspanningsnetverzwaring per stap
+        hv_net_costs_per_capacity_step: Kosten hoogspanningsnetverzwaring per stap
 
         #households
         number_of_residences: Aantal woningen
@@ -255,7 +255,7 @@ nl:
         transport_rail_mixer_diesel_transport_passenger_train_using_diesel_mix_parent_share: Passagierstreinen
         transport_rail_mixer_diesel_transport_freight_train_using_diesel_mix_parent_share: Goederentreinen
 
-        transport_energy_demand_crude_oil_non_energetic: Olie (niet-energetisch)
+        transport_final_demand_crude_oil_non_energetic_demand: Oliegebruik (smeermiddelen e.d.)
 
         # agriculture
         input_agriculture_electricity_demand: Elektriciteitsgebruik
@@ -360,7 +360,7 @@ nl:
         input_energy_power_combined_cycle_ccs_coal_production: Kolenvergassing met CCS
         input_energy_power_ultra_supercritical_ccs_coal_production: Poederkolen met CCS
         input_energy_chp_ultra_supercritical_coal_production: Kolencentrale met warmtelevering voor warmtenet (WKK)
-        input_energy_chp_ultra_supercritical_cofiring_coal_production: Kolencentrale met biomassabijstook en warmtelevering voor warmtenet (WKK)
+        input_energy_chp_ultra_supercritical_cofiring_coal_production: Bijstookcentrale met warmtelevering voor warmtenet (WKK)
 
         input_energy_power_ultra_supercritical_network_gas_production: Gas conventioneel
         input_energy_power_turbine_network_gas_production: Gasturbine

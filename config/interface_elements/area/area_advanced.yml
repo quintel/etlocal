@@ -10,8 +10,6 @@ groups:
         unit: 'Mton'
       - key: other_emission_agriculture
         unit: 'Mton'
-      - key: co2_emission_1990
-        unit: 'Mton'
 
   - header: area_electricity_grid_costs
     items:

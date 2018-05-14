@@ -13,10 +13,10 @@ en:
         number_of_inhabitants: Number of inhabitants
 
         co2_emission_1990: 'CO<sub>2</sub> emissions in 1990'
-        other_emission_built_environment: 'Non CO<sub>2</sub> GHG emissions in the built environment'
-        other_emission_transport: 'Non CO<sub>2</sub> GHG emissions in the transport sector'
-        other_emission_industry_energy: 'Non CO<sub>2</sub> GHG emissions in the industry and energy sector'
-        other_emission_agriculture: 'Non CO<sub>2</sub> GHG emissions in agriculture'
+        other_emission_built_environment: 'Built environment'
+        other_emission_transport: 'Transport sector'
+        other_emission_industry_energy: 'Industry and energy sector'
+        other_emission_agriculture: 'Agriculture'
         lv_net_total_costs_present: Low voltage grid
         lv_mv_trafo_total_costs_present: LV-MV transformers
         mv_net_total_costs_present: Medium voltage grid
@@ -254,7 +254,7 @@ en:
         transport_rail_mixer_diesel_transport_passenger_train_using_diesel_mix_parent_share: Passenger trains
         transport_rail_mixer_diesel_transport_freight_train_using_diesel_mix_parent_share: Freight trains
 
-        transport_energy_demand_crude_oil_non_energetic: Crude oil (non-energetic)
+        transport_final_demand_crude_oil_non_energetic_demand: Crude oil (lubricants etc.)
 
         # agriculture
         input_agriculture_electricity_demand: Electricity demand

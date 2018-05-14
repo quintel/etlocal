@@ -19,7 +19,7 @@ nl:
 
     groups:
       #area
-      area_other_ghg: Broeikasgassen
+      area_other_ghg: "Huidige uitstoot niet-CO<sub>2</sub>-broeikasgassen"
       area_electricity_grid_costs: Kosten elektriciteitsnetwerk
       area_electricity_grid_capacity: Capaciteit elektriciteitsnetwerk
       area_electricity_grid_reinforcement: Verzwaring elektriciteitsnetwerk
@@ -69,7 +69,7 @@ nl:
       transport_road_lng_distribution: Verdeling LNG wegverkeer
       transport_rail_electricity_distribution: Verdeling elektriciteit wegverkeer
       transport_rail_diesel_distribution: Verdeling diesel treinverkeer
-      transport_energy_demand_crude_oil_non_energetic: Non-energetisch oliegebruik
+      transport_energy_demand_crude_oil_non_energetic: Niet-energetisch oliegebruik
 
       # agriculture
       agriculture_chps: WKK's

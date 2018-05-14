@@ -15,3 +15,5 @@ groups:
       unit: 'km<sup>2</sup>'
     - key: offshore_suitable_for_wind
       unit: 'km<sup>2</sup>'
+    - key: co2_emission_1990
+      unit: 'Mton'

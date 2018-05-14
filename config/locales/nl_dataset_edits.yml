@@ -1,12 +1,18 @@
 nl:
   dataset_edits:
+    changed_attributes: 'Je hebt de volgende attributen gewijzigd:'
     changed_by: "door %{user}"
     changed_to: "Waarde gewijzigd naar %{value}"
     download_source: "Download bron"
     history: Geschiedenis
     no_history: Geen geschiedenis beschikbaar voor deze waarde
+    reason_changes: "Reden voor verandering(en)"
     success: "Succesvol %{key} naar %{value} veranderd"
     success: "%{dataset} is succesvol geüpdatet"
+
+    form:
+      save: Opslaan
+      cancel: Annuleren
 
     flash:
       attribute_not_found: "Attribuut niet gevonden '%{attribute}'"

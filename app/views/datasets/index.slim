@@ -16,7 +16,7 @@
         .form
           form#search
             = text_field_tag :q, nil, id: "search-bar"
-            input#search-submit type='submit' value='Search'
+            input#search-submit type='submit' value=I18n.t('search')
 
   #dataset-overlay
     .button-close
@@ -31,12 +31,6 @@
         h5
           | Empty
         = link_to "#", class: 'button dataset-open' do
-          | Open dataset
+          = I18n.t('datasets.pop_up.open')
         = link_to "#!", disabled: 'disabled', class: 'button' do
-          | Open scenario in ETM
-
-.interface-bottom
-  #buttons-bottom
-    .button-group.toggle-editor
-      button.enabled data-interface='dataset_selector' Dataset editor
-      button data-interface='chart' Visual mode
+          = I18n.t('datasets.pop_up.open_etm')

@@ -51,11 +51,11 @@
         .apply.no-changes
           - if policy(@dataset).clone?
             = button_tag class: 'button clone-dataset', type: 'button' do
-              | Clone dataset
+              = I18n.t('datasets.commit.clone')
 
           - if policy(@dataset).download?
             = button_tag class: 'button download-dataset', type: 'button', disabled: download_button_disabled?(dataset) do
-              | Download dataset
+              = I18n.t('datasets.commit.download')
               | &nbsp;
               i.fa.fa-download
 
@@ -65,7 +65,7 @@
 
         .apply.changes
           = button_tag type: 'submit', class: 'button' do
-            | Save changes
+            = I18n.t('datasets.commit.save')
             = image_tag 'wait.gif', class: 'wait'
 
           .clear

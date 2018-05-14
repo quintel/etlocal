@@ -3,3 +3,11 @@ nl:
     created_by: "Gemaakt door %{group}"
     signed_in_as: Ingelogd als
     sign_out: Uitloggen
+
+  activerecord:
+    attributes:
+      user:
+        name: Naam
+        email: Email
+        password: Wachtwoord
+        password_confirmation: Wachtwoord bevestigen

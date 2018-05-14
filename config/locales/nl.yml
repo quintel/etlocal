@@ -2,6 +2,9 @@ nl:
   application: ETLocal
   cancel: Annuleren
   edit: Aanpassen
+  search: Zoeken
+  or: of
+  to: naar
 
   time:
     formats:

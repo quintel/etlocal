@@ -1,7 +1,6 @@
 = render 'shared/flash', flash: flash
 
-h2
-  | Log in
+h2= I18n.t('devise.log_in')
 
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   .field
@@ -11,9 +10,9 @@ h2
     = f.label :password
     = f.password_field :password, autocomplete: "off"
     .password
-      = link_to "Forgot your password?", new_password_path(resource_name)
+      = link_to I18n.t('devise.forgot_password'), new_password_path(resource_name)
 
   .actions
-    = f.submit "Log in"
-    span.or or
-    = link_to "Sign up", new_registration_path(resource_name), class: 'button'
+    = f.submit I18n.t('devise.log_in')
+    span.or= I18n.t('or')
+    = link_to I18n.t('devise.sign_up'), new_registration_path(resource_name), class: 'button'

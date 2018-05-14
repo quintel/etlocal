@@ -1,11 +1,17 @@
 en:
   dataset_edits:
+    changed_attributes: 'You changed the following attributes:'
     changed_by: "by %{user}"
     changed_to: "Changed value to %{value}"
     download_source: "Download source"
     history: History
     no_history: No history available for this attribute
+    reason_changes: "Reason for change(s)"
     success: "Succesfully updated dataset %{dataset}"
+
+    form:
+      save: Save
+      cancel: Cancel
 
     flash:
       attribute_not_found: "Attribute not found '%{attribute}'"

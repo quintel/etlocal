@@ -3,7 +3,7 @@ module DatasetHelper
     versions = @dataset_clones
 
     options_from_collection_for_select(versions, 'id', 'creator').prepend(
-      "<option value='' disabled='disabled'>Switch dataset</option>".html_safe
+      "<option value='' disabled='disabled'>#{I18n.t('datasets.commit.switch_dataset')}</option>".html_safe
     )
   end
 

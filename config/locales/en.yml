@@ -2,6 +2,9 @@ en:
   application: ETLocal
   cancel: Cancel
   edit: Edit
+  search: Search
+  or: or
+  to: to
 
   time:
     formats:

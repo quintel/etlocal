@@ -12,7 +12,7 @@
   .edit-form
     .content
       .attributes-changed
-        strong You changed the following attributes:
+        strong= I18n.t('dataset_edits.changed_attributes')
 
         - @commit.dataset_edits.each do |edit|
           .edit
@@ -21,7 +21,8 @@
             span.key>
               = I18n.t("activemodel.attributes.dataset_edit_form.#{ edit.key }", default: edit.key.humanize).html_safe
 
-            span.to> to
+            span.to>
+              = I18n.t('to')
             span.val data= conversions_for(edit.key)
               = edit.value
 
@@ -37,7 +38,7 @@
           = d.hidden_field :value, value: d.object.value
 
         .field
-          = form.label :message, "Reason for changes"
+          = form.label :message, I18n.t('dataset_edits.reason_changes')
           = form.text_area :message, maxlength: 500
 
         = form.fields_for(:source) do |s|
@@ -50,5 +51,5 @@
 
       .overview-edits
         .apply
-          = form.submit "Save"
-          = link_to "Cancel", edit_dataset_path(dataset, format: :js), remote: true, class: "button danger"
+          = form.submit I18n.t('dataset_edits.form.save')
+          = link_to I18n.t('dataset_edits.form.cancel'), edit_dataset_path(dataset, format: :js), remote: true, class: "button danger"

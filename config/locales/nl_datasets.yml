@@ -5,6 +5,16 @@ nl:
       area_attributes: Regio-attributen
       inputs: Inputs
 
+    pop_up:
+      open: Open dataset
+      open_etm: Open scenario in het ETM
+
+    commit:
+      clone: Kloon dataset
+      download: Download dataset
+      save: Opslaan wijzigingen
+      switch_dataset: Wijzigen dataset
+
     attributes:
       source_file: Bron
       no_source_file: "Geen bron geselecteerd"

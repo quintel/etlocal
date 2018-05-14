@@ -5,6 +5,16 @@ en:
       area_attributes: Area attributes
       inputs: Inputs
 
+    pop_up:
+      open: Open dataset
+      open_etm: Open scenario in ETM
+
+    commit:
+      clone: Clone dataset
+      download: Download dataset
+      save: Save changes
+      switch_dataset: Switch dataset
+
     attributes:
       source_file: Source
       no_source_file: "No source selected"

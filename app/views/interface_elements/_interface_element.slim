@@ -5,7 +5,7 @@
 
   - interface_element.groups.each do |interface_group|
     - if interface_group.header
-      strong= I18n.t("dataset_edits.groups.#{ interface_group.header }")
+      strong= I18n.t("dataset_edits.groups.#{ interface_group.header }").html_safe
 
     .group class= ('slider-group' if interface_group.type == :slider)
       - interface_group.items.each do |interface_item|

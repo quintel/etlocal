@@ -3,11 +3,12 @@ require 'support/graph'
 
 describe Api::V1::ExportsController do
   let(:dataset) { FactoryGirl.create(:dataset) }
+  let(:body) { JSON.parse(response.body)[0] }
 
   it 'fetches a collection of dataset edits as json' do
     get :show, params: { id: dataset.id }, format: :json
 
-    expect(JSON.parse(response.body).fetch('number_of_residences')).to eq(10.0)
+    expect(body.fetch('number_of_residences')).to eq(10.0)
   end
 
   describe 'with edits' do
@@ -28,13 +29,13 @@ describe Api::V1::ExportsController do
     it 'should render all the editable attributes of a dataset' do
       get :show, params: { id: dataset.id }, format: :json
 
-      expect(JSON.parse(response.body).fetch('number_of_residences')).to eq(10.0)
+      expect(body.fetch('number_of_residences')).to eq(10.0)
     end
 
     it 'should render all the editable attributes of a dataset' do
       get :show, params: { id: dataset.id }, format: :json
 
-      expect(JSON.parse(response.body).fetch('number_of_cars')).to eq(2.0)
+      expect(body.fetch('number_of_cars')).to eq(2.0)
     end
   end
 end

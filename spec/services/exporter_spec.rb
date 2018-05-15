@@ -6,7 +6,7 @@ describe Exporter do
 
   let!(:stub_export_request) {
     stub_request(:get, "https://beta-local.energytransitionmodel.com/api/v1/exports/#{dataset.id}")
-      .to_return(body: JSON.dump({
+      .to_return(body: JSON.dump([{
         'area' => 'ameland',
         'country' => 'nl',
         'electricity_consumption' => 500,
@@ -22,7 +22,7 @@ describe Exporter do
         'gas_consumption_buildings' => 1,
         'has_industry' => true,
         'has_agriculture' => true
-      }))
+      }]))
   }
 
   it "exports a dataset" do

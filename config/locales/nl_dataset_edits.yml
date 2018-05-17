@@ -10,6 +10,9 @@ nl:
     success: "Succesvol %{key} naar %{value} veranderd"
     success: "%{dataset} is succesvol geüpdatet"
 
+    explanation:
+      number_of_residences: Hoeveelheid woningen
+
     form:
       save: Opslaan
       cancel: Annuleren

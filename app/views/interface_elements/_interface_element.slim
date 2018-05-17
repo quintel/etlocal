@@ -60,9 +60,10 @@
           .history.hidden class= interface_item.key
             .line-arrow
 
-            strong = I18n.t("dataset_edits.history")
+            - if I18n.exists?("dataset_edits.explanation.#{interface_item.key}")
+              p=I18n.t("dataset_edits.explanation.#{interface_item.key}")
 
-            p=I18n.t("dataset_edits.explanation.#{interface_item.key}", default: '')
+            strong = I18n.t("dataset_edits.history")
 
             - @dataset.editable_attributes.edits_for(interface_item.key).each do |dataset_edit|
               .change

@@ -19,7 +19,7 @@
                 - if interface_item.flexible
                   i.fa
                 - else
-                  i.fa.fa-history
+                  i.fa.fa-info
 
               span.val data= conversions_for(interface_item.key)
                 span.display_value
@@ -40,7 +40,7 @@
 
               .right
                 span.history data-key= interface_item.key
-                  i.fa.fa-history
+                  i.fa.fa-info
 
                 span.val data= conversions_for(interface_item.key)
                   - if policy(@dataset).edit?
@@ -61,6 +61,8 @@
             .line-arrow
 
             strong = I18n.t("dataset_edits.history")
+
+            p=I18n.t("dataset_edits.explanation.#{interface_item.key}", default: '')
 
             - @dataset.editable_attributes.edits_for(interface_item.key).each do |dataset_edit|
               .change

@@ -1,10 +1,12 @@
 class DatasetPolicy < ApplicationPolicy
   def edit?
+    return false unless user
+
     (record.user == user) || (record.user.group == user.group)
   end
 
   def clone?
-    record.public? || edit?
+    user && (record.public? || edit?)
   end
 
   def download?

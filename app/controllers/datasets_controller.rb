@@ -2,7 +2,7 @@ class DatasetsController < ApplicationController
   layout false, only: %i(edit clone)
   format 'js', only: %i(edit :clone)
 
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: %i(index show edit)
   before_action :find_dataset, only: %i(validate edit download clone)
 
   # GET index

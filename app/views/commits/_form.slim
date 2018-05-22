@@ -63,6 +63,8 @@
             - if @dataset_clones.any?
               = select_tag "datasets", version_options
 
+          .clear
+
         .apply.changes
           = button_tag type: 'submit', class: 'button' do
             = I18n.t('datasets.commit.save')

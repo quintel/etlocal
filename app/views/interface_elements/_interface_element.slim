@@ -49,7 +49,8 @@
 
                   - else
                     span.read-only
-                      = form.object.public_send(interface_item.key)
+                      - if value = form.object.public_send(interface_item.key)
+                        = value.round(2)
                       | &nbsp;
 
                 span.unit data-to= interface_item.unit

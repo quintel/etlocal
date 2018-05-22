@@ -22,7 +22,9 @@ class Dataset < ApplicationRecord
   end
 
   def as_json(*)
-    super.except('created_at', 'updated_at')
+    super
+      .except('created_at', 'updated_at')
+      .merge(group: I18n.t("datasets.area_groups.#{group}"))
   end
 
   # Public: country

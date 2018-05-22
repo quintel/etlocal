@@ -1,5 +1,11 @@
 nl:
   datasets:
+    area_groups:
+      municipalities: Gemeente
+      districts: Wijk
+      neighborhoods: Buurt
+      provinces: Provincie
+
     menu:
       static: Statisch
       area_attributes: Regio-attributen

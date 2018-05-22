@@ -23,6 +23,7 @@
 
 = form_for @dataset_edit_form, url: dataset_edits_dataset_commits_path(dataset), remote: true, html: { class: "dataset_editor" } do |form|
   = form.hidden_field :dataset_id, value: dataset.id
+  = form.hidden_field :group, value: dataset.group
 
   .wrapper data-tab-key='main'
     .content.tab#input data-tab="#input"

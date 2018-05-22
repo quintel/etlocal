@@ -10,6 +10,7 @@ Areas.DatasetSelector = (function () {
             content = document.getElementById('popup-content');
 
         $(content).find('h5').html(data.area);
+        $(content).find('em').html(data.group);
         $(content).find('a.dataset-open')
             .off('click')
             .on('click', function (e) {

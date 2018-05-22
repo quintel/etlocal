@@ -1,5 +1,11 @@
 en:
   datasets:
+    area_groups:
+      municipalities: Municipality
+      districts: District
+      neighborhoods: Neighborhood
+      provinces: Province
+
     menu:
       static: Static
       area_attributes: Area attributes

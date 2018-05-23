@@ -18,8 +18,8 @@ var DatasetInterface = (function () {
 
     function addChangeListenerToInputs() {
         $("div.input span.val input[type='text']")
-            .off("change.convert")
-            .on("change.convert", function (e) {
+            .off("input.convert, change.convert")
+            .on("input.convert, change.convert", function (e) {
                 window.DatasetInterface.ChangeTrigger.trigger(e.target);
 
                 $(this).next("[type='hidden']").val(

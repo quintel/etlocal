@@ -11,13 +11,13 @@ class Dataset < ApplicationRecord
 
   def group
     if geo_id =~ /^GM/
-      'municipalities'
+      'municipality'
     elsif geo_id =~ /^WK/
-      'districts'
+      'district'
     elsif geo_id =~ /^BU/
-      'neighborhoods'
+      'neighborhood'
     else
-      'provinces'
+      'province'
     end
   end
 

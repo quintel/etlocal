@@ -9,7 +9,8 @@ class InterfaceItem
   attribute :unit, String
   attribute :flexible, Boolean, default: false
   attribute :default, Float
-  attribute :skip_validation, Float, default: false
+  attribute :skip_validation, Boolean, default: false
+  attribute :hidden, Boolean, default: false
 
   def whitelisted?
     Etsource.transformers.keys.include?(key) || key =~ /^input/

@@ -7,7 +7,8 @@ class Api::V1::ExportsController < ApplicationController
     json = datasets.map do |dataset|
       dataset.editable_attributes.as_json.merge(
         area: dataset.area.downcase,
-        base_dataset: dataset.country
+        base_dataset: dataset.country,
+        group: dataset.group
       )
     end
 

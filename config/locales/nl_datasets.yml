@@ -1,10 +1,10 @@
 nl:
   datasets:
     area_groups:
-      municipalities: Gemeente
-      districts: Wijk
-      neighborhoods: Buurt
-      provinces: Provincie
+      municipality: Gemeente
+      district: Wijk
+      neighborhood: Buurt
+      province: Provincie
 
     menu:
       static: Statisch

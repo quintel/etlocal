@@ -13,7 +13,11 @@ namespace :deploy do
     on roles(:app) do
       within release_path do
         with rails_env: fetch(:rails_env) do
-          execute :rake, 'deploy:load_etsource'
+          cd(Rails.configuration.etsource_path) do
+            sh('git fetch origin')
+            sh('git reset --hard origin/master')
+            sh('git clean -f')
+          end
         end
       end
     end

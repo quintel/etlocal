@@ -13,7 +13,7 @@ namespace :deploy do
     on roles(:app) do
       within release_path do
         with rails_env: fetch(:rails_env) do
-          `rake deploy:load_etsource`
+          `RAILS_ENV=#{fetch(:rails_env)} bin/rake deploy:load_etsource`
         end
       end
     end

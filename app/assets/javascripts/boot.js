@@ -3,6 +3,7 @@ $(document).on('turbolinks:load', function () {
 
     FileUpload.setFields();
     Areas.init();
+    LanguageChanger.init();
 
     $(window).on('scroll', function (s) {
         var isOver = ($(this).scrollTop() > $('body > .container').height());

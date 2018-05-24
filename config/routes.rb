@@ -19,4 +19,6 @@ Rails.application.routes.draw do
       resources :exports, only: :show
     end
   end
+
+  put '/set_locale(/:locale)' => 'pages#set_locale', as: :set_locale
 end

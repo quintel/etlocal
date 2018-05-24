@@ -21,7 +21,7 @@ append :linked_files, "config/database.yml", "config/email.yml", "config/secrets
 append :linked_dirs, "sbin", "log", "tmp/pids", "tmp/cache", "vendor/bundle", "public/system"
 
 namespace :deploy do
-  before :started, 'deploy:etsource'
+  before :starting, 'deploy:etsource'
   after :publishing, :restart
 end
 

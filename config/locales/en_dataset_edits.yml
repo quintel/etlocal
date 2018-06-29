@@ -24,6 +24,7 @@ en:
       area_electricity_grid_reinforcement: Electricity grid reinforcement
 
       #households
+      households_final_demand: Final demand
       households_local_production: Local energy production
       households_district_heating: District heating
       households_electricity_distribution: Electricity distribution
@@ -43,6 +44,7 @@ en:
       households_solar_thermal_distribution: Solar thermal distribution
 
       #buildings
+      buildings_final_demand: Final demand
       buildings_local_production: Local energy production
       buildings_district_heating: District heating
       buildings_electricity_distribution: Electricity distribution
@@ -76,6 +78,7 @@ en:
 
       # industry
       industry_chps: CHPs
+      industry_gas_fuelmix: Fuel for gas-fired CHPs
       industry_metal_steel: Steel
       industry_metal_aluminium: Aluminium
       industry_metal_other: Other metal industry

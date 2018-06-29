@@ -4,8 +4,6 @@ groups:
     items:
       - key: input_households_solar_pv_demand
         unit: 'TJ'
-      - key: input_households_solar_pv_own_use_share
-        unit: '%'
       - key: households_final_demand_solar_thermal_demand
         unit: 'TJ'
 

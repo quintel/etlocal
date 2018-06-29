@@ -43,18 +43,18 @@ nl:
 
         #households
         number_of_residences: Aantal woningen
-        input_percentage_of_old_residences: Percentage woningen gebouwd voor 1992
+        input_percentage_of_old_residences: Woningen gebouwd voor 1992
+        input_percentage_of_new_residences: Woningen gebouwd in of na 1992
         residences_roof_surface_available_for_pv: Geschikt dakoppervlak voor zon-PV
 
-        input_households_electricity_demand: Elektriciteitsgebruik
-        households_final_demand_network_gas_demand: Gasgebruik
-        households_final_demand_steam_hot_water_demand: Warmtegebruik
-        households_final_demand_wood_pellets_demand: Biomassagebruik
-        households_final_demand_crude_oil_demand: Oliegebruik
-        households_final_demand_coal_demand: Kolengebruik
+        households_final_demand_electricity_demand: Elektriciteit
+        households_final_demand_network_gas_demand: Gas
+        households_final_demand_steam_hot_water_demand: Warmte
+        households_final_demand_wood_pellets_demand: Biomassa
+        households_final_demand_crude_oil_demand: Olie
+        households_final_demand_coal_demand: Kolen
 
         input_households_solar_pv_demand: Zon-PV-productie
-        input_households_solar_pv_own_use_share: Eigen gebruik zon-PV-productie
         households_final_demand_solar_thermal_demand: Zonthermieproductie
         input_households_district_heating_heater_network_gas_share: Gasketel
         input_households_district_heating_chp_network_gas_share: Gas-WKK
@@ -149,7 +149,6 @@ nl:
         buildings_final_demand_crude_oil_demand: Oliegebruik
 
         input_buildings_solar_pv_demand: Zon-PV-productie
-        input_buildings_solar_pv_own_use_share: Eigen gebruik zon-PV-productie
         buildings_final_demand_solar_thermal_demand: Zonthermieproductie
         input_buildings_district_heating_heater_network_gas_share: Gasketel
         input_buildings_district_heating_chp_network_gas_share: Gas-WKK
@@ -277,8 +276,12 @@ nl:
         industry_chp_turbine_gas_power_fuelmix_demand: Gasturbine-WKK
         industry_chp_ultra_supercritical_coal_demand: Kolen-WKK
 
-        input_industry_metal_steel_scaling_factor: Percentage van de nationale staalindustrie
-        input_industry_metal_aluminium_scaling_factor: Percentage van de nationale aluminiumindustrie
+        input_share_mixer_gas_fuel_network_gas: Gas
+        input_share_mixer_gas_fuel_oil: Olie
+        input_share_mixer_gas_fuel_bio_oil: Bio-olie
+
+        input_industry_metal_steel_scaling_factor: "% nationale staalsector"
+        input_industry_metal_aluminium_scaling_factor: "% nationale aluminiumsector"
         input_industry_metal_other_electricity_demand: Elektriciteit
         input_industry_metal_other_network_gas_demand: Gas
         input_industry_metal_other_steam_hot_water_demand: Warmte
@@ -286,8 +289,8 @@ nl:
         input_industry_metal_other_crude_oil_demand: Olie
         input_industry_metal_other_coal_demand: Kolen
 
-        input_industry_chemical_fertilizers_scaling_factor: Percentage van de nationale kunstmestsector
-        input_industry_chemical_refineries_scaling_factor: Percentage van de nationale raffinaderijensector
+        input_industry_chemical_fertilizers_scaling_factor: "% nationale kunstmestsector"
+        input_industry_chemical_refineries_scaling_factor: "% nationale raffinaderijensector"
         input_industry_chemical_other_electricity_demand: Elektriciteit
         input_industry_chemical_other_network_gas_demand: Gas
         input_industry_chemical_other_steam_hot_water_demand: Warmte
@@ -330,7 +333,8 @@ nl:
         input_industry_other_coal_non_energetic_demand: Kolen (niet-energetisch)
 
         # Energy
-        energy_power_sector_own_use_electricity_demand: Elektriciteit
+        energy_power_sector_own_use_electricity_demand: Eigen gebruik elektriciteit
+        energy_power_hv_network_loss_demand: Netverliezen
         input_energy_greengas_production: Lokale groengasproductie
         energy_import_greengas_demand: Import van groengas
 

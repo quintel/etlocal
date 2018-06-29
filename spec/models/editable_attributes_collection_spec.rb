@@ -23,7 +23,7 @@ describe EditableAttributesCollection do
   it 'expands on the graph methods' do
     expect(
       editable_attributes
-        .find('input_households_electricity_demand')
+        .find('input_industry_paper_electricity_demand')
     ).to be_a(EditableAttribute)
   end
 
@@ -37,6 +37,6 @@ describe EditableAttributesCollection do
 
   it 'does not have a default value for electricity_consumption' do
     expect(editable_attributes
-      .find('input_households_electricity_demand').value).to eq(nil)
+      .find('input_industry_paper_electricity_demand').value).to eq(nil)
   end
 end

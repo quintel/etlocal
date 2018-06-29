@@ -58,9 +58,9 @@ en:
         buildings_final_demand_crude_oil: Crude oil
 
       energy:
-        energy_heat_production: Heat production
-        energy_fossil_electricity_production: Fossil electricity production
-        energy_renewable_electricity_production: Renewable electricity production
+        energy_heat_production: Heat
+        energy_fossil_electricity_production: Fossil electricity
+        energy_renewable_electricity_production: Renewable electricity
 
       households:
         households_advanced: Advanced

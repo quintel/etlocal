@@ -1,9 +1,18 @@
 key: households
 groups:
-  - items:
+  - header:
+    items:
     - key: number_of_residences
       unit: '#'
-    - key: input_percentage_of_old_residences
-      unit: '%'
     - key: residences_roof_surface_available_for_pv
       unit: 'km<sup>2</sup>'
+
+  - header:
+    type: slider
+    items:
+    - key: input_percentage_of_old_residences
+      unit: '%'
+    - key: input_percentage_of_new_residences
+      unit: '%'
+      flexible: true
+      skip_validation: true

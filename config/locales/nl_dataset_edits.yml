@@ -28,6 +28,7 @@ nl:
       area_electricity_grid_reinforcement: Verzwaring elektriciteitsnetwerk
 
       #households
+      households_final_demand: Eindgebruik
       households_local_production: Lokale energieproductie
       households_district_heating: Warmtenet
       households_electricity_distribution: Verdeling elektriciteit
@@ -47,6 +48,7 @@ nl:
       households_solar_thermal_distribution: Verdeling zonthermie
 
       #buildings
+      buildings_final_demand: Final demand
       buildings_local_production: Lokale energieproductie
       buildings_district_heating: Warmtenet
       buildings_electricity_distribution: Verdeling elektriciteit
@@ -80,6 +82,7 @@ nl:
 
       # industry
       industry_chps: WKK's
+      industry_gas_fuelmix: Brandstofmix gasgestookte WKK
       industry_metal_steel: Staal
       industry_metal_aluminium: Aluminium
       industry_metal_other: Overige metaalindustrie

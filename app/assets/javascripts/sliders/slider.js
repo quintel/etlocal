@@ -96,7 +96,7 @@ var Slider = (function () {
                 // Oddly specific: the last argument is a silent call so
                 // no changes are being triggered (which is what we want
                 // when setting the defaults).
-                this.slider.setTentativeValue(value * 100.0, true, true);
+                this.slider.setTentativeValue(value * 100.0, false, true);
 
                 setValue.call(this, value * 100.0);
             }

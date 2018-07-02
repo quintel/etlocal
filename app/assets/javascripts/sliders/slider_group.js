@@ -9,9 +9,17 @@ var SliderGroup = (function () {
                 return new Slider(scope);
             });
 
-            this.sliders.forEach(function (slider) {
-                this.balancer.add(slider.create());
-            }.bind(this));
+            if (this.sliders.length < 2) {
+                this.sliders.forEach(function (slider) {
+                    slider.create();
+                });
+            } else {
+                this.sliders.forEach(function (slider) {
+                    this.balancer.add(slider.create());
+                }.bind(this));
+
+                this.setFlexSlider();
+            }
         },
 
         setFlexSlider: function () {

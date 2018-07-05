@@ -29,6 +29,7 @@ groups:
         unit: '€'
 
   - header: area_electricity_grid_capacity
+    type: slider
     items:
       - key: lv_net_spare_capacity
         unit: '%'

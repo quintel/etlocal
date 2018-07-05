@@ -24,8 +24,8 @@ nl:
       #area
       area_other_ghg: "Huidige uitstoot niet-CO<sub>2</sub>-broeikasgassen"
       area_electricity_grid_costs: Kosten elektriciteitsnetwerk
-      area_electricity_grid_capacity: Capaciteit elektriciteitsnetwerk
-      area_electricity_grid_reinforcement: Verzwaring elektriciteitsnetwerk
+      area_electricity_grid_capacity: Beschikbare capaciteit huidig elektriciteitsnet
+      area_electricity_grid_reinforcement: Verzwaring elektriciteitsnet
 
       #households
       households_final_demand: Eindgebruik

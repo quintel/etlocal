@@ -20,7 +20,7 @@ en:
       #area
       area_other_ghg: "Present non-CO<sub>2</sub> greenhouse gas emissions"
       area_electricity_grid_costs: Present electricity grid costs
-      area_electricity_grid_capacity: Present electricity grid capacity
+      area_electricity_grid_capacity: Present spare capacity electricity grid
       area_electricity_grid_reinforcement: Electricity grid reinforcement
 
       #households

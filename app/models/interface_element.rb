@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class InterfaceItem
   include Virtus.model
   include ActiveModel::Validations
@@ -13,7 +15,8 @@ class InterfaceItem
   attribute :hidden, Boolean, default: false
 
   def whitelisted?
-    Etsource.transformers.keys.include?(key) || key =~ /^input/
+    Etsource.whitelisted_attributes.include?(key) ||
+      key.to_s.start_with?('input_')
   end
 end
 

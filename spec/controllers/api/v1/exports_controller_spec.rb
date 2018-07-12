@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'support/graph'
 
 describe Api::V1::ExportsController do
-  let(:dataset) { FactoryGirl.create(:dataset) }
+  let(:dataset) { FactoryBot.create(:dataset) }
   let(:body) { JSON.parse(response.body)[0] }
 
   it 'fetches a collection of dataset edits as json' do
@@ -16,9 +16,9 @@ describe Api::V1::ExportsController do
       2.times do |i|
         Timecop.freeze(Time.now + i)
 
-        commit = FactoryGirl.create(:commit, dataset: dataset)
+        commit = FactoryBot.create(:commit, dataset: dataset)
 
-        FactoryGirl.create(:dataset_edit,
+        FactoryBot.create(:dataset_edit,
           key: 'number_of_cars',
           value: i + 1,
           commit: commit

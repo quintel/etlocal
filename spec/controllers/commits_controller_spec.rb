@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 describe CommitsController do
-  let(:user) { FactoryGirl.create(:user) }
+  let(:user) { FactoryBot.create(:user) }
   let!(:sign_in_user) { sign_in(user) }
-  let(:dataset) { FactoryGirl.create(:dataset) }
+  let(:dataset) { FactoryBot.create(:dataset) }
 
   # POST dataset_edits.js
   #
@@ -23,7 +23,7 @@ describe CommitsController do
     end
 
     describe " -> valid" do
-      let(:dataset) { FactoryGirl.create(:dataset, user: user) }
+      let(:dataset) { FactoryBot.create(:dataset, user: user) }
 
       it "is succesful" do
         request_dataset_edits
@@ -33,7 +33,7 @@ describe CommitsController do
     end
 
     describe " -> unauthorized" do
-      let(:dataset) { FactoryGirl.create(:dataset) }
+      let(:dataset) { FactoryBot.create(:dataset) }
 
       it "requires a user" do
         expect { request_dataset_edits }.to raise_error(Pundit::NotAuthorizedError)

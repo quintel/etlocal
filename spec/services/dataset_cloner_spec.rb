@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe DatasetCloner do
   describe "cloning a public dataset" do
-    let(:dataset) { FactoryGirl.create(:dataset) }
-    let(:user)    { FactoryGirl.create(:user) }
-    let!(:commit) { FactoryGirl.create(:initial_commit, dataset: dataset) }
+    let(:dataset) { FactoryBot.create(:dataset) }
+    let(:user)    { FactoryBot.create(:user) }
+    let!(:commit) { FactoryBot.create(:initial_commit, dataset: dataset) }
 
     before { DatasetCloner.clone!(dataset, user) }
 

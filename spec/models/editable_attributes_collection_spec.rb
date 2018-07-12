@@ -2,15 +2,15 @@ require 'rails_helper'
 require 'support/graph'
 
 describe EditableAttributesCollection do
-  let(:dataset) { FactoryGirl.create(:dataset) }
+  let(:dataset) { FactoryBot.create(:dataset) }
 
   before do
     2.times do |i|
       Timecop.freeze(Time.now + i)
 
-      commit = FactoryGirl.create(:commit, dataset: dataset)
+      commit = FactoryBot.create(:commit, dataset: dataset)
 
-      FactoryGirl.create(:dataset_edit, value: (i + 1), commit: commit)
+      FactoryBot.create(:dataset_edit, value: (i + 1), commit: commit)
     end
   end
 

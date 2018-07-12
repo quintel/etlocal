@@ -18,9 +18,9 @@ describe DatasetImporter do
   end
 
   describe "re-importing" do
-    let!(:dataset) { FactoryGirl.create(:dataset, geo_id: 'BU16800000') }
+    let!(:dataset) { FactoryBot.create(:dataset, geo_id: 'BU16800000') }
     let!(:robot_commit) {
-      FactoryGirl.create(:commit,
+      FactoryBot.create(:commit,
         user: User.robot, dataset: dataset, message: "Test")
     }
 
@@ -36,11 +36,11 @@ describe DatasetImporter do
         # Robot commit (that is always present)
         # New commit
         let(:commit) {
-          FactoryGirl.create(:commit, dataset: dataset, message: "Test")
+          FactoryBot.create(:commit, dataset: dataset, message: "Test")
         }
 
         let!(:dataset_edit) {
-          FactoryGirl.create(:dataset_edit, commit: commit,
+          FactoryBot.create(:dataset_edit, commit: commit,
             key: 'residences_roof_surface_available_for_pv', value: '1.0')
         }
 

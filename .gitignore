@@ -23,3 +23,5 @@ config/email.yml
 db/shapes/*
 db/datasets/*.csv
 coverage/*
+
+.env

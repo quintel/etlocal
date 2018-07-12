@@ -58,9 +58,9 @@ nl:
         buildings_final_demand_crude_oil: Olie
 
       energy:
-        energy_heat_production: Warmteproductie
-        energy_fossil_electricity_production: Fossiele elektriciteitsopwek
-        energy_renewable_electricity_production: Duurzame elektriciteitsopwek
+        energy_heat_production: Warmte
+        energy_fossil_electricity_production: Fossiele elektriciteit
+        energy_renewable_electricity_production: Duurzame elektriciteit
 
       households:
         households_energy_demand: Energievraag

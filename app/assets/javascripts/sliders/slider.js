@@ -14,11 +14,11 @@ var Slider = (function () {
         this.spanVal.text(Math.round(value * 100) / 100);
     }
 
-    // Callback for dragging the slider
-    function drag(value) {
+    // Callback for changing the slider
+    function change(value) {
         setValue.call(this, value);
 
-        DatasetInterface.ChangeTrigger.trigger(this.sliderEl);
+        DatasetInterface.ChangeTrigger.trigger(this.input);
     }
 
     function showInput() {
@@ -62,7 +62,8 @@ var Slider = (function () {
                 value:   this.input.val() * 100,
                 step:    1,
                 setup:   setVal.bind(this),
-                drag:    drag.bind(this),
+                drag:    setVal.bind(this),
+                change:  change.bind(this),
                 max:     100,
                 disable: true
             });
@@ -95,9 +96,9 @@ var Slider = (function () {
                 // Oddly specific: the last argument is a silent call so
                 // no changes are being triggered (which is what we want
                 // when setting the defaults).
-                this.slider.setTentativeValue(value * 100.0, true, true);
+                this.slider.setTentativeValue(value * 100.0, false, true);
 
-                setVal.call(this, value * 100.0);
+                setValue.call(this, value * 100.0);
             }
         }
     };

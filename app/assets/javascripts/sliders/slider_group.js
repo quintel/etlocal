@@ -3,15 +3,27 @@ var SliderGroup = (function () {
 
     SliderGroup.prototype = {
         render: function () {
-            this.balancer = new $.Quinn.Balancer();
+            var controls;
+            var balancer;
 
             this.sliders = $.map($(this.scope).find('.editable.slider'), function (scope) {
                 return new Slider(scope);
             });
 
-            this.sliders.forEach(function (slider) {
-                this.balancer.add(slider.create());
-            }.bind(this));
+            controls = this.sliders.map(function(slider) {
+                return slider.create();
+            });
+
+            if (this.isFlexGroup()) {
+                balancer = new $.Quinn.Balancer();
+                controls.forEach(balancer.add.bind(balancer));
+                this.setFlexSlider();
+            }
+        },
+
+        isFlexGroup: function() {
+            return this.sliders.length > 1 &&
+                this.sliders.some(function(slider) { return slider.flexible });
         },
 
         setFlexSlider: function () {

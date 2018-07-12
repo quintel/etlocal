@@ -1,7 +1,8 @@
 key: households_energy_demand
 groups:
-  - items:
-    - key: input_households_electricity_demand
+  - header: households_final_demand
+    items:
+    - key: households_final_demand_electricity_demand
       unit: 'TJ'
     - key: households_final_demand_network_gas_demand
       unit: 'TJ'

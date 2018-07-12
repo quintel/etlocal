@@ -12,7 +12,6 @@ var SliderGroupCollection = (function () {
             if (sliderGroups.length > 0) {
                 sliderGroups.forEach(function (sliderGroup) {
                     sliderGroup.render();
-                    sliderGroup.setFlexSlider();
                 }.bind(this));
             }
         }

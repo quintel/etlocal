@@ -1,5 +1,4 @@
 key: industry
-
 groups:
   - header: industry_chps
     items:
@@ -11,3 +10,14 @@ groups:
         unit: 'TJ'
       - key: industry_chp_ultra_supercritical_coal_demand
         unit: 'TJ'
+
+  - header: industry_gas_fuelmix
+    type: slider
+    items:
+      - key: input_share_mixer_gas_fuel_bio_oil
+        unit: '%'
+      - key: input_share_mixer_gas_fuel_oil
+        unit: '%'
+      - key: input_share_mixer_gas_fuel_network_gas
+        unit: '%'
+        flexible: true

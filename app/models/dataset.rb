@@ -6,7 +6,10 @@ class Dataset < ApplicationRecord
 
   def self.clones(dataset, user)
     where(geo_id: dataset.geo_id)
-      .order("FIELD(`id`, #{dataset.id}) DESC, `created_at` DESC")
+      .order(Arel.sql(sanitize_sql_array([
+        "FIELD(`id`, ?) DESC, `created_at` DESC",
+        dataset.id
+      ])))
   end
 
   def group

@@ -28,7 +28,7 @@ describe CommitsController do
       it "is succesful" do
         request_dataset_edits
 
-        expect(response).to be_success
+        expect(response).to be_successful
       end
     end
 

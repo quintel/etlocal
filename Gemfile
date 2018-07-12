@@ -9,7 +9,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails', '>= 1.0.3'
 gem 'mysql2'
 gem 'puma', '~> 3.0'
-gem 'rails', '~> 5.0.1'
+gem 'rails', '~> 5.2.0'
 gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
@@ -26,12 +26,15 @@ gem 'progress_bar'
 gem 'remotipart', '~> 1.2'
 gem 'archive-zip', '~> 0.9.0'
 gem 'airbrake', '~> 7.2'
-gem 'deep_cloneable', '~> 2.3.0'
+gem 'deep_cloneable', '~> 2.3.2'
 
 gem 'transformer', ref: '119b910', github: 'quintel/transformer'
 gem 'atlas',       ref: '8583424', github: 'quintel/atlas'
 gem 'rubel',       ref: 'ad3d44e', github: 'quintel/rubel'
 gem 'refinery',    ref: '636686c', github: 'quintel/refinery'
+
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   gem 'byebug', platform: :mri

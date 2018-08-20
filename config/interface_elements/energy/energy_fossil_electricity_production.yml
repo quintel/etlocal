@@ -12,8 +12,6 @@ groups:
         unit: 'TJ'
       - key: input_energy_power_combined_cycle_ccs_coal_production
         unit: 'TJ'
-      - key: input_energy_power_combined_cycle_ccs_coal_production
-        unit: 'TJ'
       - key: input_energy_power_ultra_supercritical_ccs_coal_production
         unit: 'TJ'
       - key: input_energy_chp_ultra_supercritical_coal_production

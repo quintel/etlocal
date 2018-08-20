@@ -1,0 +1,16 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - attribute_one
+  - attribute_two
+  - attribute_three
+  message:
+    Add a commit message describing the changes.
+
+# If you are creating only a single commit, you may instead use a single :all
+# field to have all of the CSV columns be included. This cannot be used when
+# creating multiple commits.
+- fields:
+  - :all
+  message:
+    Every CSV column will be used in this commit.

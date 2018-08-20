@@ -1,70 +1,132 @@
+# frozen_string_literal: true
+
+# Takes a path to a CSV data file and a YAML commits file and creates new
+# commits and dataset edits.
 class CSVImporter
-  MANDATORY_HEADERS = %w(area geo_id)
-  ALLOWED_HEADERS = InterfaceElement.items.map { |i| i.key.to_s }
+  # Commits which specify a single :all field will use all the provided fields
+  # from the data.
+  GLOB_COMMIT_FIELDS = [:all].freeze
 
-  def self.import!(file)
-    new(file).import
+  attr_reader :data_path, :commits_path, :errors
+
+  def self.run(data_path, commits_path)
+    new(data_path, commits_path).run
   end
 
-  def initialize(file)
-    @csv_file = CSV.read(file, headers: true)
-    @headers  = @csv_file.headers
+  def initialize(data_path, commits_path)
+    @data_path     = data_path.to_s
+    @commits_path  = commits_path.to_s
+    @has_validated = false
+    @errors        = []
+  end
 
-    unless valid_headers?
-      raise ArgumentError, 'contains non allowed headers'
+  # Public: Reads the CSV and commits file, creating a new commits for each
+  # dataset as appropriate.
+  #
+  # Returns an array of all commits which were created.
+  def run
+    raise FormatErrorMessages.call(self) unless valid?
+
+    created = []
+
+    ActiveRecord::Base.transaction do
+      created = data_file.flat_map do |row|
+        dataset = dataset_from_row(row)
+
+        commits.map do |c|
+          commit = c.build_commit(dataset, row)
+
+          next if commit.dataset_edits.none?
+
+          commit.save!
+          commit
+        end
+      end
     end
 
-    unless all_documentation_provided?
-      raise ArgumentError, 'no documentation provided for some of the headers'
-    end
+    created
+  end
 
-    unless all_values_present?
-      raise ArgumentError, 'some values appear to be blank'
+  def valid?
+    validate unless @has_validated
+    @errors.empty?
+  end
+
+  # Internal: An array of importable commits.
+  #
+  # Returns an array.
+  def commits
+    @commits ||= YAML.load_file(@commits_path).map do |commit_data|
+      fields =
+        if commit_data['fields'] == GLOB_COMMIT_FIELDS
+          provided_headers - mandatory_headers
+        else
+          commit_data['fields']
+        end
+
+      ImportableCommit.new(fields, commit_data['message'])
     end
   end
 
-  def import
-    @csv_file.each(&method(:create_dataset_and_commits))
+  # Internal: Headers which every data CSV must include.
+  def mandatory_headers
+    %w[geo_id]
+  end
+
+  # Internal: Headers which a CSV may optionally include.
+  def allowed_headers
+    @allowed_headers ||=
+      mandatory_headers + InterfaceElement.items.map(&:key).map(&:to_s)
+  end
+
+  # Internal: The list of headers specified in the CSV file.
+  def provided_headers
+    @provided_headers ||= data_file.peek.headers
   end
 
   private
 
-  def create_dataset_and_commits(row)
-    info_row = row.to_h
-    dataset  = Dataset.find_or_create_by(
-      info_row.slice(*MANDATORY_HEADERS).merge(user: User.robot)
-    )
+  # Internal: Asserts that the commit and data are valid and consistent,
+  # otherwise raises an error.
+  def validate
+    @has_validated = true
 
-    info_row.slice(*item_headers).each_pair do |key, value|
-      commit = dataset.commits.new(
-        user:    User.robot,
-        message: info_row[key + '_documentation']
-      )
-      commit.dataset_edits << DatasetEdit.new(key: key, value: value)
-      commit.save
+    unless File.exist?(@commits_path)
+      @errors.push("#{File.basename(@commits_path)}: does not exist")
     end
+
+    unless File.exist?(@data_path)
+      @errors.push("#{File.basename(@data_path)}: does not exist")
+    end
+
+    # Stop as further validations need to read the files.
+    return if @errors.any?
+
+    CommitsValidator.call(self).each do |error|
+      @errors.push("#{File.basename(@commits_path)}: #{error}")
+    end
+
+    DataValidator.call(self).each do |error|
+      @errors.push("#{File.basename(@data_path)}: #{error}")
+    end
+
+    nil
   end
 
-  def item_headers
-    (@headers - MANDATORY_HEADERS).reject do |item|
-      item =~ /_documentation$/
-    end
+  # Internal: Enumerable containing each parsed CSV::Row in the data file.
+  #
+  # Returns an enumerable.
+  def data_file
+    @data_file ||= CSV.foreach(@data_path, headers: true, converters: :numeric)
   end
 
-  def valid_headers?
-    (MANDATORY_HEADERS - @headers).empty? &&
-    (item_headers - ALLOWED_HEADERS).empty?
-  end
-
-  def all_documentation_provided?
-    item_headers.all? do |header|
-      @headers.include?(header + '_documentation')
-    end
-  end
-
-  def all_values_present?
-    @csv_file.each.all? do |row|
-      row.to_h.slice(*item_headers).values.all?(&:present?)
-    end
+  # Internal: Finds the dataset which represents a CSV row.
+  def dataset_from_row(row)
+    criteria = Hash[mandatory_headers.map { |key| [key, row[key]] }]
+    Dataset.where(criteria.merge(user: User.robot)).first!
+  rescue ActiveRecord::RecordNotFound => ex
+    raise ActiveRecord::RecordNotFound,
+      "No dataset exists matching: #{criteria.inspect}",
+      ex.backtrace
   end
 end

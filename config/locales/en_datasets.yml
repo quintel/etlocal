@@ -3,7 +3,7 @@ en:
     area_groups:
       municipality: Municipality
       district: District
-      neighborhood: Neighborhood
+      neighbourhood: Neighbourhood
       province: Province
 
     menu:

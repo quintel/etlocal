@@ -3,7 +3,7 @@ nl:
     area_groups:
       municipality: Gemeente
       district: Wijk
-      neighborhood: Buurt
+      neighbourhood: Buurt
       province: Provincie
 
     menu:

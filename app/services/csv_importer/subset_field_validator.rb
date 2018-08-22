@@ -3,6 +3,6 @@ class CSVImporter
   SubsetFieldValidator =
     lambda do |permitted, provided, message: 'contains unknown fields'|
       surplus = provided - permitted
-      "#{message}: #{surplus.join(', ')}" if surplus.any?
+      "#{message}: #{surplus.map(&:inspect).join(', ')}" if surplus.any?
     end
 end

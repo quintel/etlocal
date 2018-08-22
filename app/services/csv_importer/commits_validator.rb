@@ -75,7 +75,8 @@ class CSVImporter
 
       return [] if dups.empty?
 
-      ["attributes specified in multiple commits: #{dups.to_a.join(', ')}"]
+      duplicates = dups.to_a.map(&:inspect).join(', ')
+      ["attributes specified in multiple commits: #{duplicates}"]
     end
   end
 end

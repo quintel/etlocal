@@ -578,4 +578,28 @@ RSpec.describe CSVImporter do
       expect { importer.run }.to raise_error(/has no data to import/i)
     end
   end
+
+  context 'with a valid single edit/single commit and a block' do
+    let(:commits) do
+      <<~YAML
+        ---
+        - fields:
+          - number_of_residences
+          message:
+            Because 5 is a magic number
+      YAML
+    end
+
+    let(:data) do
+      <<~CSV
+        geo_id,number_of_residences
+        GM0340,5
+      CSV
+    end
+
+    it 'returns one commit' do
+      commits = importer.run { |_, runner| runner.call }
+      expect(commits).to eq(Commit.last(1))
+    end
+  end
 end

@@ -9,8 +9,14 @@ class CSVImporter
 
   attr_reader :data_path, :commits_path, :errors
 
-  def self.run(data_path, commits_path)
-    new(data_path, commits_path).run
+  # Public: Creates a CSV importer reading the given data and commit paths.
+  #
+  # An optional block allows the import of each row to be manually triggered so
+  # as to run before and after callbacks. See CSVImporter#run.
+  #
+  # Returns an array of the commits which were created.
+  def self.run(data_path, commits_path, &block)
+    new(data_path, commits_path).run(&block)
   end
 
   def initialize(data_path, commits_path)
@@ -23,28 +29,30 @@ class CSVImporter
   # Public: Reads the CSV and commits file, creating a new commits for each
   # dataset as appropriate.
   #
+  # If `run` is provided a block, it will yield the CSV row and a callable which
+  # will trigger importing the row data. For example:
+  #
+  #   csv_importer.run do |row, runner|
+  #     print "Importing #{row['geo_id']... "
+  #     runner.call
+  #     puts 'done!'
+  #   end
+  #
   # Returns an array of all commits which were created.
   def run
     raise FormatErrorMessages.call(self) unless valid?
 
-    created = []
-
     ActiveRecord::Base.transaction do
-      created = data_file.flat_map do |row|
-        dataset = dataset_from_row(row)
-
-        commits.map do |c|
-          commit = c.build_commit(dataset, row)
-
-          next if commit.dataset_edits.none?
-
-          commit.save!
-          commit
+      data_file.flat_map do |row|
+        if block_given?
+          row_commits = nil
+          yield(row, -> { row_commits = run_row(row) })
+          row_commits
+        else
+          run_row(row)
         end
       end
     end
-
-    created
   end
 
   def valid?
@@ -135,5 +143,19 @@ class CSVImporter
     raise ActiveRecord::RecordNotFound,
       "No dataset exists matching: #{criteria.inspect}",
       ex.backtrace
+  end
+
+  # Internal: Runs the CSV importer for a single row in the data file.
+  def run_row(row)
+    dataset = dataset_from_row(row)
+
+    commits.map do |c|
+      commit = c.build_commit(dataset, row)
+
+      next if commit.dataset_edits.none?
+
+      commit.save!
+      commit
+    end
   end
 end

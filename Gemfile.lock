@@ -28,8 +28,8 @@ GIT
 
 GIT
   remote: https://github.com/quintel/transformer.git
-  revision: d7865067bd6b5b2480a077aed97cf56422232737
-  ref: d786506
+  revision: ffc78907f3488ab1dd65bb25640ce22d618c4f6d
+  ref: ffc7890
   specs:
     transformer (1.0.0)
       atlas (~> 1.0)
@@ -405,4 +405,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.16.2
+   1.16.3

@@ -556,4 +556,26 @@ RSpec.describe CSVImporter do
       expect { importer.run }.to raise_error(/no dataset exists matching/i)
     end
   end
+
+  context 'when there are no data rows to import' do
+    let(:commits) do
+      <<~YAML
+        ---
+        - fields:
+          - number_of_inhabitants
+          message:
+            Because 5 is a magic number
+      YAML
+    end
+
+    let(:data) do
+      <<~CSV
+        geo_id,number_of_inhabitants
+      CSV
+    end
+
+    it 'raises an error' do
+      expect { importer.run }.to raise_error(/has no data to import/i)
+    end
+  end
 end

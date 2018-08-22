@@ -102,12 +102,19 @@ class CSVImporter
     # Stop as further validations need to read the files.
     return if @errors.any?
 
-    CommitsValidator.call(self).each do |error|
-      @errors.push("#{File.basename(@commits_path)}: #{error}")
+    begin
+      data_file.peek
+    rescue StopIteration
+      @errors.push("#{File.basename(@data_path)}: has no data to import")
+      return
     end
 
     DataValidator.call(self).each do |error|
       @errors.push("#{File.basename(@data_path)}: #{error}")
+    end
+
+    CommitsValidator.call(self).each do |error|
+      @errors.push("#{File.basename(@commits_path)}: #{error}")
     end
 
     nil

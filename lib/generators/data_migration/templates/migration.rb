@@ -19,7 +19,7 @@ class <%= class_name.underscore.camelize %> < ActiveRecord::Migration[5.0]
 
     puts
     puts "Updated #{datasets.length} datasets with the following IDs:"
-    puts "  #{datasets.map(&:id).join(' ')}"
+    puts "  #{datasets.map(&:id).join(',')}"
   end
 
   def self.down

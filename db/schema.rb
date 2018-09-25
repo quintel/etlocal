@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180508072310) do
+ActiveRecord::Schema.define(version: 20180925162558) do
 
   create_table "commits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "source_id"
@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 20180508072310) do
 
   create_table "datasets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
-    t.string   "area"
-    t.string   "geo_id"
+    t.string   "area",                            null: false
+    t.string   "geo_id",                          null: false
     t.boolean  "has_industry",    default: false
     t.boolean  "has_agriculture", default: false
     t.boolean  "public",          default: true

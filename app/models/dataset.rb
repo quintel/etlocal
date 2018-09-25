@@ -4,6 +4,9 @@ class Dataset < ApplicationRecord
   has_many :commits
   has_many :edits, through: :commits, source: :dataset_edits
 
+  validates :geo_id, presence: true
+  validates :area,   presence: true
+
   def self.clones(dataset, user)
     where(geo_id: dataset.geo_id)
       .order("FIELD(`id`, #{dataset.id}) DESC, `created_at` DESC")

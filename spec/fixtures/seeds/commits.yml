@@ -1,0 +1,10 @@
+---
+- fields:
+  - number_of_inhabitants
+  - number_of_residences
+  - number_of_cars
+  - households_final_demand_electricity_demand
+  - households_final_demand_network_gas_demand
+  - residences_roof_surface_available_for_pv
+  message:
+    My commit message.

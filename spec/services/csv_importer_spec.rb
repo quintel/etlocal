@@ -22,7 +22,7 @@ RSpec.describe CSVImporter do
     CSV.parse(data, headers: true).each do |row|
       dataset = FactoryGirl.create(
         :dataset,
-        geo_id: row['geo_id'],
+        geo_id: row['geo_id'] || 'ZZ0001',
         user: User.robot
       )
 
@@ -78,6 +78,97 @@ RSpec.describe CSVImporter do
     it 'assigns the dataset edit value' do
       importer.run
       expect(DatasetEdit.last.value).to eq(5)
+    end
+
+    context 'with an area name' do
+      let(:commits) do
+        <<~YAML
+          ---
+          - fields:
+            - number_of_residences
+            message:
+              Because 5 is a magic number
+        YAML
+      end
+
+      let(:data) do
+        <<~CSV
+          geo_id,area,number_of_residences
+          GM0340,My First Area,5
+        CSV
+      end
+
+      it 'changes the area name' do
+        dataset = Dataset.find_by_geo_id('GM0340')
+
+        expect { importer.run }
+          .to(change { dataset.reload.area }.to('My First Area'))
+      end
+    end
+
+    context 'with a blank area name' do
+      let(:commits) do
+        <<~YAML
+          ---
+          - fields:
+            - number_of_residences
+            message:
+              Because 5 is a magic number
+        YAML
+      end
+
+      let(:data) do
+        <<~CSV
+          geo_id,area,number_of_residences
+          GM0340,,5
+        CSV
+      end
+
+      it 'does not change the area name' do
+        dataset = Dataset.find_by_geo_id('GM0340')
+        expect { importer.run }.not_to(change { dataset.reload.area })
+      end
+    end
+
+    context 'with create_missing_datasets: true' do
+      let(:importer) do
+        described_class.new(
+          data_csv.path,
+          commits_yml.path,
+          create_missing_datasets: true
+        )
+      end
+
+      let(:commits) do
+        <<~YAML
+          ---
+          - fields:
+            - number_of_residences
+            message:
+              Because 5 is a magic number
+        YAML
+      end
+
+      let(:data) do
+        <<~CSV
+          geo_id,area,number_of_residences
+          GM0340,My First Area,5
+        CSV
+      end
+
+      it 'changes the area name' do
+        importer.run
+
+        expect(Dataset.find_by_geo_id('GM0340').area).to eq('My First Area')
+      end
+
+      it 'creates one new commit' do
+        expect { importer.run }.to change(Commit, :count).by(1)
+      end
+
+      it 'does not create a new dataset' do
+        expect { importer.run }.not_to change(Dataset, :count)
+      end
     end
   end
 
@@ -554,6 +645,77 @@ RSpec.describe CSVImporter do
 
     it 'raises an error' do
       expect { importer.run }.to raise_error(/no dataset exists matching/i)
+    end
+
+    context 'with create_missing_datasets: true and no "area" in the CSV' do
+      let(:importer) do
+        described_class.new(
+          data_csv.path,
+          commits_yml.path,
+          create_missing_datasets: true
+        )
+      end
+
+      it 'raises an error' do
+        expect { importer.run }
+          .to raise_error(/is missing mandatory headers: "area"/i)
+      end
+    end
+
+    context 'with create_missing_datasets: true and a blank "area" in the CSV' do
+      let(:importer) do
+        described_class.new(
+          data_csv.path,
+          commits_yml.path,
+          create_missing_datasets: true
+        )
+      end
+
+      let(:data) do
+        <<~CSV
+          geo_id,area,number_of_inhabitants
+          GM0340,,5
+        CSV
+      end
+
+      it 'raises an error' do
+        expect { importer.run }.to raise_error(/Area can't be blank/i)
+      end
+    end
+
+    context 'with create_missing_datasets: true and an "area" in the CSV' do
+      let(:importer) do
+        described_class.new(
+          data_csv.path,
+          commits_yml.path,
+          create_missing_datasets: true
+        )
+      end
+
+      let(:data) do
+        <<~CSV
+          geo_id,area,number_of_inhabitants
+          GM0340,My First Area,5
+        CSV
+      end
+
+      it 'creates a new dataset' do
+        expect { importer.run }.to change(Dataset, :count).by(1)
+      end
+
+      it 'sets the dataset area name' do
+        importer.run
+
+        dataset = Dataset.find_by_geo_id('GM0340')
+        expect(dataset.area).to eq('My First Area')
+      end
+
+      it 'sets the new area to belong to the robot' do
+        importer.run
+
+        dataset = Dataset.find_by_geo_id('GM0340')
+        expect(dataset.user).to eq(User.robot)
+      end
     end
   end
 

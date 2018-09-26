@@ -22,4 +22,5 @@ config/database.yml
 config/email.yml
 db/shapes/*
 db/datasets/*.csv
+db/seeds/*.csv
 coverage/*

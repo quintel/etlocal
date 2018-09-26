@@ -1,54 +1,80 @@
 require 'rails_helper'
 
 describe DatasetImporter do
-  before do
-    csv = [fixture_path, 'nl_datasets.csv'].join('/')
+  let(:csv_fixture_dir) { "#{fixture_path}/seeds" }
+  let(:dataset_importer) { described_class.new("#{fixture_path}/seeds") }
 
-    expect(dataset_importer).to receive(:datasets)
-      .at_least(:once)
-      .and_return(CSV.read(csv, headers: true))
+  describe 'import new datasets' do
+    it 'adds all datasets' do
+      expect { dataset_importer.import }.to change(Dataset, :count).by(4)
+    end
   end
 
-  let(:dataset_importer) { DatasetImporter.new }
+  describe 'importing a dataset that already exists' do
+    let(:user) { User.robot }
 
-  it "imports all datasets" do
-    dataset_importer.import
-
-    expect(Dataset.count).to eq(8)
-  end
-
-  describe "re-importing" do
-    let!(:dataset) { FactoryGirl.create(:dataset, geo_id: 'BU16800000') }
-    let!(:robot_commit) {
-      FactoryGirl.create(:commit,
-        user: User.robot, dataset: dataset, message: "Test")
-    }
-
-    # Brings the total to: 7 + 1
-    it "imports 7 datasets" do
-      dataset_importer.import
-
-      expect(Dataset.count).to eq(8)
+    let!(:dataset) do
+      FactoryGirl.create(:dataset, geo_id: 'BU22168000', user: user)
     end
 
-    describe "with existing changes" do
-      describe "doesn't change a value if it is changed by another user" do
-        # Robot commit (that is always present)
-        # New commit
-        let(:commit) {
-          FactoryGirl.create(:commit, dataset: dataset, message: "Test")
-        }
+    let!(:commit) do
+      FactoryGirl.create(
+        :commit,
+        user: user, dataset: dataset, message: 'Test'
+      )
+    end
 
-        let!(:dataset_edit) {
-          FactoryGirl.create(:dataset_edit, commit: commit,
-            key: 'residences_roof_surface_available_for_pv', value: '1.0')
-        }
+    let!(:dataset_edit) do
+      FactoryGirl.create(
+        :dataset_edit,
+        commit: commit,
+        key: 'residences_roof_surface_available_for_pv',
+        value: '1.0'
+      )
+    end
 
-        it "doesn't update value of the existing dataset" do
-          dataset_importer.import
+    it 'imports 3 datasets' do
+      expect { dataset_importer.import }.to change(Dataset, :count).by(3)
+    end
 
-          expect(dataset_edit.reload.value).to eq(1.0)
-        end
+    describe 'datasets owned by the Robot' do
+      let(:user) { User.robot }
+
+      it 'have old commits removed' do
+        expect { dataset_importer.import }
+          .to change { Commit.where(id: commit.id).count }
+          .from(1).to(0)
+      end
+
+      it 'have old dataset edits removed' do
+        expect { dataset_importer.import }
+          .to change { DatasetEdit.where(id: dataset_edit.id).count }
+          .from(1).to(0)
+      end
+
+      it 'sets the value of the existing dataset' do
+        expect { dataset_importer.import }
+          .to(change do
+            Dataset.find(dataset.id).editable_attributes
+              .edits_for('residences_roof_surface_available_for_pv')
+              .last.value
+          end.from(1.0).to(31.01))
+      end
+    end
+
+    describe 'datasets owned by a non-Robot user' do
+      let(:user) { FactoryGirl.create(:user) }
+
+      it 'keeps the old commit' do
+        expect { dataset_importer.import }
+          .not_to change { Commit.where(id: commit.id).count }
+          .from(1)
+      end
+
+      it 'keeps the old edit' do
+        expect { dataset_importer.import }
+          .not_to change { DatasetEdit.where(id: dataset_edit.id).count }
+          .from(1)
       end
     end
   end

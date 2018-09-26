@@ -19,11 +19,12 @@ class CSVImporter
     new(data_path, commits_path).run(&block)
   end
 
-  def initialize(data_path, commits_path)
-    @data_path     = data_path.to_s
-    @commits_path  = commits_path.to_s
-    @has_validated = false
-    @errors        = []
+  def initialize(data_path, commits_path, create_missing_datasets: false)
+    @data_path      = data_path.to_s
+    @commits_path   = commits_path.to_s
+    @create_missing = create_missing_datasets
+    @has_validated  = false
+    @errors         = []
   end
 
   # Public: Reads the CSV and commits file, creating a new commits for each
@@ -67,7 +68,7 @@ class CSVImporter
     @commits ||= YAML.load_file(@commits_path).map do |commit_data|
       fields =
         if commit_data['fields'] == GLOB_COMMIT_FIELDS
-          provided_headers - mandatory_headers
+          provided_headers - mandatory_headers - optional_headers
         else
           commit_data['fields']
         end
@@ -78,7 +79,12 @@ class CSVImporter
 
   # Internal: Headers which every data CSV must include.
   def mandatory_headers
-    %w[geo_id]
+    @create_missing ? %w[geo_id area] : %w[geo_id]
+  end
+
+  # Internal: Headers which may be omitted.
+  def optional_headers
+    @create_missing ? [] : %w[area]
   end
 
   # Internal: Headers which a CSV may optionally include.
@@ -137,17 +143,27 @@ class CSVImporter
 
   # Internal: Finds the dataset which represents a CSV row.
   def dataset_from_row(row)
-    criteria = Hash[mandatory_headers.map { |key| [key, row[key]] }]
-    Dataset.where(criteria.merge(user: User.robot)).first!
+    datasets = Dataset.where(geo_id: row['geo_id'], user: User.robot)
+
+    if @create_missing && datasets.none?
+      Dataset.create!(row.to_h.slice('geo_id', 'area').merge(user: User.robot))
+    else
+      datasets.first!
+    end
   rescue ActiveRecord::RecordNotFound => ex
     raise ActiveRecord::RecordNotFound,
-      "No dataset exists matching: #{criteria.inspect}",
+      "No dataset exists matching geo ID: #{row['geo_id'].inspect}",
       ex.backtrace
   end
 
   # Internal: Runs the CSV importer for a single row in the data file.
   def run_row(row)
     dataset = dataset_from_row(row)
+
+    if row['area'].present? && dataset.area != row['area'].strip
+      dataset.area = row['area'].strip
+      dataset.save!
+    end
 
     commits.map do |c|
       commit = c.build_commit(dataset, row)

@@ -1,0 +1,9 @@
+---
+- fields:
+  - number_of_residences
+  message:
+    Because 5 is a magic number
+- fields:
+  - number_of_inhabitants
+  message:
+    Because 10 is a magic number

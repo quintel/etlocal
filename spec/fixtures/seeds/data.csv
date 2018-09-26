@@ -1,0 +1,5 @@
+geo_id,name,number_of_inhabitants,number_of_residences,number_of_cars,households_final_demand_electricity_demand,households_final_demand_network_gas_demand,residences_roof_surface_available_for_pv
+BU22168000,Wijk 01 Annen,155,60,95,4930,2330,31.01
+BU22168001,Wijk 02 Eext,1225,530,715,3330,1900,24.8530057
+BU22168002,Wijk 03 Eext,155,80,105,3600,2210,41.12
+BU22168003,Wijk 04 Anloo,330,150,195,3430,2100,123.1

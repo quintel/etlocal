@@ -15,7 +15,7 @@ describe DatasetsController do
     end
 
     describe "#edit" do
-      let(:dataset) { FactoryGirl.create(:dataset, geo_id: 'test_1', area: "Test") }
+      let(:dataset) { FactoryGirl.create(:dataset, geo_id: 'test_1', name: "Test") }
 
       it "visits edit" do
         get :edit, params: { id: dataset.id }, format: :js, xhr: true
@@ -25,7 +25,7 @@ describe DatasetsController do
     end
 
     describe "#show" do
-      let(:dataset) { FactoryGirl.create(:dataset, geo_id: 'test_1', area: "Test") }
+      let(:dataset) { FactoryGirl.create(:dataset, geo_id: 'test_1', name: "Test") }
 
       it "visits show" do
         get :show, params: { id: dataset.id }, format: :js, xhr: true
@@ -38,7 +38,7 @@ describe DatasetsController do
       let(:user) { FactoryGirl.create(:user) }
       let(:dataset) { FactoryGirl.create(:dataset,
                                          geo_id: 'test_1',
-                                         area: "Test",
+                                         name: "Test",
                                          user: user) }
 
       describe "insufficient data for an analyzes" do
@@ -64,7 +64,7 @@ describe DatasetsController do
       describe "clones the dataset - when public" do
         let(:dataset) { FactoryGirl.create(:dataset,
                                            geo_id: 'test_1',
-                                           area: "Test",
+                                           name: "Test",
                                            user: user,
                                            public: true) }
 
@@ -78,7 +78,7 @@ describe DatasetsController do
       describe "can clone the dataset - when private - and the user's" do
         let(:dataset) { FactoryGirl.create(:dataset,
                                            geo_id: 'test_1',
-                                           area: "Test",
+                                           name: "Test",
                                            user: user,
                                            public: false) }
 
@@ -92,7 +92,7 @@ describe DatasetsController do
       describe "can't clone the dataset - when private - and not the user's" do
         let(:dataset) { FactoryGirl.create(:dataset,
                                            geo_id: 'test_1',
-                                           area: "Test",
+                                           name: "Test",
                                            user: FactoryGirl.create(:user),
                                            public: false) }
 

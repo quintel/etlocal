@@ -5,7 +5,7 @@ class Dataset < ApplicationRecord
   has_many :edits, through: :commits, source: :dataset_edits
 
   validates :geo_id, presence: true
-  validates :area,   presence: true
+  validates :name,   presence: true
 
   def self.clones(dataset, user)
     where(geo_id: dataset.geo_id)
@@ -55,7 +55,7 @@ class Dataset < ApplicationRecord
 
   def temp_name
     @temp_name ||= begin
-      stripped = area.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+      stripped = name.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
 
       "#{ SecureRandom.hex(10) }-#{ stripped }"
     end

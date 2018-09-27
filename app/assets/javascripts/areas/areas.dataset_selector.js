@@ -9,7 +9,7 @@ Areas.DatasetSelector = (function () {
         var popup   = this.areas.map.getOverlays().item(0),
             content = document.getElementById('popup-content');
 
-        $(content).find('h5').html(data.area);
+        $(content).find('h5').html(data.name);
         $(content).find('em').html(data.group);
         $(content).find('a.dataset-open')
             .off('click')

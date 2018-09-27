@@ -68,7 +68,7 @@ class CSVImporter
     @commits ||= YAML.load_file(@commits_path).map do |commit_data|
       fields =
         if commit_data['fields'] == GLOB_COMMIT_FIELDS
-          provided_headers - mandatory_headers - optional_headers
+          schema.changes
         else
           commit_data['fields']
         end
@@ -77,25 +77,13 @@ class CSVImporter
     end
   end
 
-  # Internal: Headers which every data CSV must include.
-  def mandatory_headers
-    @create_missing ? %w[geo_id name] : %w[geo_id]
-  end
-
-  # Internal: Headers which may be omitted.
-  def optional_headers
-    @create_missing ? [] : %w[name]
-  end
-
-  # Internal: Headers which a CSV may optionally include.
-  def allowed_headers
-    @allowed_headers ||=
-      mandatory_headers + InterfaceElement.items.map(&:key).map(&:to_s)
-  end
-
   # Internal: The list of headers specified in the CSV file.
   def provided_headers
     @provided_headers ||= data_file.peek.headers
+  end
+
+  def schema
+    @schema ||= Schema.new(provided_headers, name_required: @create_missing)
   end
 
   private

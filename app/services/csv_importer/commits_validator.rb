@@ -40,7 +40,7 @@ class CSVImporter
     def validate_fields
       @importer.commits.map do |commit|
         SubsetFieldValidator.call(
-          @importer.allowed_headers, commit.keys
+          @importer.schema.allowed_headers, commit.keys
         )
       end.compact
     end
@@ -48,7 +48,7 @@ class CSVImporter
     # Internal: Asserts that the the fields specified in each commit exist in
     # the data CSV file.
     def validate_csv_headers
-      provided = @importer.provided_headers
+      provided = @importer.schema.provided_headers
 
       @importer.commits.map do |commit|
         SubsetFieldValidator.call(

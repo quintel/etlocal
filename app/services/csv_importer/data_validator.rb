@@ -14,14 +14,12 @@ class CSVImporter
       [
         SubsetFieldValidator.call(
           @importer.commits.flat_map(&:keys).uniq,
-          @importer.provided_headers -
-            @importer.mandatory_headers -
-            @importer.optional_headers,
+          @importer.schema.changes,
           message: 'contains fields not used by any commit'
         ),
         SubsetFieldValidator.call(
-          @importer.provided_headers,
-          @importer.mandatory_headers,
+          @importer.schema.provided_headers,
+          @importer.schema.mandatory_headers,
           message: 'is missing mandatory headers'
         )
       ].compact

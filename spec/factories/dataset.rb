@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :dataset do
     user
-    area "ameland"
     geo_id "ameland"
+    name "ameland"
   end
 end

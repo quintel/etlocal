@@ -30,7 +30,10 @@ class CommitsController < ApplicationController
         @dataset.editable_attributes.as_json
       )
 
-      flash.now[:success] = I18n.t("dataset_edits.success", dataset: @dataset.area)
+      flash.now[:success] = I18n.t(
+        'dataset_edits.success',
+        dataset: @dataset.name
+      )
     else
       @commit.build_source
     end

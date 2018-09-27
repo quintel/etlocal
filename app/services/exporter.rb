@@ -13,7 +13,7 @@ module Exporter
 
     JSON.parse(response).each do |dataset|
       Transformer::DatasetGenerator.new(dataset).generate
-      puts "Successfully analyzed and exported #{dataset[:area]}"
+      puts "Successfully analyzed and exported #{dataset[:name]}"
     end
   rescue RestClient::ExceptionWithResponse
     puts "Failed to fetch data for #{dataset_ids}"

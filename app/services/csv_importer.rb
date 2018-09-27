@@ -79,12 +79,12 @@ class CSVImporter
 
   # Internal: Headers which every data CSV must include.
   def mandatory_headers
-    @create_missing ? %w[geo_id area] : %w[geo_id]
+    @create_missing ? %w[geo_id name] : %w[geo_id]
   end
 
   # Internal: Headers which may be omitted.
   def optional_headers
-    @create_missing ? [] : %w[area]
+    @create_missing ? [] : %w[name]
   end
 
   # Internal: Headers which a CSV may optionally include.
@@ -146,7 +146,7 @@ class CSVImporter
     datasets = Dataset.where(geo_id: row['geo_id'], user: User.robot)
 
     if @create_missing && datasets.none?
-      Dataset.create!(row.to_h.slice('geo_id', 'area').merge(user: User.robot))
+      Dataset.create!(row.to_h.slice('geo_id', 'name').merge(user: User.robot))
     else
       datasets.first!
     end
@@ -160,8 +160,8 @@ class CSVImporter
   def run_row(row)
     dataset = dataset_from_row(row)
 
-    if row['area'].present? && dataset.area != row['area'].strip
-      dataset.area = row['area'].strip
+    if row['name'].present? && dataset.name != row['name'].strip
+      dataset.name = row['name'].strip
       dataset.save!
     end
 

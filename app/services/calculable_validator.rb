@@ -5,7 +5,7 @@ class CalculableValidator < ActiveModel::Validator
     )
 
     begin
-      dataset = Dataset.new(area: 'calculation_shell')
+      dataset = Dataset.new(name: 'calculation_shell')
       CalculateContainer.new(
         calc_attrs.merge(
           area: dataset.temp_name,

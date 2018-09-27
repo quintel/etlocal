@@ -2,7 +2,7 @@ class DatasetDownloader
   def initialize(dataset)
     @area_name = dataset.temp_name
     @attributes = dataset.editable_attributes.as_json.merge(
-      area: @area_name,
+      name: @area_name,
       base_dataset: dataset.country
     )
   end

@@ -80,7 +80,7 @@ RSpec.describe CSVImporter do
       expect(DatasetEdit.last.value).to eq(5)
     end
 
-    context 'with an area name' do
+    context 'with a region name' do
       let(:commits) do
         <<~YAML
           ---
@@ -93,20 +93,20 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,area,number_of_residences
+          geo_id,name,number_of_residences
           GM0340,My First Area,5
         CSV
       end
 
-      it 'changes the area name' do
+      it 'changes the region name' do
         dataset = Dataset.find_by_geo_id('GM0340')
 
         expect { importer.run }
-          .to(change { dataset.reload.area }.to('My First Area'))
+          .to(change { dataset.reload.name }.to('My First Area'))
       end
     end
 
-    context 'with a blank area name' do
+    context 'with a blank name' do
       let(:commits) do
         <<~YAML
           ---
@@ -119,14 +119,14 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,area,number_of_residences
+          geo_id,name,number_of_residences
           GM0340,,5
         CSV
       end
 
-      it 'does not change the area name' do
+      it 'does not change the dataset name' do
         dataset = Dataset.find_by_geo_id('GM0340')
-        expect { importer.run }.not_to(change { dataset.reload.area })
+        expect { importer.run }.not_to(change { dataset.reload.name })
       end
     end
 
@@ -151,15 +151,15 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,area,number_of_residences
+          geo_id,name,number_of_residences
           GM0340,My First Area,5
         CSV
       end
 
-      it 'changes the area name' do
+      it 'changes the dataset name' do
         importer.run
 
-        expect(Dataset.find_by_geo_id('GM0340').area).to eq('My First Area')
+        expect(Dataset.find_by_geo_id('GM0340').name).to eq('My First Area')
       end
 
       it 'creates one new commit' do
@@ -647,7 +647,7 @@ RSpec.describe CSVImporter do
       expect { importer.run }.to raise_error(/no dataset exists matching/i)
     end
 
-    context 'with create_missing_datasets: true and no "area" in the CSV' do
+    context 'with create_missing_datasets: true and no "name" in the CSV' do
       let(:importer) do
         described_class.new(
           data_csv.path,
@@ -658,11 +658,11 @@ RSpec.describe CSVImporter do
 
       it 'raises an error' do
         expect { importer.run }
-          .to raise_error(/is missing mandatory headers: "area"/i)
+          .to raise_error(/is missing mandatory headers: "name"/i)
       end
     end
 
-    context 'with create_missing_datasets: true and a blank "area" in the CSV' do
+    context 'with create_missing_datasets: true and a blank "name" in the CSV' do
       let(:importer) do
         described_class.new(
           data_csv.path,
@@ -673,17 +673,17 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,area,number_of_inhabitants
+          geo_id,name,number_of_inhabitants
           GM0340,,5
         CSV
       end
 
       it 'raises an error' do
-        expect { importer.run }.to raise_error(/Area can't be blank/i)
+        expect { importer.run }.to raise_error(/Name can't be blank/i)
       end
     end
 
-    context 'with create_missing_datasets: true and an "area" in the CSV' do
+    context 'with create_missing_datasets: true and an "name" in the CSV' do
       let(:importer) do
         described_class.new(
           data_csv.path,
@@ -694,7 +694,7 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,area,number_of_inhabitants
+          geo_id,name,number_of_inhabitants
           GM0340,My First Area,5
         CSV
       end
@@ -703,11 +703,11 @@ RSpec.describe CSVImporter do
         expect { importer.run }.to change(Dataset, :count).by(1)
       end
 
-      it 'sets the dataset area name' do
+      it 'sets the dataset name' do
         importer.run
 
         dataset = Dataset.find_by_geo_id('GM0340')
-        expect(dataset.area).to eq('My First Area')
+        expect(dataset.name).to eq('My First Area')
       end
 
       it 'sets the new area to belong to the robot' do

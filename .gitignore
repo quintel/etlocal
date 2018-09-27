@@ -18,6 +18,7 @@
 public/system/
 .~lock.*
 
+.env
 config/database.yml
 config/email.yml
 db/shapes/*

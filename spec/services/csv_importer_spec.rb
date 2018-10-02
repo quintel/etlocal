@@ -764,4 +764,66 @@ RSpec.describe CSVImporter do
       expect(commits).to eq(Commit.last(1))
     end
   end
+
+  context 'with a valid single edit/single commit using the class method' do
+    let(:commits) do
+      <<~YAML
+        ---
+        - fields:
+          - number_of_residences
+          message:
+            Because 5 is a magic number
+      YAML
+    end
+
+    let(:data) do
+      <<~CSV
+        geo_id,number_of_residences
+        GM0340,5
+      CSV
+    end
+
+    let(:result) { described_class.run(data_csv.path, commits_yml.path) }
+
+    it 'returns one commit' do
+      expect(result).to eq(Commit.last(1))
+    end
+  end
+
+  context 'with a new dataset, create_missing_datasets, using the class method' do
+    let(:commits) do
+      <<~YAML
+        ---
+        - fields:
+          - number_of_residences
+          message:
+            Because 5 is a magic number
+      YAML
+    end
+
+    let(:data) do
+      <<~CSV
+        geo_id,name,number_of_residences
+        GM0340,ABC,5
+      CSV
+    end
+
+    let(:result) do
+      described_class.run(
+        data_csv.path,
+        commits_yml.path,
+        create_missing_datasets: true
+      )
+    end
+
+    before { Dataset.find_by_geo_id('GM0340').destroy! }
+
+    it 'returns one commit' do
+      expect(result).to eq(Commit.last(1))
+    end
+
+    it 'creates a new dataset' do
+      expect { result }.to change(Dataset, :count).by(1)
+    end
+  end
 end

@@ -44,7 +44,8 @@ class DatasetImporter
   def import_data!
     bar = create_progress_bar(
       'Importing data',
-      `wc -l #{@dir.join('data.csv').to_s.shellescape}`.split.first.to_i - 1
+      `wc -l #{@dir.join('data.csv').to_s.shellescape}`.split.first.to_i -
+        (csv_ends_with_newline? ? 1 : 0)
     )
 
     importer.run do |_row, runner|
@@ -66,5 +67,10 @@ class DatasetImporter
       "#{title} [:bar] :current/:total (:percent)",
       frequency: 10, total: total, width: TTY::Screen.width
     )
+  end
+
+  def csv_ends_with_newline?
+    path = @dir.join('data.csv')
+    %W[\n \r].include?(path.read(1, path.size - 1))
   end
 end

@@ -15,8 +15,8 @@ class CSVImporter
   # as to run before and after callbacks. See CSVImporter#run.
   #
   # Returns an array of the commits which were created.
-  def self.run(data_path, commits_path, &block)
-    new(data_path, commits_path).run(&block)
+  def self.run(*args, **kwargs, &block)
+    new(*args, **kwargs).run(&block)
   end
 
   def initialize(data_path, commits_path, create_missing_datasets: false)

@@ -10,8 +10,8 @@ mapbox_defaults: &mapbox_defaults
 
 dataset_selector:
   - name: provinces
-    id: "grdw.amc5a219"
-    source: "provinces"
+    id: "grdw.8kst3bc1"
+    source: "2018_province-df2r8c"
     minres: 300
     maxres: 700
     filter: id
@@ -19,8 +19,8 @@ dataset_selector:
     <<: *mapbox_defaults
 
   - name: municipalities
-    id: "grdw.8fqfz807"
-    source: "gem_2015_crs84-3uafgo"
+    id: "grdw.8l1you4h"
+    source: "2018_municipality-0gfs06"
     minres: 100
     maxres: 300
     filter: id
@@ -28,17 +28,17 @@ dataset_selector:
     <<: *mapbox_defaults
 
   - name: districts
-    id: "grdw.cn6l4r76"
-    source: "wijk_2015_crs84-7a2los"
+    id: "grdw.b1nhrx6v"
+    source: "2018_district-5xvsqk"
     minres: 40
     maxres: 100
     filter: id
     name_attr: id
     <<: *mapbox_defaults
 
-  - name: neighborhoods
-    id: "grdw.1y5gwme3"
-    source: "buurt_2015_crs84-47dnyt"
+  - name: neighbourhoods
+    id: "grdw.2wvtye5a"
+    source: "2018_neighbourhood-08ucih"
     minres: 0
     maxres: 40
     filter: id

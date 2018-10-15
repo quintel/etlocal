@@ -2,7 +2,9 @@ require 'rails_helper'
 
 describe DatasetImporter do
   let(:csv_fixture_dir) { "#{fixture_path}/seeds" }
-  let(:dataset_importer) { described_class.new("#{fixture_path}/seeds") }
+  let(:dataset_importer) do
+    described_class.new("#{fixture_path}/seeds", show_progress: false)
+  end
 
   describe 'import new datasets' do
     it 'adds all datasets' do

@@ -10,8 +10,14 @@
 class DatasetImporter
   delegate :valid?, :errors, to: :importer
 
-  def initialize(dir)
+  # A progress bar which doesn't do anything.
+  class NullProgressBar
+    def advance(*) end
+  end
+
+  def initialize(dir, show_progress: true)
     @dir = Pathname.new(dir)
+    @show_progress = show_progress
   end
 
   def import
@@ -37,7 +43,7 @@ class DatasetImporter
       DatasetEdit.where(commit_id: group.map(&:id)).delete_all
       group.each(&:destroy)
 
-      bar.advance(group.length) if Rails.env.development?
+      bar.advance(group.length) if @show_progress
     end
   end
 
@@ -50,7 +56,7 @@ class DatasetImporter
 
     importer.run do |_row, runner|
       runner.call
-      bar.advance if Rails.env.development?
+      bar.advance if @show_progress
     end
   end
 
@@ -63,6 +69,8 @@ class DatasetImporter
   end
 
   def create_progress_bar(title, total)
+    return NullProgressBar.new unless @show_progress
+
     TTY::ProgressBar.new(
       "#{title} [:bar] :current/:total (:percent)",
       frequency: 10, total: total, width: TTY::Screen.width

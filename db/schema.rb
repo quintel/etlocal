@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181016092655) do
+ActiveRecord::Schema.define(version: 20181016130921) do
 
-  create_table "commits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "commits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.integer  "source_id"
     t.integer  "user_id"
     t.text     "message",    limit: 65535
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20181016092655) do
     t.index ["user_id"], name: "index_commits_on_user_id", using: :btree
   end
 
-  create_table "dataset_edits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "dataset_edits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.integer  "commit_id"
     t.string   "key"
     t.float    "value",      limit: 53
@@ -33,10 +33,10 @@ ActiveRecord::Schema.define(version: 20181016092655) do
     t.index ["commit_id"], name: "index_dataset_edits_on_commit_id", using: :btree
   end
 
-  create_table "datasets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "datasets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.integer  "user_id"
-    t.string   "name",                            null: false
-    t.string   "geo_id",                          null: false
+    t.string   "name",            default: "",    null: false
+    t.string   "geo_id",          default: "",    null: false
     t.boolean  "has_industry",    default: false
     t.boolean  "has_agriculture", default: false
     t.boolean  "public",          default: true
@@ -45,13 +45,13 @@ ActiveRecord::Schema.define(version: 20181016092655) do
     t.index ["user_id"], name: "index_datasets_on_user_id", using: :btree
   end
 
-  create_table "groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "groups", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.string   "key"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "sources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "sources", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.string   "source_file_file_name"
@@ -60,15 +60,15 @@ ActiveRecord::Schema.define(version: 20181016092655) do
     t.datetime "source_file_updated_at"
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
     t.integer  "group_id"
-    t.string   "email",                  default: "", null: false
+    t.string   "email",                  limit: 191, default: "", null: false
     t.string   "name"
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
+    t.string   "encrypted_password",                 default: "", null: false
+    t.string   "reset_password_token",   limit: 191
     t.datetime "reset_password_sent_at"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["group_id"], name: "index_users_on_group_id", using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree

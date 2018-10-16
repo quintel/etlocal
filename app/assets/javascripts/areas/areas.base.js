@@ -15,9 +15,11 @@ var Areas = (function () {
 
         if (previousLayer !== filtered[0]) {
             this.popup.close();
-
             $(".dynamic .legend-item").hide();
-            $(".dynamic .legend-item." + filtered[0].name).show();
+
+            if (filtered[0]) {
+                $(".dynamic .legend-item." + filtered[0].name).show();
+            }
         }
     }
 

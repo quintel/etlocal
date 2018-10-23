@@ -13,7 +13,10 @@ Areas.Search = (function () {
                 c1 = ol.proj.fromLonLat([boundingBox[2], boundingBox[0]]),
                 c2 = ol.proj.fromLonLat([boundingBox[3], boundingBox[1]]);
 
-            this.areas.view.fit(c1.concat(c2), { duration: 500 });
+            this.areas.view.fit(c1.concat(c2), {
+                duration: 500,
+                minResolution: this.areas.layers.minResolution()
+            });
 
             this.scope
                 .removeClass("no-results")

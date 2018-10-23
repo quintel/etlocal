@@ -67,6 +67,15 @@ Areas.Layers = (function () {
 
         filter: function (method) {
             return this.layers.dataset_selector.filter(method);
+        },
+
+        minResolution: function() {
+            return Math.min.apply(
+                null,
+                this.areas.layers.layers.dataset_selector.map(function(layer) {
+                    return layer.minres
+                })
+            );
         }
     };
 

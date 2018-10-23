@@ -72,7 +72,7 @@ Areas.Layers = (function () {
         minResolution: function() {
             return Math.min.apply(
                 null,
-                this.areas.layers.layers.dataset_selector.map(function(layer) {
+                this.layers.dataset_selector.map(function(layer) {
                     return layer.minres
                 })
             );

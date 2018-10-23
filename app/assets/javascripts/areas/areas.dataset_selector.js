@@ -84,6 +84,7 @@ Areas.DatasetSelector = (function () {
                 e.preventDefault();
 
                 $("#dataset-overlay").hide();
+                $('#dataset-overlay .content').empty();
                 $('.content-map .container #search-bar').show();
             });
         },

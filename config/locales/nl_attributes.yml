@@ -141,12 +141,12 @@ nl:
         number_of_buildings: Aantal gebouwen
         buildings_roof_surface_available_for_pv: Geschikt dakoppervlak voor zon-PV
 
-        input_buildings_electricity_demand: Elektriciteitsgebruik
-        buildings_final_demand_network_gas_demand: Gasgebruik
-        buildings_final_demand_steam_hot_water_demand: Warmtegebruik
-        buildings_final_demand_wood_pellets_demand: Biomassagebruik
-        buildings_final_demand_coal_demand: Kolengebruik
-        buildings_final_demand_crude_oil_demand: Oliegebruik
+        input_buildings_electricity_demand: Elektriciteit
+        buildings_final_demand_network_gas_demand: Gas
+        buildings_final_demand_steam_hot_water_demand: Warmte
+        buildings_final_demand_wood_pellets_demand: Biomassa
+        buildings_final_demand_coal_demand: Kolen
+        buildings_final_demand_crude_oil_demand: Olie
 
         input_buildings_solar_pv_demand: Zon-PV-productie
         buildings_final_demand_solar_thermal_demand: Zonthermieproductie

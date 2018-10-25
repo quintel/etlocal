@@ -48,7 +48,7 @@ nl:
       households_solar_thermal_distribution: Verdeling zonthermie
 
       #buildings
-      buildings_final_demand: Final demand
+      buildings_final_demand: Eindgebruik
       buildings_local_production: Lokale energieproductie
       buildings_district_heating: Warmtenet
       buildings_electricity_distribution: Verdeling elektriciteit
@@ -72,7 +72,7 @@ nl:
       transport_road_cng_distribution: Verdeling CNG wegverkeer
       transport_road_hydrogen_distribution: Verdeling waterstof wegverkeer
       transport_road_lng_distribution: Verdeling LNG wegverkeer
-      transport_rail_electricity_distribution: Verdeling elektriciteit wegverkeer
+      transport_rail_electricity_distribution: Verdeling elektriciteit treinverkeer
       transport_rail_diesel_distribution: Verdeling diesel treinverkeer
       transport_energy_demand_crude_oil_non_energetic: Niet-energetisch oliegebruik
 

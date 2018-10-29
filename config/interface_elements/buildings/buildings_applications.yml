@@ -2,6 +2,9 @@ key: buildings_applications
 groups:
   - header: buildings_electricity_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - input_buildings_electricity_demand
     items:
       - key: buildings_final_demand_electricity_buildings_final_demand_for_lighting_electricity_parent_share
         unit: '%'
@@ -16,6 +19,9 @@ groups:
 
   - header: buildings_network_gas_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - buildings_final_demand_network_gas_demand
     items:
       - key: buildings_final_demand_network_gas_buildings_final_demand_for_appliances_network_gas_parent_share
         unit: '%'
@@ -28,6 +34,9 @@ groups:
 
   - header: buildings_wood_pellets_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - buildings_final_demand_wood_pellets_demand
     items:
       - key: buildings_final_demand_wood_pellets_buildings_final_demand_for_space_heating_wood_pellets_parent_share
         unit: '%'
@@ -38,6 +47,9 @@ groups:
 
   - header: buildings_coal_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - buildings_final_demand_coal_demand
     items:
       - key: buildings_final_demand_coal_buildings_final_demand_for_space_heating_coal_parent_share
         unit: '%'
@@ -48,6 +60,9 @@ groups:
 
   - header: buildings_crude_oil_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - buildings_final_demand_crude_oil_demand
     items:
       - key: buildings_final_demand_crude_oil_buildings_final_demand_for_space_heating_crude_oil_parent_share
         unit: '%'
@@ -58,6 +73,10 @@ groups:
 
   - header: buildings_network_gas_space_heating_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - buildings_final_demand_network_gas_demand
+        - buildings_final_demand_network_gas_buildings_final_demand_for_space_heating_network_gas_parent_share
     items:
       - key: buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_heatpump_air_water_network_gas_parent_share
         unit: '%'
@@ -70,6 +89,10 @@ groups:
 
   - header: buildings_electricity_space_heating_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - input_buildings_electricity_demand
+        - buildings_final_demand_electricity_buildings_final_demand_for_space_heating_electricity_parent_share
     items:
       - key: buildings_final_demand_for_space_heating_electricity_buildings_space_heater_collective_heatpump_water_water_ts_electricity_parent_share
         unit: '%'
@@ -84,6 +107,10 @@ groups:
 
   - header: buildings_electricity_lighting_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - input_buildings_electricity_demand
+        - buildings_final_demand_electricity_buildings_final_demand_for_lighting_electricity_parent_share
     items:
       - key: buildings_final_demand_for_lighting_electricity_buildings_lighting_efficient_fluorescent_electricity_parent_share
         unit: '%'
@@ -96,6 +123,10 @@ groups:
 
   - header: buildings_electricity_cooling_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - input_buildings_electricity_demand
+        - buildings_final_demand_electricity_buildings_final_demand_for_cooling_electricity_parent_share
     items:
       - key: buildings_final_demand_for_cooling_electricity_buildings_cooling_airconditioning_electricity_parent_share
         unit: '%'

@@ -24,6 +24,7 @@ groups:
 
   - header: area_electricity_grid_capacity
     type: slider
+    combination_method: average
     items:
       - key: lv_net_spare_capacity
         unit: '%'
@@ -42,6 +43,7 @@ groups:
         unit: 'MW'
 
   - header: area_electricity_grid_reinforcement
+    combination_method: min
     items:
       - key: lv_net_capacity_per_step
         unit: 'MW'

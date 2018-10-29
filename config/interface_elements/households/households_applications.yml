@@ -199,3 +199,19 @@ groups:
         unit: '%'
         flexible: true
         skip_validation: true
+<<<<<<< HEAD
+=======
+
+  - header: households_solar_thermal_distribution
+    type: slider
+    combination_method:
+      weighted_average:
+        - households_final_demand_solar_thermal_demand
+    items:
+      - key: households_water_heater_solar_thermal_households_useful_demand_for_space_heating_after_insulation_for_houses_with_solar_heater_parent_share
+        unit: '%'
+      - key: households_water_heater_solar_thermal_households_useful_demand_for_hot_water_for_houses_with_solar_heater_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+>>>>>>> add combination method to interface elements

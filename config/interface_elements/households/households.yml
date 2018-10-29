@@ -9,6 +9,9 @@ groups:
 
   - header: households_housing_stock_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - number_of_residences
     items:
     - key: input_percentage_of_apartments
       unit: '%'

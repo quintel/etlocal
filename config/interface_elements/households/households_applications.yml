@@ -2,6 +2,9 @@ key: households_applications
 groups:
   - header: households_electricity_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - households_final_demand_electricity_demand
     items:
       - key: households_final_demand_electricity_households_final_demand_for_cooking_electricity_parent_share
         unit: '%'
@@ -20,6 +23,9 @@ groups:
 
   - header: households_network_gas_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - households_final_demand_network_gas_demand
     items:
       - key: households_final_demand_network_gas_households_final_demand_for_cooking_network_gas_parent_share
         unit: '%'
@@ -34,6 +40,9 @@ groups:
 
   - header: households_steam_hot_water_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - households_final_demand_steam_hot_water_demand
     items:
       - key: households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share
         unit: '%'
@@ -44,6 +53,9 @@ groups:
 
   - header: households_wood_pellets_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - households_final_demand_wood_pellets_demand
     items:
       - key: households_final_demand_wood_pellets_households_final_demand_for_hot_water_wood_pellets_parent_share
         unit: '%'
@@ -56,6 +68,9 @@ groups:
 
   - header: households_crude_oil_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - households_final_demand_crude_oil_demand
     items:
       - key: households_final_demand_crude_oil_households_final_demand_for_space_heating_crude_oil_parent_share
         unit: '%'
@@ -66,6 +81,9 @@ groups:
 
   - header: households_coal_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - households_final_demand_coal_demand
     items:
       - key: households_final_demand_coal_households_final_demand_for_space_heating_coal_parent_share
         unit: '%'
@@ -76,6 +94,10 @@ groups:
 
   - header: households_network_gas_space_heating_hot_water_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - households_final_demand_network_gas_demand
+        - households_final_demand_network_gas_households_final_demand_for_space_heating_network_gas_parent_share
     items:
       - key: households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share
         unit: '%'
@@ -88,6 +110,10 @@ groups:
 
   - header: households_electricity_space_heating_hot_water_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - households_final_demand_electricity_demand
+        - households_final_demand_electricity_households_final_demand_for_space_heating_electricity_parent_share
     items:
       - key: households_final_demand_for_space_heating_electricity_households_space_heater_electricity_parent_share
         unit: '%'
@@ -102,6 +128,10 @@ groups:
 
   - header: households_electricity_cooking_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - households_final_demand_electricity_demand
+        - households_final_demand_electricity_households_final_demand_for_cooking_electricity_parent_share
     items:
       - key: households_final_demand_for_cooking_electricity_households_cooker_halogen_electricity_parent_share
         unit: '%'
@@ -114,6 +144,10 @@ groups:
 
   - header: households_electricity_lighting_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - households_final_demand_electricity_demand
+        - households_final_demand_electricity_households_final_demand_for_lighting_electricity_parent_share
     items:
       - key: households_final_demand_for_lighting_electricity_households_lighting_incandescent_electricity_parent_share
         unit: '%'
@@ -126,6 +160,10 @@ groups:
 
   - header: households_electricity_appliances_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - households_final_demand_electricity_demand
+        - households_final_demand_electricity_households_final_demand_for_appliances_electricity_parent_share
     items:
       - key: households_final_demand_for_appliances_electricity_households_appliances_clothes_dryer_electricity_parent_share
         unit: '%'
@@ -148,6 +186,10 @@ groups:
 
   - header: households_electricity_cooling_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - households_final_demand_electricity_demand
+        - households_final_demand_electricity_households_final_demand_for_cooling_electricity_parent_share
     items:
       - key: households_final_demand_for_cooling_electricity_households_cooling_airconditioning_electricity_parent_share
         unit: '%'
@@ -157,3 +199,19 @@ groups:
         unit: '%'
         flexible: true
         skip_validation: true
+<<<<<<< HEAD
+=======
+
+  - header: households_solar_thermal_distribution
+    type: slider
+    combination_method:
+      weighted_average:
+        - households_final_demand_solar_thermal_demand
+    items:
+      - key: households_water_heater_solar_thermal_households_useful_demand_for_space_heating_after_insulation_for_houses_with_solar_heater_parent_share
+        unit: '%'
+      - key: households_water_heater_solar_thermal_households_useful_demand_for_hot_water_for_houses_with_solar_heater_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+>>>>>>> add combination method to interface elements

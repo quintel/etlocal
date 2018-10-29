@@ -63,4 +63,3 @@ yarn-debug.log*
 
 # Ignore pycache
 __pycache__
-*.pyc

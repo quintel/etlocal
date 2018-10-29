@@ -60,3 +60,13 @@ yarn-debug.log*
 
 # Ignore Mac specific files
 .DS_Store
+.env
+config/.etsource_password
+config/database.yml
+config/email.yml
+db/shapes/*
+db/datasets/*.csv
+db/seeds/*.csv
+db/seeds/*.yml
+coverage/*
+__pycache__

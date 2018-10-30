@@ -36,14 +36,14 @@ dataset_selector:
   #   name_attr: id
   #   <<: *mapbox_defaults
 
-  # - name: neighbourhoods
-  #   id: "grdw.2wvtye5a"
-  #   source: "2018_neighbourhood-08ucih"
-  #   minres: 0
-  #   maxres: 40
-  #   filter: id
-  #   name_attr: id
-  #   <<: *mapbox_defaults
+  - name: neighbourhoods
+    id: "grdw.2wvtye5a"
+    source: "2018_neighbourhood-08ucih"
+    minres: 0
+    maxres: 40
+    filter: id
+    name_attr: id
+    <<: *mapbox_defaults
 
 chart:
   - name: potential_heat_wko_neighborhood

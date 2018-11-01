@@ -38,4 +38,16 @@ describe Api::V1::ExportsController do
       expect(body.fetch('number_of_cars')).to eq(2.0)
     end
   end
+
+  describe 'with special characters in the dataset name' do
+    let(:dataset) do
+      FactoryGirl.create(:dataset, name: "háp-py\n∑®'&^-%_().  o… ")
+    end
+
+    it 'removes special characters' do
+      get :show, params: { id: dataset.id }, format: :json
+
+      expect(body['area']).to eq('ameland_hap_py_o')
+    end
+  end
 end

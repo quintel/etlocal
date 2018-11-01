@@ -53,12 +53,17 @@ class Dataset < ApplicationRecord
     @editable_attributes ||= EditableAttributesCollection.new(self)
   end
 
-  def temp_name
-    @temp_name ||= begin
-      stripped = name.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  # Public: A version of the dataset name with normalize unicode characters, and
+  # any non-alphanumeric characters removed.
+  #
+  # Returns a string.
+  def normalized_name
+    name.strip.mb_chars.normalize(:kd).to_s
+      .downcase.gsub(/[^0-9a-z_\s\-]/, '').gsub(/[\s_-]+/, '_')
+  end
 
-      "#{ SecureRandom.hex(10) }-#{ stripped }"
-    end
+  def temp_name
+    @temp_name ||= "#{SecureRandom.hex(10)}-#{normalized_name}"
   end
 
   def creator

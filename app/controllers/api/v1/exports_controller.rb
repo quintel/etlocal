@@ -6,7 +6,7 @@ class Api::V1::ExportsController < ApplicationController
 
     json = datasets.map do |dataset|
       dataset.editable_attributes.as_json.merge(
-        area: "#{dataset.geo_id}_#{dataset.name.mb_chars.normalize(:kd).gsub(/[^\x00-\x7F]/n,'').delete('().\'').gsub(' ', '_').downcase.to_s}",
+        area: "#{dataset.geo_id}_#{dataset.normalized_name}",
         base_dataset: dataset.country,
         group: dataset.group
       )

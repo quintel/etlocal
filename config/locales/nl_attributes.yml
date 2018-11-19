@@ -183,9 +183,9 @@ nl:
         buildings_final_demand_for_space_heating_electricity_buildings_space_heater_collective_heatpump_water_water_ts_electricity_parent_share: Warmtepomp (bodem) met WKO
         buildings_final_demand_for_space_heating_electricity_buildings_space_heater_electricity_parent_share: Elektrische ketel
 
-        buildings_final_demand_for_lighting_electricity_buildings_lighting_efficient_fluorescent_electricity_parent_share: Gloeilamp
+        buildings_final_demand_for_lighting_electricity_buildings_lighting_efficient_fluorescent_electricity_parent_share: TL-buis (hoge opbrengst)
         buildings_final_demand_for_lighting_electricity_buildings_lighting_led_electricity_parent_share: LED-lamp
-        buildings_final_demand_for_lighting_electricity_buildings_lighting_standard_fluorescent_electricity_parent_share: Spaarlamp
+        buildings_final_demand_for_lighting_electricity_buildings_lighting_standard_fluorescent_electricity_parent_share: TL-buis
 
         buildings_final_demand_for_cooling_electricity_buildings_cooling_airconditioning_electricity_parent_share: Airconditioning
         buildings_final_demand_for_cooling_electricity_buildings_cooling_collective_heatpump_water_water_ts_electricity_parent_share: Warmtepomp (bodem) met WKO

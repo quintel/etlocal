@@ -10,9 +10,15 @@ groups:
   - header:
     type: slider
     items:
-    - key: input_percentage_of_old_residences
+    - key: input_percentage_of_apartments
       unit: '%'
-    - key: input_percentage_of_new_residences
+    - key: input_percentage_of_terraced_houses
+      unit: '%'
+    - key: input_percentage_of_corner_houses
+      unit: '%'
+    - key: input_percentage_of_semi_detached_houses
+      unit: '%'
+    - key: input_percentage_of_detached_houses
       unit: '%'
       flexible: true
       skip_validation: true

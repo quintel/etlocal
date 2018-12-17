@@ -24,7 +24,9 @@ en:
       area_electricity_grid_reinforcement: Electricity grid reinforcement
 
       #households
+      households_housing_stock_distribution: Housing stock
       households_final_demand: Final demand
+      households_insulation: Insulation
       households_local_production: Local energy production
       households_district_heating: District heating
       households_electricity_distribution: Electricity distribution
@@ -41,10 +43,10 @@ en:
       households_electricity_lighting_distribution: Lighting technologies - electricity
       households_electricity_appliances_distribution: Appliances - electricity
       households_electricity_cooling_distribution: Cooling technologies - electricity
-      households_solar_thermal_distribution: Solar thermal distribution
 
       #buildings
       buildings_final_demand: Final demand
+      buildings_insulation: Insulation
       buildings_local_production: Local energy production
       buildings_district_heating: District heating
       buildings_electricity_distribution: Electricity distribution

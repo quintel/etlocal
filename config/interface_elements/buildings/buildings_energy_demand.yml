@@ -14,3 +14,9 @@ groups:
       unit: 'TJ'
     - key: buildings_final_demand_crude_oil_demand
       unit: 'TJ'
+
+  - header: buildings_insulation
+    type: slider
+    items:
+    - key: input_buildings_heat_demand_reduction
+      unit: '%'

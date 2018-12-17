@@ -7,7 +7,7 @@ groups:
     - key: residences_roof_surface_available_for_pv
       unit: 'km<sup>2</sup>'
 
-  - header:
+  - header: households_housing_stock_distribution
     type: slider
     items:
     - key: input_percentage_of_apartments

@@ -31,7 +31,7 @@ nl:
         In dit tabblad kun je informatie invullen over de uitstoot van broeikasgassen in dit gebied. Ook kun je aangeven hoe hoog de huidige kosten van het elektriciteitsnetwerk zijn, hoeveel capaciteit er nog op het net beschikbaar is en hoe duur toekomstige uitbreidingen zullen zijn.
 
       households_energy_demand: |
-        In dit tabblad kun je per energiedrager aangeven hoe hoog het huidige energiegebruik van huishoudens is.
+        In dit tabblad kun je per energiedrager aangeven hoe hoog het huidige energiegebruik van huishoudens is en hoe geïsoleerd elk huistype is.
 
       households_energy_supply: |
         In dit tabblad kun je invullen hoeveel zonnestroom en zonnewarmte er geproduceerd wordt door huishoudens. Ook kun je aangeven hoe eventuele warmtenetten gevoed worden.
@@ -40,7 +40,7 @@ nl:
         In dit tabblad kun je per energiedrager aangeven waar huishoudens hun energie voor gebruiken. Hoeveel procent van het gasgebruik van huishoudens wordt gebruikt voor verwarming? En hoeveel voor koken? Ook kun je aangeven welke apparaten huishoudens gebruiken. Hoeveel procent van de huishoudens die met gas verwarmen heeft een combi-boiler? En hoeveel een hybride warmtepomp? Deze percentages staan standaard op het Nederlandse gemiddelde.
 
       buildings_energy_demand: |
-        In dit tabblad kun je per energiedrager aangeven hoe hoog het huidige energiegebruik is van de gebouwensector. Let op: Niet alle dienstverlening valt onder de sectie Gebouwen in het Energietransitiemodel. Het energiegebruik van transportdiensten (zoals openbaar vervoer) en centrale ICT-diensten (zoals datacenters) staat respectievelijk bij Transport en Industrie.
+        In dit tabblad kun je per energiedrager aangeven hoe hoog het huidige energiegebruik is van de gebouwensector en hoe geïsoleerd de gebouwen zijn. Let op: Niet alle dienstverlening valt onder de sectie Gebouwen in het Energietransitiemodel. Het energiegebruik van transportdiensten (zoals openbaar vervoer) en centrale ICT-diensten (zoals datacenters) staat respectievelijk bij Transport en Industrie.
 
       buildings_energy_supply: |
         In dit tabblad kun je invullen hoeveel zonnestroom en zonnewarmte er geproduceerd wordt door gebouwen. Ook kun je aangeven hoe eventuele warmtenetten gevoed worden.
@@ -89,4 +89,3 @@ nl:
 
       energy_heat_production: |
         In dit tabblad kun je aangeven hoeveel warmte er wordt geproduceerd in dit gebied door grootschalige verwarmingsketels. Deze warmte kan worden ingezet voor grootschalige stadsverwarming voor huishoudens en gebouwen of voor de warmtevraag in de landbouw of in de industrie.
-

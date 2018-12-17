@@ -31,7 +31,7 @@ en:
         In this tab you can specify how many greenhouse gasses are emitted in this area. Aditionally, you can provide information about the current costs and spare capacity of the power grid and costs of future grid reinforcements.
 
       households_energy_demand: |
-        In this tab you can specify how much energy is used in the households sector per energy carrier.
+        In this tab you can specify how much energy is used in the households sector per energy carrier and how well insulated each housing type is.
 
       households_energy_supply: |
         In this tab you can provide information about solar PV and solar thermal production in the households sector. In addition, you can specify how district heating networks are supplied (if applicable).
@@ -40,7 +40,7 @@ en:
         In this tab you can specify how energy is used by households per energy carrier. E.g. What percentage of natural gas demand in households is used for space heating? And what percentage of natural gas demand is used for cooking? In addition, you can specify which technologies are used by households. E.g. How many households that use gas for heating their homes own a combi boiler? And how many own a hybrid heat pump?
 
       buildings_energy_demand: |
-        In this tab you can specify how energy is used in the buildings sector per energy carrier. Note: In the ETM not all services are part of the buildings sector. The energy use of transport services (like public transport) and central ICT services (like data centers) can be provided in the 'Transport' and 'Industry' tabs respectively.
+        In this tab you can specify how energy is used in the buildings sector per energy carrier and how well insulated the buildings are. Note: In the ETM not all services are part of the buildings sector. The energy use of transport services (like public transport) and central ICT services (like data centers) can be provided in the 'Transport' and 'Industry' tabs respectively.
 
       buildings_energy_supply: |
         In this tab you can provide information about solar PV and solar thermal production in the buildings sector. In addition, you can specify how district heating networks are supplied (if applicable).
@@ -89,4 +89,3 @@ en:
 
       energy_heat_production: |
         In this tab you can specify how much heat is produced in this area by large-scale heat plants. This heat can be used for district heating in households and buildings, in agriculture and in industry.
-

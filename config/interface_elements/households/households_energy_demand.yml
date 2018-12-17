@@ -14,3 +14,33 @@ groups:
       unit: 'TJ'
     - key: households_final_demand_crude_oil_demand
       unit: 'TJ'
+
+  - header: households_insulation
+    type: slider
+    items:
+    - key: input_households_apartments_heat_demand_reduction
+      unit: '%'
+
+  - header:
+    type: slider
+    items:
+    - key: input_households_terraced_houses_heat_demand_reduction
+      unit: '%'
+
+  - header:
+    type: slider
+    items:
+    - key: input_households_corner_houses_heat_demand_reduction
+      unit: '%'
+
+  - header:
+    type: slider
+    items:
+    - key: input_households_semi_detached_houses_heat_demand_reduction
+      unit: '%'
+      
+  - header:
+    type: slider
+    items:
+    - key: input_households_detached_houses_heat_demand_reduction
+      unit: '%'

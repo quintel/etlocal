@@ -28,7 +28,9 @@ nl:
       area_electricity_grid_reinforcement: Verzwaring elektriciteitsnet
 
       #households
+      households_housing_stock_distribution: Huizenvoorraad
       households_final_demand: Eindgebruik
+      households_insulation: Isolatie
       households_local_production: Lokale energieproductie
       households_district_heating: Warmtenet
       households_electricity_distribution: Verdeling elektriciteit
@@ -49,6 +51,7 @@ nl:
 
       #buildings
       buildings_final_demand: Eindgebruik
+      buildings_insulation: Isolatie 
       buildings_local_production: Lokale energieproductie
       buildings_district_heating: Warmtenet
       buildings_electricity_distribution: Verdeling elektriciteit

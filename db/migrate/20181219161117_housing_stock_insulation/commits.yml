@@ -1,0 +1,20 @@
+---
+- fields:
+  - input_percentage_of_terraced_houses
+  - input_percentage_of_detached_houses
+  - input_percentage_of_semi_detached_houses
+  - input_percentage_of_corner_houses
+  - input_percentage_of_apartments
+
+  message:
+    "Analyse op basis van de Basisregistratie Adressen en Gebouwen (BAG) (2018)"
+
+- fields:
+  - input_households_terraced_houses_heat_demand_reduction
+  - input_households_detached_houses_heat_demand_reduction
+  - input_households_semi_detached_houses_heat_demand_reduction
+  - input_households_corner_houses_heat_demand_reduction
+  - input_households_apartments_heat_demand_reduction
+
+  message:
+    "Inschatting op basis van gemiddeld energielabel. Definitieve energielabels komen van http://www.ep-online.nl. Voorlopige energielabels zijn ingeschat op basis van woningtype en bouwjaar (Basisregistratie Adressen en Gebouwen)."

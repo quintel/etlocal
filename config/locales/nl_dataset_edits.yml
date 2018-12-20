@@ -39,10 +39,8 @@ nl:
       households_wood_pellets_distribution: Verdeling biomassa
       households_crude_oil_distribution: Verdeling olie
       households_coal_distribution: Verdeling kolen
-      households_network_gas_space_heating_distribution: Ruimteverwarming - gas
-      households_electricity_space_heating_distribution: Ruimteverwarming - elektriciteit
-      households_network_gas_hot_water_distribution: Warmwatersysteem - gas
-      households_electricity_hot_water_distribution: Warmwatersysteem - elektriciteit
+      households_network_gas_space_heating_hot_water_distribution: Ruimteverwarming en warm water - gas
+      households_electricity_space_heating_hot_water_distribution: Ruimteverwarming en warm water - elektriciteit
       households_electricity_cooking_distribution: Kooktoestel - elektriciteit
       households_electricity_lighting_distribution: Verlichting - elektriciteit
       households_electricity_appliances_distribution: Apparaten - elektriciteit
@@ -51,7 +49,7 @@ nl:
 
       #buildings
       buildings_final_demand: Eindgebruik
-      buildings_insulation: Isolatie 
+      buildings_insulation: Isolatie
       buildings_local_production: Lokale energieproductie
       buildings_district_heating: Warmtenet
       buildings_electricity_distribution: Verdeling elektriciteit

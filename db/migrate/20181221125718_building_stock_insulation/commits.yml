@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Inschatting op basis van gemiddeld energielabel. Definitieve energielabels komen van http://www.ep-online.nl (2018). Voorlopige energielabels zijn ingeschat op basis van gebouwtype, gebouwfunctie en bouwjaar (Basisregistratie Adressen en Gebouwen)."

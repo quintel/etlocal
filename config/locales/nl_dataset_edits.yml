@@ -106,6 +106,7 @@ nl:
       energy_electricity_gas: Elektriciteitsopwek gas
       energy_electricity_waste: Elektriciteitsopwek afvalverbranding
       energy_electricity_other_fossil: Overige fossiele elektriciteitsopwek
+      energy_import_residual_heat: Restwarmte
       energy_renewable_heat: Duurzame warmteproductie
       energy_fossil_heat: Fossiele warmteproductie
       energy_heat_loss: Verlies warmenetten

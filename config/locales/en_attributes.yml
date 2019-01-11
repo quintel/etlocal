@@ -384,6 +384,7 @@ en:
         input_energy_heater_for_heat_network_wood_pellets_production: Biomass-fired heater
         input_energy_heater_for_heat_network_geothermal_production: Geothermal heater
         input_energy_heater_for_heat_network_waste_mix_production: Waste-fired heater
+        energy_import_heat_demand: Residual heat imported from outside your region
         input_energy_heater_for_heat_network_network_gas_production: Gas-fired heater
         input_energy_heater_for_heat_network_coal_production: Coal-fired heater
         input_energy_heater_for_heat_network_crude_oil_production: Oil-fired heater

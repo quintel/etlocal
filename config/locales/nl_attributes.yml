@@ -150,7 +150,7 @@ nl:
         buildings_final_demand_coal_demand: Kolen
         buildings_final_demand_crude_oil_demand: Olie
         input_buildings_heat_demand_reduction: Warmtevraagreductie
-        
+
         input_buildings_solar_pv_demand: Zon-PV-productie
         buildings_final_demand_solar_thermal_demand: Zonthermieproductie
         input_buildings_district_heating_heater_network_gas_share: Gasketel
@@ -385,6 +385,7 @@ nl:
         input_energy_heater_for_heat_network_wood_pellets_production: Biomassaketel
         input_energy_heater_for_heat_network_geothermal_production: Geothermieketel
         input_energy_heater_for_heat_network_waste_mix_production: Afvalketel
+        energy_import_heat_demand: Restwarmte geïmporteerd van buiten jouw regio
         input_energy_heater_for_heat_network_network_gas_production: Gasketel
         input_energy_heater_for_heat_network_coal_production: Kolenketel
         input_energy_heater_for_heat_network_crude_oil_production: Olieketel

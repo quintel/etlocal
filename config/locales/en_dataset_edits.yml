@@ -101,6 +101,7 @@ en:
       energy_electricity_gas: Gas electricity production
       energy_electricity_waste: Waste electricity production
       energy_electricity_other_fossil: Other fossil electricity production
+      energy_import_residual_heat: Residual heat
       energy_renewable_heat: Renewable heat production
       energy_fossil_heat: Fossil heat production
       energy_heat_loss: Losses of heat networks

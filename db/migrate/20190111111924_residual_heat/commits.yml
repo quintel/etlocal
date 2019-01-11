@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Geïmporteerde (rest)warmte staat standaard op nul"

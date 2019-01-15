@@ -22,8 +22,3 @@ groups:
         unit: 'TJ'
       - key: input_energy_heater_for_heat_network_crude_oil_production
         unit: 'TJ'
-
-  - header: energy_heat_loss
-    items:
-      - key: energy_heat_network_loss_demand
-        unit: 'TJ'

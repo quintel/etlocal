@@ -1,0 +1,5 @@
+---
+- fields:
+  - analysis_year
+  message:
+    Het meest recente jaar waarvan het grootste deel van de benodigde informatie beschikbaar is.

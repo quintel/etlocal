@@ -8,7 +8,8 @@ from dataset_combiner import calculate
 from dataset_combiner import user_arguments
 from dataset_combiner import migration
 
-geo_id, name, dataset_ids = user_arguments.process(sys.argv[1:])
+geo_id, name, migration_name, dataset_ids = user_arguments.process(sys.argv[1:])
+print(geo_id, name, migration_name, dataset_ids, *dataset_ids)
 etlocal_root = str(Path(__file__).resolve().parents[2])
 
 interface_files = interface_element_collector.files_from(etlocal_root + '/config/interface_elements')
@@ -25,8 +26,7 @@ calculate.combined_values(interface_data)
 calculate.rounded_values(interface_data)
 calculate.flexible_shares(interface_data)
 
-
-migration_name = migration.create_for(geo_id, name.replace(" ", "_"))
+migration_name = migration.create_for(geo_id, migration_name)
 migration_path, migration_file, migration_folder = migration.return_file_folder_path(migration_name)
 
 csvData = migration.generate_rows(geo_id, name, interface_data)

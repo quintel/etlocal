@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Tholen, Aalburg, Baarle-Nassau, Bergen op Zoom, Breda, Dongen, Etten-Leur, Geertruidenberg, Gilze en Rijen, Goirle, Heusden, Hilvarenbeek, Loon op Zand, Oisterwijk, Oosterhout, Rucphen, Steenbergen, Tilburg, Waalwijk, Werkendam, Woensdrecht, Woudrichem, Zundert, Halderberge, Roosendaal, Moerdijk, Drimmelen, Alphen-Chaam"

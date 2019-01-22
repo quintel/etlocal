@@ -26,11 +26,7 @@ calculate.combined_values(interface_data)
 calculate.rounded_values(interface_data)
 calculate.flexible_shares(interface_data)
 
-<<<<<<< HEAD
-migration_name = migration.create_for(geo_id, migration_name)
-=======
-migration_name = migration.create_for(geo_id, name)
->>>>>>> 8d2690b... added dataset combinator script
+migration_name = migration.create_for(geo_id, name.replace(" ", "_"))
 migration_path, migration_file, migration_folder = migration.return_file_folder_path(migration_name)
 
 csvData = migration.generate_rows(geo_id, name, interface_data)

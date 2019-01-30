@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Beemster, Edam-Volendam, Landsmeer, Oostzaan, Purmerend, Zaanstad, Waterland, Wormerland"

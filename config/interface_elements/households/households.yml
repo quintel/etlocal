@@ -7,12 +7,48 @@ groups:
     - key: residences_roof_surface_available_for_pv
       unit: 'km<sup>2</sup>'
 
-  - header:
+  - header: households_housing_stock_distribution
     type: slider
     items:
-    - key: input_percentage_of_old_residences
+    - key: input_percentage_of_apartments
       unit: '%'
-    - key: input_percentage_of_new_residences
+    - key: input_percentage_of_terraced_houses
+      unit: '%'
+    - key: input_percentage_of_corner_houses
+      unit: '%'
+    - key: input_percentage_of_semi_detached_houses
+      unit: '%'
+    - key: input_percentage_of_detached_houses
       unit: '%'
       flexible: true
       skip_validation: true
+
+  - header: households_insulation
+    type: slider
+    items:
+    - key: input_households_apartments_heat_demand_reduction
+      unit: '%'
+
+  - header:
+    type: slider
+    items:
+    - key: input_households_terraced_houses_heat_demand_reduction
+      unit: '%'
+
+  - header:
+    type: slider
+    items:
+    - key: input_households_corner_houses_heat_demand_reduction
+      unit: '%'
+
+  - header:
+    type: slider
+    items:
+    - key: input_households_semi_detached_houses_heat_demand_reduction
+      unit: '%'
+
+  - header:
+    type: slider
+    items:
+    - key: input_households_detached_houses_heat_demand_reduction
+      unit: '%'

@@ -43,8 +43,11 @@ nl:
 
         #households
         number_of_residences: Aantal woningen
-        input_percentage_of_old_residences: Woningen gebouwd voor 1992
-        input_percentage_of_new_residences: Woningen gebouwd in of na 1992
+        input_percentage_of_apartments: Appartement
+        input_percentage_of_terraced_houses: Rijtjeshuis
+        input_percentage_of_corner_houses: Hoekhuis
+        input_percentage_of_semi_detached_houses: Twee-onder-één-kapwoning
+        input_percentage_of_detached_houses: Vrijstaand huis
         residences_roof_surface_available_for_pv: Geschikt dakoppervlak voor zon-PV
 
         households_final_demand_electricity_demand: Elektriciteit
@@ -54,8 +57,13 @@ nl:
         households_final_demand_crude_oil_demand: Olie
         households_final_demand_coal_demand: Kolen
 
+        input_households_apartments_heat_demand_reduction: Appartement
+        input_households_terraced_houses_heat_demand_reduction: Rijtjeshuis
+        input_households_corner_houses_heat_demand_reduction: Hoekhuis
+        input_households_semi_detached_houses_heat_demand_reduction: Twee-onder-één-kapwoning
+        input_households_detached_houses_heat_demand_reduction: Vrijstaand huis
+
         input_households_solar_pv_demand: Zon-PV-productie
-        households_final_demand_solar_thermal_demand: Zonthermieproductie
         input_households_district_heating_heater_network_gas_share: Gasketel
         input_households_district_heating_chp_network_gas_share: Gas-WKK
         input_households_district_heating_chp_wood_pellets_share: Biomassa-WKK
@@ -87,12 +95,8 @@ nl:
         households_final_demand_crude_oil_households_final_demand_for_hot_water_crude_oil_parent_share: Warm water
         households_final_demand_crude_oil_households_final_demand_for_space_heating_crude_oil_parent_share: Ruimteverwarming
 
-        households_water_heater_solar_thermal_households_useful_demand_for_hot_water_for_houses_with_solar_heater_parent_share: Warm water
-        households_water_heater_solar_thermal_households_useful_demand_for_space_heating_after_insulation_for_houses_with_solar_heater_parent_share: Ruimteverwarming
-
         households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share: Combi-boiler
         households_final_demand_for_space_heating_network_gas_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share: Hybride warmtepomp
-        households_final_demand_for_space_heating_network_gas_households_space_heater_micro_chp_network_gas_parent_share: Micro-WKK
         households_final_demand_for_space_heating_network_gas_households_space_heater_network_gas_parent_share: Gasketel
 
         households_final_demand_for_space_heating_electricity_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share: Hybride warmtepomp
@@ -101,9 +105,7 @@ nl:
         households_final_demand_for_space_heating_electricity_households_space_heater_electricity_parent_share: Elektrische ketel
 
         households_final_demand_for_hot_water_network_gas_households_water_heater_combined_network_gas_parent_share: Combi-boiler
-        households_final_demand_for_hot_water_network_gas_households_water_heater_fuel_cell_chp_network_gas_parent_share: Fuel cell-WKK
         households_final_demand_for_hot_water_network_gas_households_water_heater_hybrid_heatpump_air_water_electricity_parent_share: Hybride warmtepomp
-        households_final_demand_for_hot_water_network_gas_households_water_heater_micro_chp_network_gas_parent_share: Micro-WKK
         households_final_demand_for_hot_water_network_gas_households_water_heater_network_gas_parent_share: Gasketel
 
         households_final_demand_for_hot_water_electricity_households_water_heater_heatpump_air_water_electricity_parent_share: Warmtepomp (lucht)
@@ -147,6 +149,7 @@ nl:
         buildings_final_demand_wood_pellets_demand: Biomassa
         buildings_final_demand_coal_demand: Kolen
         buildings_final_demand_crude_oil_demand: Olie
+        input_buildings_heat_demand_reduction: Warmtevraagreductie
 
         input_buildings_solar_pv_demand: Zon-PV-productie
         buildings_final_demand_solar_thermal_demand: Zonthermieproductie
@@ -382,6 +385,7 @@ nl:
         input_energy_heater_for_heat_network_wood_pellets_production: Biomassaketel
         input_energy_heater_for_heat_network_geothermal_production: Geothermieketel
         input_energy_heater_for_heat_network_waste_mix_production: Afvalketel
+        energy_import_heat_demand: Restwarmte geïmporteerd van buiten jouw regio
         input_energy_heater_for_heat_network_network_gas_production: Gasketel
         input_energy_heater_for_heat_network_coal_production: Kolenketel
         input_energy_heater_for_heat_network_crude_oil_production: Olieketel

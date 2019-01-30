@@ -24,7 +24,9 @@ en:
       area_electricity_grid_reinforcement: Electricity grid reinforcement
 
       #households
+      households_housing_stock_distribution: Housing stock
       households_final_demand: Final demand
+      households_insulation: Insulation
       households_local_production: Local energy production
       households_district_heating: District heating
       households_electricity_distribution: Electricity distribution
@@ -33,18 +35,16 @@ en:
       households_wood_pellets_distribution: Biomass distribution
       households_crude_oil_distribution: Oil distribution
       households_coal_distribution: Coal distribution
-      households_network_gas_space_heating_distribution: Space heating technologies - gas
-      households_electricity_space_heating_distribution: Space heating technologies - electricity
-      households_network_gas_hot_water_distribution: Tap water heating technologies - gas
-      households_electricity_hot_water_distribution: Tap water heating technologies - electricity
+      households_network_gas_space_heating_hot_water_distribution: Space heating and hot water technologies - gas
+      households_electricity_space_heating_hot_water_distribution: Space heating and hot water technologies - electricity
       households_electricity_cooking_distribution: Cooking technologies - electricity
       households_electricity_lighting_distribution: Lighting technologies - electricity
       households_electricity_appliances_distribution: Appliances - electricity
       households_electricity_cooling_distribution: Cooling technologies - electricity
-      households_solar_thermal_distribution: Solar thermal distribution
 
       #buildings
       buildings_final_demand: Final demand
+      buildings_insulation: Insulation
       buildings_local_production: Local energy production
       buildings_district_heating: District heating
       buildings_electricity_distribution: Electricity distribution
@@ -101,6 +101,7 @@ en:
       energy_electricity_gas: Gas electricity production
       energy_electricity_waste: Waste electricity production
       energy_electricity_other_fossil: Other fossil electricity production
+      energy_import_residual_heat: Residual heat
       energy_renewable_heat: Renewable heat production
       energy_fossil_heat: Fossil heat production
       energy_heat_loss: Losses of heat networks

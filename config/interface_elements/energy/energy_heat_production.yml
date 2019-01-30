@@ -7,7 +7,12 @@ groups:
       - key: input_energy_heater_for_heat_network_geothermal_production
         unit: 'TJ'
       - key: input_energy_heater_for_heat_network_waste_mix_production
-        unit: 'TJ'  
+        unit: 'TJ'
+
+  - header: energy_import_residual_heat
+    items:
+      - key: energy_import_heat_demand
+        unit: 'TJ'
 
   - header: energy_fossil_heat
     items:

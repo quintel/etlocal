@@ -70,3 +70,4 @@ db/seeds/*.csv
 db/seeds/*.yml
 coverage/*
 __pycache__
+*.pyc

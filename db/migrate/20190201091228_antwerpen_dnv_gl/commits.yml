@@ -1,0 +1,9 @@
+---
+
+# If you are creating only a single commit, you may instead use a single :all
+# field to have all of the CSV columns be included. This cannot be used when
+# creating multiple commits.
+- fields:
+  - :all
+  message:
+    Gebaseerd op de dataset die door Quintel in samenwerking met DNV GL is opgesteld. De meeste waardes zijn afkomstig van DNV GL en/of de Emissieinventaris (https://www.antwerpenmorgen.be/projecten/emissie-inventaris/over). In het geval waardes niet beschikbaar waren, zijn deze pro rata geschaald naar de landelijke waardes voor Belgie.

@@ -1,0 +1,389 @@
+---
+- fields:
+  - analysis_year
+  message:
+    "We gebruiken de meest recente data die beschikbaar is. Voor huishoudens en transport is dit meestal 2016, voor gebouwen 2017."
+
+- fields:
+  - input_agriculture_electricity_demand
+  - agriculture_final_demand_network_gas_demand
+  - agriculture_final_demand_wood_pellets_demand
+  - agriculture_final_demand_crude_oil_demand
+  - agriculture_chp_engine_network_gas_demand
+  - agriculture_chp_supercritical_wood_pellets_demand
+  - agriculture_chp_engine_biogas_demand
+  - input_agriculture_geothermal_demand
+  - input_agriculture_heatpump_demand
+  - input_agriculture_central_heat_demand
+  - industry_chp_combined_cycle_gas_power_fuelmix_demand
+  - industry_chp_engine_gas_power_fuelmix_demand
+  - industry_chp_turbine_gas_power_fuelmix_demand
+  - industry_chp_ultra_supercritical_coal_demand
+  - input_industry_chemical_other_electricity_demand
+  - input_industry_chemical_other_network_gas_demand
+  - input_industry_chemical_other_steam_hot_water_demand
+  - input_industry_chemical_other_wood_pellets_demand
+  - input_industry_chemical_other_crude_oil_demand
+  - input_industry_chemical_other_coal_demand
+  - input_industry_chemical_other_network_gas_non_energetic_demand
+  - input_industry_chemical_other_wood_pellets_non_energetic_demand
+  - input_industry_chemical_other_crude_oil_non_energetic_demand
+  - input_industry_chemical_other_coal_non_energetic_demand
+  - input_industry_chemical_refineries_scaling_factor
+  - input_industry_chemical_fertilizers_scaling_factor
+  - input_industry_food_electricity_demand
+  - input_industry_food_network_gas_demand
+  - input_industry_food_steam_hot_water_demand
+  - input_industry_food_wood_pellets_demand
+  - input_industry_food_crude_oil_demand
+  - input_industry_food_coal_demand
+  - input_industry_ict_electricity_demand
+  - input_industry_metal_steel_scaling_factor
+  - input_industry_metal_aluminium_scaling_factor
+  - input_industry_metal_other_electricity_demand
+  - input_industry_metal_other_network_gas_demand
+  - input_industry_metal_other_steam_hot_water_demand
+  - input_industry_metal_other_wood_pellets_demand
+  - input_industry_metal_other_crude_oil_demand
+  - input_industry_metal_other_coal_demand
+  - input_industry_other_electricity_demand
+  - input_industry_other_network_gas_demand
+  - input_industry_other_steam_hot_water_demand
+  - input_industry_other_wood_pellets_demand
+  - input_industry_other_crude_oil_demand
+  - input_industry_other_coal_demand
+  - input_industry_other_network_gas_non_energetic_demand
+  - input_industry_other_wood_pellets_non_energetic_demand
+  - input_industry_other_crude_oil_non_energetic_demand
+  - input_industry_other_coal_non_energetic_demand
+  - input_industry_paper_electricity_demand
+  - input_industry_paper_network_gas_demand
+  - input_industry_paper_steam_hot_water_demand
+  - input_industry_paper_wood_pellets_demand
+  - input_industry_paper_crude_oil_demand
+  - input_industry_paper_coal_demand
+  - other_emission_agriculture
+  - other_emission_industry_energy
+  - other_emission_transport
+  - other_emission_built_environment
+  - households_final_demand_crude_oil_demand
+  - households_final_demand_wood_pellets_demand
+  - households_final_demand_coal_demand
+  - buildings_final_demand_wood_pellets_demand
+  - buildings_final_demand_coal_demand
+  - buildings_final_demand_crude_oil_demand
+  - households_final_demand_solar_thermal_demand
+  - buildings_final_demand_solar_thermal_demand
+  - energy_power_sector_own_use_electricity_demand
+  - energy_production_wood_demand
+  - energy_production_biodiesel_demand
+  - energy_production_bio_ethanol_demand
+  - energy_extraction_uranium_oxide_demand
+  - energy_extraction_natural_gas_demand
+  - energy_extraction_crude_oil_demand
+  - energy_extraction_coal_demand
+  - input_energy_power_ultra_supercritical_coal_production
+  - input_energy_power_supercritical_coal_production
+  - input_energy_power_combined_cycle_coal_production
+  - input_energy_power_ultra_supercritical_cofiring_coal_production
+  - input_energy_power_combined_cycle_ccs_coal_production
+  - input_energy_power_ultra_supercritical_ccs_coal_production
+  - input_energy_chp_ultra_supercritical_coal_production
+  - input_energy_chp_ultra_supercritical_cofiring_coal_production
+  - input_energy_power_ultra_supercritical_network_gas_production
+  - input_energy_power_turbine_network_gas_production
+  - input_energy_power_engine_network_gas_production
+  - input_energy_power_combined_cycle_network_gas_production
+  - input_energy_power_combined_cycle_ccs_network_gas_production
+  - input_energy_chp_combined_cycle_network_gas_production
+  - input_energy_power_nuclear_gen2_uranium_oxide_production
+  - input_energy_power_nuclear_gen3_uranium_oxide_production
+  - input_energy_power_ultra_supercritical_crude_oil_production
+  - input_energy_power_engine_diesel_production
+  - input_energy_heater_for_heat_network_wood_pellets_production
+  - input_energy_heater_for_heat_network_geothermal_production
+  - input_energy_heater_for_heat_network_waste_mix_production
+  - input_energy_heater_for_heat_network_network_gas_production
+  - input_energy_heater_for_heat_network_coal_production
+  - input_energy_heater_for_heat_network_crude_oil_production
+  - energy_heat_network_loss_demand
+  - input_energy_power_wind_turbine_inland_production
+  - input_energy_power_wind_turbine_coastal_production
+  - input_energy_power_wind_turbine_offshore_production
+  - input_energy_power_supercritical_waste_mix_production
+  - input_energy_chp_supercritical_waste_mix_production
+  - input_energy_power_hydro_river_production
+  - input_energy_power_geothermal_production
+  - coast_line
+  message:
+    "Geen data beschikbaar op buurtniveau. We hebben dit voor deze buurtdataset op 0 gezet."
+
+- fields:
+  - lv_net_spare_capacity
+  - mv_net_spare_capacity
+  - hv_net_spare_capacity
+  - lv_mv_trafo_spare_capacity
+  - mv_hv_trafo_spare_capacity
+  - lv_net_capacity_per_step
+  - lv_net_costs_per_capacity_step
+  - mv_net_capacity_per_step
+  - mv_net_costs_per_capacity_step
+  - hv_net_capacity_per_step
+  - hv_net_costs_per_capacity_step
+  - lv_mv_trafo_capacity_per_step
+  - lv_mv_trafo_costs_per_capacity_step
+  - mv_hv_trafo_capacity_per_step
+  - mv_hv_trafo_costs_per_capacity_step
+  - interconnection_net_costs_present
+  - offshore_net_costs_present
+  - agriculture_final_demand_hydrogen_demand
+  - buildings_final_demand_electricity_buildings_final_demand_for_lighting_electricity_parent_share
+  - buildings_final_demand_electricity_buildings_final_demand_for_space_heating_electricity_parent_share
+  - buildings_final_demand_electricity_buildings_final_demand_for_appliances_electricity_parent_share
+  - buildings_final_demand_electricity_buildings_final_demand_for_cooling_electricity_parent_share
+  - buildings_final_demand_network_gas_buildings_final_demand_for_appliances_network_gas_parent_share
+  - buildings_final_demand_network_gas_buildings_final_demand_for_space_heating_network_gas_parent_share
+  - buildings_final_demand_network_gas_buildings_final_demand_for_cooling_network_gas_parent_share
+  - buildings_final_demand_wood_pellets_buildings_final_demand_for_space_heating_wood_pellets_parent_share
+  - buildings_final_demand_wood_pellets_buildings_final_demand_for_appliances_wood_pellets_parent_share
+  - buildings_final_demand_coal_buildings_final_demand_for_space_heating_coal_parent_share
+  - buildings_final_demand_coal_buildings_final_demand_for_appliances_coal_parent_share
+  - buildings_final_demand_crude_oil_buildings_final_demand_for_space_heating_crude_oil_parent_share
+  - buildings_final_demand_crude_oil_buildings_final_demand_for_appliances_crude_oil_parent_share
+  - buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_heatpump_air_water_network_gas_parent_share
+  - buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_network_gas_parent_share
+  - buildings_final_demand_for_space_heating_electricity_buildings_space_heater_collective_heatpump_water_water_ts_electricity_parent_share
+  - buildings_final_demand_for_space_heating_electricity_buildings_space_heater_electricity_parent_share
+  - buildings_final_demand_for_lighting_electricity_buildings_lighting_efficient_fluorescent_electricity_parent_share
+  - buildings_final_demand_for_lighting_electricity_buildings_lighting_standard_fluorescent_electricity_parent_share
+  - buildings_final_demand_for_lighting_electricity_buildings_lighting_led_electricity_parent_share
+  - buildings_final_demand_for_cooling_electricity_buildings_cooling_airconditioning_electricity_parent_share
+  - buildings_final_demand_for_cooling_electricity_buildings_cooling_collective_heatpump_water_water_ts_electricity_parent_share
+  - households_final_demand_electricity_households_final_demand_for_cooking_electricity_parent_share
+  - households_final_demand_electricity_households_final_demand_for_cooling_electricity_parent_share
+  - households_final_demand_electricity_households_final_demand_for_hot_water_electricity_parent_share
+  - households_final_demand_electricity_households_final_demand_for_lighting_electricity_parent_share
+  - households_final_demand_electricity_households_final_demand_for_space_heating_electricity_parent_share
+  - households_final_demand_electricity_households_final_demand_for_appliances_electricity_parent_share
+  - households_final_demand_network_gas_households_final_demand_for_cooking_network_gas_parent_share
+  - households_final_demand_network_gas_households_final_demand_for_hot_water_network_gas_parent_share
+  - households_final_demand_network_gas_households_final_demand_for_space_heating_network_gas_parent_share
+  - households_final_demand_network_gas_households_final_demand_for_cooling_network_gas_parent_share
+  - households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share
+  - households_final_demand_steam_hot_water_households_final_demand_for_space_heating_steam_hot_water_parent_share
+  - households_final_demand_wood_pellets_households_final_demand_for_hot_water_wood_pellets_parent_share
+  - households_final_demand_wood_pellets_households_final_demand_for_space_heating_wood_pellets_parent_share
+  - households_final_demand_wood_pellets_households_final_demand_for_cooking_wood_pellets_parent_share
+  - households_final_demand_crude_oil_households_final_demand_for_space_heating_crude_oil_parent_share
+  - households_final_demand_crude_oil_households_final_demand_for_hot_water_crude_oil_parent_share
+  - households_final_demand_coal_households_final_demand_for_space_heating_coal_parent_share
+  - households_final_demand_coal_households_final_demand_for_hot_water_coal_parent_share
+  - households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share
+  - households_final_demand_for_space_heating_network_gas_households_space_heater_network_gas_parent_share
+  - households_final_demand_for_space_heating_network_gas_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share
+  - households_final_demand_for_space_heating_electricity_households_space_heater_electricity_parent_share
+  - households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_air_water_electricity_parent_share
+  - households_final_demand_for_space_heating_electricity_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share
+  - households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_ground_water_electricity_parent_share
+  - households_final_demand_for_cooking_electricity_households_cooker_halogen_electricity_parent_share
+  - households_final_demand_for_cooking_electricity_households_cooker_induction_electricity_parent_share
+  - households_final_demand_for_cooking_electricity_households_cooker_resistive_electricity_parent_share
+  - households_final_demand_for_lighting_electricity_households_lighting_incandescent_electricity_parent_share
+  - households_final_demand_for_lighting_electricity_households_lighting_efficient_fluorescent_electricity_parent_share
+  - households_final_demand_for_lighting_electricity_households_lighting_led_electricity_parent_share
+  - households_final_demand_for_appliances_electricity_households_appliances_clothes_dryer_electricity_parent_share
+  - households_final_demand_for_appliances_electricity_households_appliances_computer_media_electricity_parent_share
+  - households_final_demand_for_appliances_electricity_households_appliances_dishwasher_electricity_parent_share
+  - households_final_demand_for_appliances_electricity_households_appliances_fridge_freezer_electricity_parent_share
+  - households_final_demand_for_appliances_electricity_households_appliances_other_electricity_parent_share
+  - households_final_demand_for_appliances_electricity_households_appliances_television_electricity_parent_share
+  - households_final_demand_for_appliances_electricity_households_appliances_vacuum_cleaner_electricity_parent_share
+  - households_final_demand_for_appliances_electricity_households_appliances_washing_machine_electricity_parent_share
+  - households_final_demand_for_cooling_electricity_households_cooling_airconditioning_electricity_parent_share
+  - households_final_demand_for_cooling_electricity_households_cooling_heatpump_ground_water_electricity_parent_share
+  - households_final_demand_for_cooling_electricity_households_cooling_heatpump_air_water_electricity_parent_share
+  - input_share_mixer_gas_fuel_bio_oil
+  - input_share_mixer_gas_fuel_oil
+  - input_share_mixer_gas_fuel_network_gas
+  - other_final_demand_electricity_demand
+  - other_final_demand_network_gas_demand
+  - other_final_demand_steam_hot_water_demand
+  - other_final_demand_wood_pellets_demand
+  - other_final_demand_coal_demand
+  - other_final_demand_crude_oil_demand
+  - other_final_demand_crude_oil_non_energetic_demand
+  - transport_road_mixer_lng_transport_truck_using_lng_mix_parent_share
+  - transport_road_mixer_lng_transport_bus_using_lng_mix_parent_share
+  message:
+    "Standaardwaarden op basis van Nederlandse gemiddelden"
+
+- fields:
+  - input_households_district_heating_central_heat_network_share
+  - input_households_district_heating_heater_hydrogen_share
+  - input_households_district_heating_geothermal_share
+  - input_households_district_heating_heatpump_electricity_share
+  - input_households_district_heating_chp_biogas_share
+  - input_households_district_heating_chp_wood_pellets_share
+  - input_households_district_heating_chp_network_gas_share
+  - input_households_district_heating_heater_network_gas_share
+  - input_buildings_district_heating_central_heat_network_share
+  - input_buildings_district_heating_heater_hydrogen_share
+  - input_buildings_district_heating_geothermal_share
+  - input_buildings_district_heating_heatpump_electricity_share
+  - input_buildings_district_heating_chp_biogas_share
+  - input_buildings_district_heating_chp_wood_pellets_share
+  - input_buildings_district_heating_chp_network_gas_share
+  - input_buildings_district_heating_heater_network_gas_share
+  - energy_import_heat_demand
+  message:
+    "Geen data beschikbaar over de bronnen voor het warmtenet, daarom is aangenomen dat warmtenetten gevoed worden door een grootschalige gasketel"
+
+- fields:
+  - households_final_demand_network_gas_demand
+  - households_final_demand_electricity_demand
+  message:
+    "Klimaatmonitor. Als er geen data beschikbaar is, doen we een bijschatting op basis van het aantal woningen en het gemiddelde verbruik per woning in Nederland. Zie: https://klimaatmonitor.databank.nl/Jive?workspace_guid=fa3deded-dcd2-44d0-8daf-a1054a2c0aa7"
+
+- fields:
+  - households_final_demand_steam_hot_water_demand
+  - buildings_final_demand_steam_hot_water_demand
+  message:
+    "Klimaatmonitor geeft het percentage van de gebouwde omgeving dat stadsverwarming heeft. Hiermee is het aantal woningen met stadsverwarming bepaald en voor deze huizen is een standaardverbruik van 38 GJ aangenomen. Voor utiliteit is het percentage gebruikt om een deel van het gasverbruik te vervangen door warmte. Zie: https://klimaatmonitor.databank.nl/Jive?workspace_guid=fa3deded-dcd2-44d0-8daf-a1054a2c0aa7 en http://www.pbl.nl/sites/default/files/cms/publicaties/pbl-2015-ce-delft-energiekentallen-utiliteitsgebouwen-vesta-2.0_02321.pdf"
+
+- fields:
+  - buildings_final_demand_network_gas_demand
+  - input_buildings_electricity_demand
+  message:
+    "Inschatting CE Delft op basis van het aantal gebouwen, hun gebruiksfunctie, oppervlakte en kentallen voor energieverbruik per gebruiksfunctie/oppervlakte. Zie: Basisregistratie Adressen en Gebouwen (https://bagviewer.kadaster.nl/lvbag/bag-viewer/index.html#?geometry.x=160000&geometry.y=455000&zoomlevel=0) en http://www.pbl.nl/sites/default/files/cms/publicaties/pbl-2015-ce-delft-energiekentallen-utiliteitsgebouwen-vesta-2.0_02321.pdf"
+
+- fields:
+  - number_of_cars
+  message:
+    "CBS. Zie https://opendata.cbs.nl/statline/#/CBS/nl/dataset/83487NED/table?dl=18C80"
+
+- fields:
+  - input_transport_road_human_powered_bicycle_demand
+  - input_transport_road_gasoline_demand
+  - input_transport_road_diesel_demand
+  - transport_final_demand_lpg_demand
+  - input_transport_road_electricity_demand
+  - input_transport_road_bio_ethanol_demand
+  - input_transport_road_biodiesel_demand
+  - transport_final_demand_for_road_compressed_network_gas_demand
+  - transport_final_demand_hydrogen_demand
+  - transport_final_demand_for_road_lng_demand
+  - transport_final_demand_for_road_bio_lng_demand
+  - input_transport_rail_electricity_demand
+  - input_transport_rail_diesel_demand
+  - input_transport_plane_bio_ethanol_demand
+  - input_transport_plane_gasoline_demand
+  - transport_final_demand_kerosene_demand
+  - transport_final_demand_coal_demand
+  - input_transport_rail_biodiesel_demand
+  - transport_final_demand_heavy_fuel_oil_demand
+  - transport_final_demand_for_shipping_bio_lng_demand
+  - transport_final_demand_for_shipping_lng_demand
+  - input_transport_ship_biodiesel_demand
+  - input_transport_ship_diesel_demand
+  - transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share
+  - transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share
+  - transport_road_mixer_gasoline_transport_truck_using_gasoline_mix_parent_share
+  - transport_road_mixer_gasoline_transport_motorcycle_using_gasoline_mix_parent_share
+  - transport_road_mixer_diesel_transport_car_using_diesel_mix_parent_share
+  - transport_road_mixer_diesel_transport_bus_using_diesel_mix_parent_share
+  - transport_road_mixer_diesel_transport_truck_using_diesel_mix_parent_share
+  - transport_final_demand_for_road_electricity_transport_car_using_electricity_parent_share
+  - transport_final_demand_for_road_electricity_transport_bus_using_electricity_parent_share
+  - transport_final_demand_for_road_electricity_transport_motorcycle_using_electricity_parent_share
+  - transport_final_demand_for_road_electricity_transport_bicycle_using_electricity_parent_share
+  - transport_final_demand_for_road_electricity_transport_truck_using_electricity_parent_share
+  - transport_road_mixer_compressed_network_gas_transport_bus_using_compressed_natural_gas_parent_share
+  - transport_road_mixer_compressed_network_gas_transport_car_using_compressed_natural_gas_parent_share
+  - transport_road_mixer_compressed_network_gas_transport_truck_using_compressed_natural_gas_parent_share
+  - input_transport_road_car_hydrogen_share
+  - transport_final_demand_for_road_hydrogen_transport_bus_using_hydrogen_parent_share
+  - transport_final_demand_for_road_hydrogen_transport_truck_using_hydrogen_parent_share
+  - transport_final_demand_for_rail_electricity_transport_freight_train_using_electricity_parent_share
+  - transport_final_demand_for_rail_electricity_transport_tram_using_electricity_parent_share
+  - transport_final_demand_for_rail_electricity_transport_passenger_train_using_electricity_parent_share
+  - transport_rail_mixer_diesel_transport_freight_train_using_diesel_mix_parent_share
+  - transport_rail_mixer_diesel_transport_passenger_train_using_diesel_mix_parent_share
+  - transport_final_demand_crude_oil_non_energetic_demand
+  message:
+    "Geen data beschikbaar op buurtniveau. Inschatting Quintel op basis van het totaalverbruik in de gemeente (inclusief snelwegen) en het aantal auto's in de buurt (Klimaatmonitor). Vracht- en vliegverkeer valt buiten de scope en wordt daarom niet meegenomen. Zie: https://klimaatmonitor.databank.nl/Jive?workspace_guid=a91a1ec8-e054-4039-bcb3-e97932cb4061"
+
+- fields:
+  - lv_net_total_costs_present
+  - mv_net_total_costs_present
+  - hv_net_total_costs_present
+  - lv_mv_trafo_total_costs_present
+  - mv_hv_trafo_total_costs_present
+  message:
+    "Schatting Quintel. Gebaseerd op het totaal elektriciteitsgebruik in dit gebied (Klimaatmonitor) en de kosten van het elektriciteitsnet volgens 'Net voor de Toekomst' (2017, CE Delft). URL: https://www.ce.nl/publicaties/2030/net-voor-de-toekomst"
+
+- fields:
+  - energy_power_hv_network_loss_demand
+  message:
+    "Schatting Quintel. Gebaseerd op het totaal elektriciteitsgebruik in dit gebied en Nederlandse gemiddelden voor netverliezen."
+
+- fields:
+  - energy_import_greengas_demand
+  - input_energy_greengas_production
+  message:
+    "Schatting Quintel. Gebaseerd op het totaal gasgebruik in deze buurt en totaal groengas in de gemeente."
+
+- fields:
+  - co2_emission_1990
+  message:
+    "Schatting Quintel. Gebaseerd op het totaal energiegebruik in deze buurt en de totale uitstoot van de gemeente."
+
+- fields:
+  - number_of_inhabitants
+  message:
+    "CBS. Zie: https://opendata.cbs.nl/statline/#/CBS/nl/dataset/83487NED/table?dl=18C80"
+
+- fields:
+  - number_of_residences
+  - number_of_buildings
+  - input_percentage_of_apartments
+  - input_percentage_of_terraced_houses
+  - input_percentage_of_corner_houses
+  - input_percentage_of_semi_detached_houses
+  - input_percentage_of_detached_houses
+  message:
+    "Inschatting op basis van huizen- en gebouwenvoorraad volgens de Basisregistratie Adressen en Gebouwen (BAG) en beschikbaar dakoppervlak per huis/gebouwtype. Zie: https://bagviewer.kadaster.nl/lvbag/bag-viewer/index.html#?geometry.x=160000&geometry.y=455000&zoomlevel=0"
+
+- fields:
+  - input_households_apartments_heat_demand_reduction
+  - input_households_terraced_houses_heat_demand_reduction
+  - input_households_corner_houses_heat_demand_reduction
+  - input_households_semi_detached_houses_heat_demand_reduction
+  - input_households_detached_houses_heat_demand_reduction
+  - input_buildings_heat_demand_reduction
+  message:
+    "Inschatting op basis van gemiddeld energielabel. Definitieve energielabels komen van http://www.ep-online.nl. Voorlopige energielabels zijn ingeschat op basis van woningtype en bouwjaar (Basisregistratie Adressen en Gebouwen)"
+
+- fields:
+  - input_buildings_solar_pv_demand
+  - input_households_solar_pv_demand
+  message:
+    "Geregistreerde zonnepanelen in de buurt (Klimaatmonitor) zijn verdeeld over huishoudens en gebouwen op basis van de uitgerekende potentieel dakoppervlak. Zie: https://klimaatmonitor.databank.nl/Jive?workspace_guid=35f778c4-3da3-4953-b001-c6682631c473"
+
+- fields:
+  - buildings_roof_surface_available_for_pv
+  - residences_roof_surface_available_for_pv
+  message:
+    "Analyse op basis van de Basisregistratie Adressen en Gebouwen (BAG)."
+
+- fields:
+  - input_energy_power_solar_pv_solar_radiation_production
+  message:
+    "Inschatting Quintel o.b.v. openbare kaartdata en persberichten."
+
+- fields:
+  - onshore_suitable_for_wind
+  - offshore_suitable_for_wind
+  - land_available_for_solar
+  - areable_land
+  message:
+    "Gelijkgezet aan buurtoppervlakte (10 keer buurtoppervlakte voor wind op zee). Zie https://opendata.cbs.nl/statline/#/CBS/nl/dataset/83487NED/table?dl=18C80"

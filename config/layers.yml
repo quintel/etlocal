@@ -9,20 +9,20 @@ mapbox_defaults: &mapbox_defaults
     - 7094762.123545771
 
 dataset_selector:
-  # - name: provinces
-  #   id: "grdw.8kst3bc1"
-  #   source: "2018_province-df2r8c"
-  #   minres: 300
-  #   maxres: 700
-  #   filter: id
-  #   name_attr: id
-  #   <<: *mapbox_defaults
+  - name: provinces
+    id: "grdw.8kst3bc1"
+    source: "2018_province-df2r8c"
+    minres: 300
+    maxres: 700
+    filter: id
+    name_attr: id
+    <<: *mapbox_defaults
 
   - name: municipalities
     id: "grdw.8l1you4h"
     source: "2018_municipality-0gfs06"
     minres: 40
-    maxres: 700
+    maxres: 300
     filter: id
     name_attr: id
     <<: *mapbox_defaults

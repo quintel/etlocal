@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Aalsmeer, Amstelveen, Diemen, Haarlemmermeer, Ouder-Amstel, Uithoorn, Amsterdam, Blaricum, Gooise Meren, Hilversum, Huizen, Laren, Weesp, Wijdemeren, Beverwijk, Bloemendaal, Haarlem, Heemskerk, Heemstede, Velsen, Zandvoort, Beemster, Edam-Volendam, Landsmeer, Oostzaan, Purmerend, Waterland, Wormerland, Zaanstad"

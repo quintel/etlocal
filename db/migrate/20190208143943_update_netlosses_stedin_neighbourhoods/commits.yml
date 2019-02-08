@@ -1,0 +1,6 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - energy_power_hv_network_loss_demand
+  message:
+    De netverliezen zijn pro rata geschaald naar de netverliezen op landelijke (Nederlandse) schaal.

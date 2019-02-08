@@ -17,9 +17,9 @@ class Dataset < ApplicationRecord
       'municipality'
     elsif geo_id =~ /^WK/
       'district'
-    elsif geo_id =~ /^BU/
+    elsif geo_id =~ /^BU/ or geo_id =~ /^BEBU/
       'neighbourhood'
-    elsif geo_id =~ /^RG/
+    elsif geo_id =~ /^RG/ or geo_id =~ /^RES/
       'region'
     else
       'province'

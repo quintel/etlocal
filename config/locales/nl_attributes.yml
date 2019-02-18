@@ -64,6 +64,7 @@ nl:
         input_households_detached_houses_heat_demand_reduction: Vrijstaand huis
 
         input_households_solar_pv_demand: Zon-PV-productie
+        households_final_demand_solar_thermal_demand: Zonthermieproductie
         input_households_district_heating_heater_network_gas_share: Gasketel
         input_households_district_heating_chp_network_gas_share: Gas-WKK
         input_households_district_heating_chp_wood_pellets_share: Biomassa-WKK

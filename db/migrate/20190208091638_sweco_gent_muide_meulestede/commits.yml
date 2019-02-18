@@ -12,7 +12,7 @@
   - input_percentage_of_detached_houses
   - number_of_buildings
   message:
-    Gebaseerd op de data van Wijkmonitor (https://gent.buurtmonitor.be).
+    Gebaseerd op de data uit het Kadaster en van de Wijkmonitor (https://gent.buurtmonitor.be).
 
 - fields:
   # List each field from the data CSV to be included in this commit.

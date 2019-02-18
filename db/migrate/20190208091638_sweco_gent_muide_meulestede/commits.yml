@@ -395,6 +395,11 @@
     Er is geen energieproductie in Gent.
 
 - fields:
+  - energy_import_heat_demand
+  message:
+    Er is geen restwarmte bron beschikbaar voor Gent.
+
+- fields:
   # List each field from the data CSV to be included in this commit.
   - other_final_demand_electricity_demand
   - other_final_demand_network_gas_demand

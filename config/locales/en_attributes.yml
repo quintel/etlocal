@@ -63,6 +63,7 @@ en:
         input_households_detached_houses_heat_demand_reduction: Detached house
 
         input_households_solar_pv_demand: Solar PV production
+        households_final_demand_solar_thermal_demand: Solar thermal production
         input_households_district_heating_heater_network_gas_share: Gas heater
         input_households_district_heating_chp_network_gas_share: Gas CHP
         input_households_district_heating_chp_wood_pellets_share: Biomass CHP

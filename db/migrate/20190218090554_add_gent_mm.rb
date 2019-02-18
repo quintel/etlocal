@@ -1,6 +1,6 @@
-class SwecoGentMuideMeulestede < ActiveRecord::Migration[5.0]
+class AddGentMm < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20190208091638_sweco_gent_muide_meulestede')
+    directory    = Rails.root.join('db/migrate/20190218090554_add_gent_mm')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

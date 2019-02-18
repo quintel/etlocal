@@ -18,6 +18,7 @@
   # List each field from the data CSV to be included in this commit.
   - residences_roof_surface_available_for_pv
   - buildings_roof_surface_available_for_pv
+  - analysis_year
   message:
     Gebaseerd op de data van Sweco.
 

@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Baarn, Eemnes, Bunschoten, Leusden, Soest, Woudenberg, Amersfoort"

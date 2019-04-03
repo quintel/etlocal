@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Albrandswaard, Barendrecht, Brielle, Capelle aan den IJssel, Delft, s-Gravenhage, Hellevoetsluis, Krimpen aan den IJssel, Lansingerland, Leidschendam-Voorburg, Maassluis, Midden-Delfland, Nissewaard, Pijnacker-Nootdorp, Ridderkerk, Rijswijk, Rotterdam, Schiedam, Vlaardingen, Wassenaar, Westland, Westvoorne, Zoetermeer"

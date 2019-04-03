@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Arnhem, Berg en Dal, Beuningen, Doesburg, Druten, Duiven, Heumen, Lingewaard, Nijmegen, Overbetuwe, Renkum, Rheden, Rozendaal, Westervoort, Wijchen, Zevenaar"

@@ -12,8 +12,17 @@ dataset_selector:
   - name: provinces
     id: "grdw.8kst3bc1"
     source: "2018_province-df2r8c"
-    minres: 300
+    minres: 500
     maxres: 700
+    filter: id
+    name_attr: id
+    <<: *mapbox_defaults
+
+  - name: res_regions
+    id: "grdw.0xyku75d"
+    source: "res_2019_cleaned-5zkeez"
+    minres: 300
+    maxres: 500
     filter: id
     name_attr: id
     <<: *mapbox_defaults

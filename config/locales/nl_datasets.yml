@@ -5,6 +5,7 @@ nl:
       district: Wijk
       neighbourhood: Buurt
       province: Provincie
+      region: Regio
 
     menu:
       static: Statisch

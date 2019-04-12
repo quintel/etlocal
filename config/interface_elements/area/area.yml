@@ -9,9 +9,7 @@ groups:
       unit: 'km<sup>2</sup>'
     - key: coast_line
       unit: 'km'
-    - key: land_available_for_solar
-      unit: 'km<sup>2</sup>'
-    - key: onshore_suitable_for_wind
+    - key: total_land_area
       unit: 'km<sup>2</sup>'
     - key: offshore_suitable_for_wind
       unit: 'km<sup>2</sup>'

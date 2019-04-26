@@ -6,9 +6,8 @@ nl:
         source_file: "Bronbestand"
 
         analysis_year: Startjaar
-        land_available_for_solar: Beschikbaar gebied voor zonnevelden
+        total_land_area: Totale landoppervlakte
         offshore_suitable_for_wind: Beschikbaar gebied voor windturbines op zee
-        onshore_suitable_for_wind: Beschikbaar gebied voor windturbines op land
         coast_line: Kustlijn
         areable_land: Beschikbare landbouwgrond
         number_of_inhabitants: Aantal inwoners

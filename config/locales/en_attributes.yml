@@ -5,9 +5,8 @@ en:
 
         #area
         analysis_year: Starting year
-        land_available_for_solar: Available area for solar pv plants
+        total_land_area: Total land area
         offshore_suitable_for_wind: Available area for offshore wind turbines
-        onshore_suitable_for_wind: Available area for onshore wind turbines
         coast_line: Coast line
         areable_land: Areable land
         number_of_inhabitants: Number of inhabitants

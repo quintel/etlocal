@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/quintel/atlas.git
-  revision: c85457c04fac55f52160fd2a229751c811a73cfc
-  ref: c85457c
+  revision: 2fbb2fb102f4e7120f8333fb1e226a11d00bc00d
+  ref: 2fbb2fb
   specs:
     atlas (1.0.0)
       activemodel (>= 4.1.14.1)
@@ -412,4 +412,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.17.1
+   1.17.3

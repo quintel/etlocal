@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Barneveld, Ede, Nijkerk, Renswoude, Rhenen, Scherpenzeel, Veenendaal, Wageningen"

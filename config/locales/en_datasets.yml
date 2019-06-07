@@ -6,6 +6,7 @@ en:
       neighbourhood: Neighbourhood
       province: Province
       region: Region
+      res: RES region
 
     menu:
       static: Static

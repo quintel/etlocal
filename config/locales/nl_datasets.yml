@@ -6,6 +6,7 @@ nl:
       neighbourhood: Buurt
       province: Provincie
       region: Regio
+      res: RES-regio
 
     menu:
       static: Statisch

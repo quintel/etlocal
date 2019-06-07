@@ -5,7 +5,7 @@ en:
       district: District
       neighbourhood: Neighbourhood
       province: Province
-      region: Region
+      region: RES region
 
     menu:
       static: Static

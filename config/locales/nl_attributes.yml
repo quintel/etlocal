@@ -341,6 +341,9 @@ nl:
         input_energy_greengas_production: Lokale groengasproductie
         energy_import_greengas_demand: Import van groengas
 
+        energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: Biogeen
+        energy_distribution_non_biogenic_waste_energy_distribution_waste_mix_child_share: Niet-biogeen
+
         energy_production_bio_ethanol_demand: Bio-ethanolproductie
         energy_production_bio_oil_demand: Bio-olieproductie
         energy_production_biodiesel_demand: Biodieselproductie

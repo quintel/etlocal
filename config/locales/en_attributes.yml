@@ -340,6 +340,9 @@ en:
         input_energy_greengas_production: Local greengas production
         energy_import_greengas_demand: Import of greengas
 
+        energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: Biogenic
+        energy_distribution_non_biogenic_waste_energy_distribution_waste_mix_child_share: Non-biogenic
+
         energy_production_bio_ethanol_demand: Bio-ethanol production
         energy_production_bio_oil_demand: Bio-oil production
         energy_production_biodiesel_demand: Biodiesel production

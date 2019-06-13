@@ -98,6 +98,7 @@ nl:
       # energy
       energy_demand_power_sector: Energiegebruik elektriciteitsopwek
       energy_greengas: Groengas
+      energy_waste_mix: Afvalmix
       energy_extraction: Brandstofproductie en winning natuurlijke bronnen
       energy_electricity_wind: Elektriciteitsopwek wind
       energy_electricity_solar: Elektriciteitsopwek zon

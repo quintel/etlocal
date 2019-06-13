@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    Data gebaseerd op landelijk gemiddelde.

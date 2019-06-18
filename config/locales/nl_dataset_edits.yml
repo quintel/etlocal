@@ -10,9 +10,6 @@ nl:
     success: "Succesvol %{key} naar %{value} veranderd"
     success: "%{dataset} is succesvol geüpdatet"
 
-    explanation:
-      number_of_residences: Hoeveelheid woningen
-
     form:
       save: Opslaan
       cancel: Annuleren
@@ -111,3 +108,11 @@ nl:
       energy_renewable_heat: Duurzame warmteproductie
       energy_fossil_heat: Fossiele warmteproductie
       energy_heat_loss: Verlies warmenetten
+
+    explanation:
+      number_of_residences: Hoeveelheid woningen
+
+      # energy
+      energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: "Deze instelling is alleen relevant als er een afvalverbrandingsinstallatie aanwezig is in dit gebied. Hier kun je instellen hoe duurzaam het verbrande afval is: Hoeveel procent van het afval is biogeen (zoals GFT, hout, papier) en hoeveel is niet-biogeen (zoals plastics)? Hoe groter het aandeel niet-biogeen afval hoe meer CO2-uitstoot wordt toegekend aan afvalverbranding en hoe minder duurzame energie de afvalverbrander produceert."
+
+

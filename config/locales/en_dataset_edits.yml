@@ -106,3 +106,8 @@ en:
       energy_renewable_heat: Renewable heat production
       energy_fossil_heat: Fossil heat production
       energy_heat_loss: Losses of heat networks
+
+    explanation:
+
+      # energy
+      energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: "This setting is only relevant if a waste-to-energy plant is present in this area. This setting allows you to specific how sustainable the burnt waste is: What share of waste is biogenic (organic waste, wood or paper) and what share is non-biogenic (plastics etc.)? The more non-biogenic waste is burnt the more CO2 emissions waste incineration brings about and the fewer sustainable energy is produced."

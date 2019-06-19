@@ -25,6 +25,9 @@ groups:
 
   - header: energy_waste_mix
     type: slider
+    combination_method:
+      weighted_average:
+        - input_energy_chp_supercritical_waste_mix_production
     items:
       - key: energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share
         unit: '%'

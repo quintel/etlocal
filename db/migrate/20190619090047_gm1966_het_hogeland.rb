@@ -1,6 +1,6 @@
-class Rggr01HetHogeland < ActiveRecord::Migration[5.0]
+class Gm1966HetHogeland < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20190619090047_rggr01_het_hogeland')
+    directory    = Rails.root.join('db/migrate/20190619090047_gm1966_het_hogeland')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

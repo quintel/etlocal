@@ -7,12 +7,21 @@ groups:
       - key: energy_power_hv_network_loss_demand
         unit: 'TJ'
 
-  - header: energy_greengas
+  - header: energy_greengas_demand
     items:
-      - key: input_energy_greengas_production
+      - key: energy_distribution_greengas_demand
         unit: 'TJ'
-      - key: energy_import_greengas_demand
-        unit: 'TJ'
+
+  - header: energy_greengas_production
+    type: slider
+    items:
+      - key: energy_greengas_dry_biomass_gasification_energy_distribution_greengas_child_share
+        unit: '%'
+      - key: energy_greengas_wet_biomass_gasification_energy_distribution_greengas_child_share
+        unit: '%'
+      - key: energy_upgrade_biogas_energy_distribution_greengas_child_share
+        unit: '%'
+        flexible: true
 
   - header: energy_waste_mix
     type: slider
@@ -25,11 +34,11 @@ groups:
 
   - header: energy_extraction
     items:
-      - key: energy_production_wood_demand
+      - key: energy_production_dry_biomass_demand
         unit: 'TJ'
-      - key: energy_production_biodiesel_demand
+      - key: energy_production_wet_biomass_demand
         unit: 'TJ'
-      - key: energy_production_bio_ethanol_demand
+      - key: energy_production_oily_biomass_demand
         unit: 'TJ'
       - key: energy_extraction_uranium_oxide_demand
         unit: 'TJ'
@@ -39,3 +48,12 @@ groups:
         unit: 'TJ'
       - key: energy_extraction_coal_demand
         unit: 'TJ'
+
+  - header: energy_potentials
+    items:
+        - key: energy_production_dry_biomass_max_demand
+          unit: 'TJ'
+        - key: energy_production_wet_biomass_max_demand
+          unit: 'TJ'
+        - key: energy_production_oily_biomass_max_demand
+          unit: 'TJ'

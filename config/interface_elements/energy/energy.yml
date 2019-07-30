@@ -15,11 +15,11 @@ groups:
   - header: energy_greengas_production
     type: slider
     items:
-      - key: energy_greengas_dry_biomass_gasification_energy_distribution_greengas_child_share
+      - key: energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share
         unit: '%'
-      - key: energy_greengas_wet_biomass_gasification_energy_distribution_greengas_child_share
+      - key: energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share
         unit: '%'
-      - key: energy_upgrade_biogas_energy_distribution_greengas_child_share
+      - key: energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share
         unit: '%'
         flexible: true
 

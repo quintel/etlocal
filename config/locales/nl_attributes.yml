@@ -340,9 +340,9 @@ nl:
         energy_power_hv_network_loss_demand: Netverliezen
         energy_distribution_greengas_demand: Groengas in gasnet
 
-        energy_greengas_dry_biomass_gasification_energy_distribution_greengas_child_share: Droge vergassing
-        energy_greengas_wet_biomass_gasification_energy_distribution_greengas_child_share: Natte vergassing
-        energy_upgrade_biogas_energy_distribution_greengas_child_share: Vergisting en opwaardering biogas
+        energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share: Droge vergassing
+        energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share: Natte vergassing
+        energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share: Vergisting en opwaardering biogas
 
         energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: Biogeen
         energy_distribution_non_biogenic_waste_energy_distribution_waste_mix_child_share: Niet-biogeen

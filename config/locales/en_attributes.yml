@@ -339,9 +339,9 @@ en:
         energy_power_hv_network_loss_demand: Network losses
         energy_distribution_greengas_demand: Greengas in gas network
 
-        energy_greengas_dry_biomass_gasification_energy_distribution_greengas_child_share: Dry gasification
-        energy_greengas_wet_biomass_gasification_energy_distribution_greengas_child_share: Wet gasification
-        energy_upgrade_biogas_energy_distribution_greengas_child_share: Fermentation and upgrading of biogas
+        energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share: Dry gasification
+        energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share: Wet gasification
+        energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share: Fermentation and upgrading of biogas
 
         energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: Biogenic
         energy_distribution_non_biogenic_waste_energy_distribution_waste_mix_child_share: Non-biogenic

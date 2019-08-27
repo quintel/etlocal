@@ -57,7 +57,7 @@ class CombineGreengasImportAndProduction < ActiveRecord::Migration[5.0]
     return nil unless commits.any?
 
     DatasetEdit
-      .where(commit_id: commits.pluck(:id))
+      .where(commit_id: commits.pluck(:id), key: edit_key)
       .order(updated_at: :desc)
       .first
   end

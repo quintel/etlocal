@@ -1,0 +1,12 @@
+---
+- fields:
+  - energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share
+  - energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share
+  - energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share
+  message:
+    Gemiddelde Nederlandse productiemix voor groengas
+
+- fields:
+  - input_energy_chp_engine_biogas_production
+  message:
+    Productie van warmte en elektriciteit uit biogas staat bij WKKs in de landbouw en bij het warmtenet in Huishoudens en Gebouwen

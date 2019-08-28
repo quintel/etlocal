@@ -337,21 +337,26 @@ en:
         # Energy
         energy_power_sector_own_use_electricity_demand: Own use of electricity
         energy_power_hv_network_loss_demand: Network losses
-        input_energy_greengas_production: Local greengas production
-        energy_import_greengas_demand: Import of greengas
+        energy_distribution_greengas_demand: Greengas in gas network
+
+        energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share: Dry gasification
+        energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share: Wet gasification
+        energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share: Fermentation and upgrading of biogas
 
         energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: Biogenic
         energy_distribution_non_biogenic_waste_energy_distribution_waste_mix_child_share: Non-biogenic
 
-        energy_production_bio_ethanol_demand: Bio-ethanol production
-        energy_production_bio_oil_demand: Bio-oil production
-        energy_production_biodiesel_demand: Biodiesel production
-        energy_production_biogas_demand: Biogas production
-        energy_production_wood_demand: Wood production
+        energy_production_wet_biomass_demand: Wet biomass production
+        energy_production_dry_biomass_demand: Dry biomass production
+        energy_production_oily_biomass_demand: Oily biomass production
         energy_extraction_natural_gas_demand: Natural gas extraction
         energy_extraction_coal_demand: Coal extraction
         energy_extraction_crude_oil_demand: Oil extraction
         energy_extraction_uranium_oxide_demand: Uranium extraction
+
+        energy_production_wet_biomass_max_demand: Wet biomass potential
+        energy_production_dry_biomass_max_demand: Dry biomass potential
+        energy_production_oily_biomass_max_demand: Oily biomass potential
 
         input_energy_power_wind_turbine_inland_production: Wind (inland)
         input_energy_power_wind_turbine_coastal_production: Wind (coastal)
@@ -361,6 +366,7 @@ en:
         input_energy_chp_supercritical_waste_mix_production: Waste plant with heat production for district heat (CHP)
         input_energy_power_hydro_river_production: Hydro (river)
         input_energy_power_geothermal_production: Geothermal
+        input_energy_chp_engine_biogas_production: Biogas
 
         input_energy_power_ultra_supercritical_coal_production: Pulverized coal
         input_energy_power_supercritical_coal_production: Coal conventional

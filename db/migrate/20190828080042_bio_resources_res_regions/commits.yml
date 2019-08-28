@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Productie en potenties voor biogrondstoffen zijn ingeschat op basis van onderzoek van TNO. Hierin is de totale productie en potentie voor Nederland onderverdeeld naar gemeentes en provincies op basis van verschillende verdeelsleutels. De data voor RES-regio's is een optelling van de data op gemeenteniveau. Zie https://github.com/quintel/documentation/blob/master/general/biomass.md voor meer informatie."

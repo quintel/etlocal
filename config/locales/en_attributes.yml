@@ -341,14 +341,11 @@ en:
 
         energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share: Dry gasification
         energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share: Wet gasification
-        energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share: Fermentation and upgrading of biogas
+        energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share: Fermentation
 
         energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: Biogenic
         energy_distribution_non_biogenic_waste_energy_distribution_waste_mix_child_share: Non-biogenic
 
-        energy_production_wet_biomass_demand: Wet biomass production
-        energy_production_dry_biomass_demand: Dry biomass production
-        energy_production_oily_biomass_demand: Oily biomass production
         energy_extraction_natural_gas_demand: Natural gas extraction
         energy_extraction_coal_demand: Coal extraction
         energy_extraction_crude_oil_demand: Oil extraction

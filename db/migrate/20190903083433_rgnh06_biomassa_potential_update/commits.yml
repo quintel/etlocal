@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Alkmaar, Bergen, Castricum, Heerhugowaard, Heiloo, Langedijk, Uitgeest"

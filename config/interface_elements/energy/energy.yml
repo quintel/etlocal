@@ -14,6 +14,9 @@ groups:
 
   - header: energy_greengas_production
     type: slider
+    combination_method:
+      weighted_average:
+        - energy_distribution_greengas_demand
     items:
       - key: energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share
         unit: '%'

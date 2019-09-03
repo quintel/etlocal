@@ -342,22 +342,19 @@ nl:
 
         energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share: Droge vergassing
         energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share: Natte vergassing
-        energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share: Vergisting en opwaardering biogas
+        energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share: Vergisting
 
         energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: Biogeen
         energy_distribution_non_biogenic_waste_energy_distribution_waste_mix_child_share: Niet-biogeen
 
-        energy_production_wet_biomass_demand: Natte biomassaproductie
-        energy_production_dry_biomass_demand: Droge biomassaproductie
-        energy_production_oily_biomass_demand: Vette biomassaproductie
         energy_extraction_natural_gas_demand: Aardgaswinning
         energy_extraction_coal_demand: Kolenwinning
         energy_extraction_crude_oil_demand: Oliewinning
         energy_extraction_uranium_oxide_demand: Uraniumwinning
 
-        energy_production_wet_biomass_max_demand: Natte biomassapotentie
-        energy_production_dry_biomass_max_demand: Droge biomassapotentie
-        energy_production_oily_biomass_max_demand: Vette biomassapotentie
+        energy_production_wet_biomass_max_demand: Potentie natte biomassa
+        energy_production_dry_biomass_max_demand: Potentie droge biomassa
+        energy_production_oily_biomass_max_demand: Potentie oliehoudende biomassa
 
         input_energy_power_wind_turbine_inland_production: Wind (op land)
         input_energy_power_wind_turbine_coastal_production: Wind (aan de kust)

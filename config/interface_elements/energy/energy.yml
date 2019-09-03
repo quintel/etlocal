@@ -34,12 +34,6 @@ groups:
 
   - header: energy_extraction
     items:
-      - key: energy_production_dry_biomass_demand
-        unit: 'TJ'
-      - key: energy_production_wet_biomass_demand
-        unit: 'TJ'
-      - key: energy_production_oily_biomass_demand
-        unit: 'TJ'
       - key: energy_extraction_uranium_oxide_demand
         unit: 'TJ'
       - key: energy_extraction_natural_gas_demand

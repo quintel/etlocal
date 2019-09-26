@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Korendijk, Binnenmaas, Cromstrijen, Oud_beijerland, Strijen"

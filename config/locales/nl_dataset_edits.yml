@@ -75,8 +75,8 @@ nl:
       transport_energy_demand_crude_oil_non_energetic: Niet-energetisch oliegebruik
 
       # agriculture
-      agriculture_energy_demand: Energiegebruik (exclusief WKK)
-      agriculture_chp_demand: WKK en warmte
+      agriculture_energy_demand: Energiegebruik
+      agriculture_chp_demand: WKK
 
       # industry
       industry_chps: WKK's

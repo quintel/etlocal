@@ -73,8 +73,8 @@ en:
       transport_energy_demand_crude_oil_non_energetic: Non-energetic oil use
 
       # agriculture
-      agriculture_energy_demand: Energy use (excluding CHP)
-      agriculture_chp_demand: CHP and heat
+      agriculture_energy_demand: Energy demand
+      agriculture_chp_demand: CHP
 
       # industry
       industry_chps: CHPs
@@ -91,7 +91,7 @@ en:
       industry_other: Other industry sectors
 
       # energy
-      energy_demand_power_sector: Energy use of the power sector
+      energy_demand_power_sector: Energy demand of the power sector
       energy_greengas_demand: Greengas use
       energy_greengas_production: Greengas production
       energy_waste_mix: Waste mix

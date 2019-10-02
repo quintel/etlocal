@@ -259,17 +259,16 @@ en:
         transport_final_demand_crude_oil_non_energetic_demand: Crude oil (lubricants etc.)
 
         # agriculture
-        input_agriculture_electricity_demand: Electricity
+        agriculture_final_demand_electricity_demand: Electricity
         agriculture_final_demand_network_gas_demand: Gas
+        agriculture_final_demand_steam_hot_water_demand: Heat
         agriculture_final_demand_wood_pellets_demand: Biomass
         agriculture_final_demand_crude_oil_demand: Oil
         agriculture_final_demand_hydrogen_demand: Hydrogen
         agriculture_chp_engine_network_gas_demand: Gas for CHP
         agriculture_chp_supercritical_wood_pellets_demand: Biomass for CHP
         agriculture_chp_engine_biogas_demand: Biogas for CHP
-        input_agriculture_geothermal_demand: Heat demand geothermal
         input_agriculture_heatpump_demand: Heat demand heat pump with thermal storage
-        input_agriculture_central_heat_demand: Heat demand large-scale heat plants
 
 
         # industry

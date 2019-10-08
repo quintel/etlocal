@@ -28,7 +28,7 @@ def data_from(interface_files):
   # open each interface_element.yml
   for file in interface_files:
     with open(file, 'r') as f:
-      interface_file = yaml.load(f)
+      interface_file = yaml.load(f, Loader=yaml.FullLoader)
     for header in interface_file['groups']:
       # loop over each interface element ('item') in each 'group'
       for item in header['items']:

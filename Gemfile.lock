@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/quintel/atlas.git
-  revision: 439080475c683fe0a8ba740b78da7cc5893d3a16
-  ref: 4390804
+  revision: e2869d4c06027c4b462dfb028f46fe971885dbbf
+  ref: e2869d4
   specs:
     atlas (1.0.0)
       activemodel (>= 4.1.14.1)
@@ -410,6 +410,9 @@ DEPENDENCIES
   virtus
   web-console (>= 3.3.0)
   webmock
+
+RUBY VERSION
+   ruby 2.6.3p62
 
 BUNDLED WITH
    1.17.3

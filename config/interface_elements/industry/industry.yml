@@ -1,6 +1,6 @@
 key: industry
 groups:
-  - header: industry_chps
+  - header: industry_heat
     items:
       - key: industry_chp_combined_cycle_gas_power_fuelmix_demand
         unit: 'TJ'
@@ -9,6 +9,16 @@ groups:
       - key: industry_chp_turbine_gas_power_fuelmix_demand
         unit: 'TJ'
       - key: industry_chp_ultra_supercritical_coal_demand
+        unit: 'TJ'
+      - key: industry_chp_wood_pellets_demand
+        unit: 'TJ'
+      - key: industry_heat_burner_lignite_demand
+        unit: 'TJ'
+      - key: industry_heat_burner_coal_demand
+        unit: 'TJ'
+      - key: industry_heat_well_geothermal_demand
+        unit: 'TJ'
+      - key: industry_heat_burner_crude_oil
         unit: 'TJ'
 
   - header: industry_gas_fuelmix

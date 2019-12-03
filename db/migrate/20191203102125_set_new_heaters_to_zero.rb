@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 class SetNewHeatersToZero < ActiveRecord::Migration[5.0]
   def up
-
     say "Checking and migrating #{Dataset.count} datasets"
     changed = 0
 
@@ -13,16 +14,15 @@ class SetNewHeatersToZero < ActiveRecord::Migration[5.0]
         com = Commit.create!(
           user_id: 4,
           dataset_id: dataset.id,
-          message: "Apparaat recent toegevoegd aan model. Waarde op 0 gezet."
+          message: 'Apparaat recent toegevoegd aan model. Waarde op 0 gezet.'
         )
 
-        create_edit(com, "industry_chp_wood_pellets_demand", 0)
-        create_edit(com, "industry_heat_burner_lignite_demand", 0)
-        create_edit(com, "industry_heat_burner_coal_demand", 0)
-        create_edit(com, "industry_heat_well_geothermal_demand", 0)
-        create_edit(com, "industry_heat_burner_crude_oil", 0)
-        create_edit(com, "input_energy_heat_solar_thermal_production", 0)
-
+        create_edit(com, 'industry_chp_wood_pellets_demand', 0)
+        create_edit(com, 'industry_heat_burner_lignite_demand', 0)
+        create_edit(com, 'industry_heat_burner_coal_demand', 0)
+        create_edit(com, 'industry_heat_well_geothermal_demand', 0)
+        create_edit(com, 'industry_heat_burner_crude_oil', 0)
+        create_edit(com, 'input_energy_heat_solar_thermal_production', 0)
       end
       changed += 1
     end
@@ -43,7 +43,7 @@ class SetNewHeatersToZero < ActiveRecord::Migration[5.0]
         commit_id: commit.id,
         key: key,
         value: value
-        )
+      )
     end
   end
 

@@ -20,12 +20,14 @@ groups:
         unit: 'TJ'
       - key: input_energy_chp_supercritical_waste_mix_production
         unit: 'TJ'
-
+        
   - header: energy_electricity_other_renewable
     items:
+      - key: input_energy_chp_local_wood_pellets_production
+        unit: 'TJ'
+      - key: input_energy_chp_local_engine_biogas_production
+        unit: 'TJ'
       - key: input_energy_power_hydro_river_production
         unit: 'TJ'
       - key: input_energy_power_geothermal_production
-        unit: 'TJ'
-      - key: input_energy_chp_engine_biogas_production
         unit: 'TJ'

@@ -21,15 +21,6 @@ groups:
       - key: input_energy_heat_burner_crude_oil_production
         unit: 'TJ'
 
-  - header: energy_chp
-    items:
-      - key: input_energy_chp_local_engine_network_gas_production
-        unit: 'TJ'
-      - key: input_energy_chp_local_wood_pellets_production
-        unit: 'TJ'
-      - key: input_energy_chp_local_engine_biogas_production
-        unit: 'TJ'
-
   - header: energy_heat_import
     items:
       - key: energy_heat_import_steam_hot_water_demand

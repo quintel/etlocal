@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 class SetNewHeatLossesToZero < ActiveRecord::Migration[5.0]
   def up
-
-    old_key = "energy_heat_network_loss_demand"
-    new_key = "energy_distribution_steam_hot_water_energy_heat_distribution_loss_parent_share"
+    old_key = 'energy_heat_network_loss_demand'
+    new_key = 'energy_distribution_steam_hot_water_energy_heat_distribution_loss_parent_share'
 
     say "Checking and migrating #{Dataset.count} datasets"
     changed = 0
@@ -45,7 +46,7 @@ class SetNewHeatLossesToZero < ActiveRecord::Migration[5.0]
         commit_id: commit.id,
         key: key,
         value: value
-        )
+      )
     end
   end
 
@@ -85,4 +86,3 @@ class SetNewHeatLossesToZero < ActiveRecord::Migration[5.0]
     end
   end
 end
-

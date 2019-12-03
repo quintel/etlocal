@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 class RenameHeaters < ActiveRecord::Migration[5.0]
   RENAMED_KEYS = {
-      "energy_import_heat_demand" => "energy_heat_import_steam_hot_water_demand",
-      "input_energy_heater_for_heat_network_crude_oil_production" => "input_energy_heat_burner_crude_oil_production",
-      "input_energy_heater_for_heat_network_coal_production" => "input_energy_heat_burner_coal_production",
-      "input_energy_heater_for_heat_network_waste_mix_production" => "input_energy_heat_burner_waste_mix_production",
-      "input_energy_heater_for_heat_network_wood_pellets_production" => "input_energy_heat_burner_wood_pellets_production"
-    }.freeze
+    'energy_import_heat_demand' => 'energy_heat_import_steam_hot_water_demand',
+    'input_energy_heater_for_heat_network_crude_oil_production' => 'input_energy_heat_burner_crude_oil_production',
+    'input_energy_heater_for_heat_network_coal_production' => 'input_energy_heat_burner_coal_production',
+    'input_energy_heater_for_heat_network_waste_mix_production' => 'input_energy_heat_burner_waste_mix_production',
+    'input_energy_heater_for_heat_network_wood_pellets_production' => 'input_energy_heat_burner_wood_pellets_production'
+  }.freeze
 
   def up
     say "Checking and migrating #{Dataset.count} datasets"
@@ -22,7 +24,6 @@ class RenameHeaters < ActiveRecord::Migration[5.0]
         edit = find_edit(dataset, old_key)
 
         if edit
-
           edit.key = new_key
           edit.save(validate: false, touch: false)
           destroy_edits(dataset, old_key)
@@ -52,7 +53,7 @@ class RenameHeaters < ActiveRecord::Migration[5.0]
         commit_id: commit.id,
         key: key,
         value: value
-        )
+      )
     end
   end
 

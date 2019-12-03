@@ -28,7 +28,6 @@ en:
       households_final_demand: Final demand
       households_insulation: Insulation
       households_local_production: Local energy production
-      households_district_heating: District heating
       households_electricity_distribution: Electricity distribution
       households_network_gas_distribution: Gas distribution
       households_steam_hot_water_distribution: Heat distribution
@@ -46,7 +45,6 @@ en:
       buildings_final_demand: Final demand
       buildings_insulation: Insulation
       buildings_local_production: Local energy production
-      buildings_district_heating: District heating
       buildings_electricity_distribution: Electricity distribution
       buildings_network_gas_distribution: Gas distribution
       buildings_wood_pellets_distribution: Biomass distribution
@@ -74,10 +72,9 @@ en:
 
       # agriculture
       agriculture_energy_demand: Energy demand
-      agriculture_chp_demand: CHP
 
       # industry
-      industry_chps: CHPs
+      industry_warmte: Heat production
       industry_gas_fuelmix: Fuel for gas-fired CHPs
       industry_metal_steel: Steel
       industry_metal_aluminium: Aluminium
@@ -104,10 +101,9 @@ en:
       energy_electricity_gas: Gas electricity production
       energy_electricity_waste: Waste electricity production
       energy_electricity_other_fossil: Other fossil electricity production
-      energy_import_residual_heat: Residual heat
-      energy_renewable_heat: Renewable heat production
-      energy_fossil_heat: Fossil heat production
-      energy_heat_loss: Losses of heat networks
+      energy_heat_import: Residual heat
+      energy_heat: Heat production
+      energy_heat_distribution_loss: Heat network losses
 
     explanation:
 

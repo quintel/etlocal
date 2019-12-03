@@ -3,7 +3,7 @@
 class SetNewHeatLossesToZero < ActiveRecord::Migration[5.0]
   def up
     old_key = 'energy_heat_network_loss_demand'
-    new_key = 'energy_distribution_steam_hot_water_energy_heat_distribution_loss_parent_share'
+    new_key = 'energy_heat_distribution_loss_demand'
 
     say "Checking and migrating #{Dataset.count} datasets"
     changed = 0
@@ -18,8 +18,6 @@ class SetNewHeatLossesToZero < ActiveRecord::Migration[5.0]
       if loss_edit
         # rename edit
         loss_edit.key = new_key
-        # set to zero
-        loss_edit.value = 0.0
 
         loss_edit.save(validate: false, touch: false)
 

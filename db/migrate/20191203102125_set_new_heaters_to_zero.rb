@@ -21,7 +21,7 @@ class SetNewHeatersToZero < ActiveRecord::Migration[5.0]
         create_edit(com, 'industry_heat_burner_lignite_demand', 0)
         create_edit(com, 'industry_heat_burner_coal_demand', 0)
         create_edit(com, 'industry_heat_well_geothermal_demand', 0)
-        create_edit(com, 'industry_heat_burner_crude_oil', 0)
+        create_edit(com, 'industry_heat_burner_crude_oil_demand', 0)
         create_edit(com, 'input_energy_heat_solar_thermal_production', 0)
       end
       changed += 1

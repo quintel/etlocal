@@ -261,7 +261,7 @@ nl:
         industry_heat_burner_lignite_demand: Bruinkoolketel
         industry_heat_burner_coal_demand: Kolenketel
         industry_heat_well_geothermal_demand: Geothermieketel
-        industry_heat_burner_crude_oil: Olieketel
+        industry_heat_burner_crude_oil_demand: Olieketel
 
         input_share_mixer_gas_fuel_network_gas: Gas
         input_share_mixer_gas_fuel_oil: Olie

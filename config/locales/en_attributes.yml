@@ -261,7 +261,7 @@ en:
         industry_heat_burner_lignite_demand: Lignite-fired heater
         industry_heat_burner_coal_demand: Coal-fired heater
         industry_heat_well_geothermal_demand: Geothermal heater
-        industry_heat_burner_crude_oil: Oil-fired heater
+        industry_heat_burner_crude_oil_demand: Oil-fired heater
 
         input_share_mixer_gas_fuel_network_gas: Gas
         input_share_mixer_gas_fuel_oil: Oil

@@ -10,7 +10,7 @@ end
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails', '>= 1.0.3'
 gem 'mysql2'
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 3.12'
 gem 'rails', '~> 5.0.1'
 gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'

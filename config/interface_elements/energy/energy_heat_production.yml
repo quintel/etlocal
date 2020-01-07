@@ -23,7 +23,7 @@ groups:
 
   - header: energy_heat_import
     items:
-      - key: energy_heat_import_steam_hot_water_demand
+      - key: energy_import_heat_demand
         unit: 'TJ'
 
   - header: energy_heat_distribution_loss

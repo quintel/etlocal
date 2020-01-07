@@ -2,7 +2,6 @@
 
 class RenameHeaters < ActiveRecord::Migration[5.0]
   RENAMED_KEYS = {
-    'energy_import_heat_demand' => 'energy_heat_import_steam_hot_water_demand',
     'input_energy_heater_for_heat_network_crude_oil_production' => 'input_energy_heat_burner_crude_oil_production',
     'input_energy_heater_for_heat_network_coal_production' => 'input_energy_heat_burner_coal_production',
     'input_energy_heater_for_heat_network_waste_mix_production' => 'input_energy_heat_burner_waste_mix_production',

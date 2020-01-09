@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191002131648) do
+ActiveRecord::Schema.define(version: 20191217092225) do
 
   create_table "commits", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.integer  "source_id"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20191002131648) do
     t.integer  "user_id"
     t.string   "name",            default: "",    null: false
     t.string   "geo_id",          default: "",    null: false
+    t.string   "country",         default: "nl"
     t.boolean  "has_industry",    default: false
     t.boolean  "has_agriculture", default: false
     t.boolean  "public",          default: true

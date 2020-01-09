@@ -15,6 +15,6 @@ namespace :etsource do
   task :export => :environment do
     raise ArgumentError, "DATASET= argument is missing" unless ENV['DATASET']
 
-    Exporter.export(ENV['DATASET'])
+    Exporter.export(ENV['DATASET'], ENV['TIME_CURVES_TO_ZERO'])
   end
 end

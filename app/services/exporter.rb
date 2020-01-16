@@ -6,7 +6,7 @@ module Exporter
   # Public: Exports an ETLocal dataset to an ETSource dataset.
   def self.export(dataset_ids, time_curves_to_zero=false)
     response = RestClient.get(
-      "#{DATASET_URL}/exports/#{dataset_ids}?tc=#{time_curves_to_zero}",
+      "#{DATASET_URL}/exports/#{dataset_ids}?time_cuves_to_zero=#{time_curves_to_zero}",
       accept: :json,
       content_type: :json
     )

@@ -9,7 +9,7 @@ class Api::V1::ExportsController < ApplicationController
         area: "#{dataset.geo_id}_#{dataset.normalized_name}",
         base_dataset: dataset.country,
         group: dataset.group,
-        time_curves_to_zero: params[:time_cuves_to_zero]
+        time_curves_to_zero: params[:time_curves_to_zero]
       )
     end
 

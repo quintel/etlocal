@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/quintel/atlas.git
-  revision: e2869d4c06027c4b462dfb028f46fe971885dbbf
-  ref: e2869d4
+  revision: ed326c791547cca92b6fed87856d974644f45858
+  ref: ed326c7
   specs:
     atlas (1.0.0)
       activemodel (>= 4.1.14.1)
@@ -28,8 +28,8 @@ GIT
 
 GIT
   remote: https://github.com/quintel/transformer.git
-  revision: ffc78907f3488ab1dd65bb25640ce22d618c4f6d
-  ref: ffc7890
+  revision: df3a801567bc43e6b05bc6f04f8267140d799126
+  ref: df3a801
   specs:
     transformer (1.0.0)
       atlas (~> 1.0)

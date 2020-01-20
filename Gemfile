@@ -30,8 +30,8 @@ gem 'archive-zip', '~> 0.9.0'
 gem 'airbrake', '~> 7.2'
 gem 'deep_cloneable', '~> 2.3.0'
 
-gem 'transformer', ref: 'ffc7890', github: 'quintel/transformer'
-gem 'atlas',       ref: 'e2869d4', github: 'quintel/atlas'
+gem 'transformer', ref: 'df3a801', github: 'quintel/transformer'
+gem 'atlas',       ref: 'ed326c7', github: 'quintel/atlas'
 gem 'rubel',       ref: 'ad3d44e', github: 'quintel/rubel'
 gem 'refinery',    ref: '636686c', github: 'quintel/refinery'
 

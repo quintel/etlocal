@@ -11,7 +11,6 @@
   - agriculture_final_demand_electricity_demand
   - agriculture_final_demand_network_gas_demand
   - agriculture_chp_engine_network_gas_demand
-  - agriculture_final_demand_steam_hot_water_demand
   - input_industry_ict_electricity_demand
   - input_industry_chemical_other_electricity_demand
   - input_industry_food_electricity_demand

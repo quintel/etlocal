@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Beesel, Bergen, Echt_susteren, Gennep, Horst aan de Maas, Leudal, Maasgouw, Mook en Middelaar, Nederweert, Peel en Maas, Roerdalen, Roermond, Venlo, Venray, Weert"

@@ -17,7 +17,7 @@ en:
         In this section you can provide information about the energy use of the agricultural sector in this area.
 
       industry: |
-        In this section you can provide information about the industry sector in this area. Below you can indicate how much energy is used for Combined Heat and Power (CHP) in industrial firms.
+        In this section you can provide information about the industry sector in this area. Below you can indicate how much energy is used for Combined Heat and Power (CHP) and other heaters in industrial firms.
 
       energy: |
         In this section you can provide information about the (central) energy sector in this area.
@@ -34,7 +34,7 @@ en:
         In this tab you can specify how much energy is used in the households sector per energy carrier and how well insulated each housing type is.
 
       households_energy_supply: |
-        In this tab you can provide information about solar PV and solar thermal production in the households sector. In addition, you can specify how district heating networks are supplied (if applicable).
+        In this tab you can provide information about solar PV and solar thermal production in the households sector.
 
       households_advanced: |
         In this tab you can specify how energy is used by households per energy carrier. E.g. What percentage of natural gas demand in households is used for space heating? And what percentage of natural gas demand is used for cooking? In addition, you can specify which technologies are used by households. E.g. How many households that use gas for heating their homes own a combi boiler? And how many own a hybrid heat pump?
@@ -43,7 +43,7 @@ en:
         In this tab you can specify how energy is used in the buildings sector per energy carrier and how well insulated the buildings are. Note: In the ETM not all services are part of the buildings sector. The energy use of transport services (like public transport) and central ICT services (like data centers) can be provided in the 'Transport' and 'Industry' tabs respectively.
 
       buildings_energy_supply: |
-        In this tab you can provide information about solar PV and solar thermal production in the buildings sector. In addition, you can specify how district heating networks are supplied (if applicable).
+        In this tab you can provide information about solar PV and solar thermal production in the buildings sector.
 
       buildings_advanced: |
         In this tab you can specify how energy is used in the buildings sector per energy carrier. E.g. What percentage of electricity demand in buildings is used for space heating? And what percentage of electricity demand is used for lighting? In addition, you can specify the technologies used. E.g. What percentage of lighting is provided by low-energy light bulbs? And what percentage by LED light bulbs?
@@ -88,4 +88,4 @@ en:
         In this tab you can specify how much electricity is produced by fossil power plants in this area.
 
       energy_heat_production: |
-        In this tab you can specify how much heat is produced in this area by large-scale heat plants. This heat can be used for district heating in households and buildings, in agriculture and in industry.
+        In this tab you can specify how much heat is produced by heat plants. This heat is used for district heating in households, buildings and agriculture.

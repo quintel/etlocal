@@ -33,6 +33,8 @@ groups:
         unit: 'TJ'
       - key: input_energy_chp_combined_cycle_network_gas_production
         unit: 'TJ'
+      - key: input_energy_chp_local_engine_network_gas_production
+        unit: 'TJ'
 
   - header: energy_electricity_other_fossil
     items:

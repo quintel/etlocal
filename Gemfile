@@ -27,7 +27,7 @@ gem 'gradients'
 gem 'tty-progressbar'
 gem 'remotipart', '~> 1.2'
 gem 'archive-zip', '~> 0.9.0'
-gem 'airbrake', '~> 7.2'
+gem 'sentry-raven'
 gem 'deep_cloneable', '~> 2.3.0'
 
 gem 'transformer', ref: 'ffc7890', github: 'quintel/transformer'

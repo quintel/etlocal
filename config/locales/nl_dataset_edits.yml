@@ -103,7 +103,8 @@ nl:
       energy_electricity_gas: Elektriciteitsopwek gas
       energy_electricity_waste: Elektriciteitsopwek afvalverbranding
       energy_electricity_other_fossil: Overige fossiele elektriciteitsopwek
-      energy_heat_import: Restwarmte
+      energy_residual_heat_industry: Industriële restwarmte: stel het percentage van de warmtevraag in dat beschikbaar is als restwarmte
+      energy_heat_import: Geïmporteerde warmte
       energy_heat: Warmteproductie
       energy_heat_distribution_loss: Verlies warmenetten
 

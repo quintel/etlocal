@@ -21,6 +21,23 @@ groups:
       - key: input_energy_heat_burner_crude_oil_production
         unit: 'TJ'
 
+  - header: energy_residual_heat_industry
+    items:
+      - key: industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share
+        unit: 'TJ'
+      - key: industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share
+        unit: 'TJ'
+      - key: industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share
+        unit: 'TJ'
+      - key: industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share
+        unit: 'TJ'
+      - key: industry_useful_demand_for_chemical_fertilizers_useable_heat_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share
+        unit: 'TJ'
+      - key: industry_useful_demand_for_chemical_fertilizers_useable_heat_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share
+        unit: 'TJ'
+      - key: industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share
+        unit: 'TJ'
+
   - header: energy_heat_import
     items:
       - key: energy_import_heat_demand

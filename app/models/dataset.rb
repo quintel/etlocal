@@ -4,8 +4,9 @@ class Dataset < ApplicationRecord
   has_many :commits
   has_many :edits, through: :commits, source: :dataset_edits
 
-  validates :geo_id, presence: true
-  validates :name,   presence: true
+  validates :geo_id,  presence: true
+  validates :name,    presence: true
+  validates :country, presence: true
 
   def self.clones(dataset, user)
     where(geo_id: dataset.geo_id)
@@ -32,13 +33,6 @@ class Dataset < ApplicationRecord
     super
       .except('created_at', 'updated_at')
       .merge(group: I18n.t("datasets.area_groups.#{group}"))
-  end
-
-  # Public: country
-  #
-  # All the regions of ETLocal currently lie within the borders of Holland.
-  def country
-    'nl'.freeze
   end
 
   def atlas_dataset

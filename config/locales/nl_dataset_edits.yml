@@ -103,7 +103,10 @@ nl:
       energy_electricity_gas: Elektriciteitsopwek gas
       energy_electricity_waste: Elektriciteitsopwek afvalverbranding
       energy_electricity_other_fossil: Overige fossiele elektriciteitsopwek
-      energy_residual_heat_industry: "Industriële restwarmte - stel het percentage van de warmtevraag in dat beschikbaar is als restwarmte"
+      industry_chemical_residual_heat: "Restwarmte chemische industrie - stel het percentage van de warmtevraag in dat beschikbaar is als restwarmte"
+      industry_refineries_residual_heat: "Restwarmte raffinaderijen - stel het percentage van de warmtevraag in dat beschikbaar is als restwarmte"
+      industry_fertilizers_residual_heat: "Restwarmte kunstmestindustrie - stel het percentage van de warmtevraag in dat beschikbaar is als restwarmte"
+      industry_ict_residual_heat: "Restwarmte ICT - stel het percentage van de elektriciteitsvraag in dat beschikbaar is als restwarmte"
       energy_heat_import: Geïmporteerde warmte
       energy_heat: Warmteproductie
       energy_heat_distribution_loss: Verlies warmenetten

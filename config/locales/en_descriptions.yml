@@ -88,4 +88,4 @@ en:
         In this tab you can specify how much electricity is produced by fossil power plants in this area.
 
       energy_heat_production: |
-        In this tab you can specify how much heat is produced by heat plants. This heat is used for district heating in households, buildings and agriculture.
+        In this tab you can specify how much heat is produced by heat plants. This heat is used for district heating in households, buildings and agriculture. You can also specify the availability of residual heat from industry.

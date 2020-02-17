@@ -390,9 +390,9 @@ en:
         industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share: "Residual heat from processes"
         industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share: "Residual heat from flue gasses"
         industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share: "No residual heat"
-        industry_useful_demand_for_chemical_fertilizers_useable_heat_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share: "Residual heat from processes"
-        industry_useful_demand_for_chemical_fertilizers_useable_heat_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share: "Residual heat from flue gasses"
-        industry_useful_demand_for_chemical_fertilizers_useable_heat_industry_chemicals_fertilizers_used_heat_parent_share: "No residual heat"
+        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share: "Residual heat from processes"
+        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share: "Residual heat from flue gasses"
+        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_used_heat_parent_share: "No residual heat"
         industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share: "Residual heat from servers"
         industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: "No residual heat"
         energy_import_heat_demand: (Residual) heat imported from outside your region

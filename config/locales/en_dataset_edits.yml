@@ -101,10 +101,10 @@ en:
       energy_electricity_gas: Gas electricity production
       energy_electricity_waste: Waste electricity production
       energy_electricity_other_fossil: Other fossil electricity production
-      industry_chemical_residual_heat: "Residual heat chemical industry - set percentage of heat demand that is available as residual heat"
-      industry_refineries_residual_heat: "Residual heat refineries - set percentage of heat demand that is available as residual heat"
-      industry_fertilizers_residual_heat: "Residual heat fertilizer industry - set percentage of heat demand that is available as residual heat"
-      industry_ict_residual_heat: "Residual heat ICT - set percentage of electricity demand that is available as residual heat"
+      industry_chemical_residual_heat: "Available residual heat chemical industry"
+      industry_refineries_residual_heat: "Available residual heat refineries"
+      industry_fertilizers_residual_heat: "Available residual heat fertilizer industry"
+      industry_ict_residual_heat: "Available residual heat ICT"
 
       energy_heat_import: Imported heat
       energy_heat: Heat production

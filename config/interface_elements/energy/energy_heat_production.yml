@@ -53,11 +53,11 @@ groups:
   - header: industry_fertilizers_residual_heat
     type: slider
     items:
-      - key: industry_useful_demand_for_chemical_fertilizers_useable_heat_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share
+      - key: industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share
         unit: '%'
-      - key: industry_useful_demand_for_chemical_fertilizers_useable_heat_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share
+      - key: industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share
         unit: '%'
-      - key: industry_useful_demand_for_chemical_fertilizers_useable_heat_industry_chemicals_fertilizers_used_heat_parent_share
+      - key: industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_used_heat_parent_share
         unit: '%'
         flexible: true
         skip_validation: true

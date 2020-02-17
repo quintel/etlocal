@@ -88,4 +88,4 @@ nl:
         In dit tabblad kun je aangeven hoeveel elektriciteit er wordt geproduceerd met fossiele bronnen in dit gebied.
 
       energy_heat_production: |
-        In dit tabblad kun je aangeven hoeveel warmte er wordt geproduceerd door verwarmingsketels in dit gebied. Deze warmte wordt ingezet in warmtenetten voor huishoudens, gebouwen en landbouw.
+        In dit tabblad kun je aangeven hoeveel warmte er wordt geproduceerd door verwarmingsketels in dit gebied. Deze warmte wordt ingezet in warmtenetten voor huishoudens, gebouwen en landbouw. Daarbij kan je hier ook de beschikbaarheid van restwarmte uit verschillende industriesectoren specificeren.

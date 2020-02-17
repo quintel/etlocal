@@ -101,7 +101,12 @@ en:
       energy_electricity_gas: Gas electricity production
       energy_electricity_waste: Waste electricity production
       energy_electricity_other_fossil: Other fossil electricity production
-      energy_heat_import: Residual heat
+      industry_chemical_residual_heat: "Available residual heat chemical industry"
+      industry_refineries_residual_heat: "Available residual heat refineries"
+      industry_fertilizers_residual_heat: "Available residual heat fertilizer industry"
+      industry_ict_residual_heat: "Available residual heat ICT"
+
+      energy_heat_import: Imported heat
       energy_heat: Heat production
       energy_heat_distribution_loss: Heat network losses
 

@@ -11,8 +11,8 @@ GIT
 
 GIT
   remote: https://github.com/quintel/refinery.git
-  revision: 636686c0d6cb5a76f47d5fc67c75b6f307e6f636
-  ref: 636686c
+  revision: e3e3ba89b1929c557fa1d702c30f8ef1f56a48fa
+  ref: e3e3ba8
   specs:
     refinery (0.0.1)
       ruby-graphviz
@@ -28,8 +28,8 @@ GIT
 
 GIT
   remote: https://github.com/quintel/transformer.git
-  revision: eddda9dfc4e5ec45393a57551d732d08c9dadb4b
-  ref: eddda9d
+  revision: 203faa995ff553e56bcb4ea69f2d9871e7213d8d
+  ref: 203faa9
   specs:
     transformer (1.0.0)
       atlas (~> 1.0)

@@ -30,10 +30,10 @@ gem 'archive-zip', '~> 0.9.0'
 gem 'sentry-raven'
 gem 'deep_cloneable', '~> 2.3.0'
 
-gem 'transformer', ref: 'eddda9d', github: 'quintel/transformer'
+gem 'transformer', ref: '203faa9', github: 'quintel/transformer'
 gem 'atlas',       ref: '79f76c4', github: 'quintel/atlas'
 gem 'rubel',       ref: 'ad3d44e', github: 'quintel/rubel'
-gem 'refinery',    ref: '636686c', github: 'quintel/refinery'
+gem 'refinery',    ref: 'e3e3ba8', github: 'quintel/refinery'
 
 group :development, :test do
   gem 'byebug', platform: :mri

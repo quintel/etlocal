@@ -1,0 +1,16 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - heat_share_of_apartments_with_block_heating
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_first_bracket
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_second_bracket
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_third_bracket
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_fourth_bracket
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_fifth_bracket
+  - heat_length_of_connection_pipelines_in_meter_per_residence_first_bracket
+  - heat_length_of_connection_pipelines_in_meter_per_residence_second_bracket
+  - heat_length_of_connection_pipelines_in_meter_per_residence_third_bracket
+  - heat_length_of_connection_pipelines_in_meter_per_residence_fourth_bracket
+  - heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket
+  message:
+    "Geen lokale informatie beschikbaar. Aanname: Gelijk aan gemiddelde voor Amsterdam. Bron: Vesta MAIS 4.0"

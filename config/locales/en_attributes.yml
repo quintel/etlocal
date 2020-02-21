@@ -38,6 +38,16 @@ en:
         mv_hv_trafo_costs_per_capacity_step: Costs of mv-hv transformer reinforcement per step
         hv_net_capacity_per_step: Step size of high voltage grid reinforcement
         hv_net_costs_per_capacity_step: Costs of high voltage grid reinforcement per step
+        heat_length_of_distribution_pipelines_in_meter_per_residence_object_first_bracket: Length distribution pipes per house/building (20% connected)
+        heat_length_of_distribution_pipelines_in_meter_per_residence_object_second_bracket: Length distribution pipes per house/building (40% connected)
+        heat_length_of_distribution_pipelines_in_meter_per_residence_object_third_bracket: Length distribution pipes per house/building (60% connected)
+        heat_length_of_distribution_pipelines_in_meter_per_residence_object_fourth_bracket: Length distribution pipes per house/building (80% connected)
+        heat_length_of_distribution_pipelines_in_meter_per_residence_object_fifth_bracket: Length distribution pipes per house/building (100% connected)
+        heat_length_of_connection_pipelines_in_meter_per_residence_first_bracket: Length connection pipes per house (20% connected)
+        heat_length_of_connection_pipelines_in_meter_per_residence_second_bracket: Length connection pipes per house (40% connected)
+        heat_length_of_connection_pipelines_in_meter_per_residence_third_bracket: Length connection pipes per house (60% connected)
+        heat_length_of_connection_pipelines_in_meter_per_residence_fourth_bracket: Length connection pipes per house (80% connected)
+        heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket: Length connection pipes per house (100% connected)
 
         #households
         number_of_residences: Number of residences
@@ -47,6 +57,7 @@ en:
         input_percentage_of_semi_detached_houses: Semi-detached house
         input_percentage_of_detached_houses: Detached house
         residences_roof_surface_available_for_pv: Roof surface suitable for solar PV
+        heat_share_of_apartments_with_block_heating: Apartments with block heating
 
         households_final_demand_electricity_demand: Electricity
         households_final_demand_network_gas_demand: Gas

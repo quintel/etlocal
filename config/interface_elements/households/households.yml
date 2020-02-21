@@ -23,6 +23,12 @@ groups:
       flexible: true
       skip_validation: true
 
+  - header: households_apartments_block_heating
+    type: slider
+    items:
+    - key: heat_share_of_apartments_with_block_heating
+      unit: '%'
+
   - header: households_insulation
     type: slider
     items:

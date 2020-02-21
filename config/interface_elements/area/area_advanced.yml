@@ -64,3 +64,26 @@ groups:
         unit: 'MW'
       - key: mv_hv_trafo_costs_per_capacity_step
         unit: '€'
+
+  - header: area_heat_infrastructure_lengths
+    items:
+      - key: heat_length_of_distribution_pipelines_in_meter_per_residence_object_first_bracket
+        unit: 'meter'
+      - key: heat_length_of_distribution_pipelines_in_meter_per_residence_object_second_bracket
+        unit: 'meter'
+      - key: heat_length_of_distribution_pipelines_in_meter_per_residence_object_third_bracket
+        unit: 'meter'
+      - key: heat_length_of_distribution_pipelines_in_meter_per_residence_object_fourth_bracket
+        unit: 'meter'
+      - key: heat_length_of_distribution_pipelines_in_meter_per_residence_object_fifth_bracket
+        unit: 'meter'
+      - key: heat_length_of_connection_pipelines_in_meter_per_residence_first_bracket
+        unit: 'meter'
+      - key: heat_length_of_connection_pipelines_in_meter_per_residence_second_bracket
+        unit: 'meter'
+      - key: heat_length_of_connection_pipelines_in_meter_per_residence_third_bracket
+        unit: 'meter'
+      - key: heat_length_of_connection_pipelines_in_meter_per_residence_fourth_bracket
+        unit: 'meter'
+      - key: heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket
+        unit: 'meter'

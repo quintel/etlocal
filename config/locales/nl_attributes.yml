@@ -39,6 +39,16 @@ nl:
         mv_hv_trafo_costs_per_capacity_step: Kosten capaciteitsuitbreiding MS-HS-transformatoren per stap
         hv_net_capacity_per_step: Stapgrootte van hoogspanningsnetverzwaring
         hv_net_costs_per_capacity_step: Kosten hoogspanningsnetverzwaring per stap
+        heat_length_of_distribution_pipelines_in_meter_per_residence_object_first_bracket: Lengte distributieleiding per huis/gebouw (20% aangesloten)
+        heat_length_of_distribution_pipelines_in_meter_per_residence_object_second_bracket: Lengte distributieleiding per huis/gebouw (40% aangesloten)
+        heat_length_of_distribution_pipelines_in_meter_per_residence_object_third_bracket: Lengte distributieleiding per huis/gebouw (60% aangesloten)
+        heat_length_of_distribution_pipelines_in_meter_per_residence_object_fourth_bracket: Lengte distributieleiding per huis/gebouw (80% aangesloten)
+        heat_length_of_distribution_pipelines_in_meter_per_residence_object_fifth_bracket: Lengte distributieleiding per huis/gebouw (100% aangesloten)
+        heat_length_of_connection_pipelines_in_meter_per_residence_first_bracket: Lengte aansluitleiding per huis (20% aangesloten)
+        heat_length_of_connection_pipelines_in_meter_per_residence_second_bracket: Lengte aansluitleiding per huis (40% aangesloten)
+        heat_length_of_connection_pipelines_in_meter_per_residence_third_bracket: Lengte aansluitleiding per huis (60% aangesloten)
+        heat_length_of_connection_pipelines_in_meter_per_residence_fourth_bracket: Lengte aansluitleiding per huis (80% aangesloten)
+        heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket: Lengte aansluitleiding per huis (100% aangesloten)
 
         #households
         number_of_residences: Aantal woningen
@@ -47,6 +57,7 @@ nl:
         input_percentage_of_corner_houses: Hoekhuis
         input_percentage_of_semi_detached_houses: Twee-onder-één-kapwoning
         input_percentage_of_detached_houses: Vrijstaand huis
+        heat_share_of_apartments_with_block_heating: Appartementen met blokverwarming
         residences_roof_surface_available_for_pv: Geschikt dakoppervlak voor zon-PV
 
         households_final_demand_electricity_demand: Elektriciteit

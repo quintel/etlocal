@@ -4,7 +4,6 @@ import re
 
 def get_datasets_for(*dataset_ids):
   datasets = list()
-  for dataset_id in dataset_ids:
     # api_url = "http://localhost:5000/api/v1/exports/" + str(dataset_id)
     api_url = "http://data.energytransitionmodel.com/api/v1/exports/" + str(dataset_id)
     response = requests.get(api_url)

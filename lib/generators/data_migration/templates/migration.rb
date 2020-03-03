@@ -18,13 +18,14 @@ class <%= class_name.underscore.camelize %> < ActiveRecord::Migration[5.0]
       commits = runner.call
 
       if commits.any?
-        datasets.push(commits.first.dataset)
+        datasets.push(find_dataset(commits))
         puts 'done!'
       else
         puts 'nothing to change!'
       end
     end
 
+    sleep(1)
     puts
     puts "Updated #{datasets.length} datasets with the following IDs:"
     puts "  #{datasets.map(&:id).join(',')}"
@@ -32,5 +33,11 @@ class <%= class_name.underscore.camelize %> < ActiveRecord::Migration[5.0]
 
   def self.down
     raise ActiveRecord::IrreversibleMigration
+  end
+
+  def find_dataset(commits)
+    commits.each do |commit|
+      return commit.dataset if commit&.dataset
+    end
   end
 end

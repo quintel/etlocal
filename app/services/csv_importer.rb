@@ -16,6 +16,7 @@ class CSVImporter
   #
   # Returns an array of the commits which were created.
   def self.run(*args, **kwargs, &block)
+    sleep(1)
     new(*args, **kwargs).run(&block)
   end
 

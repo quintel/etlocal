@@ -7,7 +7,7 @@ groups:
         entso: |
           EB("Biomass heater - residential", "Heat")
       - key: input_energy_heat_well_geothermal_production
-        unit: 'TJ' 
+        unit: 'TJ'
         entso: |
           EB("Geothermal - residential", "Heat")
       - key: input_energy_heat_burner_waste_mix_production
@@ -24,7 +24,7 @@ groups:
       - key: input_energy_heat_heatpump_water_water_electricity_production
         unit: 'TJ'
         entso: 0.0
-        
+
   - header: energy_heat_fossil
     items:
       - key: input_energy_heat_burner_network_gas_production
@@ -51,3 +51,4 @@ groups:
         unit: 'TJ'
         entso: |
           EB("Distribution losses", "Heat")
+

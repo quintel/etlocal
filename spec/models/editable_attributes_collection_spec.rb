@@ -6,7 +6,7 @@ describe EditableAttributesCollection do
 
   before do
     2.times do |i|
-      Timecop.freeze(Time.now + i)
+      Timecop.freeze(Time.now + (i/2.0).seconds)
 
       commit = FactoryGirl.create(:commit, dataset: dataset)
 

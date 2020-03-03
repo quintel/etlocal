@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Beschikbaarheid van restwarmte is gebaseerd op landelijke potentie. Voor bron en berekening zie: https://refman.energytransitionmodel.com/publications/2108"

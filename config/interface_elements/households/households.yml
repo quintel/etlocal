@@ -28,6 +28,10 @@ groups:
 
   - header: households_apartments_block_heating
     type: slider
+    combination_method:
+      weighted_average:
+        - number_of_residences
+        - input_percentage_of_apartments
     items:
     - key: heat_share_of_apartments_with_block_heating
       unit: '%'

@@ -33,7 +33,7 @@ class EditableAttributesCollection
   def edits
     @edits ||= @dataset.edits
       .includes(commit: :user)
-      .order("`created_at` DESC")
+      .order(created_at: :desc)
       .group_by(&:key)
   end
 

@@ -10,7 +10,7 @@ describe DatasetsController do
       it 'fetches index page' do
         get :index
 
-        expect(response).to be_success
+        expect(response).to be_successful
       end
     end
 
@@ -20,7 +20,7 @@ describe DatasetsController do
       it "visits edit" do
         get :edit, params: { id: dataset.id }, format: :js, xhr: true
 
-        expect(response).to be_success
+        expect(response).to be_successful
       end
     end
 
@@ -30,7 +30,7 @@ describe DatasetsController do
       it "visits show" do
         get :show, params: { id: dataset.id }, format: :js, xhr: true
 
-        expect(response).to be_success
+        expect(response).to be_successful
       end
     end
 

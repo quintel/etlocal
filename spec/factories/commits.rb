@@ -1,15 +1,16 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :commit do
     user
     source
     dataset
-    message "test"
+    message { 'test' }
 
     factory :initial_commit, class: Commit do
-      message "Initial commit"
+      message { 'Initial commit' }
 
       after(:create) do |commit|
-        FactoryGirl.create(:dataset_edit,
+        FactoryBot.create(
+          :dataset_edit,
           key: 'number_of_residences',
           value: 1.0,
           commit: commit

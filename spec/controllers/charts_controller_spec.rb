@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe ChartsController do
-  let(:user) { FactoryGirl.create(:user) }
+  let(:user) { FactoryBot.create(:user) }
   let!(:sign_in_user) { sign_in(user) }
 
   it "fetches a chart" do

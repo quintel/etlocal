@@ -3,7 +3,7 @@ require 'support/graph'
 
 describe DatasetsController do
   describe "when signed in" do
-    let(:user) { FactoryGirl.create(:user) }
+    let(:user) { FactoryBot.create(:user) }
     let!(:sign_in_user) { sign_in(user) }
 
     describe "#index" do
@@ -15,7 +15,7 @@ describe DatasetsController do
     end
 
     describe "#edit" do
-      let(:dataset) { FactoryGirl.create(:dataset, geo_id: 'test_1', name: "Test") }
+      let(:dataset) { FactoryBot.create(:dataset, geo_id: 'test_1', name: "Test") }
 
       it "visits edit" do
         get :edit, params: { id: dataset.id }, format: :js, xhr: true
@@ -25,7 +25,7 @@ describe DatasetsController do
     end
 
     describe "#show" do
-      let(:dataset) { FactoryGirl.create(:dataset, geo_id: 'test_1', name: "Test") }
+      let(:dataset) { FactoryBot.create(:dataset, geo_id: 'test_1', name: "Test") }
 
       it "visits show" do
         get :show, params: { id: dataset.id }, format: :js, xhr: true
@@ -35,8 +35,8 @@ describe DatasetsController do
     end
 
     describe '#download' do
-      let(:user) { FactoryGirl.create(:user) }
-      let(:dataset) { FactoryGirl.create(:dataset,
+      let(:user) { FactoryBot.create(:user) }
+      let(:dataset) { FactoryBot.create(:dataset,
                                          geo_id: 'test_1',
                                          name: "Test",
                                          user: user) }
@@ -47,7 +47,7 @@ describe DatasetsController do
 
       describe "succesfully" do
         let!(:commit) {
-          FactoryGirl.create(:initial_commit, dataset: dataset)
+          FactoryBot.create(:initial_commit, dataset: dataset)
         }
 
         it 'downloads the dataset as a zip file'
@@ -55,14 +55,14 @@ describe DatasetsController do
     end
 
     describe "#clone" do
-      let(:user) { FactoryGirl.create(:user) }
+      let(:user) { FactoryBot.create(:user) }
 
       def clone_dataset
         post :clone, params: { dataset_id: dataset.id, format: 'js' }
       end
 
       describe "clones the dataset - when public" do
-        let(:dataset) { FactoryGirl.create(:dataset,
+        let(:dataset) { FactoryBot.create(:dataset,
                                            geo_id: 'test_1',
                                            name: "Test",
                                            user: user,
@@ -76,7 +76,7 @@ describe DatasetsController do
       end
 
       describe "can clone the dataset - when private - and the user's" do
-        let(:dataset) { FactoryGirl.create(:dataset,
+        let(:dataset) { FactoryBot.create(:dataset,
                                            geo_id: 'test_1',
                                            name: "Test",
                                            user: user,
@@ -90,10 +90,10 @@ describe DatasetsController do
       end
 
       describe "can't clone the dataset - when private - and not the user's" do
-        let(:dataset) { FactoryGirl.create(:dataset,
+        let(:dataset) { FactoryBot.create(:dataset,
                                            geo_id: 'test_1',
                                            name: "Test",
-                                           user: FactoryGirl.create(:user),
+                                           user: FactoryBot.create(:user),
                                            public: false) }
 
         it "counts datasets to 1" do

@@ -1,7 +1,7 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :dataset do
     user
-    geo_id "ameland"
-    name "ameland"
+    geo_id { 'ameland' }
+    name { 'ameland' }
   end
 end

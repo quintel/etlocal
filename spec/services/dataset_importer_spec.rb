@@ -16,18 +16,18 @@ describe DatasetImporter do
     let(:user) { User.robot }
 
     let!(:dataset) do
-      FactoryGirl.create(:dataset, geo_id: 'BU22168000', user: user)
+      FactoryBot.create(:dataset, geo_id: 'BU22168000', user: user)
     end
 
     let!(:commit) do
-      FactoryGirl.create(
+      FactoryBot.create(
         :commit,
         user: user, dataset: dataset, message: 'Test'
       )
     end
 
     let!(:dataset_edit) do
-      FactoryGirl.create(
+      FactoryBot.create(
         :dataset_edit,
         commit: commit,
         key: 'residences_roof_surface_available_for_pv',
@@ -65,7 +65,7 @@ describe DatasetImporter do
     end
 
     describe 'datasets owned by a non-Robot user' do
-      let(:user) { FactoryGirl.create(:user) }
+      let(:user) { FactoryBot.create(:user) }
 
       it 'keeps the old commit' do
         expect { dataset_importer.import }

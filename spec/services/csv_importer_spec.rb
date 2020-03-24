@@ -20,13 +20,13 @@ RSpec.describe CSVImporter do
   before do
     # Datasets must exist first in order to import new data.
     CSV.parse(data, headers: true).each do |row|
-      dataset = FactoryGirl.create(
+      dataset = FactoryBot.create(
         :dataset,
         geo_id: row['geo_id'] || 'ZZ0001',
         user: User.robot
       )
 
-      FactoryGirl.create(:initial_commit, dataset: dataset)
+      FactoryBot.create(:initial_commit, dataset: dataset)
     end
   end
 

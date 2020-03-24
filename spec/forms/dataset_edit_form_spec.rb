@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe DatasetEditForm do
-  let(:dataset) { FactoryGirl.create(:dataset) }
+  let(:dataset) { FactoryBot.create(:dataset) }
 
   context "invalid" do
     it "empty form" do

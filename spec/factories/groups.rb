@@ -1,5 +1,5 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :group do
-    key 'quintel'
+    key { 'quintel' }
   end
 end

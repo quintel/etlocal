@@ -144,10 +144,10 @@ GEM
     equalizer (0.0.11)
     erubi (1.9.0)
     execjs (2.7.0)
-    factory_girl (4.9.0)
+    factory_bot (4.11.1)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.9.0)
-      factory_girl (~> 4.9.0)
+    factory_bot_rails (4.11.1)
+      factory_bot (~> 4.11.1)
       railties (>= 3.0.0)
     faraday (0.17.3)
       multipart-post (>= 1.2, < 3)
@@ -388,7 +388,7 @@ DEPENDENCIES
   deep_cloneable (~> 2.3.0)
   devise
   dotenv-rails
-  factory_girl_rails
+  factory_bot_rails
   gradients
   jbuilder (~> 2.5)
   jquery-rails (>= 1.0.3)

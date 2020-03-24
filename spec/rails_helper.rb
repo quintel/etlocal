@@ -16,7 +16,7 @@ ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
   config.include Paperclip::Shoulda::Matchers
 
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
@@ -31,8 +31,8 @@ RSpec.configure do |config|
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)
 
-    group = FactoryGirl.create(:group)
-    FactoryGirl.create(:user, email: "robot@quintel.com", group: group)
+    group = FactoryBot.create(:group)
+    FactoryBot.create(:user, email: "robot@quintel.com", group: group)
   end
 
   config.around(:each) do |example|

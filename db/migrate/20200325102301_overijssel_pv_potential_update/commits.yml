@@ -1,8 +1,0 @@
----
-# If you are creating only a single commit, you may instead use a single :all
-# field to have all of the CSV columns be included. This cannot be used when
-# creating multiple commits.
-- fields:
-  - :all
-  message:
-    Het beschikbaar dakoppervlak voor zon PV (en daarmee indirect de potentie van zon PV op dak) is met 41% verhoogd om een efficiëntieverbetering van 17% naar 24% te simuleren. Gebaseerd op de aanpak voor de klimaatneutrale energiescenario's 2050.

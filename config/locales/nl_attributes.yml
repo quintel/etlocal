@@ -309,6 +309,9 @@ nl:
         input_industry_food_hydrogen_demand: Waterstof
         input_industry_food_coal_demand: Kolen
 
+        industry_final_demand_for_other_food_electricity_industry_useful_demand_for_other_food_electricity_parent_share: Processen
+        industry_final_demand_for_other_food_electricity_industry_other_food_heater_electricity_parent_share: Warmte
+
         input_industry_paper_electricity_demand: Elektriciteit
         input_industry_paper_network_gas_demand: Gas
         input_industry_paper_steam_hot_water_demand: Warmte
@@ -316,6 +319,9 @@ nl:
         input_industry_paper_crude_oil_demand: Olie
         input_industry_paper_hydrogen_demand: Waterstof
         input_industry_paper_coal_demand: Kolen
+
+        industry_final_demand_for_other_paper_electricity_industry_useful_demand_for_other_paper_electricity_parent_share: Processen
+        industry_final_demand_for_other_paper_electricity_industry_other_paper_heater_electricity_parent_share: Warmte
 
         input_industry_ict_electricity_demand: Elektriciteit
 

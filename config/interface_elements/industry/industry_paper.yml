@@ -15,3 +15,13 @@ groups:
         unit: 'TJ'
       - key: input_industry_paper_coal_demand
         unit: 'TJ'
+
+  - header: industry_paper_electricity
+    type: slider
+    items:
+      - key: industry_final_demand_for_other_paper_electricity_industry_useful_demand_for_other_paper_electricity_parent_share
+        unit: '%'
+      - key: industry_final_demand_for_other_paper_electricity_industry_other_paper_heater_electricity_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true

@@ -309,6 +309,9 @@ en:
         input_industry_food_hydrogen_demand: Hydrogen
         input_industry_food_coal_demand: Coal
 
+        industry_final_demand_for_other_food_electricity_industry_useful_demand_for_other_food_electricity_parent_share: Processes
+        industry_final_demand_for_other_food_electricity_industry_other_food_heater_electricity_parent_share: Heat
+
         input_industry_paper_electricity_demand: Electricity
         input_industry_paper_network_gas_demand: Gas
         input_industry_paper_steam_hot_water_demand: Heat
@@ -316,6 +319,9 @@ en:
         input_industry_paper_crude_oil_demand: Oil
         input_industry_paper_hydrogen_demand: Hydrogen
         input_industry_paper_coal_demand: Coal
+
+        industry_final_demand_for_other_paper_electricity_industry_useful_demand_for_other_paper_electricity_parent_share: Processes
+        industry_final_demand_for_other_paper_electricity_industry_other_paper_heater_electricity_parent_share: Heat
 
         input_industry_ict_electricity_demand: Electricity
 

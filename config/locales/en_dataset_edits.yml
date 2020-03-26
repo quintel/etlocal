@@ -85,7 +85,9 @@ en:
       industry_chemical_refineries: Refineries
       industry_chemical_other: Other chemical industry
       industry_food: Food
+      industry_food_electricity: Electricity use
       industry_paper: Paper
+      industry_paper_electricity: Electricity use
       industry_ict: Central ICT services
       industry_other: Other industry sectors
 

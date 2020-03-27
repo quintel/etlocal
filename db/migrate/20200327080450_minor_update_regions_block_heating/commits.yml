@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Geen lokale informatie beschikbaar. Aanname: Nederlands gemiddelde. Bron: Vesta MAIS 4.0"

@@ -14,6 +14,8 @@ end
 
 ActiveRecord::Migration.maintain_test_schema!
 
+I18n.locale = :en
+
 RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include FactoryBot::Syntax::Methods

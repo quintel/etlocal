@@ -1,0 +1,45 @@
+---
+- fields:
+  - residences_roof_surface_available_for_pv
+  - buildings_roof_surface_available_for_pv
+  message:
+    "Update op basis van gegevens Holland Solar en potenties NP RES."
+
+- fields:
+  - input_industry_chemical_fertilizers_scaling_factor
+  - input_industry_chemical_other_electricity_demand
+  - input_industry_chemical_other_network_gas_demand
+  - input_industry_chemical_other_steam_hot_water_demand
+  - input_industry_chemical_other_crude_oil_demand
+  - input_industry_chemical_other_network_gas_non_energetic_demand
+  - input_industry_chemical_other_crude_oil_non_energetic_demand
+  - input_industry_chemical_refineries_scaling_factor
+  - input_industry_metal_steel_scaling_factor
+  - input_industry_metal_aluminium_scaling_factor
+  - input_industry_metal_other_electricity_demand
+  - input_industry_metal_other_network_gas_demand
+  - input_industry_food_electricity_demand
+  - input_industry_food_network_gas_demand
+  - input_industry_paper_electricity_demand
+  - input_industry_paper_network_gas_demand
+  - input_industry_other_electricity_demand
+  - input_industry_other_network_gas_demand
+  - industry_final_demand_for_other_food_electricity_industry_other_food_heater_electricity_parent_share
+  - industry_final_demand_for_other_food_electricity_industry_useful_demand_for_other_food_electricity_parent_share
+  - industry_final_demand_for_other_paper_electricity_industry_other_paper_heater_electricity_parent_share
+  - industry_final_demand_for_other_paper_electricity_industry_useful_demand_for_other_paper_electricity_parent_share
+  - industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share
+  - industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share
+  - industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share
+  message:
+    "Update op basis van gegevens van TNO in het kader van de energiesysteemstudie Limburg (2020)"
+
+- fields:
+  - agriculture_final_demand_electricity_demand
+  - agriculture_final_demand_network_gas_demand
+  - input_energy_heat_well_geothermal_production
+  - input_energy_chp_local_engine_network_gas_production
+  - agriculture_final_demand_steam_hot_water_demand
+  - input_agriculture_heatpump_demand
+  message:
+    "Update op basis van gegevens van CE Delft in het kader van de energiesysteemstudie Limburg (2020)"

@@ -41,16 +41,18 @@ class CSVImporter
   #
   # Returns an array of all commits which were created.
   def run
-    raise FormatErrorMessages.call(self) unless valid?
+    I18n.with_locale(:en) do
+      raise FormatErrorMessages.call(self) unless valid?
 
-    ActiveRecord::Base.transaction do
-      data_file.flat_map do |row|
-        if block_given?
-          row_commits = nil
-          yield(row, -> { row_commits = run_row(row) })
-          row_commits
-        else
-          run_row(row)
+      ActiveRecord::Base.transaction do
+        data_file.flat_map do |row|
+          if block_given?
+            row_commits = nil
+            yield(row, -> { row_commits = run_row(row) })
+            row_commits
+          else
+            run_row(row)
+          end
         end
       end
     end

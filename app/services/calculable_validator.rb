@@ -5,17 +5,22 @@ class CalculableValidator < ActiveModel::Validator
     )
 
     begin
-      dataset = Dataset.new(name: 'calculation_shell')
+      dataset = Dataset.new(
+        name: 'calculation_shell',
+        country: record.attributes[:country]
+      )
+
       CalculateContainer.new(
         calc_attrs.merge(
           area: dataset.temp_name,
-          base_dataset: dataset.country
+          base_dataset: dataset.base_dataset
         )
       ).tryout!
 
     rescue Refinery::IncalculableGraphError,
            Refinery::FailedValidationError,
            Atlas::QueryError,
+           Atlas::DocumentNotFoundError,
            ArgumentError => error
       record.errors.add(:calculation, error.message)
     end

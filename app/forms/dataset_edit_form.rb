@@ -6,7 +6,11 @@ class DatasetEditForm
     attribute item.key, Float, default: item.default
   end
 
-  validates_presence_of :number_of_residences
+  # Attribute country is needed to validate the user inputs
+  # in the form (see CalculableValidator)
+  attribute :country, String
+
+  validates_presence_of :number_of_residences, :country
   validates :number_of_residences, numericality: { greater_than: 0 }
   validates_with CalculableValidator
 
@@ -16,7 +20,7 @@ class DatasetEditForm
       commit = dataset.commits.build
       commit.build_source
 
-      attributes.each_pair do |key, val|
+      attributes.except(:country).each_pair do |key, val|
         if val.present? && previous[key.to_s] != val
           commit.dataset_edits.build(
             key: key,
@@ -25,7 +29,8 @@ class DatasetEditForm
         end
       end
 
-      commit
+      return commit
     end
+    puts errors.full_messages
   end
 end

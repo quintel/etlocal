@@ -11,9 +11,11 @@ module Exporter
       content_type: :json
     )
 
+    #SKIP IF NOT IN ATLAS
     JSON.parse(response).each do |dataset|
+      puts "Generating #{dataset['area']} with base set #{dataset['base_dataset']}"
       Transformer::DatasetGenerator.new(dataset).generate
-      puts "Successfully analyzed and exported #{dataset[:name]}"
+      puts "Successfully analyzed and exported #{dataset['area']}"
     end
   rescue RestClient::ExceptionWithResponse
     puts "Failed to fetch data for #{dataset_ids}"

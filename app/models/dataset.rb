@@ -7,6 +7,11 @@ class Dataset < ApplicationRecord
   validates :geo_id,  presence: true
   validates :name,    presence: true
   validates :country, presence: true
+  validates_each :country, allow_nil: true do |record, atrr, value|
+    unless Etsource.available_countries.include? value.downcase
+      record.errors.add(value.downcase, 'must be in ETsource')
+    end
+  end
 
   def self.clones(dataset, user)
     where(geo_id: dataset.geo_id)
@@ -37,6 +42,15 @@ class Dataset < ApplicationRecord
 
   def atlas_dataset
     Etsource.datasets[geo_id]
+  end
+
+  def base_dataset
+    return country unless editable_attributes.exists?('analysis_year')
+
+    base_dataset = "#{country}#{editable_attributes.find('analysis_year').value.to_i}"
+    return country unless Etsource.available_countries.include? base_dataset
+
+    base_dataset
   end
 
   def chart_id

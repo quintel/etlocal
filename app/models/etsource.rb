@@ -7,6 +7,10 @@ module Etsource
     end]
   end
 
+  def available_countries
+    @available_countries ||= Atlas::Dataset::Full.all.map{ |d| d.area }
+  end
+
   # Returns all dataset input keys from sparse graph queries
   # Used to check if an interface element is still required.
   def dataset_inputs

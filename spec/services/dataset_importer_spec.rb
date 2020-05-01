@@ -16,7 +16,12 @@ describe DatasetImporter do
     let(:user) { User.robot }
 
     let!(:dataset) do
-      FactoryBot.create(:dataset, geo_id: 'BU22168000', user: user)
+      FactoryBot.create(
+        :dataset,
+        geo_id: 'BU22168000',
+        country:'nl',
+        user: user
+      )
     end
 
     let!(:commit) do

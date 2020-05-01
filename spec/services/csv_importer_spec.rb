@@ -93,8 +93,8 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,name,number_of_residences
-          GM0340,My First Area,5
+          geo_id,name,country,number_of_residences
+          GM0340,My First Area,nl,5
         CSV
       end
 
@@ -119,8 +119,8 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,name,number_of_residences
-          GM0340,,5
+          geo_id,name,country,number_of_residences
+          GM0340,,nl,5
         CSV
       end
 
@@ -151,8 +151,8 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,name,number_of_residences
-          GM0340,My First Area,5
+          geo_id,name,country,number_of_residences
+          GM0340,My First Area,nl,5
         CSV
       end
 
@@ -647,7 +647,8 @@ RSpec.describe CSVImporter do
       expect { importer.run }.to raise_error(/no dataset exists matching/i)
     end
 
-    context 'with create_missing_datasets: true and no "name" in the CSV' do
+    context 'with create_missing_datasets: true
+      and no name or country in the CSV' do
       let(:importer) do
         described_class.new(
           data_csv.path,
@@ -658,11 +659,12 @@ RSpec.describe CSVImporter do
 
       it 'raises an error' do
         expect { importer.run }
-          .to raise_error(/is missing mandatory headers: "name"/i)
+          .to raise_error(/is missing mandatory headers: "country", "name"/i)
       end
     end
 
-    context 'with create_missing_datasets: true and a blank "name" in the CSV' do
+    context 'with create_missing_datasets: true
+      and a blank "name" in the CSV' do
       let(:importer) do
         described_class.new(
           data_csv.path,
@@ -673,8 +675,8 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,name,number_of_inhabitants
-          GM0340,,5
+          geo_id,country,name,number_of_inhabitants
+          GM0340,nl,,5
         CSV
       end
 
@@ -683,7 +685,8 @@ RSpec.describe CSVImporter do
       end
     end
 
-    context 'with create_missing_datasets: true and an "name" in the CSV' do
+    context 'with create_missing_datasets: true
+      and a blank "country" in the CSV' do
       let(:importer) do
         described_class.new(
           data_csv.path,
@@ -694,8 +697,31 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,name,number_of_inhabitants
-          GM0340,My First Area,5
+          geo_id,country,name,number_of_inhabitants
+          GM0340,,My First Area,5
+        CSV
+      end
+
+      it 'raises an error' do
+        expect { importer.run }.to raise_error(/Country can't be blank/i)
+      end
+    end
+
+    context 'with create_missing_datasets: true
+      and name and country in the CSV' do
+
+      let(:importer) do
+        described_class.new(
+          data_csv.path,
+          commits_yml.path,
+          create_missing_datasets: true
+        )
+      end
+
+      let(:data) do
+        <<~CSV
+          geo_id,country,name,number_of_inhabitants
+          GM0340,nl,My First Area,5
         CSV
       end
 
@@ -803,8 +829,8 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,name,number_of_residences
-        GM0340,ABC,5
+        geo_id,country,name,number_of_residences
+        GM0340,nl,ABC,5
       CSV
     end
 

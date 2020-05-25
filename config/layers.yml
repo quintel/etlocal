@@ -3,10 +3,10 @@ mapbox_defaults: &mapbox_defaults
   type: 'mvt'
   url: "https://{a-d}.tiles.mapbox.com/v4/${layer_id}/{z}/{x}/{y}.vector.pbf?access_token=${access_token}"
   extent:
-    - 368486.2686971302
-    - 6568397.781293049
-    - 811500.3337115699
-    - 7094762.123545771
+     - -910395.8857057584682480
+     - 6577254.8479120731353760
+     - 804561.4472128415945917
+     - 7422845.1362154185771942
 
 dataset_selector:
   - name: provinces

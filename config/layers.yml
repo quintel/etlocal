@@ -13,7 +13,7 @@ dataset_selector:
     id: "grdw.8kst3bc1"
     source: "2018_province-df2r8c"
     minres: 500
-    maxres: 700
+    maxres: 1000
     filter: id
     name_attr: id
     <<: *mapbox_defaults

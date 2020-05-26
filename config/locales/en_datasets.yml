@@ -63,6 +63,7 @@ en:
         energy_heat_production: Heat
         energy_fossil_electricity_production: Fossil electricity
         energy_renewable_electricity_production: Renewable electricity
+        energy_full_load_hours: Full load hours
 
       households:
         households_advanced: Advanced

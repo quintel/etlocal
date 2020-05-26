@@ -109,10 +109,11 @@ en:
       industry_refineries_residual_heat: "Available residual heat refineries"
       industry_fertilizers_residual_heat: "Available residual heat fertilizer industry"
       industry_ict_residual_heat: "Available residual heat ICT"
-
       energy_heat_import: Imported heat
       energy_heat: Heat production
       energy_heat_distribution_loss: Heat network losses
+      energy_renewable_full_load_hours: Full load hours of renewable power plants
+      energy_fossil_full_load_hours: Full load hours of fossil power plants
 
     explanation:
       heat_length_of_distribution_pipelines_in_meter_per_residence_object_first_bracket: The length of distribution pipelines of district heating networks varies with the number of connected buildings. Typically, densely populated areas are connected to district heating networks first. These areas have a lower average pipeline length per connection than less densely populated areas. The ETM takes this into account by using 5 'brackets' of average pipeline lengths per connection. The more houses are connected to the network, the higher the average length per connection typically is. Here you can specify the average length of the distribution pipelines when (up to) 20% of houses and buildings are connected to the network.

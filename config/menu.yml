@@ -26,4 +26,5 @@ energy:
   - energy_renewable_electricity_production
   - energy_fossil_electricity_production
   - energy_heat_production
+  - energy_full_load_hours
 other:

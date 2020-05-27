@@ -416,22 +416,22 @@ nl:
 
         energy_heat_distribution_loss_demand: Transportverliezen in warmtenetten
 
-        energy_power_wind_turbine_inland_full_load_hours:
-        energy_power_wind_turbine_coastal_full_load_hours:
-        energy_power_wind_turbine_offshore_full_load_hours:
-        input_solar_panels_roofs_and_parks_full_load_hours:
-        energy_power_hydro_river_full_load_hours:
-        energy_chp_local_engine_biogas_full_load_hours:
-        energy_chp_local_wood_pellets_full_load_hours:
-        energy_chp_supercritical_waste_mix_full_load_hours:
-        energy_power_supercritical_waste_mix_full_load_hours:
-        energy_power_combined_cycle_network_gas_full_load_hours:
-        energy_power_ultra_supercritical_network_gas_full_load_hours:
-        energy_power_turbine_network_gas_full_load_hours:
-        energy_chp_local_engine_network_gas_full_load_hours:
-        energy_chp_combined_cycle_network_gas_full_load_hours:
-        energy_power_supercritical_coal_full_load_hours:
-        energy_power_engine_diesel_full_load_hours:
+        energy_power_wind_turbine_inland_full_load_hours: Wind (op land)
+        energy_power_wind_turbine_coastal_full_load_hours: Wind (aan de kust)
+        energy_power_wind_turbine_offshore_full_load_hours: Wind (offshore)
+        input_solar_panels_roofs_and_parks_full_load_hours: Zonnepanelen (op dak en op land)
+        energy_power_hydro_river_full_load_hours: Waterkracht (rivier)
+        energy_chp_local_engine_biogas_full_load_hours: Biogas WKK
+        energy_chp_local_wood_pellets_full_load_hours: Biomassa WKK
+        energy_chp_supercritical_waste_mix_full_load_hours: Afvalverbrander met warmtelevering voor warmtenet (WKK)
+        energy_power_supercritical_waste_mix_full_load_hours: Afvalverbrander
+        energy_power_combined_cycle_network_gas_full_load_hours: Gas STEG
+        energy_power_ultra_supercritical_network_gas_full_load_hours: Gas conventioneel
+        energy_power_turbine_network_gas_full_load_hours: Gasturbine
+        energy_chp_local_engine_network_gas_full_load_hours: Gas WKK (2 MW) met warmtelevering voor warmtenet
+        energy_chp_combined_cycle_network_gas_full_load_hours: Gas WKK (120 MW) met warmtelevering voor warmtenet
+        energy_power_supercritical_coal_full_load_hours: Kolen conventioneel
+        energy_power_engine_diesel_full_load_hours: Dieselgenerator
 
         #Other
         other_final_demand_electricity_demand: Elektriciteit

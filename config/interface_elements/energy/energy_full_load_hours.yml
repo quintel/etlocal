@@ -8,7 +8,7 @@ groups:
         unit: 'flh'
       - key: energy_power_wind_turbine_offshore_full_load_hours
         unit: 'flh'
-      - key: energy_power_solar_pv_solar_radiation_full_load_hours
+      - key: input_solar_panels_roofs_and_parks_full_load_hours
         unit: 'flh'
       - key: energy_power_hydro_river_full_load_hours
         unit: 'flh'

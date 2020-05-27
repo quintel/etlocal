@@ -89,3 +89,6 @@ en:
 
       energy_heat_production: |
         In this tab you can specify how much heat is produced by heat plants. This heat is used for district heating in households, buildings and agriculture. You can also specify the availability of residual heat from industry.
+
+      energy_full_load_hours: |
+        In this tab you can specify the full load hours for most renewable and fossil power plants.

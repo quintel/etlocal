@@ -63,6 +63,7 @@ nl:
         energy_heat_production: Warmte
         energy_fossil_electricity_production: Fossiele elektriciteit
         energy_renewable_electricity_production: Duurzame elektriciteit
+        energy_full_load_hours: Vollasturen
 
       households:
         households_energy_demand: Energievraag

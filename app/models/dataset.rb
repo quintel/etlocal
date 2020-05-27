@@ -29,6 +29,8 @@ class Dataset < ApplicationRecord
       'region'
     elsif geo_id =~ /^RES/
       'res'
+    elsif geo_id =~ /^UKNI/
+      'country'
     else
       'province'
     end

@@ -364,6 +364,7 @@ en:
         input_energy_power_supercritical_waste_mix_production: Waste incinerator
         input_energy_chp_supercritical_waste_mix_production: Waste plant with heat production for district heat (CHP)
         input_energy_power_hydro_river_production: Hydro (river)
+        input_energy_power_hydro_mountain_production: Hydro (mountain)
         input_energy_power_geothermal_production: Geothermal
         input_energy_chp_local_engine_biogas_production: Biogas CHP
         input_energy_chp_local_wood_pellets_production: Biomass CHP

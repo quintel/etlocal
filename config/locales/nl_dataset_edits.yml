@@ -78,7 +78,7 @@ nl:
       agriculture_energy_demand: Energiegebruik
 
       # industry
-      industry_heat: Warmteproductie
+      industry_heat: Fuel input voor WKK
       industry_gas_fuelmix: Brandstofmix gasgestookte WKK
       industry_metal_steel: Staal
       industry_metal_aluminium: Aluminium

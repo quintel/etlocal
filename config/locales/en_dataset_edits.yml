@@ -76,7 +76,7 @@ en:
       agriculture_energy_demand: Energy demand
 
       # industry
-      industry_heat: Heat production
+      industry_heat: Fuel input for CHP
       industry_gas_fuelmix: Fuel for gas-fired CHPs
       industry_metal_steel: Steel
       industry_metal_aluminium: Aluminium

@@ -52,19 +52,13 @@ groups:
     items:
       - key: energy_power_wind_turbine_inland_full_load_hours
         unit: 'flh'
-        combination_method:
-          weighted_average:
-            - input_energy_power_wind_turbine_inland_production
+        combination_method: average
       - key: energy_power_wind_turbine_coastal_full_load_hours
         unit: 'flh'
-        combination_method:
-          weighted_average:
-            - input_energy_power_wind_turbine_coastal_production
+        combination_method: average
       - key: energy_power_wind_turbine_offshore_full_load_hours
         unit: 'flh'
-        combination_method:
-          weighted_average:
-            - input_energy_power_wind_turbine_offshore_production
+        combination_method: average
       - key: input_solar_panels_roofs_and_parks_full_load_hours
         unit: 'flh'
       - key: energy_power_geothermal_full_load_hours
@@ -82,6 +76,9 @@ groups:
     items:
       - key: flh_solar_pv_solar_radiation_max
         unit: 'flh'
+        combination_method:
+          weighted_average:
+            - input_energy_power_solar_pv_solar_radiation_production
 
   - header: energy_fossil_chp_full_load_hours
     items:
@@ -114,19 +111,12 @@ groups:
 
   - header: energy_renewable_chp_full_load_hours
     items:
-        combination_method:
-          weighted_average:
-            - input_energy_power_solar_pv_solar_radiation_production
       - key: energy_power_hydro_river_full_load_hours
         unit: 'flh'
-        combination_method:
-          weighted_average:
-            - input_energy_power_hydro_river_production
+        combination_method: average
       - key: energy_chp_local_engine_biogas_full_load_hours
         unit: 'flh'
-        combination_method:
-          weighted_average:
-            - input_energy_chp_local_engine_biogas_production
+        combination_method: average
       - key: energy_chp_local_wood_pellets_full_load_hours
         unit: 'flh'
       - key: industry_chp_wood_pellets_full_load_hours
@@ -137,14 +127,10 @@ groups:
             - input_energy_chp_local_wood_pellets_production
       - key: energy_chp_supercritical_waste_mix_full_load_hours
         unit: 'flh'
-        combination_method:
-          weighted_average:
-            - input_energy_chp_supercritical_waste_mix_production
+        combination_method: average
       - key: energy_power_supercritical_waste_mix_full_load_hours
         unit: 'flh'
-        combination_method:
-          weighted_average:
-            - input_energy_power_supercritical_waste_mix_production
+        combination_method: average
 
   - header: energy_fossil_heat_full_load_hours
     items:

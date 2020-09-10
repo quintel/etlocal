@@ -314,4 +314,4 @@ groups:
         combination_method:
           weighted_average:
             - industry_heat_burner_hydrogen_demand
-    
+      

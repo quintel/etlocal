@@ -1,0 +1,10 @@
+geo_id,households_final_demand_steam_hot_water_demand,buildings_final_demand_steam_hot_water_demand,input_energy_heat_burner_wood_pellets_production,input_energy_heat_burner_waste_mix_production,input_energy_heat_heatpump_water_water_electricity_production,input_energy_heat_burner_network_gas_production,input_energy_heat_burner_coal_production,input_energy_heat_burner_crude_oil_production
+GM0202,160.2442223,147.7347777,0,279.424197,0,17.554803,0,0
+GM0226,185.0750492,96.91138387,0,256.3727994,0,7.613633693,0,0
+GM0293,82.76243398,43.33713293,0,122.6948786,0,3.404688307,0,0
+GM0268,159.8640527,9.324947309,0,160.560361,0,8.628639,0,0
+GM0228,41.43479172,1.541208276,32.976,0,0,0,0,0
+GM0289,23.97983694,0.854163057,0,0,0,24.834,0,0
+GM0216,32.23424419,4.975755814,0,0,6.66059,30.54941,0,0
+GM0200,58.46069508,0.192304918,6.593674,0,0,20.059326,0,0
+GM0299,15.22859779,0.056402214,7.9482,0,0,7.3368,0,0

@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Op basis van aangeleverde verbruiksgegevens Hermes is de elektriciteitsvraag van bussen iets verhoogd. Om dubbeltellingen in het ETM te voorkomen is de additionele elektriciteitsvraag in transport van de sector utiliteiten (=gebouwen) afgehaald."

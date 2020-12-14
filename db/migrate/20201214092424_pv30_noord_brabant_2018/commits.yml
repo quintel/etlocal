@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Asten, Baarle_nassau, Bergen_op_zoom, Best, Boekel, Boxmeer, Boxtel, Breda, Deurne, Dongen, Eersel, Eindhoven, Etten_leur, Geertruidenberg, Gilze_en_rijen, Goirle, Grave, Haaren, Helmond, S_hertogenbosch, Heusden, Hilvarenbeek, Loon_op_zand, Mill_en_sint_hubert, Nuenen_gerwen_en_nederwetten, Oirschot, Oisterwijk, Oosterhout, Oss, Rucphen, Sint_michielsgestel, Someren, Son_en_breugel, Steenbergen, Tilburg, Uden, Valkenswaard, Veldhoven, Vught, Waalre, Waalwijk, Woensdrecht, Zundert, Gemert_bakel, Halderberge, Heeze_leende, Laarbeek, Reusel_de_mierden, Roosendaal, Cuijk, Landerd, Sint_anthonis, Cranendonck, Moerdijk, Drimmelen, Bernheze, Alphen_chaam, Bergeijk, Bladel, Geldrop_mierlo, Meierijstad, Altena"

@@ -7,6 +7,7 @@ nl:
       province: Provincie
       region: Regio
       res: RES-regio
+      country: Land
 
     menu:
       static: Statisch

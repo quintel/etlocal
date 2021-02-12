@@ -2,13 +2,13 @@ nl:
   descriptions:
     groups:
       area: |
-        Hieronder kun je een aantal (geografische) karakteristieken over dit gebied invullen.
+        Hieronder kun je een aantal (geografische) karakteristieken over deze regio invullen.
 
       households: |
-        In deze sectie kun je informatie invullen over huishoudens in dit gebied.
+        In deze sectie kun je informatie invullen over huishoudens in deze regio.
 
       buildings: |
-        In deze sectie kun je informatie invullen over de gebouwensector. Onder gebouwen verstaan we de utiliteitsbouw (niet-woningen) in dit gebied, zoals kantoren, ziekenhuizen, scholen en winkels.
+        In deze sectie kun je informatie invullen over de gebouwensector. Onder gebouwen verstaan we de utiliteitsbouw (niet-woningen) in deze regio, zoals kantoren, ziekenhuizen, scholen en winkels.
 
       transport: |
         In deze sectie kun je informatie invullen over de transportsector.
@@ -20,15 +20,15 @@ nl:
         In deze sectie kun je informatie invullen over de industriesector. Hieronder kun je aangeven hoeveel energie er gebruikt wordt door warmtekrachtkoppelingen (WKK) en andere ketels van industriële bedrijven.
 
       energy: |
-        In deze sectie kun je informatie invullen over de (centrale) energieproductie in dit gebied.
+        In deze sectie kun je informatie invullen over de (centrale) energieproductie in deze regio.
 
       other: |
-        In deze sectie kun je het overige energiegebruik in dit gebied invullen. Dit is al het energiegebruik dat niet in een van de bovenstaande secties aan bod is gekomen.
+        In deze sectie kun je het overige energiegebruik in deze regio invullen. Dit is al het energiegebruik dat niet in een van de bovenstaande secties aan bod is gekomen.
 
       subgroups:
 
       area_advanced: |
-        In dit tabblad kun je informatie invullen over de uitstoot van broeikasgassen in dit gebied. Ook kun je aangeven hoe hoog de huidige kosten van het elektriciteitsnetwerk zijn, hoeveel capaciteit er nog op het net beschikbaar is en hoe duur toekomstige uitbreidingen zullen zijn.
+        In dit tabblad kun je informatie invullen over de uitstoot van broeikasgassen in deze regio. Ook kun je aangeven hoe hoog de huidige kosten van het elektriciteitsnetwerk zijn, hoeveel capaciteit er nog op het net beschikbaar is en hoe duur toekomstige uitbreidingen zullen zijn.
 
       households_energy_demand: |
         In dit tabblad kun je per energiedrager aangeven hoe hoog het huidige energiegebruik van huishoudens is en hoe geïsoleerd elk huistype is.
@@ -55,19 +55,19 @@ nl:
         In dit tabblad kun je informatie invullen over het energiegebruik van treinverkeer.
 
       transport_ship_transport: |
-        In dit tabblad kun je informatie invullen over het brandstofgebruik van de binnenvaart. Let op: Het energiegebruik van internationale scheepvaart valt hier buiten. In het Energietransitiemodel kun je ervoor kiezen om een deel van het totale nationale verbruik van deze sector aan dit gebied toe te kennen.
+        In dit tabblad kun je informatie invullen over het brandstofgebruik van de binnenvaart. Let op: Het energiegebruik van internationale scheepvaart valt hier buiten. In het Energietransitiemodel kun je ervoor kiezen om een deel van het totale nationale verbruik van deze sector aan deze regio toe te kennen.
 
       transport_plane_transport: |
-        In dit tabblad kun je informatie invullen over het brandstofgebruik van de binnenlandse luchtvaart. Let op: Het energiegebruik van internationale luchtvaart valt hier buiten. In het Energietransitiemodel kun je ervoor kiezen om een deel van het totale nationale verbruik van deze sector aan dit gebied toe te kennen.
+        In dit tabblad kun je informatie invullen over het brandstofgebruik van de binnenlandse luchtvaart. Let op: Het energiegebruik van internationale luchtvaart valt hier buiten. In het Energietransitiemodel kun je ervoor kiezen om een deel van het totale nationale verbruik van deze sector aan deze regio toe te kennen.
 
       transport_advanced: |
         In dit tabblad kun je aangeven hoe het brandstofgebruik verdeeld is over verschillende soorten vervoersmiddelen. Hoeveel van de gebruikte benzine voor wegverkeer gaat naar auto's? En hoeveel naar bussen? Ook kun je aangeven hoe groot het niet-energetisch oliegebruik is in de transportsector (bijvoorbeeld smeermiddelen).
 
       industry_metal: |
-        In dit tabblad kun je aangeven hoeveel energie er gebruikt wordt door de metaalindustrie in dit gebied. Voor staal en aluminium kun je aangeven hoeveel procent van de totale Nederlandse staal- en aluminiumproductie plaatsvindt in dit gebied. Voor overige metalen kun je per energiedrager aangeven hoe hoog het energiegebruik is.
+        In dit tabblad kun je aangeven hoeveel energie er gebruikt wordt door de metaalindustrie in deze regio. Voor staal en aluminium kun je aangeven hoeveel procent van de totale Nederlandse staal- en aluminiumproductie plaatsvindt in deze regio. Voor overige metalen kun je per energiedrager aangeven hoe hoog het energiegebruik is.
 
       industry_chemical: |
-        In dit tabblad kun je aangeven hoeveel energie er gebruikt wordt door de chemische industrie in dit gebied. Voor kunstmest en olieraffinaderijen kun je aangeven hoeveel procent van de totale Nederlandse kunstmest- en raffinageproductie plaatsvindt in dit gebied. Voor overige chemie kun je per energiedrager aangeven hoe hoog het energiegebruik is.
+        In dit tabblad kun je aangeven hoeveel energie er gebruikt wordt door de chemische industrie in deze regio. Voor kunstmest en olieraffinaderijen kun je aangeven hoeveel procent van de totale Nederlandse kunstmest- en raffinageproductie plaatsvindt in deze regio. Voor overige chemie kun je per energiedrager aangeven hoe hoog het energiegebruik is.
 
       industry_food: |
         In dit tabblad kun je per energiedrager aangeven hoeveel energie er gebruikt wordt door de voedselindustrie.
@@ -82,13 +82,16 @@ nl:
         In dit tabblad kun je per energiedrager aangeven hoeveel energie er gebruikt wordt door de 'overige' industrie. Dit is industrie die niet in de bovenstaande tabbladen aan bod is gekomen. Denk bijvoorbeeld aan de bouw, elektrotechniek en textiel.
 
       energy_renewable_electricity_production: |
-        In dit tabblad kun je aangeven hoeveel elektriciteit er wordt geproduceerd met hernieuwbare bronnen in dit gebied.
+        In dit tabblad kun je aangeven hoeveel elektriciteit er wordt geproduceerd met hernieuwbare bronnen in deze regio.
 
       energy_fossil_electricity_production: |
-        In dit tabblad kun je aangeven hoeveel elektriciteit er wordt geproduceerd met fossiele bronnen in dit gebied.
+        In dit tabblad kun je aangeven hoeveel elektriciteit er wordt geproduceerd met fossiele bronnen in deze regio.
+        Meer informatie over de verschillende types centrales kun je vinden in het
+        <a href="https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants">
+        Energietransitiemodel</a>.
 
       energy_heat_production: |
-        In dit tabblad kun je aangeven hoeveel warmte er wordt geproduceerd door verwarmingsketels in dit gebied. Deze warmte wordt ingezet in warmtenetten voor huishoudens, gebouwen en landbouw. Daarbij kan je hier ook de beschikbaarheid van restwarmte uit verschillende industriesectoren specificeren.
+        In dit tabblad kun je aangeven hoeveel warmte er wordt geproduceerd door centrale verwarmingsketels in deze regio. Dit zijn ketels die warmte leveren aan warmtenetten voor huishoudens, gebouwen en landbouw. Verder kun je hier de beschikbaarheid van restwarmte uit verschillende industriesectoren specificeren.
 
       energy_full_load_hours: |
-        In dit tabblad kun je het aantal vollasturen aangeven van de hernieuwbare en fossiele bronnen in dit gebied.
+        In dit tabblad kun je het aantal vollasturen aangeven van de hernieuwbare en fossiele bronnen in deze regio.

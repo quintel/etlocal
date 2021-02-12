@@ -383,8 +383,8 @@ en:
         input_energy_power_engine_network_gas_production: Gas combustion engine
         input_energy_power_combined_cycle_network_gas_production: Gas CCGT
         input_energy_power_combined_cycle_ccs_network_gas_production: Gas CCGT with CCS
-        input_energy_chp_combined_cycle_network_gas_production: Gas plant (120 MW) with heat production for district heat (CHP)
-        input_energy_chp_local_engine_network_gas_production: Gas plant (2 MW) with heat production for district heat (CHP)
+        input_energy_chp_combined_cycle_network_gas_production: Gas plant (large-scale) with heat production for district heat (CHP)
+        input_energy_chp_local_engine_network_gas_production: Gas plant (small-scale) with heat production for district heat (CHP)
 
         input_energy_power_nuclear_gen2_uranium_oxide_production: Conventional nuclear power plant
         input_energy_power_nuclear_gen3_uranium_oxide_production: 3rd generation nuclear power plant

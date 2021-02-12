@@ -103,8 +103,8 @@ nl:
       energy_electricity_wind: Elektriciteitsopwek wind
       energy_electricity_solar: Elektriciteitsopwek zon
       energy_electricity_other_renewable: Overige duurzame elektriciteitsopwek
-      energy_electricity_coal: Elektriciteitsopwek kolen
-      energy_electricity_gas: Elektriciteitsopwek gas
+      energy_electricity_coal: Elektriciteitsopwek kolencentrales per type
+      energy_electricity_gas: Elektriciteitsopwek gascentrales per type
       energy_electricity_waste: Elektriciteitsopwek afvalverbranding
       energy_electricity_other_fossil: Overige fossiele elektriciteitsopwek
       industry_chemical_residual_heat: "Beschikbare restwarmte chemische industrie"
@@ -112,7 +112,7 @@ nl:
       industry_fertilizers_residual_heat: "Beschikbare restwarmte kunstmestindustrie"
       industry_ict_residual_heat: "Beschikbare restwarmte ICT"
       energy_heat_import: Geïmporteerde warmte
-      energy_heat: Warmteproductie
+      energy_heat: Warmteproductie bronnen warmtenet
       energy_heat_distribution_loss: Verlies warmenetten
       energy_renewable_full_load_hours: Vollasturen van hernieuwbare elektriciteitsproductie
       energy_fossil_full_load_hours: Vollasturen van fossiele elektriciteitsproductie

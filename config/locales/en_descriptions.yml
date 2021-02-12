@@ -86,6 +86,9 @@ en:
 
       energy_fossil_electricity_production: |
         In this tab you can specify how much electricity is produced by fossil power plants in this area.
+        More information about the various plant types can be found in the
+        <a href="https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants">
+        Energy Transition Model</a>.
 
       energy_heat_production: |
         In this tab you can specify how much heat is produced by heat plants. This heat is used for district heating in households, buildings and agriculture. You can also specify the availability of residual heat from industry.

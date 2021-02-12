@@ -1,0 +1,9 @@
+en:
+  descriptions:
+    interface_items:
+      energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: |
+        This setting is only relevant if a waste-to-energy plant is present in this area. This
+        setting allows you to specify how sustainable the burnt waste is: What share of waste is
+        biogenic (organic waste, wood or paper) and what share is non-biogenic (plastics etc.)?
+        The more non-biogenic waste is burnt the more CO2 emissions waste incineration brings about
+        and the fewer sustainable energy is produced.

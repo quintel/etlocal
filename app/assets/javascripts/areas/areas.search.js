@@ -30,25 +30,41 @@ Areas.Search = (function () {
 
         if (data.length == 1) {
             openPopup.call(this, data[0].id);
-        } else if (data.length > 1){
-            var list = $('<ul></ul>').addClass('options'),
-                self = this;
+        } else {
+            var list = $('<ul></ul>').addClass('options');
 
-            // Create an option in the list for each dataset
-            $.each(data, function(_key, dataset) {
-                var option = $('<li>' + dataset.name +' (' + dataset.id +')</li>');
-                option.on('click', function() {
-                    openPopup.call(self, dataset.id);
-                });
-                list.append(option);
-            })
+            // Create an option in the list for each dataset if there were multiple results
+            if (data.length > 1){
+                var self = this;
+
+                $.each(data, function(_key, dataset) {
+                    var option = $('<li>' + dataset.name +' (' + dataset.id +')</li>');
+                    option.on('click', function() {
+                        openPopup.call(self, dataset.id);
+                    });
+                    list.append(option);
+                })
+            } else {
+                list.append('<li>No results</li>');
+                this.scope
+                    .addClass("no-results")
+                    .attr('title', "No results for: " + this.result.value)
+            }
 
             this.scope.append(list);
-        } else {
-            this.scope
-                .addClass("no-results")
-                .attr('title', "No results for: " + this.result.value);
+            bindOptionsListener.call(this);
         }
+    }
+
+    // Removes options when clicking anywhere in the document
+    function bindOptionsListener() {
+        var options = this.scope.find('.options');
+        $(document).on('mouseup.hideOptionsClick', function(e) {
+            if (!options.is(e.target) && options.has(e.target).length === 0){
+                options.remove();
+                $(document).off('.hideOptionsClick');
+            }
+        })
     }
 
     Search.prototype = {

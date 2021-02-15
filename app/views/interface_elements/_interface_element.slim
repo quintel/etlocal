@@ -1,11 +1,13 @@
 .group.tab data-tab= "##{ interface_element.key }"
   - if I18n.exists?("descriptions.groups.#{ interface_element.key }")
     p.information
-      = I18n.t("descriptions.groups.#{ interface_element.key }")
+      = t("descriptions.groups.#{ interface_element.key }").html_safe
 
   - interface_element.groups.each do |interface_group|
     - if interface_group.header
-      strong= I18n.t("dataset_edits.groups.#{ interface_group.header }").html_safe
+      strong= t("dataset_edits.groups.#{ interface_group.header }").html_safe
+      - if I18n.exists?("descriptions.subgroups.#{ interface_group.header }")
+        p= t("descriptions.subgroups.#{ interface_group.header }").html_safe
 
     .group class= ('slider-group' if interface_group.type == :slider)
       - interface_group.items.each do |interface_item|
@@ -62,7 +64,7 @@
             .line-arrow
 
             - if I18n.exists?("descriptions.interface_items.#{interface_item.key}")
-              p=I18n.t("descriptions.interface_items.#{interface_item.key}")
+              p=I18n.t("descriptions.interface_items.#{interface_item.key}").html_safe
 
             strong = I18n.t("dataset_edits.history")
 

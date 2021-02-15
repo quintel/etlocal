@@ -18,6 +18,12 @@ class Dataset < ApplicationRecord
       .order(Arel.sql("FIELD(`id`, #{dataset.id}) DESC, `created_at` DESC"))
   end
 
+  # Search for query in geo_id and name - works kind of fine, but not as fuzzy as I hoped
+  def self.fuzzy_search(query)
+    pattern = "%#{query}%"
+    where(arel_table[:geo_id].matches(pattern)).or(where(arel_table[:name].matches(pattern)))
+  end
+
   def group
     if geo_id =~ /^GM/ or geo_id =~ /^BEGM/
       'municipality'

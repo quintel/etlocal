@@ -2,7 +2,7 @@ class DatasetsController < ApplicationController
   layout false, only: %i(edit clone)
   format 'js', only: %i(edit :clone)
 
-  before_action :authenticate_user!, except: %i(index show edit)
+  before_action :authenticate_user!, except: %i(index show edit search)
   before_action :find_dataset, only: %i(validate edit download clone)
 
   # GET index
@@ -26,6 +26,12 @@ class DatasetsController < ApplicationController
     dataset = Dataset.find_by(geo_id: params[:id])
 
     render json: dataset
+  end
+
+  # GET search.json
+  def search
+    results = Dataset.fuzzy_search(params[:query])
+    render json: results.map { |d| { id: d.geo_id, name: d.name } }.uniq
   end
 
   # POST download

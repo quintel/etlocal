@@ -119,6 +119,10 @@ $map-height: 100%
         form.no-results
           input#search-bar
             border: 1px solid $error-color
+          ul li:hover
+            cursor: auto
+            background-color: $bg-color
+            color: #000
 
         input#search-bar
           border: 1px solid #bbb
@@ -128,6 +132,28 @@ $map-height: 100%
         input#search-submit
           background-color: $bg-color
           border-radius: 0 4px 4px 0
+
+        ul.options
+          background-color: $bg-color
+          border: 1px solid #bbb
+          border-radius: 4px
+          list-style: none
+          width: 290px
+          padding: 4px
+          max-height: 300px
+          overflow: scroll
+          li
+            padding: 5px
+            border-radius: 4px
+            &:hover
+              cursor: pointer
+              background-color: $selected-color
+              color: #fff
+            &:active
+              background-color: darken($selected-color, 5)
+            &:last-child
+              margin-bottom: 0
+
 
     #dataset-overlay
       position: relative

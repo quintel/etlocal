@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Dataset do
   let(:dataset) {
-    Dataset.new(name: "Ameland", country: 'nl')
+    Dataset.create!(name: 'Ameland', country: 'nl', geo_id: 'AM31049', user: User.robot)
   }
 
   it "it initializes a dataset from an Atlas dataset" do
@@ -38,6 +38,28 @@ describe Dataset do
 
     it 'is valid' do
       expect(ameland_dataset.valid?).to be_truthy
+    end
+  end
+
+  describe '.fuzzy_search' do
+    subject { described_class.fuzzy_search(query) }
+
+    let(:eland) do
+      Dataset.create!(name: 'Eland', country: 'nl', geo_id: 'AM3568', user: User.robot)
+    end
+
+    context 'with an exactly matching geo_id query' do
+      let(:query) { 'AM31049' }
+
+      it { is_expected.to include(dataset) }
+      it { is_expected.to_not include(eland) }
+    end
+
+    context 'with an fuzzy matching name query' do
+      let(:query) { 'land' }
+
+      it { is_expected.to include(dataset) }
+      it { is_expected.to include(eland) }
     end
   end
 end

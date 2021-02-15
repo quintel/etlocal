@@ -1,20 +1,24 @@
 area:
-  - area_advanced
+  - area_geography
+  - area_emissions
+  - area_infrastructure
 households:
   - households_energy_demand
   - households_energy_supply
-  - households_advanced
+  - households_housing_stock
+  - households_applications
 buildings:
   - buildings_energy_demand
   - buildings_energy_supply
-  - buildings_advanced
+  - buildings_building_stock
+  - buildings_applications
 transport:
   - transport_road_transport
   - transport_rail_transport
   - transport_ship_transport
   - transport_plane_transport
-  - transport_advanced
 agriculture:
+  - agriculture_energy_demand
 industry:
   - industry_metal
   - industry_chemical
@@ -22,9 +26,14 @@ industry:
   - industry_paper
   - industry_ict
   - industry_other
+  - industry_heat_chp
+  - industry_residual_heat
+other:
+  - other_energy_demand
 energy:
+  - energy_energy_demand
   - energy_renewable_electricity_production
   - energy_fossil_electricity_production
   - energy_heat_production
+  - energy_biomass
   - energy_full_load_hours
-other:

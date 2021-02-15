@@ -129,6 +129,26 @@ $map-height: 100%
           background-color: $bg-color
           border-radius: 0 4px 4px 0
 
+        ul.options
+          background-color: $bg-color
+          border: 1px solid #bbb
+          border-radius: 4px
+          list-style: none
+          width: 290px
+          padding: 4px
+          li
+            padding: 5px
+            border-radius: 4px
+            &:hover
+              cursor: pointer
+              background-color: $selected-color
+              color: #fff
+            &:active
+              background-color: darken($selected-color, 5)
+            &:last-child
+              margin-bottom: 0
+
+
     #dataset-overlay
       position: relative
       display: none

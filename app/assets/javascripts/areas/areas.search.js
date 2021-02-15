@@ -3,25 +3,47 @@
 Areas.Search = (function () {
     'use strict';
 
-    function flyToMap(data) {
+    function openPopup(geoId) {
+        $.ajax({
+            url: "/datasets/" + geoId + ".json",
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                if (data) {
+                    DatasetInterface.open(data.id);
+                } else if (console) {
+                    console.log("No dataset with " + geoId + " found");
+                }
+            }.bind(this),
+            error: function (e) {
+                alert(e);
+            }
+        });
+    }
+
+    function parseResults(data) {
         this.areas.popup.close();
+        this.scope.find('.options').remove();
+        this.scope
+            .removeClass("no-results")
+            .removeAttr("title");
 
-        if (data.length > 0) {
-            var boundingBox = data[0].boundingbox.map(function (value) {
-                    return parseFloat(value);
-                }),
-                c1 = ol.proj.fromLonLat([boundingBox[2], boundingBox[0]]),
-                c2 = ol.proj.fromLonLat([boundingBox[3], boundingBox[1]]);
+        if (data.length == 1) {
+            openPopup.call(this, data[0].id);
+        } else if (data.length > 1){
+            var list = $('<ul></ul>').addClass('options'),
+                self = this;
 
-            this.areas.view.fit(c1.concat(c2), {
-                duration: 500,
-                minResolution: this.areas.layers.minResolution()
-            });
+            // Create an option in the list for each dataset
+            $.each(data, function(_key, dataset) {
+                var option = $('<li>' + dataset.name +' (' + dataset.id +')</li>');
+                option.on('click', function() {
+                    openPopup.call(self, dataset.id);
+                });
+                list.append(option);
+            })
 
-            this.scope
-                .removeClass("no-results")
-                .removeAttr("title");
-
+            this.scope.append(list);
         } else {
             this.scope
                 .addClass("no-results")
@@ -43,15 +65,17 @@ Areas.Search = (function () {
 
             this.result = $(e.target).serializeArray()[0];
 
+            // Here we check for a fuzzy match to known dataset codes & names,
+            // there can be more than one result
             $.ajax({
-                url:  "https://nominatim.openstreetmap.org/search",
-                type: "GET",
-                data: {
-                    format: 'json',
-                    q: this.result.value,
-                    countrycodes: 'nl'
-                },
-                success: flyToMap.bind(this)
+                url: "/datasets/search.json",
+                type: 'GET',
+                dataType: 'json',
+                data: { query: this.result.value },
+                success: parseResults.bind(this),
+                error: function (e) {
+                    alert(e);
+                }
             });
         }
     };

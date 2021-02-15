@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :datasets, only: %i(index edit show) do
     get :download
 
+    get :search, on: :collection
+
     post :clone
 
     resources :commits, only: %i(create) do

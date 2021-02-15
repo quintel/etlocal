@@ -77,6 +77,10 @@ Areas.Search = (function () {
                     alert(e);
                 }
             });
+        },
+
+        hideOptions: function () {
+            this.scope.find('.options').remove();
         }
     };
 
@@ -84,6 +88,7 @@ Areas.Search = (function () {
         this.areas = areas;
         this.scope = scope;
         this.scope.on('submit', this.handleSubmit.bind(this));
+        this.scope.find('#search-bar').on('input', this.hideOptions.bind(this));
     }
 
     return Search;

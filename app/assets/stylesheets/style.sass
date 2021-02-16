@@ -21,22 +21,54 @@ body
     display: none
 
 .header
-  padding: 20px 0
+  padding: 0
 
   div
     display: inline-block
 
     h1
       margin: 0
+      font-size: 4rem
+      letter-spacing: -0.25rem
+      padding-top: 5px
 
     &.right
       float: right
 
       select#locale
-        margin-left: 5px
+        padding: 0 15px 0 5px
+        margin-right: 20px
+        margin-bottom: 0
+        border: none
+        background-color: $bg-color
+        text-align: right
+        // For the little arrow
+        -webkit-appearance: none
+        -moz-appearance: none
+        background: transparent
+        background-image: url('caret-down-solid.svg')
+        background-repeat: no-repeat
+        background-position-x: 100%
+        background-position-y: 12px
+        background-size: 10px
+        &:hover
+          cursor: pointer
+      .lang-select:hover
+        color: #333
 
       .current-user
         line-height: 60px
+        .log-out
+          display: none
+          position: absolute
+          top: 37px
+          z-index: 3
+          right: 0px
+          .button
+            padding: 0px 10px
+            background-color: $bg-color
+            text-transform: none
+            font-weight: normal
 
       a
         margin-left: 10px

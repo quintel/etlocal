@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Correctie. Aanname 25% beschikbare capaciteit (standaardwaarde voor Nederland)."

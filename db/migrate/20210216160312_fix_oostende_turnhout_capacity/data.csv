@@ -1,0 +1,3 @@
+geo_id,lv_net_spare_capacity,mv_net_spare_capacity,hv_net_spare_capacity,lv_mv_trafo_spare_capacity,mv_hv_trafo_spare_capacity
+BEGM13040,0.25,0.25,0.25,0.25,0.25
+BEGM35013,0.25,0.25,0.25,0.25,0.25

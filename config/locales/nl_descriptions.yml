@@ -110,5 +110,13 @@ nl:
         In dit tabblad vind je informatie over het aantal vollasturen van hernieuwbare en fossiele
         electriciteitscentrales in het startjaar van deze regio.
     subgroups:
-      energy_greengas_production: |
-        EXAMPLE!! some description for a subgroup
+      area_other_ghg: |
+        De overige broeikasgassen vallen buiten de scope van het ETM en worden 
+        enkel getoond als "overige broeikasgassen" op de CO<sub>2</sub>-voetafdruk:
+        https://pro.energytransitionmodel.com/regions/nl.
+      area_electricity_grid_costs: | 
+        Huidige totale investeringkosten per netniveau.
+      area_electricity_grid_capacity: | 
+        Gemiddeld percentage reservecapaciteit per netniveau 
+      area_electricity_grid_reinforcement: | 
+

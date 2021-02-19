@@ -1,7 +1,1 @@
 key: transport
-groups:
-  - items:
-    - key: number_of_cars
-      unit: '#'
-    - key: input_transport_road_human_powered_bicycle_demand
-      unit: 'km'

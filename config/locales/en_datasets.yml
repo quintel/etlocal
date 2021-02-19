@@ -46,19 +46,18 @@ en:
 
     subgroups:
       area:
-        area_advanced: Advanced
+        area_geography: Geography
+        area_emissions: Emissions
+        area_infrastructure: Infrastructure
 
       agriculture:
         agriculture_advanced: Advanced
 
       buildings:
-        buildings_advanced: Advanced
         buildings_energy_demand: Energy demand
         buildings_energy_supply: Energy supply
-        buildings_final_demand_electricity: Electricity
-        buildings_final_demand_for_cooling_electricity: Cooling
-        buildings_final_demand_for_lighting_electricity: Lighting
-        buildings_final_demand_crude_oil: Crude oil
+        buildings_building_stock: Building stock
+        buildings_applications: Applications
 
       energy:
         energy_heat_production: Heat
@@ -67,9 +66,10 @@ en:
         energy_full_load_hours: Full load hours
 
       households:
-        households_advanced: Advanced
         households_energy_demand: Energy demand
         households_energy_supply: Energy supply
+        households_housing_stock: Housing stock
+        households_applications: Applications
 
       industry:
         industry_metal: Metal
@@ -80,12 +80,10 @@ en:
         industry_other: Other industry
 
       transport:
-        transport_energy_demand: Energy demand
         transport_rail_transport: Trains
         transport_road_transport: Road vehicles
         transport_ship_transport: Ships
         transport_plane_transport: Planes
-        transport_advanced: Advanced
 
     flash:
       not_found: "Area does not exist"

@@ -108,5 +108,3 @@ en:
       energy_full_load_hours: |
         In this tab you can specify the full load hours for most renewable and fossil power plants.
     subgroups:
-      energy_greengas_production: |
-        EXAMPLE!! some description for a subgroup

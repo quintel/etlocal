@@ -1,4 +1,4 @@
-key: households_advanced
+key: households_applications
 groups:
   - header: households_electricity_distribution
     type: slider

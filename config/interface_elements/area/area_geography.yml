@@ -1,0 +1,11 @@
+key: area_geography
+groups:
+  - items:
+    - key: total_land_area
+      unit: 'km<sup>2</sup>'
+    - key: areable_land
+      unit: 'km<sup>2</sup>'
+    - key: offshore_suitable_for_wind
+      unit: 'km<sup>2</sup>'
+    - key: coast_line
+      unit: 'km'

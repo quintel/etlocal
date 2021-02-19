@@ -1,6 +1,40 @@
 en:
   descriptions:
     interface_items:
+      analysis_year: Starting year
+      total_land_area: Total land area
+      offshore_suitable_for_wind: Available area for offshore wind turbines
+      coast_line: Coast line
+      areable_land: Arable land
+      number_of_inhabitants: Number of inhabitants
+
+      co2_emission_1990: 'CO<sub>2</sub> emissions in 1990'
+      other_emission_built_environment: 'Built environment'
+      other_emission_transport: 'Transport sector'
+      other_emission_industry_energy: 'Industry and energy sector'
+      other_emission_agriculture: 'Agriculture'
+      lv_net_total_costs_present: Low voltage grid
+      lv_mv_trafo_total_costs_present: LV-MV transformers
+      mv_net_total_costs_present: Medium voltage grid
+      mv_hv_trafo_total_costs_present: MV-HV transformers
+      hv_net_total_costs_present: High voltage grid
+      offshore_net_costs_present: Offshore wind grid
+      interconnection_net_costs_present: Interconnector capacity
+      lv_net_spare_capacity: Low voltage grid
+      lv_mv_trafo_spare_capacity: LV-MV transformers
+      mv_net_spare_capacity: Medium voltage grid
+      mv_hv_trafo_spare_capacity: MV-HV transformers
+      hv_net_spare_capacity: High voltage grid
+      lv_net_capacity_per_step: Step size of low voltage grid reinforcement
+      lv_net_costs_per_capacity_step: Costs of low voltage grid reinforcement per step
+      lv_mv_trafo_capacity_per_step: Step size of lv-mv transformer reinforcement
+      lv_mv_trafo_costs_per_capacity_step: Costs of lv-mv transformer reinforcement per step
+      mv_net_capacity_per_step: Step size of medium voltage grid reinforcement
+      mv_net_costs_per_capacity_step: Costs of medium voltage grid reinforcement per step
+      mv_hv_trafo_capacity_per_step: Step size of mv-hv transformer reinforcement
+      mv_hv_trafo_costs_per_capacity_step: Costs of mv-hv transformer reinforcement per step
+      hv_net_capacity_per_step: Step size of high voltage grid reinforcement
+      hv_net_costs_per_capacity_step: Costs of high voltage grid reinforcement per step
       heat_length_of_distribution_pipelines_in_meter_per_residence_object_first_bracket: |
         The length of distribution pipelines of district heating networks varies with the number of
         connected buildings. Typically, densely populated areas are connected to district heating

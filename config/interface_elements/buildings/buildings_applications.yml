@@ -1,4 +1,4 @@
-key: buildings_advanced
+key: buildings_applications
 groups:
   - header: buildings_electricity_distribution
     type: slider

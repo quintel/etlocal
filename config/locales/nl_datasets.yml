@@ -46,19 +46,18 @@ nl:
 
     subgroups:
       area:
-        area_advanced: Geavanceerd
+        area_geography: Geografie
+        area_emissions: Emissies
+        area_infrastructure: Infrastructuur
 
       agriculture:
         agriculture_energy_demand: Energievraag
 
       buildings:
-        buildings_advanced: Geavanceerd
         buildings_energy_demand: Energievraag
         buildings_energy_supply: Energieaanbod
-        buildings_final_demand_electricity: Elektriciteit
-        buildings_final_demand_for_cooling_electricity: Koeling
-        buildings_final_demand_for_lighting_electricity: Verlichting
-        buildings_final_demand_crude_oil: Olie
+        buildings_building_stock: Gebouwenvoorraad
+        buildings_applications: Toepassingen en apparaten
 
       energy:
         energy_energy_demand: Energievraag
@@ -71,7 +70,8 @@ nl:
       households:
         households_energy_demand: Energievraag
         households_energy_supply: Energieaanbod
-        households_advanced: Geavanceerd
+        households_housing_stock: Huizenvoorraad
+        households_applications: Toepassingen en apparaten
 
       industry:
         industry_metal: Metaal
@@ -84,12 +84,10 @@ nl:
         industry_residual_heat: Restwarmtepotentie
 
       transport:
-        transport_energy_demand: Energievraag
         transport_rail_transport: Treinverkeer
         transport_road_transport: Wegverkeer
         transport_ship_transport: Scheepvaart
         transport_plane_transport: Luchtvaart
-        transport_advanced: Geavanceerd
 
       other:
         other_energy_demand: Energievraag

@@ -134,4 +134,12 @@ nl:
         Gemiddeld percentage reservecapaciteit per netniveau 
       area_electricity_grid_reinforcement: | 
         Kosten ovor verzwaring van het elektriciteitsnet per netniveau
+      households_insulation: | 
+        Deze percentages geven de warmtevraagreductie t.o.v. een slecht geïsoleerd huis aan (label G).
+        Kijk op onze <a href="https://docs.energytransitionmodel.com/main/insulation">documentatie</a>
+        voor meer informatie over isolatie.
+      buildings_insulation: | 
+        Deze percentages geven de warmtevraagreductie t.o.v. een slecht geïsoleerd gebouw aan (label E).
+        Kijk op onze <a href="https://docs.energytransitionmodel.com/main/insulation">documentatie</a>
+        voor meer informatie over isolatie.
 

@@ -63,7 +63,7 @@ nl:
         households_final_demand_electricity_demand: Elektriciteit
         households_final_demand_network_gas_demand: Gas
         households_final_demand_steam_hot_water_demand: Warmte
-        households_final_demand_wood_pellets_demand: Biomassa
+        households_final_demand_wood_pellets_demand: Vaste biomassa
         households_final_demand_crude_oil_demand: Olie
         households_final_demand_coal_demand: Kolen
 
@@ -149,7 +149,7 @@ nl:
         input_buildings_electricity_demand: Elektriciteit
         buildings_final_demand_network_gas_demand: Gas
         buildings_final_demand_steam_hot_water_demand: Warmte
-        buildings_final_demand_wood_pellets_demand: Biomassa
+        buildings_final_demand_wood_pellets_demand: Vaste biomassa
         buildings_final_demand_coal_demand: Kolen
         buildings_final_demand_crude_oil_demand: Olie
         input_buildings_heat_demand_reduction: Warmtevraagreductie
@@ -283,7 +283,7 @@ nl:
         input_industry_metal_other_electricity_demand: Elektriciteit
         input_industry_metal_other_network_gas_demand: Gas
         input_industry_metal_other_steam_hot_water_demand: Warmte
-        input_industry_metal_other_wood_pellets_demand: Biomassa
+        input_industry_metal_other_wood_pellets_demand: Vaste biomassa
         input_industry_metal_other_crude_oil_demand: Olie
         input_industry_metal_other_coal_demand: Kolen
 
@@ -292,7 +292,7 @@ nl:
         input_industry_chemical_other_electricity_demand: Elektriciteit
         input_industry_chemical_other_network_gas_demand: Gas
         input_industry_chemical_other_steam_hot_water_demand: Warmte
-        input_industry_chemical_other_wood_pellets_demand: Biomassa
+        input_industry_chemical_other_wood_pellets_demand: Vaste biomassa
         input_industry_chemical_other_crude_oil_demand: Olie
         input_industry_chemical_other_hydrogen_demand: Waterstof
         input_industry_chemical_other_coal_demand: Kolen
@@ -304,7 +304,7 @@ nl:
         input_industry_food_electricity_demand: Elektriciteit
         input_industry_food_network_gas_demand: Gas
         input_industry_food_steam_hot_water_demand: Warmte
-        input_industry_food_wood_pellets_demand: Biomassa
+        input_industry_food_wood_pellets_demand: Vaste biomassa
         input_industry_food_crude_oil_demand: Olie
         input_industry_food_hydrogen_demand: Waterstof
         input_industry_food_coal_demand: Kolen
@@ -315,7 +315,7 @@ nl:
         input_industry_paper_electricity_demand: Elektriciteit
         input_industry_paper_network_gas_demand: Gas
         input_industry_paper_steam_hot_water_demand: Warmte
-        input_industry_paper_wood_pellets_demand: Biomassa
+        input_industry_paper_wood_pellets_demand: Vaste biomassa
         input_industry_paper_crude_oil_demand: Olie
         input_industry_paper_hydrogen_demand: Waterstof
         input_industry_paper_coal_demand: Kolen
@@ -328,7 +328,7 @@ nl:
         input_industry_other_electricity_demand: Elektriciteit
         input_industry_other_network_gas_demand: Gas
         input_industry_other_steam_hot_water_demand: Warmte
-        input_industry_other_wood_pellets_demand: Biomassa
+        input_industry_other_wood_pellets_demand: Vaste biomassa
         input_industry_other_crude_oil_demand: Olie
         input_industry_other_coal_demand: Kolen
         input_industry_other_network_gas_non_energetic_demand: Gas (niet-energetisch)
@@ -438,7 +438,7 @@ nl:
         other_final_demand_electricity_demand: Elektriciteit
         other_final_demand_network_gas_demand: Gas
         other_final_demand_steam_hot_water_demand: Warmte
-        other_final_demand_wood_pellets_demand: Biomassa
+        other_final_demand_wood_pellets_demand: Vaste biomassa
         other_final_demand_coal_demand: Kolen
         other_final_demand_crude_oil_demand: Olie
         other_final_demand_crude_oil_non_energetic_demand: Olie (niet-energetisch)

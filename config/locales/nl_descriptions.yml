@@ -2,7 +2,21 @@ nl:
   descriptions:
     groups:
       area: | 
-        Leuk intro verhaal
+        <strong>Welkom bij ETData!</strong>
+        ETData geeft inzicht in de data achter het <a href="https://pro.energytransitionmodel.com/Energietransitiemodel">Energietransitiemodel</a>.
+        Om preciezer te zijn toont ETData de data én bronnen die gebruikt worden voor het startjaar van een regio.
+        Voor een overzicht van de gebruikte bronnen voor Nederlandse regio's kijk op onze 
+        <a href="https://docs.energytransitionmodel.com/main/data-sources-local">documentatie</a>.
+        <strong>Hoe werkt het?</strong>
+        In de linkerbalk vind je verschillende onderwerpen die onder te verdelen zijn in:
+        <ul><li>Algemeen (geografie, emissies, infrastructuur)</li>
+        <li>Energievraag: Huishoudens, Gebouwen, Transport, Landbouw, Industrie en Overige vraag</li>
+        <li>Energieproductie (elektriciteit, warmte, biomassa)</li>
+        </ul>
+        Binnen elk onderwerp vind je alle relevante datapunten. Door de klikken op het "i"-icoontje
+        bij de getallen vind je de bronnen die gebruikt zijn en of dit getal recentelijk veranderd is.
+        <strong>Jaar</strong>
+        Hieronder zie je uit welk jaar alle data van deze regio komt.
       area_emissions: | 
         In dit tabblad kun je informatie invullen over de uitstoot van broeikasgassen in deze regio.
       area_geography: |
@@ -11,7 +25,8 @@ nl:
         Hieronder kan je karakteristieken invullen voor het elektriciteitsnetwerk en warmtenet. 
         Je kunt aangeven hoe hoog de huidige kosten van het elektriciteitsnetwerk zijn, hoeveel
         capaciteit er nog op het net beschikbaar is en hoe duur toekomstige uitbreidingen zullen
-        zijn. Voor warmtenetten kan je aangeven wat de leidinglengtes zijn.
+        zijn. Kijk op onze <a href="https://docs.energytransitionmodel.com/main/network">documentatie</a>
+        voor een uitleg van de elektriciteitsnetwerkberekening in het ETM. Voor warmtenetten kan je aangeven wat de leidinglengtes zijn.
       households: |
         In deze sectie kun je informatie invullen over huishoudens in deze regio.
       buildings: |
@@ -134,6 +149,10 @@ nl:
         Gemiddeld percentage reservecapaciteit per netniveau 
       area_electricity_grid_reinforcement: | 
         Kosten ovor verzwaring van het elektriciteitsnet per netniveau
+      area_heat_infrastructure_lengths: | 
+        De leidinglengtes van warmtenetten worden gebruikt om een goede kosteninschatting te maken voor de warmtenetten. Kijk op
+        onze <a href="https://docs.energytransitionmodel.com/main/heat-infrastructure-costs">documentatie</a>
+        voor meer informatie hierover.
       households_insulation: | 
         Deze percentages geven de warmtevraagreductie t.o.v. een slecht geïsoleerd huis aan (label G).
         Kijk op onze <a href="https://docs.energytransitionmodel.com/main/insulation">documentatie</a>

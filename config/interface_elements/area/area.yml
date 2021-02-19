@@ -1,5 +1,6 @@
 key: area
 groups:
-  - items:
+  - header:
+    items:
     - key: analysis_year
       unit: '#'

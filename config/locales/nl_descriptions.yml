@@ -1,8 +1,17 @@
 nl:
   descriptions:
     groups:
-      area: |
-        Hieronder kun je een aantal (geografische) karakteristieken over deze regio invullen.
+      area: | 
+        Leuk intro verhaal
+      area_emissions: | 
+        In dit tabblad kun je informatie invullen over de uitstoot van broeikasgassen in deze regio.
+      area_geography: |
+        Hieronder kun je een aantal geografische karakteristieken over deze regio invullen.
+      area_infrastructure: | 
+        Hieronder kan je karakteristieken invullen voor het elektriciteitsnetwerk en warmtenet. 
+        Je kunt aangeven hoe hoog de huidige kosten van het elektriciteitsnetwerk zijn, hoeveel
+        capaciteit er nog op het net beschikbaar is en hoe duur toekomstige uitbreidingen zullen
+        zijn. Voor warmtenetten kan je aangeven wat de leidinglengtes zijn.
       households: |
         In deze sectie kun je informatie invullen over huishoudens in deze regio.
       buildings: |
@@ -21,18 +30,19 @@ nl:
       other: |
         In deze sectie kun je het overige energiegebruik in deze regio invullen. Dit is al het
         energiegebruik dat niet in een van de bovenstaande secties aan bod is gekomen.
-      area_advanced: |
-        In dit tabblad kun je informatie invullen over de uitstoot van broeikasgassen in deze regio.
-        Ook kun je aangeven hoe hoog de huidige kosten van het elektriciteitsnetwerk zijn, hoeveel
-        capaciteit er nog op het net beschikbaar is en hoe duur toekomstige uitbreidingen zullen
-        zijn.
+
       households_energy_demand: |
         In dit tabblad kun je per energiedrager aangeven hoe hoog het huidige energiegebruik van
-        huishoudens is en hoe geïsoleerd elk huistype is.
+        huishoudens is.
       households_energy_supply: |
         In dit tabblad kun je invullen hoeveel zonnestroom en zonnewarmte er geproduceerd wordt door
         huishoudens.
-      households_advanced: |
+      households_housing_stock: | 
+        In dit tabblad kun je verschillende karakteristieken over de huizenvoorraad en bevolking aangeven. 
+        Hoeveel inwoners zijn er? Hoeveel huizen zijn er en welke typen zijn dat? Hoe goed zijn deze huizen geïsoleerd? 
+        Ook kan je aangeven hoe groot het totale dakoppervlakte is dat geschikt is voor 
+        zonnepanelen en welk deel van de appartementen is aangesloten op blokverwarming.
+      households_applications: |
         In dit tabblad kun je per energiedrager aangeven waar huishoudens hun energie voor
         gebruiken. Hoeveel procent van het gasgebruik van huishoudens wordt gebruikt voor
         verwarming? En hoeveel voor koken? Ook kun je aangeven welke apparaten huishoudens
@@ -48,16 +58,25 @@ nl:
       buildings_energy_supply: |
         In dit tabblad kun je invullen hoeveel zonnestroom en zonnewarmte er geproduceerd wordt door
         gebouwen.
-      buildings_advanced: |
+      buildings_building_stock: | 
+        In dit tabblad kan je informatie invullen over gebouwen: hoeveel staan er in jouw regio? Hoe
+        goed zijn deze gebouwen geïsoleerd? En hoe groot is het geschikt dakoppervlak voor zonnepanelen op deze gebouwen?
+      buildings_applications: |
         In dit tabblad kun je per energiedrager aangeven waar gebouwen energie voor gebruiken.
         Hoeveel procent van het elektriciteitsgebruik wordt gebruikt voor verwarming? En hoeveel
         voor verlichting? Ook kun je aangeven welke apparaten gebouwen hebben. Hoeveel procent van
         de verlichting gebeurt met spaarlampen? En hoeveel met LED-lampen? Deze percentages staan
         standaard op het Nederlandse gemiddelde.
       transport_road_transport: |
-        In dit tabblad kun je informatie invullen over het brandstofgebruik van wegverkeer.
+        In dit tabblad kun je informatie invullen over wegverkeer. Hoeveel auto's rijden er? Hoeveel
+        passagierskilometers worden door fietsen gereden? Hoeveel brandstof verbruikt het 
+        wegverkeer? Ook kun je aangeven hoe het brandstofgebruik verdeeld is over verschillende
+        soorten vervoersmiddelen. Hoeveel van de gebruikte benzine voor wegverkeer gaat naar auto's?
+        En hoeveel naar bussen? 
       transport_rail_transport: |
-        In dit tabblad kun je informatie invullen over het energiegebruik van treinverkeer.
+        In dit tabblad kun je informatie invullen over het energiegebruik van treinverkeer. Ook kun je 
+        aangeven hoe het brandstofgebruik verdeeld is over verschillende vervoersmiddelen. Hoeveel van de
+        gebruikte elektriciteit gaat naar passagierstreinen? En hoeveel naar trams?
       transport_ship_transport: |
         In dit tabblad kun je informatie invullen over het brandstofgebruik van de binnenvaart. Let
         op: Het energiegebruik van internationale scheepvaart valt hier buiten. In het
@@ -68,11 +87,6 @@ nl:
         luchtvaart. Let op: Het energiegebruik van internationale luchtvaart valt hier buiten. In
         het Energietransitiemodel kun je ervoor kiezen om een deel van het totale nationale
         verbruik van deze sector aan deze regio toe te kennen.
-      transport_advanced: |
-        In dit tabblad kun je aangeven hoe het brandstofgebruik verdeeld is over verschillende
-        soorten vervoersmiddelen. Hoeveel van de gebruikte benzine voor wegverkeer gaat naar auto's?
-        En hoeveel naar bussen? Ook kun je aangeven hoe groot het niet-energetisch oliegebruik is in
-        de transportsector (bijvoorbeeld smeermiddelen).
       industry_metal: |
         In dit tabblad kun je aangeven hoeveel energie er gebruikt wordt door de metaalindustrie in
         deze regio. Voor staal en aluminium kun je aangeven hoeveel procent van de totale
@@ -112,11 +126,12 @@ nl:
     subgroups:
       area_other_ghg: |
         De overige broeikasgassen vallen buiten de scope van het ETM en worden 
-        enkel getoond als "overige broeikasgassen" op de CO<sub>2</sub>-voetafdruk:
-        https://pro.energytransitionmodel.com/regions/nl.
+        enkel getoond op de
+        <a href="https://pro.energytransitionmodel.com/regions/nl">"CO<sub>2</sub>-voetafdruk"</a>.
       area_electricity_grid_costs: | 
-        Huidige totale investeringkosten per netniveau.
+        Huidige totale investeringkosten per netniveau
       area_electricity_grid_capacity: | 
         Gemiddeld percentage reservecapaciteit per netniveau 
       area_electricity_grid_reinforcement: | 
+        Kosten ovor verzwaring van het elektriciteitsnet per netniveau
 

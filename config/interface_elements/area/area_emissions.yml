@@ -1,6 +1,7 @@
 key: area_emissions
 groups:
-  - header: 
+  - header: area_co2_emission_1990
+    items:
     - key: co2_emission_1990
       unit: 'Mton'
   - header: area_other_ghg

@@ -1,6 +1,7 @@
 key: area_geography
 groups:
-  - items:
+  - header:
+    items:
     - key: total_land_area
       unit: 'km<sup>2</sup>'
     - key: areable_land

@@ -251,8 +251,6 @@ en:
         transport_rail_mixer_diesel_transport_passenger_train_using_diesel_mix_parent_share: Passenger trains
         transport_rail_mixer_diesel_transport_freight_train_using_diesel_mix_parent_share: Freight trains
 
-        transport_final_demand_crude_oil_non_energetic_demand: Crude oil (lubricants etc.)
-
         # agriculture
         agriculture_final_demand_electricity_demand: Electricity
         agriculture_final_demand_network_gas_demand: Gas
@@ -260,8 +258,6 @@ en:
         agriculture_final_demand_wood_pellets_demand: Solid biomass
         agriculture_final_demand_crude_oil_demand: Oil
         agriculture_final_demand_hydrogen_demand: Hydrogen
-        input_agriculture_heatpump_demand: Heat demand heat pump with thermal storage
-
 
         # industry
         industry_chp_combined_cycle_gas_power_fuelmix_demand: Gas CHP
@@ -336,6 +332,18 @@ en:
         input_industry_other_crude_oil_non_energetic_demand: Oil (non-energetic)
         input_industry_other_coal_non_energetic_demand: Coal (non-energetic)
 
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: "Residual heat from processes"
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: "Residual heat from flue gasses"
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share: "No residual heat"
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share: "Residual heat from processes"
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share: "Residual heat from flue gasses"
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share: "No residual heat"
+        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share: "Residual heat from processes"
+        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share: "Residual heat from flue gasses"
+        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_used_heat_parent_share: "No residual heat"
+        industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share: "Residual heat from servers"
+        industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: "No residual heat"
+
         # Energy
         energy_power_sector_own_use_electricity_demand: Own use of electricity
         energy_power_hv_network_loss_demand: Network losses
@@ -402,17 +410,6 @@ en:
         input_energy_heat_burner_coal_production: Coal-fired heater
         input_energy_heat_burner_crude_oil_production: Oil-fired heater
 
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: "Residual heat from processes"
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: "Residual heat from flue gasses"
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share: "No residual heat"
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share: "Residual heat from processes"
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share: "Residual heat from flue gasses"
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share: "No residual heat"
-        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share: "Residual heat from processes"
-        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share: "Residual heat from flue gasses"
-        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_used_heat_parent_share: "No residual heat"
-        industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share: "Residual heat from servers"
-        industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: "No residual heat"
         energy_import_heat_demand: (Residual) heat imported from outside your region
 
         energy_heat_distribution_loss_demand: Heat distribution loss

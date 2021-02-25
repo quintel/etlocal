@@ -76,7 +76,7 @@ nl:
       transport_energy_demand_crude_oil_non_energetic: Niet-energetisch oliegebruik
 
       # agriculture
-      agriculture_energy_demand: Energiegebruik
+      agriculture_final_demand: Eindgebruik
 
       # industry
       industry_heat: Fuel input voor WKK
@@ -93,6 +93,13 @@ nl:
       industry_paper_electricity: Elektriciteitsgebruik
       industry_ict: Centrale ICT-diensten
       industry_other: Overige industrie
+      industry_chemical_residual_heat: "Beschikbare restwarmte chemische industrie"
+      industry_refineries_residual_heat: "Beschikbare restwarmte raffinaderijen"
+      industry_fertilizers_residual_heat: "Beschikbare restwarmte kunstmestindustrie"
+      industry_ict_residual_heat: "Beschikbare restwarmte ICT"
+
+      # other
+      other_final_demand: Eindgebruik
 
       # energy
       energy_demand_power_sector: Energiegebruik elektriciteitsopwek
@@ -108,12 +115,9 @@ nl:
       energy_electricity_gas: Elektriciteitsopwek gascentrales per type
       energy_electricity_waste: Elektriciteitsopwek afvalverbranding
       energy_electricity_other_fossil: Overige fossiele elektriciteitsopwek
-      industry_chemical_residual_heat: "Beschikbare restwarmte chemische industrie"
-      industry_refineries_residual_heat: "Beschikbare restwarmte raffinaderijen"
-      industry_fertilizers_residual_heat: "Beschikbare restwarmte kunstmestindustrie"
-      industry_ict_residual_heat: "Beschikbare restwarmte ICT"
       energy_heat_import: Geïmporteerde warmte
-      energy_heat: Warmteproductie bronnen warmtenet
+      energy_heat_renewable: Duurzame warmtebronnen
+      energy_heat_fossil: Fossiele warmtebronnen
       energy_heat_distribution_loss: Verlies warmenetten
       energy_renewable_full_load_hours: Hernieuwbare elektriciteitsproductie
       energy_fossil_full_load_hours: Fossiele elektriciteitsproductie

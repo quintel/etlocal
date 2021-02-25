@@ -29,23 +29,6 @@ nl:
         voor een uitleg van de elektriciteitsnetwerkberekening in het ETM. Voor warmtenetten kan je aangeven wat de leidinglengtes zijn.
       households: |
         In deze sectie kun je informatie invullen over huishoudens in deze regio.
-      buildings: |
-        In deze sectie kun je informatie invullen over de gebouwensector. Onder gebouwen verstaan we
-        de utiliteitsbouw (niet-woningen) in deze regio, zoals kantoren, ziekenhuizen, scholen en winkels.
-      transport: |
-        In deze sectie kun je informatie invullen over de transportsector.
-      agriculture: |
-        In deze sectie kun je informatie invullen over het energiegebruik van de landbouwsector.
-      industry: |
-        In deze sectie kun je informatie invullen over de industriesector. Hieronder kun je aangeven
-        hoeveel energie er gebruikt wordt door warmtekrachtkoppelingen (WKK) en andere ketels van
-        industriële bedrijven.
-      energy: |
-        In deze sectie kun je informatie invullen over de (centrale) energieproductie in deze regio.
-      other: |
-        In deze sectie kun je het overige energiegebruik in deze regio invullen. Dit is al het
-        energiegebruik dat niet in een van de bovenstaande secties aan bod is gekomen.
-
       households_energy_demand: |
         In dit tabblad kun je per energiedrager aangeven hoe hoog het huidige energiegebruik van
         huishoudens is.
@@ -64,6 +47,9 @@ nl:
         gebruiken. Hoeveel procent van de huishoudens die met gas verwarmen heeft een combi-boiler?
         En hoeveel een hybride warmtepomp? Deze percentages staan standaard op het Nederlandse
         gemiddelde.
+      buildings: |
+        In deze sectie kun je informatie invullen over de gebouwensector. Onder gebouwen verstaan we
+        de utiliteitsbouw (niet-woningen) in deze regio, zoals kantoren, ziekenhuizen, scholen en winkels.
       buildings_energy_demand: |
         In dit tabblad kun je per energiedrager aangeven hoe hoog het huidige energiegebruik is van
         de gebouwensector en hoe geïsoleerd de gebouwen zijn. Let op: Niet alle dienstverlening valt
@@ -82,6 +68,8 @@ nl:
         voor verlichting? Ook kun je aangeven welke apparaten gebouwen hebben. Hoeveel procent van
         de verlichting gebeurt met spaarlampen? En hoeveel met LED-lampen? Deze percentages staan
         standaard op het Nederlandse gemiddelde.
+      transport: |
+        In deze sectie kun je informatie invullen over de transportsector.
       transport_road_transport: |
         In dit tabblad kun je informatie invullen over wegverkeer. Hoeveel auto's rijden er? Hoeveel
         passagierskilometers worden door fietsen gereden? Hoeveel brandstof verbruikt het 
@@ -102,6 +90,14 @@ nl:
         luchtvaart. Let op: Het energiegebruik van internationale luchtvaart valt hier buiten. In
         het Energietransitiemodel kun je ervoor kiezen om een deel van het totale nationale
         verbruik van deze sector aan deze regio toe te kennen.
+      agriculture:
+        In deze sectie kun je informatie invullen over de landbouwsector.
+      agriculture_energy_demand: |
+        In deze sectie kun je informatie invullen over het energiegebruik van de landbouwsector.
+      industry: |
+        In deze sectie kun je informatie invullen over de industriesector. Hieronder kun je aangeven
+        hoeveel energie er gebruikt wordt door warmtekrachtkoppelingen (WKK) en andere ketels van
+        industriële bedrijven.
       industry_metal: |
         In dit tabblad kun je aangeven hoeveel energie er gebruikt wordt door de metaalindustrie in
         deze regio. Voor staal en aluminium kun je aangeven hoeveel procent van de totale
@@ -125,6 +121,8 @@ nl:
         In dit tabblad kun je per energiedrager aangeven hoeveel energie er gebruikt wordt door de
         'overige' industrie. Dit is industrie die niet in de bovenstaande tabbladen aan bod is
         gekomen. Denk bijvoorbeeld aan de bouw, elektrotechniek en textiel.
+      energy: |
+        In deze sectie kun je informatie invullen over de (centrale) energieproductie in deze regio.
       energy_renewable_electricity_production: |
         In dit tabblad vind je informatie over de hernieuwbare elektriciteitsproductie.
       energy_fossil_electricity_production: |
@@ -138,6 +136,9 @@ nl:
       energy_full_load_hours: |
         In dit tabblad vind je informatie over het aantal vollasturen van hernieuwbare en fossiele
         electriciteitscentrales in het startjaar van deze regio.
+      other: |
+        In deze sectie kun je het overige energiegebruik in deze regio invullen. Dit is al het
+        energiegebruik dat niet in een van de bovenstaande secties aan bod is gekomen.
     subgroups:
       area_other_ghg: |
         De overige broeikasgassen vallen buiten de scope van het ETM en worden 
@@ -148,7 +149,7 @@ nl:
       area_electricity_grid_capacity: | 
         Gemiddeld percentage reservecapaciteit per netniveau 
       area_electricity_grid_reinforcement: | 
-        Kosten ovor verzwaring van het elektriciteitsnet per netniveau
+        Kosten voor verzwaring van het elektriciteitsnet per netniveau
       area_heat_infrastructure_lengths: | 
         De leidinglengtes van warmtenetten worden gebruikt om een goede kosteninschatting te maken voor de warmtenetten. Kijk op
         onze <a href="https://docs.energytransitionmodel.com/main/heat-infrastructure-costs">documentatie</a>

@@ -40,7 +40,7 @@ en:
       households: Households
       industry: Industry
       overview: Overview
-      other: Other
+      other: Other energy demand
       energy: Energy production
       transport: Transport
 
@@ -51,7 +51,7 @@ en:
         area_infrastructure: Infrastructure
 
       agriculture:
-        agriculture_advanced: Advanced
+        agriculture_energy_demand: Energy demand
 
       buildings:
         buildings_energy_demand: Energy demand
@@ -60,10 +60,12 @@ en:
         buildings_applications: Applications
 
       energy:
-        energy_heat_production: Heat
+        energy_energy_demand: Energy demand
+        energy_heat_production: District heating sources
         energy_fossil_electricity_production: Fossil electricity
         energy_renewable_electricity_production: Renewable electricity
         energy_full_load_hours: Full load hours
+        energy_biomass: Biomass
 
       households:
         households_energy_demand: Energy demand
@@ -78,12 +80,17 @@ en:
         industry_paper: Paper
         industry_ict: ICT
         industry_other: Other industry
+        industry_heat_chp: Heat and CHP
+        industry_residual_heat: Residual heat potential
 
       transport:
         transport_rail_transport: Trains
         transport_road_transport: Road vehicles
         transport_ship_transport: Ships
         transport_plane_transport: Planes
+
+      other:
+        other_energy_demand: Energy demand
 
     flash:
       not_found: "Area does not exist"

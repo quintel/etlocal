@@ -252,8 +252,6 @@ nl:
         transport_rail_mixer_diesel_transport_passenger_train_using_diesel_mix_parent_share: Passagierstreinen
         transport_rail_mixer_diesel_transport_freight_train_using_diesel_mix_parent_share: Goederentreinen
 
-        transport_final_demand_crude_oil_non_energetic_demand: Oliegebruik (smeermiddelen e.d.)
-
         # agriculture
         agriculture_final_demand_electricity_demand: Elektriciteit
         agriculture_final_demand_network_gas_demand: Gas (ex WKK)
@@ -261,7 +259,6 @@ nl:
         agriculture_final_demand_wood_pellets_demand: Biomassa (ex WKK)
         agriculture_final_demand_crude_oil_demand: Olie
         agriculture_final_demand_hydrogen_demand: Waterstof
-        input_agriculture_heatpump_demand: Warmtegebruik (diepe) bodemwarmtepomp
 
         # industry
         industry_chp_combined_cycle_gas_power_fuelmix_demand: Gas-WKK
@@ -335,6 +332,18 @@ nl:
         input_industry_other_wood_pellets_non_energetic_demand: Biomassa (niet-energetisch)
         input_industry_other_crude_oil_non_energetic_demand: Olie (niet-energetisch)
         input_industry_other_coal_non_energetic_demand: Kolen (niet-energetisch)
+        
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share: "Geen restwarmte"
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share: "Geen restwarmte"
+        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
+        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
+        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_used_heat_parent_share: "Geen restwarmte"
+        industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share: "Restwarmte uit servers"
+        industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: "Geen restwarmte"
 
         # Energy
         energy_power_sector_own_use_electricity_demand: Eigen gebruik elektriciteit
@@ -402,17 +411,6 @@ nl:
         input_energy_heat_burner_coal_production: Kolenketels
         input_energy_heat_burner_crude_oil_production: Olieketels
 
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share: "Geen restwarmte"
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share: "Geen restwarmte"
-        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
-        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
-        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_used_heat_parent_share: "Geen restwarmte"
-        industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share: "Restwarmte uit servers"
-        industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: "Geen restwarmte"
         energy_import_heat_demand: (Rest)warmte geïmporteerd van buiten de regio
 
         energy_heat_distribution_loss_demand: Transportverliezen in warmtenetten

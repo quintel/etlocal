@@ -79,7 +79,7 @@ nl:
       agriculture_final_demand: Eindgebruik
 
       # industry
-      industry_heat: Fuel input voor WKK
+      industry_heat: Gebruikte brandstof voor WKK en ketels
       industry_gas_fuelmix: Brandstofmix gasgestookte WKK
       industry_metal_steel: Staal
       industry_metal_aluminium: Aluminium
@@ -87,7 +87,7 @@ nl:
       industry_chemical_fertilizers: Kunstmest
       industry_chemical_refineries: Raffinaderijen
       industry_chemical_other_energetic: Overige chemische industrie - energetische vraag
-      industry_chemical_other_non_energetic: Overige chemische industrie - niet-energetische vraag / grondstoffen
+      industry_chemical_other_non_energetic: Overige chemische industrie - grondstoffen
       industry_food: Eindgebruik
       industry_food_electricity: Elektriciteitsgebruik
       industry_paper: Eindgebruik

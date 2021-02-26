@@ -86,13 +86,15 @@ nl:
       industry_metal_other: Overige metaalindustrie
       industry_chemical_fertilizers: Kunstmest
       industry_chemical_refineries: Raffinaderijen
-      industry_chemical_other: Overige chemische industrie
-      industry_food: Voedsel
+      industry_chemical_other_energetic: Overige chemische industrie - energetische vraag
+      industry_chemical_other_non_energetic: Overige chemische industrie - niet-energetische vraag / grondstoffen
+      industry_food: Eindgebruik
       industry_food_electricity: Elektriciteitsgebruik
-      industry_paper: Papier
+      industry_paper: Eindgebruik
       industry_paper_electricity: Elektriciteitsgebruik
       industry_ict: Centrale ICT-diensten
-      industry_other: Overige industrie
+      industry_other_energetic: Energetische vraag
+      industry_other_non_energetic: Niet-energetische vraag / grondstoffen
       industry_chemical_residual_heat: "Beschikbare restwarmte chemische industrie"
       industry_refineries_residual_heat: "Beschikbare restwarmte raffinaderijen"
       industry_fertilizers_residual_heat: "Beschikbare restwarmte kunstmestindustrie"

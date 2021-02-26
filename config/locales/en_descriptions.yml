@@ -7,7 +7,7 @@ en:
         In this section you can provide information about the household sector in this area.
       households_energy_demand: |
         In this tab you can specify how much energy is used in the households sector per energy
-        carrier and how well insulated each housing type is.
+        carrier.
       households_energy_supply: |
         In this tab you can provide information about solar PV and solar thermal production in the
         households sector.
@@ -63,9 +63,7 @@ en:
         In this section you can provide information about the energy use of the agricultural
         sector in this area.
       industry: |
-        In this section you can provide information about the industry sector in this area. Below
-        you can indicate how much energy is used for Combined Heat and Power (CHP) and other heaters
-        in industrial firms.
+        In this section you can provide information about the industry sector in this area. 
       industry_metal: |
         In this tab you can specify how much energy is used by the metal sector in this area. You
         can allocate a certain percentage of the total energy use of the Dutch steel and aluminium
@@ -86,11 +84,18 @@ en:
         In this tab you can specify how much energy is used by 'other' industry in this area. Other
         industry includes all industry sectors not covered by the above tabs, like construction,
         machinery or textile.
+      industry_heat_chp: |
+        In this tab you can indicate how much energy is used for Combined Heat and Power (CHP) and other heaters
+        in industrial firms.
+      industry_residual_heat: | 
+        In this tab you can indicate how much residual heat is available in different industrial processes.
       energy: |
         In this section you can provide information about the (central) energy sector in this area.
       energy_renewable_electricity_production: |
         In this tab you can specify how much electricity is produced from renewable sources in this
-        area.
+        area. More information about the various plant types can be found in the
+        <a href="https://pro.energytransitionmodel.com/scenario/scenario/supply/electricity_renewable/wind-turbines">
+        Energy Transition Model</a>.
       energy_fossil_electricity_production: |
         In this tab you can specify how much electricity is produced by fossil power plants in this area.
         More information about the various plant types can be found in the
@@ -98,11 +103,17 @@ en:
         Energy Transition Model</a>.
       energy_heat_production: |
         In this tab you can specify how much heat is produced by heat plants. This heat is used for
-        district heating in households, buildings and agriculture. You can also specify the
-        availability of residual heat from industry.
+        district heating in households, buildings and agriculture. More information about the various plant types can be found in the
+        <a href="https://pro.energytransitionmodel.com/scenario/supply/heat/heat-sources">
+        Energy Transition Model</a>.
       energy_full_load_hours: |
-        In this tab you can specify the full load hours for most renewable and fossil power plants.
+        In this tab you can specify the full load hours for most renewable and fossil power plants. More information about the various plant types can be found in the
+        <a href="https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants">
+        Energy Transition Model</a>.
       other: |
         In this section you can provide information about other energy use in this area. This all
+        energy that is not taken into account in any of the above sections.
+      other_energy_demand: | 
+        In this tab you can specify how much energy is used for other energy use in this area. This all
         energy that is not taken into account in any of the above sections.
     subgroups:

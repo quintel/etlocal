@@ -83,13 +83,15 @@ en:
       industry_metal_other: Other metal industry
       industry_chemical_fertilizers: Fertilizers
       industry_chemical_refineries: Refineries
-      industry_chemical_other: Other chemical industry
-      industry_food: Food
+      industry_chemical_other_energetic: Other chemical industry - energetic demand
+      industry_chemical_other_non_energetic: Other chemical industry - non-energetic demand / feedstock
+      industry_food: Final demand
       industry_food_electricity: Electricity use
-      industry_paper: Paper
+      industry_paper: Final demand
       industry_paper_electricity: Electricity use
       industry_ict: Central ICT services
-      industry_other: Other industry sectors
+      industry_other_energetic: Energetic demand
+      industry_other_non_energetic: Non-energetic demand / feedstock
       industry_chemical_residual_heat: "Available residual heat chemical industry"
       industry_refineries_residual_heat: "Available residual heat refineries"
       industry_fertilizers_residual_heat: "Available residual heat fertilizer industry"

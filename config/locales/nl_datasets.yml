@@ -65,7 +65,7 @@ nl:
         energy_fossil_electricity_production: Fossiele elektriciteit
         energy_renewable_electricity_production: Duurzame elektriciteit
         energy_biomass: Biomassa
-        energy_full_load_hours: Vollasturen
+        energy_full_load_hours: Vollasturen elektriciteit
 
       households:
         households_energy_demand: Energievraag

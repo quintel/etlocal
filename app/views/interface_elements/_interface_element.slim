@@ -52,7 +52,13 @@
                   - else
                     span.read-only
                       - if value = form.object.public_send(interface_item.key)
-                        = value.round(2)
+                        // A little misuse of number to currency for formatting values for locales
+                        - if interface_item.key == :analysis_year
+                          = value.round
+                        - elsif interface_item.unit == '€'
+                          = number_to_currency(value, precision: 0, unit: '')
+                        - else
+                          = number_to_currency(value, precision: 2, unit: '')
                       | &nbsp;
 
                 span.unit data-to= interface_item.unit

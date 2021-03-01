@@ -109,7 +109,7 @@ var DatasetInterface = (function () {
                     }
 
                     if (readOnly.length > 0) {
-                        readOnly.text(converted);
+                        readOnly.text(converted.toLocaleString(undefined));
                     }
                 }
             });

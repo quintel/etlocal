@@ -27,17 +27,17 @@ nl:
       energy_production_dry_biomass_max_demand: |
         Hoeveel droge biomassa kan er potentieel geproduceerd worden op het grondgebied van deze regio? Onder droge biomassa
         wordt verstaan: reststromen uit bosbouw (boomstammen, takken), landbouw (stro) en bio-gewassen (olifantengras). Bekijk
-        de <a href="https://docs.energytransitionmodel.com/main/biomass">documentatie</a> van het Energietransitiemodel voor meer
+        de <a target="_blank" href="https://docs.energytransitionmodel.com/main/biomass">documentatie</a> van het Energietransitiemodel voor meer
         informatie.
       energy_production_wet_biomass_max_demand: |
         Hoeveel natte biomassa kan er potentieel geproduceerd worden op het grondgebied van deze regio? Onder natte biomassa
         wordt verstaan: reststromen uit de voedsel- en drankindustrie, mest, rioolslib, aquatische biomassa. Bekijk
-        de <a href="https://docs.energytransitionmodel.com/main/biomass">documentatie</a> van het Energietransitiemodel voor meer
+        de <a target="_blank" href="https://docs.energytransitionmodel.com/main/biomass">documentatie</a> van het Energietransitiemodel voor meer
         informatie.
       energy_production_oily_biomass_max_demand: |
         Hoeveel olie-houdende biomassa kan er potentieel geproduceerd worden op het grondgebied van deze regio? Onder olie-houdende biomassa
         wordt verstaan: koolzaad, zonnebloempitten, palmolie, frituurvet. Bekijk
-        de <a href="https://docs.energytransitionmodel.com/main/biomass">documentatie</a> van het Energietransitiemodel voor meer
+        de <a target="_blank" href="https://docs.energytransitionmodel.com/main/biomass">documentatie</a> van het Energietransitiemodel voor meer
         informatie.
       input_energy_power_solar_pv_solar_radiation_production: |
         Hoeveel elektriciteit wordt er opgewekt met grondgebonden zon-PV (zonneweides) en zon op water?

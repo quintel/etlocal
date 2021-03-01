@@ -3,10 +3,10 @@ nl:
     groups:
       area: |
         <strong>Welkom bij ETData!</strong>
-        ETData geeft inzicht in de data achter het <a href="https://pro.energytransitionmodel.com/Energietransitiemodel">Energietransitiemodel</a>.
+        ETData geeft inzicht in de data achter het <a target="_blank" href="https://pro.energytransitionmodel.com/Energietransitiemodel">Energietransitiemodel</a>.
         Om preciezer te zijn toont ETData de data én bronnen die gebruikt worden voor het startjaar van een regio.
         Voor een overzicht van de gebruikte bronnen voor Nederlandse regio's kijk op onze
-        <a href="https://docs.energytransitionmodel.com/main/data-sources-local">documentatie</a>.
+        <a target="_blank" href="https://docs.energytransitionmodel.com/main/data-sources-local">documentatie</a>.
         <strong>Hoe werkt het?</strong>
         In de linkerbalk vind je verschillende onderwerpen, die onder te verdelen zijn in:
         <ul><li>Algemene informatie, zoals geografie, emissies, infrastructuur</li>
@@ -25,7 +25,7 @@ nl:
         Hieronder vind je infromatie over het elektriciteitsnetwerk en warmtenet.
         Je kunt zien hoe hoog de huidige kosten van het elektriciteitsnetwerk zijn, hoeveel
         capaciteit er nog op het net beschikbaar is en hoe duur toekomstige uitbreidingen zullen
-        zijn. Kijk op onze <a href="https://docs.energytransitionmodel.com/main/network">documentatie</a>
+        zijn. Kijk op onze <a target="_blank" href="https://docs.energytransitionmodel.com/main/network">documentatie</a>
         voor een uitleg van de elektriciteitsnetwerkberekening in het ETM. Voor warmtenetten vind je informatie over de leidinglengtes.
       households: |
         In deze sectie vind je informatie over huishoudens in deze regio.
@@ -136,22 +136,22 @@ nl:
         In dit tablad vind je informatie over het eigen gebruik en de netverliezen van het elektriciteitsnet.
       energy_renewable_electricity_production: |
         In dit tabblad vind je informatie over de hernieuwbare elektriciteitsproductie. Meer informatie over de verschillende types centrales kun je vinden in het
-        <a href="https://pro.energytransitionmodel.com/scenario/supply/electricity_renewable/wind-turbines">
+        <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity_renewable/wind-turbines">
         Energietransitiemodel</a>.
       energy_fossil_electricity_production: |
         In dit tabblad vind je informatie over de elektriciteitsproductie van fossiele bronnen.
         Meer informatie over de verschillende types centrales kun je vinden in het
-        <a href="https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants">
+        <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants">
         Energietransitiemodel</a>.
       energy_heat_production: |
         In dit tabblad vind je informatie over de warmtebronnen die leveren aan warmtenetten voor
         huishoudens, gebouwen en landbouw. Meer informatie over de verschillende types centrales kun je vinden in het
-        <a href="https://pro.energytransitionmodel.com/scenario/supply/heat/heat-sources">
+        <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/heat/heat-sources">
         Energietransitiemodel</a>.
       energy_full_load_hours: |
         In dit tabblad vind je informatie over het aantal vollasturen van hernieuwbare en fossiele
         electriciteitscentrales in het startjaar van deze regio. Meer informatie over de verschillende types centrales kun je vinden in het
-        <a href="https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants">
+        <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants">
         Energietransitiemodel</a>.
       energy_biomass:
         In dit tabblad vind je informatie over groen gas, afval en de potentie van biomassa.
@@ -159,7 +159,7 @@ nl:
       area_other_ghg: |
         De overige broeikasgassen vallen buiten de scope van het ETM en worden
         enkel getoond op de
-        <a href="https://pro.energytransitionmodel.com/regions/nl">"CO<sub>2</sub>-voetafdruk"</a>.
+        <a target="_blank" href="https://pro.energytransitionmodel.com/regions/nl">"CO<sub>2</sub>-voetafdruk"</a>.
       area_electricity_grid_costs: |
         Huidige totale investeringkosten per netniveau
       area_electricity_grid_capacity: |
@@ -168,15 +168,15 @@ nl:
         Kosten voor verzwaring van het elektriciteitsnet per netniveau
       area_heat_infrastructure_lengths: |
         De leidinglengtes van warmtenetten worden gebruikt om een goede kosteninschatting te maken voor de warmtenetten. Kijk op
-        onze <a href="https://docs.energytransitionmodel.com/main/heat-infrastructure-costs">documentatie</a>
+        onze <a target="_blank" href="https://docs.energytransitionmodel.com/main/heat-infrastructure-costs">documentatie</a>
         voor meer informatie hierover.
       households_insulation: |
         Deze percentages geven de warmtevraagreductie t.o.v. een slecht geïsoleerd huis aan (label G).
-        Kijk op onze <a href="https://docs.energytransitionmodel.com/main/insulation">documentatie</a>
+        Kijk op onze <a target="_blank" href="https://docs.energytransitionmodel.com/main/insulation">documentatie</a>
         voor meer informatie over isolatie.
       buildings_insulation: |
         Deze percentages geven de warmtevraagreductie t.o.v. een slecht geïsoleerd gebouw aan (label E).
-        Kijk op onze <a href="https://docs.energytransitionmodel.com/main/insulation">documentatie</a>
+        Kijk op onze <a target="_blank" href="https://docs.energytransitionmodel.com/main/insulation">documentatie</a>
         voor meer informatie over isolatie.
       industry_gas_fuelmix: |
         Onderstaande percentages geven de samenstelling van de gebruikte brandstof van gasgestookte WKK's weer. In sommige gevallen

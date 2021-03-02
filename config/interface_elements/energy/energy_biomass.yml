@@ -1,0 +1,35 @@
+key: energy_biomass
+groups:
+  - header: energy_greengas_demand
+    items:
+      - key: energy_distribution_greengas_demand
+        unit: 'TJ'
+
+  - header: energy_greengas_production
+    type: slider
+    items:
+      - key: energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share
+        unit: '%'
+      - key: energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share
+        unit: '%'
+      - key: energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share
+        unit: '%'
+        flexible: true
+
+  - header: energy_waste_mix
+    type: slider
+    items:
+      - key: energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share
+        unit: '%'
+      - key: energy_distribution_non_biogenic_waste_energy_distribution_waste_mix_child_share
+        unit: '%'
+        flexible: true
+
+  - header: energy_potentials
+    items:
+        - key: energy_production_dry_biomass_max_demand
+          unit: 'TJ'
+        - key: energy_production_wet_biomass_max_demand
+          unit: 'TJ'
+        - key: energy_production_oily_biomass_max_demand
+          unit: 'TJ'

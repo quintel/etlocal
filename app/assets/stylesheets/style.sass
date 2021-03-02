@@ -21,22 +21,54 @@ body
     display: none
 
 .header
-  padding: 20px 0
+  padding: 0
 
   div
     display: inline-block
 
     h1
       margin: 0
+      font-size: 4rem
+      letter-spacing: -0.25rem
+      padding-top: 5px
 
     &.right
       float: right
 
       select#locale
-        margin-left: 5px
+        padding: 0 15px 0 5px
+        margin-right: 20px
+        margin-bottom: 0
+        border: none
+        background-color: $bg-color
+        text-align: right
+        // For the little arrow
+        -webkit-appearance: none
+        -moz-appearance: none
+        background: transparent
+        background-image: url('caret-down-solid.svg')
+        background-repeat: no-repeat
+        background-position-x: 100%
+        background-position-y: 12px
+        background-size: 10px
+        &:hover
+          cursor: pointer
+      .lang-select:hover
+        color: #333
 
       .current-user
         line-height: 60px
+        .log-out
+          display: none
+          position: absolute
+          top: 37px
+          z-index: 3
+          right: 0px
+          .button
+            padding: 0px 10px
+            background-color: $bg-color
+            text-transform: none
+            font-weight: normal
 
       a
         margin-left: 10px
@@ -104,8 +136,6 @@ table tbody tr td a.button
     margin: 0
 
   .group
-    &.slider-group
-      margin-bottom: 20px
 
     &.sub
       margin-top: 40px
@@ -147,14 +177,25 @@ table tbody tr td a.button
         width: 50px
 
     strong
-      margin-bottom: 20px
+      margin: 15px 0
       display: block
+      border-top: 0.5px solid #aaa
+      padding-top: 20px
+      &:first-child
+        border-top: none
+        padding-top: 0
+        margin-top: 0
 
   .editable
     color: black
     text-decoration: none
     display: block
     padding: 10px 0
+
+    &.slider
+      padding: 0
+    &.field:last-child
+      padding-bottom: 0
 
     .border
       width: 100%
@@ -168,12 +209,12 @@ table tbody tr td a.button
         &.left
           float: left
           background-color: $bg-color
-          padding-right: 5px
+          padding-right: 10px
 
         &.right
           float: right
           background-color: $bg-color
-          padding-left: 5px
+          padding-left: 10px
 
       span
         &.history
@@ -193,10 +234,10 @@ table tbody tr td a.button
 
         &.val
           .read-only
-            width: 187px
+            width: 87px
             display: inline-block
-            text-align: right
-            padding-bottom: 18px
+            padding-left: 5px
+            // text-align: right
 
           .field_with_errors
             display: inline
@@ -231,7 +272,7 @@ div.history > p
 div.history, div.information
   padding: 20px 26px 0 26px
   border: 1px solid #ccc
-  margin: -20px 35px 35px 0
+  margin: -10px 35px 35px 0
   position: relative
   background-color: #eee
 
@@ -247,7 +288,7 @@ div.history, div.information
     border-top: 1px solid #ccc
     border-left: 1px solid #ccc
     transform: rotate(48deg) skew(5deg)
-    right: 186px
+    right: 92px
     background-color: #eee
 
   .change

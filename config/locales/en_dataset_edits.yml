@@ -73,7 +73,7 @@ en:
       transport_energy_demand_crude_oil_non_energetic: Non-energetic oil use
 
       # agriculture
-      agriculture_energy_demand: Energy demand
+      agriculture_final_demand: Final demand
 
       # industry
       industry_heat: Fuel input for CHP
@@ -83,50 +83,40 @@ en:
       industry_metal_other: Other metal industry
       industry_chemical_fertilizers: Fertilizers
       industry_chemical_refineries: Refineries
-      industry_chemical_other: Other chemical industry
-      industry_food: Food
+      industry_chemical_other_energetic: Other chemical industry - energetic demand
+      industry_chemical_other_non_energetic: Other chemical industry - non-energetic demand / feedstock
+      industry_food: Final demand
       industry_food_electricity: Electricity use
-      industry_paper: Paper
+      industry_paper: Final demand
       industry_paper_electricity: Electricity use
       industry_ict: Central ICT services
-      industry_other: Other industry sectors
+      industry_other_energetic: Energetic demand
+      industry_other_non_energetic: Non-energetic demand / feedstock
+      industry_chemical_residual_heat: "Available residual heat chemical industry"
+      industry_refineries_residual_heat: "Available residual heat refineries"
+      industry_fertilizers_residual_heat: "Available residual heat fertilizer industry"
+      industry_ict_residual_heat: "Available residual heat ICT"
+
+      # other
+      other_final_demand: Final demand
 
       # energy
       energy_demand_power_sector: Energy demand of the power sector
-      energy_greengas_demand: Greengas use
-      energy_greengas_production: Greengas production
+      energy_greengas_demand: Green gas use
+      energy_greengas_production: Green gas production
       energy_waste_mix: Waste mix
       energy_extraction: Fuel production and natural resource extraction
       energy_potentials: Natural resource potentials
       energy_electricity_wind: Wind electricity production
       energy_electricity_solar: Solar electricity production
       energy_electricity_other_renewable: Other renewable electricity production
-      energy_electricity_coal: Coal electricity production
-      energy_electricity_gas: Gas electricity production
+      energy_electricity_coal: Electricity production coal plants by type
+      energy_electricity_gas: Electricity production gas plants by type
       energy_electricity_waste: Waste electricity production
       energy_electricity_other_fossil: Other fossil electricity production
-      industry_chemical_residual_heat: "Available residual heat chemical industry"
-      industry_refineries_residual_heat: "Available residual heat refineries"
-      industry_fertilizers_residual_heat: "Available residual heat fertilizer industry"
-      industry_ict_residual_heat: "Available residual heat ICT"
       energy_heat_import: Imported heat
-      energy_heat: Heat production
+      energy_heat_renewable: Renewable heat sources
+      energy_heat_fossil: Fossil heat sources
       energy_heat_distribution_loss: Heat network losses
       energy_renewable_full_load_hours: Full load hours of renewable power plants
       energy_fossil_full_load_hours: Full load hours of fossil power plants
-
-    explanation:
-      heat_length_of_distribution_pipelines_in_meter_per_residence_object_first_bracket: The length of distribution pipelines of district heating networks varies with the number of connected buildings. Typically, densely populated areas are connected to district heating networks first. These areas have a lower average pipeline length per connection than less densely populated areas. The ETM takes this into account by using 5 'brackets' of average pipeline lengths per connection. The more houses are connected to the network, the higher the average length per connection typically is. Here you can specify the average length of the distribution pipelines when (up to) 20% of houses and buildings are connected to the network.
-      heat_length_of_distribution_pipelines_in_meter_per_residence_object_second_bracket: The length of distribution pipelines of district heating networks varies with the number of connected buildings. Typically, densely populated areas are connected to district heating networks first. These areas have a lower average pipeline length per connection than less densely populated areas. The ETM takes this into account by using 5 'brackets' of average pipeline lengths per connection. The more houses are connected to the network, the higher the average length per connection typically is. Here you can specify the average length of the distribution pipelines when (up to) 40% of houses and buildings are connected to the network.
-      heat_length_of_distribution_pipelines_in_meter_per_residence_object_third_bracket: The length of distribution pipelines of district heating networks varies with the number of connected buildings. Typically, densely populated areas are connected to district heating networks first. These areas have a lower average pipeline length per connection than less densely populated areas. The ETM takes this into account by using 5 'brackets' of average pipeline lengths per connection. The more houses are connected to the network, the higher the average length per connection typically is. Here you can specify the average length of the distribution pipelines when (up to) 60% of houses and buildings are connected to the network.
-      heat_length_of_distribution_pipelines_in_meter_per_residence_object_fourth_bracket: The length of distribution pipelines of district heating networks varies with the number of connected buildings. Typically, densely populated areas are connected to district heating networks first. These areas have a lower average pipeline length per connection than less densely populated areas. The ETM takes this into account by using 5 'brackets' of average pipeline lengths per connection. The more houses are connected to the network, the higher the average length per connection typically is. Here you can specify the average length of the distribution pipelines when (up to) 80% of houses and buildings are connected to the network.
-      heat_length_of_distribution_pipelines_in_meter_per_residence_object_fifth_bracket: The length of distribution pipelines of district heating networks varies with the number of connected buildings. Typically, densely populated areas are connected to district heating networks first. These areas have a lower average pipeline length per connection than less densely populated areas. The ETM takes this into account by using 5 'brackets' of average pipeline lengths per connection. The more houses are connected to the network, the higher the average length per connection typically is. Here you can specify the average length of the distribution pipelines when (up to) 100% of houses and buildings are connected to the network.
-      heat_length_of_connection_pipelines_in_meter_per_residence_first_bracket: The ETM distinguishes between distribution pipelines and 'connection' pipelines. Connection pipelines are the pipelines from street level to front door. The average length of connection pipelines varies with the number of connected buildings. Typically, densely populated areas are connected to district heating networks first. These areas have a lower average connection pipeline length per connection than less densely populated areas. The ETM takes this into account by using 5 'brackets' of average connection pipeline lengths. The more houses are connected to the network, the higher the average length per connection typically is. Here you can specify the average length of the connection pipelines when (up to) 20% of houses are connected to the network.
-      heat_length_of_connection_pipelines_in_meter_per_residence_second_bracket: The ETM distinguishes between distribution pipelines and 'connection' pipelines. Connection pipelines are the pipelines from street level to front door. The average length of connection pipelines varies with the number of connected buildings. Typically, densely populated areas are connected to district heating networks first. These areas have a lower average connection pipeline length per connection than less densely populated areas. The ETM takes this into account by using 5 'brackets' of average connection pipeline lengths. The more houses are connected to the network, the higher the average length per connection typically is. Here you can specify the average length of the connection pipelines when (up to) 40% of houses are connected to the network.
-      heat_length_of_connection_pipelines_in_meter_per_residence_third_bracket: The ETM distinguishes between distribution pipelines and 'connection' pipelines. Connection pipelines are the pipelines from street level to front door. The average length of connection pipelines varies with the number of connected buildings. Typically, densely populated areas are connected to district heating networks first. These areas have a lower average connection pipeline length per connection than less densely populated areas. The ETM takes this into account by using 5 'brackets' of average connection pipeline lengths. The more houses are connected to the network, the higher the average length per connection typically is. Here you can specify the average length of the connection pipelines when (up to) 60% of houses are connected to the network.
-      heat_length_of_connection_pipelines_in_meter_per_residence_fourth_bracket: The ETM distinguishes between distribution pipelines and 'connection' pipelines. Connection pipelines are the pipelines from street level to front door. The average length of connection pipelines varies with the number of connected buildings. Typically, densely populated areas are connected to district heating networks first. These areas have a lower average connection pipeline length per connection than less densely populated areas. The ETM takes this into account by using 5 'brackets' of average connection pipeline lengths. The more houses are connected to the network, the higher the average length per connection typically is. Here you can specify the average length of the connection pipelines when (up to) 80% of houses are connected to the network.
-      heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket: The ETM distinguishes between distribution pipelines and 'connection' pipelines. Connection pipelines are the pipelines from street level to front door. The average length of connection pipelines varies with the number of connected buildings. Typically, densely populated areas are connected to district heating networks first. These areas have a lower average connection pipeline length per connection than less densely populated areas. The ETM takes this into account by using 5 'brackets' of average connection pipeline lengths. The more houses are connected to the network, the higher the average length per connection typically is. Here you can specify the average length of the connection pipelines when (up to) 100% of houses are connected to the network.
-
-
-      # energy
-      energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: "This setting is only relevant if a waste-to-energy plant is present in this area. This setting allows you to specify how sustainable the burnt waste is: What share of waste is biogenic (organic waste, wood or paper) and what share is non-biogenic (plastics etc.)? The more non-biogenic waste is burnt the more CO2 emissions waste incineration brings about and the fewer sustainable energy is produced."

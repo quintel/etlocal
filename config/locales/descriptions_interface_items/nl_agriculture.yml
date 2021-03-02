@@ -1,0 +1,9 @@
+nl:
+  descriptions:
+    interface_items:
+      agriculture_final_demand_network_gas_demand: |
+        Het eindgebruik van aardgas in de landbouw. Aardgas dat gebruikt is in landbouw-WKK's valt hierbuiten.
+        Dit staat bij Energieproductie → Bronnen warmtenet.
+      agriculture_final_demand_wood_pellets_demand: |
+        Het eindgebruik van biomassa in de landbouw. Biomassa die gebruikt is in landbouw-WKK's valt hierbuiten.
+        Dit staat bij Energieproductie → Bronnen warmtenet.

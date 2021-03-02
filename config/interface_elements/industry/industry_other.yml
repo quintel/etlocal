@@ -1,7 +1,7 @@
 key: industry_other
 
 groups:
-  - header: industry_other
+  - header: industry_other_energetic
     items:
       - key: input_industry_other_electricity_demand
         unit: 'TJ'
@@ -15,6 +15,9 @@ groups:
         unit: 'TJ'
       - key: input_industry_other_coal_demand
         unit: 'TJ'
+  
+  - header: industry_other_non_energetic
+    items:
       - key: input_industry_other_network_gas_non_energetic_demand
         unit: 'TJ'
       - key: input_industry_other_wood_pellets_non_energetic_demand

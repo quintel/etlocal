@@ -1,11 +1,13 @@
 .group.tab data-tab= "##{ interface_element.key }"
   - if I18n.exists?("descriptions.groups.#{ interface_element.key }")
     p.information
-      = I18n.t("descriptions.groups.#{ interface_element.key }")
+      = t("descriptions.groups.#{ interface_element.key }").html_safe
 
   - interface_element.groups.each do |interface_group|
     - if interface_group.header
-      strong= I18n.t("dataset_edits.groups.#{ interface_group.header }").html_safe
+      strong= t("dataset_edits.groups.#{ interface_group.header }").html_safe
+      - if I18n.exists?("descriptions.subgroups.#{ interface_group.header }")
+        p= t("descriptions.subgroups.#{ interface_group.header }").html_safe
 
     .group class= ('slider-group' if interface_group.type == :slider)
       - interface_group.items.each do |interface_item|
@@ -32,7 +34,7 @@
               .clear
 
         - else
-          .editable data-key=interface_item.key
+          .editable.field data-key=interface_item.key
             .border
             .input
               .left
@@ -50,7 +52,13 @@
                   - else
                     span.read-only
                       - if value = form.object.public_send(interface_item.key)
-                        = value.round(2)
+                        // A little misuse of number to currency for formatting values for locales
+                        - if interface_item.key == :analysis_year
+                          = value.round
+                        - elsif interface_item.unit == '€'
+                          = number_to_currency(value, precision: 0, unit: '')
+                        - else
+                          = number_to_currency(value, precision: 2, unit: '')
                       | &nbsp;
 
                 span.unit data-to= interface_item.unit
@@ -61,8 +69,8 @@
           .history.hidden class= interface_item.key
             .line-arrow
 
-            - if I18n.exists?("dataset_edits.explanation.#{interface_item.key}")
-              p=I18n.t("dataset_edits.explanation.#{interface_item.key}")
+            - if I18n.exists?("descriptions.interface_items.#{interface_item.key}")
+              p=I18n.t("descriptions.interface_items.#{interface_item.key}").html_safe
 
             strong = I18n.t("dataset_edits.history")
 

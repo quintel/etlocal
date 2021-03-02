@@ -11,7 +11,7 @@ var Slider = (function () {
 
     // Update span text value next to the slider
     function setVal(value) {
-        this.spanVal.text(Math.round(value * 100) / 100);
+        this.spanVal.text((Math.round(value * 100) / 100).toLocaleString(undefined));
     }
 
     // Callback for changing the slider

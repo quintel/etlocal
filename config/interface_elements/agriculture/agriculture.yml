@@ -1,19 +1,1 @@
 key: agriculture
-groups:
-
-  - header: agriculture_energy_demand
-    items:
-      - key: agriculture_final_demand_electricity_demand
-        unit: 'TJ'
-      - key: agriculture_final_demand_network_gas_demand
-        unit: 'TJ'
-      - key: agriculture_final_demand_steam_hot_water_demand
-        unit: 'TJ'
-      - key: agriculture_final_demand_wood_pellets_demand
-        unit: 'TJ'
-      - key: agriculture_final_demand_crude_oil_demand
-        unit: 'TJ'
-      - key: agriculture_final_demand_hydrogen_demand
-        unit: 'TJ'
-      - key: input_agriculture_heatpump_demand
-        unit: 'TJ'

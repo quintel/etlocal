@@ -19,7 +19,8 @@ nl:
 
     groups:
       #area
-      area_other_ghg: "Huidige uitstoot niet-CO<sub>2</sub>-broeikasgassen"
+      area_co2_emission_1990: "Energetische CO<sub>2</sub>-emissies 1990"
+      area_other_ghg: "Huidige uitstoot overige broeikasgassen"
       area_electricity_grid_costs: Kosten elektriciteitsnetwerk
       area_electricity_grid_capacity: Beschikbare capaciteit huidig elektriciteitsnet
       area_electricity_grid_reinforcement: Verzwaring elektriciteitsnet
@@ -75,23 +76,32 @@ nl:
       transport_energy_demand_crude_oil_non_energetic: Niet-energetisch oliegebruik
 
       # agriculture
-      agriculture_energy_demand: Energiegebruik
+      agriculture_final_demand: Eindgebruik
 
       # industry
-      industry_heat: Fuel input voor WKK
+      industry_heat: Gebruikte brandstof voor WKK en ketels
       industry_gas_fuelmix: Brandstofmix gasgestookte WKK
       industry_metal_steel: Staal
       industry_metal_aluminium: Aluminium
       industry_metal_other: Overige metaalindustrie
       industry_chemical_fertilizers: Kunstmest
       industry_chemical_refineries: Raffinaderijen
-      industry_chemical_other: Overige chemische industrie
-      industry_food: Voedsel
+      industry_chemical_other_energetic: Overige chemische industrie - energetische vraag
+      industry_chemical_other_non_energetic: Overige chemische industrie - grondstoffen
+      industry_food: Eindgebruik
       industry_food_electricity: Elektriciteitsgebruik
-      industry_paper: Papier
+      industry_paper: Eindgebruik
       industry_paper_electricity: Elektriciteitsgebruik
       industry_ict: Centrale ICT-diensten
-      industry_other: Overige industrie
+      industry_other_energetic: Energetische vraag
+      industry_other_non_energetic: Niet-energetische vraag / grondstoffen
+      industry_chemical_residual_heat: "Beschikbare restwarmte chemische industrie"
+      industry_refineries_residual_heat: "Beschikbare restwarmte raffinaderijen"
+      industry_fertilizers_residual_heat: "Beschikbare restwarmte kunstmestindustrie"
+      industry_ict_residual_heat: "Beschikbare restwarmte ICT"
+
+      # other
+      other_final_demand: Eindgebruik
 
       # energy
       energy_demand_power_sector: Energiegebruik elektriciteitsopwek
@@ -103,32 +113,13 @@ nl:
       energy_electricity_wind: Elektriciteitsopwek wind
       energy_electricity_solar: Elektriciteitsopwek zon
       energy_electricity_other_renewable: Overige duurzame elektriciteitsopwek
-      energy_electricity_coal: Elektriciteitsopwek kolen
-      energy_electricity_gas: Elektriciteitsopwek gas
+      energy_electricity_coal: Elektriciteitsopwek kolencentrales per type
+      energy_electricity_gas: Elektriciteitsopwek gascentrales per type
       energy_electricity_waste: Elektriciteitsopwek afvalverbranding
       energy_electricity_other_fossil: Overige fossiele elektriciteitsopwek
-      industry_chemical_residual_heat: "Beschikbare restwarmte chemische industrie"
-      industry_refineries_residual_heat: "Beschikbare restwarmte raffinaderijen"
-      industry_fertilizers_residual_heat: "Beschikbare restwarmte kunstmestindustrie"
-      industry_ict_residual_heat: "Beschikbare restwarmte ICT"
       energy_heat_import: Geïmporteerde warmte
-      energy_heat: Warmteproductie
+      energy_heat_renewable: Duurzame warmtebronnen
+      energy_heat_fossil: Fossiele warmtebronnen
       energy_heat_distribution_loss: Verlies warmenetten
-      energy_renewable_full_load_hours: Vollasturen van hernieuwbare elektriciteitsproductie
-      energy_fossil_full_load_hours: Vollasturen van fossiele elektriciteitsproductie
-
-    explanation:
-      number_of_residences: Hoeveelheid woningen
-      heat_length_of_distribution_pipelines_in_meter_per_residence_object_first_bracket: De benodigde lengte van de distributieleidingen voor warmtenetten varieert met het aantal aansluitingen. Het ligt voor de hand om als eerste dichtbevolkte wijken aan te sluiten, waar minder meter leiding per aansluiting nodig is dan in minder dichtbevolkte wijken. Het ETM houdt hier rekening mee door met vijf 'stappen' in gemiddelde lengtes per aansluiting te rekenen. Hoe meer huizen er worden aangesloten, hoe hoger de gemiddelde lengte per aansluiting. Hier kun je aangeven met welke gemiddelde leidinglengte het ETM rekent als (tot) 20% van de huizen en gebouwen wordt aangesloten.
-      heat_length_of_distribution_pipelines_in_meter_per_residence_object_second_bracket: De benodigde lengte van de distributieleidingen voor warmtenetten varieert met het aantal aansluitingen. Het ligt voor de hand om als eerste dichtbevolkte wijken aan te sluiten, waar minder meter leiding per aansluiting nodig is dan in minder dichtbevolkte wijken. Het ETM houdt hier rekening mee door met vijf 'stappen' in gemiddelde lengtes per aansluiting te rekenen. Hoe meer huizen er worden aangesloten, hoe hoger de gemiddelde lengte per aansluiting. Hier kun je aangeven met welke gemiddelde leidinglengte het ETM rekent als (tot) 40% van de huizen en gebouwen wordt aangesloten.
-      heat_length_of_distribution_pipelines_in_meter_per_residence_object_third_bracket: De benodigde lengte van de distributieleidingen voor warmtenetten varieert met het aantal aansluitingen. Het ligt voor de hand om als eerste dichtbevolkte wijken aan te sluiten, waar minder meter leiding per aansluiting nodig is dan in minder dichtbevolkte wijken. Het ETM houdt hier rekening mee door met vijf 'stappen' in gemiddelde lengtes per aansluiting te rekenen. Hoe meer huizen er worden aangesloten, hoe hoger de gemiddelde lengte per aansluiting. Hier kun je aangeven met welke gemiddelde leidinglengte het ETM rekent als (tot) 60% van de huizen en gebouwen wordt aangesloten.
-      heat_length_of_distribution_pipelines_in_meter_per_residence_object_fourth_bracket: De benodigde lengte van de distributieleidingen voor warmtenetten varieert met het aantal aansluitingen. Het ligt voor de hand om als eerste dichtbevolkte wijken aan te sluiten, waar minder meter leiding per aansluiting nodig is dan in minder dichtbevolkte wijken. Het ETM houdt hier rekening mee door met vijf 'stappen' in gemiddelde lengtes per aansluiting te rekenen. Hoe meer huizen er worden aangesloten, hoe hoger de gemiddelde lengte per aansluiting. Hier kun je aangeven met welke gemiddelde leidinglengte het ETM rekent als (tot) 80% van de huizen en gebouwen wordt aangesloten.
-      heat_length_of_distribution_pipelines_in_meter_per_residence_object_fifth_bracket: De benodigde lengte van de distributieleidingen voor warmtenetten varieert met het aantal aansluitingen. Het ligt voor de hand om als eerste dichtbevolkte wijken aan te sluiten, waar minder meter leiding per aansluiting nodig is dan in minder dichtbevolkte wijken. Het ETM houdt hier rekening mee door met vijf 'stappen' in gemiddelde lengtes per aansluiting te rekenen. Hoe meer huizen er worden aangesloten, hoe hoger de gemiddelde lengte per aansluiting. Hier kun je aangeven met welke gemiddelde leidinglengte het ETM rekent als (tot) 100% van de huizen en gebouwen wordt aangesloten.
-      heat_length_of_connection_pipelines_in_meter_per_residence_first_bracket: Het ETM maakt onderscheid tussen distributieleidingen en aansluitleidingen voor warmtenetten. Aansluitleidingen lopen vanaf de straat tot aan de voordeur. De gemiddelde lengte van aansluitleidingen varieert met het aantal aansluitingen. Het ligt voor de hand om eerst dichtbevolkte wijken aan te sluiten, waar minder meter aansluitleiding per aansluiting nodig is dan in minder dichtbevolkte wijken. Het ETM houdt hier rekening mee door met vijf 'stappen' in gemiddelde lengtes per aansluiting te rekenen. Hoe meer huizen er worden aangesloten, hoe hoger de gemiddelde lengte per aansluiting. Hier kun je aangeven met welke gemiddelde leidinglengte het ETM rekent als (tot) 20% van de huizen en gebouwen wordt aangesloten.
-      heat_length_of_connection_pipelines_in_meter_per_residence_second_bracket: Het ETM maakt onderscheid tussen distributieleidingen en aansluitleidingen voor warmtenetten. Aansluitleidingen lopen vanaf de straat tot aan de voordeur. De gemiddelde lengte van aansluitleidingen varieert met het aantal aansluitingen. Het ligt voor de hand om eerst dichtbevolkte wijken aan te sluiten, waar minder meter aansluitleiding per aansluiting nodig is dan in minder dichtbevolkte wijken. Het ETM houdt hier rekening mee door met vijf 'stappen' in gemiddelde lengtes per aansluiting te rekenen. Hoe meer huizen er worden aangesloten, hoe hoger de gemiddelde lengte per aansluiting. Hier kun je aangeven met welke gemiddelde leidinglengte het ETM rekent als (tot) 40% van de huizen en gebouwen wordt aangesloten.
-      heat_length_of_connection_pipelines_in_meter_per_residence_third_bracket: Het ETM maakt onderscheid tussen distributieleidingen en aansluitleidingen voor warmtenetten. Aansluitleidingen lopen vanaf de straat tot aan de voordeur. De gemiddelde lengte van aansluitleidingen varieert met het aantal aansluitingen. Het ligt voor de hand om eerst dichtbevolkte wijken aan te sluiten, waar minder meter aansluitleiding per aansluiting nodig is dan in minder dichtbevolkte wijken. Het ETM houdt hier rekening mee door met vijf 'stappen' in gemiddelde lengtes per aansluiting te rekenen. Hoe meer huizen er worden aangesloten, hoe hoger de gemiddelde lengte per aansluiting. Hier kun je aangeven met welke gemiddelde leidinglengte het ETM rekent als (tot) 60% van de huizen en gebouwen wordt aangesloten.
-      heat_length_of_connection_pipelines_in_meter_per_residence_fourth_bracket: Het ETM maakt onderscheid tussen distributieleidingen en aansluitleidingen voor warmtenetten. Aansluitleidingen lopen vanaf de straat tot aan de voordeur. De gemiddelde lengte van aansluitleidingen varieert met het aantal aansluitingen. Het ligt voor de hand om eerst dichtbevolkte wijken aan te sluiten, waar minder meter aansluitleiding per aansluiting nodig is dan in minder dichtbevolkte wijken. Het ETM houdt hier rekening mee door met vijf 'stappen' in gemiddelde lengtes per aansluiting te rekenen. Hoe meer huizen er worden aangesloten, hoe hoger de gemiddelde lengte per aansluiting. Hier kun je aangeven met welke gemiddelde leidinglengte het ETM rekent als (tot) 80% van de huizen en gebouwen wordt aangesloten.
-      heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket: Het ETM maakt onderscheid tussen distributieleidingen en aansluitleidingen voor warmtenetten. Aansluitleidingen lopen vanaf de straat tot aan de voordeur. De gemiddelde lengte van aansluitleidingen varieert met het aantal aansluitingen. Het ligt voor de hand om eerst dichtbevolkte wijken aan te sluiten, waar minder meter aansluitleiding per aansluiting nodig is dan in minder dichtbevolkte wijken. Het ETM houdt hier rekening mee door met vijf 'stappen' in gemiddelde lengtes per aansluiting te rekenen. Hoe meer huizen er worden aangesloten, hoe hoger de gemiddelde lengte per aansluiting. Hier kun je aangeven met welke gemiddelde leidinglengte het ETM rekent als (tot) 100% van de huizen en gebouwen wordt aangesloten.
-
-      # energy
-      energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: "Deze instelling is alleen relevant als er een afvalverbrandingsinstallatie aanwezig is in dit gebied. Hier kun je instellen hoe duurzaam het verbrande afval is: Hoeveel procent van het afval is biogeen (zoals GFT, hout, papier) en hoeveel is niet-biogeen (zoals plastics)? Hoe groter het aandeel niet-biogeen afval hoe meer CO2-uitstoot wordt toegekend aan afvalverbranding en hoe minder duurzame energie de afvalverbrander produceert."
+      energy_renewable_full_load_hours: Hernieuwbare elektriciteitsproductie
+      energy_fossil_full_load_hours: Fossiele elektriciteitsproductie

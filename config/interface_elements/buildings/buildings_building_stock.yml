@@ -1,0 +1,14 @@
+key: buildings_building_stock
+groups:
+  - header:
+    items:
+    - key: number_of_buildings
+      unit: '#'
+    - key: buildings_roof_surface_available_for_pv
+      unit: "km<sup>2</sup>"
+
+  - header: buildings_insulation
+    type: slider
+    items:
+    - key: input_buildings_heat_demand_reduction
+      unit: '%'

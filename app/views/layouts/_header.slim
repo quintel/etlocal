@@ -3,17 +3,16 @@
     h1=link_to I18n.t('application'), '/'
 
   .right
+    .lang-select
+      i.fa.fa-globe
+      = language_select
+
     - if current_user
       .current-user
-        span.name
-          span= I18n.t('user.signed_in_as')
-          span &nbsp;
-          span= current_user.name
-
-        = link_to I18n.t('user.sign_out'), destroy_user_session_path, class: 'button', method: :delete
+        span.name.button
+          = current_user.name
+        .log-out
+          = link_to I18n.t('user.sign_out'), destroy_user_session_path, class: 'button', method: :delete
     - else
       .current-user
         = link_to I18n.t('devise.log_in'), new_user_session_path, class: 'button'
-
-    = language_select
-

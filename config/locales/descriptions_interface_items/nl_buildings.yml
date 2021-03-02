@@ -1,0 +1,14 @@
+nl:
+  descriptions:
+    interface_items:
+      buildings_roof_surface_available_for_pv: |
+        Geschikt dakoppervlak voor zonnepanelen, uitgaande van een redelijk jaarrendement 
+        (dus grotendeels op het zuiden). Het ETM gebruikt 'netto' beschikbare oppervlakte: 
+        we gaan ervan uit dat de volledige oppervlakte kan worden bedekt door zonnepanelen. 
+      buildings_final_demand_electricity_demand: |
+        Inclusief gebruik 'achter de meter' van (bijv.) zonnepanelen. 
+        Exclusief elektriciteit gebruikt voor elektrisch transport (EV).
+      buildings_final_demand_network_gas_demand: |
+        Mix van aardgas en groen gas
+      buildings_final_demand_solar_thermal_demand: |
+        In het ETM kan zonthermie ingezet worden voor warm water, niet voor ruimteverwarming.

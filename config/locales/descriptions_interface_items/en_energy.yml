@@ -1,0 +1,62 @@
+en:
+  descriptions:
+    interface_items:
+      energy_power_sector_own_use_electricity_demand: |
+        Own use of electricity in the energy sector. For example, electricity used for cooling of power plants, pumping stations etc.
+      energy_power_hv_network_loss_demand: |
+        Grid losses due to transmission and distribution of electricity in this region. On average, this is around 5-8% of total electricity demand.
+      energy_distribution_greengas_demand: |
+        The amount of green gas blended into the gas network. This excludes direct use of biogas (for example local production used as CHP fuel).
+      energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share: |
+        What share of the current green gas demand in this area is produced by gasification of dry biomass?
+      energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share: |
+        What share of the current green gas demand in this area is produced by gasification of wet biomass?
+      energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share: |
+        What share of the current green gas demand in this area is produced by fermentation of biomass?
+      energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: |
+        This setting is only relevant if a waste-to-energy plant is present in this area. This
+        setting allows you to specify how sustainable the burnt waste is: What share of waste is
+        biogenic (organic waste, wood or paper) and what share is non-biogenic (plastics etc.)?
+        The more non-biogenic waste is burnt the more CO<sub>2</sub> emissions waste incineration brings about
+        and the fewer sustainable energy is produced.
+      energy_production_dry_biomass_max_demand: |
+        The potential for dry biomass production in this area. Dry biomass includes: residual streams from forestry (tree tops, stumps, bark, branches), recycled waste wood, residual streams from agriculture (straw), and fast-growing bio-energy crops (elephant grass, willow, poplar). See the
+        <a href="https://docs.energytransitionmodel.com/main/biomass">documentation</a> of the Energy Transition Model for more information.
+      energy_production_wet_biomass_max_demand: |
+        The potential for wet biomass production in this area. Wet biomass includes: residues from the food and beverage industry, agricultural residual streams, sewage sludge, aquatic biomass, cultivated grain products, etc. See the
+        <a href="https://docs.energytransitionmodel.com/main/biomass">documentation</a> of the Energy Transition Model for more information.
+      energy_production_oily_biomass_max_demand: |
+        The potential for oil-containing biomass production in this area. oil-containing biomass includes: rapeseed, sunflower seeds, oil palm, used frying fats. See the
+        <a href="https://docs.energytransitionmodel.com/main/biomass">documentation</a> of the Energy Transition Model for more information.
+      input_energy_power_solar_pv_solar_radiation_production: |
+        The amount of electricity produced by ground-mount solar PV farms in this area.
+      input_energy_chp_local_engine_biogas_production: |
+        The amount of electricity produced by biomass CHPs in this area. This includes all combined heat and power plants using biomass as fuel, with the exception of biogas and (communal) waste.
+      input_energy_power_geothermal_production: |
+        The amount of electricity produced by geothermal power plants. This is a new technology that has not (yet) been deployed at a large scale.
+      energy_heat_distribution_loss_demand: |
+        Losses due to transmission and distribution of heat in district heating networks. On average, losses are typically 20%+ of annual heating demand.
+      industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: |
+        What share of total heat production by the chemical sector can potentially be re-used as residual heat? Residual heat can be used in district heating networks to heat homes and other buildings. The Energy Transition Model makes a distinction between residual heat from processes and residual heat from flue gases. The slider below shows what share of total heat production can be recovered as residual heat from processes.
+      industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: |
+        What share of total heat production by the chemical sector can potentially be re-used as residual heat? Residual heat can be used in district heating networks to heat homes and other buildings. The Energy Transition Model makes a distinction between residual heat from processes and residual heat from flue gases. The slider below shows what share of total heat production can be recovered as residual heat from flue gases.
+      industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share: |
+        What share of total heat production by the chemical sector can potentially be re-used as residual heat? Residual heat can be used in district heating networks to heat homes and other buildings. The Energy Transition Model makes a distinction between residual heat from processes and residual heat from flue gases. The slider below shows what share of total heat production cannot be re-used.
+      industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share: |
+        What share of total heat production by refineries can potentially be re-used as residual heat? Residual heat can be used in district heating networks to heat homes and other buildings. The Energy Transition Model makes a distinction between residual heat from processes and residual heat from flue gases. The slider below shows what share of total heat production can be recovered as residual heat from processes.
+      industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share: |
+        What share of total heat production by refineries can potentially be re-used as residual heat? Residual heat can be used in district heating networks to heat homes and other buildings. The Energy Transition Model makes a distinction between residual heat from processes and residual heat from flue gases. The slider below shows what share of total heat production can be recovered as residual heat from flue gases.
+      industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share: |
+        What share of total heat production by refineries can potentially be re-used as residual heat? Residual heat can be used in district heating networks to heat homes and other buildings. The Energy Transition Model makes a distinction between residual heat from processes and residual heat from flue gases. The slider below shows what share of total heat production cannot be re-used.
+      industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share: |
+        What share of total heat production by the fertilizers sector can potentially be re-used as residual heat? Residual heat can be used in district heating networks to heat homes and other buildings. The Energy Transition Model makes a distinction between residual heat from processes and residual heat from flue gases. The slider below shows what share of total heat production can be recovered as residual heat from processes.
+      industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share: |
+        What share of total heat production by the fertilizers sector can potentially be re-used as residual heat? Residual heat can be used in district heating networks to heat homes and other buildings. The Energy Transition Model makes a distinction between residual heat from processes and residual heat from flue gases. The slider below shows what share of total heat production can be recovered as residual heat from flue gases.
+      industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_used_heat_parent_share: |
+        What share of total heat production by the fertilizers sector can potentially be re-used as residual heat? Residual heat can be used in district heating networks to heat homes and other buildings. The Energy Transition Model makes a distinction between residual heat from processes and residual heat from flue gases. The slider below shows what share of total heat production cannot be re-used.
+      industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share: |
+        What share of total heat production by the ICT sector can potentially be re-used as residual heat? Residual heat can be used in district heating networks to heat homes and other buildings. The slider below shows what share of total heat production can be recovered as residual heat.
+      industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: |
+        What share of total heat production by the ICT sector can potentially be re-used as residual heat? Residual heat can be used in district heating networks to heat homes and other buildings. The slider below shows what share of total heat production cannot be recovered as residual heat.
+      energy_import_heat_demand: |
+        The field below shows the amount of (residual) heat that is imported from outside this region. This heat is used in district heating networks to heat homes and other buildings.

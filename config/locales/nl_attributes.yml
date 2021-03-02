@@ -63,7 +63,7 @@ nl:
         households_final_demand_electricity_demand: Elektriciteit
         households_final_demand_network_gas_demand: Gas
         households_final_demand_steam_hot_water_demand: Warmte
-        households_final_demand_wood_pellets_demand: Biomassa
+        households_final_demand_wood_pellets_demand: Vaste biomassa
         households_final_demand_crude_oil_demand: Olie
         households_final_demand_coal_demand: Kolen
 
@@ -149,7 +149,7 @@ nl:
         input_buildings_electricity_demand: Elektriciteit
         buildings_final_demand_network_gas_demand: Gas
         buildings_final_demand_steam_hot_water_demand: Warmte
-        buildings_final_demand_wood_pellets_demand: Biomassa
+        buildings_final_demand_wood_pellets_demand: Vaste biomassa
         buildings_final_demand_coal_demand: Kolen
         buildings_final_demand_crude_oil_demand: Olie
         input_buildings_heat_demand_reduction: Warmtevraagreductie
@@ -252,8 +252,6 @@ nl:
         transport_rail_mixer_diesel_transport_passenger_train_using_diesel_mix_parent_share: Passagierstreinen
         transport_rail_mixer_diesel_transport_freight_train_using_diesel_mix_parent_share: Goederentreinen
 
-        transport_final_demand_crude_oil_non_energetic_demand: Oliegebruik (smeermiddelen e.d.)
-
         # agriculture
         agriculture_final_demand_electricity_demand: Elektriciteit
         agriculture_final_demand_network_gas_demand: Gas (ex WKK)
@@ -261,7 +259,6 @@ nl:
         agriculture_final_demand_wood_pellets_demand: Biomassa (ex WKK)
         agriculture_final_demand_crude_oil_demand: Olie
         agriculture_final_demand_hydrogen_demand: Waterstof
-        input_agriculture_heatpump_demand: Warmtegebruik (diepe) bodemwarmtepomp
 
         # industry
         industry_chp_combined_cycle_gas_power_fuelmix_demand: Gas-WKK
@@ -271,7 +268,7 @@ nl:
         industry_chp_wood_pellets_demand: Biomassa-WKK
         industry_heat_burner_lignite_demand: Bruinkoolketel
         industry_heat_burner_coal_demand: Kolenketel
-        industry_heat_well_geothermal_demand: Geothermieketel
+        industry_heat_well_geothermal_demand: Geothermie
         industry_heat_burner_crude_oil_demand: Olieketel
 
         input_share_mixer_gas_fuel_network_gas: Gas
@@ -283,7 +280,7 @@ nl:
         input_industry_metal_other_electricity_demand: Elektriciteit
         input_industry_metal_other_network_gas_demand: Gas
         input_industry_metal_other_steam_hot_water_demand: Warmte
-        input_industry_metal_other_wood_pellets_demand: Biomassa
+        input_industry_metal_other_wood_pellets_demand: Vaste biomassa
         input_industry_metal_other_crude_oil_demand: Olie
         input_industry_metal_other_coal_demand: Kolen
 
@@ -292,7 +289,7 @@ nl:
         input_industry_chemical_other_electricity_demand: Elektriciteit
         input_industry_chemical_other_network_gas_demand: Gas
         input_industry_chemical_other_steam_hot_water_demand: Warmte
-        input_industry_chemical_other_wood_pellets_demand: Biomassa
+        input_industry_chemical_other_wood_pellets_demand: Vaste biomassa
         input_industry_chemical_other_crude_oil_demand: Olie
         input_industry_chemical_other_hydrogen_demand: Waterstof
         input_industry_chemical_other_coal_demand: Kolen
@@ -304,7 +301,7 @@ nl:
         input_industry_food_electricity_demand: Elektriciteit
         input_industry_food_network_gas_demand: Gas
         input_industry_food_steam_hot_water_demand: Warmte
-        input_industry_food_wood_pellets_demand: Biomassa
+        input_industry_food_wood_pellets_demand: Vaste biomassa
         input_industry_food_crude_oil_demand: Olie
         input_industry_food_hydrogen_demand: Waterstof
         input_industry_food_coal_demand: Kolen
@@ -315,7 +312,7 @@ nl:
         input_industry_paper_electricity_demand: Elektriciteit
         input_industry_paper_network_gas_demand: Gas
         input_industry_paper_steam_hot_water_demand: Warmte
-        input_industry_paper_wood_pellets_demand: Biomassa
+        input_industry_paper_wood_pellets_demand: Vaste biomassa
         input_industry_paper_crude_oil_demand: Olie
         input_industry_paper_hydrogen_demand: Waterstof
         input_industry_paper_coal_demand: Kolen
@@ -328,18 +325,30 @@ nl:
         input_industry_other_electricity_demand: Elektriciteit
         input_industry_other_network_gas_demand: Gas
         input_industry_other_steam_hot_water_demand: Warmte
-        input_industry_other_wood_pellets_demand: Biomassa
+        input_industry_other_wood_pellets_demand: Vaste biomassa
         input_industry_other_crude_oil_demand: Olie
         input_industry_other_coal_demand: Kolen
         input_industry_other_network_gas_non_energetic_demand: Gas (niet-energetisch)
         input_industry_other_wood_pellets_non_energetic_demand: Biomassa (niet-energetisch)
         input_industry_other_crude_oil_non_energetic_demand: Olie (niet-energetisch)
         input_industry_other_coal_non_energetic_demand: Kolen (niet-energetisch)
+        
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share: "Geen restwarmte"
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share: "Geen restwarmte"
+        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
+        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
+        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_used_heat_parent_share: "Geen restwarmte"
+        industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share: "Restwarmte uit servers"
+        industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: "Geen restwarmte"
 
         # Energy
         energy_power_sector_own_use_electricity_demand: Eigen gebruik elektriciteit
         energy_power_hv_network_loss_demand: Netverliezen
-        energy_distribution_greengas_demand: Groengas in gasnet
+        energy_distribution_greengas_demand: Groen gas in gasnet
 
         energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share: Droge vergassing
         energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share: Natte vergassing
@@ -357,17 +366,17 @@ nl:
         energy_production_dry_biomass_max_demand: Potentie droge biomassa
         energy_production_oily_biomass_max_demand: Potentie oliehoudende biomassa
 
-        input_energy_power_wind_turbine_inland_production: Wind (op land)
-        input_energy_power_wind_turbine_coastal_production: Wind (aan de kust)
-        input_energy_power_wind_turbine_offshore_production: Wind (op zee)
+        input_energy_power_wind_turbine_inland_production: Wind op land
+        input_energy_power_wind_turbine_coastal_production: Wind aan de kust
+        input_energy_power_wind_turbine_offshore_production: Wind op zee
         input_energy_power_solar_pv_solar_radiation_production: Zon-PV-centrale
         input_energy_power_supercritical_waste_mix_production: Afvalverbrander
         input_energy_chp_supercritical_waste_mix_production: Afvalverbrander met warmtelevering voor warmtenet (WKK)
         input_energy_power_hydro_river_production: Waterkracht (rivier)
         input_energy_power_hydro_mountain_production: Waterkracht (bergen)
         input_energy_power_geothermal_production: Geothermie
-        input_energy_chp_local_engine_biogas_production: Biogas WKK
-        input_energy_chp_local_wood_pellets_production: Biomassa WKK
+        input_energy_chp_local_engine_biogas_production: Biogas-WKK
+        input_energy_chp_local_wood_pellets_production: Biomassa-WKK
 
         input_energy_power_ultra_supercritical_coal_production: Poederkolen
         input_energy_power_supercritical_coal_production: Kolen conventioneel
@@ -392,28 +401,17 @@ nl:
         input_energy_power_ultra_supercritical_crude_oil_production: Oliecentrale
         input_energy_power_engine_diesel_production: Dieselgenerator
 
-        input_energy_heat_burner_wood_pellets_production: Biomassaketel
-        input_energy_heat_well_geothermal_production: Geothermieketel
-        input_energy_heat_burner_waste_mix_production: Afvalketel
-        input_energy_heat_burner_hydrogen_production: Waterstofketel
-        input_energy_heat_solar_thermal_production: Zonthermisch park
-        input_energy_heat_heatpump_water_water_electricity_production: Elektrische warmtepomp
-        input_energy_heat_burner_network_gas_production: Gasketel
-        input_energy_heat_burner_coal_production: Kolenketel
-        input_energy_heat_burner_crude_oil_production: Olieketel
+        input_energy_heat_burner_wood_pellets_production: Biomassaketels
+        input_energy_heat_well_geothermal_production: Geothermie
+        input_energy_heat_burner_waste_mix_production: Warmte uit afvalverbranding
+        input_energy_heat_burner_hydrogen_production: Waterstofketels
+        input_energy_heat_solar_thermal_production: Zonthermiepark
+        input_energy_heat_heatpump_water_water_electricity_production: Elektrische warmtepompen
+        input_energy_heat_burner_network_gas_production: Gasketels
+        input_energy_heat_burner_coal_production: Kolenketels
+        input_energy_heat_burner_crude_oil_production: Olieketels
 
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share: "Geen restwarmte"
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share: "Geen restwarmte"
-        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
-        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
-        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_used_heat_parent_share: "Geen restwarmte"
-        industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share: "Restwarmte uit servers"
-        industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: "Geen restwarmte"
-        energy_import_heat_demand: (Rest)warmte geïmporteerd van buiten jouw regio
+        energy_import_heat_demand: (Rest)warmte geïmporteerd van buiten de regio
 
         energy_heat_distribution_loss_demand: Transportverliezen in warmtenetten
 
@@ -429,8 +427,8 @@ nl:
         energy_power_combined_cycle_network_gas_full_load_hours: Gas STEG
         energy_power_ultra_supercritical_network_gas_full_load_hours: Gas conventioneel
         energy_power_turbine_network_gas_full_load_hours: Gasturbine
-        energy_chp_local_engine_network_gas_full_load_hours: Gas WKK (2 MW) met warmtelevering voor warmtenet
-        energy_chp_combined_cycle_network_gas_full_load_hours: Gas WKK (120 MW) met warmtelevering voor warmtenet
+        energy_chp_local_engine_network_gas_full_load_hours: Gas WKK (kleinschalig) met warmtelevering voor warmtenet
+        energy_chp_combined_cycle_network_gas_full_load_hours: Gas WKK (grootschalig) met warmtelevering voor warmtenet
         energy_power_supercritical_coal_full_load_hours: Kolen conventioneel
         energy_power_engine_diesel_full_load_hours: Dieselgenerator
 
@@ -438,7 +436,7 @@ nl:
         other_final_demand_electricity_demand: Elektriciteit
         other_final_demand_network_gas_demand: Gas
         other_final_demand_steam_hot_water_demand: Warmte
-        other_final_demand_wood_pellets_demand: Biomassa
+        other_final_demand_wood_pellets_demand: Vaste biomassa
         other_final_demand_coal_demand: Kolen
         other_final_demand_crude_oil_demand: Olie
         other_final_demand_crude_oil_non_energetic_demand: Olie (niet-energetisch)

@@ -1,16 +1,5 @@
-key: area_advanced
+key: area_infrastructure
 groups:
-  - header: area_other_ghg
-    items:
-      - key: other_emission_built_environment
-        unit: 'Mton'
-      - key: other_emission_transport
-        unit: 'Mton'
-      - key: other_emission_industry_energy
-        unit: 'Mton'
-      - key: other_emission_agriculture
-        unit: 'Mton'
-
   - header: area_electricity_grid_costs
     items:
       - key: lv_net_total_costs_present

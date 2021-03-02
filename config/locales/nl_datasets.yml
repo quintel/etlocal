@@ -42,34 +42,36 @@ nl:
       overview: Overzicht
       energy: Energieproductie
       transport: Transport
-      other: Overig
+      other: Overige vraag
 
     subgroups:
       area:
-        area_advanced: Geavanceerd
+        area_geography: Geografie
+        area_emissions: Emissies
+        area_infrastructure: Infrastructuur
 
       agriculture:
-        agriculture_advanced: Geavanceerd
+        agriculture_energy_demand: Energievraag
 
       buildings:
-        buildings_advanced: Geavanceerd
         buildings_energy_demand: Energievraag
         buildings_energy_supply: Energieaanbod
-        buildings_final_demand_electricity: Elektriciteit
-        buildings_final_demand_for_cooling_electricity: Koeling
-        buildings_final_demand_for_lighting_electricity: Verlichting
-        buildings_final_demand_crude_oil: Olie
+        buildings_building_stock: Gebouwenvoorraad
+        buildings_applications: Toepassingen en apparaten
 
       energy:
-        energy_heat_production: Warmte
+        energy_energy_demand: Energievraag
+        energy_heat_production: Bronnen warmtenet
         energy_fossil_electricity_production: Fossiele elektriciteit
         energy_renewable_electricity_production: Duurzame elektriciteit
-        energy_full_load_hours: Vollasturen
+        energy_biomass: Biomassa
+        energy_full_load_hours: Vollasturen elektriciteit
 
       households:
         households_energy_demand: Energievraag
         households_energy_supply: Energieaanbod
-        households_advanced: Geavanceerd
+        households_housing_stock: Huizenvoorraad
+        households_applications: Toepassingen en apparaten
 
       industry:
         industry_metal: Metaal
@@ -78,14 +80,17 @@ nl:
         industry_paper: Papier
         industry_ict: ICT
         industry_other: Overige industrie
+        industry_heat_chp: Warmte en WKK
+        industry_residual_heat: Restwarmtepotentie
 
       transport:
-        transport_energy_demand: Energievraag
         transport_rail_transport: Treinverkeer
         transport_road_transport: Wegverkeer
         transport_ship_transport: Scheepvaart
         transport_plane_transport: Luchtvaart
-        transport_advanced: Geavanceerd
+
+      other:
+        other_energy_demand: Energievraag
 
     flash:
       not_found: "Regio bestaat niet"

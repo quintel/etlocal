@@ -1,10 +1,5 @@
 key: energy_biomass
 groups:
-  - header: energy_greengas_demand
-    items:
-      - key: energy_distribution_greengas_demand
-        unit: 'TJ'
-
   - header: energy_greengas_production
     type: slider
     items:

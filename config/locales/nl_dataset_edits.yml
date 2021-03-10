@@ -105,7 +105,7 @@ nl:
 
       # energy
       energy_demand_power_sector: Energiegebruik elektriciteitsopwek
-      energy_greengas_demand: Groengasgebruik
+      energy_gas_network: Groengas en hervergast LNG in het gasnet
       energy_greengas_production: Groengasproductie
       energy_waste_mix: Afvalmix
       energy_extraction: Brandstofproductie en winning natuurlijke hulpbronnen

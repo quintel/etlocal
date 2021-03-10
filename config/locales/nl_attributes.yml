@@ -348,7 +348,8 @@ nl:
         # Energy
         energy_power_sector_own_use_electricity_demand: Eigen gebruik elektriciteit
         energy_power_hv_network_loss_demand: Netverliezen
-        energy_distribution_greengas_demand: Groen gas in gasnet
+        energy_distribution_greengas_demand: Groen gas
+        energy_regasification_lng_energy_national_gas_network_natural_gas_demand: Hervergast LNG
 
         energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share: Droge vergassing
         energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share: Natte vergassing

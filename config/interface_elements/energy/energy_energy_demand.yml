@@ -6,3 +6,10 @@ groups:
         unit: 'TJ'
       - key: energy_power_hv_network_loss_demand
         unit: 'TJ'
+  
+  - header: energy_gas_network
+    items:
+      - key: energy_distribution_greengas_demand
+        unit: 'TJ'
+      - key: energy_regasification_lng_energy_national_gas_network_natural_gas_demand
+        unit: 'TJ'

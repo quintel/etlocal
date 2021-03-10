@@ -102,7 +102,7 @@ en:
 
       # energy
       energy_demand_power_sector: Energy demand of the power sector
-      energy_greengas_demand: Green gas use
+      energy_gas_network: Green gas and regasified LNG in the gas network
       energy_greengas_production: Green gas production
       energy_waste_mix: Waste mix
       energy_extraction: Fuel production and natural resource extraction

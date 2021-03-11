@@ -2,19 +2,20 @@ nl:
   descriptions:
     groups:
       area: |
-        <strong>Welkom bij ETData!</strong>
-        ETData geeft inzicht in de data achter het <a target="_blank" href="https://pro.energytransitionmodel.com/Energietransitiemodel">Energietransitiemodel</a>.
-        Om preciezer te zijn toont ETData de data én bronnen die gebruikt worden voor het startjaar van een regio.
+        <strong>Welkom bij de ETM Data Manager for Regions!</strong>
+        Met het <a target="_blank" href="https://pro.energytransitionmodel.com/Energietransitiemodel">Energietransitiemodel</a> (ETM) 
+        kun je het toekomstig energiesysteem verkennen voor verschillende geografische 
+        regio’s: landen, provincies, gemeenten, buurten etc. Het energiesysteem is een groot en complex geheel en om dit 
+        in kaart te brengen moet voor elke regio voldoende data van goede kwaliteit beschikbaar zijn om het ETM te “vullen”. 
+        Achter elke regio in het ETM draait een ‘energiegraaf’ (de rekenmachine van het model waarin energiestromen, 
+        conversiestappen en verbanden zijn vastgelegd) en deze graaf rekent alleen door als alle benodigde data beschikbaar is.
+        Deze ETM Data Manager geeft inzicht in de regionale data én bronnen achter het <a target="_blank" href="https://pro.energytransitionmodel.com/Energietransitiemodel">Energietransitiemodel</a>.
         Voor een overzicht van de gebruikte bronnen voor Nederlandse regio's kijk op onze
         <a target="_blank" href="https://docs.energytransitionmodel.com/main/data-sources-local">documentatie</a>.
         <strong>Hoe werkt het?</strong>
-        In de linkerbalk vind je verschillende onderwerpen, die onder te verdelen zijn in:
-        <ul><li>Algemene informatie, zoals geografie, emissies, infrastructuur</li>
-        <li>Energievraag van sectoren: Huishoudens, Gebouwen, Transport, Landbouw, Industrie en Overige vraag</li>
-        <li>Energieproductie, zoals elektriciteit, warmte, biomassa</li>
-        </ul>
-        Binnen elk onderwerp vind je alle bijbehorende datapunten. Door de klikken op het "i"-icoontje
-        bij de getallen vind je meer informatie over het datapunt, welke bronnen gebruikt zijn en of dit getal recentelijk veranderd is.
+        In de linkerbalk vind je verschillende onderwerpen die gaan over energievraag, energieproductie
+        en algemene informatie over de regio, zoals geografie, emissies, infrastructuur. Binnen elk onderwerp vind je alle bijbehorende datavelden. Door de klikken op het "i"-icoontje
+        links van het dataveld vind je meer informatie over de data die getoond wordt, welke bronnen gebruikt zijn en of dit getal recentelijk veranderd is.
         <strong>Jaar</strong>
         Hieronder zie je uit welk jaar alle data van deze regio komt.
       area_emissions: |
@@ -22,11 +23,11 @@ nl:
       area_geography: |
         In dit tabblad vind je informatie over een aantal geografische karakteristieken van deze regio.
       area_infrastructure: |
-        Hieronder vind je infromatie over het elektriciteitsnetwerk en warmtenet.
+        Hieronder vind je informatie over het elektriciteitsnetwerk en warmtenet.
         Je kunt zien hoe hoog de huidige kosten van het elektriciteitsnetwerk zijn, hoeveel
         capaciteit er nog op het net beschikbaar is en hoe duur toekomstige uitbreidingen zullen
         zijn. Kijk op onze <a target="_blank" href="https://docs.energytransitionmodel.com/main/network">documentatie</a>
-        voor een uitleg van de elektriciteitsnetwerkberekening in het ETM. Voor warmtenetten vind je informatie over de leidinglengtes.
+        voor een uitleg van de elektriciteitsnetwerkberekening in het ETM. Voor warmtenetten vind je op deze pagina informatie over de leidinglengtes.
       households: |
         In deze sectie vind je informatie over huishoudens in deze regio.
       households_energy_demand: |
@@ -37,14 +38,14 @@ nl:
       households_housing_stock: |
         In dit tabblad vind je informatie over verschillende karakteristieken van de huizenvoorraad en bevolking.
         Hoeveel inwoners zijn er? Hoeveel huizen zijn er en welke typen zijn dat? Hoe goed zijn deze huizen geïsoleerd?
-        Ook kan je zien hoe groot het totale dakoppervlakte is dat geschikt is voor
+        Ook kan je zien hoe groot het totale huishoudelijke dakoppervlakte is dat geschikt is voor
         zonnepanelen en welk deel van de appartementen is aangesloten op blokverwarming.
       households_applications: |
         In dit tabblad kun je per energiedrager zien waar huishoudens hun energie voor
         gebruiken. Hoeveel procent van het gasgebruik van huishoudens wordt gebruikt voor
         verwarming? En hoeveel voor koken? Ook kun je zien welke apparaten huishoudens
         gebruiken. Hoeveel procent van de huishoudens die met gas verwarmen heeft een combi-boiler?
-        En hoeveel een hybride warmtepomp? Deze percentages staan standaard op het Nederlandse
+        En hoeveel een hybride warmtepomp? Deze percentages staan standaard op het nationale
         gemiddelde.
       buildings: |
         In deze sectie vind je informatie over de gebouwensector. Onder gebouwen verstaan we
@@ -65,7 +66,7 @@ nl:
         gebruiken. Hoeveel procent van het elektriciteitsgebruik wordt gebruikt voor verwarming? En hoeveel
         voor verlichting? Ook kun je zien welke apparaten gebouwen gebruiken. Hoeveel procent van
         de verlichting gebeurt met spaarlampen? En hoeveel met LED-lampen? Deze percentages staan
-        standaard op het Nederlandse gemiddelde.
+        standaard op het nationale gemiddelde.
       transport: |
         In deze sectie vind je informatie over de transportsector.
       transport_road_transport: |
@@ -81,12 +82,12 @@ nl:
       transport_ship_transport: |
         In dit tabblad vind je informatie over het brandstofgebruik van de binnenvaart. Let
         op: Het energiegebruik van internationale scheepvaart valt hier buiten. In het
-        Energietransitiemodel kun je ervoor kiezen om een deel van het totale nationale verbruik van
+        Energietransitiemodel kun je ervoor kiezen om een deel van het totale huishoudelijke nationale verbruik van
         deze sector aan deze regio toe te kennen.
       transport_plane_transport: |
         In dit tabblad vind je informatie over het brandstofgebruik van de binnenlandse
         luchtvaart. Let op: Het energiegebruik van internationale luchtvaart valt hier buiten. In
-        het Energietransitiemodel kun je ervoor kiezen om een deel van het totale nationale
+        het Energietransitiemodel kun je ervoor kiezen om een deel van het totale huishoudelijke nationale
         verbruik van deze sector aan deze regio toe te kennen.
       agriculture:
         In deze sectie vind je informatie over de landbouwsector.
@@ -96,13 +97,13 @@ nl:
         In deze sectie vind je informatie over de industriesector.
       industry_metal: |
         In dit tabblad vind je informatie over de hoeveelheid energie die er gebruikt wordt door de metaalindustrie in
-        deze regio. Voor staal en aluminium kun je zien hoeveel procent van de totale
-        Nederlandse staal- en aluminiumproductie plaatsvindt in deze regio. Voor overige metalen kun
+        deze regio. Voor staal en aluminium kun je zien hoeveel procent van de totale huishoudelijke
+        nationale staal- en aluminiumproductie plaatsvindt in deze regio. Voor overige metalen kun
         je per energiedrager zien hoe hoog het energiegebruik is.
       industry_chemical: |
         In dit tabblad vind je informatie over de hoeveelheid energie die er gebruikt wordt door de chemische industrie
         in deze regio. Voor kunstmest en olieraffinaderijen zie je hoeveel procent van de
-        totale Nederlandse kunstmest- en raffinageproductie plaatsvindt in deze regio.
+        totale huishoudelijke Nederlandse kunstmest- en raffinageproductie plaatsvindt in deze regio.
       industry_food: |
         In dit tabblad vind je informatie over de hoeveelheid energie die er gebruikt wordt door de
         voedselindustrie.
@@ -124,6 +125,9 @@ nl:
         In dit tabblad vind je hoeveel restwarmte er beschikbaar is voor verschillende industriële sectoren.
         Het Energietransitiemodel maakt een onderscheid tussen restwarmte uit industriële processen en
         restwarmte uit rookgassen. De restwarmte kan worden ingevoed op een warmtenet voor de verwarming van woningen en gebouwen.
+        Meer informatie over industriële restwarmte kan gevonden worden in onze 
+        <a target="_blank" href="https://docs.energytransitionmodel.com/main/residual-heat-industry">
+        documentatie</a>.
       other: |
         In deze sectie vind je informatie over het overige energiegebruik in deze regio. Dit is al het
         energiegebruik dat niet in een van de bovenstaande secties aan bod is gekomen.
@@ -156,12 +160,16 @@ nl:
       energy_biomass:
         In dit tabblad vind je informatie over groen gas, afval en de potentie van biomassa.
     subgroups:
+      area_co2_emission_1990: |
+        Het ETM vergelijkt de toekomstige CO<sub>2</sub>-uitstoot met de emissieniveaus van 1990,
+        aangezien dit een veelvoorkomend referentiepunt is in het (inter)nationale klimaatbeleid.
+        Voor een overzicht van de methode die het ETM hanteert, kijk op onze <a target="_blank" href="https://docs.energytransitionmodel.com/main/co2-1990-emissions">documentatie</a>.
       area_other_ghg: |
         De overige broeikasgassen vallen buiten de scope van het ETM en worden
         enkel getoond op de
         <a target="_blank" href="https://pro.energytransitionmodel.com/regions/nl">"CO<sub>2</sub>-voetafdruk"</a>.
       area_electricity_grid_costs: |
-        Huidige totale investeringkosten per netniveau
+        Huidige totale huishoudelijke investeringkosten per netniveau
       area_electricity_grid_capacity: |
         Gemiddeld percentage reservecapaciteit per netniveau
       area_electricity_grid_reinforcement: |
@@ -170,28 +178,82 @@ nl:
         De leidinglengtes van warmtenetten worden gebruikt om een goede kosteninschatting te maken voor de warmtenetten. Kijk op
         onze <a target="_blank" href="https://docs.energytransitionmodel.com/main/heat-infrastructure-costs">documentatie</a>
         voor meer informatie hierover.
+      households_housing_stock_distribution: | 
+        Hieronder zie je de verdeling van huistypen in jouw regio.
       households_insulation: |
         Deze percentages geven de warmtevraagreductie t.o.v. een slecht geïsoleerd huis aan (label G).
         Kijk op onze <a target="_blank" href="https://docs.energytransitionmodel.com/main/insulation">documentatie</a>
         voor meer informatie over isolatie.
+      households_electricity_distribution: |
+        Hieronder zie je welk percentage van de totale huishoudelijke elektriciteitsvraag gebruikt wordt voor deze
+        toepassingen.
+      households_network_gas_distribution: |
+        Hieronder zie je welk percentage van de totale huishoudelijke gasvraag gebruikt wordt voor deze toepassingen.
+      households_steam_hot_water_distribution: |
+        Hieronder zie je welk percentage van de totale huishoudelijke warmtenetvraag gebruikt wordt
+        voor warm water (douchen, afwassen etc.) en ruimteverwarming.
+      households_wood_pellets_distribution: |
+        Hieronder zie je welk percentage van de totale huishoudelijke biomassavraag gebruikt wordt voor deze toepassingen.
+      households_crude_oil_distribution: |
+        Hieronder zie je welk percentage van de totale huishoudelijke olievraag gebruikt wordt
+        voor warm water (douchen, afwassen etc.) en ruimteverwarming.
+      households_coal_distribution: |
+        Hieronder zie je welk percentage van de totale huishoudelijke kolenvraag gebruikt wordt
+        voor warm water (douchen, afwassen etc.) en ruimteverwarming.
+      households_network_gas_space_heating_hot_water_distribution: | 
+        Hieronder zie je welk percentage van de totale huishoudelijke gasvraag voor ruimteverwarming en warm water gebruikt wordt door deze technologieën.
+      households_electricity_space_heating_hot_water_distribution: |
+        Hieronder zie je welk percentage van de totale huishoudelijke elektriciteitsvraag voor ruimteverwarming en warm water gebruikt wordt door deze technologieën.
+      households_electricity_cooking_distribution: | 
+        Hieronder zie je welk percentage van de totale huishoudelijke elektriciteitsvraag voor koken gebruikt wordt door deze verschillende kooktoestellen.
+      households_electricity_lighting_distribution: | 
+        Hieronder zie je welk percentage van de totale huishoudelijke elektriciteitsvraag voor verlichting gebruikt wordt door deze verschillende lampen.
+      households_electricity_appliances_distribution: |
+        Hieronder zie je welk percentage van de totale huishoudelijke elektriciteitsvraag voor apparaten gebruikt wordt door deze verschillende huishoudelijke apparaten.
+      households_electricity_cooling_distribution: |
+        Hieronder zie je welk percentage van de totale huishoudelijke elektriciteitsvraag voor koelen gebruikt wordt door deze verschillende koelapparaten.
       buildings_insulation: |
         Deze percentages geven de warmtevraagreductie t.o.v. een slecht geïsoleerd gebouw aan (label E).
         Kijk op onze <a target="_blank" href="https://docs.energytransitionmodel.com/main/insulation">documentatie</a>
         voor meer informatie over isolatie.
+      buildings_electricity_distribution: |
+        Hieronder zie je welk percentage van de totale elektriciteitsvraag gebruikt wordt voor deze toepassingen.
+      buildings_network_gas_distribution: |
+        Hieronder zie je welk percentage van de totale gasvraag gebruikt wordt voor deze toepassingen.
+      buildings_wood_pellets_distribution: |
+        Hieronder zie je welk percentage van de totale biomassavraag gebruikt wordt voor deze toepassingen.
+      buildings_crude_oil_distribution: |
+        Hieronder zie je welk percentage van de totale olievraag gebruikt wordt voor deze toepassingen.
+      buildings_coal_distribution: |
+        Hieronder zie je welk percentage van de totale kolenvraag gebruikt wordt voor deze toepassingen.
+      buildings_network_gas_space_heating_distribution: | 
+        Hieronder zie je welk percentage van de totale gasvraag voor ruimteverwarming gebruikt wordt door deze technologieën.
+      buildings_electricity_space_heating_distribution: |
+        Hieronder zie je welk percentage van de totale elektriciteitsvraag voor ruimteverwarming gebruikt wordt door deze technologieën.
+      buildings_electricity_lighting_distribution: | 
+        Hieronder zie je welk percentage van de totale elektriciteitsvraag voor verlichting gebruikt wordt door deze verschillende lampen.
+      buildings_electricity_cooling_distribution: |
+        Hieronder zie je welk percentage van de totale elektriciteitsvraag voor koelen gebruikt wordt door deze verschillende koelapparaten.
       industry_gas_fuelmix: |
         Onderstaande percentages geven de samenstelling van de gebruikte brandstof van gasgestookte WKK's weer. In sommige gevallen
         wordt aardolie of bio-olie bijgemengd met aardgas.
       industry_heat: |
         Hieronder staat per WKK-type en centrale verwarmingsketel aangegeven hoeveel brandstof er is gebruikt. De geproduceerde warmte
-        wordt geleverd aan sectoren met een vraag naar (centrale) warmte.
+        wordt geleverd aan industriële sectoren met een vraag naar (centrale) warmte. Meer informatie over de verschillende type ketels kun je vinden in het
+        <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/demand/industry/heat-network-sources">
+        Energietransitiemodel</a>.
       industry_paper_electricity: |
         Onderstaande percentages geven aan hoeveel van het eindgebruik elektriciteit wordt gebruikt voor het genereren van warmte en hoeveel
         voor industriële processen (machines, verlichting etc.).
       industry_food_electricity: |
         Onderstaande percentages geven aan hoeveel van het eindgebruik elektriciteit wordt gebruikt voor het genereren van warmte en hoeveel
         voor industriële processen (machines, verlichting etc.).
+      energy_gas_network: |
+        Hoeveel groen gas en hervergast LNG wordt er bijgemengd in het gasnetwerk? De resterende gasvraag wordt in het ETM door aardgas geleverd.
       energy_greengas_production: |
-        Hieronder staat aangeven welke productietechnologieën er zijn gebruikt voor de productie van groen gas.
+        Hieronder staat aangeven welke productietechnologieën er zijn gebruikt voor de productie van groen gas. Meer informatie over deze technologieën
+        kun je vinden in het <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/biomass/green-gas-production">
+        Energietransitiemodel</a>.
       energy_waste_mix: |
         Hieronder staat de samenstelling van de afvalmix in deze regio. Hoeveel van het afval heeft een biogene oorsprong (zoals GFT-afval)
         en hoeveel een niet-biogene oorsprong (bijv plastics)? Dit is alleen relevant voor regio's met afvalverbranding.

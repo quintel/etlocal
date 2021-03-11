@@ -1,0 +1,14 @@
+en:
+  descriptions:
+    interface_items:
+      residences_roof_surface_available_for_pv: |
+        Suitable roof surface for solar panels, assuming a reasonable annual yield 
+        (so largely south-facing). The ETM uses 'net' available surface: we assume that the 
+        entire surface can be covered by solar panels. 
+      households_final_demand_electricity_demand: |
+        Including electricity demand 'behind the meter' of (for example) locally produced solar electricity.
+        Excluding electricity used for electric transport (EV). 
+      households_final_demand_network_gas_demand: |
+        Mix of natural gas and green gas
+      households_final_demand_solar_thermal_demand: |
+        In the ETM, solar thermal can be used for the production of hot water, not for space heating.

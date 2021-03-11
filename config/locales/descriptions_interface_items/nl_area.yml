@@ -13,7 +13,7 @@ nl:
         Het ETM houdt hier rekening mee door met vijf 'stappen' in gemiddelde lengtes per
         aansluiting te rekenen. Hoe meer huizen er worden aangesloten, hoe hoger de gemiddelde
         lengte per aansluiting. Hier kun je aangeven met welke gemiddelde leidinglengte het ETM
-        rekent als (tot) 40% van de huizen en gebouwen wordt aangesloten.
+        rekent als (tot) 20% van de huizen en gebouwen wordt aangesloten.
       heat_length_of_distribution_pipelines_in_meter_per_residence_object_second_bracket: |
         De benodigde lengte van de distributieleidingen voor warmtenetten varieert met het aantal
         aansluitingen. Het ligt voor de hand om als eerste dichtbevolkte wijken aan te sluiten,

@@ -1,6 +1,10 @@
 nl:
   descriptions:
     interface_items:
+      number_of_buildings:
+        Exclusief industriële / agrarische gebouwen. Alleen diensten / openbare gebouwen. 
+        Houd er rekening mee dat (bijv.) Een winkelcentrum met 10 verschillende winkels telt 
+        als 10 gebouwen. 
       buildings_roof_surface_available_for_pv: |
         Geschikt dakoppervlak voor zonnepanelen, uitgaande van een redelijk jaarrendement 
         (dus grotendeels op het zuiden). Het ETM gebruikt 'netto' beschikbare oppervlakte: 

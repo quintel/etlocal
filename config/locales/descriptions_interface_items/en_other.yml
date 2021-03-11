@@ -1,0 +1,9 @@
+en:
+  descriptions:
+    interface_items:
+      energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: |
+        This setting is only relevant if there is a waste incineration plant in
+        this area. Here you can see how sustainable the incinerated waste is: What percentage of
+        the waste is biogenic (such as organic waste, wood, paper) and how much is non-biogenic (such as plastics)?
+        The greater the share of non-biogenic waste, the more CO<sub>2</sub> emissions are attributed to
+        waste incineration and the less sustainable energy the waste incinerator produces.

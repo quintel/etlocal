@@ -7,7 +7,7 @@ en:
       province: Province
       region: Region
       res: RES region
-      country: Land
+      country: Country
 
     menu:
       static: Static
@@ -87,7 +87,7 @@ en:
         transport_rail_transport: Trains
         transport_road_transport: Road vehicles
         transport_ship_transport: Ships
-        transport_plane_transport: Planes
+        transport_plane_transport: Airplanes
 
       other:
         other_energy_demand: Energy demand

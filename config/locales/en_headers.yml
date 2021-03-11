@@ -18,6 +18,7 @@ en:
 
     groups:
       #area
+      area_co2_emission_1990: "CO<sub>2</sub> emissions 1990"
       area_other_ghg: "Present non-CO<sub>2</sub> greenhouse gas emissions"
       area_electricity_grid_costs: Present electricity grid costs
       area_electricity_grid_capacity: Present spare capacity electricity grid
@@ -61,7 +62,7 @@ en:
       transport_road_fuels: Road fuels
       transport_rail_fuels: Train fuels
       transport_ship_fuels: Ship fuels
-      transport_plane_fuels: Plane fuels
+      transport_plane_fuels: Airplane fuels
       transport_road_gasoline_distribution: Road gasoline distribution
       transport_road_diesel_distribution: Road diesel distribution
       transport_road_electricity_distribution: Road electricity distribution
@@ -102,7 +103,7 @@ en:
 
       # energy
       energy_demand_power_sector: Energy demand of the power sector
-      energy_gas_network: Green gas and regasified LNG in the gas network
+      energy_gas_network: Gas mix in the gas network
       energy_greengas_production: Green gas production
       energy_waste_mix: Waste mix
       energy_extraction: Fuel production and natural resource extraction

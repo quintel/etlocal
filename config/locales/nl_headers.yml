@@ -19,7 +19,7 @@ nl:
 
     groups:
       #area
-      area_co2_emission_1990: "Energetische CO<sub>2</sub>-emissies 1990"
+      area_co2_emission_1990: "CO<sub>2</sub>-emissies 1990"
       area_other_ghg: "Huidige uitstoot overige broeikasgassen"
       area_electricity_grid_costs: Kosten elektriciteitsnetwerk
       area_electricity_grid_capacity: Beschikbare capaciteit huidig elektriciteitsnet
@@ -52,7 +52,7 @@ nl:
       buildings_local_production: Lokale energieproductie
       buildings_electricity_distribution: Verdeling elektriciteit
       buildings_network_gas_distribution: Verdeling gas
-      buildings_wood_pellets_distribution: Verderling biomassa
+      buildings_wood_pellets_distribution: Verdeling biomassa
       buildings_crude_oil_distribution: Verdeling olie
       buildings_coal_distribution: Verdeling kolen
       buildings_network_gas_space_heating_distribution: Ruimteverwarming - gas
@@ -105,7 +105,7 @@ nl:
 
       # energy
       energy_demand_power_sector: Energiegebruik elektriciteitsopwek
-      energy_gas_network: Groengas en hervergast LNG in het gasnet
+      energy_gas_network: Gasmix in het gasnet
       energy_greengas_production: Groengasproductie
       energy_waste_mix: Afvalmix
       energy_extraction: Brandstofproductie en winning natuurlijke hulpbronnen

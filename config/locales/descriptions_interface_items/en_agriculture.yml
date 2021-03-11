@@ -1,0 +1,7 @@
+en:
+  descriptions:
+    interface_items:
+      agriculture_final_demand_network_gas_demand: |
+        The final demand of gas in agriculture. Gas used in agricultural CHPs is not included. Gas CHPs can be found at Energy production → Fossil electricity. 
+      agriculture_final_demand_wood_pellets_demand: |
+        The final demand of biomass in agriculture. Biomass used in agricultural CHPs is not included. Biomass CHPs can be found at Energy production → Renewable electricity.  

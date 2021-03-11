@@ -2,14 +2,10 @@ nl:
   descriptions:
     interface_items:
       coast_line: |
-        Deze afstand wordt gebruikt om te bepalen wat de potentie is voor windmolens aan de kust.
+        Deze waarde wordt gebruikt om te bepalen wat de potentie is voor windmolens aan de kust.
       areable_land: |
         Deze waarde bepaalt wat het maximale beschikbare oppervlakte is voor windmolens op land en
         zonnevelden.
-      co2_emission_1990: |
-        Het ETM vergelijkt de toekomstige CO<sub>2</sub>-uitstoot met de emissieniveaus van 1990,
-        aangezien dit een veelvoorkomend referentiepunt is in het (inter)nationale klimaatbeleid.
-        Voor een overzicht van de methode die het ETM hanteert, kijk op onze <a target="_blank" href="https://docs.energytransitionmodel.com/main/co2-1990-emissions">documentatie</a>.
       heat_length_of_distribution_pipelines_in_meter_per_residence_object_first_bracket: |
         De benodigde lengte van de distributieleidingen voor warmtenetten varieert met het aantal
         aansluitingen. Het ligt voor de hand om als eerste dichtbevolkte wijken aan te sluiten,

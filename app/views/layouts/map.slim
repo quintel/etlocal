@@ -12,8 +12,9 @@ html
         = File.read(hdb_file).html_safe
 
   body
-    .container
-      = render 'layouts/header'
+    .colored-header
+      .container
+        = render 'layouts/header'
 
     .content-map
       = yield

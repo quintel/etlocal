@@ -20,26 +20,45 @@ body
   .hidden
     display: none
 
+.colored-header
+  background-color: $selected-color
+
 .header
   padding: 0
+  color: $bg-color
 
   div
     display: inline-block
+    &.title
+      cursor: pointer
+
+    img
+      padding-top: 10px
 
     h1
-      margin: 0
-      font-size: 4rem
-      letter-spacing: -0.25rem
-      padding-top: 5px
+      margin: 0 0 0 20px
+      font-size: 1.5rem
+      display: inline-block
+      position: relative
+      top: -12px
+      font-weight: 600
+      line-height: 38px
+      letter-spacing: .1rem
+      text-transform: uppercase
+
+      // border: 0.5px solid $bg-color
+      // padding: 0 15px
+      // border-radius: 4px
 
     &.right
       float: right
+      padding-top: 2px
       .dropdown
         margin-right: 25px
         .lang-select span
           padding: 5px
         .lang-select:hover
-          color: #333
+          color: #ddd
           cursor: pointer
         ul.dropdown-menu
           display: none
@@ -47,13 +66,22 @@ body
           position: absolute
           z-index: 2
           top: 50px
-          background-color: $bg-color
+          background-color: $selected-color
           li
             padding: 0 15px 0 13px
-
+            a
+              color: white
+              &:hover
+                color: #ddd
 
       .current-user
         line-height: 60px
+        .name.button
+          color: #555
+          background: $bg-color
+          &:hover
+            border-color: darken($border-color, 40)
+            color: #333
         .log-out
           display: none
           position: absolute

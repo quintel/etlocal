@@ -5,6 +5,7 @@ nl:
   search: Zoeken
   or: of
   to: naar
+  current_language: Nederlands
 
   time:
     formats:

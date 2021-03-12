@@ -5,6 +5,7 @@ en:
   search: Search
   or: or
   to: to
+  current_language: English
 
   time:
     formats:

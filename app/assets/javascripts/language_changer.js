@@ -3,17 +3,8 @@ var LanguageChanger = (function () {
 
     return {
         init: function () {
-            $('select#locale').off('change').on('change', function (){
-                $.ajax({
-                    url: '/set_locale',
-                    method: 'PUT',
-                    data: {
-                        locale: $(this).val()
-                    },
-                    success: function () {
-                        window.location.reload();
-                    }
-                });
+            $('.dropdown .lang-select').on('click', function (){
+                $(this).next().toggle();
             });
         }
     }

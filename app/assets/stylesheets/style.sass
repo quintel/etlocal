@@ -34,27 +34,23 @@ body
 
     &.right
       float: right
-
-      select#locale
-        padding: 0 15px 0 5px
-        margin-right: 20px
-        margin-bottom: 0
-        border: none
-        background-color: $bg-color
-        text-align: right
-        // For the little arrow
-        -webkit-appearance: none
-        -moz-appearance: none
-        background: transparent
-        background-image: url('caret-down-solid.svg')
-        background-repeat: no-repeat
-        background-position-x: 100%
-        background-position-y: 12px
-        background-size: 10px
-        &:hover
+      .dropdown
+        margin-right: 25px
+        .lang-select span
+          padding: 5px
+        .lang-select:hover
+          color: #333
           cursor: pointer
-      .lang-select:hover
-        color: #333
+        ul.dropdown-menu
+          display: none
+          list-style: none
+          position: absolute
+          z-index: 2
+          top: 50px
+          background-color: $bg-color
+          li
+            padding: 0 15px 0 13px
+
 
       .current-user
         line-height: 60px

@@ -1,9 +1,17 @@
 class PagesController < ApplicationController
-  def set_locale
-    super
+  layout false, only: :introduction
+
+  def introduction
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def set_new_locale
+    set_locale
 
     session[:locale] = I18n.locale
 
-    render(plain: '', status: :ok)
+    redirect_to datasets_path
   end
 end

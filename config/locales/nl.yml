@@ -6,6 +6,7 @@ nl:
   or: of
   to: naar
   current_language: Nederlands
+  information: Informatie
 
   time:
     formats:

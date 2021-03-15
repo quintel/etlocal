@@ -22,5 +22,6 @@ Rails.application.routes.draw do
     end
   end
 
-  put '/set_locale(/:locale)' => 'pages#set_locale', as: :set_locale
+  put '/set_locale(/:locale)' => 'pages#set_new_locale', as: :set_locale
+  get '/introduction' => 'pages#introduction'
 end

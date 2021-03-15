@@ -29,6 +29,9 @@ body
 
   div
     display: inline-block
+
+    span.fa
+      padding: 5px
     &.title
       cursor: pointer
 
@@ -45,21 +48,13 @@ body
       line-height: 38px
       letter-spacing: .1rem
       text-transform: uppercase
+      color: #aad3df
 
-      // border: 0.5px solid $bg-color
-      // padding: 0 15px
-      // border-radius: 4px
-
+    // think about what happens to .right when making screen smaller -- set min size??
     &.right
       float: right
       padding-top: 2px
       .dropdown
-        margin-right: 25px
-        .lang-select span
-          padding: 5px
-        .lang-select:hover
-          color: #ddd
-          cursor: pointer
         ul.dropdown-menu
           display: none
           list-style: none
@@ -73,10 +68,16 @@ body
               color: white
               &:hover
                 color: #ddd
+      .info, .dropdown
+        margin-right: 25px
+      .info:hover, .lang-select:hover
+        color: #ddd
+        cursor: pointer
+
 
       .current-user
         line-height: 60px
-        .name.button
+        .button
           color: #555
           background: $bg-color
           &:hover

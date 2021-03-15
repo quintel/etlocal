@@ -1,0 +1,24 @@
+en:
+  introduction:
+    title: Welcome to the ETM Data Manager
+    text: |
+      <strong> Welcome to the ETM Data Manager for Regions! </strong></br>
+      With the <a target="_blank" href="https://pro.energytransitionmodel.com/Energy Transition Model">
+      Energy Transition Model </a> (ETM) you can explore the future energy system for different
+      geographic regions: countries, provinces, municipalities, neighborhoods, etc. The energy system
+      is a large and complex entity and in order to map this, sufficient data of good quality must
+      be provided for each region to be able to “fill” the ETM. Behind each region in the ETM runs
+      an "energy graph" (the calculator of the model in which energy flows, conversion steps and
+      relationships are modelled) and this graph only calculates if all the necessary data is
+      available.</br>
+      This ETM Data Manager provides insight into the regional data and sources behind the
+      <a target="_blank" href="https://pro.energytransitionmodel.com/Energy Transition Model">
+      Energy Transition Model </a>. For an overview of the sources used for Dutch regions, see our
+      <a target="_blank" href="https://docs.energytransitionmodel.com/main/data-sources-local">
+      documentation </a>.</br></br>
+      <strong>How does it work? </strong></br>
+      In the left bar you will find various topics related to energy demand, energy production and
+      general information about the region, such as geography, emissions, infrastructure. Within
+      each topic you will find all associated data fields. By clicking on the "i" icon to the left
+      of the data field you will find more information about the data that is displayed, which
+      sources have been used and whether this number has recently changed.

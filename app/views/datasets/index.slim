@@ -15,7 +15,7 @@
       #search-bar
         .form
           form#search
-            = text_field_tag :q, nil, id: "search-bar", placeholder: t('click_or_search')
+            = text_field_tag :q, nil, id: "search-bar", placeholder: t('click_or_search'), autocomplete: "off"
             input#search-submit type='submit' value=I18n.t('search')
 
   #dataset-overlay

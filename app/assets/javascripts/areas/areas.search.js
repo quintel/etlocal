@@ -28,32 +28,35 @@ Areas.Search = (function () {
             .removeClass("no-results")
             .removeAttr("title");
 
-        if (data.length == 1) {
-            openPopup.call(this, data[0].id);
-        } else {
-            var list = $('<ul></ul>').addClass('options');
+        var list = $('<ul></ul>').addClass('options');
 
-            // Create an option in the list for each dataset if there were multiple results
-            if (data.length > 1){
-                var self = this;
+        // Create an option in the list for each dataset if there were multiple results
+        if (data.length >= 1){
+            var self = this;
 
-                $.each(data, function(_key, dataset) {
-                    var option = $('<li>' + dataset.name +' (' + dataset.id +')</li>');
-                    option.on('click', function() {
-                        openPopup.call(self, dataset.id);
-                    });
-                    list.append(option);
+            $.each(data, function(_key, dataset) {
+                var option = $('<li>' + dataset.name +' (' + dataset.id +')</li>');
+                option.data('id', dataset.id);
+                option.on('click', function() {
+                    openPopup.call(self, dataset.id);
+                });
+                option.on('mouseover', function () {
+                    $('.options li').removeClass('selected-option');
+                    option.addClass('selected-option');
                 })
-            } else {
-                list.append('<li>No results</li>');
-                this.scope
-                    .addClass("no-results")
-                    .attr('title', "No results for: " + this.result.value)
-            }
-
-            this.scope.append(list);
-            bindOptionsListener.call(this);
+                list.append(option);
+            });
+            // Highlight first item to show what will open if you press enter
+            list.find(">:first-child").addClass('selected-option');
+        } else {
+            list.append('<li>No results</li>');
+            this.scope
+                .addClass("no-results")
+                .attr('title', "No results for: " + this.result.value)
         }
+
+        this.scope.append(list);
+        bindOptionsListener.call(this);
     }
 
     // Removes options when clicking anywhere in the document
@@ -76,7 +79,7 @@ Areas.Search = (function () {
             this.scope.show();
         },
 
-        handleSubmit: function (e) {
+        search: function (e) {
             e.preventDefault();
 
             this.result = $(e.target).serializeArray()[0];
@@ -95,16 +98,22 @@ Areas.Search = (function () {
             });
         },
 
-        hideOptions: function () {
-            this.scope.find('.options').remove();
+        openSelectedOption: function(e) {
+            e.preventDefault();
+
+            var selected = this.scope.find('li.selected-option');
+
+            if (selected.length == 1){
+                openPopup.call(this, $(selected[0]).data('id'));
+            }
         }
     };
 
     function Search(areas, scope) {
         this.areas = areas;
         this.scope = scope;
-        this.scope.on('submit', this.handleSubmit.bind(this));
-        this.scope.find('#search-bar').on('input', this.hideOptions.bind(this));
+        this.scope.on('submit', this.openSelectedOption.bind(this));
+        this.scope.find('#search-bar').on('input', this.search.bind(this));
     }
 
     return Search;

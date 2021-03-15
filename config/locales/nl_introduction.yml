@@ -1,25 +1,27 @@
 nl:
   introduction:
-    title: Welkom bij de ETM Data Manager
+    title: Welkom bij de ETM Data Manager!
     text: |
-      <strong>Welkom bij de ETM Data Manager voor Regio's!</strong></br>
-      Met het <a target="_blank" href="https://pro.energytransitionmodel.com/Energietransitiemodel">
+      <strong> Welkom!</strong></br></br>
+      Met het <a target="_blank" href="https://pro.energytransitionmodel.com">
       Energietransitiemodel</a> (ETM) kun je het toekomstig energiesysteem verkennen voor
       verschillende geografische regio’s: landen, provincies, gemeenten, buurten etc. Het
       energiesysteem is een groot en complex geheel en om dit in kaart te brengen moet voor elke
       regio voldoende data van goede kwaliteit beschikbaar zijn om het ETM te “vullen”. Achter elke
-      regio in het ETM draait een ‘energiegraaf’ (de rekenmachine van het model waarin
+      regio in het ETM draait een 'energiegraaf' (de rekenmachine van het model waarin
       energiestromen, conversiestappen en verbanden zijn vastgelegd) en deze graaf rekent alleen
-      door als alle benodigde data beschikbaar is.</br>
-      Deze ETM Data Manager geeft inzicht in de regionale data én bronnen achter het
-      <a target="_blank" href="https://pro.energytransitionmodel.com/Energietransitiemodel">
-      Energietransitiemodel</a>. Voor een overzicht van de gebruikte bronnen voor Nederlandse
-      regio's kijk op onze
-      <a target="_blank" href="https://docs.energytransitionmodel.com/main/data-sources-local">
-      documentatie</a>.</br></br>
-      <strong>Hoe werkt het?</strong></br>
-      In de linkerbalk vind je verschillende onderwerpen die gaan over energievraag, energieproductie
-      en algemene informatie over de regio, zoals geografie, emissies, infrastructuur. Binnen elk
-      onderwerp vind je alle bijbehorende datavelden. Door de klikken op het "i"-icoontje links van
-      het dataveld vind je meer informatie over de data die getoond wordt, welke bronnen gebruikt
-      zijn en of dit getal recentelijk veranderd is.
+      door als alle benodigde data beschikbaar is. Deze benodigde set aan data wordt ookwel een 'dataset' genoemd.</br></br>
+      De ETM Data Manager geeft compleet overzicht van alle data én bronnen die gebruikt worden voor
+      deze datasets. Op dit moment kun je vooral datasets van regio's binnen een land openen in de ETM Data Manager en nog niet alle
+      landendatasets. Op den duur zullen alle landendatasets beschikbaar komen in de ETM Data Manager.</br></br>
+      <strong>Hoe werkt het?</strong></br></br>
+      Voor het vinden van de dataset van een specifieke regio, volg onderstaande stappen:</br></br>
+      <ol>
+      <li>Zoek naar jouw regio via de zoekbalk of door de kaart te gebruiken</li>
+      <li>Open de dataset</li>
+      <li>Bekijk alle data en bronnen die gebruikt zijn voor jouw regio</li>
+      </ol>
+      <strong>Vragen?</strong></br></br>
+      Heb je vragen of hulp nodig? Neem dan contact op met <a href="https://quintel.com/contact"
+      target="_blank">Quintel</a>, de makers van het <a target="_blank" href="https://pro.energytransitionmodel.com">
+      Energietransitiemodel</a>.

@@ -1,24 +1,27 @@
 en:
   introduction:
-    title: Welcome to the ETM Data Manager
+    title: Welcome to the ETM Data Manager!
     text: |
-      <strong> Welcome to the ETM Data Manager for Regions! </strong></br>
-      With the <a target="_blank" href="https://pro.energytransitionmodel.com/Energy Transition Model">
-      Energy Transition Model </a> (ETM) you can explore the future energy system for different
+      <strong> Welcome! </strong></br></br>
+      With the <a target="_blank" href="https://pro.energytransitionmodel.com">
+      Energy Transition Model</a> (ETM) you can explore the future energy system for different
       geographic regions: countries, provinces, municipalities, neighborhoods, etc. The energy system
       is a large and complex entity and in order to map this, sufficient data of good quality must
-      be provided for each region to be able to “fill” the ETM. Behind each region in the ETM runs
-      an "energy graph" (the calculator of the model in which energy flows, conversion steps and
+      be provided for each region to be able to "fill" the ETM. Behind each region in the ETM runs
+      an 'energy graph' (the calculator of the model in which energy flows, conversion steps and
       relationships are modelled) and this graph only calculates if all the necessary data is
-      available.</br>
-      This ETM Data Manager provides insight into the regional data and sources behind the
-      <a target="_blank" href="https://pro.energytransitionmodel.com/Energy Transition Model">
-      Energy Transition Model </a>. For an overview of the sources used for Dutch regions, see our
-      <a target="_blank" href="https://docs.energytransitionmodel.com/main/data-sources-local">
-      documentation </a>.</br></br>
-      <strong>How does it work? </strong></br>
-      In the left bar you will find various topics related to energy demand, energy production and
-      general information about the region, such as geography, emissions, infrastructure. Within
-      each topic you will find all associated data fields. By clicking on the "i" icon to the left
-      of the data field you will find more information about the data that is displayed, which
-      sources have been used and whether this number has recently changed.
+      available. This necessary set of data is often referred to as a 'dataset'.</br></br>
+      The ETM Data Manager gives a complete overview of all data and sources used for these datasets. 
+      At the moment mostly datasets of regions within a country are included in
+      the ETM Data Manager and no country datasets. In the long run all country datasets will also become
+      available through the ETM Data Manager.</br></br>
+      <strong>How does it work? </strong></br></br>
+      Please take the steps below to find the source data for a specific region:</br></br>
+      <ol>
+      <li>Search for your region in the search bar or by using the map</li>
+      <li>Open the dataset</li>
+      <li>Check out all source data for your region</li>
+      </ol>
+      <strong>Questions?</strong></br></br>
+      Do you have questions or need help? Please, feel free to contact <a href="https://quintel.com/contact" target="_blank">Quintel</a>, the developers of the <a target="_blank" href="https://pro.energytransitionmodel.com">
+      Energy Transition Model</a>.

@@ -1,11 +1,9 @@
 .heading
-  h5 title= dataset.geo_id
+  h5 title= "Dataset: #{dataset.id}, GeoID: #{dataset.geo_id}"
     = dataset.name
 
   em
     = I18n.t("user.created_by", group: dataset.creator)
-    = " (#{dataset.id})"
-
 
 - if @dataset_edit_form.errors.any?
   .errors

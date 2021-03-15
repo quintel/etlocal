@@ -2,20 +2,11 @@ nl:
   descriptions:
     groups:
       area: |
-        <strong>Welkom bij de ETM Data Manager for Regions!</strong>
-        Met het <a target="_blank" href="https://pro.energytransitionmodel.com/Energietransitiemodel">Energietransitiemodel</a> (ETM) 
-        kun je het toekomstig energiesysteem verkennen voor verschillende geografische 
-        regio’s: landen, provincies, gemeenten, buurten etc. Het energiesysteem is een groot en complex geheel en om dit 
-        in kaart te brengen moet voor elke regio voldoende data van goede kwaliteit beschikbaar zijn om het ETM te “vullen”. 
-        Achter elke regio in het ETM draait een ‘energiegraaf’ (de rekenmachine van het model waarin energiestromen, 
-        conversiestappen en verbanden zijn vastgelegd) en deze graaf rekent alleen door als alle benodigde data beschikbaar is.
-        Deze ETM Data Manager geeft inzicht in de regionale data én bronnen achter het <a target="_blank" href="https://pro.energytransitionmodel.com/Energietransitiemodel">Energietransitiemodel</a>.
+        In de linkerbalk vind je verschillende onderwerpen die gaan over energievraag, energieproductie
+        en algemene informatie over de regio, zoals geografie, emissies, infrastructuur. Binnen elk onderwerp vind je alle bijbehorende datavelden. Door te klikken op het "i"-icoontje
+        links van het dataveld vind je meer informatie over de data die getoond wordt, welke bronnen gebruikt zijn en of dit getal recentelijk veranderd is. 
         Voor een overzicht van de gebruikte bronnen voor Nederlandse regio's kijk op onze
         <a target="_blank" href="https://docs.energytransitionmodel.com/main/data-sources-local">documentatie</a>.
-        <strong>Hoe werkt het?</strong>
-        In de linkerbalk vind je verschillende onderwerpen die gaan over energievraag, energieproductie
-        en algemene informatie over de regio, zoals geografie, emissies, infrastructuur. Binnen elk onderwerp vind je alle bijbehorende datavelden. Door de klikken op het "i"-icoontje
-        links van het dataveld vind je meer informatie over de data die getoond wordt, welke bronnen gebruikt zijn en of dit getal recentelijk veranderd is.
         <strong>Jaar</strong>
         Hieronder zie je uit welk jaar alle data van deze regio komt.
       area_emissions: |

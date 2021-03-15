@@ -55,7 +55,7 @@ $map-height: 100%
 .content-map
   border-top: 1px solid $border-color
   position: relative
-  height: calc(100% - 62px)
+  height: calc(100% - 65px)
 
   .container
     margin-top: 20px
@@ -115,6 +115,8 @@ $map-height: 100%
 
         input
           vertical-align: top
+          &::placeholder
+            font-size: 1.125rem
 
         form.no-results
           input#search-bar
@@ -145,7 +147,7 @@ $map-height: 100%
           li
             padding: 5px
             border-radius: 4px
-            &:hover
+            &.selected-option
               cursor: pointer
               background-color: $selected-color
               color: #fff
@@ -163,6 +165,9 @@ $map-height: 100%
       box-shadow: 0 1px 2px rgba(0,0,0,0.10)
       margin-bottom: 75px
       z-index: 2
+
+      .intro
+        padding: 20px 60px 30px
 
       .heading
         padding: 20px 35px

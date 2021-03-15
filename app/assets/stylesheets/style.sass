@@ -20,44 +20,69 @@ body
   .hidden
     display: none
 
+.colored-header
+  background-color: $selected-color
+
 .header
   padding: 0
+  color: $bg-color
+  min-width: 900px
 
   div
     display: inline-block
 
+    span.fa
+      padding: 5px
+    &.title
+      cursor: pointer
+
+    img
+      padding-top: 10px
+
     h1
-      margin: 0
-      font-size: 4rem
-      letter-spacing: -0.25rem
-      padding-top: 5px
+      margin: 0 0 0 20px
+      font-size: 1.5rem
+      display: inline-block
+      position: relative
+      top: -12px
+      font-weight: 600
+      line-height: 38px
+      letter-spacing: .1rem
+      text-transform: uppercase
+      color: #aad3df
 
     &.right
       float: right
+      padding-top: 2px
+      .dropdown
+        ul.dropdown-menu
+          display: none
+          list-style: none
+          position: absolute
+          z-index: 3
+          top: 50px
+          background-color: $selected-color
+          li
+            padding: 0 15px 0 13px
+            a
+              color: white
+              &:hover
+                color: #ddd
+      .info, .dropdown
+        margin-right: 25px
+      .info:hover, .lang-select:hover
+        color: #ddd
+        cursor: pointer
 
-      select#locale
-        padding: 0 15px 0 5px
-        margin-right: 20px
-        margin-bottom: 0
-        border: none
-        background-color: $bg-color
-        text-align: right
-        // For the little arrow
-        -webkit-appearance: none
-        -moz-appearance: none
-        background: transparent
-        background-image: url('caret-down-solid.svg')
-        background-repeat: no-repeat
-        background-position-x: 100%
-        background-position-y: 12px
-        background-size: 10px
-        &:hover
-          cursor: pointer
-      .lang-select:hover
-        color: #333
 
       .current-user
         line-height: 60px
+        .button
+          color: #555
+          background: $bg-color
+          &:hover
+            border-color: darken($border-color, 40)
+            color: #333
         .log-out
           display: none
           position: absolute

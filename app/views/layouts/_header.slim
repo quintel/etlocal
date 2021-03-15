@@ -1,11 +1,24 @@
 .header
-  .title
-    h1=link_to I18n.t('application'), '/'
+  .title[href=root_path]
+    img[src="/assets/logo300@2x.png", style="height: 40px"]
+    / , width: 300, height: 37, alt: "" ]
+    / h1=link_to I18n.t('application'), '/'
+    h1 Data Manager
 
   .right
-    .lang-select
-      i.fa.fa-globe
-      = language_select
+    .info
+      span.fa.fa-info
+      = t('information')
+    .dropdown
+      .lang-select
+        span.fa.fa-globe
+        = t('current_language')
+        span.fa.fa-caret-down
+      ul.dropdown-menu
+        li
+          = link_to 'English', set_locale_path(locale: 'en'), method: :put, class: 'dropdown-item'
+        li
+           = link_to 'Nederlands', set_locale_path(locale: 'nl'), method: :put, class: 'dropdown-item'
 
     - if current_user
       .current-user

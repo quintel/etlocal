@@ -114,6 +114,8 @@ Areas.Search = (function () {
         this.scope = scope;
         this.scope.on('submit', this.openSelectedOption.bind(this));
         this.scope.find('#search-bar').on('input', this.search.bind(this));
+        this.scope.find('#search-bar').on('click', this.search.bind(this));
+        this.scope.find('#search-bar').focus();
     }
 
     return Search;

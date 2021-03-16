@@ -26,30 +26,38 @@ body
 .header
   padding: 0
   color: $bg-color
-  min-width: 900px
+  min-width: 960px
 
   div
     display: inline-block
 
     span.fa
-      padding: 5px
+      padding: 10px
     &.title
-      cursor: pointer
+      padding-top: 9px
+      a
+        text-decoration: none
 
     img
       padding-top: 10px
 
-    h1
-      margin: 0 0 0 20px
+    h2
+      margin: 0
       font-size: 1.5rem
+      letter-spacing: 0
+      color: $map-water-color
+      font-weight: 400
+    h1
+      font-size: 2rem
+      margin: 0
+      letter-spacing: 0
+      color: $bg-color
+      font-weight: 600
       display: inline-block
       position: relative
-      top: -12px
-      font-weight: 600
-      line-height: 38px
-      letter-spacing: .1rem
-      text-transform: uppercase
-      color: #aad3df
+      top: -2px
+      &:hover
+        color: $bg-color
 
     &.right
       float: right
@@ -67,11 +75,11 @@ body
             a
               color: white
               &:hover
-                color: #ddd
+                color: $map-water-color
       .info, .dropdown
         margin-right: 25px
       .info:hover, .lang-select:hover
-        color: #ddd
+        color: $map-water-color
         cursor: pointer
 
 

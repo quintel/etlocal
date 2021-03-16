@@ -12,6 +12,6 @@ class PagesController < ApplicationController
 
     session[:locale] = I18n.locale
 
-    redirect_to datasets_path
+    redirect_to root_path
   end
 end

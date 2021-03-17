@@ -18,7 +18,7 @@ set :bundle_binstubs, (-> { shared_path.join('sbin') })
 append :linked_files, "config/database.yml", "config/email.yml", "config/secrets.yml"
 
 # Default value for linked_dirs is []
-append :linked_dirs, %w[
+append :linked_dirs, *%w[
   etsource
   log
   public/system

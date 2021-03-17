@@ -18,7 +18,15 @@ set :bundle_binstubs, (-> { shared_path.join('sbin') })
 append :linked_files, "config/database.yml", "config/email.yml", "config/secrets.yml"
 
 # Default value for linked_dirs is []
-append :linked_dirs, "sbin", "log", "tmp/pids", "tmp/cache", "vendor/bundle", "public/system"
+append :linked_dirs, %w[
+  etsource
+  log
+  public/system
+  sbin
+  tmp/cache
+  tmp/pids
+  vendor/bundle
+]
 
 namespace :deploy do
   after :finishing, 'deploy:etsource'

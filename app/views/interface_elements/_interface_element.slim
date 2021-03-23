@@ -18,10 +18,7 @@
 
               .slider data-key= interface_item.key data-flexible= ('flex' if interface_item.flexible) data-editable= (policy(@dataset).edit? ? '1' : '0')
               span.history data-key= interface_item.key
-                - if interface_item.flexible
-                  i.fa
-                - else
-                  i.fa.fa-info
+                .fa.fa-info
 
               span.val data= conversions_for(interface_item.key)
                 span.display_value
@@ -65,35 +62,34 @@
                   = I18n.t("units.#{ interface_item.key }.from", default: interface_item.unit).html_safe
               .clear
 
-        - unless interface_item.flexible
-          .history.hidden class= interface_item.key
-            .line-arrow
+        .history.hidden class= interface_item.key
+          .line-arrow
 
-            - if I18n.exists?("descriptions.interface_items.#{interface_item.key}")
-              p=I18n.t("descriptions.interface_items.#{interface_item.key}").html_safe
+          - if I18n.exists?("descriptions.interface_items.#{interface_item.key}")
+            p=I18n.t("descriptions.interface_items.#{interface_item.key}").html_safe
 
-            strong = I18n.t("dataset_edits.history")
+          strong = I18n.t("dataset_edits.history")
 
-            - @dataset.editable_attributes.edits_for(interface_item.key).each do |dataset_edit|
-              .change
-                .history-line
-                  span.border
-                  span.line
-                    span.created
-                      => I18n.l dataset_edit.created_at, format: :short
-                    span.by
-                      => I18n.t("dataset_edits.changed_by", user: dataset_edit.commit.user.name)
-                    span.to
-                      | &rarr;
-                      | &nbsp;
-                      = dataset_edit.value
+          - @dataset.editable_attributes.edits_for(interface_item.key).each do |dataset_edit|
+            .change
+              .history-line
+                span.border
+                span.line
+                  span.created
+                    => I18n.l dataset_edit.created_at, format: :short
+                  span.by
+                    => I18n.t("dataset_edits.changed_by", user: dataset_edit.commit.user.name)
+                  span.to
+                    | &rarr;
+                    | &nbsp;
+                    = dataset_edit.value
 
-                .content
-                  .reason
-                    = simple_format dataset_edit.commit.message
+              .content
+                .reason
+                  = simple_format dataset_edit.commit.message
 
-                  - if dataset_edit.commit.source
-                    .source
-                      = link_to I18n.t("dataset_edits.download_source"), dataset_edit.commit.source.source_file.url, class: "button"
+                - if dataset_edit.commit.source
+                  .source
+                    = link_to I18n.t("dataset_edits.download_source"), dataset_edit.commit.source.source_file.url, class: "button"
 
-                .clear
+              .clear

@@ -72,9 +72,9 @@ var Slider = (function () {
             // previously edited values.
             if (this.isEnabled() && this.editable) {
                 this.slider.enable();
+                this.spanVal.on("click", showInput.bind(this));
             }
 
-            this.spanVal.on("click", showInput.bind(this));
             this.input.on('blur', hideInput.bind(this));
             this.input.on('focus', addUpdateListener.bind(this));
 
@@ -91,6 +91,7 @@ var Slider = (function () {
             if (!this.isEnabled()) {
                 if (this.editable) {
                     this.slider.enable();
+                    this.spanVal.on("click", showInput.bind(this));
                 }
 
                 // Oddly specific: the last argument is a silent call so

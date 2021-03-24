@@ -4,3 +4,4 @@ groups:
     items:
     - key: analysis_year
       unit: '#'
+      combination_method: min

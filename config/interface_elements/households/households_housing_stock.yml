@@ -11,6 +11,9 @@ groups:
 
   - header: households_housing_stock_distribution
     type: slider
+    combination_method:
+      weighted_average:
+        - number_of_residences
     items:
     - key: input_percentage_of_apartments
       unit: '%'
@@ -27,36 +30,60 @@ groups:
 
   - header: households_insulation
     type: slider
+    combination_method:
+      weighted_average:
+        - number_of_residences
+        - input_percentage_of_apartments
     items:
     - key: input_households_apartments_heat_demand_reduction
       unit: '%'
 
   - header:
     type: slider
+    combination_method:
+      weighted_average:
+        - number_of_residences
+        - input_percentage_of_terraced_houses
     items:
     - key: input_households_terraced_houses_heat_demand_reduction
       unit: '%'
 
   - header:
     type: slider
+    combination_method:
+      weighted_average:
+        - number_of_residences
+        - input_percentage_of_corner_houses
     items:
     - key: input_households_corner_houses_heat_demand_reduction
       unit: '%'
 
   - header:
     type: slider
+    combination_method:
+      weighted_average:
+        - number_of_residences
+        - input_percentage_of_semi_detached_houses
     items:
     - key: input_households_semi_detached_houses_heat_demand_reduction
       unit: '%'
 
   - header:
     type: slider
+    combination_method:
+      weighted_average:
+        - number_of_residences
+        - input_percentage_of_detached_houses
     items:
     - key: input_households_detached_houses_heat_demand_reduction
       unit: '%'
 
   - header: households_apartments_block_heating
     type: slider
+    combination_method:
+      weighted_average:
+        - number_of_residences
+        - input_percentage_of_apartments
     items:
     - key: heat_share_of_apartments_with_block_heating
       unit: '%'

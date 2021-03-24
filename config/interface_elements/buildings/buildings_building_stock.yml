@@ -9,6 +9,9 @@ groups:
 
   - header: buildings_insulation
     type: slider
+    combination_method:
+      weighted_average:
+        - number_of_buildings
     items:
     - key: input_buildings_heat_demand_reduction
       unit: '%'

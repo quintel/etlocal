@@ -2,6 +2,9 @@ key: energy_biomass
 groups:
   - header: energy_greengas_production
     type: slider
+    combination_method:
+      weighted_average:
+        - energy_distribution_greengas_demand
     items:
       - key: energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share
         unit: '%'
@@ -13,6 +16,7 @@ groups:
 
   - header: energy_waste_mix
     type: slider
+    combination_method: average
     items:
       - key: energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share
         unit: '%'

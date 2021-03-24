@@ -58,8 +58,8 @@ groups:
     - header: transport_road_gasoline_distribution
       type: slider
       combination_method:
-      weighted_average:
-        - input_transport_road_gasoline_demand
+        weighted_average:
+          - input_transport_road_gasoline_demand
       items:
         - key: transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share
           unit: '%'
@@ -77,8 +77,8 @@ groups:
     - header: transport_road_diesel_distribution
       type: slider
       combination_method:
-      weighted_average:
-        - input_transport_road_diesel_demand
+        weighted_average:
+          - input_transport_road_diesel_demand
       items:
         - key: transport_road_mixer_diesel_transport_car_using_diesel_mix_parent_share
           unit: '%'
@@ -94,8 +94,8 @@ groups:
     - header: transport_road_electricity_distribution
       type: slider
       combination_method:
-      weighted_average:
-        - input_transport_road_electricity_demand
+        weighted_average:
+          - input_transport_road_electricity_demand
       items:
         - key: transport_final_demand_for_road_electricity_transport_car_using_electricity_parent_share
           unit: '%'
@@ -115,8 +115,8 @@ groups:
     - header: transport_road_cng_distribution
       type: slider
       combination_method:
-      weighted_average:
-        - transport_final_demand_for_road_compressed_network_gas_demand
+        weighted_average:
+          - transport_final_demand_for_road_compressed_network_gas_demand
       items:
         - key: transport_road_mixer_compressed_network_gas_transport_bus_using_compressed_natural_gas_parent_share
           unit: '%'
@@ -132,8 +132,8 @@ groups:
     - header: transport_road_hydrogen_distribution
       type: slider
       combination_method:
-      weighted_average:
-        - transport_final_demand_hydrogen_demand
+        weighted_average:
+          - transport_final_demand_hydrogen_demand
       items:
         - key: input_transport_road_car_hydrogen_share
           unit: '%'
@@ -149,8 +149,8 @@ groups:
     - header: transport_road_lng_distribution
       type: slider
       combination_method:
-      weighted_average:
-        - transport_final_demand_for_road_lng_demand
+        weighted_average:
+          - transport_final_demand_for_road_lng_demand
       items:
         - key: transport_road_mixer_lng_transport_bus_using_lng_mix_parent_share
           unit: '%'

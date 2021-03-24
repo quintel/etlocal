@@ -29,22 +29,23 @@ def data_from(interface_files):
   for file in interface_files:
     with open(file, 'r') as f:
       interface_file = yaml.load(f, Loader=yaml.FullLoader)
-    for header in interface_file['groups']:
-      # loop over each interface element ('item') in each 'group'
-      for item in header['items']:
-        element = Interface_element(item.get('key'))
-        # check if item if a flexible share, if so add an attribute 'share_group' containing all other shares
-        if item.get('flexible', False):
-          element.flexible = True
-          element.share_group = [share['key'] for share in header['items'] if share['key'] != element.key]
-        # check if combination method is specified at the 'group' level or at the 'item' level
-        # if at 'group' level, apply that method to all items in the group
-        if header.get('combination_method', False):
-          method = header['combination_method']
-        else:
-        # if the combination method is specified at the 'item' level, set the appropriate attribute
-        # if no method is specified, set the default 'sum' method
-          method = item.get('combination_method', 'sum')
-        element.method = method
-        interface_elements.append(element)
+      if 'groups' in interface_file.keys():
+        for header in interface_file['groups']:
+          # loop over each interface element ('item') in each 'group'
+          for item in header['items']:
+            element = Interface_element(item.get('key'))
+            # check if item if a flexible share, if so add an attribute 'share_group' containing all other shares
+            if item.get('flexible', False):
+              element.flexible = True
+              element.share_group = [share['key'] for share in header['items'] if share['key'] != element.key]
+            # check if combination method is specified at the 'group' level or at the 'item' level
+            # if at 'group' level, apply that method to all items in the group
+            if header.get('combination_method', False):
+              method = header['combination_method']
+            else:
+            # if the combination method is specified at the 'item' level, set the appropriate attribute
+            # if no method is specified, set the default 'sum' method
+              method = item.get('combination_method', 'sum')
+            element.method = method
+            interface_elements.append(element)
   return interface_elements

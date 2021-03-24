@@ -40,6 +40,7 @@ groups:
 
   - header: industry_gas_fuelmix
     type: slider
+    combination_method: average
     items:
       - key: input_share_mixer_gas_fuel_bio_oil
         unit: '%'

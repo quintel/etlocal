@@ -5,7 +5,7 @@ describe Exporter do
   let(:dataset) { FactoryBot.create(:dataset) }
 
   let!(:stub_export_request) {
-    stub_request(:get, "https://beta-local.energytransitionmodel.com/api/v1/exports/#{dataset.id}?time_curves_to_zero=false")
+    stub_request(:get, "https://beta-local.energytransitionmodel.com/api/v1/exports/#{dataset.id}?time_curves_to_zero=true")
       .to_return(body: JSON.dump([{
         'area' => 'ameland',
         'country' => 'nl',
@@ -26,7 +26,7 @@ describe Exporter do
   }
 
   it "exports a dataset" do
-    Exporter.export(dataset.id)
+    Exporter.export(dataset.id, rebuild: false)
 
     expect(Atlas::Dataset::Derived.find('ameland').number_of_cars).to eq(10)
   end

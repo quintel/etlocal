@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 namespace :etsource do
-  desc <<-eos
+  desc <<-DESC
     Exports changes of a dataset to ETSource
 
     Requires a DATASET argument. It exports data from a remote source which
@@ -8,13 +10,23 @@ namespace :etsource do
     for localhost use:
     - localhost:3000
 
-    for beta use:
-    - beta-local.energytransitionmodel.com
+    for production use:
+    - data.energytransitionmodel.com
 
-  eos
-  task :export => :environment do
-    raise ArgumentError, "DATASET= argument is missing" unless ENV['DATASET']
+    Optional argument TIME_CURVES_TO_ZERO, default true, does not scale
+    timecurves when set to true.
 
-    Exporter.export(ENV['DATASET'], ENV['TIME_CURVES_TO_ZERO'])
+    Optional argument REBUILD, default true, removes the dataset folder from
+    ETSource before generating a new set when true. This means a new dataset id
+    in ETSource is generated, the old one will be removed
+
+  DESC
+
+  task export: :environment do
+    raise ArgumentError, 'DATASET= argument is missing' unless ENV['DATASET']
+
+    rebuild = ENV['REBUILD'].nil? or ENV['REBUILD'] == 'true'
+    time_curves_to_zero = ENV['TIME_CURVES_TO_ZERO'].nil? or ENV['TIME_CURVES_TO_ZERO'] == 'true'
+    Exporter.export(ENV['DATASET'], time_curves_to_zero: time_curves_to_zero, rebuild: rebuild)
   end
 end

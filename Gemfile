@@ -33,7 +33,7 @@ gem 'archive-zip', '~> 0.9.0'
 gem 'sentry-raven'
 gem 'deep_cloneable', '~> 2.3.0'
 
-gem 'transformer', ref: 'd7bfe08', github: 'quintel/transformer'
+gem 'transformer', ref: 'cc414cd', github: 'quintel/transformer'
 gem 'atlas',       ref: 'a560290', github: 'quintel/atlas'
 gem 'rubel',       ref: 'ad3d44e', github: 'quintel/rubel'
 gem 'refinery',    ref: '72eacf8', github: 'quintel/refinery'

@@ -24,8 +24,12 @@ class DatasetsController < ApplicationController
   # GET show.json
   def show
     dataset = Dataset.find_by(geo_id: params[:id])
+    # @geo_id = params[:id]
 
-    render json: dataset
+    respond_to do |format|
+      format.json { render json: dataset }
+      format.html { render template: 'datasets/index', layout: 'map' }
+    end
   end
 
   # GET search.json

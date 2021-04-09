@@ -1,0 +1,7 @@
+en:
+  not_found:
+    header: Oops! This dataset does not exist.
+    region: Region code
+    description: |
+      The dataset you try to open is not known to us. Check if the region code is correct,
+      or try to find the region via our search function, or by using the map.

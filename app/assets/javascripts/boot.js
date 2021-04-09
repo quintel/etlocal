@@ -13,26 +13,25 @@ $(document).on('turbolinks:load', function () {
         $('.content-map #map').toggleClass('wrapped', isOver);
     });
 
-    // For first load or when routes are changed in browser url box.
     $(window).on('load', router);
     $(window).on('hashchange', router);
 });
 
 // Simple router, get the current URL and generate correct content
-let router = (evt) => {
+let router = (_) => {
     const url = window.location.pathname || "/";
-    resolveRoute(url);
+    generateContent(url);
 };
 
 // Check if we're dealing with a dataset request, if so, try to open dataset
-let resolveRoute = (route) => {
+function generateContent(route) {
     var splitRoute = route.split('/')
     if (splitRoute.length == 3 && splitRoute[1] == 'datasets'){
         openDataset(splitRoute[2])
     }
 };
 
-function openDataset(geoId){
+function openDataset(geoId) {
     $.ajax({
         url: "/datasets/" + geoId + ".json",
         type: 'GET',
@@ -40,14 +39,12 @@ function openDataset(geoId){
         success: function (data) {
             if (data) {
                 DatasetInterface.open(data.id);
-            } else if (console) {
-                // open popup that says that the dataset is not available
-                console.log("No dataset with " + geoId + " found");
+            } else {
+                DatasetNotFound.open(geoId);
             }
         },
-        error: function (e) {
-            // open popup that says that the dataset is not available
-            alert(e);
+        error: function (_) {
+            DatasetNotFound.open(geoId);
         }
     });
 }

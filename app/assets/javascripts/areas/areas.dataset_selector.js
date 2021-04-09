@@ -20,11 +20,6 @@ Areas.DatasetSelector = (function () {
             });
 
         popup.setPosition(position);
-
-        // Prevent people from clicking on the ETModel link
-        $("a[disabled='disabled']").on("click", function (e) {
-            e.preventDefault();
-        });
     }
 
     // Private: findDataset()

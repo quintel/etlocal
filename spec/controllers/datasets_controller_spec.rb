@@ -34,7 +34,7 @@ describe DatasetsController do
       end
 
       it 'responds to html' do
-        get :show, params: { id: dataset.id }
+        get :show, params: { id: dataset.geo_id}
 
         expect(response).to be_successful
       end

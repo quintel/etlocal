@@ -21,19 +21,19 @@ class DatasetsController < ApplicationController
     @dataset_clones = policy_scope(Dataset).clones(@dataset, current_user)
   end
 
-  # GET show.json
+  # GET show
   def show
     dataset = Dataset.find_by(geo_id: params[:id], user: User.robot)
+    @geo_id = params[:id]
 
     respond_to do |format|
       format.json { render json: dataset }
-      format.html { render template: 'datasets/index', layout: 'map' }
-    end
-  end
+      format.html do
+        render template: 'datasets/not_found', layout: 'map' and return unless dataset
 
-  # GET not_found.js
-  def not_found
-    @geo_id = params[:geo_id]
+        render layout: 'map'
+      end
+    end
   end
 
   # GET search.json

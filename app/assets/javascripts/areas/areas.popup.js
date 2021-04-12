@@ -15,7 +15,9 @@ Areas.Popup = (function () {
                     }
                 });
 
-            $(closer).on('click', this.close.bind(this));
+            if ($(closer).length > 0){
+                $(closer).on('click', this.close.bind(this));
+            }
 
             return overlay;
         },
@@ -25,7 +27,9 @@ Areas.Popup = (function () {
                 popup  = this.scope.map.getOverlays().item(0);
 
             popup.setPosition(undefined);
-            closer.blur();
+            if ($(closer).length > 0){
+                closer.blur();
+            }
             return false;
         }
     };

@@ -18,11 +18,11 @@
             = text_field_tag :q, nil, id: "search-bar", placeholder: t('click_or_search'), autocomplete: "off"
             input#search-submit type='submit' value=I18n.t('search')
 
-  #dataset-overlay
-    .button-close
-      = link_to "×", "#"
+  / #dataset-overlay
+  /   .button-close
+  /     = link_to "×", root_path
 
-    .content
+  /   .content
 
   #popup.ol-popup
     = link_to "", "#", id: 'popup-closer', class: 'ol-popup-closer'

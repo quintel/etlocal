@@ -5,7 +5,7 @@ Areas.DatasetSelector = (function () {
 
     var GROUP = 'dataset_selector';
 
-    function openPopup(position, data) {
+    function openPopup(position, data, geoId) {
         var popup   = this.areas.map.getOverlays().item(0),
             content = document.getElementById('popup-content');
 
@@ -13,11 +13,7 @@ Areas.DatasetSelector = (function () {
         $(content).find('em').html(data.group);
         $(content).find('a.dataset-open')
             .off('click')
-            .on('click', function (e) {
-                e.preventDefault();
-
-                DatasetInterface.open(data.id);
-            });
+            .on('click', function (e) { window.location = '/datasets/' + geoId });
 
         popup.setPosition(position);
     }
@@ -30,14 +26,13 @@ Areas.DatasetSelector = (function () {
     //
     function findDataset(position, feature) {
         var geoId = feature.get('id');
-
         $.ajax({
             url: "/datasets/" + geoId + ".json",
             type: 'GET',
             dataType: 'json',
             success: function (data) {
                 if (data) {
-                    openPopup.call(this, position, data);
+                    openPopup.call(this, position, data, geoId);
                 } else if (console) {
                     console.log("No dataset with " + geoId + " found");
                 }
@@ -73,14 +68,6 @@ Areas.DatasetSelector = (function () {
                 if (group === GROUP) {
                     layer.setStyle(this.styles.normal);
                 }
-            });
-
-            this.closeButtonOverlay.on("click", function (e) {
-                e.preventDefault();
-
-                $("#dataset-overlay").hide();
-                $('#dataset-overlay .content').empty();
-                $('.content-map .container #search-bar').show();
             });
         },
 

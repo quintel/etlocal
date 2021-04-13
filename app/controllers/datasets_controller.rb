@@ -1,8 +1,8 @@
 class DatasetsController < ApplicationController
-  layout false, only: %i(edit clone)
-  format 'js', only: %i(edit :clone)
+  layout false, only: %i[edit clone not_found]
+  format 'js', only: %i[edit clone not_found]
 
-  before_action :authenticate_user!, except: %i(index show edit search)
+  before_action :authenticate_user!, only: %i[download clone]
   before_action :find_dataset, only: %i(validate edit download clone)
 
   # GET index
@@ -21,11 +21,19 @@ class DatasetsController < ApplicationController
     @dataset_clones = policy_scope(Dataset).clones(@dataset, current_user)
   end
 
-  # GET show.json
+  # GET show
   def show
-    dataset = Dataset.find_by(geo_id: params[:id])
+    dataset = Dataset.find_by(geo_id: params[:id], user: User.robot)
+    @geo_id = params[:id]
 
-    render json: dataset
+    respond_to do |format|
+      format.json { render json: dataset }
+      format.html do
+        render template: 'datasets/not_found', layout: 'map' and return unless dataset
+
+        render layout: 'map'
+      end
+    end
   end
 
   # GET search.json

@@ -27,10 +27,54 @@ describe DatasetsController do
     describe "#show" do
       let(:dataset) { FactoryBot.create(:dataset, geo_id: 'test_1', name: "Test") }
 
-      it "visits show" do
-        get :show, params: { id: dataset.id }, format: :js, xhr: true
+      it 'responds to json' do
+        get :show, params: { id: dataset.id }, format: :json, xhr: true
 
         expect(response).to be_successful
+      end
+
+      it 'responds to html' do
+        get :show, params: { id: dataset.geo_id}
+
+        expect(response).to be_successful
+      end
+    end
+
+    describe '#search' do
+      subject do
+        get :search, params: { query: query }, format: :json, xhr: true
+        response
+      end
+
+      let(:dataset) { FactoryBot.create(:dataset, geo_id: 'test_1', name: "Test") }
+
+      context 'when there is one match' do
+        before { dataset }
+        let(:query) { dataset.geo_id }
+
+        it 'is successful' do
+          expect(subject).to be_successful
+        end
+
+        it 'returns the dataset' do
+          expect(JSON.parse(subject.parsed_body)[0]).to include({'id'=> dataset.geo_id, 'name'=> dataset.name })
+        end
+
+        it 'returns one object' do
+          expect(JSON.parse(subject.parsed_body).length).to eq(1)
+        end
+      end
+
+      context 'when there are no search matches' do
+        let(:query) { 'nothing' }
+
+        it 'is successful' do
+          expect(subject).to be_successful
+        end
+
+        it 'returns an empty json' do
+          expect(subject.parsed_body).to eq '[]'
+        end
       end
     end
 

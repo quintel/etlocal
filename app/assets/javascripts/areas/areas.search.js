@@ -3,24 +3,6 @@
 Areas.Search = (function () {
     'use strict';
 
-    function openPopup(geoId) {
-        $.ajax({
-            url: "/datasets/" + geoId + ".json",
-            type: 'GET',
-            dataType: 'json',
-            success: function (data) {
-                if (data) {
-                    DatasetInterface.open(data.id);
-                } else if (console) {
-                    console.log("No dataset with " + geoId + " found");
-                }
-            }.bind(this),
-            error: function (e) {
-                alert(e);
-            }
-        });
-    }
-
     function parseResults(data) {
         this.areas.popup.close();
         this.scope.find('.options').remove();
@@ -38,7 +20,7 @@ Areas.Search = (function () {
                 var option = $('<li>' + dataset.name +' (' + dataset.id +')</li>');
                 option.data('id', dataset.id);
                 option.on('click', function() {
-                    openPopup.call(self, dataset.id);
+                    window.location = '/datasets/' + dataset.id;
                 });
                 option.on('mouseover', function () {
                     $('.options li').removeClass('selected-option');
@@ -104,7 +86,7 @@ Areas.Search = (function () {
             var selected = this.scope.find('li.selected-option');
 
             if (selected.length == 1){
-                openPopup.call(this, $(selected[0]).data('id'));
+                window.location = '/datasets/' + $(selected[0]).data('id');
             }
         }
     };

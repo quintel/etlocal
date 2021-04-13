@@ -18,7 +18,7 @@ $(document).on('turbolinks:load', function () {
 
 // Simple router, get the current URL and generate correct content
 function router() {
-    const url = window.location.pathname || "/";
+    var url = window.location.pathname || "/";
     generateContent(url);
 };
 

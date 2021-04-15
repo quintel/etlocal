@@ -1,6 +1,6 @@
 nl:
   introduction:
-    title: Welkom bij de ETM Data Manager!
+    title: Welkom bij de ETM Dataset Manager!
     text: |
       <strong> Welkom!</strong></br></br>
       Met het <a target="_blank" href="https://pro.energytransitionmodel.com">
@@ -21,7 +21,10 @@ nl:
       <li>Open de dataset</li>
       <li>Bekijk alle data en bronnen die gebruikt zijn voor jouw regio</li>
       </ol>
+      <strong>Dataset toevoegen of updaten</strong></br></br>
+      Het ETM is open-source en open-access. Het onderhouden van de datasets kost tijd en doen we op aanvraag. Zou je graag een 
+      dataset toegevoegd of geüpdatet willen hebben? Neem dan contact op met <a href="https://quintel.com/contact"
+      target="_blank">Quintel</a>, de makers van het ETM.</br></br>
       <strong>Vragen?</strong></br></br>
-      Heb je vragen of hulp nodig? Neem dan contact op met <a href="https://quintel.com/contact"
-      target="_blank">Quintel</a>, de makers van het <a target="_blank" href="https://pro.energytransitionmodel.com">
-      Energietransitiemodel</a>.
+      Heb je vragen? Bijvoorbeeld over het gebruik van deze dataset manager of de gebruikte bronnen? Neem dan ook contact op met <a href="https://quintel.com/contact".
+      target="_blank">Quintel</a>.

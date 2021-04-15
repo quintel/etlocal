@@ -160,7 +160,7 @@ nl:
         enkel getoond op de
         <a target="_blank" href="https://pro.energytransitionmodel.com/regions/nl">"CO<sub>2</sub>-voetafdruk"</a>.
       area_electricity_grid_costs: |
-        Huidige totale huishoudelijke investeringkosten per netniveau
+        Huidige totale investeringskosten per netniveau
       area_electricity_grid_capacity: |
         Gemiddeld percentage reservecapaciteit per netniveau
       area_electricity_grid_reinforcement: |

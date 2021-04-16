@@ -4,13 +4,49 @@ groups:
     items:
     - key: co2_emission_1990
       unit: 'Mton'
-  - header: area_other_ghg
+  - header: area_ghg
+  - header: energetic_other_ghg
     items:
-    - key: other_emission_built_environment
+    - key: energetic_emissions_other_ghg_households
       unit: 'Mton'
-    - key: other_emission_transport
+    - key: energetic_emissions_other_ghg_buildings
       unit: 'Mton'
-    - key: other_emission_industry_energy
+    - key: energetic_emissions_other_ghg_transport
       unit: 'Mton'
-    - key: other_emission_agriculture
+    - key: energetic_emissions_other_ghg_agriculture
       unit: 'Mton'
+    - key: energetic_emissions_other_ghg_industry
+      unit: 'Mton'
+    - key: energetic_emissions_other_ghg_energy
+      unit: 'Mton'
+  - header: non_energetic_co2
+    items:
+    - key: non_energetic_emissions_co2_chemical_industry
+      unit: 'Mton'
+    - key: non_energetic_emissions_co2_waste_management
+      unit: 'Mton'
+    - key: non_energetic_emissions_co2_other_industry
+      unit: 'Mton'
+    - key: non_energetic_emissions_co2_agriculture_manure
+      unit: 'Mton'
+    - key: non_energetic_emissions_co2_agriculture_soil_cultivation
+      unit: 'Mton'
+    - key: indirect_emissions_co2
+      unit: 'Mton'
+  - header: non_energetic_other_ghg
+    items:
+    - key: non_energetic_emissions_other_ghg_chemical_industry
+      unit: 'Mton'
+    - key: non_energetic_emissions_other_ghg_waste_management
+      unit: 'Mton'
+    - key: non_energetic_emissions_other_ghg_other_industry
+      unit: 'Mton'
+    - key: non_energetic_emissions_other_ghg_agriculture_manure
+      unit: 'Mton'
+    - key: non_energetic_emissions_other_ghg_agriculture_soil_cultivation
+      unit: 'Mton'
+    - key: non_energetic_emissions_other_ghg_agriculture_fermentation
+      unit: 'Mton'
+    - key: non_energetic_emissions_other_ghg_agriculture_other
+      unit: 'Mton'
+

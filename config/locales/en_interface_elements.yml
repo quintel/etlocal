@@ -12,10 +12,25 @@ en:
         number_of_inhabitants: Number of inhabitants
 
         co2_emission_1990: 'CO<sub>2</sub> emissions in 1990'
-        other_emission_built_environment: 'Built environment'
-        other_emission_transport: 'Transport sector'
-        other_emission_industry_energy: 'Industry and energy sector'
-        other_emission_agriculture: 'Agriculture'
+        energetic_emissions_other_ghg_households: "Households"
+        energetic_emissions_other_ghg_buildings: "Buildings"
+        energetic_emissions_other_ghg_transport: "Transport"
+        energetic_emissions_other_ghg_agriculture: "Agriculture"
+        energetic_emissions_other_ghg_industry: "Industry"
+        energetic_emissions_other_ghg_energy: "Energy sector"
+        non_energetic_emissions_co2_chemical_industry: "Chemical industry"
+        non_energetic_emissions_co2_other_industry: "Other industry sectors"
+        non_energetic_emissions_co2_waste_management: "Waste management"
+        non_energetic_emissions_co2_agriculture_manure: "Agriculture - manure"
+        non_energetic_emissions_co2_agriculture_soil_cultivation: "Agriculture - soil cultivation"
+        indirect_emissions_co2: "Indirect CO<sub>2</sub> emissions"
+        non_energetic_emissions_other_ghg_chemical_industry: "Chemical industry"
+        non_energetic_emissions_other_ghg_other_industry: "Other industry sectors"
+        non_energetic_emissions_other_ghg_waste_management: "Waste management"
+        non_energetic_emissions_other_ghg_agriculture_fermentation: "Agriculture - fermentation"
+        non_energetic_emissions_other_ghg_agriculture_manure: "Agriculture - manure"
+        non_energetic_emissions_other_ghg_agriculture_soil_cultivation: "Agriculture - soil cultivation"
+        non_energetic_emissions_other_ghg_agriculture_other: "Agriculture - other"
         lv_net_total_costs_present: Low voltage grid
         lv_mv_trafo_total_costs_present: LV-MV transformers
         mv_net_total_costs_present: Medium voltage grid

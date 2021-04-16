@@ -4,7 +4,7 @@ nl:
       area: |
         In de linkerbalk vind je verschillende onderwerpen die gaan over energievraag, energieproductie
         en algemene informatie over de regio, zoals geografie, emissies, infrastructuur. Binnen elk onderwerp vind je alle bijbehorende datavelden. Door te klikken op het "i"-icoontje
-        links van het dataveld vind je meer informatie over de data die getoond wordt, welke bronnen gebruikt zijn en of dit getal recentelijk veranderd is. 
+        links van het dataveld vind je meer informatie over de data die getoond wordt, welke bronnen gebruikt zijn en of dit getal recentelijk veranderd is.
         Voor een overzicht van de gebruikte bronnen voor Nederlandse regio's kijk op onze
         <a target="_blank" href="https://docs.energytransitionmodel.com/main/data-sources-local">documentatie</a>.
         <strong>Jaar</strong>
@@ -116,7 +116,7 @@ nl:
         In dit tabblad vind je hoeveel restwarmte er beschikbaar is voor verschillende industriële sectoren.
         Het Energietransitiemodel maakt een onderscheid tussen restwarmte uit industriële processen en
         restwarmte uit rookgassen. De restwarmte kan worden ingevoed op een warmtenet voor de verwarming van woningen en gebouwen.
-        Meer informatie over industriële restwarmte kan gevonden worden in onze 
+        Meer informatie over industriële restwarmte kan gevonden worden in onze
         <a target="_blank" href="https://docs.energytransitionmodel.com/main/residual-heat-industry">
         documentatie</a>.
       other: |
@@ -155,10 +155,12 @@ nl:
         Het ETM vergelijkt de toekomstige CO<sub>2</sub>-uitstoot met de emissieniveaus van 1990,
         aangezien dit een veelvoorkomend referentiepunt is in het (inter)nationale klimaatbeleid.
         Voor een overzicht van de methode die het ETM hanteert, kijk op onze <a target="_blank" href="https://docs.energytransitionmodel.com/main/co2-1990-emissions">documentatie</a>.
-      area_other_ghg: |
-        De overige broeikasgassen vallen buiten de scope van het ETM en worden
-        enkel getoond op de
-        <a target="_blank" href="https://pro.energytransitionmodel.com/regions/nl">"CO<sub>2</sub>-voetafdruk"</a>.
+      area_ghg: |
+        De uitstoot van CO<sub>2</sub> door energiegebruik ('energetische uitstoot') wordt door het ETM uitgerekend
+        op basis van de energieverbruiken per sector. Naast energetische CO<sub>2</sub> is er ook nog energetische uitstoot van
+        andere broeikasgassen (zoals methaan en lachgas) en niet-energetische uitstoot van broeikasgassen (bijv. van dieren). Deze uitstoot
+        komt in het ETM aan bod in de <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/emissions/other_emissions">emissiessectie</a>.
+        Hieronder staat de huidige uitstoot van deze emissiescategorieën. De eenheid is megaton CO<sub>2</sub>-equivalenten.
       area_electricity_grid_costs: |
         Huidige totale investeringskosten per netniveau
       area_electricity_grid_capacity: |
@@ -169,7 +171,7 @@ nl:
         De leidinglengtes van warmtenetten worden gebruikt om een goede kosteninschatting te maken voor de warmtenetten. Kijk op
         onze <a target="_blank" href="https://docs.energytransitionmodel.com/main/heat-infrastructure-costs">documentatie</a>
         voor meer informatie hierover.
-      households_housing_stock_distribution: | 
+      households_housing_stock_distribution: |
         Hieronder zie je de verdeling van huistypen in jouw regio.
       households_insulation: |
         Deze percentages geven de warmtevraagreductie t.o.v. een slecht geïsoleerd huis aan (label G).
@@ -191,13 +193,13 @@ nl:
       households_coal_distribution: |
         Hieronder zie je welk percentage van de totale huishoudelijke kolenvraag gebruikt wordt
         voor warm water (douchen, afwassen etc.) en ruimteverwarming.
-      households_network_gas_space_heating_hot_water_distribution: | 
+      households_network_gas_space_heating_hot_water_distribution: |
         Hieronder zie je welk percentage van de totale huishoudelijke gasvraag voor ruimteverwarming en warm water gebruikt wordt door deze technologieën.
       households_electricity_space_heating_hot_water_distribution: |
         Hieronder zie je welk percentage van de totale huishoudelijke elektriciteitsvraag voor ruimteverwarming en warm water gebruikt wordt door deze technologieën.
-      households_electricity_cooking_distribution: | 
+      households_electricity_cooking_distribution: |
         Hieronder zie je welk percentage van de totale huishoudelijke elektriciteitsvraag voor koken gebruikt wordt door deze verschillende kooktoestellen.
-      households_electricity_lighting_distribution: | 
+      households_electricity_lighting_distribution: |
         Hieronder zie je welk percentage van de totale huishoudelijke elektriciteitsvraag voor verlichting gebruikt wordt door deze verschillende lampen.
       households_electricity_appliances_distribution: |
         Hieronder zie je welk percentage van de totale huishoudelijke elektriciteitsvraag voor apparaten gebruikt wordt door deze verschillende huishoudelijke apparaten.
@@ -217,11 +219,11 @@ nl:
         Hieronder zie je welk percentage van de totale olievraag gebruikt wordt voor deze toepassingen.
       buildings_coal_distribution: |
         Hieronder zie je welk percentage van de totale kolenvraag gebruikt wordt voor deze toepassingen.
-      buildings_network_gas_space_heating_distribution: | 
+      buildings_network_gas_space_heating_distribution: |
         Hieronder zie je welk percentage van de totale gasvraag voor ruimteverwarming gebruikt wordt door deze technologieën.
       buildings_electricity_space_heating_distribution: |
         Hieronder zie je welk percentage van de totale elektriciteitsvraag voor ruimteverwarming gebruikt wordt door deze technologieën.
-      buildings_electricity_lighting_distribution: | 
+      buildings_electricity_lighting_distribution: |
         Hieronder zie je welk percentage van de totale elektriciteitsvraag voor verlichting gebruikt wordt door deze verschillende lampen.
       buildings_electricity_cooling_distribution: |
         Hieronder zie je welk percentage van de totale elektriciteitsvraag voor koelen gebruikt wordt door deze verschillende koelapparaten.

@@ -2,9 +2,9 @@ en:
   descriptions:
     groups:
       area: |
-        In the left bar you will find various topics related to energy demand, energy production and general 
-        information about the region, such as geography, emissions, infrastructure. Within each topic you will 
-        find all associated data fields. By clicking on the "i" icon to the left of the data field you will 
+        In the left bar you will find various topics related to energy demand, energy production and general
+        information about the region, such as geography, emissions, infrastructure. Within each topic you will
+        find all associated data fields. By clicking on the "i" icon to the left of the data field you will
         find more information about the data that is displayed, which sources have been used and whether this number has recently changed.
         For an overview of the sources used for Dutch regions, see our <a target="_blank" href="https://docs.energytransitionmodel.com/main/data-sources-local">documentation</a>.
         <strong> Year </strong>
@@ -18,7 +18,7 @@ en:
         You can see how high the current costs of the electricity network are, how much
         capacity is still available on the network and how expensive future expansions will be
         to be. Have a look at our <a target="_blank" href="https://docs.energytransitionmodel.com/main/network">documentation</a>
-        for an explanation of the electricity network calculation in the ETM. For heat networks you will find information about the pipe lengths on this page. 
+        for an explanation of the electricity network calculation in the ETM. For heat networks you will find information about the pipe lengths on this page.
       households: |
         In this section you will find information about the household sector in this area.
       households_energy_demand: |
@@ -31,7 +31,7 @@ en:
         In this tab you will find information about various characteristics of the housing stock and population.
         How many inhabitants are there? How many houses are there and what types are there? How well are these houses insulated?
         You can also see how large the total roof surface is that is suitable for
-        solar panels and which part of the apartments is connected to block heating. 
+        solar panels and which part of the apartments is connected to block heating.
       households_applications: |
         In this tab you can see how energy is used by households per energy carrier. E.g. What
         percentage of natural gas demand in households is used for space heating? And what
@@ -52,7 +52,7 @@ en:
         buildings sector.
       buildings_building_stock: |
         In this tab you will find information about the building stock: how many buildings are there in your region? How
-        well are these buildings insulated? And how large is the suitable roof surface for solar panels on these buildings? 
+        well are these buildings insulated? And how large is the suitable roof surface for solar panels on these buildings?
       buildings_applications: |
         In this tab you can see how energy is used in the buildings sector per energy carrier.
         E.g. What percentage of electricity demand in buildings is used for space heating? And what
@@ -62,15 +62,15 @@ en:
       transport: |
         In this section you will find information about the transport sector in this area.
       transport_road_transport: |
-        In this tab you will find information about road transport. How many cars are there? 
-        How many passenger kilometers are driven by bicycles? How much fuel does road traffic 
-        consume? You will also find information about the distribution of fuel consumption over 
-        different types of transport. How much of the gasoline used for road traffic goes 
-        to cars? And how much to buses? 
+        In this tab you will find information about road transport. How many cars are there?
+        How many passenger kilometers are driven by bicycles? How much fuel does road traffic
+        consume? You will also find information about the distribution of fuel consumption over
+        different types of transport. How much of the gasoline used for road traffic goes
+        to cars? And how much to buses?
       transport_rail_transport: |
-        In this tab you will find the energy use by rail transport. You can also see how fuel consumption is distributed 
-        over different rail technologies. How much of the electricity used goes to passenger trains? 
-        And how many to trams? 
+        In this tab you will find the energy use by rail transport. You can also see how fuel consumption is distributed
+        over different rail technologies. How much of the electricity used goes to passenger trains?
+        And how many to trams?
       transport_ship_transport: |
         In this tab you will find the fuel use of inland ship transport in this area. Note: the
         energy use of international shipping is out of scope here. In the Energy Transition Model
@@ -110,12 +110,12 @@ en:
         machinery or textile.
       industry_heat_chp: |
         In this tab you can see how much energy is used for Combined Heat and Power (CHP) and other heaters
-        in industrial firms. These are collective or central heating appliances that supply steam or heat to industrial companies. 
-        The demand for this heat can be found in the tabs for the various industrial sectors. 
+        in industrial firms. These are collective or central heating appliances that supply steam or heat to industrial companies.
+        The demand for this heat can be found in the tabs for the various industrial sectors.
       industry_residual_heat: |
         In this tab you can see how much residual heat is available in different industrial processes.
-        The Energy Transition Model distinguishes between residual heat from industrial processes and residual 
-        heat from flue gases. The residual heat can be fed into a heat network for heating homes and buildings. 
+        The Energy Transition Model distinguishes between residual heat from industrial processes and residual
+        heat from flue gases. The residual heat can be fed into a heat network for heating homes and buildings.
         More information about industrial residual heat can be found in our
         <a target="_blank" href="https://docs.energytransitionmodel.com/main/residual-heat-industry">
         documentation</a>.
@@ -128,7 +128,7 @@ en:
       energy: |
         In this section you will find information about the (central) energy sector in this area.
       energy_energy_demand: |
-        In this tab you will find information about the own use and the grid losses of the electricity grid. 
+        In this tab you will find information about the own use and the grid losses of the electricity grid.
       energy_renewable_electricity_production: |
         In this tab you will find how much electricity is produced from renewable sources in this
         area. More information about the various plant types can be found in the
@@ -149,18 +149,19 @@ en:
         <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants">
         Energy Transition Model</a>.
       energy_biomass:
-        In this tab you will find information about green gas, waste and the potential of biomass. 
+        In this tab you will find information about green gas, waste and the potential of biomass.
     subgroups:
       area_co2_emission_1990: |
         The ETM compares future CO<sub>2</sub> emissions with 1990 emission levels,
         as this is a frequently occurring point of reference in (inter) national climate policy.
         For an overview of the method used by the ETM, see our <a target="_blank" href="https://docs.energytransitionmodel.com/main/co2-1990-emissions">documentatiom</a>.
-      area_other_ghg: |
-        The other greenhouse gases fall outside the scope of the ETM and are
-        only shown on the
-        <a target="_blank" href="https://pro.energytransitionmodel.com/regions/nl">"CO<sub>2</sub> footprint"</a>.
+      area_ghg: |
+        The ETM calculates the energetic emissions of CO<sub>2</sub> based on the energy demands per sector. Apart from energetic CO<sub>2</sub>
+        regions also have energetic emissions from other greenhouse gases (such as methane and nitrous oxide) as well as non-energetic emissions
+        (for example from animals). These emissions are included in the ETM in the <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/emissions/other_emissions">emissions section</a>.
+        Below you can find the present emissions for these emission categories. The unit is megaton CO<sub>2</sub> equivalent.
       area_electricity_grid_costs: |
-        Current total investment costs per grid level 
+        Current total investment costs per grid level
       area_electricity_grid_capacity: |
         Gemiddeld percentage reservecapaciteit per netniveau
       area_electricity_grid_reinforcement: |
@@ -169,7 +170,7 @@ en:
         The pipe lengths of district heating are used to make a good cost estimate for the heat networks. Have a look at our
         <a target="_blank" href="https://docs.energytransitionmodel.com/main/heat-infrastructure-costs">documentation</a>
         for more information on this cost calculation.
-      households_housing_stock_distribution: | 
+      households_housing_stock_distribution: |
         Below you can see the breakdown of housing types in your region.
       households_insulation: |
         These percentages indicate the heat demand reduction compared to a poorly insulated house (label G).
@@ -193,16 +194,16 @@ en:
       households_coal_distribution: |
         Below you can see what percentage of total household coal demand is used by these
         applications.
-      households_network_gas_space_heating_hot_water_distribution: | 
-        Below you can see what percentage of total household natural gas demand for space 
+      households_network_gas_space_heating_hot_water_distribution: |
+        Below you can see what percentage of total household natural gas demand for space
         heating and hot water is used by these technologies.
       households_electricity_space_heating_hot_water_distribution: |
-        Below you can see what percentage of total household electricity demand for space 
+        Below you can see what percentage of total household electricity demand for space
         heating and hot water is used by these heating technologies.
-      households_electricity_cooking_distribution: | 
+      households_electricity_cooking_distribution: |
         Below you can see what percentage of total household electricity demand for cooking is used by
         these different cooking technologies.
-      households_electricity_lighting_distribution: | 
+      households_electricity_lighting_distribution: |
         Below you can see what percentage of total household electricity demand for lighting is used by
         these different lighting technologies.
       households_electricity_appliances_distribution: |
@@ -225,11 +226,11 @@ en:
         Below you can see what percentage of total oil demand is used by these applications.
       buildings_coal_distribution: |
         Below you can see what percentage of total coal demand is used by these applications.
-      buildings_network_gas_space_heating_distribution: | 
+      buildings_network_gas_space_heating_distribution: |
         Below you can see what percentage of total gas demand for space heating is used by these technologies.
       buildings_electricity_space_heating_distribution: |
         Below you can see what percentage of total electricity demand for space heating is used by these technologies.
-      buildings_electricity_lighting_distribution: | 
+      buildings_electricity_lighting_distribution: |
         Below you can see what percentage of total electricity demand for lighting is used by
         these different lighting technologies.
       buildings_electricity_cooling_distribution: |
@@ -237,27 +238,27 @@ en:
         these different cooling technologies.
       industry_gas_fuelmix: |
         The percentages below indicate the composition of the fuel used in gas-fired CHPs. In some cases
-        oil or bio-oil is blended with natural gas. 
+        oil or bio-oil is blended with natural gas.
       industry_heat: |
-        Below you can see how much fuel has been used per CHP type and central heating boiler. The heat produced is supplied 
+        Below you can see how much fuel has been used per CHP type and central heating boiler. The heat produced is supplied
         to industrial sectors with a demand for (central) heat. More information about the various plant types can be found in the
         <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/demand/industry/heat-network-sources">
         Energy Transition Model</a>.
       industry_paper_electricity: |
         The percentages below indicate how much of the final demand electricity is used to generate heat and how much
-        for industrial processes (machines, lighting, etc.). 
+        for industrial processes (machines, lighting, etc.).
       industry_food_electricity: |
         The percentages below indicate how much of the final demand electricity is used to generate heat and how much
         for industrial processes (machines, lighting, etc.).
       energy_gas_network: |
-        How much green gas and regasified LNG is mixed in the gas network? The remaining gas demand in the ETM is supplied by natural gas. 
+        How much green gas and regasified LNG is mixed in the gas network? The remaining gas demand in the ETM is supplied by natural gas.
       energy_greengas_production: |
         Below you can see which production technologies have been used for the production of green gas. More information on these technologies can be found in the
         <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/biomass/green-gas-production">
         Energy Transition Model</a>.
       energy_waste_mix: |
         Below you can see the composition of the waste mix in this region. How much of the waste has a biogenic origin (such as organic waste)
-        and how much a non-biogenic origin (eg plastics)? This is only relevant for regions with waste incineration. 
+        and how much a non-biogenic origin (eg plastics)? This is only relevant for regions with waste incineration.
       energy_potentials: |
-        How much biomass can potentially be extracted in this region? Click on the 'i' for more information on each category. 
+        How much biomass can potentially be extracted in this region? Click on the 'i' for more information on each category.
 

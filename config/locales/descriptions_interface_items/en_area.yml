@@ -5,84 +5,142 @@ en:
         This value is used to determine the potential for coastal wind turbines.
       areable_land: |
         This value determines the maximum area available for wind turbines on land and ground mounted
-        solar PV plants. 
+        solar PV plants.
+      energetic_emissions_other_ghg_households: |
+        This entails all emissions in the housholds sector, excluding CO<sub>2</sub> emissions.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 1.A.4.b
+      energetic_emissions_other_ghg_buildings: |
+        This entails all emissions in the services sector, excluding CO<sub>2</sub> emissions.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 1.A.4.a, 1.A.5
+      energetic_emissions_other_ghg_transport: |
+        This entails all emissions in the transport sector, excluding CO<sub>2</sub> emissions.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 1.A.3
+      energetic_emissions_other_ghg_agriculture: |
+        This entails all emissions in the agriculture sector, excluding CO<sub>2</sub> emissions.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 1.A.4.c
+      energetic_emissions_other_ghg_industry: |
+        This entails all emissions in the industry sector, excluding CO<sub>2</sub> emissions.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 1.A.2
+      energetic_emissions_other_ghg_energy: |
+        This entails all emissions in the energy sector, excluding CO<sub>2</sub> emissions.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 1.A.1, 1.B
+      non_energetic_emissions_co2_chemical_industry: |
+        This entails all non-energetic CO<sub>2</sub> emissions in the chemical sector, excluding fertilizers.
+        The non-energetic emissions from the fertilizers sector is calculated in the ETM based on feedstock use.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 2.B.2-2.B.10
+      non_energetic_emissions_co2_waste_management: |
+        This entails all non-energetic CO<sub>2</sub> emissions in the waste management sector.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 5
+      non_energetic_emissions_co2_other_industry: |
+        This entails all non-energetic CO<sub>2</sub> emissions in the other industry sectors.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 2.A, 2.C-2.H
+      non_energetic_emissions_co2_agriculture_manure: |
+        This entails all non-energetic CO<sub>2</sub> emissions in agriculture caused by manure.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 3.B, 3.H, 3.I
+      non_energetic_emissions_co2_agriculture_soil_cultivation: |
+        This entails all non-energetic CO<sub>2</sub> emissions in agriculture caused by soil cultivation.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 3.C, 3.D, 3.E, 3.G
+      indirect_emissions_co2: |
+        This entails all (indirect) CO<sub>2</sub> emissions caused by atmospheric oxidation and organic compounds.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 'indirect emissions'
+      non_energetic_emissions_other_ghg_chemical_industry: |
+        This entails all non-energetic greenhouse gas emissions in the chemical sector, excluding CO<sub>2</sub> emissions.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 2.B
+      non_energetic_emissions_other_ghg_other_industry: |
+        This entails all non-energetic greenhouse gas emissions in the other industry sectors, excluding CO<sub>2</sub> emissions.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 2.A, 2.C-2.H
+      non_energetic_emissions_other_ghg_waste_management: |
+        This entails all non-energetic greenhouse gas emissions in the waste management, excluding CO<sub>2</sub> emissions.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 5
+      non_energetic_emissions_other_ghg_agriculture_fermentation: |
+        This entails all non-energetic greenhouse gas emissions in agriculture due to fermentation, excluding CO<sub>2</sub> emissions.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 3.A
+      non_energetic_emissions_other_ghg_agriculture_manure: |
+        This entails all non-energetic greenhouse gas emissions in agriculture due to manure use, excluding CO<sub>2</sub> emissions.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 3.B, 3.H, 3.I
+      non_energetic_emissions_other_ghg_agriculture_soil_cultivation: |
+        This entails all non-energetic greenhouse gas emissions in agriculture due to soil cultivation, excluding CO<sub>2</sub> emissions.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 3.C, 3.D, 3.E, 3.G
+      non_energetic_emissions_other_ghg_agriculture_other: |
+        This entails all non-energetic greenhouse gas emissions in agriculture due to other activities, excluding CO<sub>2</sub> emissions.
+        In the Common Reporting Format of the UNFCCC these emissions fall into category: 3.F, 3.J
       heat_length_of_distribution_pipelines_in_meter_per_residence_object_first_bracket: |
-        The required length for distribution pipelines for district heating varies with the number of 
-        connections. It makes sense to first to connect densely populated neighborhoods 
-        where fewer meters of pipeline are needed per connection than in less densely populated 
-        neighborhoods. The ETM takes this into account by calculating five 'steps' in average 
-        lengths per connection. The more houses that are connected, the higher the average length 
-        per connection. Here you can indicate the average pipe length with which the ETM calculates 
-        if (up to) 20% of the houses and buildings are connected. 
+        The required length for distribution pipelines for district heating varies with the number of
+        connections. It makes sense to first to connect densely populated neighborhoods
+        where fewer meters of pipeline are needed per connection than in less densely populated
+        neighborhoods. The ETM takes this into account by calculating five 'steps' in average
+        lengths per connection. The more houses that are connected, the higher the average length
+        per connection. Here you can indicate the average pipe length with which the ETM calculates
+        if (up to) 20% of the houses and buildings are connected.
       heat_length_of_distribution_pipelines_in_meter_per_residence_object_second_bracket: |
-        The required length for distribution pipelines for district heating varies with the number of 
-        connections. It makes sense to first to connect densely populated neighborhoods 
-        where fewer meters of pipeline are needed per connection than in less densely populated 
-        neighborhoods. The ETM takes this into account by calculating five 'steps' in average 
-        lengths per connection. The more houses that are connected, the higher the average length 
-        per connection. Here you can indicate the average pipe length with which the ETM calculates 
+        The required length for distribution pipelines for district heating varies with the number of
+        connections. It makes sense to first to connect densely populated neighborhoods
+        where fewer meters of pipeline are needed per connection than in less densely populated
+        neighborhoods. The ETM takes this into account by calculating five 'steps' in average
+        lengths per connection. The more houses that are connected, the higher the average length
+        per connection. Here you can indicate the average pipe length with which the ETM calculates
         if (up to) 20% of the houses and buildings are connected.
       heat_length_of_distribution_pipelines_in_meter_per_residence_object_third_bracket: |
-        The required length for distribution pipelines for district heating varies with the number of 
-        connections. It makes sense to first to connect densely populated neighborhoods 
-        where fewer meters of pipeline are needed per connection than in less densely populated 
-        neighborhoods. The ETM takes this into account by calculating five 'steps' in average 
-        lengths per connection. The more houses that are connected, the higher the average length 
-        per connection. Here you can indicate the average pipe length with which the ETM calculates 
+        The required length for distribution pipelines for district heating varies with the number of
+        connections. It makes sense to first to connect densely populated neighborhoods
+        where fewer meters of pipeline are needed per connection than in less densely populated
+        neighborhoods. The ETM takes this into account by calculating five 'steps' in average
+        lengths per connection. The more houses that are connected, the higher the average length
+        per connection. Here you can indicate the average pipe length with which the ETM calculates
         if (up to) 20% of the houses and buildings are connected.
       heat_length_of_distribution_pipelines_in_meter_per_residence_object_fourth_bracket: |
-        The required length for distribution pipelines for district heating varies with the number of 
-        connections. It makes sense to first to connect densely populated neighborhoods 
-        where fewer meters of pipeline are needed per connection than in less densely populated 
-        neighborhoods. The ETM takes this into account by calculating five 'steps' in average 
-        lengths per connection. The more houses that are connected, the higher the average length 
-        per connection. Here you can indicate the average pipe length with which the ETM calculates 
+        The required length for distribution pipelines for district heating varies with the number of
+        connections. It makes sense to first to connect densely populated neighborhoods
+        where fewer meters of pipeline are needed per connection than in less densely populated
+        neighborhoods. The ETM takes this into account by calculating five 'steps' in average
+        lengths per connection. The more houses that are connected, the higher the average length
+        per connection. Here you can indicate the average pipe length with which the ETM calculates
         if (up to) 20% of the houses and buildings are connected.
       heat_length_of_distribution_pipelines_in_meter_per_residence_object_fifth_bracket: |
-        The required length for distribution pipelines for district heating varies with the number of 
-        connections. It makes sense to first to connect densely populated neighborhoods 
-        where fewer meters of pipeline are needed per connection than in less densely populated 
-        neighborhoods. The ETM takes this into account by calculating five 'steps' in average 
-        lengths per connection. The more houses that are connected, the higher the average length 
-        per connection. Here you can indicate the average pipe length with which the ETM calculates 
+        The required length for distribution pipelines for district heating varies with the number of
+        connections. It makes sense to first to connect densely populated neighborhoods
+        where fewer meters of pipeline are needed per connection than in less densely populated
+        neighborhoods. The ETM takes this into account by calculating five 'steps' in average
+        lengths per connection. The more houses that are connected, the higher the average length
+        per connection. Here you can indicate the average pipe length with which the ETM calculates
         if (up to) 20% of the houses and buildings are connected.
       heat_length_of_connection_pipelines_in_meter_per_residence_first_bracket: |
-        The required length for distribution pipelines for district heating varies with the number of 
-        connections. It makes sense to first to connect densely populated neighborhoods 
-        where fewer meters of pipeline are needed per connection than in less densely populated 
-        neighborhoods. The ETM takes this into account by calculating five 'steps' in average 
-        lengths per connection. The more houses that are connected, the higher the average length 
-        per connection. Here you can indicate the average pipe length with which the ETM calculates 
+        The required length for distribution pipelines for district heating varies with the number of
+        connections. It makes sense to first to connect densely populated neighborhoods
+        where fewer meters of pipeline are needed per connection than in less densely populated
+        neighborhoods. The ETM takes this into account by calculating five 'steps' in average
+        lengths per connection. The more houses that are connected, the higher the average length
+        per connection. Here you can indicate the average pipe length with which the ETM calculates
         if (up to) 20% of the houses and buildings are connected.
       heat_length_of_connection_pipelines_in_meter_per_residence_second_bracket: |
-        The required length for distribution pipelines for district heating varies with the number of 
-        connections. It makes sense to first to connect densely populated neighborhoods 
-        where fewer meters of pipeline are needed per connection than in less densely populated 
-        neighborhoods. The ETM takes this into account by calculating five 'steps' in average 
-        lengths per connection. The more houses that are connected, the higher the average length 
-        per connection. Here you can indicate the average pipe length with which the ETM calculates 
+        The required length for distribution pipelines for district heating varies with the number of
+        connections. It makes sense to first to connect densely populated neighborhoods
+        where fewer meters of pipeline are needed per connection than in less densely populated
+        neighborhoods. The ETM takes this into account by calculating five 'steps' in average
+        lengths per connection. The more houses that are connected, the higher the average length
+        per connection. Here you can indicate the average pipe length with which the ETM calculates
         if (up to) 20% of the houses and buildings are connected.
       heat_length_of_connection_pipelines_in_meter_per_residence_third_bracket: |
-        The required length for distribution pipelines for district heating varies with the number of 
-        connections. It makes sense to first to connect densely populated neighborhoods 
-        where fewer meters of pipeline are needed per connection than in less densely populated 
-        neighborhoods. The ETM takes this into account by calculating five 'steps' in average 
-        lengths per connection. The more houses that are connected, the higher the average length 
-        per connection. Here you can indicate the average pipe length with which the ETM calculates 
+        The required length for distribution pipelines for district heating varies with the number of
+        connections. It makes sense to first to connect densely populated neighborhoods
+        where fewer meters of pipeline are needed per connection than in less densely populated
+        neighborhoods. The ETM takes this into account by calculating five 'steps' in average
+        lengths per connection. The more houses that are connected, the higher the average length
+        per connection. Here you can indicate the average pipe length with which the ETM calculates
         if (up to) 20% of the houses and buildings are connected.
       heat_length_of_connection_pipelines_in_meter_per_residence_fourth_bracket: |
-        The required length for distribution pipelines for district heating varies with the number of 
-        connections. It makes sense to first to connect densely populated neighborhoods 
-        where fewer meters of pipeline are needed per connection than in less densely populated 
-        neighborhoods. The ETM takes this into account by calculating five 'steps' in average 
-        lengths per connection. The more houses that are connected, the higher the average length 
-        per connection. Here you can indicate the average pipe length with which the ETM calculates 
+        The required length for distribution pipelines for district heating varies with the number of
+        connections. It makes sense to first to connect densely populated neighborhoods
+        where fewer meters of pipeline are needed per connection than in less densely populated
+        neighborhoods. The ETM takes this into account by calculating five 'steps' in average
+        lengths per connection. The more houses that are connected, the higher the average length
+        per connection. Here you can indicate the average pipe length with which the ETM calculates
         if (up to) 20% of the houses and buildings are connected.
       heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket: |
-        The required length for distribution pipelines for district heating varies with the number of 
-        connections. It makes sense to first to connect densely populated neighborhoods 
-        where fewer meters of pipeline are needed per connection than in less densely populated 
-        neighborhoods. The ETM takes this into account by calculating five 'steps' in average 
-        lengths per connection. The more houses that are connected, the higher the average length 
-        per connection. Here you can indicate the average pipe length with which the ETM calculates 
+        The required length for distribution pipelines for district heating varies with the number of
+        connections. It makes sense to first to connect densely populated neighborhoods
+        where fewer meters of pipeline are needed per connection than in less densely populated
+        neighborhoods. The ETM takes this into account by calculating five 'steps' in average
+        lengths per connection. The more houses that are connected, the higher the average length
+        per connection. Here you can indicate the average pipe length with which the ETM calculates
         if (up to) 20% of the houses and buildings are connected.

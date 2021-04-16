@@ -20,7 +20,10 @@ nl:
     groups:
       #area
       area_co2_emission_1990: "CO<sub>2</sub>-emissies 1990"
-      area_other_ghg: "Huidige uitstoot overige broeikasgassen"
+      area_ghg: "Uitstoot broeikasgassen"
+      energetic_other_ghg: "Energetische uitstoot broeikasgassen (excl. CO<sub>2</sub>)"
+      non_energetic_co2: "Niet-energetische uitstoot CO<sub>2</sub>"
+      non_energetic_other_ghg: "Niet-energetische uitstoot broeikasgassen (excl. CO<sub>2</sub>)"
       area_electricity_grid_costs: Kosten elektriciteitsnetwerk
       area_electricity_grid_capacity: Beschikbare capaciteit huidig elektriciteitsnet
       area_electricity_grid_reinforcement: Verzwaring elektriciteitsnet

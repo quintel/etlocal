@@ -13,10 +13,25 @@ nl:
         number_of_inhabitants: Aantal inwoners
 
         co2_emission_1990: 'CO<sub>2</sub>-emissies in 1990'
-        other_emission_built_environment: 'Gebouwde omgeving'
-        other_emission_transport: 'Transportsector'
-        other_emission_industry_energy: 'Industrie en energiesector'
-        other_emission_agriculture: 'Landbouw'
+        energetic_emissions_other_ghg_households: "Huishoudens"
+        energetic_emissions_other_ghg_buildings: "Gebouwen"
+        energetic_emissions_other_ghg_transport: "Transport"
+        energetic_emissions_other_ghg_agriculture: "Landbouw"
+        energetic_emissions_other_ghg_industry: "Industrie"
+        energetic_emissions_other_ghg_energy: "Energiesector"
+        non_energetic_emissions_co2_chemical_industry: "Chemie"
+        non_energetic_emissions_co2_other_industry: "Overige industriesectoren"
+        non_energetic_emissions_co2_waste_management: "Afvalbeheer"
+        non_energetic_emissions_co2_agriculture_manure: "Landbouw - bemesting"
+        non_energetic_emissions_co2_agriculture_soil_cultivation: "Landbouw - landgebruik"
+        indirect_emissions_co2: "Indirecte CO<sub>2</sub>-emissies"
+        non_energetic_emissions_other_ghg_chemical_industry: "Chemie"
+        non_energetic_emissions_other_ghg_other_industry: "Overige industriesectoren"
+        non_energetic_emissions_other_ghg_waste_management: "Afvalbeheer"
+        non_energetic_emissions_other_ghg_agriculture_fermentation: "Landbouw - fermentatie"
+        non_energetic_emissions_other_ghg_agriculture_manure: "Landbouw - bemesting"
+        non_energetic_emissions_other_ghg_agriculture_soil_cultivation: "Landbouw - landgebruik"
+        non_energetic_emissions_other_ghg_agriculture_other: "Landbouw - overig"
         lv_net_total_costs_present: Laagspanningsnet
         lv_mv_trafo_total_costs_present: LS-MS-transformatoren
         mv_net_total_costs_present: Middenspanningsnet
@@ -332,7 +347,7 @@ nl:
         input_industry_other_wood_pellets_non_energetic_demand: Biomassa (niet-energetisch)
         input_industry_other_crude_oil_non_energetic_demand: Olie (niet-energetisch)
         input_industry_other_coal_non_energetic_demand: Kolen (niet-energetisch)
-        
+
         industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
         industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
         industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share: "Geen restwarmte"

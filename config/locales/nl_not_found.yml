@@ -1,0 +1,7 @@
+nl:
+  not_found:
+    header: Oeps! Deze dataset lijkt niet te bestaan
+    region: Regio-code
+    description: |
+      Deze dataset is niet bij ons bekend. Kijk of de regio-code klopt, of probeer de regio
+      te zoeken via de zoekbalk of op de kaart.

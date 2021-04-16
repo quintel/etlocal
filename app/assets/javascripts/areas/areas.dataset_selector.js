@@ -16,6 +16,7 @@ Areas.DatasetSelector = (function () {
             .on('click', function (e) {
                 e.preventDefault();
 
+                history.pushState(data.id, data.name, '/datasets/' + data.geo_id);
                 DatasetInterface.open(data.id);
             });
 
@@ -78,6 +79,7 @@ Areas.DatasetSelector = (function () {
             this.closeButtonOverlay.on("click", function (e) {
                 e.preventDefault();
 
+                history.pushState('', '', '/');
                 $("#dataset-overlay").hide();
                 $('#dataset-overlay .content').empty();
                 $('.content-map .container #search-bar').show();

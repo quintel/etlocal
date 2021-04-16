@@ -10,6 +10,7 @@ Areas.Search = (function () {
             dataType: 'json',
             success: function (data) {
                 if (data) {
+                    history.pushState(data.id, data.name, '/datasets/' + geoId);
                     DatasetInterface.open(data.id);
                 } else if (console) {
                     console.log("No dataset with " + geoId + " found");

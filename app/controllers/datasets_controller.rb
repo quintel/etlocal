@@ -23,7 +23,7 @@ class DatasetsController < ApplicationController
 
   # GET show.json
   def show
-    dataset = Dataset.find_by(geo_id: params[:id])
+    dataset = Dataset.find_by(geo_id: params[:id], user: User.robot)
 
     respond_to do |format|
       format.json { render json: dataset }

@@ -59,7 +59,7 @@
               i.fa.fa-download
 
           .switch-dataset
-            - if @dataset_clones.any?
+            - if @dataset_clones.size > 1
               = select_tag "datasets", version_options
 
           .clear

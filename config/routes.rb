@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :datasets, only: %i(index edit show) do
     get :download
 
+    get :not_found, on: :collection
     get :search, on: :collection
 
     post :clone

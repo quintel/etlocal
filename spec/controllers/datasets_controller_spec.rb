@@ -28,7 +28,7 @@ describe DatasetsController do
       let(:dataset) { FactoryBot.create(:dataset, geo_id: 'test_1', name: "Test") }
 
       it "visits show" do
-        get :show, params: { id: dataset.id }, format: :js, xhr: true
+        get :show, params: { id: dataset.id }, format: :json, xhr: true
 
         expect(response).to be_successful
       end

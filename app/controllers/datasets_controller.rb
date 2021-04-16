@@ -1,8 +1,8 @@
 class DatasetsController < ApplicationController
-  layout false, only: %i(edit clone)
+  layout false, only: %i[edit clone not_found]
   format 'js', only: %i(edit :clone)
 
-  before_action :authenticate_user!, except: %i(index show edit search)
+  before_action :authenticate_user!, only: %i[download clone]
   before_action :find_dataset, only: %i(validate edit download clone)
 
   # GET index
@@ -25,7 +25,15 @@ class DatasetsController < ApplicationController
   def show
     dataset = Dataset.find_by(geo_id: params[:id])
 
-    render json: dataset
+    respond_to do |format|
+      format.json { render json: dataset }
+      format.html { render 'datasets/index', layout: 'map'}
+    end
+  end
+
+  # GET not_found.js
+  def not_found
+    @geo_id = params[:geo_id]
   end
 
   # GET search.json

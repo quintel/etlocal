@@ -12,6 +12,6 @@ class PagesController < ApplicationController
 
     session[:locale] = I18n.locale
 
-    redirect_to root_path
+    redirect_back fallback_location: root_path
   end
 end

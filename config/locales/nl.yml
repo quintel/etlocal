@@ -12,4 +12,4 @@ nl:
   time:
     formats:
       simple: "%Y-%m-%d:%H:%M"
-      short: "%d-%m-%Y"
+      short: "%d %B %Y"

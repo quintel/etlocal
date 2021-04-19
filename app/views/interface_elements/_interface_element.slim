@@ -65,32 +65,23 @@
         .history.hidden class= interface_item.key
           .line-arrow
 
-          / # HIERRR
           - if I18n.exists?("descriptions.interface_items.#{interface_item.key}")
             p=I18n.t("descriptions.interface_items.#{interface_item.key}").html_safe
 
-          strong = I18n.t("dataset_edits.history")
+          strong= I18n.t("dataset_edits.history")
 
           - @dataset.editable_attributes.edits_for(interface_item.key).each do |dataset_edit|
             .change
-              .history-line
-                span.border
-                span.line
-                  span.created
-                    => I18n.l dataset_edit.created_at, format: :short
-                  span.by
-                    => I18n.t("dataset_edits.changed_by", user: dataset_edit.creator)
-                  span.to
-                    | &rarr;
-                    | &nbsp;
-                    = dataset_edit.value
+              .created_by
+                .to
+                  => I18n.t("dataset_edits.changed_to", value: number_to_currency(dataset_edit.value, precision: 2, unit: ''))
+                .by
+                  = "#{dataset_edit.creator}, #{I18n.l dataset_edit.created_at, format: :short}"
 
-              .content
-                .reason
-                  = simple_format dataset_edit.commit.message
 
-                - if dataset_edit.commit.source
-                  .source
-                    = link_to I18n.t("dataset_edits.download_source"), dataset_edit.commit.source.source_file.url, class: "button"
+              .reason
+                = simple_format dataset_edit.commit.message
 
-              .clear
+              - if dataset_edit.commit.source
+                .source
+                  = link_to I18n.t("dataset_edits.download_source"), dataset_edit.commit.source.source_file.url, class: "button"

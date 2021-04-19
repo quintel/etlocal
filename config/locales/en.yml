@@ -12,3 +12,4 @@ en:
   time:
     formats:
       simple: "%Y-%m-%d:%H:%M"
+      short: "%d %B %Y"

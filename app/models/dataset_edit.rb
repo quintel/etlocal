@@ -12,6 +12,10 @@ class DatasetEdit < ApplicationRecord
     commit.user
   end
 
+  def creator
+    user.group ? user.group.key.humanize : user.name
+  end
+
   def as_json(*)
     super.slice('key', 'value')
   end

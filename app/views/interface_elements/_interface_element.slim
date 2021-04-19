@@ -65,6 +65,7 @@
         .history.hidden class= interface_item.key
           .line-arrow
 
+          / # HIERRR
           - if I18n.exists?("descriptions.interface_items.#{interface_item.key}")
             p=I18n.t("descriptions.interface_items.#{interface_item.key}").html_safe
 
@@ -78,7 +79,7 @@
                   span.created
                     => I18n.l dataset_edit.created_at, format: :short
                   span.by
-                    => I18n.t("dataset_edits.changed_by", user: dataset_edit.commit.user.name)
+                    => I18n.t("dataset_edits.changed_by", user: dataset_edit.creator)
                   span.to
                     | &rarr;
                     | &nbsp;

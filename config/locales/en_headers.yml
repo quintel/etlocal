@@ -2,9 +2,9 @@ en:
   dataset_edits:
     changed_attributes: 'You changed the following attributes:'
     changed_by: "by %{user}"
-    changed_to: "Changed value to %{value}"
+    changed_to: "Changed to %{value}"
     download_source: "Download source"
-    history: History
+    history: Version history
     no_history: No history available for this attribute
     reason_changes: "Reason for change(s)"
     success: "Succesfully updated dataset %{dataset}"

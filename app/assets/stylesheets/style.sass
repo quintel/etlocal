@@ -327,28 +327,16 @@ div.history, div.information
   .change
     margin-bottom: 6px
     padding: 12px 0
-
-    .history-line
-      font-size: 80%
-      position: relative
-      text-align: center
-
-      span.border
-        border-bottom: 1px solid darken($border-color, 10)
-        height: 1px
-        display: block
-        width: 100%
-        margin-bottom: -10px
-
-      span.line
-        background-color: #eee
-        padding: 0 10px
+    display: flex
+    justify-content: space-between
+    .created_by
+      padding-right: 10px
+      .created, .by
+        font-size: 1.25rem
         color: #999
-
-    .content
-      margin-top: 10px
+    .reason
       text-align: justify
-
+      width: 400px
     .source
       margin-top: 10px
       text-align: right

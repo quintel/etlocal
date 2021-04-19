@@ -20,9 +20,9 @@ en:
       #area
       area_co2_emission_1990: "CO<sub>2</sub> emissions 1990"
       area_ghg: "Greenhouse gas emissions"
-      energetic_other_ghg: "Energetic emissions greenhouse gases (ex. CO<sub>2</sub>)"
-      non_energetic_co2: "Non-energetic emissions CO<sub>2</sub>"
-      non_energetic_other_ghg: "Non-energetic emissions greenhouse gases (ex. CO<sub>2</sub>)"
+      energetic_other_ghg: "Energetic emissions of greenhouse gases (ex. CO<sub>2</sub>)"
+      non_energetic_co2: "Non-energetic emissions of CO<sub>2</sub>"
+      non_energetic_other_ghg: "Non-energetic emissions of greenhouse gases (ex. CO<sub>2</sub>)"
       area_electricity_grid_costs: Present electricity grid costs
       area_electricity_grid_capacity: Present spare capacity electricity grid
       area_electricity_grid_reinforcement: Electricity grid reinforcement

@@ -78,10 +78,5 @@
                 .by
                   = "#{dataset_edit.creator}, #{I18n.l dataset_edit.created_at, format: :short}"
 
-
               .reason
                 = simple_format dataset_edit.commit.message
-
-              - if dataset_edit.commit.source
-                .source
-                  = link_to I18n.t("dataset_edits.download_source"), dataset_edit.commit.source.source_file.url, class: "button"

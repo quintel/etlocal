@@ -55,7 +55,6 @@ describe CommitsController do
     describe 'create a new commit' do
       let(:commit_params) {
         {
-          source_attributes: { source_file: fixture_file_upload('test.xls') },
           dataset_edits_attributes: [
             {
               "key"=>"gas_consumption",
@@ -65,16 +64,12 @@ describe CommitsController do
         }
       }
 
-      it 'creates a single source for the dataset edit' do
+      it 'creates a dataset edit' do
         expect(DatasetEdit.count).to eq(1)
       end
 
       it 'creates a single dataset which belongs to a commit' do
         expect(user.commits.last.dataset_edits.count).to eq(1)
-      end
-
-      it 'creates a single source for the current user' do
-        expect(user.sources.count).to eq(1)
       end
 
       it 'creates a single dataset edit for the current user' do
@@ -89,7 +84,6 @@ describe CommitsController do
     describe 'create a new commit with a single invalid edit' do
       let(:commit_params) {
         {
-          source_attributes: { source_file: fixture_file_upload('test.xls') },
           dataset_edits_attributes: {
             "0"=>{
               "key"=>"gas_consumption",
@@ -103,46 +97,12 @@ describe CommitsController do
         }
       }
 
-      it 'creates a single source for the dataset edit' do
+      it 'creates a dataset edit' do
         expect(DatasetEdit.count).to eq(1)
       end
 
       it 'creates a single dataset which belongs to a commit' do
         expect(user.commits.last.dataset_edits.count).to eq(1)
-      end
-
-      it 'creates a single source for the current user' do
-        expect(user.sources.count).to eq(1)
-      end
-
-      it 'creates a single dataset edit for the current user' do
-        expect(user.dataset_edits.count).to eq(1)
-      end
-
-      it 'creates a single commit for the current user' do
-        expect(user.commits.count).to eq(1)
-      end
-    end
-
-    describe "create a dataset edit without specifying a source" do
-      let(:commit_params) {
-        {
-          source_attributes: { },
-          dataset_edits_attributes: {
-            "0"=>{
-              "key"=>"gas_consumption",
-              "value"=>"0.25"
-            }
-          }
-        }
-      }
-
-      it 'creates a single source for the dataset edit' do
-        expect(DatasetEdit.count).to eq(1)
-      end
-
-      it 'creates no sources for the current user' do
-        expect(user.sources.count).to eq(0)
       end
 
       it 'creates a single dataset edit for the current user' do

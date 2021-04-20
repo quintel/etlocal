@@ -41,14 +41,6 @@
           = form.label :message, I18n.t('dataset_edits.reason_changes')
           = form.text_area :message, maxlength: 500
 
-        = form.fields_for(:source) do |s|
-          .field.file
-            = s.file_field :source_file
-            = s.label :source_file do
-              => I18n.t("datasets.attributes.source_file")
-              i.fa.fa-upload
-              span= filename_for_source
-
       .overview-edits
         .apply
           = form.submit I18n.t('dataset_edits.form.save')

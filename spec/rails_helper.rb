@@ -5,7 +5,6 @@ require File.expand_path('../../config/environment', __FILE__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'spec_helper'
 require 'rspec/rails'
-require "paperclip/matchers"
 require 'webmock/rspec'
 
 Dir["#{ Rails.root }/db/seeds/**/*.rb"].each do |file|
@@ -19,7 +18,6 @@ I18n.locale = :en
 RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
   config.include FactoryBot::Syntax::Methods
-  config.include Paperclip::Shoulda::Matchers
 
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 

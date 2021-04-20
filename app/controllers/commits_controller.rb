@@ -36,8 +36,6 @@ class CommitsController < ApplicationController
         'dataset_edits.success',
         dataset: @dataset.name
       )
-    else
-      @commit.build_source
     end
   end
 
@@ -55,9 +53,7 @@ class CommitsController < ApplicationController
   def commit_params
     params
       .require(:change)
-      .permit(:message, :dataset_id,
-              source_attributes: [:source_file],
-              dataset_edits_attributes: [:key, :value])
+      .permit(:message, :dataset_id, dataset_edits_attributes: [:key, :value])
   end
 
   def find_clones

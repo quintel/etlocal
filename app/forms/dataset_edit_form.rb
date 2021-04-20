@@ -18,7 +18,6 @@ class DatasetEditForm
     if valid?
       previous = dataset.editable_attributes.as_json
       commit = dataset.commits.build
-      commit.build_source
 
       attributes.except(:country).each_pair do |key, val|
         if val.present? && previous[key.to_s] != val

@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    Gebaseerd op informatie van gemeente Breda, Enexis en CBS. Verbruik van transport is fictief om in toekomstjaar opladen op parkeerterrein te kunnen modelleren.

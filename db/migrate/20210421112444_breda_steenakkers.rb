@@ -9,11 +9,11 @@ class BredaSteenakkers < ActiveRecord::Migration[5.0]
     # migration is adding a new dataset, add the `create_missing_datasets`
     # keyword argument. For example:
     #
-    #   CSVImporter.run(data_path, commits_path, create_missing_datasets: true) do |row, runner|
+    CSVImporter.run(data_path, commits_path, create_missing_datasets: true) do |row, runner|
     #     # ...
     #   end
     #
-    CSVImporter.run(data_path, commits_path) do |row, runner|
+    #    CSVImporter.run(data_path, commits_path) do |row, runner|
       print "Updating #{row['geo_id']}... "
       commits = runner.call
 

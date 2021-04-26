@@ -1,0 +1,154 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+
+# Align "end" with variable.
+#
+#   # Bad
+#   variable = if thing
+#              end
+#
+#   # Good
+#   variable = if thing
+#   end
+#
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+# Indent parameters with two spaces only.
+#
+#   # Bad
+#   call_this_long_method(
+#     with_inner_call(
+#       my_parameters
+#     )
+#   )
+#
+#   # Good
+#   call_this_long_method(with_inner_call(
+#     my_parameters
+#   ))
+#
+Layout/FirstArgumentIndentation:
+  EnforcedStyle: consistent
+
+# Indent array values with two spaces only.
+#
+#   # Bad
+#   my_array = [ 1,
+#                2,
+#                3 ]
+#   # Good
+#   my_array = [
+#     1,
+#     2,
+#     3
+#   ]
+#
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+# Indent hash keys with two spaces only.
+#
+#   # Bad
+#   my_hash = { "one" => 1,
+#               "two" => 2,
+#               "three" => 3 }
+#
+#   # Good
+#   my_hash = {
+#     "one" => 1,
+#     "two" => 2,
+#     "three" => 3
+#   }
+#
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+# Max line length is 100 characters. The RuboCop default is 120; the Ruby Style Guide makes a good
+# argument (https://rubystyle.guide/#max-line-length) for  keeping this at 80, but to do so is a
+# little limiting when there are multiple nested modules. We compromise at 100.
+Layout/LineLength:
+  Max: 100
+  IgnoredPatterns:
+  - '(context|context|it|shared_examples_for)'
+
+# Multi-line method calls are indented by two spaces only.
+#
+#   # Bad
+#   MyClass.where(thing: true, another: 'yes')
+#          .order(:created_at)
+#          .limit(5)
+#
+#   # Good
+#   MyClass.where(thing: true, another: 'yes')
+#     .order(:created_at).limit(5)
+#
+#   # Good
+#   MyClass.where(thing: true, another: 'yes')
+#     .order(:created_at)
+#     .limit(5)
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+# Multi-line parameters should be indented by two spaces only.
+#
+#   # Bad
+#   call_something(param_one,
+#                  param_two,
+#                  param_three)
+#
+#   # Good
+#   call_something(
+#     param_one, param_two, param_three
+#   )
+#
+#   # Acceptable, but not as readable
+#   call_something(param_one
+#     param_two, param_three)
+#
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+# Prefer alias_method over alias
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
+
+# Only suggest guard clauses when a block is three or more lines long.
+Style/GuardClause:
+  MinBodyLength: 3 # Default is 1.
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: true
+  IgnoreMacros: true
+  IgnoredMethods:
+  - describe
+  - head
+  - not_to
+  - puts
+  - raise
+  - render
+  - require
+  - require_dependency
+  - require_relative
+  - shared_examples_for
+  - to
+  - yield
+  Exclude:
+  - Gemfile
+
+Metrics:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false

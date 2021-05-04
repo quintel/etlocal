@@ -22,8 +22,12 @@ module Exporter
     def transform_dataset(dataset, rebuild)
       puts "Generating #{dataset['area']} with base set #{dataset['base_dataset']}"
       transformer = Transformer::DatasetGenerator.new(dataset)
-      transformer.destroy if rebuild
-      transformer.generate
+
+      transformer.preserve_paths(%w[curves]) do
+        transformer.destroy if rebuild
+        transformer.generate
+      end
+
       puts "Successfully analyzed and exported #{dataset['area']}"
     end
   end

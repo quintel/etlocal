@@ -20,8 +20,10 @@ module Etsource
   end
 
   def transformers
-    @transformers ||= Transformer::GraphMethods.all
+    @transformers ||= Transformer::GraphMethods.all.merge(Transformer::FileKeys.all)
   end
+
+  private_class_method :transformers
 
   # Public: A set of symbols containing all the transformer keys an dataset
   # attributes whose values may be set by users.

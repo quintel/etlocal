@@ -5,7 +5,7 @@ class InterfaceItem
   include ActiveModel::Validations
 
   validates_presence_of :unit, :key
-  validates_inclusion_of :unit, in: %w(# km TJ % Mton km<sup>2</sup> € MW meter flh)
+  validates_inclusion_of :unit, in: %w[# kg km TJ % Mton km<sup>2</sup> € MW meter flh]
 
   attribute :key, Symbol
   attribute :unit, String

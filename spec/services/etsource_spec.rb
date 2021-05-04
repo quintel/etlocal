@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 dataset_inputs = Etsource.dataset_inputs.uniq
-transformers   = Transformer::GraphMethods.all
+transformers   = Etsource.transformers
 
 RSpec.describe "ETLocal's interface", :if => dataset_inputs.any?, type: :interface do
   # Validates DATASET_INPUT's used in sparse graph query upon their existence
@@ -36,7 +36,7 @@ RSpec.describe "ETLocal's interface", :if => dataset_inputs.any?, type: :interfa
   # sparse graph. Skip attributes that have a sparse graph query attached.
   #
   transformers.each do |key, attribute|
-    if attribute['sparse_graph_query'].blank?
+    if attribute.respond_to?('sparse_graph_query') && attribute['sparse_graph_query'].blank?
       it "has a present sparse graph key for #{ key }" do
         expect(InterfaceElement.items.detect do |item|
           item.key == key.to_sym

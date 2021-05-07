@@ -1,10 +1,6 @@
 GIT
   remote: https://github.com/quintel/atlas.git
-<<<<<<< HEAD
   revision: 1b42a973f3261e08bd85f486e4b7e7487b4cc7af
-=======
-  revision: 6968ab4ed36bb4e5c4ca8de59965c49837f2a3e0
->>>>>>> 67e8569 (Show history of curves based on Git repository)
   branch: ds-simplify
   specs:
     atlas (1.0.0)

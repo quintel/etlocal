@@ -10,6 +10,15 @@ Rails.application.routes.draw do
 
     post :clone
 
+    member do
+      get(
+        'files/:interface_element_key/*file_key',
+        to: 'datasets#git_file_info',
+        format: false,
+        as: :git_file_info
+      )
+    end
+
     resources :commits, only: %i(create) do
       post :dataset_edits, on: :collection
     end

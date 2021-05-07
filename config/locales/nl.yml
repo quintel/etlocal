@@ -8,6 +8,9 @@ nl:
   to: naar
   current_language: Nederlands
   information: Informatie
+  loading: Laden
+  view_on_github: Zicht op GitHub
+  inherited_file: This file is inherited from the parent dataset.
 
   time:
     formats:

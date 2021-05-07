@@ -1,0 +1,16 @@
+# An interface element which allows visitors to view all of the files in the dataset curves
+# directory, along with descriptions and file histories extracted from Git.
+#
+# Note that the interface element has "type: files", which instructs ETLocal to treat this interface
+# element differently to other elements. This must be present.
+#
+# "paths" is an array of glob patters, matching files which will be shown to the user when visiting
+# this section of ETLocal. Paths are relative to the dataset directory. For example, "curves/*.csv"
+# will match all CSV files in the datasets/{dataset_id}/curves directory.
+#
+# See the documentation for Dir.glob for more information on how glob patterns work:
+# https://ruby-doc.org/core-2.5.1/Dir.html#method-c-glob
+key: curves
+type: files
+paths:
+  - "curves/**/*.csv"

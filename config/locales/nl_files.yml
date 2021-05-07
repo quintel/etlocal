@@ -1,0 +1,45 @@
+en:
+  # This file contains translations for file and directory names and descriptions.
+  #
+  # These are used with interface elements whose type is "files", and which have a "paths"
+  # attribute. These elements allow visitors to view the history of files in ETSource which cannot
+  # be edited in ETLocal.
+  #
+  # Each path is split into segments. For example, "curves/weather/default/my_curve.csv" is split
+  # into four segments, each of which can be localised:
+  #
+  # - "curves"
+  # - "weather"
+  # - "default"
+  # - "my_curve" (note the lack of a file extension)
+  #
+  # To localise these segments, add them to the list below with a "name" key:
+  #
+  #   curves:
+  #     name: '' # An empty string will cause the segment to be hidden in the interface.
+  #   weather:
+  #     name: Weather
+  #   default:
+  #     name: Default
+  #   my_curve;
+  #     name: A curve for testing
+  #
+  # The curve will now be shown in the user interface as:
+  #
+  #   Weather → Default → A curve for testing
+  #
+  # Localisations may also have an optional "description". These will be shown alongside a file
+  # history, and help inform visitors as to the purpose of a file, its contents, etc. Descriptions
+  # may not contain HTML, but multiple newlines may be used to split the description into
+  # paragraphs.
+  #
+  #   my_curve:
+  #     name: A curve for testing
+  #     description: >
+  #       This is a curve used to show how files can be localised.
+  #
+  #       This is a second paragraph where more information can be added, without hitting the
+  #       visitor with a wall of text.
+  files:
+    curves:
+      name: ''

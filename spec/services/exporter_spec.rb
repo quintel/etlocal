@@ -7,7 +7,7 @@ describe Exporter do
   let!(:stub_export_request) {
     stub_request(:get, "https://beta-local.energytransitionmodel.com/api/v1/exports/#{dataset.id}?time_curves_to_zero=true")
       .to_return(body: JSON.dump([{
-        'area' => 'ameland',
+        'area' => 'test1_ameland',
         'country' => 'nl',
         'electricity_consumption' => 500,
         'gas_consumption' => 500,
@@ -28,12 +28,12 @@ describe Exporter do
   it "exports a dataset" do
     Exporter.export(dataset.id, rebuild: false)
 
-    expect(Atlas::Dataset::Derived.find('ameland').number_of_cars).to eq(10)
+    expect(Atlas::Dataset::Derived.find('test1_ameland').number_of_cars).to eq(10)
   end
 
   # Reset values to old values
   after(:all) do
-    ameland = Atlas::Dataset::Derived.find('ameland')
+    ameland = Atlas::Dataset::Derived.find('test1_ameland')
     ameland.attributes = { number_of_cars: 1062.598515994393 }
     ameland.save
   end

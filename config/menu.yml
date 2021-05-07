@@ -38,3 +38,5 @@ energy:
   - energy_heat_production
   - energy_biomass
 
+curves:
+

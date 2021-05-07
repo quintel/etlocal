@@ -15,7 +15,10 @@ class YmlReadOnlyRecord
   end
 
   def self.find(key)
-    self.all.select{|p| p.key == key }.first
+    return nil unless key
+
+    key = key.to_sym
+    all.find { |p| p.key == key }
   end
 
   def self.constraint

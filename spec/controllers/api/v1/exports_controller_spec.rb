@@ -47,7 +47,7 @@ describe Api::V1::ExportsController do
     it 'removes special characters' do
       get :show, params: { id: dataset.id }, format: :json
 
-      expect(body['area']).to eq('ameland_hap_py_o')
+      expect(body['area']).to eq('test1_hap_py_o')
     end
   end
 end

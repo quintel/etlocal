@@ -48,8 +48,12 @@ class Dataset < ApplicationRecord
       .merge(group: I18n.t("datasets.area_groups.#{group}"))
   end
 
+  def atlas_key
+    :"#{geo_id}_#{normalized_name}"
+  end
+
   def atlas_dataset
-    Etsource.datasets[geo_id]
+    Etsource.datasets[atlas_key]
   end
 
   def base_dataset

@@ -5,6 +5,10 @@ class DatasetPolicy < ApplicationPolicy
     (record.user == user) || (record.user.group == user.group)
   end
 
+  def git_file_info?
+    true
+  end
+
   def clone?
     user && (record.public? || edit?)
   end

@@ -141,4 +141,94 @@ describe DatasetsController do
       expect(I18n.locale).to eq(:en)
     end
   end
+
+  describe '#git_file_info' do
+    let(:dataset) { FactoryBot.create(:dataset, geo_id: 'test1', name: 'ameland') }
+
+    context 'when the dataset does not exist' do
+      let(:response) do
+        get :git_file_info, params: {
+          id: 'invalid',
+          interface_element_key: 'nope',
+          file_key: 'also/nope.csv'
+        }
+      end
+
+      it 'returns 404 Not Found' do
+        expect { response }.to raise_error(ActiveRecord::RecordNotFound, "Couldn't find Dataset")
+      end
+    end
+
+    context 'when the interface element does not exist' do
+      let(:response) do
+        get :git_file_info, params: {
+          id: dataset.geo_id,
+          interface_element_key: 'nope',
+          file_key: 'also/nope.csv'
+        }
+      end
+
+      it 'returns 404 Not Found' do
+        expect { response }
+          .to raise_error(ActiveRecord::RecordNotFound, "Couldn't find InterfaceElement")
+      end
+    end
+
+    context 'when the interface element has no paths' do
+      let(:element) do
+        InterfaceElement.all.find { |el| el.paths.blank? }
+      end
+
+      let(:response) do
+        get :git_file_info, params: {
+          id: dataset.geo_id,
+          interface_element_key: element.key,
+          file_key: 'also/nope.csv'
+        }
+      end
+
+      it 'returns 404 Not Found' do
+        expect { response }
+          .to raise_error(ActiveRecord::RecordNotFound, "Couldn't find InterfaceElement")
+      end
+    end
+
+    context 'when the file does not exist' do
+      let(:element) do
+        InterfaceElement.all.find { |el| el.paths.present? }
+      end
+
+      let(:response) do
+        get :git_file_info, params: {
+          id: dataset.geo_id,
+          interface_element_key: element.key,
+          file_key: 'also/nope.csv'
+        }
+      end
+
+      it 'returns 404 Not Found' do
+        expect { response }
+          .to raise_error(ActiveRecord::RecordNotFound, "Couldn't find file")
+      end
+    end
+
+    # This is very fragile since it relies on the interface element matching curves.
+    context 'when the file exists' do
+      let(:element) do
+        InterfaceElement.all.find { |el| el.paths.present? }
+      end
+
+      let(:response) do
+        get :git_file_info, params: {
+          id: dataset.geo_id,
+          interface_element_key: element.key,
+          file_key: 'curves/a.csv'
+        }
+      end
+
+      it 'returns 200 OK' do
+        expect(response).to be_successful
+      end
+    end
+  end
 end

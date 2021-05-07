@@ -43,6 +43,7 @@ nl:
       energy: Energieproductie
       transport: Transport
       other: Overige vraag
+      curves: Curves
 
     subgroups:
       area:

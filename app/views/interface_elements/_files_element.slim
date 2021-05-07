@@ -1,0 +1,12 @@
+- GitFiles.glob(dataset.atlas_dataset, interface_element.paths).sort.each do |file|
+  details.file-history
+    summary
+      - file.i18n_segments[0..-2].each do |segment|
+        span.directory
+          = segment
+          span = " → "
+      span.filename
+        = file.i18n_segments.last
+    div.file-history-content data-lazy="true" data-href="#{git_file_info_dataset_path(id: dataset.geo_id, interface_element_key: interface_element.key, file_key: file.relative_path)}"
+      = I18n.t('loading')
+      span &hellip;

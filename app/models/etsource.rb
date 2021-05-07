@@ -3,7 +3,7 @@ module Etsource
 
   def datasets
     @datasets ||= Hash[Atlas::Dataset::Derived.all.map do |dataset|
-      [dataset.geo_id, dataset]
+      [dataset.key, dataset]
     end]
   end
 

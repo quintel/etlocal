@@ -1,0 +1,25 @@
+h4 = @file.i18n_segments.last
+
+.file-info
+  a.path href="#{github_file_path(@file)}" target="_blank" rel="noopener"
+    i.fa.fa-github
+    = @file.git_path
+  - if @file.inherited?
+    div style="margin-top: 2px"
+      i.fa.fa-info-circle
+      = I18n.t('inherited_file')
+
+- if @file.description.present?
+  .description= format_file_description(@file.description)
+
+h5= I18n.t("dataset_edits.history")
+
+.changes
+  - @file.log.each do |entry|
+    .change
+      .author
+        = "#{I18n.l(entry.author.date, format: :short)}, "
+        = entry.author.name
+
+      .message
+        = simple_format entry.message

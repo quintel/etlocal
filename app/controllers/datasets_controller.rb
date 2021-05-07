@@ -67,4 +67,32 @@ class DatasetsController < ApplicationController
 
     @cloned_dataset = DatasetCloner.clone!(@dataset, current_user)
   end
+
+  # Renders an HTML partial containing information about the requested file.
+  #
+  # This requires the interface element key so that we can verify that the requested file really is
+  # one of the files for which history available.
+  #
+  # GET /files/:interface_element_key/*file_key
+  def git_file_info
+    request.format = 'html'
+
+    dataset = Dataset.find_by!(geo_id: params[:id])
+    element = InterfaceElement.find(params[:interface_element_key])
+
+    authorize(dataset)
+
+    if !element || element.paths.blank?
+      raise ActiveRecord::RecordNotFound, "Couldn't find InterfaceElement"
+    end
+
+    files = GitFiles.glob(dataset.atlas_dataset, element.paths)
+    @file = files.find { |entry| entry.relative_path.to_s == params[:file_key] }
+
+    raise ActiveRecord::RecordNotFound, "Couldn't find file" unless @file
+
+    respond_to do |format|
+      format.html { render layout: nil }
+    end
+  end
 end

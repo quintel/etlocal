@@ -8,6 +8,9 @@ en:
   to: to
   current_language: English
   information: Information
+  loading: Loading
+  view_on_github: View on GitHub
+  inherited_file: This file is inherited from the parent dataset.
 
   time:
     formats:

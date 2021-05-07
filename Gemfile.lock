@@ -1,6 +1,10 @@
 GIT
   remote: https://github.com/quintel/atlas.git
+<<<<<<< HEAD
   revision: 1b42a973f3261e08bd85f486e4b7e7487b4cc7af
+=======
+  revision: 6968ab4ed36bb4e5c4ca8de59965c49837f2a3e0
+>>>>>>> 67e8569 (Show history of curves based on Git repository)
   branch: ds-simplify
   specs:
     atlas (1.0.0)
@@ -152,6 +156,8 @@ GEM
     faraday (0.17.3)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.25)
+    git (1.8.1)
+      rchardet (~> 1.8)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     gradients (0.0.2)
@@ -251,6 +257,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    rchardet (1.8.0)
     regexp_parser (2.0.0)
     remotipart (1.4.2)
     responders (3.0.0)
@@ -411,6 +418,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   factory_bot_rails
+  git
   gradients
   http_accept_language
   jbuilder (~> 2.5)

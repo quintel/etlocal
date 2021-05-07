@@ -43,6 +43,7 @@ en:
       other: Other energy demand
       energy: Energy production
       transport: Transport
+      curves: Curves
 
     subgroups:
       area:

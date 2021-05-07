@@ -27,7 +27,7 @@ groups:
         unit: 'TJ'
       - key: input_industry_chemical_other_coal_demand
         unit: 'TJ'
-  
+
   - header: industry_chemical_other_non_energetic
     items:
       - key: input_industry_chemical_other_network_gas_non_energetic_demand

@@ -29,4 +29,15 @@ module DatasetHelper
       from: I18n.t("units.#{ key }.from", default: I18n.t("units.#{ key }.to")).html_safe
     }
   end
+
+  # Public: Takes a GitFiles::GitFile and returns the URL to view the file on GitHub.
+  def github_file_path(file)
+    "https://github.com/quintel/etsource/tree/master/#{file.git_path}"
+  end
+
+  def format_file_description(description)
+    # rubocop:disable Rails/OutputSafety
+    simple_format(description).gsub('<br />', '').html_safe
+    # rubocop:enable Rails/OutputSafety
+  end
 end

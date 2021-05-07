@@ -130,6 +130,29 @@ var DatasetInterface = (function () {
         });
     }
 
+    function enableLazyElements() {
+        var observer = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.intersectionRatio <= 0) {
+                    return;
+                }
+
+                observer.unobserve(entry.target);
+
+                $.ajax(
+                    entry.target.dataset.href,
+                    { dataType: 'html' }
+                ).success(function (content) {
+                    $(entry.target).html(content)
+                })
+            });
+        });
+
+        $('[data-lazy]').each(function () {
+            observer.observe(this);
+        });
+    }
+
     DatasetInterface.prototype = {
         enable: function () {
             this.tab = new Tab(
@@ -148,6 +171,7 @@ var DatasetInterface = (function () {
             addClickListenerToToggles.call(this);
             addClickListenerToValidateButton.call(this);
             addClickListenerToHistory.call(this);
+            enableLazyElements.call(this);
         }
     }
 

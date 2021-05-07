@@ -16,9 +16,14 @@ html, body
 
 body
   background-color: $bg-color
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  font-size: 0.875rem
 
   .hidden
     display: none
+
+  p
+    margin-bottom: 1.2rem
 
 .colored-header
   background-color: $selected-color
@@ -303,7 +308,7 @@ div.history > p
   font-style: italic
 
 div.history, div.information
-  padding: 20px 26px 0 26px
+  padding: 20px 26px
   border: 1px solid #ccc
   margin: -10px 35px 35px 0
   position: relative
@@ -325,21 +330,24 @@ div.history, div.information
     background-color: #eee
 
   .change
-    margin-bottom: 6px
-    padding: 12px 0
     display: flex
     justify-content: space-between
     .created_by
       padding-right: 10px
       .created, .by
         font-size: 1.25rem
-        color: #999
+        color: #777
     .reason
-      text-align: justify
       width: 400px
+      p:last-child
+        margin-bottom: 0
     .source
       margin-top: 10px
       text-align: right
+    p
+      margin-bottom: 1rem
+    & + .change
+      margin-top: 20px
 
 .slider-group
   div.history
@@ -507,6 +515,10 @@ ul.tab-nav
     vertical-align: top
     border: 1px solid darken($border-color, 20)
 
+    a
+      overflow: hidden
+      text-overflow: ellipsis
+
     ul.sub-nav
       display: none
       margin: 0
@@ -551,3 +563,77 @@ div.tab
 
   &.active
     display: block
+
+select.file-history
+  box-sizing: border-box
+  width: 100%
+
+.file-history
+  summary
+    border-radius: 4px
+    color: #666
+    cursor: pointer
+    display: list-item
+    font-size: 14px
+    margin: -2px -8px
+    padding: 2px 8px
+    &:hover
+      background: #eee
+    &:active
+      background: #ddd
+  &[open]
+    margin-bottom: 1rem
+    summary
+      margin-bottom: 1rem
+      font-weight: bold
+  .filename
+    color: black
+  .file-history-content
+    background-color: #eee
+    border: 1px solid #ccc
+    border-radius: 4px
+    margin: 0
+    padding: 2rem
+  .file-info
+    font-size: 1.25rem
+    color: #777
+    margin-bottom: 1.2rem
+    i
+      font-size: 18px
+      margin-right: 0.5rem
+      margin-top: -2px
+      vertical-align: middle
+  a.path
+    color: #777
+    display: block
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace
+    font-size: 12px
+    overflow: hidden
+    text-decoration: none
+    text-overflow: ellipsis
+    &:hover
+      color: #444
+      text-decoration: underline
+  .description p
+    font-size: 14px
+  .change
+    font-size: 14px
+    & + .change
+      margin
+    .author
+      font-weight: bold
+    .message
+      color: #777
+    &:last-child
+      .message p:last-child
+        margin-bottom: 0
+  h4
+    font-size: 20px
+    font-weight: bold
+    margin-bottom: 1.2rem
+  h5
+    border-top: 1px solid #ccc
+    font-size: 16px
+    font-weight: bold
+    margin-bottom: 1.2rem
+    padding-top: 1.2rem

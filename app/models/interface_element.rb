@@ -14,6 +14,9 @@ class InterfaceItem
   attribute :skip_validation, Boolean, default: false
   attribute :hidden, Boolean, default: false
 
+  # Used by file history items.
+  attribute :paths, Array[String], default: []
+
   def whitelisted?
     Etsource.whitelisted_attributes.include?(key) ||
       key.to_s.start_with?('input_')
@@ -35,10 +38,15 @@ class InterfaceElement < YmlReadOnlyRecord
   include ActiveModel::Conversion
   include ActiveModel::Validations
 
-  validates_presence_of :key
+  validates :key, presence: true
+  validates :paths, absence: true, unless: ->(model) { model.type == 'files' }
 
   attribute :key, Symbol
   attribute :groups, Array[InterfaceGroup]
+  attribute :type, String, default: 'inputs'
+
+  # Used by file history pages.
+  attribute :paths, Array[String]
 
   def self.items
     @items ||= all.flat_map(&:groups).flat_map(&:items)

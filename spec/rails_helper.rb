@@ -35,6 +35,10 @@ RSpec.configure do |config|
     FactoryBot.create(:user, email: "robot@quintel.com", group: group)
   end
 
+  config.before(:each) do
+    I18n.locale = :en
+  end
+
   config.around(:each) do |example|
     DatabaseCleaner.cleaning do
       example.run

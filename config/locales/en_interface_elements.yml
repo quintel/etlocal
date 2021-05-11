@@ -31,6 +31,22 @@ en:
         non_energetic_emissions_other_ghg_agriculture_manure: "Agriculture - manure"
         non_energetic_emissions_other_ghg_agriculture_soil_cultivation: "Agriculture - soil cultivation"
         non_energetic_emissions_other_ghg_agriculture_other: "Agriculture - other"
+
+        file_carrier_coal_co2_conversion_per_mj: Coal
+        file_carrier_crude_oil_co2_conversion_per_mj: Oil
+        file_carrier_diesel_co2_conversion_per_mj: Diesel
+        file_carrier_gasoline_co2_conversion_per_mj : Gasoline
+        file_carrier_heavy_fuel_oil_co2_conversion_per_mj: Heavy fuel oil
+        file_carrier_imported_electricity_co2_conversion_per_mj: Imported electricity
+        file_carrier_imported_heat_co2_conversion_per_mj: Imported heat
+        file_carrier_imported_hydrogen_co2_conversion_per_mj: Imported hydrogen
+        file_carrier_kerosene_co2_conversion_per_mj: Kerosene
+        file_carrier_lignite_co2_conversion_per_mj: Lignite
+        file_carrier_lng_co2_conversion_per_mj: LNG
+        file_carrier_lpg_co2_conversion_per_mj: LPG
+        file_carrier_natural_gas_co2_conversion_per_mj: Natural gas
+        file_carrier_non_biogenic_waste_co2_conversion_per_mj: Non-biogenic waste
+
         lv_net_total_costs_present: Low voltage grid
         lv_mv_trafo_total_costs_present: LV-MV transformers
         mv_net_total_costs_present: Medium voltage grid
@@ -446,6 +462,12 @@ en:
         energy_chp_combined_cycle_network_gas_full_load_hours: Gas plant (120 MW) with heat production for district heat (CHP)
         energy_power_supercritical_coal_full_load_hours: Coal conventional
         energy_power_engine_diesel_full_load_hours: Diesel generator
+
+        fuel_production_coal_demand: Coal
+        fuel_production_lignite_demand: Lignite
+        fuel_production_crude_oil_demand: Oil
+        fuel_production_natural_gas_demand: Natural gas
+        fuel_production_uranium_oxide_demand: Uranium
 
         #Other
         other_final_demand_electricity_demand: Electricity

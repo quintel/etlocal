@@ -49,6 +49,7 @@ en:
       area:
         area_geography: Geography
         area_emissions: Emissions
+        area_emission_factors: Emission factors
         area_infrastructure: Infrastructure
 
       agriculture:
@@ -67,6 +68,7 @@ en:
         energy_renewable_electricity_production: Renewable electricity
         energy_full_load_hours: Full load hours electricity
         energy_biomass: Biomass
+        energy_fuel_production: Fuel production
 
       households:
         households_energy_demand: Energy demand

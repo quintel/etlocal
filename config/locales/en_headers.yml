@@ -23,6 +23,7 @@ en:
       energetic_other_ghg: "Energetic emissions of greenhouse gases (ex. CO<sub>2</sub>)"
       non_energetic_co2: "Non-energetic emissions of CO<sub>2</sub>"
       non_energetic_other_ghg: "Non-energetic emissions of greenhouse gases (ex. CO<sub>2</sub>)"
+      area_emission_factors: Emission factors
       area_electricity_grid_costs: Present electricity grid costs
       area_electricity_grid_capacity: Present spare capacity electricity grid
       area_electricity_grid_reinforcement: Electricity grid reinforcement
@@ -124,3 +125,4 @@ en:
       energy_heat_distribution_loss: Heat network losses
       energy_renewable_full_load_hours: Full load hours of renewable power plants
       energy_fossil_full_load_hours: Full load hours of fossil power plants
+      fuel_production: Fuel Production

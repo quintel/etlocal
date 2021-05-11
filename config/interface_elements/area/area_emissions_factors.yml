@@ -1,0 +1,30 @@
+key: area_emission_factors
+groups:
+  - header: area_emission_factors
+    items:
+    - key: file_carrier_coal_co2_conversion_per_mj
+      unit: 'Mt/MJ'
+    - key: file_carrier_crude_oil_co2_conversion_per_mj
+      unit: 'Mt/MJ'
+    - key: file_carrier_diesel_co2_conversion_per_mj
+      unit: 'Mt/MJ'
+    - key: file_carrier_gasoline_co2_conversion_per_mj 
+      unit: 'Mt/MJ'
+    - key: file_carrier_heavy_fuel_oil_co2_conversion_per_mj 
+      unit: 'Mt/MJ'
+    - key: file_carrier_imported_electricity_co2_conversion_per_mj 
+      unit: 'Mt/MJ'
+    - key: file_carrier_imported_heat_co2_conversion_per_mj 
+      unit: 'Mt/MJ'
+    - key: file_carrier_kerosene_co2_conversion_per_mj 
+      unit: 'Mt/MJ'
+    - key: file_carrier_lignite_co2_conversion_per_mj 
+      unit: 'Mt/MJ'
+    - key: file_carrier_lng_co2_conversion_per_mj 
+      unit: 'Mt/MJ'
+    - key: file_carrier_lpg_co2_conversion_per_mj 
+      unit: 'Mt/MJ'
+    - key: file_carrier_natural_gas_co2_conversion_per_mj 
+      unit: 'Mt/MJ'
+    - key: file_carrier_non_biogenic_waste_co2_conversion_per_mj 
+      unit: 'Mt/MJ'

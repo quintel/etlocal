@@ -1,0 +1,43 @@
+# An interface element which allows visitors to view all of the files in the dataset curves
+# directory, along with descriptions and file histories extracted from Git.
+#
+# Note that each group has "type: files", which instructs ETLocal to treat this section differently
+# to other elements. This must be present.
+#
+# "paths" is an array of glob patters, matching files which will be shown to the user when visiting
+# this section of ETLocal. Paths are relative to the dataset directory. For example, "curves/*.csv"
+# will match all CSV files in the datasets/{dataset_id}/curves directory (but not subdirectories).
+# You may name individial files and use recursive matching ("curves/**/*.csv").
+#
+# "*"     - Matches any file. Can be restricted by other values in the glob.
+# "c*"    - Matches all files beginning with "c".
+# "*c*"   - Matches all files that have a "c" in them.
+# "**"    - Matches directories recursively.
+# "?"     - Matches any one character.
+# "[set]" - Matches any one character in a set.
+# "{p,q}" - Matches either a "p" or "q".
+# "\"     - Escapes the next metacharacter.
+#
+# See the documentation for Dir.glob for more information on how glob patterns work:
+# https://ruby-doc.org/core-2.5.1/Dir.html#method-c-glob
+key: curves_weather_years
+groups:
+  - header: curves_transport
+    type: files
+    paths:
+      - curves/electric_buses.csv
+      - curves/electric_trucks.csv
+      - curves/electric_vehicle_profile_1.csv
+      # ...
+
+  - header: curves_industry_electricity
+    type: files
+    paths:
+      - curves/industry_chemicals_electricity.csv
+      - curves/industry_ict.csv
+
+  - header: curves_heat_production
+    type: files
+    paths:
+      - curves/geothermal_heat.csv
+      - curves/weather/*/solar_thermal.csv

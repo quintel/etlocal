@@ -20,17 +20,4 @@ RSpec.describe InterfaceElement do
       end
     end
   end
-
-  describe 'an InterfaceElement with no explicit type' do
-    it 'sets the type to :inputs' do
-      expect(described_class.new.type).to eq('inputs')
-    end
-
-    it 'may not have paths' do
-      element = described_class.new(paths: ['a'])
-      element.valid?
-
-      expect(element.errors[:paths]).to include('must be blank')
-    end
-  end
 end

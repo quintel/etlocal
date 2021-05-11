@@ -77,16 +77,17 @@ class DatasetsController < ApplicationController
   def git_file_info
     request.format = 'html'
 
-    dataset = Dataset.find_by!(geo_id: params[:id])
+    @dataset = Dataset.find_by!(geo_id: params[:id])
     element = InterfaceElement.find(params[:interface_element_key])
 
-    authorize(dataset)
+    authorize(@dataset)
 
-    if !element || element.paths.blank?
-      raise ActiveRecord::RecordNotFound, "Couldn't find InterfaceElement"
-    end
+    raise ActiveRecord::RecordNotFound, "Couldn't find InterfaceElement" unless element
 
-    files = GitFiles.glob(dataset.atlas_dataset, element.paths)
+    files = element.groups
+      .select { |group| group.type == :files && group.paths.present? }
+      .flat_map { |group| GitFiles.glob(@dataset.atlas_dataset, group.paths) }
+
     @file = files.find { |entry| entry.relative_path.to_s == params[:file_key] }
 
     raise ActiveRecord::RecordNotFound, "Couldn't find file" unless @file

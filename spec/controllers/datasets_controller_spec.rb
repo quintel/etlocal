@@ -174,34 +174,17 @@ describe DatasetsController do
       end
     end
 
-    context 'when the interface element has no paths' do
-      let(:element) do
-        InterfaceElement.all.find { |el| el.paths.blank? }
+    context 'when the interface element has no groups with paths' do
+      before do
+        allow(InterfaceElement).to receive(:find).with('test_element').and_return(
+          InterfaceElement.new(groups: [InterfaceGroup.new])
+        )
       end
 
       let(:response) do
         get :git_file_info, params: {
           id: dataset.geo_id,
-          interface_element_key: element.key,
-          file_key: 'also/nope.csv'
-        }
-      end
-
-      it 'returns 404 Not Found' do
-        expect { response }
-          .to raise_error(ActiveRecord::RecordNotFound, "Couldn't find InterfaceElement")
-      end
-    end
-
-    context 'when the file does not exist' do
-      let(:element) do
-        InterfaceElement.all.find { |el| el.paths.present? }
-      end
-
-      let(:response) do
-        get :git_file_info, params: {
-          id: dataset.geo_id,
-          interface_element_key: element.key,
+          interface_element_key: 'test_element',
           file_key: 'also/nope.csv'
         }
       end
@@ -212,16 +195,48 @@ describe DatasetsController do
       end
     end
 
-    # This is very fragile since it relies on the interface element matching curves.
-    context 'when the file exists' do
-      let(:element) do
-        InterfaceElement.all.find { |el| el.paths.present? }
+    context 'when the file does not exist in the list of allowed files' do
+      before do
+        allow(InterfaceElement).to receive(:find).with('test_element').and_return(
+          InterfaceElement.new(groups: [
+            InterfaceGroup.new(
+              type: :files,
+              paths: ['this/is/fine.csv', 'also/yes.csv']
+            )
+          ])
+        )
       end
 
       let(:response) do
         get :git_file_info, params: {
           id: dataset.geo_id,
-          interface_element_key: element.key,
+          interface_element_key: 'test_element',
+          file_key: 'also/nope.csv'
+        }
+      end
+
+      it 'returns 404 Not Found' do
+        expect { response }
+          .to raise_error(ActiveRecord::RecordNotFound, "Couldn't find file")
+      end
+    end
+
+    context 'when the file exists' do
+      before do
+        allow(InterfaceElement).to receive(:find).with('test_element').and_return(
+          InterfaceElement.new(groups: [
+            InterfaceGroup.new(
+              type: :files,
+              paths: ['curves/a.csv', 'curves/b.csv']
+            )
+          ])
+        )
+      end
+
+      let(:response) do
+        get :git_file_info, params: {
+          id: dataset.geo_id,
+          interface_element_key: 'test_element',
           file_key: 'curves/a.csv'
         }
       end

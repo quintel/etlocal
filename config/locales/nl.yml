@@ -10,7 +10,13 @@ nl:
   information: Informatie
   loading: Laden
   view_on_github: Zicht op GitHub
-  inherited_file: This file is inherited from the parent dataset.
+  inherited_file: This file is inherited from the %{parent} dataset.
+
+  countries:
+    be: België
+    nl2018: Nederlands 2018
+    nl: Nederlands
+    uk: Verenigd Koninkrijk
 
   time:
     formats:

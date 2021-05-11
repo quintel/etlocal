@@ -43,5 +43,29 @@ RSpec.describe InterfaceGroup do
 
       expect(group.errors[:items]).to include('must be blank')
     end
+
+    context 'with a path "../a.csv"' do
+      before { group.paths = ['../a.csv'] }
+
+      it 'is invalid' do
+        group.valid?
+
+        expect(group.errors[:paths]).to include(
+          'may not include path to a parent directory ("../a.csv")'
+        )
+      end
+    end
+
+    context 'with a path "a/../a.csv"' do
+      before { group.paths = ['a/../a.csv'] }
+
+      it 'is invalid' do
+        group.valid?
+
+        expect(group.errors[:paths]).to include(
+          'may not include path to a parent directory ("a/../a.csv")'
+        )
+      end
+    end
   end
 end

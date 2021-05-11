@@ -116,6 +116,8 @@ Layout/MultilineOperationIndentation:
 #
 Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
 
 # Prefer alias_method over alias
 Style/Alias:

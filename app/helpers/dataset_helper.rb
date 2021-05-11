@@ -40,4 +40,12 @@ module DatasetHelper
     simple_format(description).gsub('<br />', '').html_safe
     # rubocop:enable Rails/OutputSafety
   end
+
+  def git_file_info_path(dataset, element, file)
+    git_file_info_dataset_path(
+      id: dataset.geo_id,
+      interface_element_key: element.key,
+      file_key: file.relative_path
+    )
+  end
 end

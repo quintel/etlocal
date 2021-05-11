@@ -49,6 +49,7 @@ nl:
       area:
         area_geography: Geografie
         area_emissions: Emissies
+        area_emission_factors: Emissiefactoren
         area_infrastructure: Infrastructuur
 
       agriculture:
@@ -67,6 +68,7 @@ nl:
         energy_renewable_electricity_production: Duurzame elektriciteit
         energy_biomass: Biomassa
         energy_full_load_hours: Vollasturen elektriciteit
+        energy_fuel_production: Brandstofproductie
 
       households:
         households_energy_demand: Energievraag

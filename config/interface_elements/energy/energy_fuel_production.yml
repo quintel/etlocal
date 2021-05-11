@@ -1,0 +1,14 @@
+key: energy_fuel_production
+groups:
+  - header: fuel_production
+    items:
+      - key: energy_extraction_coal_demand
+        unit: 'TJ'
+      - key: energy_extraction_lignite_demand
+        unit: 'TJ'
+      - key: energy_extraction_crude_oil_demand
+        unit: 'TJ'
+      - key: energy_extraction_natural_gas_demand
+        unit: 'TJ'
+      - key: energy_extraction_uranium_oxide_demand
+        unit: 'TJ'

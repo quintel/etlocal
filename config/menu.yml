@@ -1,6 +1,7 @@
 area:
   - area_geography
   - area_emissions
+  - area_emission_factors
   - area_infrastructure
 households:
   - households_energy_demand
@@ -37,6 +38,7 @@ energy:
   - energy_full_load_hours
   - energy_heat_production
   - energy_biomass
+  - energy_fuel_production
 
 curves:
 

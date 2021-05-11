@@ -261,4 +261,9 @@ en:
         and how much a non-biogenic origin (eg plastics)? This is only relevant for regions with waste incineration.
       energy_potentials: |
         How much biomass can potentially be extracted in this region? Click on the 'i' for more information on each category.
-
+      fuel_production: |
+        How much primary fuels are produced within the borders of your region? These values determine how much of the fuels are imported and exported.
+      area_emission_factors: |
+        Below you can see how much Mton CO<sub>2</sub> emissions per MJ is emitted depending on the type of carrier.
+        These 'emission factors' can differ per country because they depend on the origin of the carrier.
+        Within the ETM these emission factors are used to calculate the total amount of CO<sub>2</sub> emissions attributed to the energy system.

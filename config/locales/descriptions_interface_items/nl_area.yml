@@ -6,6 +6,64 @@ nl:
       areable_land: |
         Deze waarde bepaalt wat het maximale beschikbare oppervlakte is voor windmolens op land en
         zonnevelden.
+      energetic_emissions_other_ghg_households: |
+        Dit omvat alle energetische uitstoot van broeikasgassen in de huishoudsector, behalve de uitstoot van CO<sub>2</sub>.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorie: 1.A.4.b
+      energetic_emissions_other_ghg_buildings: |
+        Dit omvat alle energetische uitstoot van broeikasgassen in de dienstensector, behalve de uitstoot van CO<sub>2</sub>.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorieen: 1.A.4.a, 1.A.5
+      energetic_emissions_other_ghg_transport: |
+        Dit omvat alle energetische uitstoot van broeikasgassen in de transportsector, behalve de uitstoot van CO<sub>2</sub>.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorie: 1.A.3
+      energetic_emissions_other_ghg_agriculture: |
+        Dit omvat alle energetische uitstoot van broeikasgassen in de landbouwsector, behalve de uitstoot van CO<sub>2</sub>.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorie: 1.A.4.c
+      energetic_emissions_other_ghg_industry: |
+        Dit omvat alle energetische uitstoot van broeikasgassen in de industriesector, behalve de uitstoot van CO<sub>2</sub>.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorie: 1.A.2
+      energetic_emissions_other_ghg_energy: |
+        Dit omvat alle energetische uitstoot van broeikasgassen in de energiesector, behalve de uitstoot van CO<sub>2</sub>.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorieën: 1.A.1, 1.B
+      non_energetic_emissions_co2_chemical_industry: |
+        Dit omvat alle niet-energetische uitstoot van CO<sub>2</sub> in de chemie, exclusief de kunstmestsector. De
+        niet-energetische uitstoot van de kunstmestsector wordt in het ETM berekend aan de hand van het gebruik van feedstock.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorieën: 2.B.2-2.B.10
+      non_energetic_emissions_co2_waste_management: |
+        Dit omvat alle niet-energetische uitstoot van CO<sub>2</sub> in de afvalbeheer.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorieën: 5
+      non_energetic_emissions_co2_other_industry: |
+        Dit omvat alle niet-energetische uitstoot van CO<sub>2</sub> in de overige industriesectoren.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorieën: 2.A, 2.C-2.H
+      non_energetic_emissions_co2_agriculture_manure: |
+        Dit omvat alle niet-energetische uitstoot van CO<sub>2</sub> in de landbouwsector door toedoen van bemesting.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorieën: 3.B, 3.H, 3.I
+      non_energetic_emissions_co2_agriculture_soil_cultivation: |
+        Dit omvat alle niet-energetische uitstoot van CO<sub>2</sub> in de landbouwsector door toedoen van landgebruik.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorieën: 3.C, 3.D, 3.E, 3.G
+      indirect_emissions_co2: |
+        Dit omvat alle uitstoot van CO<sub>2</sub> door atmosferische oxidatie en organische bestandsdelen.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorie: 'indirect emissions'
+      non_energetic_emissions_other_ghg_chemical_industry: |
+        Dit omvat alle niet-energetische uitstoot van broeikasgassen in de chemie, behalve de uitstoot van CO<sub>2</sub>.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorieën: 2.B
+      non_energetic_emissions_other_ghg_other_industry: |
+        Dit omvat alle niet-energetische uitstoot van broeikasgassen in de overige industriesectoren, behalve de uitstoot van CO<sub>2</sub>.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorieën: 2.A, 2.C-2.H
+      non_energetic_emissions_other_ghg_waste_management: |
+        Dit omvat alle niet-energetische uitstoot van broeikasgassen in de afvalbeheer, behalve de uitstoot van CO<sub>2</sub>.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorieën: 5
+      non_energetic_emissions_other_ghg_agriculture_fermentation: |
+        Dit omvat alle niet-energetische uitstoot van broeikasgassen in de landbouw veroorzaakt door fermentatie, behalve de uitstoot van CO<sub>2</sub>.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorieën: 3.A
+      non_energetic_emissions_other_ghg_agriculture_manure: |
+        Dit omvat alle niet-energetische uitstoot van broeikasgassen in de landbouw veroorzaakt door bemesting, behalve de uitstoot van CO<sub>2</sub>.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorieën: 3.B, 3.H, 3.I
+      non_energetic_emissions_other_ghg_agriculture_soil_cultivation: |
+        Dit omvat alle niet-energetische uitstoot van broeikasgassen in de landbouw veroorzaakt door landgebruik, behalve de uitstoot van CO<sub>2</sub>.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorieën: 3.C, 3.D, 3.E, 3.G
+      non_energetic_emissions_other_ghg_agriculture_other: |
+        Dit omvat alle niet-energetische uitstoot van broeikasgassen in de landbouw veroorzaakt door overige activiteiten, behalve de uitstoot van CO<sub>2</sub>.
+        In het Common Reporting Format van het UNFCCC is dit de uitstoot in de categorieën: 3.F, 3.J
       heat_length_of_distribution_pipelines_in_meter_per_residence_object_first_bracket: |
         De benodigde lengte van de distributieleidingen voor warmtenetten varieert met het aantal
         aansluitingen. Het ligt voor de hand om als eerste dichtbevolkte wijken aan te sluiten,

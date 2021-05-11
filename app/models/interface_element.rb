@@ -24,8 +24,6 @@ class InterfaceGroup
   include Virtus.model
   include ActiveModel::Validations
 
-  validates_presence_of :items
-
   attribute :header, String
   attribute :type, Symbol, default: :static
   attribute :items, Array[InterfaceItem]

@@ -39,23 +39,21 @@ module GitFiles
 
     paths = paths.flatten
     prefix = dataset.dataset_dir.realpath.to_s
-    parent_prefix = dataset.try(:parent)&.dataset_dir&.realpath&.to_s
+    parent = dataset.try(:parent)
 
     # Fetch a list of all matching files with the dataset dir.
     resolved_paths = dataset.send(:path_resolver).glob(paths)
 
     git_files = resolved_paths.map do |path|
-      realpath = path.realpath
-
       # Include only those which really appear with in the dataset dir, preventing possible abuse or
       # mistakes.
-      if realpath.to_s.start_with?(prefix)
+      if path.to_s.start_with?(prefix)
         GitFile.new(
           path.relative_path_from(Atlas.data_dir),
           path.relative_path_from(dataset.dataset_dir),
           false
         )
-      elsif parent_prefix && realpath.to_s.start_with?(parent_prefix)
+      elsif parent
         GitFile.new(
           path.relative_path_from(Atlas.data_dir),
           path.relative_path_from(dataset.parent.dataset_dir),

@@ -4,9 +4,11 @@ class InterfaceGroup
   include Virtus.model
   include ActiveModel::Validations
 
-  validates :items, absence: { if: ->(model) { model.type == :files } }
+  validates :items, absence: { if: ->(model) { model.files? } }
 
-  validates :paths, absence: true, unless: ->(model) { model.type == :files }
+  validates :paths, absence: true, unless: ->(model) { model.files? }
+
+  validate :validate_paths, if: ->(model) { model.files? }
 
   attribute :header, String
   attribute :type, Symbol, default: :static
@@ -15,4 +17,18 @@ class InterfaceGroup
 
   # Used by file history pages.
   attribute :paths, Array[String]
+
+  def files?
+    type == :files
+  end
+
+  private
+
+  def validate_paths
+    Array(paths).each do |path|
+      if path.to_s.include?('..')
+        errors.add(:paths, "may not include path to a parent directory (#{path.inspect})")
+      end
+    end
+  end
 end

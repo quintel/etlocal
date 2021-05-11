@@ -7,7 +7,7 @@ h4 = @file.i18n_segments.last
   - if @file.inherited?
     div style="margin-top: 2px"
       i.fa.fa-info-circle
-      = I18n.t('inherited_file')
+      = I18n.t('inherited_file', parent: I18n.t("countries.#{@dataset.country}"))
 
 - if @file.description.present?
   .description= format_file_description(@file.description)

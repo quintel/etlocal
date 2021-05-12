@@ -1,8 +1,8 @@
 .heading
-  h5 title= "Dataset: #{dataset.id}, GeoID: #{dataset.geo_id}"
+  h2 title= "Dataset: #{dataset.id}, GeoID: #{dataset.geo_id}"
     = dataset.name
 
-  em
+  .dataset-attribution
     = I18n.t("user.created_by", group: dataset.creator)
 
 - if @dataset_edit_form.errors.any?

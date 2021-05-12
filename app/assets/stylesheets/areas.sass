@@ -159,21 +159,32 @@ $map-height: 100%
 
 
     #dataset-overlay
+      background-color: $bg-color
+      border-radius: 4px
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 17px rgba(0, 0, 0, 0.25)
+      display: none
+      margin-bottom: 75px
       position: relative
       width: 960px
-      display: none
-      background-color: $bg-color
-      box-shadow: 0 1px 2px rgba(0,0,0,0.10)
-      margin-bottom: 75px
       z-index: 2
 
       .intro
         padding: 20px 60px 30px
 
       .heading
-        padding: 20px 35px
+        padding: 15px 35px
         text-align: center
-        border-bottom: 1px solid $border-color
+        border-bottom: 1px solid $border-color-dark
+
+        h2
+          font-size: 24px
+          font-weight: 600
+          margin-top: 5px
+          margin-bottom: 0
+
+        .dataset-attribution
+          color: #777
+
 
       .errors .error
         margin-bottom: 10px

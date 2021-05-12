@@ -25,6 +25,12 @@ body
   p
     margin-bottom: 1.2rem
 
+  a
+    color: $selected-color
+
+    &:hover
+      color: #000
+
 .colored-header
   background-color: $selected-color
 
@@ -153,6 +159,10 @@ table tbody tr td a.button
     .legend
       float: right
 
+.content.tab
+  display: flex
+  flex-wrap: wrap
+
 .edit-form
   .attributes
     float: none
@@ -162,9 +172,8 @@ table tbody tr td a.button
   padding: 25px
 
 .attributes
-  padding: 0 15px 30px 25px
-  float: left
-  width: 675px
+  flex: 1
+  padding: 20px
 
   &.errors
     padding-bottom: 0
@@ -229,7 +238,7 @@ table tbody tr td a.button
     strong
       margin: 15px 0
       display: block
-      border-top: 0.5px solid #aaa
+      border-top: 0.5px solid #ccc
       padding-top: 20px
       &:first-child
         border-top: none
@@ -397,10 +406,10 @@ button.button,
   float: right
 
 .overview-edits
-  margin-top: 15px
-  border-top: 1px solid $border-color
-  min-height: 58px
   background-color: $selected-color
+  border-radius: 0 0 4px 4px
+  min-height: 58px
+  width: 100%
 
   .apply
     padding: 10px 13px 10px 13px
@@ -514,37 +523,45 @@ button.button,
     border: 1px solid darken($error-color, 20)
     margin-bottom: 10px
 
+.nav
+  border-right: 1px solid $border-color-dark
+
 ul.tab-nav
   display: block
   margin-bottom: 0
   position: relative
-  float: left
   width: 230px
 
   li.tab
     list-style-type: none
-    margin-bottom: -1px
+    margin: 0
     vertical-align: top
-    border: 1px solid darken($border-color, 20)
 
     a
       overflow: hidden
       text-overflow: ellipsis
+      border-bottom: 1px solid $border-color-dark
 
     ul.sub-nav
       display: none
+      font-size: 100%
       margin: 0
 
       &.active
         display: block
 
       li.tab
-        background-color: #d7d7d7
+        background-color: #f0f0f0
+
+      li:last-child
+        border-bottom: 0
 
     a.active
-      margin-top: -1px
       background-color: $selected-color
+      border-color: $selected-color
+      border-right: 1px solid $selected-color
       color: white
+      margin-right: -1px
 
       &:hover
         background-color: $selected-color
@@ -557,11 +574,10 @@ ul.tab-nav
       color: black
 
       &:hover
-        background-color: $border-color
+        background-color: #e0e0e0
 
 div.tab
   display: none
-  padding: 15px 0 0 0
 
   &.group
     padding-top: 0
@@ -587,7 +603,7 @@ select.file-history
     cursor: pointer
     display: list-item
     font-size: 14px
-    margin: -2px -8px
+    margin: 0 -8px
     padding: 2px 8px
     &:hover
       background: #eee

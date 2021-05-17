@@ -13,6 +13,7 @@ class InterfaceItem
   attribute :default, Float
   attribute :skip_validation, Boolean, default: false
   attribute :hidden, Boolean, default: false
+  attribute :precision, Integer, default: 2
 
   # Used by file history items.
   attribute :paths, Array[String], default: []

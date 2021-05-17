@@ -102,4 +102,43 @@ describe DatasetsController do
       end
     end
   end
+
+  context 'when the browser prefers English' do
+    before do
+      request.env['HTTP_ACCEPT_LANGUAGE'] = 'en'
+      get :index
+    end
+
+    after { I18n.locale = I18n.default_locale }
+
+    it 'loads in the EN locale' do
+      expect(I18n.locale).to eq(:en)
+    end
+  end
+
+  context 'when the browser prefers Dutch' do
+    before do
+      request.env['HTTP_ACCEPT_LANGUAGE'] = 'nl'
+      get :index
+    end
+
+    after { I18n.locale = I18n.default_locale }
+
+    it 'loads in the EN locale' do
+      expect(I18n.locale).to eq(:nl)
+    end
+  end
+
+  context 'when the browser prefers German' do
+    before do
+      request.env['HTTP_ACCEPT_LANGUAGE'] = 'de'
+      get :index
+    end
+
+    after { I18n.locale = I18n.default_locale }
+
+    it 'loads in the EN locale' do
+      expect(I18n.locale).to eq(:en)
+    end
+  end
 end

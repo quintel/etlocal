@@ -20,7 +20,8 @@ module Etlocal
     config.etsource_path        = Rails.root.dirname.join("etsource").to_s
     config.google_maps_api_key  = Rails.application.secrets.google_maps_api_key
 
-    config.i18n.default_locale  = :nl
-    config.i18n.fallbacks       = [:en]
+    config.i18n.default_locale    = :en
+    config.i18n.fallbacks         = [:en]
+    config.i18n.available_locales = %i[en nl]
   end
 end

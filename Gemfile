@@ -18,6 +18,7 @@ gem 'rails-i18n', '~> 5.1'
 gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
+gem 'http_accept_language'
 
 gem 'virtus'
 gem 'slim'

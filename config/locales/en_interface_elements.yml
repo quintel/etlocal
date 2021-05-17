@@ -32,20 +32,20 @@ en:
         non_energetic_emissions_other_ghg_agriculture_soil_cultivation: "Agriculture - soil cultivation"
         non_energetic_emissions_other_ghg_agriculture_other: "Agriculture - other"
 
-        file_carrier_coal_co2_conversion_per_mj: Coal
-        file_carrier_crude_oil_co2_conversion_per_mj: Oil
-        file_carrier_diesel_co2_conversion_per_mj: Diesel
-        file_carrier_gasoline_co2_conversion_per_mj : Gasoline
-        file_carrier_heavy_fuel_oil_co2_conversion_per_mj: Heavy fuel oil
-        file_carrier_imported_electricity_co2_conversion_per_mj: Imported electricity
-        file_carrier_imported_heat_co2_conversion_per_mj: Imported heat
-        file_carrier_imported_hydrogen_co2_conversion_per_mj: Imported hydrogen
-        file_carrier_kerosene_co2_conversion_per_mj: Kerosene
-        file_carrier_lignite_co2_conversion_per_mj: Lignite
-        file_carrier_lng_co2_conversion_per_mj: LNG
-        file_carrier_lpg_co2_conversion_per_mj: LPG
-        file_carrier_natural_gas_co2_conversion_per_mj: Natural gas
-        file_carrier_non_biogenic_waste_co2_conversion_per_mj: Non-biogenic waste
+        file_carriers_coal_co2_conversion_per_mj: Coal
+        file_carriers_crude_oil_co2_conversion_per_mj: Oil
+        file_carriers_diesel_co2_conversion_per_mj: Diesel
+        file_carriers_gasoline_co2_conversion_per_mj : Gasoline
+        file_carriers_heavy_fuel_oil_co2_conversion_per_mj: Heavy fuel oil
+        file_carriers_imported_electricity_co2_conversion_per_mj: Imported electricity
+        file_carriers_imported_heat_co2_conversion_per_mj: Imported heat
+        file_carriers_imported_hydrogen_co2_conversion_per_mj: Imported hydrogen
+        file_carriers_kerosene_co2_conversion_per_mj: Kerosene
+        file_carriers_lignite_co2_conversion_per_mj: Lignite
+        file_carriers_lng_co2_conversion_per_mj: LNG
+        file_carriers_lpg_co2_conversion_per_mj: LPG
+        file_carriers_natural_gas_co2_conversion_per_mj: Natural gas
+        file_carriers_non_biogenic_waste_co2_conversion_per_mj: Non-biogenic waste
 
         lv_net_total_costs_present: Low voltage grid
         lv_mv_trafo_total_costs_present: LV-MV transformers

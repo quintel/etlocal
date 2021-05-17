@@ -13,6 +13,10 @@ nl:
         number_of_inhabitants: Aantal inwoners
 
         co2_emission_1990: 'CO<sub>2</sub>-emissies in 1990'
+        other_emission_built_environment: 'Gebouwde omgeving'
+        other_emission_transport: 'Transportsector'
+        other_emission_industry_energy: 'Industrie en energiesector'
+        other_emission_agriculture: 'Landbouw'
         energetic_emissions_other_ghg_households: "Huishoudens"
         energetic_emissions_other_ghg_buildings: "Gebouwen"
         energetic_emissions_other_ghg_transport: "Transport"
@@ -33,20 +37,20 @@ nl:
         non_energetic_emissions_other_ghg_agriculture_soil_cultivation: "Landbouw - landgebruik"
         non_energetic_emissions_other_ghg_agriculture_other: "Landbouw - overig"
 
-        file_carrier_coal_co2_conversion_per_mj: Kolen
-        file_carrier_crude_oil_co2_conversion_per_mj: Aardolie
-        file_carrier_diesel_co2_conversion_per_mj: Diesel
-        file_carrier_gasoline_co2_conversion_per_mj : Gasoline
-        file_carrier_heavy_fuel_oil_co2_conversion_per_mj: Zware Stookolie
-        file_carrier_imported_electricity_co2_conversion_per_mj: Geimporteerde elektriciteit
-        file_carrier_imported_heat_co2_conversion_per_mj: Geimporteerde warmte
-        file_carrier_imported_hydrogen_co2_conversion_per_mj: Geimporteerde waterstof
-        file_carrier_kerosene_co2_conversion_per_mj: Kerosine
-        file_carrier_lignite_co2_conversion_per_mj: Bruinkool
-        file_carrier_lng_co2_conversion_per_mj: LNG
-        file_carrier_lpg_co2_conversion_per_mj: LPG
-        file_carrier_natural_gas_co2_conversion_per_mj: Aardgas
-        file_carrier_non_biogenic_waste_co2_conversion_per_mj: Niet-biogeen afval
+        file_carriers_coal_co2_conversion_per_mj: Kolen
+        file_carriers_crude_oil_co2_conversion_per_mj: Aardolie
+        file_carriers_diesel_co2_conversion_per_mj: Diesel
+        file_carriers_gasoline_co2_conversion_per_mj : Gasoline
+        file_carriers_heavy_fuel_oil_co2_conversion_per_mj: Zware Stookolie
+        file_carriers_imported_electricity_co2_conversion_per_mj: Geimporteerde elektriciteit
+        file_carriers_imported_heat_co2_conversion_per_mj: Geimporteerde warmte
+        file_carriers_imported_hydrogen_co2_conversion_per_mj: Geimporteerde waterstof
+        file_carriers_kerosene_co2_conversion_per_mj: Kerosine
+        file_carriers_lignite_co2_conversion_per_mj: Bruinkool
+        file_carriers_lng_co2_conversion_per_mj: LNG
+        file_carriers_lpg_co2_conversion_per_mj: LPG
+        file_carriers_natural_gas_co2_conversion_per_mj: Aardgas
+        file_carriers_non_biogenic_waste_co2_conversion_per_mj: Niet-biogeen afval
 
         lv_net_total_costs_present: Laagspanningsnet
         lv_mv_trafo_total_costs_present: LS-MS-transformatoren

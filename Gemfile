@@ -12,7 +12,7 @@ gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails', '>= 1.0.3'
 gem 'mysql2'
-gem 'puma', '~> 3.12'
+gem 'puma', '~> 5.3'
 gem 'rails', '~> 5.2'
 gem 'rails-i18n', '~> 5.1'
 gem 'sass-rails', '~> 5.0'
@@ -49,7 +49,7 @@ group :development, :test do
   gem 'capistrano-rbenv',   '~> 2.0',   require: false
   gem 'capistrano-rails',   '~> 1.1',   require: false
   gem 'capistrano-bundler', '~> 1.1',   require: false
-  gem 'capistrano3-puma',   '~> 3.1.1', require: false
+  gem 'capistrano3-puma',   '~> 5.0.4', require: false
 end
 
 group :test do

@@ -20,6 +20,7 @@ public/system/
 .~lock.*
 
 .env
+config/.etsource_password
 config/database.yml
 config/email.yml
 db/shapes/*

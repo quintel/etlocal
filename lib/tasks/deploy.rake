@@ -18,17 +18,25 @@ namespace :deploy do
       sh('git reset --hard origin/master')
       sh('git clean -f')
 
-      passphrase = Rails.root.join('config/.etsource_password')
+      passphrase = Rails.root.join('config/.etsource_password').read.strip
 
       Pathname.glob('datasets/*/energy_balance.gpg').each do |source|
         destination = source.dirname.join("#{source.basename('.gpg')}.csv")
         rm(destination) if destination.file?
 
+        puts(
+          'gpg --batch --yes --ignore-mdc-error ' \
+          '--passphrase [REDACTED] ',
+          "--output #{destination} " \
+          "--decrypt #{source}"
+        )
+
         sh(
           'gpg', '--batch', '--yes', '--ignore-mdc-error',
-          '--passphrase-file', passphrase.expand_path.to_s,
+          '--passphrase', passphrase,
           '--output', destination.to_s,
-          '--decrypt', source.to_s
+          '--decrypt', source.to_s,
+          verbose: false
         )
       end
     end

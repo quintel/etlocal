@@ -43,7 +43,7 @@ en:
       other: Other energy demand
       energy: Energy production
       transport: Transport
-      curves: Curves
+      curves: Hourly curves
 
     subgroups:
       area:
@@ -60,6 +60,10 @@ en:
         buildings_energy_supply: Energy supply
         buildings_building_stock: Building stock
         buildings_applications: Applications
+
+      curves:
+        curves_default: Default curves
+        curves_weather_years: Weather year curves
 
       energy:
         energy_energy_demand: Energy demand

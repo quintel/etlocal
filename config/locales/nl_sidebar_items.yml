@@ -43,7 +43,7 @@ nl:
       energy: Energieproductie
       transport: Transport
       other: Overige vraag
-      curves: Curves
+      curves: Uurprofielen
 
     subgroups:
       area:
@@ -60,6 +60,10 @@ nl:
         buildings_energy_supply: Energieaanbod
         buildings_building_stock: Gebouwenvoorraad
         buildings_applications: Toepassingen en apparaten
+      
+      curves:
+        curves_default: Standaardprofielen
+        curves_weather_years: Weerjaarprofielen
 
       energy:
         energy_energy_demand: Energievraag

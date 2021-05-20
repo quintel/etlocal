@@ -392,6 +392,7 @@ en:
         energy_extraction_coal_demand: Coal extraction
         energy_extraction_crude_oil_demand: Oil extraction
         energy_extraction_uranium_oxide_demand: Uranium extraction
+        energy_extraction_lignite_demand: Lignite extraction
 
         energy_production_wet_biomass_max_demand: Wet biomass potential
         energy_production_dry_biomass_max_demand: Dry biomass potential

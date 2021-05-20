@@ -397,6 +397,7 @@ nl:
         energy_extraction_coal_demand: Kolenwinning
         energy_extraction_crude_oil_demand: Oliewinning
         energy_extraction_uranium_oxide_demand: Uraniumwinning
+        energy_extraction_lignite_demand: Bruinkoolwinning
 
         energy_production_wet_biomass_max_demand: Potentie natte biomassa
         energy_production_dry_biomass_max_demand: Potentie droge biomassa

@@ -25,13 +25,12 @@ class AddInitialCarrierData < ActiveRecord::Migration[5.2]
 
       datasets.find_each.with_index do |dataset, index|
         region_used, carrier_values = carrier_values_for(dataset.geo_id)
-
         parent_name = PARENT_NAME[region_used] || PARENT_NAME[:nl]
-        message = <<-MSG.strip_heredoc
-          Add emissions and costs for energy carriers using data for #{parent_name}.
-        MSG
 
-        commit = dataset.commits.build(message: message, user: User.robot)
+        commit = dataset.commits.build(
+          message: "Add emissions and costs for energy carriers using data for #{parent_name}."
+          user: User.robot
+        )
 
         carrier_values.each do |cv|
           commit.dataset_edits.build(key: cv.interface_key, value: cv.value)

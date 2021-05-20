@@ -264,6 +264,6 @@ en:
       fuel_production: |
         How much primary fuels are produced within the borders of your region? These values determine how much of the fuels are imported and exported.
       area_emission_factors: |
-        Below you can see how much Mton CO<sub>2</sub> emissions per MJ is emitted depending on the type of carrier.
+        Below you can see how much CO<sub>2</sub> is emitted depending on the type of carrier.
         These 'emission factors' can differ per country because they depend on the origin of the carrier.
         Within the ETM these emission factors are used to calculate the total amount of CO<sub>2</sub> emissions attributed to the energy system.

@@ -255,6 +255,6 @@ nl:
       fuel_production: |
         Hoeveel brandstof wordt er geproduceerd? 
       area_emission_factors: |
-        Onderstaande getallen geven weer hoeveel Mton CO<sub>2</sub> emissies per MJ worden uitgestoten afhankelijk van de drager. 
+        Onderstaande getallen geven weer hoeveel CO<sub>2</sub> wordt uitgestoten afhankelijk van de drager. 
         Deze 'emissiefactoren' kunnen per land verschillen omdat ze afhankelijk zijn van het oorsprong van de drager. 
         In het ETM worden de emissiefactoren gebruikt om de totale CO<sub>2</sub> uitstoot van het energiesysteem uit te rekenen.

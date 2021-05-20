@@ -41,4 +41,6 @@ energy:
   - energy_fuel_production
 
 curves:
+  - curves_default
+  - curves_weather_years
 

@@ -2,6 +2,15 @@
 
 # Adds region-specific carrier data.
 class AddInitialCarrierData < ActiveRecord::Migration[5.2]
+  PARENT_NAME = {
+    nl: 'the Netherlands',
+    nl2016: 'the Netherlands in 2016',
+    nl2017: 'the Netherlands in 2017',
+    nl2018: 'the Netherlands in 2018',
+    be: 'Belgium',
+    uk: 'the United Kingdom'
+  }.freeze
+
   Cell = Struct.new(:carrier, :key, :value) do
     def interface_key
       "file_carriers_#{carrier}_#{key}"
@@ -9,10 +18,6 @@ class AddInitialCarrierData < ActiveRecord::Migration[5.2]
   end
 
   def up
-    message = <<-MSG.strip_heredoc
-      Add emissions and costs for energy carriers using data for the Netherlands.
-    MSG
-
     say_with_time('Adding carrier data') do
       datasets   = Dataset.order(:geo_id)
       length     = datasets.count
@@ -20,6 +25,12 @@ class AddInitialCarrierData < ActiveRecord::Migration[5.2]
 
       datasets.find_each.with_index do |dataset, index|
         region_used, carrier_values = carrier_values_for(dataset.geo_id)
+
+        parent_name = PARENT_NAME[region_used] || PARENT_NAME[:nl]
+        message = <<-MSG.strip_heredoc
+          Add emissions and costs for energy carriers using data for #{parent_name}.
+        MSG
+
         commit = dataset.commits.build(message: message, user: User.robot)
 
         carrier_values.each do |cv|

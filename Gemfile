@@ -35,8 +35,8 @@ gem 'deep_cloneable', '~> 2.3.0'
 
 gem 'git'
 
-gem 'transformer', branch: 'ds-simplify', github: 'quintel/transformer'
-gem 'atlas',       branch: 'ds-simplify', github: 'quintel/atlas'
+gem 'transformer', ref: '2d97b66', github: 'quintel/transformer'
+gem 'atlas',       ref: 'f958164', github: 'quintel/atlas'
 gem 'rubel',       ref: 'ad3d44e', github: 'quintel/rubel'
 gem 'refinery',    ref: '72eacf8', github: 'quintel/refinery'
 

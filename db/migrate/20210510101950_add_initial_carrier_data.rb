@@ -28,7 +28,7 @@ class AddInitialCarrierData < ActiveRecord::Migration[5.2]
         parent_name = PARENT_NAME[region_used] || PARENT_NAME[:nl]
 
         commit = dataset.commits.build(
-          message: "Add emissions and costs for energy carriers using data for #{parent_name}."
+          message: "Add emissions and costs for energy carriers using data for #{parent_name}.",
           user: User.robot
         )
 

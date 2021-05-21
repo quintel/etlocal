@@ -148,8 +148,26 @@ nl:
         electriciteitscentrales in het startjaar van deze regio. Meer informatie over de verschillende types centrales kun je vinden in het
         <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants">
         Energietransitiemodel</a>.
-      energy_biomass:
+      energy_biomass: |
         In dit tabblad vind je informatie over groen gas, afval en de potentie van biomassa.
+      curves: |
+        Het ETM rekent vraag en aanbod van gas, elekriciteit, warmte en waterstof uit op uurbasis. Voor deze berekening zijn uurprofielen nodig
+        en deze kan je vinden in deze sectie. Vaak wordt voor een regio binnen een land dezelfde profielen gebruikt als het land zelf.
+        </br></br> 
+        Zoals je ziet wordt er een onderscheid gemaakt tussen 'Standaardprofielen' en "Weerjaarprofielen". Standaardprofielen zijn de profielen
+        die standaard gebruikt worden in het ETM en corresponderen met het startjaar. Weerjaarprofielen zijn profielen die gebruikt worden als je
+        in het ETM een bepaalt (extreem) weerjaar selecteert om te kijken wat dat met jouw scenario doet.
+      curves_default: |
+        Het ETM rekent vraag en aanbod van gas, elekriciteit, warmte en waterstof uit op uurbasis. Voor deze berekening zijn uurprofielen nodig.
+        Op deze pagina vind je de profielen die standaard in het ETM gebruikt worden en die corresponderen met het startjaar. Zoals je ziet
+        zijn er verschillende soorten profielen: aanbod- en vraagprofielen. Vaak wordt voor een regio binnen een land dezelfde profielen gebruikt als het land zelf.
+        Wil je andere profielen gebruiken in jouw ETM scenario? Dit is mogelijk en kan je in het ETM doen op de pagina
+        <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves">Flexibiliteit -> Profielen aanpassen</a>.
+      curves_weather_years: |
+        Standaard worden weersomstandigheden gebruikt die passen bij het startjaar. Echter, weersomstandigheden kunnen flink variëren. 
+        Om de impact van weersomstandigheden te verkennen is het mogelijk om in het ETM een ander weerjaar te selecteren. 
+        Dit kan je in het ETM doen op de pagina <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/extreme-weather-conditions">Flexibiliteit -> Weersomstandigheden</a>.
+        Er is de keuze uit drie weerjaren en in het ETM kan je een omschrijving van deze jaren vinden.
     subgroups:
       area_co2_emission_1990: |
         Het ETM vergelijkt de toekomstige CO<sub>2</sub>-uitstoot met de emissieniveaus van 1990,
@@ -253,7 +271,7 @@ nl:
       energy_potentials: |
         Hoeveel biomassa kan er in deze regio potentieel gewonnen worden? Klik op de 'i' voor meer informatie over elke categorie.
       fuel_production: |
-        Hoeveel brandstof wordt er geproduceerd? 
+        Hoeveel brandstoffen worden er geproduceerd binnen de grenzen van jouw regio? Deze waarden bepalen hoeveel er moet worden geïmporteerd en geëxporteerd. 
       area_emission_factors: |
         Onderstaande getallen geven weer hoeveel CO<sub>2</sub> wordt uitgestoten afhankelijk van de drager. 
         Deze 'emissiefactoren' kunnen per land verschillen omdat ze afhankelijk zijn van het oorsprong van de drager. 

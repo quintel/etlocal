@@ -126,3 +126,14 @@ en:
       energy_renewable_full_load_hours: Full load hours of renewable power plants
       energy_fossil_full_load_hours: Full load hours of fossil power plants
       fuel_production: Fuel Production
+
+      # curves
+      curves_supply_electricity: Supply - Electricity
+      curves_supply_heat: Supply - Heat
+      curves_demand_buildings: Demand - Buildings
+      curves_demand_households: Demand - Households
+      curves_demand_transport: Demand - Transport
+      curves_demand_industry: Demand - Industry
+      curves_demand_agriculture: Demand - Agriculture
+      curves_import_export_gases: Import / export - Gases
+      curves_air_temperature: Outdoor temperature

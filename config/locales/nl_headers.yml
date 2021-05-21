@@ -128,3 +128,14 @@ nl:
       energy_renewable_full_load_hours: Hernieuwbare elektriciteitsproductie
       energy_fossil_full_load_hours: Fossiele elektriciteitsproductie
       fuel_production: Brandstofproductie
+
+      # curves
+      curves_supply_electricity: Aanbod - Elektriciteit
+      curves_supply_heat: Aanbod - Warmte
+      curves_demand_buildings: Vraag - Gebouwen
+      curves_demand_households: Vraag - Huishoudens
+      curves_demand_transport: Vraag - Transport
+      curves_demand_industry: Vraag - Industrie
+      curves_demand_agriculture: Vraag - Landbouw
+      curves_import_export_gases: Import / export - Gassen
+      curves_air_temperature: Buitentemperatuur

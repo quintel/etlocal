@@ -20,11 +20,13 @@
 #
 # See the documentation for Dir.glob for more information on how glob patterns work:
 # https://ruby-doc.org/core-2.5.1/Dir.html#method-c-glob
-key: curves
+key: curves_default
 groups:
   - header: curves_supply_electricity
     type: files
-      - curves/weather/default/{wind,solar_pv}
+    paths:
+      - curves/weather/default/wind*
+      - curves/weather/default/solar_pv_profile_1.csv
       - curves/river.csv
 
   - header: curves_supply_heat
@@ -35,11 +37,13 @@ groups:
 
   - header: curves_demand_buildings
     type: files
+    paths:
       - curves/weather/default/buildings*
       - curves/buildings*
 
   - header: curves_demand_households
     type: files
+    paths:
       - curves/households*
       - curves/weather/default/insulation*
 
@@ -52,7 +56,11 @@ groups:
   - header: curves_demand_industry
     type: files
     paths:
-      - curves/industry*
+      - curves/industry_chemicals*
+      - curves/industry_metals*
+      - curves/industry_other*
+      - curves/industry_refineries*
+      - curves/industry_ict.csv
 
   - header: curves_demand_agriculture
     type: files
@@ -63,9 +71,10 @@ groups:
   - header: curves_import_export_gases
     type: files
     paths:
-      - curves/{export,import}
+      - curves/*export*
+      - curves/*import*
 
-  - header: curves_other
+  - header: curves_air_temperature
     type: files
     paths:
       - curves/weather/default/air_temperature.csv

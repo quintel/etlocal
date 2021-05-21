@@ -43,14 +43,121 @@ en:
   files:
     curves:
       name: ''
-    electric_vehicle_profile_2:
-      name: Electric vehicle fast-charging profile
-      description: |
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor, justo vel feugiat
-        efficitur, ligula leo condimentum magna, nec ultricies erat massa ut dui. Aenean vehicula
-        ligula et velit laoreet pulvinar. Proin auctor vehicula libero eu feugiat. Fusce sed mollis
-        orci. Donec rutrum ultrices massa, at elementum leo finibus sed.
-
-        Sed suscipit ligula nec nulla ornare mollis. Morbi eu pulvinar lacus. Aliquam erat volutpat.
-        In a sem ut ex posuere fringilla id et lacus. Morbi sodales lectus sit amet tortor pharetra
-        gravida. Integer dui lectus, commodo eu luctus vitae, bibendum non urna. Sed leo
+    weather:
+      name: ''
+    default:
+      name: ''
+    1987:
+      name: Weather year 1
+    1997:
+      name: Weather year 2
+    2004:
+      name: Weather year 3
+    air_temperature: 
+      name: Outdoor temperature
+    agriculture_electricity:
+      name: Electricity
+    agriculture_heating:
+      name: Heat
+    buildings_heating: 
+      name: Heating
+    buildings_appliances: 
+      name: Appliances
+    buildings_cooling: 
+      name: Cooling
+    households_hot_water: 
+      name: Hot water
+    households_appliances: 
+      name: Appliances
+    households_cooling: 
+      name: Cooling
+    insulation_apartments_high:
+      name: Heating apartments with high insulation
+    insulation_apartments_low:
+      name: Heating apartments with low insulation
+    insulation_apartments_medium:
+      name: Heating apartments with medium insulation
+    insulation_corner_houses_high:
+      name: Heating corner houses with high insulation
+    insulation_corner_houses_low:
+      name: Heating corner houses with low insulation
+    insulation_corner_houses_medium:
+      name: Heating corner houses with medium insulation
+    insulation_detached_houses_high:
+      name: Heating detached houses with high insulation
+    insulation_detached_houses_low:
+      name: Heating detached houses with low insulation
+    insulation_detached_houses_medium:
+      name: Heating detached houses with medium insulation
+    insulation_semi_detached_houses_high:
+      name: Heating semi-detached houses with high insulation
+    insulation_semi_detached_houses_low:
+      name: Heating semi-detached houses with low insulation
+    insulation_semi_detached_houses_medium:
+      name: Heating semi-detached houses with medium insulation
+    insulation_terraced_houses_high:
+      name: Heating terraced houses with high insulation
+    insulation_terraced_houses_low:
+      name: Heating terraced houses with low insulation
+    insulation_terraced_houses_medium:
+      name: Heating terraced houses with medium insulation
+    electric_bikes:
+      name: Electric bicycles
+    electric_buses: 
+      name: Electric buses
+    electric_trucks: 
+      name: Electric trucks
+    electric_vehicle_profile_1: 
+      name: Electric cars "charging everywhere"
+    electric_vehicle_profile_2: 
+      name: Electric cars "charging at home"
+    electric_vehicle_profile_3: 
+      name: Electric cars "fast charging"
+    electric_vehicle_profile_4: 
+      name: Electric cars "smart charging"
+    electric_vehicle_profile_5: 
+      name: Electric cars "regular charging"
+    freight_trains:
+      name: Freight trains
+    passenger_trains:
+      name: Passenger trains
+    industry_chemicals_electricity: 
+      name: Chemicals electricity demand
+    industry_chemicals_heat: 
+      name: Chemicals heat demand
+    industry_ict: 
+      name: ICT electricity demand
+    industry_metals_electricity: 
+      name: Metal electricity demand
+    industry_metals_heat: 
+      name: Metal heat demand
+    industry_other_electricity: 
+      name: Other industry electricity demand
+    industry_other_heat: 
+      name: Other industry heat demand
+    industry_refineries_electricity: 
+      name: Refineries electricity demand
+    industry_refineries_heat: 
+      name: Refineries heat demand
+    hydrogen_export: 
+      name: Hydrogen export
+    hydrogen_import: 
+      name: Hydrogen import
+    network_gas_export: 
+      name: Gas export
+    network_gas_import: 
+      name: Gas import
+    solar_pv_profile_1: 
+      name: Solar PV
+    solar_thermal: 
+      name: Solar thermal
+    geothermal_heat: 
+      name: Geothermal heat
+    river: 
+      name: Hydropower (river)
+    wind_offshore_baseline: 
+      name: Wind offshore
+    wind_coastal_baseline: 
+      name: Wind coastal
+    wind_inland_baseline: 
+      name: Wind inland

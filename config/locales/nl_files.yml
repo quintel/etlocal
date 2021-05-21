@@ -1,4 +1,4 @@
-en:
+nl:
   # This file contains translations for file and directory names and descriptions.
   #
   # These are used with interface elements whose type is "files", and which have a "paths"
@@ -43,3 +43,121 @@ en:
   files:
     curves:
       name: ''
+    weather:
+      name: ''
+    default:
+      name: ''
+    1987:
+      name: Weerjaar 1
+    1997:
+      name: Weerjaar 2
+    2004:
+      name: Weerjaar 3
+    air_temperature: 
+      name: Buitentemperatuur
+    agriculture_electricity:
+      name: Elektriciteit
+    agriculture_heating:
+      name: Warmte
+    buildings_heating: 
+      name: Verwarming
+    buildings_appliances: 
+      name: Apparaten
+    buildings_cooling: 
+      name: Koeling
+    households_hot_water: 
+      name: Hot water
+    households_appliances: 
+      name: Apparaten
+    households_cooling: 
+      name: Koeling
+    insulation_apartments_high:
+      name: Verwarming appartementen hoger dan label A+
+    insulation_apartments_low:
+      name: Verwarming appartementen label D t/m G
+    insulation_apartments_medium:
+      name: Verwarming appartementen label A+ t/m C
+    insulation_corner_houses_high:
+      name: Verwarming hoekhuizen hoger dan label A+
+    insulation_corner_houses_low:
+      name: Verwarming hoekhuizen label D t/m G
+    insulation_corner_houses_medium:
+      name: Verwarming hoekhuizen label A+ t/m C
+    insulation_detached_houses_high:
+      name: Verwarming vrijstaande huizen hoger dan label A+
+    insulation_detached_houses_low:
+      name: Verwarming vrijstaande huizen label D t/m G
+    insulation_detached_houses_medium:
+      name: Verwarming vrijstaande huizen label A+ t/m C
+    insulation_semi_detached_houses_high:
+      name: Verwarming twee-onder-een-kapwoning  hoger dan label A+
+    insulation_semi_detached_houses_low:
+      name: Verwarming twee-onder-een-kapwoning  label D t/m G
+    insulation_semi_detached_houses_medium:
+      name: Verwarming twee-onder-een-kapwoning  label A+ t/m C
+    insulation_terraced_houses_high:
+      name: Verwarming rijtjeshuizen hoger dan label A+
+    insulation_terraced_houses_low:
+      name: Verwarming rijtjeshuizen label D t/m G
+    insulation_terraced_houses_medium:
+      name: Verwarming rijtjeshuizen label A+ t/m C
+    electric_bikes:
+      name: Elektrische fietsen
+    electric_buses: 
+      name: Elektrische bussen
+    electric_trucks: 
+      name: Elektrische vrachtwagens
+    electric_vehicle_profile_1: 
+      name: Elektrische auto's "overal laden"
+    electric_vehicle_profile_2: 
+      name: Elektrische auto's "thuisladen"
+    electric_vehicle_profile_3: 
+      name: Elektrische auto's "snelladen"
+    electric_vehicle_profile_4: 
+      name: Elektrische auto's "slim laden"
+    electric_vehicle_profile_5: 
+      name: Elektrische auto's "regulier laden"
+    freight_trains:
+      name: Goederentreinen
+    passenger_trains:
+      name: Passagierstreinen
+    industry_chemicals_electricity: 
+      name: Chemie elektriciteitsvraag
+    industry_chemicals_heat: 
+      name: Chemie warmtevraag
+    industry_ict: 
+      name: ICT elektriciteitsvraag
+    industry_metals_electricity: 
+      name: Metaal elektriciteitsvraag
+    industry_metals_heat: 
+      name: Metaal warmtevraag
+    industry_other_electricity: 
+      name: Overige industrie elektriciteitsvraag
+    industry_other_heat: 
+      name: Overige industrie warmtevraag
+    industry_refineries_electricity: 
+      name: Raffinaderijen elektriciteitsvraag
+    industry_refineries_heat: 
+      name: Raffinaderijen warmtevraag
+    hydrogen_export: 
+      name: Waterstof export
+    hydrogen_import: 
+      name: Waterstof import
+    network_gas_export: 
+      name: Gas export
+    network_gas_import: 
+      name: Gas import
+    solar_pv_profile_1: 
+      name: Zon PV
+    solar_thermal: 
+      name: Zonthermie
+    geothermal_heat: 
+      name: Geothermie (warmte)
+    river: 
+      name: Waterkracht (rivier)
+    wind_offshore_baseline: 
+      name: Wind op zee
+    wind_coastal_baseline: 
+      name: Wind aan de kust
+    wind_inland_baseline: 
+      name: Wind op land

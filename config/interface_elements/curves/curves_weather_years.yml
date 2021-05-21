@@ -22,3 +22,33 @@
 # https://ruby-doc.org/core-2.5.1/Dir.html#method-c-glob
 key: curves_weather_years
 groups:
+  - header: curves_supply_electricity
+    type: files
+    paths:
+      - curves/weather/{1987,1997,2004}/wind*
+      - curves/weather/{1987,1997,2004}/solar_pv_profile_1.csv
+
+  - header: curves_supply_heat
+    type: files
+    paths:
+      - curves/weather/{1987,1997,2004}/solar_thermal.csv
+
+  - header: curves_demand_buildings
+    type: files
+    paths:
+      - curves/weather/{1987,1997,2004}/buildings*
+
+  - header: curves_demand_households
+    type: files
+    paths:
+      - curves/weather/{1987,1997,2004}/insulation*
+
+  - header: curves_demand_agriculture
+    type: files
+    paths:
+      - curves/weather/{1987,1997,2004}/agriculture*
+
+  - header: curves_air_temperature
+    type: files
+    paths:
+      - curves/weather/{1987,1997,2004}/air_temperature.csv

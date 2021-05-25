@@ -153,7 +153,7 @@ nl:
       curves: |
         Het ETM rekent vraag en aanbod van gas, elekriciteit, warmte en waterstof uit op uurbasis. Voor deze berekening zijn uurprofielen nodig
         en deze kan je vinden in deze sectie. Vaak wordt voor een regio binnen een land dezelfde profielen gebruikt als het land zelf.
-        </br></br> 
+        </br></br>
         Zoals je ziet wordt er een onderscheid gemaakt tussen 'Standaardprofielen' en "Weerjaarprofielen". Standaardprofielen zijn de profielen
         die standaard gebruikt worden in het ETM en corresponderen met het startjaar. Weerjaarprofielen zijn profielen die gebruikt worden als je
         in het ETM een bepaalt (extreem) weerjaar selecteert om te kijken wat dat met jouw scenario doet.
@@ -164,8 +164,8 @@ nl:
         Wil je andere profielen gebruiken in jouw ETM scenario? Dit is mogelijk en kan je in het ETM doen op de pagina
         <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves">Flexibiliteit -> Profielen aanpassen</a>.
       curves_weather_years: |
-        Standaard worden weersomstandigheden gebruikt die passen bij het startjaar. Echter, weersomstandigheden kunnen flink variëren. 
-        Om de impact van weersomstandigheden te verkennen is het mogelijk om in het ETM een ander weerjaar te selecteren. 
+        Standaard worden weersomstandigheden gebruikt die passen bij het startjaar. Echter, weersomstandigheden kunnen flink variëren.
+        Om de impact van weersomstandigheden te verkennen is het mogelijk om in het ETM een ander weerjaar te selecteren.
         Dit kan je in het ETM doen op de pagina <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/extreme-weather-conditions">Flexibiliteit -> Weersomstandigheden</a>.
         Er is de keuze uit drie weerjaren en in het ETM kan je een omschrijving van deze jaren vinden.
     subgroups:
@@ -271,8 +271,8 @@ nl:
       energy_potentials: |
         Hoeveel biomassa kan er in deze regio potentieel gewonnen worden? Klik op de 'i' voor meer informatie over elke categorie.
       fuel_production: |
-        Hoeveel brandstoffen worden er geproduceerd binnen de grenzen van jouw regio? Deze waarden bepalen hoeveel er moet worden geïmporteerd en geëxporteerd. 
+        Hoeveel brandstoffen worden er geproduceerd binnen de grenzen van jouw regio? Deze waarden bepalen hoeveel er moet worden geïmporteerd en geëxporteerd.
       area_emission_factors: |
-        Onderstaande getallen geven weer hoeveel CO<sub>2</sub> wordt uitgestoten afhankelijk van de drager. 
-        Deze 'emissiefactoren' kunnen per land verschillen omdat ze afhankelijk zijn van het oorsprong van de drager. 
-        In het ETM worden de emissiefactoren gebruikt om de totale CO<sub>2</sub> uitstoot van het energiesysteem uit te rekenen.
+        Onderstaande getallen geven voor alle energiedragers weer hoeveel CO<sub>2</sub> wordt uitgestoten per MJ.
+        Deze 'emissiefactoren' kunnen per land verschillen omdat ze afhankelijk zijn van de oorsprong van de drager.
+        In het ETM worden de emissiefactoren gebruikt om de totale CO<sub>2</sub>-uitstoot van het energiesysteem uit te rekenen.

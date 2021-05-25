@@ -26,7 +26,6 @@ namespace :etsource do
     raise ArgumentError, 'DATASET= argument is missing' unless ENV['DATASET']
 
     rebuild = ENV['REBUILD'].nil? or ENV['REBUILD'] == 'true'
-    time_curves_to_zero = ENV['TIME_CURVES_TO_ZERO'].nil? or ENV['TIME_CURVES_TO_ZERO'] == 'true'
-    Exporter.export(ENV['DATASET'], time_curves_to_zero: time_curves_to_zero, rebuild: rebuild)
+    Exporter.export(ENV['DATASET'], rebuild: rebuild)
   end
 end

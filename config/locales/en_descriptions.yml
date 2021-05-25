@@ -151,22 +151,22 @@ en:
       energy_biomass: |
         In this tab you will find information about green gas, waste and the potential of biomass.
       curves: |
-        The ETM calculates supply and demand of gas, electricity, heat and hydrogen on an hourly basis. Hourly profiles are required for this 
+        The ETM calculates supply and demand of gas, electricity, heat and hydrogen on an hourly basis. Hourly profiles are required for this
         calculation and can be found in this section. Often the same profiles are used for a region within a country as the country itself.
-        </br></br> 
-        As you can see, a distinction is made between "Default curves" and "Weather year curves". Default curves are used by default in the ETM 
-        and correspond with the starting year. Weather year curves are used when you select a specific (extreme) weather year in the ETM to see how that impacts your scenario. 
+        </br></br>
+        As you can see, a distinction is made between "Default curves" and "Weather year curves". Default curves are used by default in the ETM
+        and correspond with the starting year. Weather year curves are used when you select a specific (extreme) weather year in the ETM to see how that impacts your scenario.
       curves_default: |
-        The ETM calculates the hourly production and demand of gas, electricity, heat and hydrogen. Hourly profiles are required for this 
-        calculation. On this page you can find the curves that are used by default in the ETM and that correspond with the starting year. 
+        The ETM calculates the hourly production and demand of gas, electricity, heat and hydrogen. Hourly profiles are required for this
+        calculation. On this page you can find the curves that are used by default in the ETM and that correspond with the starting year.
         As you can see below, there are different types of profiles: supply and demand profiles. Often the same profiles are used for a region within a country as the country itself.
-        Do you want to use other profiles in your ETM scenario? This is possible and you can do this in the ETM on the page 
+        Do you want to use other profiles in your ETM scenario? This is possible and you can do this in the ETM on the page
         <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/curve_upload/upload-curves">Flexibility -> Modify profiles</a>.
       curves_weather_years: |
-        By default, weather conditions are used that correspond to the start year. However, weather conditions can vary considerably. 
-        To explore the impact of weather conditions, it is possible to select a different weather year in the ETM. 
+        By default, weather conditions are used that correspond to the start year. However, weather conditions can vary considerably.
+        To explore the impact of weather conditions, it is possible to select a different weather year in the ETM.
         This is possible on this ETM page: <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/extreme-weather-conditions">Flexibility -> Weather conditions</a>.
-        There is a choice of three weather years and you can find a description of these years in the ETM. 
+        There is a choice of three weather years and you can find a description of these years in the ETM.
     subgroups:
       area_co2_emission_1990: |
         The ETM compares future CO<sub>2</sub> emissions with 1990 emission levels,
@@ -281,6 +281,6 @@ en:
       fuel_production: |
         How much primary fuels are produced within the borders of your region? These values determine how much of the fuels are imported and exported.
       area_emission_factors: |
-        Below you can see how much CO<sub>2</sub> is emitted depending on the type of carrier.
+        Below you can see for all energy carriers how much CO<sub>2</sub> is emitted per MJ.
         These 'emission factors' can differ per country because they depend on the origin of the carrier.
         Within the ETM these emission factors are used to calculate the total amount of CO<sub>2</sub> emissions attributed to the energy system.

@@ -5,7 +5,7 @@ describe Exporter do
   let(:dataset) { FactoryBot.create(:dataset) }
 
   let!(:stub_export_request) {
-    stub_request(:get, "https://beta-local.energytransitionmodel.com/api/v1/exports/#{dataset.id}?time_curves_to_zero=true")
+    stub_request(:get, "https://beta-local.energytransitionmodel.com/api/v1/exports/#{dataset.id}")
       .to_return(body: JSON.dump([{
         'area' => 'test1_ameland',
         'country' => 'nl',

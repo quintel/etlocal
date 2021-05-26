@@ -42,9 +42,9 @@ nl:
         file_carriers_diesel_co2_conversion_per_mj: Diesel
         file_carriers_gasoline_co2_conversion_per_mj : Gasoline
         file_carriers_heavy_fuel_oil_co2_conversion_per_mj: Zware Stookolie
-        file_carriers_imported_electricity_co2_conversion_per_mj: Geimporteerde elektriciteit
-        file_carriers_imported_heat_co2_conversion_per_mj: Geimporteerde warmte
-        file_carriers_imported_hydrogen_co2_conversion_per_mj: Geimporteerde waterstof
+        file_carriers_imported_electricity_co2_conversion_per_mj: Geïmporteerde elektriciteit
+        file_carriers_imported_heat_co2_conversion_per_mj: Geïmporteerde warmte
+        file_carriers_imported_hydrogen_co2_conversion_per_mj: Geïmporteerde waterstof
         file_carriers_kerosene_co2_conversion_per_mj: Kerosine
         file_carriers_lignite_co2_conversion_per_mj: Bruinkool
         file_carriers_lng_co2_conversion_per_mj: LNG

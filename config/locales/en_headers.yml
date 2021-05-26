@@ -1,3 +1,4 @@
+
 en:
   dataset_edits:
     changed_attributes: 'You changed the following attributes:'
@@ -23,7 +24,9 @@ en:
       energetic_other_ghg: "Energetic emissions of greenhouse gases (ex. CO<sub>2</sub>)"
       non_energetic_co2: "Non-energetic emissions of CO<sub>2</sub>"
       non_energetic_other_ghg: "Non-energetic emissions of greenhouse gases (ex. CO<sub>2</sub>)"
-      area_emission_factors: Emission factors
+      area_emission_factors_general: General emission factors
+      area_emission_factors_transport_fuels: Emission factors transport fuels
+      area_emission_factors_import: Emission factors import
       area_electricity_grid_costs: Present electricity grid costs
       area_electricity_grid_capacity: Present spare capacity electricity grid
       area_electricity_grid_reinforcement: Electricity grid reinforcement

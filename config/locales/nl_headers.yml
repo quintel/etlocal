@@ -24,9 +24,10 @@ nl:
       energetic_other_ghg: "Energetische uitstoot van broeikasgassen (excl. CO<sub>2</sub>)"
       non_energetic_co2: "Niet-energetische uitstoot van CO<sub>2</sub>"
       non_energetic_other_ghg: "Niet-energetische uitstoot van broeikasgassen (excl. CO<sub>2</sub>)"
-      area_emission_factors_general: Algemene emissiefactoren
-      area_emission_factors_transport_fuels: Emissiefactoren transport brandstof
-      area_emission_factors_import: Emissiefactoren import
+      area_emission_factors: Emissiefactoren
+      area_emission_factors_general: Algemeen
+      area_emission_factors_transport_fuels: Transportbrandstoffen
+      area_emission_factors_import: Import
       area_electricity_grid_costs: Kosten elektriciteitsnetwerk
       area_electricity_grid_capacity: Beschikbare capaciteit huidig elektriciteitsnet
       area_electricity_grid_reinforcement: Verzwaring elektriciteitsnet

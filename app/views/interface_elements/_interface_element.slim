@@ -46,7 +46,7 @@
 
                   span.val data= conversions_for(interface_item.key)
                     - if policy(@dataset).edit?
-                      = text_field_tag interface_item.key, nil, class: 'display_input', placeholder: interface_item.default
+                      = text_field_tag interface_item.key, nil, class: 'display_input', placeholder: interface_item.default, data: { precision: interface_item.precision }
                       = form.hidden_field interface_item.key, class: 'value_input'
 
                     - else

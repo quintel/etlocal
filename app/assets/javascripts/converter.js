@@ -1,6 +1,11 @@
 var Converter = (function (){
     'use strict';
 
+    function roundToPrecision(value, precision) {
+        var multiple = Math.pow(10, precision || 2)
+        return Math.round(value * multiple) / multiple;
+    }
+
     return {
         reverseConvert: function (value) {
             var data = $(this).data();
@@ -22,13 +27,16 @@ var Converter = (function (){
             }
         },
 
-        convertRounded: function (value) {
+        convertRounded: function (value, precision) {
             var data = $(this).data();
 
             if (data.from === data.to) {
-                return Math.round(value * 100) / 100;
+                return roundToPrecision(value, precision);
             } else {
-                return new Quantity(value, data.to).to(data.from).roundedValue;
+                return roundToPrecision(
+                    new Quantity(value, data.to).to(data.from).value,
+                    precision
+                );
             }
         }
     }

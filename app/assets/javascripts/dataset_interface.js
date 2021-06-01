@@ -123,8 +123,14 @@ var DatasetInterface = (function () {
             value = $(this).val();
 
             if (value) {
-                $(this).prev(".display_input").val(
-                    Converter.convertRounded.call(this, value)
+                var displayInput = $(this).prev('.display_input');
+
+                displayInput.val(
+                    Converter.convertRounded.call(
+                        this,
+                        value,
+                        parseInt(displayInput.data('precision') || '2')
+                    )
                 );
             }
         });

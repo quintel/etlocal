@@ -53,7 +53,12 @@ class Dataset < ApplicationRecord
   end
 
   def atlas_dataset
-    Etsource.datasets[atlas_key]
+    Etsource.datasets[atlas_key] ||
+      Atlas::Dataset::Derived.new(
+        key: atlas_key,
+        base_dataset: country,
+        geo_id: geo_id
+      )
   end
 
   def base_dataset

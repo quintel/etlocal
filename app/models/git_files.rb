@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module GitFiles
+class GitFiles
   GitFile = Struct.new(:git_path, :relative_path, :inherited?) do
     include Comparable
 
@@ -35,33 +35,54 @@ module GitFiles
   end
 
   def self.glob(dataset, paths)
-    return [] unless dataset.dataset_dir.exist?
+    new(dataset).glob(paths)
+  end
+
+  def initialize(dataset)
+    @dataset = dataset
+  end
+
+  private_class_method :new
+
+  def glob(paths)
+    return [] unless @dataset.dataset_dir.exist?
 
     paths = paths.flatten
-    prefix = dataset.dataset_dir.realpath.to_s
-    parent = dataset.try(:parent)
+    prefix = @dataset.dataset_dir.realpath.to_s
 
     # Fetch a list of all matching files with the dataset dir.
-    resolved_paths = dataset.send(:path_resolver).glob(paths)
+    resolved_paths = @dataset.send(:path_resolver).glob(paths)
 
     git_files = resolved_paths.map do |path|
       # Include only those which really appear with in the dataset dir, preventing possible abuse or
       # mistakes.
       if path.to_s.start_with?(prefix)
         GitFile.new(
-          path.relative_path_from(Atlas.data_dir),
-          path.relative_path_from(dataset.dataset_dir),
+          path.realpath.relative_path_from(data_realpath),
+          path.relative_path_from(@dataset.dataset_dir),
           false
         )
-      elsif parent
+      elsif parent_dataset
         GitFile.new(
-          path.relative_path_from(Atlas.data_dir),
-          path.relative_path_from(dataset.parent.dataset_dir),
+          path.realpath.relative_path_from(data_realpath),
+          path.relative_path_from(parent_realpath),
           true
         )
       end
     end
 
     git_files.compact.uniq(&:git_path)
+  end
+
+  def parent_dataset
+    @dataset.try(:parent)
+  end
+
+  def parent_realpath
+    @parent_realpath ||= parent_dataset&.dataset_dir&.realpath
+  end
+
+  def data_realpath
+    @data_realpath ||= Atlas.data_dir.realpath
   end
 end

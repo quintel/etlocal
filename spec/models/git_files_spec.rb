@@ -43,6 +43,46 @@ RSpec.describe GitFiles do
     end
   end
 
+  context 'with a symlinked file to a parent' do
+    let(:dataset) { Atlas::Dataset.find(:test1_ameland) }
+    let(:files) { described_class.glob(dataset, %w[curves/symlink.csv]) }
+
+    before do
+      FileUtils.ln_s(
+        dataset.parent.dataset_dir.join('curves/a.csv'),
+        dataset.dataset_dir.join('curves/symlink.csv')
+      )
+    end
+
+    after do
+      dataset.dataset_dir.join('curves/symlink.csv').unlink
+    end
+
+    it 'resolves the path to the real file', :focus do
+      expect(files.first.git_path).to eq(Pathname.new('datasets/nl/curves/a.csv'))
+    end
+  end
+
+  context 'when globbing files with a parent, and the file is a symlink' do
+    let(:dataset) { Atlas::Dataset.find(:test1_ameland) }
+    let(:files) { described_class.glob(dataset, %w[curves/symlink.csv]) }
+
+    before do
+      FileUtils.ln_s(
+        dataset.parent.dataset_dir.join('curves/a.csv'),
+        dataset.parent.dataset_dir.join('curves/symlink.csv')
+      )
+    end
+
+    after do
+      dataset.parent.dataset_dir.join('curves/symlink.csv').unlink
+    end
+
+    it 'resolves the path to the real file', :focus do
+      expect(files.first.git_path).to eq(Pathname.new('datasets/nl/curves/a.csv'))
+    end
+  end
+
   describe GitFiles::GitFile do
     let(:one) do
       described_class.new(Pathname.new('a/B/c.txt.gz'), Pathname.new('B/c.txt.gz'), false)

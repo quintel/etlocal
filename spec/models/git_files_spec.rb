@@ -58,7 +58,7 @@ RSpec.describe GitFiles do
       dataset.dataset_dir.join('curves/symlink.csv').unlink
     end
 
-    it 'resolves the path to the real file', :focus do
+    it 'resolves the path to the real file' do
       expect(files.first.git_path).to eq(Pathname.new('datasets/nl/curves/a.csv'))
     end
   end
@@ -78,8 +78,56 @@ RSpec.describe GitFiles do
       dataset.parent.dataset_dir.join('curves/symlink.csv').unlink
     end
 
-    it 'resolves the path to the real file', :focus do
+    it 'resolves the path to the real file' do
       expect(files.first.git_path).to eq(Pathname.new('datasets/nl/curves/a.csv'))
+    end
+  end
+
+  context 'when the ETSource directory is a symlink' do
+    let(:dataset) { Atlas::Dataset.find(:test1_ameland) }
+
+    around do |example|
+      tmpdir = Pathname.new(Dir.mktmpdir)
+
+      FileUtils.ln_s(Atlas.data_dir, tmpdir.join('etsource'))
+
+      was = Atlas.data_dir
+      Atlas.data_dir = tmpdir.join('etsource')
+
+      FileUtils.ln_s(
+        dataset.parent.dataset_dir.join('curves/a.csv'),
+        dataset.parent.dataset_dir.join('curves/symlink.csv')
+      )
+
+      example.run
+
+      dataset.parent.dataset_dir.join('curves/symlink.csv').unlink
+      Atlas.data_dir = was
+      tmpdir.rmtree
+    end
+
+    describe 'a file linking to the parent dataset' do
+      let(:files) { described_class.glob(dataset, %w[curves/symlink.csv]) }
+
+      it 'resolves the path to the real parent file' do
+        expect(files.first.git_path).to eq(Pathname.new('datasets/nl/curves/a.csv'))
+      end
+
+      it 'sets the relative_path based on the parent dataset directory' do
+        expect(files.first.relative_path).to eq(Pathname.new('curves/a.csv'))
+      end
+    end
+
+    describe 'a file which exists in the parent dataset' do
+      let(:files) { described_class.glob(dataset, %w[curves/a.csv]) }
+
+      it 'resolves the path to the real parent file' do
+        expect(files.first.git_path).to eq(Pathname.new('datasets/test1_ameland/curves/a.csv'))
+      end
+
+      it 'sets the relative_path based on the dataset directory' do
+        expect(files.first.relative_path).to eq(Pathname.new('curves/a.csv'))
+      end
     end
   end
 

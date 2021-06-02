@@ -54,18 +54,20 @@ class GitFiles
     resolved_paths = @dataset.send(:path_resolver).glob(paths)
 
     git_files = resolved_paths.map do |path|
+      realpath = path.realpath
+
       # Include only those which really appear with in the dataset dir, preventing possible abuse or
       # mistakes.
-      if path.to_s.start_with?(prefix)
+      if realpath.to_s.start_with?(prefix)
         GitFile.new(
-          path.realpath.relative_path_from(data_realpath),
-          path.relative_path_from(@dataset.dataset_dir),
+          realpath.relative_path_from(data_realpath),
+          realpath.relative_path_from(dataset_realpath),
           false
         )
       elsif parent_dataset
         GitFile.new(
-          path.realpath.relative_path_from(data_realpath),
-          path.relative_path_from(parent_realpath),
+          realpath.relative_path_from(data_realpath),
+          realpath.relative_path_from(parent_realpath),
           true
         )
       end
@@ -76,6 +78,10 @@ class GitFiles
 
   def parent_dataset
     @dataset.try(:parent)
+  end
+
+  def dataset_realpath
+    @dataset_realpath ||= @dataset.dataset_dir.realpath
   end
 
   def parent_realpath

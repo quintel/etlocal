@@ -32,7 +32,7 @@ module DatasetHelper
 
   # Public: Takes a GitFiles::GitFile and returns the URL to view the file on GitHub.
   def github_file_path(file)
-    "https://github.com/quintel/etsource/tree/master/#{file.git_path}"
+    "https://github.com/quintel/etsource/tree/master/#{file.real_relative_path}"
   end
 
   def format_file_description(description)

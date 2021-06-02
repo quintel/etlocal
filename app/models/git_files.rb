@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class GitFiles
+module GitFiles
   GitFile = Struct.new(:git_path, :relative_path, :inherited?) do
     include Comparable
 
@@ -32,63 +32,44 @@ class GitFiles
     def <=>(other)
       sortable_key <=> other.sortable_key
     end
+
+    def real_relative_path
+      Atlas.data_dir.join(git_path).realpath.relative_path_from(Atlas.data_dir.realpath)
+    end
   end
 
   def self.glob(dataset, paths)
-    new(dataset).glob(paths)
-  end
-
-  def initialize(dataset)
-    @dataset = dataset
-  end
-
-  private_class_method :new
-
-  def glob(paths)
-    return [] unless @dataset.dataset_dir.exist?
+    return [] unless dataset.dataset_dir.exist?
 
     paths = paths.flatten
-    prefix = @dataset.dataset_dir.realpath.to_s
+    prefix = dataset.dataset_dir.to_s
+    parent = dataset.try(:parent)
 
     # Fetch a list of all matching files with the dataset dir.
-    resolved_paths = @dataset.send(:path_resolver).glob(paths)
+    resolved_paths = dataset.send(:path_resolver).glob(paths)
 
     git_files = resolved_paths.map do |path|
-      realpath = path.realpath
+      # if path.basename.to_s == 'river.csv'
+      #   binding.pry
+      # end
 
       # Include only those which really appear with in the dataset dir, preventing possible abuse or
       # mistakes.
-      if realpath.to_s.start_with?(prefix)
+      if path.to_s.start_with?(prefix)
         GitFile.new(
-          realpath.relative_path_from(data_realpath),
-          realpath.relative_path_from(dataset_realpath),
+          path.relative_path_from(Atlas.data_dir),
+          path.relative_path_from(dataset.dataset_dir),
           false
         )
-      elsif parent_dataset
+      elsif parent
         GitFile.new(
-          realpath.relative_path_from(data_realpath),
-          realpath.relative_path_from(parent_realpath),
+          path.relative_path_from(Atlas.data_dir),
+          path.relative_path_from(dataset.parent.dataset_dir),
           true
         )
       end
     end
 
     git_files.compact.uniq(&:git_path)
-  end
-
-  def parent_dataset
-    @dataset.try(:parent)
-  end
-
-  def dataset_realpath
-    @dataset_realpath ||= @dataset.dataset_dir.realpath
-  end
-
-  def parent_realpath
-    @parent_realpath ||= parent_dataset&.dataset_dir&.realpath
-  end
-
-  def data_realpath
-    @data_realpath ||= Atlas.data_dir.realpath
   end
 end

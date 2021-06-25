@@ -131,6 +131,10 @@ nl:
       energy_renewable_full_load_hours: Hernieuwbare elektriciteitsproductie
       energy_fossil_full_load_hours: Fossiele elektriciteitsproductie
       fuel_production: Brandstofproductie
+      energy_electricity_plants: Elektriciteitscentrales
+      energy_chp_plants_electricity: WKKs (elektriciteit)
+      energy_chp_plants_heat: WKKs (warmte)
+      energy_heat_plants: Warmte centrales
 
       # curves
       curves_supply_electricity: Aanbod - Elektriciteit

@@ -130,6 +130,10 @@ en:
       energy_renewable_full_load_hours: Full load hours of renewable power plants
       energy_fossil_full_load_hours: Full load hours of fossil power plants
       fuel_production: Fuel Production
+      energy_electricity_plants: Electricity plants
+      energy_chp_plants_electricity: CHPs (electricity)
+      energy_chp_plants_heat: CHPs (heat)
+      energy_heat_plants: Heat plants
 
       # curves
       curves_supply_electricity: Supply - Electricity

@@ -168,6 +168,9 @@ nl:
         Om de impact van weersomstandigheden te verkennen is het mogelijk om in het ETM een ander weerjaar te selecteren.
         Dit kan je in het ETM doen op de pagina <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/extreme-weather-conditions">Flexibiliteit -> Weersomstandigheden</a>.
         Er is de keuze uit drie weerjaren en in het ETM kan je een omschrijving van deze jaren vinden.
+      energy_efficiency: |
+        Onderstaande getallen weergeven de efficiëntie van alle electriciteits centrales, warmte centrales en WKK centrales (voor zowel elektriciteit en warmte) in het ETM.
+
     subgroups:
       area_co2_emission_1990: |
         Het ETM vergelijkt de toekomstige CO<sub>2</sub>-uitstoot met de emissieniveaus van 1990,

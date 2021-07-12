@@ -35,7 +35,7 @@ gem 'deep_cloneable', '~> 2.3.0'
 
 gem 'git'
 
-gem 'transformer', ref: 'bb092c0', github: 'quintel/transformer'
+gem 'transformer', ref: '721f8f0', github: 'quintel/transformer'
 gem 'atlas',       ref: 'f958164', github: 'quintel/atlas'
 gem 'rubel',       ref: 'ad3d44e', github: 'quintel/rubel'
 gem 'refinery',    ref: '72eacf8', github: 'quintel/refinery'

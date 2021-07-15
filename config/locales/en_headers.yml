@@ -119,8 +119,8 @@ en:
       energy_electricity_wind: Wind electricity production
       energy_electricity_solar: Solar electricity production
       energy_electricity_other_renewable: Other renewable electricity production
-      energy_electricity_coal: Electricity production coal plants by type
-      energy_electricity_gas: Electricity production gas plants by type
+      energy_electricity_coal: Electricity production of coal plants
+      energy_electricity_gas: Electricity production of gas plants
       energy_electricity_waste: Waste electricity production
       energy_electricity_other_fossil: Other fossil electricity production
       energy_heat_import: Imported heat
@@ -129,11 +129,12 @@ en:
       energy_heat_distribution_loss: Heat network losses
       energy_renewable_full_load_hours: Full load hours of renewable power plants
       energy_fossil_full_load_hours: Full load hours of fossil power plants
-      fuel_production: Fuel Production
-      energy_electricity_plants: Electricity plants
-      energy_chp_plants_electricity: CHPs (electricity)
-      energy_chp_plants_heat: CHPs (heat)
-      energy_heat_plants: Heat plants
+      fuel_production: Fuel production
+      energy_efficiency_coal: Efficiencies of coal plants
+      energy_efficiency_gas: Efficiencies of gas plants
+      energy_efficiency_other_fossil: Efficiencies of other fossil plants
+      energy_efficiency_renewable_chp: Efficiencies of renewable plants
+      energy_efficiency_heat_plants: Efficiencies of heat plants
 
       # curves
       curves_supply_electricity: Supply - Electricity

@@ -35,9 +35,9 @@ energy:
   - energy_energy_demand
   - energy_renewable_electricity_production
   - energy_fossil_electricity_production
-  - energy_efficiency
   - energy_full_load_hours
   - energy_heat_production
+  - energy_efficiency
   - energy_biomass
   - energy_fuel_production
 

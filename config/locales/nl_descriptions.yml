@@ -130,22 +130,22 @@ nl:
       energy_energy_demand: |
         In dit tablad vind je informatie over het eigen gebruik en de netverliezen van het elektriciteitsnet.
       energy_renewable_electricity_production: |
-        In dit tabblad vind je informatie over de hernieuwbare elektriciteitsproductie. Meer informatie over de verschillende types centrales kun je vinden in het
+        In dit tabblad vind je informatie over de hernieuwbare elektriciteitsproductie. Meer informatie over de verschillende centrales kun je vinden in het
         <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity_renewable/wind-turbines">
         Energietransitiemodel</a>.
       energy_fossil_electricity_production: |
         In dit tabblad vind je informatie over de elektriciteitsproductie van fossiele bronnen.
-        Meer informatie over de verschillende types centrales kun je vinden in het
+        Meer informatie over de verschillende centrales kun je vinden in het
         <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants">
         Energietransitiemodel</a>.
       energy_heat_production: |
         In dit tabblad vind je informatie over de warmtebronnen die leveren aan warmtenetten voor
-        huishoudens, gebouwen en landbouw. Meer informatie over de verschillende types centrales kun je vinden in het
+        huishoudens, gebouwen en landbouw. Meer informatie over de verschillende centrales kun je vinden in het
         <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/heat/heat-sources">
         Energietransitiemodel</a>.
       energy_full_load_hours: |
         In dit tabblad vind je informatie over het aantal vollasturen van hernieuwbare en fossiele
-        electriciteitscentrales in het startjaar van deze regio. Meer informatie over de verschillende types centrales kun je vinden in het
+        electriciteitscentrales in het startjaar van deze regio. Meer informatie over de verschillende centrales kun je vinden in het
         <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants">
         Energietransitiemodel</a>.
       energy_biomass: |
@@ -169,7 +169,12 @@ nl:
         Dit kan je in het ETM doen op de pagina <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/extreme-weather-conditions">Flexibiliteit -> Weersomstandigheden</a>.
         Er is de keuze uit drie weerjaren en in het ETM kan je een omschrijving van deze jaren vinden.
       energy_efficiency: |
-        Onderstaande getallen weergeven de efficiëntie van alle electriciteits centrales, warmte centrales en WKK centrales (voor zowel elektriciteit en warmte) in het ETM.
+        Op deze pagina vind je de efficiënties van alle electriciteitscentrales en warmteketels. Voor veel van de regio's worden dezelfde efficiënties gebruikt, maar het is ook mogelijk regio-specifieke efficiënties te gebruiken. 
+        Meer informatie over de verschillende centrales kun je vinden in het ETM, onder de kopjes
+        <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants">
+        Aanbod > Elektriciteit</a>, <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity_renewable/wind-turbines">
+        Aanbod > Hernieuwbare elektriciteit</a> en <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/heat/heat-sources">
+        Aanbod > Warmtenetten</a>.
 
     subgroups:
       area_co2_emission_1990: |

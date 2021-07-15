@@ -102,6 +102,8 @@ groups:
 
   - header: energy_efficiency_heat_plants
     items:
+      - key: energy_heat_burner_wood_pellets_steam_hot_water_output_conversion
+        unit: '%'
       - key: energy_heat_burner_coal_steam_hot_water_output_conversion
         unit: '%'
       - key: energy_heat_burner_hydrogen_steam_hot_water_output_conversion

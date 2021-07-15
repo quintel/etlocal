@@ -403,7 +403,7 @@ en:
         input_energy_power_wind_turbine_offshore_production: Wind (offshore)
         input_energy_power_solar_pv_solar_radiation_production: Solar PV plant
         input_energy_power_supercritical_waste_mix_production: Waste incinerator
-        input_energy_chp_supercritical_waste_mix_production: Waste plant with heat production for district heat (CHP)
+        input_energy_chp_supercritical_waste_mix_production: Waste plant with heat production (CHP)
         input_energy_power_hydro_river_production: Hydro (river)
         input_energy_power_hydro_mountain_production: Hydro (mountain)
         input_energy_power_geothermal_production: Geothermal
@@ -416,16 +416,16 @@ en:
         input_energy_power_ultra_supercritical_cofiring_coal_production: Pulverized coal with biomass co-firing
         input_energy_power_combined_cycle_ccs_coal_production: Coal IGCC CCS
         input_energy_power_ultra_supercritical_ccs_coal_production: Pulverized coal with CCS
-        input_energy_chp_ultra_supercritical_coal_production: Coal plant with heat production for district heat (CHP)
-        input_energy_chp_ultra_supercritical_cofiring_coal_production: Co-firing coal plant with heat production for district heat (CHP)
+        input_energy_chp_ultra_supercritical_coal_production: Coal plant with heat production (CHP)
+        input_energy_chp_ultra_supercritical_cofiring_coal_production: Co-firing coal plant with heat production (CHP)
 
         input_energy_power_ultra_supercritical_network_gas_production: Gas conventional
         input_energy_power_turbine_network_gas_production: Gas turbine
         input_energy_power_engine_network_gas_production: Gas combustion engine
         input_energy_power_combined_cycle_network_gas_production: Gas CCGT
         input_energy_power_combined_cycle_ccs_network_gas_production: Gas CCGT with CCS
-        input_energy_chp_combined_cycle_network_gas_production: Gas plant (large-scale) with heat production for district heat (CHP)
-        input_energy_chp_local_engine_network_gas_production: Gas plant (small-scale) with heat production for district heat (CHP)
+        input_energy_chp_combined_cycle_network_gas_production: Gas plant (large-scale) with heat production (CHP)
+        input_energy_chp_local_engine_network_gas_production: Gas plant (small-scale) with heat production (CHP)
 
         input_energy_power_nuclear_gen2_uranium_oxide_production: Conventional nuclear power plant
         input_energy_power_nuclear_gen3_uranium_oxide_production: 3rd generation nuclear power plant

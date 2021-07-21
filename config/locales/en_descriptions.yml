@@ -169,7 +169,7 @@ en:
         There is a choice of three weather years and you can find a description of these years in the ETM.
       energy_efficiency: |
         Below you can find the efficiencies for all electricity and heat plants. The same efficiencies are used for many of the regions, but it is also possible to use region-specific efficiencies. 
-        More information about the various plant types can be found in the ETM, in the sections
+        Please note that all efficiencies assume lower heating values (LHV). More information about the various plant types can be found in the ETM, in the sections
         <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants">
         Supply > Electricity</a>, <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity_renewable/wind-turbines">
         Supply > Renewable electricity</a> en <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/heat/heat-sources">

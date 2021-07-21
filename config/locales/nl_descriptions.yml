@@ -170,7 +170,7 @@ nl:
         Er is de keuze uit drie weerjaren en in het ETM kan je een omschrijving van deze jaren vinden.
       energy_efficiency: |
         Op deze pagina vind je de efficiënties van alle electriciteitscentrales en warmteketels. Voor veel van de regio's worden dezelfde efficiënties gebruikt, maar het is ook mogelijk regio-specifieke efficiënties te gebruiken. 
-        Meer informatie over de verschillende centrales kun je vinden in het ETM, onder de kopjes
+        Houd er rekening mee dat alle efficiënties uitgaan van lagere verwarmingswaarden (LHV). Meer informatie over de verschillende centrales kun je vinden in het ETM, onder de kopjes
         <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants">
         Aanbod > Elektriciteit</a>, <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity_renewable/wind-turbines">
         Aanbod > Hernieuwbare elektriciteit</a> en <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/heat/heat-sources">

@@ -167,6 +167,14 @@ en:
         To explore the impact of weather conditions, it is possible to select a different weather year in the ETM.
         This is possible on this ETM page: <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/extreme-weather-conditions">Flexibility -> Weather conditions</a>.
         There is a choice of three weather years and you can find a description of these years in the ETM.
+      energy_efficiency: |
+        Below you can find the efficiencies for all electricity and heat plants. The same efficiencies are used for many of the regions, but it is also possible to use region-specific efficiencies. 
+        Please note that all efficiencies assume lower heating values (LHV). More information about the various plant types can be found in the ETM, in the sections
+        <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants">
+        Supply > Electricity</a>, <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity_renewable/wind-turbines">
+        Supply > Renewable electricity</a> en <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/heat/heat-sources">
+        Supply > District heating</a>.
+
     subgroups:
       area_co2_emission_1990: |
         The ETM compares future CO<sub>2</sub> emissions with 1990 emission levels,

@@ -131,6 +131,11 @@ nl:
       energy_renewable_full_load_hours: Hernieuwbare elektriciteitsproductie
       energy_fossil_full_load_hours: Fossiele elektriciteitsproductie
       fuel_production: Brandstofproductie
+      energy_efficiency_coal: Efficiënties van kolencentrales
+      energy_efficiency_gas: Efficiënties van gascentrales
+      energy_efficiency_other_fossil: Efficiënties van overige fossiel centrales
+      energy_efficiency_renewable_chp: Efficiënties van hernieuwbare centrales
+      energy_efficiency_heat_plants: Efficiënties van warmteketels
 
       # curves
       curves_supply_electricity: Aanbod - Elektriciteit

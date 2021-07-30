@@ -14,3 +14,20 @@ groups:
       unit: 'TJ'
     - key: households_final_demand_crude_oil_demand
       unit: 'TJ'
+  - header: households_final_demand_crude_oil_input
+    type: slider
+    items:
+    - key: input_percentage_of_diesel_households_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_biodiesel_households_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_kerosene_households_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_bio_kerosene_households_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_bio_oil_households_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_crude_oil_households_final_demand_crude_oil
+      unit: '%'
+      flexible: true
+      skip_validation: true

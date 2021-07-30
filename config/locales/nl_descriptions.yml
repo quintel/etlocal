@@ -197,6 +197,9 @@ nl:
         De leidinglengtes van warmtenetten worden gebruikt om een goede kosteninschatting te maken voor de warmtenetten. Kijk op
         onze <a target="_blank" href="https://docs.energytransitionmodel.com/main/heat-infrastructure-costs">documentatie</a>
         voor meer informatie hierover.
+      households_final_demand_crude_oil_input: |
+        Beschrijft de mix van verschillende olietypes die gebruikt worden voor onder andere verwarming
+        in huishoudens.
       households_housing_stock_distribution: |
         Hieronder zie je de verdeling van huistypen in jouw regio.
       households_insulation: |

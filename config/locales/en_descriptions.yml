@@ -195,6 +195,8 @@ en:
         The pipe lengths of district heating are used to make a good cost estimate for the heat networks. Have a look at our
         <a target="_blank" href="https://docs.energytransitionmodel.com/main/heat-infrastructure-costs">documentation</a>
         for more information on this cost calculation.
+      households_final_demand_crude_oil_input: |
+        Describes the mix of different oil types used in heating for households.
       households_housing_stock_distribution: |
         Below you can see the breakdown of housing types in your region.
       households_insulation: |

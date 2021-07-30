@@ -44,6 +44,7 @@ nl:
       households_steam_hot_water_distribution: Verdeling warmte
       households_wood_pellets_distribution: Verdeling biomassa
       households_crude_oil_distribution: Verdeling olie
+      households_final_demand_crude_oil_input: Verdeling olietypes
       households_coal_distribution: Verdeling kolen
       households_network_gas_space_heating_hot_water_distribution: Ruimteverwarming en warm water - gas
       households_electricity_space_heating_hot_water_distribution: Ruimteverwarming en warm water - elektriciteit

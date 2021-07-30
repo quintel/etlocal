@@ -175,7 +175,12 @@ nl:
         households_final_demand_electricity_households_final_demand_for_lighting_electricity_parent_share: Verlichting
         households_final_demand_electricity_households_final_demand_for_space_heating_electricity_parent_share: Ruimteverwarming
 
-
+        input_percentage_of_diesel_households_final_demand_crude_oil: Diesel
+        input_percentage_of_biodiesel_households_final_demand_crude_oil: Biodiesel
+        input_percentage_of_kerosene_households_final_demand_crude_oil: Kerosine
+        input_percentage_of_bio_kerosene_households_final_demand_crude_oil: Bio-kerosine
+        input_percentage_of_bio_oil_households_final_demand_crude_oil: Andere bio-olie
+        input_percentage_of_crude_oil_households_final_demand_crude_oil: Andere olie
 
         #buildings
         number_of_buildings: Aantal gebouwen

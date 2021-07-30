@@ -173,6 +173,7 @@ en:
         input_percentage_of_diesel_households_final_demand_crude_oil: Diesel
         input_percentage_of_biodiesel_households_final_demand_crude_oil: Biodiesel
         input_percentage_of_kerosene_households_final_demand_crude_oil: Kerosene
+        input_percentage_of_lpg_households_final_demand_crude_oil: LPG
         input_percentage_of_bio_kerosene_households_final_demand_crude_oil: Bio kerosene
         input_percentage_of_bio_oil_households_final_demand_crude_oil: Other bio oil
         input_percentage_of_crude_oil_households_final_demand_crude_oil: Other oil

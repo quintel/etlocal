@@ -429,8 +429,8 @@ nl:
         input_energy_power_engine_network_gas_production: Gasmotor
         input_energy_power_combined_cycle_network_gas_production: Gas STEG
         input_energy_power_combined_cycle_ccs_network_gas_production: Gas STEG met CCS
-        input_energy_chp_combined_cycle_network_gas_production: Gas WKK (120 MW) met warmtelevering 
-        input_energy_chp_local_engine_network_gas_production: Gas WKK (2 MW) met warmtelevering 
+        input_energy_chp_combined_cycle_network_gas_production: Gas WKK (120 MW) met warmtelevering
+        input_energy_chp_local_engine_network_gas_production: Gas WKK (2 MW) met warmtelevering
 
         input_energy_power_nuclear_gen2_uranium_oxide_production: Conventionele kerncentrale
         input_energy_power_nuclear_gen3_uranium_oxide_production: 3e generatie kerncentrale
@@ -464,8 +464,8 @@ nl:
         energy_power_combined_cycle_network_gas_full_load_hours: Gas STEG
         energy_power_ultra_supercritical_network_gas_full_load_hours: Gas conventioneel
         energy_power_turbine_network_gas_full_load_hours: Gasturbine
-        energy_chp_local_engine_network_gas_full_load_hours: Gas WKK (kleinschalig) met warmtelevering 
-        energy_chp_combined_cycle_network_gas_full_load_hours: Gas WKK (grootschalig) met warmtelevering 
+        energy_chp_local_engine_network_gas_full_load_hours: Gas WKK (kleinschalig) met warmtelevering
+        energy_chp_combined_cycle_network_gas_full_load_hours: Gas WKK (grootschalig) met warmtelevering
         energy_power_supercritical_coal_full_load_hours: Kolen conventioneel
         energy_power_engine_diesel_full_load_hours: Dieselgenerator
 
@@ -475,63 +475,63 @@ nl:
         fuel_production_natural_gas_demand: Aardgas
         fuel_production_uranium_oxide_demand: Uranium
 
-        energy_power_supercritical_coal_electricity_output_conversion: Kolen conventioneel
-        energy_power_ultra_supercritical_coal_electricity_output_conversion: Poederkolen
-        energy_power_ultra_supercritical_ccs_coal_electricity_output_conversion: Poederkolen met CCS
-        energy_power_ultra_supercritical_cofiring_coal_electricity_output_conversion: Poederkolen met biomassabijstook
-        energy_power_combined_cycle_coal_electricity_output_conversion: Kolenvergassing
-        energy_power_combined_cycle_ccs_coal_electricity_output_conversion: Kolenvergassing met CCS
-        energy_power_ultra_supercritical_lignite_electricity_output_conversion: Bruinkolen
-        energy_power_ultra_supercritical_oxyfuel_ccs_lignite_electricity_output_conversion: Bruinkolen 'oxyfuel'
-        energy_power_turbine_network_gas_electricity_output_conversion: Gasturbine
-        energy_power_combined_cycle_network_gas_electricity_output_conversion: Gas STEG
-        energy_power_combined_cycle_ccs_network_gas_electricity_output_conversion: Gas STEG met CCS
-        energy_power_ultra_supercritical_network_gas_electricity_output_conversion: Gas conventioneel
-        energy_power_ultra_supercritical_crude_oil_electricity_output_conversion: Oliecentrale
-        energy_power_engine_diesel_electricity_output_conversion: Dieselgenerator
-        energy_power_engine_network_gas_electricity_output_conversion: Gasmotor
-        energy_power_supercritical_waste_mix_electricity_output_conversion: Afvalverbrander
-        energy_power_nuclear_gen2_uranium_oxide_electricity_output_conversion: Conventionele kerncentrale
-        energy_power_nuclear_gen3_uranium_oxide_electricity_output_conversion: 3e generatie kerncentrale
+        input_energy_power_supercritical_coal_electricity_output_conversion: Kolen conventioneel
+        input_energy_power_ultra_supercritical_coal_electricity_output_conversion: Poederkolen
+        input_energy_power_ultra_supercritical_ccs_coal_electricity_output_conversion: Poederkolen met CCS
+        input_energy_power_ultra_supercritical_cofiring_coal_electricity_output_conversion: Poederkolen met biomassabijstook
+        input_energy_power_combined_cycle_coal_electricity_output_conversion: Kolenvergassing
+        input_energy_power_combined_cycle_ccs_coal_electricity_output_conversion: Kolenvergassing met CCS
+        input_energy_power_ultra_supercritical_lignite_electricity_output_conversion: Bruinkolen
+        input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_electricity_output_conversion: Bruinkolen 'oxyfuel'
+        input_energy_power_turbine_network_gas_electricity_output_conversion: Gasturbine
+        input_energy_power_combined_cycle_network_gas_electricity_output_conversion: Gas STEG
+        input_energy_power_combined_cycle_ccs_network_gas_electricity_output_conversion: Gas STEG met CCS
+        input_energy_power_ultra_supercritical_network_gas_electricity_output_conversion: Gas conventioneel
+        input_energy_power_ultra_supercritical_crude_oil_electricity_output_conversion: Oliecentrale
+        input_energy_power_engine_diesel_electricity_output_conversion: Dieselgenerator
+        input_energy_power_engine_network_gas_electricity_output_conversion: Gasmotor
+        input_energy_power_supercritical_waste_mix_electricity_output_conversion: Afvalverbrander
+        input_energy_power_nuclear_gen2_uranium_oxide_electricity_output_conversion: Conventionele kerncentrale
+        input_energy_power_nuclear_gen3_uranium_oxide_electricity_output_conversion: 3e generatie kerncentrale
 
-        energy_heat_burner_wood_pellets_steam_hot_water_output_conversion: Biomassaketel
-        energy_heat_burner_coal_steam_hot_water_output_conversion: Kolenketel
-        energy_heat_burner_hydrogen_steam_hot_water_output_conversion: Waterstofketel
-        energy_heat_burner_crude_oil_steam_hot_water_output_conversion: Olieketel
-        energy_heat_burner_network_gas_steam_hot_water_output_conversion: Gasketel
-        energy_heat_burner_waste_mix_steam_hot_water_output_conversion: Afvalverbrander
-        energy_heat_heatpump_water_water_electricity_steam_hot_water_output_conversion: Electrische warmtepomp
-        industry_heat_burner_lignite_steam_hot_water_output_conversion: Bruinkoolketel (industrie)
-        industry_heat_burner_coal_steam_hot_water_output_conversion: Kolenketel (industrie)
-        industry_heat_burner_crude_oil_steam_hot_water_output_conversion: Olieketel (industrie)
+        input_energy_heat_burner_wood_pellets_steam_hot_water_output_conversion: Biomassaketel
+        input_energy_heat_burner_coal_steam_hot_water_output_conversion: Kolenketel
+        input_energy_heat_burner_hydrogen_steam_hot_water_output_conversion: Waterstofketel
+        input_energy_heat_burner_crude_oil_steam_hot_water_output_conversion: Olieketel
+        input_energy_heat_burner_network_gas_steam_hot_water_output_conversion: Gasketel
+        input_energy_heat_burner_waste_mix_steam_hot_water_output_conversion: Afvalverbrander
+        input_energy_heat_heatpump_water_water_electricity_steam_hot_water_output_conversion: Electrische warmtepomp
+        input_industry_heat_burner_lignite_steam_hot_water_output_conversion: Bruinkoolketel (industrie)
+        input_industry_heat_burner_coal_steam_hot_water_output_conversion: Kolenketel (industrie)
+        input_industry_heat_burner_crude_oil_steam_hot_water_output_conversion: Olieketel (industrie)
 
-        energy_chp_local_engine_network_gas_electricity_output_conversion: Kleinschalige gas WKK - efficiëntie elektriciteit
-        energy_chp_local_engine_biogas_electricity_output_conversion: Biogas WKK - efficiëntie elektriciteit
-        energy_chp_local_wood_pellets_electricity_output_conversion: Biomassa WKK - efficiëntie elektriciteit
-        energy_chp_combined_cycle_network_gas_electricity_output_conversion: Grootschalige gas WKK - efficiëntie elektriciteit
-        energy_chp_ultra_supercritical_cofiring_coal_electricity_output_conversion: Kolen WKK met bijstook - efficiëntie elektriciteit
-        energy_chp_ultra_supercritical_coal_electricity_output_conversion: Kolen WKK - efficiëntie elektriciteit
-        energy_chp_ultra_supercritical_lignite_electricity_output_conversion: Bruinkool WKK - efficiëntie elektriciteit
-        energy_chp_supercritical_waste_mix_electricity_output_conversion: Afval WKK - efficiëntie elektriciteit
-        industry_chp_turbine_gas_power_fuelmix_electricity_output_conversion: Gasturbine WKK (industrie) - efficiëntie elektriciteit
-        industry_chp_engine_gas_power_fuelmix_electricity_output_conversion: Gasmotor WKK (industrie) - efficiëntie elektriciteit
-        industry_chp_combined_cycle_gas_power_fuelmix_electricity_output_conversion: Gas WKK (industrie) - efficiëntie elektriciteit
-        industry_chp_ultra_supercritical_coal_electricity_output_conversion: Kolen WKK (industrie) - efficiëntie elektriciteit
-        industry_chp_wood_pellets_electricity_output_conversion: Biomassa WKK (industrie) - efficiëntie elektriciteit
+        input_energy_chp_local_engine_network_gas_electricity_output_conversion: Kleinschalige gas WKK - efficiëntie elektriciteit
+        input_energy_chp_local_engine_biogas_electricity_output_conversion: Biogas WKK - efficiëntie elektriciteit
+        input_energy_chp_local_wood_pellets_electricity_output_conversion: Biomassa WKK - efficiëntie elektriciteit
+        input_energy_chp_combined_cycle_network_gas_electricity_output_conversion: Grootschalige gas WKK - efficiëntie elektriciteit
+        input_energy_chp_ultra_supercritical_cofiring_coal_electricity_output_conversion: Kolen WKK met bijstook - efficiëntie elektriciteit
+        input_energy_chp_ultra_supercritical_coal_electricity_output_conversion: Kolen WKK - efficiëntie elektriciteit
+        input_energy_chp_ultra_supercritical_lignite_electricity_output_conversion: Bruinkool WKK - efficiëntie elektriciteit
+        input_energy_chp_supercritical_waste_mix_electricity_output_conversion: Afval WKK - efficiëntie elektriciteit
+        input_industry_chp_turbine_gas_power_fuelmix_electricity_output_conversion: Gasturbine WKK (industrie) - efficiëntie elektriciteit
+        input_industry_chp_engine_gas_power_fuelmix_electricity_output_conversion: Gasmotor WKK (industrie) - efficiëntie elektriciteit
+        input_industry_chp_combined_cycle_gas_power_fuelmix_electricity_output_conversion: Gas WKK (industrie) - efficiëntie elektriciteit
+        input_industry_chp_ultra_supercritical_coal_electricity_output_conversion: Kolen WKK (industrie) - efficiëntie elektriciteit
+        input_industry_chp_wood_pellets_electricity_output_conversion: Biomassa WKK (industrie) - efficiëntie elektriciteit
 
-        energy_chp_local_engine_network_gas_steam_hot_water_output_conversion: Kleinschalige gas WKK - efficiêntie warmte
-        energy_chp_local_engine_biogas_steam_hot_water_output_conversion: Biogas WKK - efficiêntie warmte
-        energy_chp_local_wood_pellets_steam_hot_water_output_conversion: Biomassa WKK - efficiêntie warmte
-        energy_chp_combined_cycle_network_gas_steam_hot_water_output_conversion: Grootschalige gas WKK - efficiêntie warmte
-        energy_chp_ultra_supercritical_cofiring_coal_steam_hot_water_output_conversion: Kolen WKK met bijstook - efficiêntie warmte
-        energy_chp_ultra_supercritical_coal_steam_hot_water_output_conversion: Kolen WKK - efficiêntie warmte
-        energy_chp_ultra_supercritical_lignite_steam_hot_water_output_conversion: Bruinkool WKK - efficiêntie warmte
-        energy_chp_supercritical_waste_mix_steam_hot_water_output_conversion: Afval WKK - efficiêntie warmte
-        industry_chp_turbine_gas_power_fuelmix_steam_hot_water_output_conversion: Gasturbine WKK (industrie) - efficiêntie warmte
-        industry_chp_engine_gas_power_fuelmix_steam_hot_water_output_conversion: Gasmotor WKK (industrie) - efficiêntie warmte
-        industry_chp_combined_cycle_gas_power_fuelmix_steam_hot_water_output_conversion: Gas WKK (industrie) - efficiêntie warmte
-        industry_chp_ultra_supercritical_coal_steam_hot_water_output_conversion: Kolen WKK (industrie) - efficiêntie warmte
-        industry_chp_wood_pellets_steam_hot_water_output_conversion: Biomassa WKK (industrie) - efficiêntie warmte
+        input_energy_chp_local_engine_network_gas_steam_hot_water_output_conversion: Kleinschalige gas WKK - efficiêntie warmte
+        input_energy_chp_local_engine_biogas_steam_hot_water_output_conversion: Biogas WKK - efficiêntie warmte
+        input_energy_chp_local_wood_pellets_steam_hot_water_output_conversion: Biomassa WKK - efficiêntie warmte
+        input_energy_chp_combined_cycle_network_gas_steam_hot_water_output_conversion: Grootschalige gas WKK - efficiêntie warmte
+        input_energy_chp_ultra_supercritical_cofiring_coal_steam_hot_water_output_conversion: Kolen WKK met bijstook - efficiêntie warmte
+        input_energy_chp_ultra_supercritical_coal_steam_hot_water_output_conversion: Kolen WKK - efficiêntie warmte
+        input_energy_chp_ultra_supercritical_lignite_steam_hot_water_output_conversion: Bruinkool WKK - efficiêntie warmte
+        input_energy_chp_supercritical_waste_mix_steam_hot_water_output_conversion: Afval WKK - efficiêntie warmte
+        input_industry_chp_turbine_gas_power_fuelmix_steam_hot_water_output_conversion: Gasturbine WKK (industrie) - efficiêntie warmte
+        input_industry_chp_engine_gas_power_fuelmix_steam_hot_water_output_conversion: Gasmotor WKK (industrie) - efficiêntie warmte
+        input_industry_chp_combined_cycle_gas_power_fuelmix_steam_hot_water_output_conversion: Gas WKK (industrie) - efficiêntie warmte
+        input_industry_chp_ultra_supercritical_coal_steam_hot_water_output_conversion: Kolen WKK (industrie) - efficiêntie warmte
+        input_industry_chp_wood_pellets_steam_hot_water_output_conversion: Biomassa WKK (industrie) - efficiêntie warmte
 
         #Other
         other_final_demand_electricity_demand: Elektriciteit

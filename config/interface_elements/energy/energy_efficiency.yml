@@ -47,9 +47,9 @@ groups:
         unit: '%'
       - key: energy_chp_local_engine_network_gas_steam_hot_water_output_conversion
         unit: '%'
-      - key: energy_chp_combined_cycle_network_gas_electricity_output_conversion
+      - key: input_energy_chp_combined_cycle_network_gas_electricity_output_conversion
         unit: '%'
-      - key: energy_chp_combined_cycle_network_gas_steam_hot_water_output_conversion
+      - key: input_energy_chp_combined_cycle_network_gas_steam_hot_water_output_conversion
         unit: '%'
       - key: industry_chp_turbine_gas_power_fuelmix_electricity_output_conversion
         unit: '%'

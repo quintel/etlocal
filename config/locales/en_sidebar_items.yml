@@ -70,6 +70,7 @@ en:
         energy_heat_production: District heating sources
         energy_fossil_electricity_production: Fossil electricity
         energy_renewable_electricity_production: Renewable electricity
+        energy_efficiency: Efficiencies
         energy_full_load_hours: Full load hours electricity
         energy_biomass: Biomass
         energy_fuel_production: Fuel production

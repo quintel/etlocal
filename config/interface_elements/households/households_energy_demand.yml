@@ -12,7 +12,7 @@ groups:
       unit: 'TJ'
     - key: households_final_demand_coal_demand
       unit: 'TJ'
-    - key: households_final_demand_crude_oil_demand
+    - key: input_households_final_demand_crude_oil_demand
       unit: 'TJ'
   - header: households_final_demand_crude_oil_input
     type: slider

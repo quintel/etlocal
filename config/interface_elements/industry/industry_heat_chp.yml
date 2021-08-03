@@ -32,3 +32,23 @@ groups:
       - key: input_share_mixer_gas_fuel_network_gas
         unit: '%'
         flexible: true
+
+  - header: industry_final_demand_crude_oil_input
+    type: slider
+    items:
+    - key: input_percentage_of_diesel_industry_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_biodiesel_industry_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_kerosene_industry_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_bio_kerosene_industry_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_lpg_industry_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_bio_oil_industry_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_crude_oil_industry_final_demand_crude_oil
+      unit: '%'
+      flexible: true
+      skip_validation: true

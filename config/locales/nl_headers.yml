@@ -44,7 +44,7 @@ nl:
       households_steam_hot_water_distribution: Verdeling warmte
       households_wood_pellets_distribution: Verdeling biomassa
       households_crude_oil_distribution: Verdeling olie
-      households_final_demand_crude_oil_input: Verdeling olietypes
+      households_final_demand_crude_oil_input: Samenstelling olie
       households_coal_distribution: Verdeling kolen
       households_network_gas_space_heating_hot_water_distribution: Ruimteverwarming en warm water - gas
       households_electricity_space_heating_hot_water_distribution: Ruimteverwarming en warm water - elektriciteit
@@ -63,6 +63,7 @@ nl:
       buildings_wood_pellets_distribution: Verdeling biomassa
       buildings_crude_oil_distribution: Verdeling olie
       buildings_coal_distribution: Verdeling kolen
+      buildings_final_demand_crude_oil_input: Samenstelling olie
       buildings_network_gas_space_heating_distribution: Ruimteverwarming - gas
       buildings_electricity_space_heating_distribution: Ruimteverwarming - elektriciteit
       buildings_electricity_lighting_distribution: Verlichting - elektriciteit
@@ -85,10 +86,12 @@ nl:
 
       # agriculture
       agriculture_final_demand: Eindgebruik
+      agriculture_final_demand_crude_oil_input: Samenstelling olie
 
       # industry
       industry_heat: Gebruikte brandstof voor WKK en ketels
       industry_gas_fuelmix: Brandstofmix gasgestookte WKK
+      industry_final_demand_crude_oil_input: Brandstoffen voor olieketels in alle industriesectoren
       industry_metal_steel: Staal
       industry_metal_aluminium: Aluminium
       industry_metal_other: Overige metaalindustrie

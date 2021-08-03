@@ -195,6 +195,9 @@ en:
         The pipe lengths of district heating are used to make a good cost estimate for the heat networks. Have a look at our
         <a target="_blank" href="https://docs.energytransitionmodel.com/main/heat-infrastructure-costs">documentation</a>
         for more information on this cost calculation.
+      agriculture_final_demand_crude_oil_input: |
+        The composition below describes the different types of oil that fuel oil-fired heaters. Each percentage describes
+        the share of this oil type in the total oil demand.
       households_final_demand_crude_oil_input: |
         Describes the mix of different oil types used in heating for households.
       households_housing_stock_distribution: |
@@ -263,9 +266,15 @@ en:
       buildings_electricity_cooling_distribution: |
         Below you can see what percentage of total electricity demand for cooling is used by
         these different cooling technologies.
+      buildings_final_demand_crude_oil_input: |
+        The composition below describes the different types of oil that fuel oil-fired heaters. Each percentage describes
+        the share of this oil type in the total oil demand.
       industry_gas_fuelmix: |
         The percentages below indicate the composition of the fuel used in gas-fired CHPs. In some cases
         oil or bio-oil is blended with natural gas.
+      industry_final_demand_crude_oil_input: |
+        The composition below describes the different types of oil that fuel oil-fired heaters. Each percentage describes
+        the share of this oil type in the total oil demand.
       industry_heat: |
         Below you can see how much fuel has been used per CHP type and central heating boiler. The heat produced is supplied
         to industrial sectors with a demand for (central) heat. More information about the various plant types can be found in the

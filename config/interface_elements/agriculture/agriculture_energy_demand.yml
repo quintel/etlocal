@@ -10,7 +10,28 @@ groups:
         unit: 'TJ'
       - key: agriculture_final_demand_wood_pellets_demand
         unit: 'TJ'
-      - key: agriculture_final_demand_crude_oil_demand
+        # this one should have 'input_' in front, in order for theh etsource spec to succeed
+        # should also create / add this key-change to the migration
+      - key: input_agriculture_final_demand_crude_oil_demand
         unit: 'TJ'
       - key: agriculture_final_demand_hydrogen_demand
         unit: 'TJ'
+  - header: agriculture_final_demand_crude_oil_input
+    type: slider
+    items:
+    - key: input_percentage_of_diesel_agriculture_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_biodiesel_agriculture_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_kerosene_agriculture_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_lpg_agriculture_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_bio_oil_agriculture_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_crude_oil_agriculture_final_demand_crude_oil
+      unit: '%'
+      flexible: true
+      skip_validation: true

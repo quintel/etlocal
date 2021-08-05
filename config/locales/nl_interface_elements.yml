@@ -175,8 +175,6 @@ nl:
         households_final_demand_electricity_households_final_demand_for_lighting_electricity_parent_share: Verlichting
         households_final_demand_electricity_households_final_demand_for_space_heating_electricity_parent_share: Ruimteverwarming
 
-
-
         #buildings
         number_of_buildings: Aantal gebouwen
         buildings_roof_surface_available_for_pv: Geschikt dakoppervlak voor zon-PV
@@ -215,6 +213,7 @@ nl:
 
         buildings_final_demand_for_space_heating_electricity_buildings_space_heater_collective_heatpump_water_water_ts_electricity_parent_share: Warmtepomp (bodem) met WKO
         buildings_final_demand_for_space_heating_electricity_buildings_space_heater_electricity_parent_share: Elektrische ketel
+        buildings_final_demand_for_space_heating_electricity_buildings_space_heater_heatpump_air_water_electricity_parent_share: Luchtwarmtepomp
 
         buildings_final_demand_for_lighting_electricity_buildings_lighting_efficient_fluorescent_electricity_parent_share: TL-buis (hoge opbrengst)
         buildings_final_demand_for_lighting_electricity_buildings_lighting_led_electricity_parent_share: LED-lamp
@@ -222,7 +221,7 @@ nl:
 
         buildings_final_demand_for_cooling_electricity_buildings_cooling_airconditioning_electricity_parent_share: Airconditioning
         buildings_final_demand_for_cooling_electricity_buildings_cooling_collective_heatpump_water_water_ts_electricity_parent_share: Warmtepomp (bodem) met WKO
-
+        buildings_final_demand_for_cooling_electricity_buildings_cooling_heatpump_air_water_electricity_parent_share: Luchtwarmtepomp
 
         # transport
         number_of_cars: Aantal auto's

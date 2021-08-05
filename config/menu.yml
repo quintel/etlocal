@@ -37,6 +37,7 @@ energy:
   - energy_fossil_electricity_production
   - energy_full_load_hours
   - energy_heat_production
+  - energy_efficiency
   - energy_biomass
   - energy_fuel_production
 

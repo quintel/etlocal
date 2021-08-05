@@ -1,0 +1,31 @@
+---
+- fields:
+  - lv_net_total_costs_present
+  - mv_net_total_costs_present
+  - hv_net_total_costs_present
+  - lv_mv_trafo_total_costs_present
+  - mv_hv_trafo_total_costs_present
+  - households_final_demand_electricity_demand
+  - input_buildings_electricity_demand
+  - buildings_final_demand_network_gas_demand
+  - agriculture_final_demand_electricity_demand
+  - agriculture_final_demand_network_gas_demand
+  - input_energy_chp_local_engine_network_gas_production
+  - agriculture_final_demand_steam_hot_water_demand
+  - input_industry_ict_electricity_demand
+  - input_industry_chemical_other_electricity_demand
+  - input_industry_food_electricity_demand
+  - input_industry_metal_other_electricity_demand
+  - input_industry_paper_electricity_demand
+  - input_industry_other_electricity_demand
+  - input_industry_chemical_other_network_gas_demand
+  - input_industry_food_network_gas_demand
+  - input_industry_metal_other_network_gas_demand
+  - input_industry_paper_network_gas_demand
+  - input_industry_other_network_gas_demand
+  - energy_power_sector_own_use_electricity_demand
+  - energy_power_hv_network_loss_demand
+  - energy_distribution_greengas_demand
+  message: |
+    "Schatting Quintel. Geen data beschikbaar voor 2018. De schatting is gebaseerd op het totaal energie/elektriciteits/gasgebruik in de gemeente (zoals gerapporteerd door Klimaatmonitor) en/of op data uit voorgaande jaren. Zie: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a
+    En: https://klimaatmonitor.databank.nl/Jive?workspace_guid=04e40306-c921-4a5f-8b2f-bdc258886267"

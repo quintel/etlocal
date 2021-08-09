@@ -44,6 +44,7 @@ en:
       households_steam_hot_water_distribution: Heat distribution
       households_wood_pellets_distribution: Biomass distribution
       households_crude_oil_distribution: Oil distribution
+      households_final_demand_crude_oil_input: Mix of oil types
       households_coal_distribution: Coal distribution
       households_network_gas_space_heating_hot_water_distribution: Space heating and hot water technologies - gas
       households_electricity_space_heating_hot_water_distribution: Space heating and hot water technologies - electricity
@@ -61,6 +62,7 @@ en:
       buildings_wood_pellets_distribution: Biomass distribution
       buildings_crude_oil_distribution: Oil distribution
       buildings_coal_distribution: Coal distribution
+      buildings_final_demand_crude_oil_input: Fuel for oil-fired heaters
       buildings_network_gas_space_heating_distribution: Space heating technologies - gas
       buildings_electricity_space_heating_distribution: Space heating technologies - electricity
       buildings_electricity_lighting_distribution: Lighting technologies - electricity
@@ -83,10 +85,12 @@ en:
 
       # agriculture
       agriculture_final_demand: Final demand
+      agriculture_final_demand_crude_oil_input: Fuel for oil-fired heaters
 
       # industry
       industry_heat: Fuel input for CHP
       industry_gas_fuelmix: Fuel for gas-fired CHPs
+      industry_final_demand_crude_oil_input: Fuel for oil-fired heaters in all industry sectors
       industry_metal_steel: Steel
       industry_metal_aluminium: Aluminium
       industry_metal_other: Other metal industry

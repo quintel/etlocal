@@ -94,7 +94,7 @@ en:
         households_final_demand_network_gas_demand: Gas
         households_final_demand_steam_hot_water_demand: Heat
         households_final_demand_wood_pellets_demand: Solid biomass
-        households_final_demand_crude_oil_demand: Oil
+        input_households_final_demand_crude_oil_demand: Oil
         households_final_demand_coal_demand: Coal
 
         input_households_apartments_heat_demand_reduction: Apartement
@@ -170,7 +170,13 @@ en:
         households_final_demand_electricity_households_final_demand_for_lighting_electricity_parent_share: Lighting
         households_final_demand_electricity_households_final_demand_for_space_heating_electricity_parent_share: Space heating
 
-
+        input_percentage_of_diesel_households_final_demand_crude_oil: Diesel
+        input_percentage_of_biodiesel_households_final_demand_crude_oil: Biodiesel
+        input_percentage_of_kerosene_households_final_demand_crude_oil: Kerosene
+        input_percentage_of_lpg_households_final_demand_crude_oil: LPG
+        input_percentage_of_bio_kerosene_households_final_demand_crude_oil: Bio kerosene
+        input_percentage_of_bio_oil_households_final_demand_crude_oil: Other bio oil
+        input_percentage_of_crude_oil_households_final_demand_crude_oil: Other oil
 
         #buildings
         number_of_buildings: Number of buildings
@@ -181,8 +187,16 @@ en:
         buildings_final_demand_steam_hot_water_demand: Heat
         buildings_final_demand_wood_pellets_demand: Solid biomass
         buildings_final_demand_coal_demand: Coal
-        buildings_final_demand_crude_oil_demand: Oil
+        input_buildings_final_demand_crude_oil_demand: Oil
         input_buildings_heat_demand_reduction: Heat demand reduction
+
+        input_percentage_of_diesel_buildings_final_demand_crude_oil: Diesel
+        input_percentage_of_biodiesel_buildings_final_demand_crude_oil: Biodiesel
+        input_percentage_of_kerosene_buildings_final_demand_crude_oil: Kerosene
+        input_percentage_of_lpg_buildings_final_demand_crude_oil: LPG
+        input_percentage_of_bio_kerosene_buildings_final_demand_crude_oil: Bio kerosene
+        input_percentage_of_bio_oil_buildings_final_demand_crude_oil: Other bio oil
+        input_percentage_of_crude_oil_buildings_final_demand_crude_oil: Other oil
 
         input_buildings_solar_pv_demand: Solar PV production
         buildings_final_demand_solar_thermal_demand: Solar thermal production
@@ -287,8 +301,16 @@ en:
         agriculture_final_demand_network_gas_demand: Gas
         agriculture_final_demand_steam_hot_water_demand: Heat
         agriculture_final_demand_wood_pellets_demand: Solid biomass
-        agriculture_final_demand_crude_oil_demand: Oil
+        input_agriculture_final_demand_crude_oil_demand: Oil
         agriculture_final_demand_hydrogen_demand: Hydrogen
+
+        input_percentage_of_diesel_agriculture_final_demand_crude_oil: Diesel
+        input_percentage_of_biodiesel_agriculture_final_demand_crude_oil: Biodiesel
+        input_percentage_of_kerosene_agriculture_final_demand_crude_oil: Kerosene
+        input_percentage_of_lpg_agriculture_final_demand_crude_oil: LPG
+        input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil: Bio kerosene
+        input_percentage_of_bio_oil_agriculture_final_demand_crude_oil: Other bio oil
+        input_percentage_of_crude_oil_agriculture_final_demand_crude_oil: Other oil
 
         # industry
         industry_chp_combined_cycle_gas_power_fuelmix_demand: Gas CHP
@@ -304,6 +326,14 @@ en:
         input_share_mixer_gas_fuel_network_gas: Gas
         input_share_mixer_gas_fuel_oil: Oil
         input_share_mixer_gas_fuel_bio_oil: Bio oil
+
+        input_percentage_of_diesel_industry_final_demand_crude_oil: Diesel
+        input_percentage_of_biodiesel_industry_final_demand_crude_oil: Biodiesel
+        input_percentage_of_kerosene_industry_final_demand_crude_oil: Kerosene
+        input_percentage_of_lpg_industry_final_demand_crude_oil: LPG
+        input_percentage_of_bio_kerosene_industry_final_demand_crude_oil: Bio kerosene
+        input_percentage_of_bio_oil_industry_final_demand_crude_oil: Other bio oil
+        input_percentage_of_crude_oil_industry_final_demand_crude_oil: Other oil
 
         input_industry_metal_steel_scaling_factor: "% national steel industry"
         input_industry_metal_aluminium_scaling_factor: "% national aluminium industry"

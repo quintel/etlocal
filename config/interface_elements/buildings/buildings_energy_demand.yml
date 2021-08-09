@@ -12,5 +12,24 @@ groups:
       unit: 'TJ'
     - key: buildings_final_demand_coal_demand
       unit: 'TJ'
-    - key: buildings_final_demand_crude_oil_demand
+    - key: input_buildings_final_demand_crude_oil_demand
       unit: 'TJ'
+  - header: buildings_final_demand_crude_oil_input
+    type: slider
+    items:
+    - key: input_percentage_of_diesel_buildings_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_biodiesel_buildings_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_kerosene_buildings_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_bio_kerosene_buildings_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_lpg_buildings_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_bio_oil_buildings_final_demand_crude_oil
+      unit: '%'
+    - key: input_percentage_of_crude_oil_buildings_final_demand_crude_oil
+      unit: '%'
+      flexible: true
+      skip_validation: true

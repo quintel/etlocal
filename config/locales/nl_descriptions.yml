@@ -197,6 +197,12 @@ nl:
         De leidinglengtes van warmtenetten worden gebruikt om een goede kosteninschatting te maken voor de warmtenetten. Kijk op
         onze <a target="_blank" href="https://docs.energytransitionmodel.com/main/heat-infrastructure-costs">documentatie</a>
         voor meer informatie hierover.
+      agriculture_final_demand_crude_oil_input: |
+        De samenstelling hieronder beschrijft de aandelen van verschillende olietypes die gebruikt worden in olieketels.
+        Ieder percentage staat voor het aandeel van dit type olie in het totale olieverbruik.
+      households_final_demand_crude_oil_input: |
+        Beschrijft de mix van verschillende olietypes die gebruikt worden voor onder andere verwarming
+        in huishoudens.
       households_housing_stock_distribution: |
         Hieronder zie je de verdeling van huistypen in jouw regio.
       households_insulation: |
@@ -253,9 +259,15 @@ nl:
         Hieronder zie je welk percentage van de totale elektriciteitsvraag voor verlichting gebruikt wordt door deze verschillende lampen.
       buildings_electricity_cooling_distribution: |
         Hieronder zie je welk percentage van de totale elektriciteitsvraag voor koelen gebruikt wordt door deze verschillende koelapparaten.
+      buildings_final_demand_crude_oil_input: |
+        De samenstelling hieronder beschrijft de aandelen van verschillende olietypes die gebruikt worden in olieketels.
+        Ieder percentage staat voor het aandeel van dit type olie in het totale olieverbruik.
       industry_gas_fuelmix: |
         Onderstaande percentages geven de samenstelling van de gebruikte brandstof van gasgestookte WKK's weer. In sommige gevallen
         wordt aardolie of bio-olie bijgemengd met aardgas.
+      industry_final_demand_crude_oil_input: |
+        De samenstelling hieronder beschrijft de aandelen van verschillende olietypes die gebruikt worden in olieketels.
+        Ieder percentage staat voor het aandeel van dit type olie in het totale olieverbruik.
       industry_heat: |
         Hieronder staat per WKK-type en centrale verwarmingsketel aangegeven hoeveel brandstof er is gebruikt. De geproduceerde warmte
         wordt geleverd aan industriële sectoren met een vraag naar (centrale) warmte. Meer informatie over de verschillende type ketels kun je vinden in het

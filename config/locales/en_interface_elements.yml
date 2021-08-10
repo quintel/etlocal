@@ -224,6 +224,7 @@ en:
 
         buildings_final_demand_for_space_heating_electricity_buildings_space_heater_collective_heatpump_water_water_ts_electricity_parent_share: Heat pump (ground) with thermal storage
         buildings_final_demand_for_space_heating_electricity_buildings_space_heater_electricity_parent_share: Electric heater
+        buildings_final_demand_for_space_heating_electricity_buildings_space_heater_heatpump_air_water_electricity_parent_share: Heat pump (air)
 
         buildings_final_demand_for_lighting_electricity_buildings_lighting_efficient_fluorescent_electricity_parent_share: High-performance fluorescent tube
         buildings_final_demand_for_lighting_electricity_buildings_lighting_led_electricity_parent_share: LED tube
@@ -231,7 +232,7 @@ en:
 
         buildings_final_demand_for_cooling_electricity_buildings_cooling_airconditioning_electricity_parent_share: Airconditioning
         buildings_final_demand_for_cooling_electricity_buildings_cooling_collective_heatpump_water_water_ts_electricity_parent_share: Heat pump (ground) with thermal storage
-
+        buildings_final_demand_for_cooling_electricity_buildings_cooling_heatpump_air_water_electricity_parent_share: Heat pump (air)
 
         # transport
         number_of_cars: Number of cars

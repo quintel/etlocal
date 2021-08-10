@@ -71,6 +71,8 @@ groups:
     items:
       - key: buildings_final_demand_for_space_heating_electricity_buildings_space_heater_collective_heatpump_water_water_ts_electricity_parent_share
         unit: '%'
+      - key: buildings_final_demand_for_space_heating_electricity_buildings_space_heater_heatpump_air_water_electricity_parent_share
+        unit: '%'
       - key: buildings_final_demand_for_space_heating_electricity_buildings_space_heater_electricity_parent_share
         unit: '%'
         flexible: true
@@ -93,7 +95,10 @@ groups:
     items:
       - key: buildings_final_demand_for_cooling_electricity_buildings_cooling_airconditioning_electricity_parent_share
         unit: '%'
+      - key: buildings_final_demand_for_cooling_electricity_buildings_cooling_heatpump_air_water_electricity_parent_share
+        unit: '%'
       - key: buildings_final_demand_for_cooling_electricity_buildings_cooling_collective_heatpump_water_water_ts_electricity_parent_share
         unit: '%'
         flexible: true
         skip_validation: true
+

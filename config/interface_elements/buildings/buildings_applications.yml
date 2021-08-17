@@ -62,7 +62,7 @@ groups:
     type: slider
     combination_method:
       weighted_average:
-        - buildings_final_demand_crude_oil_demand
+        - input_buildings_final_demand_crude_oil_demand
     items:
       - key: buildings_final_demand_crude_oil_buildings_final_demand_for_space_heating_crude_oil_parent_share
         unit: '%'
@@ -136,4 +136,3 @@ groups:
         unit: '%'
         flexible: true
         skip_validation: true
-

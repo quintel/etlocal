@@ -35,6 +35,9 @@ groups:
 
   - header: buildings_final_demand_crude_oil_input
     type: slider
+    combination_method:
+      weighted_average:
+        - input_buildings_final_demand_crude_oil_demand
     items:
       - key: input_percentage_of_diesel_buildings_final_demand_crude_oil
         unit: '%'

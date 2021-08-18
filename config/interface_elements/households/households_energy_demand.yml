@@ -35,6 +35,9 @@ groups:
 
   - header: households_final_demand_crude_oil_input
     type: slider
+    combination_method:
+      weighted_average:
+        - input_households_final_demand_crude_oil_demand
     items:
       - key: input_percentage_of_diesel_households_final_demand_crude_oil
         unit: '%'

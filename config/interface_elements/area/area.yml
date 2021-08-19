@@ -1,7 +1,7 @@
 key: area
 groups:
   - header:
+    combination_method: min
     items:
-    - key: analysis_year
-      unit: '#'
-      combination_method: min
+      - key: analysis_year
+        unit: '#'

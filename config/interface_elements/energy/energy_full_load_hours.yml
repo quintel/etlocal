@@ -127,6 +127,7 @@ groups:
         unit: 'flh'
 
   - header: energy_fossil_heat_full_load_hours
+    combination_method: average
     items:
       - key: energy_heat_burner_coal_full_load_hours
         unit: 'flh'

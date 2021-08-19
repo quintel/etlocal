@@ -120,13 +120,13 @@ Op deze manier maken we dus een schatting van hoe hoog de CO2 per gemeente is al
   - input_transport_plane_gasoline_demand
   - input_transport_plane_bio_ethanol_demand
   - households_final_demand_coal_demand
-  - households_final_demand_crude_oil_demand
+  - input_households_final_demand_crude_oil_demand
   - households_final_demand_solar_thermal_demand
   - buildings_final_demand_coal_demand
-  - buildings_final_demand_crude_oil_demand
+  - input_buildings_final_demand_crude_oil_demand
   - buildings_final_demand_solar_thermal_demand
   - agriculture_final_demand_wood_pellets_demand
-  - agriculture_final_demand_crude_oil_demand
+  - input_agriculture_final_demand_crude_oil_demand
   - agriculture_final_demand_hydrogen_demand
   - industry_chp_ultra_supercritical_coal_demand
   - industry_chp_turbine_gas_power_fuelmix_demand
@@ -352,3 +352,34 @@ Op deze manier maken we dus een schatting van hoe hoog de CO2 per gemeente is al
   message:
    "Update to 2018 value as specified by Klimaatmonitor: https://klimaatmonitor.databank.nl/Jive?workspace_guid=d2a70db0-97f7-4f73-b636-3e06f3252d0d"
 
+- fields: 
+  - input_percentage_of_diesel_industry_final_demand_crude_oil
+  - input_percentage_of_biodiesel_industry_final_demand_crude_oil
+  - input_percentage_of_kerosene_industry_final_demand_crude_oil
+  - input_percentage_of_bio_kerosene_industry_final_demand_crude_oil
+  - input_percentage_of_lpg_industry_final_demand_crude_oil
+  - input_percentage_of_bio_oil_industry_final_demand_crude_oil
+  - input_percentage_of_crude_oil_industry_final_demand_crude_oil
+  - input_percentage_of_diesel_households_final_demand_crude_oil
+  - input_percentage_of_biodiesel_households_final_demand_crude_oil
+  - input_percentage_of_kerosene_households_final_demand_crude_oil
+  - input_percentage_of_bio_kerosene_households_final_demand_crude_oil
+  - input_percentage_of_lpg_households_final_demand_crude_oil
+  - input_percentage_of_bio_oil_households_final_demand_crude_oil
+  - input_percentage_of_crude_oil_households_final_demand_crude_oil
+  - input_percentage_of_diesel_buildings_final_demand_crude_oil
+  - input_percentage_of_biodiesel_buildings_final_demand_crude_oil
+  - input_percentage_of_kerosene_buildings_final_demand_crude_oil
+  - input_percentage_of_bio_kerosene_buildings_final_demand_crude_oil
+  - input_percentage_of_lpg_buildings_final_demand_crude_oil
+  - input_percentage_of_bio_oil_buildings_final_demand_crude_oil
+  - input_percentage_of_crude_oil_buildings_final_demand_crude_oil
+  - input_percentage_of_diesel_agriculture_final_demand_crude_oil
+  - input_percentage_of_biodiesel_agriculture_final_demand_crude_oil
+  - input_percentage_of_kerosene_agriculture_final_demand_crude_oil
+  - input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil
+  - input_percentage_of_lpg_agriculture_final_demand_crude_oil
+  - input_percentage_of_bio_oil_agriculture_final_demand_crude_oil
+  - input_percentage_of_crude_oil_agriculture_final_demand_crude_oil
+  message:
+   "No data available."

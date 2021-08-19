@@ -1,6 +1,7 @@
 key: energy_efficiency
 groups:
   - header: energy_efficiency_coal
+    combination_method: average
     items:
       - key: input_energy_power_supercritical_coal_electricity_output_conversion
         unit: '%'
@@ -72,6 +73,7 @@ groups:
           -> { 15.0 }) 
 
   - header: energy_efficiency_gas
+    combination_method: average
     items:
       - key: input_energy_power_turbine_network_gas_electricity_output_conversion
         unit: '%'
@@ -184,6 +186,7 @@ groups:
           -> { 42.0 })
 
   - header: energy_efficiency_other_fossil
+    combination_method: average
     items:
       - key: input_energy_power_ultra_supercritical_crude_oil_electricity_output_conversion
         unit: '%'
@@ -211,6 +214,7 @@ groups:
         unit: '%'
 
   - header: energy_efficiency_renewable_chp
+    combination_method: average
     items:
       - key: input_energy_chp_local_wood_pellets_electricity_output_conversion
         unit: '%'
@@ -293,6 +297,7 @@ groups:
         unit: '%'  
 
   - header: energy_efficiency_heat_plants
+    combination_method: average
     items:
       - key: input_energy_heat_burner_wood_pellets_steam_hot_water_output_conversion
         unit: '%'

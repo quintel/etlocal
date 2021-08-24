@@ -1,0 +1,6 @@
+---
+- fields:
+  - :all
+  message:
+    "Gebaseerd op de dataset van Het Hogeland, aangevuld met de kleinverbruiksdata
+    van Enexis voor het gas- en elektraverbruik van woningen."

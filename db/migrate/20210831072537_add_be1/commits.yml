@@ -117,10 +117,14 @@
   - households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share
   - households_final_demand_for_space_heating_network_gas_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share
   - households_final_demand_for_space_heating_network_gas_households_space_heater_network_gas_parent_share
+  message:
+   "No data availble, based on country dataset 2012."
+
+- fields:
   - input_households_solar_pv_demand
   - input_buildings_solar_pv_demand
   message:
-   "No data availble, based on country dataset 2012. "
+    "PV geplaatst vermogen op daken (split into households and buildings according to country split); Year: 2018; Author: Provincies in Cijfers BE; https://provincies.incijfers.be/databank"
 
 - fields: 
   - input_buildings_heat_demand_reduction

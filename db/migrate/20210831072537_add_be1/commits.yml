@@ -2,7 +2,7 @@
 - fields: 
   - analysis_year
   message:
-   "Year where most data was available."
+   "niks"
 
 - fields: 
   - number_of_buildings
@@ -29,7 +29,7 @@
   - households_final_demand_wood_pellets_demand
   - input_buildings_electricity_demand
   message:
-   "Energy balance Brussels; Year: 2019; Author: Leefmilieu Brussel; https://leefmilieu.brussels/themas/gebouwen-en-energie/energiebalans-en-acties-van-het-gewest/de-energiebalans-van-het-gewest"
+   "Energy balance Brussels; Year: 2018; Author: Leefmilieu Brussel; https://leefmilieu.brussels/themas/gebouwen-en-energie/energiebalans-en-acties-van-het-gewest/de-energiebalans-van-het-gewest"
 
 - fields: 
   - buildings_final_demand_solar_thermal_demand
@@ -41,22 +41,28 @@
 - fields: 
   - buildings_final_demand_coal_buildings_final_demand_for_appliances_coal_parent_share
   - buildings_final_demand_coal_buildings_final_demand_for_space_heating_coal_parent_share
-  - buildings_final_demand_crude_oil_buildings_final_demand_for_appliances_crude_oil_parent_share
-  - buildings_final_demand_crude_oil_buildings_final_demand_for_space_heating_crude_oil_parent_share
   - buildings_final_demand_electricity_buildings_final_demand_for_appliances_electricity_parent_share
   - buildings_final_demand_electricity_buildings_final_demand_for_cooling_electricity_parent_share
   - buildings_final_demand_electricity_buildings_final_demand_for_lighting_electricity_parent_share
   - buildings_final_demand_electricity_buildings_final_demand_for_space_heating_electricity_parent_share
+  - households_final_demand_coal_households_final_demand_for_hot_water_coal_parent_share
+  - households_final_demand_coal_households_final_demand_for_space_heating_coal_parent_share
+  - households_final_demand_wood_pellets_households_final_demand_for_cooking_wood_pellets_parent_share
+  - households_final_demand_wood_pellets_households_final_demand_for_hot_water_wood_pellets_parent_share
+  - households_final_demand_wood_pellets_households_final_demand_for_space_heating_wood_pellets_parent_share
+  message:
+   "Based on country dataset; Year: 2012; Author: Quintel"
+
+- fields: 
+  - buildings_final_demand_crude_oil_buildings_final_demand_for_appliances_crude_oil_parent_share
+  - buildings_final_demand_crude_oil_buildings_final_demand_for_space_heating_crude_oil_parent_share
   - buildings_final_demand_network_gas_buildings_final_demand_for_appliances_network_gas_parent_share
   - buildings_final_demand_network_gas_buildings_final_demand_for_cooling_network_gas_parent_share
   - buildings_final_demand_network_gas_buildings_final_demand_for_space_heating_network_gas_parent_share
   - buildings_final_demand_wood_pellets_buildings_final_demand_for_appliances_wood_pellets_parent_share
   - buildings_final_demand_wood_pellets_buildings_final_demand_for_space_heating_wood_pellets_parent_share
-  - households_final_demand_coal_households_final_demand_for_hot_water_coal_parent_share
-  - households_final_demand_coal_households_final_demand_for_space_heating_coal_parent_share
   - households_final_demand_crude_oil_households_final_demand_for_hot_water_crude_oil_parent_share
   - households_final_demand_crude_oil_households_final_demand_for_space_heating_crude_oil_parent_share
-  - households_final_demand_electricity_households_final_demand_for_appliances_electricity_parent_share
   - households_final_demand_electricity_households_final_demand_for_cooking_electricity_parent_share
   - households_final_demand_electricity_households_final_demand_for_cooling_electricity_parent_share
   - households_final_demand_electricity_households_final_demand_for_hot_water_electricity_parent_share
@@ -68,9 +74,15 @@
   - households_final_demand_network_gas_households_final_demand_for_space_heating_network_gas_parent_share
   - households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share
   - households_final_demand_steam_hot_water_households_final_demand_for_space_heating_steam_hot_water_parent_share
-  - households_final_demand_wood_pellets_households_final_demand_for_cooking_wood_pellets_parent_share
-  - households_final_demand_wood_pellets_households_final_demand_for_hot_water_wood_pellets_parent_share
-  - households_final_demand_wood_pellets_households_final_demand_for_space_heating_wood_pellets_parent_share
+  message:
+   "Based on final demand per person calculated by using country dataset; Year: 2012; Author: Quintel"
+
+- fields: 
+  - households_final_demand_electricity_households_final_demand_for_appliances_electricity_parent_share
+  message:
+   "Based on final demand per person calculated by using country dataset, corrected with -0.02; Year: 2012; Author: Quintel"
+
+- fields: 
   - buildings_final_demand_for_cooling_electricity_buildings_cooling_airconditioning_electricity_parent_share
   - buildings_final_demand_for_cooling_electricity_buildings_cooling_collective_heatpump_water_water_ts_electricity_parent_share
   - buildings_final_demand_for_lighting_electricity_buildings_lighting_efficient_fluorescent_electricity_parent_share
@@ -105,6 +117,12 @@
   - households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share
   - households_final_demand_for_space_heating_network_gas_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share
   - households_final_demand_for_space_heating_network_gas_households_space_heater_network_gas_parent_share
+  - input_households_solar_pv_demand
+  - input_buildings_solar_pv_demand
+  message:
+   "No data availble, based on country dataset 2012. "
+
+- fields: 
   - input_buildings_heat_demand_reduction
   - input_households_apartments_heat_demand_reduction
   - input_households_corner_houses_heat_demand_reduction
@@ -116,10 +134,8 @@
   - input_percentage_of_detached_houses
   - input_percentage_of_semi_detached_houses
   - input_percentage_of_terraced_houses
-  - input_households_solar_pv_demand
-  - input_buildings_solar_pv_demand
   message:
-   "No data availble, based on country dataset 2012. "
+   "Building Stock Europe' & 'Kadastrale statistiek van het bestand van de gebouwen'; Year: '2018' & '2018'; Author: 'Building Performance Institute Europe' & 'StatBel'; 'https://gitlab.com/hotmaps/building-stock/-/tree/master' & 'https://statbel.fgov.be/en/themes/housing/building-stock#figures'"
 
 - fields: 
   - buildings_roof_surface_available_for_pv
@@ -462,6 +478,34 @@
   - agriculture_final_demand_electricity_demand
   - buildings_final_demand_for_space_heating_electricity_buildings_space_heater_heatpump_air_water_electricity_parent_share
   - buildings_final_demand_for_cooling_electricity_buildings_cooling_heatpump_air_water_electricity_parent_share
+  - input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil
+  - input_percentage_of_bio_kerosene_buildings_final_demand_crude_oil
+  - input_percentage_of_bio_kerosene_households_final_demand_crude_oil
+  - input_percentage_of_bio_kerosene_industry_final_demand_crude_oil
+  - input_percentage_of_bio_oil_agriculture_final_demand_crude_oil
+  - input_percentage_of_bio_oil_buildings_final_demand_crude_oil
+  - input_percentage_of_bio_oil_households_final_demand_crude_oil
+  - input_percentage_of_bio_oil_industry_final_demand_crude_oil
+  - input_percentage_of_biodiesel_agriculture_final_demand_crude_oil
+  - input_percentage_of_biodiesel_buildings_final_demand_crude_oil
+  - input_percentage_of_biodiesel_households_final_demand_crude_oil
+  - input_percentage_of_biodiesel_industry_final_demand_crude_oil
+  - input_percentage_of_crude_oil_agriculture_final_demand_crude_oil
+  - input_percentage_of_crude_oil_buildings_final_demand_crude_oil
+  - input_percentage_of_crude_oil_households_final_demand_crude_oil
+  - input_percentage_of_crude_oil_industry_final_demand_crude_oil
+  - input_percentage_of_diesel_agriculture_final_demand_crude_oil
+  - input_percentage_of_diesel_buildings_final_demand_crude_oil
+  - input_percentage_of_diesel_households_final_demand_crude_oil
+  - input_percentage_of_diesel_industry_final_demand_crude_oil
+  - input_percentage_of_kerosene_agriculture_final_demand_crude_oil
+  - input_percentage_of_kerosene_buildings_final_demand_crude_oil
+  - input_percentage_of_kerosene_households_final_demand_crude_oil
+  - input_percentage_of_kerosene_industry_final_demand_crude_oil
+  - input_percentage_of_lpg_agriculture_final_demand_crude_oil
+  - input_percentage_of_lpg_buildings_final_demand_crude_oil
+  - input_percentage_of_lpg_households_final_demand_crude_oil
+  - input_percentage_of_lpg_industry_final_demand_crude_oil
   message:
    "Out of scope, based on dummy data."
 

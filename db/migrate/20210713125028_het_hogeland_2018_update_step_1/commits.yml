@@ -1,10 +1,10 @@
 ---
-- fields: 
+- fields:
   - analysis_year
   message:
    "Het meest recente jaar waarvan het grootste deel van de benodigde informatie beschikbaar is. Nu is dat 2018."
 
-- fields: 
+- fields:
   - number_of_residences
   - number_of_inhabitants
   - number_of_cars
@@ -28,12 +28,12 @@
   message:
    "Klimaatmonitor (2018). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
 
-- fields: 
+- fields:
   - number_of_buildings
   message:
    "CBS (2018)"
 
-- fields: 
+- fields:
   - energetic_emissions_other_ghg_agriculture
   - energetic_emissions_other_ghg_buildings
   - energetic_emissions_other_ghg_energy
@@ -56,12 +56,12 @@
   message:
    "Analyse Quintel op basis van data Emissieregistratie. Per gemeente is voor elke 'emissieoorzaak' en broeikasgas in de data van Emissieregistratie gekeken of de uitstoot energetisch is (gerelateerd aan energiegebruik) of niet-energetisch. Ook is per emissieoorzaak gekeken onder welke sector de uitstoot valt (landbouw, industrie, transport etc.). Voor industrie is een uitsplitsing gemaakt naar subsector (chemie, afval etc.), voor landbouw naar emissiebron (bemesting, fermentatie etc.). URL: http://www.emissieregistratie.nl"
 
-- fields: 
+- fields:
   - offshore_suitable_for_wind
   message:
    "Schatting Quintel. Nederlands maximaal voor 75 GW wind bij 25% van de Noordzee, zie TKI Wind op Zee: https://www.topsectorenergie.nl/sites/default/files/uploads/Wind%20op%20Zee/20190328_NOT_Programma_2019_F.pdf "
 
-- fields: 
+- fields:
   - lv_net_total_costs_present
   - mv_net_total_costs_present
   - hv_net_total_costs_present
@@ -72,7 +72,7 @@
   message:
    "Schatting Quintel. Gebaseerd op het totaal elektriciteitsgebruik in dit gebied (Klimaatmonitor) en de kosten van het totale elektriciteitsnet volgens 'Net voor de Toekomst' (2018, CE Delft). URL: https://www.ce.nl/publicaties/2030/net-voor-de-toekomst"
 
-- fields: 
+- fields:
   - co2_emission_1990
   message:
    "Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl. De beschikbare gegevens geven de 'on-the-spot'-emissies per gemeente. Dit betekent dat emissies van elektriciteitsproductie worden toegekend aan de gemeenten waar centrales staan. In het ETM wordt CO2 toegekend op basis van gebruik. Daarom corrigeren we de data van Emissieregistratie als volgt:
@@ -82,12 +82,12 @@
 - Die verdelingsfactor vermenigvuldigen we met de totale Nederlandse CO2-uitstoot in 1990
 Op deze manier maken we dus een schatting van hoe hoog de CO2 per gemeente is als de emissies van de energiesector naar rato van verbruik verdeeld zouden worden."
 
-- fields: 
+- fields:
   - input_transport_road_human_powered_bicycle_demand
   message:
    "Schatting Quintel. Nederlands totaal onderverdeeld o.b.v. aantal inwoners per gemeente"
 
-- fields: 
+- fields:
   - input_transport_road_gasoline_demand
   - input_transport_road_diesel_demand
   - transport_final_demand_lpg_demand
@@ -97,17 +97,17 @@ Op deze manier maken we dus een schatting van hoe hoog de CO2 per gemeente is al
   message:
    "Klimaatmonitor (2018). Inclusief snelwegen en mobiele werktuigen. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=167c3997-e723-48a4-99f9-f32118aba43a"
 
-- fields: 
+- fields:
   - input_transport_road_electricity_demand
   message:
    "Schatting Quintel gebaseerd op aantal elektrische voertuigen in gemeente (Klimaatmonitor) en typisch verbruik per voertuig. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=167c3997-e723-48a4-99f9-f32118aba43a"
 
-- fields: 
+- fields:
   - transport_final_demand_hydrogen_demand
   message:
    "Schatting Quintel gebaseerd op aantal waterstofvoertuigen in gemeente (Klimaatmonitor) en typisch verbruik per voertuig. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=167c3997-e723-48a4-99f9-f32118aba43a"
 
-- fields: 
+- fields:
   - transport_final_demand_for_road_lng_demand
   - transport_final_demand_for_road_bio_lng_demand
   - input_transport_ship_biodiesel_demand
@@ -120,13 +120,13 @@ Op deze manier maken we dus een schatting van hoe hoog de CO2 per gemeente is al
   - input_transport_plane_gasoline_demand
   - input_transport_plane_bio_ethanol_demand
   - households_final_demand_coal_demand
-  - households_final_demand_crude_oil_demand
+  - input_households_final_demand_crude_oil_demand
   - households_final_demand_solar_thermal_demand
   - buildings_final_demand_coal_demand
-  - buildings_final_demand_crude_oil_demand
+  - input_buildings_final_demand_crude_oil_demand
   - buildings_final_demand_solar_thermal_demand
   - agriculture_final_demand_wood_pellets_demand
-  - agriculture_final_demand_crude_oil_demand
+  - input_agriculture_final_demand_crude_oil_demand
   - agriculture_final_demand_hydrogen_demand
   - industry_chp_ultra_supercritical_coal_demand
   - industry_chp_turbine_gas_power_fuelmix_demand
@@ -200,12 +200,12 @@ Op deze manier maken we dus een schatting van hoe hoog de CO2 per gemeente is al
   message:
    "Geen gegevens beschikbaar op Klimaatmonitor"
 
-- fields: 
+- fields:
   - input_transport_rail_electricity_demand
   message:
    "Schatting Quintel. Het aantal reizigers per station is gebruikt als verdeelsleutel om het Nederlands totaalverbruik over gemeentes te verdelen."
 
-- fields: 
+- fields:
   - transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share
   - transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share
   - transport_road_mixer_gasoline_transport_truck_using_gasoline_mix_parent_share
@@ -219,7 +219,7 @@ Op deze manier maken we dus een schatting van hoe hoog de CO2 per gemeente is al
   message:
    "Schatting Quintel op basis van emissiegegevens. Emissieregistratie rapporteert per voertuigtype en brandstof hoeveel CO2 er wordt uitgestoten per gemeente. Op basis hiervan is in te schatten hoeveel brandstof er door elk voertuigtype verbruikt is. URL: http://www.emissieregistratie.nl"
 
-- fields: 
+- fields:
   - transport_final_demand_for_road_electricity_transport_car_using_electricity_parent_share
   - transport_final_demand_for_road_electricity_transport_bus_using_electricity_parent_share
   - transport_final_demand_for_road_electricity_transport_motorcycle_using_electricity_parent_share
@@ -231,49 +231,49 @@ Op deze manier maken we dus een schatting van hoe hoog de CO2 per gemeente is al
   message:
    "Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor) en typisch verbruik per voertuig. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=167c3997-e723-48a4-99f9-f32118aba43a"
 
-- fields: 
+- fields:
   - transport_final_demand_for_rail_electricity_transport_passenger_train_using_electricity_parent_share
   - transport_final_demand_for_rail_electricity_transport_tram_using_electricity_parent_share
   - transport_final_demand_for_rail_electricity_transport_freight_train_using_electricity_parent_share
   message:
    "Schatting Quintel op basis van landelijke data/gemiddelden. Indien er geen tram/metro aanwezig is in een gemeente is het percentage hiervoor op 0 gezet."
 
-- fields: 
+- fields:
   - households_final_demand_electricity_demand
   message:
    "Klimaatmonitor (2018), inclusief verbruik achter de meter. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
 
-- fields: 
+- fields:
   - input_buildings_electricity_demand
   message:
    "Klimaatmonitor (2018), inclusief verbruik achter de meter. Klimaatmonitor rekent het verbruik van de ICT-sector, treinen en elektrisch wegverkeer bij de dienstensector. In het ETM wordt deze energie toegerekend aan respectievelijk industrie en transport. Daarom hebben we het totaal verbruik van de dienstverlening zoals Klimaatmonitor rapporteert gecorrigeerd en een deel van de energie naar industrie en transport verplaatst. Dit heeft geen impact op het totaalverbruik van de gemeente als geheel. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
 
-- fields: 
+- fields:
   - buildings_final_demand_steam_hot_water_demand
   message:
    "Ingeschat o.b.v. Klimaatmonitor (2018), geproduceerde warmte uit WKO, biogas, biomassa en afval. Deze warmte kan ook ingezet worden voor de levering van stadswarmte aan woningen. Om dubbeltelling te voorkomen wordt de warmtevraag in de dienstensector naar beneden bijgesteld als er stadswarmte voor woningen aanwezig is in dit gebied. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a. Zie 'Ontdubbeling stadsverwarming woningen en hernieuwbare warmte' in de 'Rapportage Energiegebruik' op Klimaatmonitor."
 
-- fields: 
+- fields:
   - buildings_final_demand_wood_pellets_demand
   message:
    "Ingeschat o.b.v. Klimaatmonitor (2018), 'biomassaketels bedrijven'. Deze warmte kan ook ingezet worden voor de levering van stadswarmte aan woningen. Om dubbeltelling te voorkomen wordt de warmtevraag in de dienstensector naar beneden bijgesteld als er stadswarmte voor woningen aanwezig is in dit gebied. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a. Zie 'Ontdubbeling stadsverwarming woningen en hernieuwbare warmte' in de 'Rapportage Energiegebruik' op Klimaatmonitor."
 
-- fields: 
+- fields:
   - agriculture_final_demand_electricity_demand
   message:
    "Klimaatmonitor (2018). Inclusief elektriciteitsvraag uit gas-WKKs. Zie gas-WKKs voor meer informatie. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
 
-- fields: 
+- fields:
   - agriculture_final_demand_network_gas_demand
   message:
    "Klimaatmonitor (2018). Wij splitsen het door Klimaatmonitor gerapporteerde gasverbruik uit naar eindgebruik en verbruik door WKK's op basis van Emissiegegevens van Emissieregistratie. URL: Klimaatmonitor (2018). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
 
-- fields: 
+- fields:
   - agriculture_final_demand_steam_hot_water_demand
   message:
    "Warmtevraag landbouw ingeschat op basis van geproduceerde warmte uit biogas- en gas-WKKs"
 
-- fields: 
+- fields:
   - input_industry_chemical_fertilizers_scaling_factor
   - input_industry_chemical_refineries_scaling_factor
   - input_industry_metal_steel_scaling_factor
@@ -281,7 +281,7 @@ Op deze manier maken we dus een schatting van hoe hoog de CO2 per gemeente is al
   message:
    "Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl"
 
-- fields: 
+- fields:
   - input_industry_chemical_other_electricity_demand
   - input_industry_food_electricity_demand
   - input_industry_metal_other_electricity_demand
@@ -295,59 +295,59 @@ Op deze manier maken we dus een schatting van hoe hoog de CO2 per gemeente is al
   message:
    "Klimaatmonitor (2018). Klimaatmonitor rapporteert het totaalverbruik van de hele industrie. Quintel schat in hoe dit verbruik is onderverdeeld naar industriële subsectoren op basis van emissiegegevens per gemeente. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a & http://www.emissieregistratie.nl."
 
-- fields: 
+- fields:
   - energy_power_hv_network_loss_demand
   - energy_distribution_greengas_demand
   message:
    "Schatting Quintel op basis van landelijke data"
 
-- fields: 
+- fields:
   - input_energy_heat_burner_wood_pellets_production
   message:
    "Klimaatmonitor (2018). Optelling van warmte uit decentrale biomassa WKKs, meestook en biomassaketels bedrijven (voor zover die laatste gebruikt wordt voor warmtelevering aan huishoudens). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
 
-- fields: 
+- fields:
   - input_energy_heat_burner_waste_mix_production
   message:
    "Klimaatmonitor (2018). We nemen de warmte uit afval die daadwerkelijk gebruikt wordt in de gemeente, niet de totale productie van warmte uit afval. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
 
-- fields: 
+- fields:
   - input_energy_power_wind_turbine_offshore_production
   message:
    "Niet aanwezig in regio."
 
-- fields: 
+- fields:
   - input_energy_power_supercritical_waste_mix_production
   message:
    "Klimaatmonitor (2018). Aanname is dat naast hernieuwbare elektriciteit uit afvalverbranding er evenveel niet-hernieuwbare elektriciteit wordt geproduceerd (uit niet-biogeen afval). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
 
-- fields: 
+- fields:
   - energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share
   - energy_distribution_non_biogenic_waste_energy_distribution_waste_mix_child_share
   message:
    "Klimaatmonitor (2018). Gebaseerd op verhouding hernieuwbare warmte uit afvalverbranding en totale warmte. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
 
-- fields: 
+- fields:
   - input_energy_chp_local_engine_biogas_production
   message:
    "Klimaatmonitor (2018). De hernieuwbare warmte uit biogas is leidend. De hernieuwbare elektriciteit kan daardoor afwijken van Klimaatmonitor omdat het ETM rekent met vaste efficiënties voor biogas-WKK's die mogelijk lokaal kunnen verschillen. https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
 
-- fields: 
+- fields:
   - input_energy_heat_heatpump_water_water_electricity_production
   message:
    "Schatting Quintel o.b.v. warmte uit WKO volgens Klimaatmonitor (2018). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
 
-- fields: 
+- fields:
   - input_energy_chp_local_wood_pellets_production
   message:
    "Warmteproductie biomassa WKK komt onder biomassaketels in het ETM"
 
-- fields: 
+- fields:
   - input_energy_chp_local_engine_network_gas_production
   message:
    "Klimaatmonitor (2018). Wij splitsen het door Klimaatmonitor gerapporteerde gasverbruik van de landbouw uit naar eindgebruik en verbruik door WKK's op basis van Emissiegegevens van Emissieregistratie. De elektriciteit en warmte uit WKK rekenen we als eindgebruik in de landbouw, niet het gas dat de WKK in is gegaan.URL: Klimaatmonitor (2018). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
 
-- fields: 
+- fields:
   - file_carriers_imported_electricity_co2_conversion_per_mj
   message:
    "Update to 2018 value as specified by Klimaatmonitor: https://klimaatmonitor.databank.nl/Jive?workspace_guid=d2a70db0-97f7-4f73-b636-3e06f3252d0d"

@@ -120,13 +120,13 @@ Op deze manier maken we dus een schatting van hoe hoog de CO2 per gemeente is al
   - input_transport_plane_gasoline_demand
   - input_transport_plane_bio_ethanol_demand
   - households_final_demand_coal_demand
-  - households_final_demand_crude_oil_demand
+  - input_households_final_demand_crude_oil_demand
   - households_final_demand_solar_thermal_demand
   - buildings_final_demand_coal_demand
-  - buildings_final_demand_crude_oil_demand
+  - input_buildings_final_demand_crude_oil_demand
   - buildings_final_demand_solar_thermal_demand
   - agriculture_final_demand_wood_pellets_demand
-  - agriculture_final_demand_crude_oil_demand
+  - input_agriculture_final_demand_crude_oil_demand
   - agriculture_final_demand_hydrogen_demand
   - industry_chp_ultra_supercritical_coal_demand
   - industry_chp_turbine_gas_power_fuelmix_demand

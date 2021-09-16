@@ -18,7 +18,7 @@ class DataMigrationGenerator < ActiveRecord::Generators::MigrationGenerator
   private
 
   def copy_data_file(source)
-    FileUtils.cp(
+    template(
       File.expand_path(find_in_source_paths(source.to_s)),
       "db/migrate/#{migration_number}_#{file_name}/#{source}"
     )

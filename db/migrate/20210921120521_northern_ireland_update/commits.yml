@@ -1,0 +1,9 @@
+---
+# If you are creating only a single commit, you may instead use a single :all
+# field to have all of the CSV columns be included. This cannot be used when
+# creating multiple commits.
+- fields:
+  - :all
+  message:
+    Update of the base year dataset based on changes provided by the Northern
+    Ireland Department for the Economy

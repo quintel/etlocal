@@ -88,8 +88,8 @@ nl:
         In deze sectie vind je informatie over de industriesector.
       industry_metal: |
         In dit tabblad vind je informatie over de hoeveelheid energie die er gebruikt wordt door de metaalindustrie in
-        deze regio. Voor staal en aluminium kun je zien hoeveel procent van de totale huishoudelijke
-        nationale staal- en aluminiumproductie plaatsvindt in deze regio. Voor overige metalen kun
+        deze regio. Voor aluminium kun je zien hoeveel procent van de totale
+        nationale aluminiumproductie plaatsvindt in deze regio. Voor staal en overige metalen kun
         je per energiedrager zien hoe hoog het energiegebruik is.
       industry_chemical: |
         In dit tabblad vind je informatie over de hoeveelheid energie die er gebruikt wordt door de chemische industrie
@@ -169,7 +169,7 @@ nl:
         Dit kan je in het ETM doen op de pagina <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/extreme-weather-conditions">Flexibiliteit -> Weersomstandigheden</a>.
         Er is de keuze uit drie weerjaren en in het ETM kan je een omschrijving van deze jaren vinden.
       energy_efficiency: |
-        Op deze pagina vind je de efficiënties van alle electriciteitscentrales en warmteketels. Voor veel van de regio's worden dezelfde efficiënties gebruikt, maar het is ook mogelijk regio-specifieke efficiënties te gebruiken. 
+        Op deze pagina vind je de efficiënties van alle electriciteitscentrales en warmteketels. Voor veel van de regio's worden dezelfde efficiënties gebruikt, maar het is ook mogelijk regio-specifieke efficiënties te gebruiken.
         Houd er rekening mee dat alle efficiënties uitgaan van lagere verwarmingswaarden (LHV). Meer informatie over de verschillende centrales kun je vinden in het ETM, onder de kopjes
         <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants">
         Aanbod > Elektriciteit</a>, <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity_renewable/wind-turbines">

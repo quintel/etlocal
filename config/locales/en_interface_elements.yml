@@ -336,7 +336,15 @@ en:
         input_percentage_of_bio_oil_industry_final_demand_crude_oil: Other bio oil
         input_percentage_of_crude_oil_industry_final_demand_crude_oil: Other oil
 
-        input_industry_metal_steel_scaling_factor: "% national steel industry"
+        input_industry_metal_steel_electricity_demand: Electricity
+        input_industry_metal_steel_network_gas_demand:  Gas
+        input_industry_metal_steel_coal_demand:  Coal
+        input_industry_metal_steel_cokes_demand:  Cokes
+        input_industry_metal_steel_coal_gas_demand:  Coal gas
+        input_industry_metal_steel_hydrogen_demand:  Hydrogen
+        input_industry_metal_steel_steam_hot_water_demand: Heat
+        input_industry_metal_steel_wood_pellets_demand:  Biomass
+        input_industry_metal_steel_crude_oil_demand:  Oil
         input_industry_metal_aluminium_scaling_factor: "% national aluminium industry"
         input_industry_metal_other_electricity_demand: Electricity
         input_industry_metal_other_network_gas_demand: Gas

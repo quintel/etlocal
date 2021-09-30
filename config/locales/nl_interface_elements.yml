@@ -341,7 +341,15 @@ nl:
         input_percentage_of_bio_oil_industry_final_demand_crude_oil: Andere bio-olie
         input_percentage_of_crude_oil_industry_final_demand_crude_oil: Andere olie
 
-        input_industry_metal_steel_scaling_factor: "% nationale staalsector"
+        input_industry_metal_steel_electricity_demand: Elektriciteit
+        input_industry_metal_steel_network_gas_demand:  Gas
+        input_industry_metal_steel_coal_demand:  Kolen
+        input_industry_metal_steel_cokes_demand:  Kooks
+        input_industry_metal_steel_coal_gas_demand:  Kolengas
+        input_industry_metal_steel_hydrogen_demand:  Waterstof
+        input_industry_metal_steel_steam_hot_water_demand: Warmte
+        input_industry_metal_steel_wood_pellets_demand:  Biomassa
+        input_industry_metal_steel_crude_oil_demand:  Olie
         input_industry_metal_aluminium_scaling_factor: "% nationale aluminiumsector"
         input_industry_metal_other_electricity_demand: Elektriciteit
         input_industry_metal_other_network_gas_demand: Gas

@@ -1,6 +1,6 @@
 class AddDe3 < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20210930085710_add_de3')
+    directory    = Rails.root.join('db/migrate/20210930100540_add_de3')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

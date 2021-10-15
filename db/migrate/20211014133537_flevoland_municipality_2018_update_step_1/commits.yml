@@ -1,0 +1,354 @@
+---
+- fields: 
+  - analysis_year
+  message:
+   "Het meest recente jaar waarvan het grootste deel van de benodigde informatie beschikbaar is. Nu is dat 2018."
+
+- fields: 
+  - number_of_residences
+  - number_of_inhabitants
+  - number_of_cars
+  - input_transport_ship_diesel_demand
+  - input_transport_rail_diesel_demand
+  - households_final_demand_network_gas_demand
+  - input_households_solar_pv_demand
+  - households_final_demand_steam_hot_water_demand
+  - households_final_demand_wood_pellets_demand
+  - households_final_demand_wood_pellets_households_final_demand_for_space_heating_wood_pellets_parent_share
+  - households_final_demand_wood_pellets_households_final_demand_for_cooking_wood_pellets_parent_share
+  - households_final_demand_wood_pellets_households_final_demand_for_hot_water_wood_pellets_parent_share
+  - buildings_final_demand_network_gas_demand
+  - input_buildings_solar_pv_demand
+  - input_industry_ict_electricity_demand
+  - energy_power_sector_own_use_electricity_demand
+  - input_energy_heat_well_geothermal_production
+  - input_energy_power_wind_turbine_inland_production
+  - input_energy_power_solar_pv_solar_radiation_production
+  - input_energy_power_hydro_river_production
+  message:
+   "Klimaatmonitor (2018). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
+
+- fields: 
+  - number_of_buildings
+  message:
+   "CBS (2018)"
+
+- fields: 
+  - energetic_emissions_other_ghg_agriculture
+  - energetic_emissions_other_ghg_buildings
+  - energetic_emissions_other_ghg_energy
+  - energetic_emissions_other_ghg_households
+  - energetic_emissions_other_ghg_industry
+  - energetic_emissions_other_ghg_transport
+  - indirect_emissions_co2
+  - non_energetic_emissions_co2_agriculture_manure
+  - non_energetic_emissions_co2_agriculture_soil_cultivation
+  - non_energetic_emissions_co2_chemical_industry
+  - non_energetic_emissions_co2_other_industry
+  - non_energetic_emissions_co2_waste_management
+  - non_energetic_emissions_other_ghg_agriculture_fermentation
+  - non_energetic_emissions_other_ghg_agriculture_manure
+  - non_energetic_emissions_other_ghg_agriculture_other
+  - non_energetic_emissions_other_ghg_agriculture_soil_cultivation
+  - non_energetic_emissions_other_ghg_chemical_industry
+  - non_energetic_emissions_other_ghg_other_industry
+  - non_energetic_emissions_other_ghg_waste_management
+  message:
+   "Analyse Quintel op basis van data Emissieregistratie. Per gemeente is voor elke 'emissieoorzaak' en broeikasgas in de data van Emissieregistratie gekeken of de uitstoot energetisch is (gerelateerd aan energiegebruik) of niet-energetisch. Ook is per emissieoorzaak gekeken onder welke sector de uitstoot valt (landbouw, industrie, transport etc.). Voor industrie is een uitsplitsing gemaakt naar subsector (chemie, afval etc.), voor landbouw naar emissiebron (bemesting, fermentatie etc.). URL: http://www.emissieregistratie.nl"
+
+- fields: 
+  - offshore_suitable_for_wind
+  message:
+   "Schatting Quintel. Nederlands maximaal voor 75 GW wind bij 25% van de Noordzee, zie TKI Wind op Zee: https://www.topsectorenergie.nl/sites/default/files/uploads/Wind%20op%20Zee/20190328_NOT_Programma_2019_F.pdf "
+
+- fields: 
+  - lv_net_total_costs_present
+  - mv_net_total_costs_present
+  - hv_net_total_costs_present
+  - lv_mv_trafo_total_costs_present
+  - mv_hv_trafo_total_costs_present
+  - offshore_net_costs_present
+  - interconnection_net_costs_present
+  message:
+   "Schatting Quintel. Gebaseerd op het totaal elektriciteitsgebruik in dit gebied (Klimaatmonitor) en de kosten van het totale elektriciteitsnet volgens 'Net voor de Toekomst' (2018, CE Delft). URL: https://www.ce.nl/publicaties/2030/net-voor-de-toekomst"
+
+- fields: 
+  - co2_emission_1990
+  message:
+   "Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl. De beschikbare gegevens geven de 'on-the-spot'-emissies per gemeente. Dit betekent dat emissies van elektriciteitsproductie worden toegekend aan de gemeenten waar centrales staan. In het ETM wordt CO2 toegekend op basis van gebruik. Daarom corrigeren we de data van Emissieregistratie als volgt:
+- We nemen de  emissiedata uitgesplitst naar sector en halen de emissies van de energiesector eruit
+- Dit geeft een totaal per gemeente, exclusief energiesector
+- We delen het totaal per gemeente door het totaal van heel Nederland om zo een verdelingsfactor per gemeente te krijgen
+- Die verdelingsfactor vermenigvuldigen we met de totale Nederlandse CO2-uitstoot in 1990
+Op deze manier maken we dus een schatting van hoe hoog de CO2 per gemeente is als de emissies van de energiesector naar rato van verbruik verdeeld zouden worden."
+
+- fields: 
+  - input_transport_road_human_powered_bicycle_demand
+  message:
+   "Schatting Quintel. Nederlands totaal onderverdeeld o.b.v. aantal inwoners per gemeente"
+
+- fields: 
+  - input_transport_road_gasoline_demand
+  - input_transport_road_diesel_demand
+  - transport_final_demand_lpg_demand
+  - input_transport_road_bio_ethanol_demand
+  - input_transport_road_biodiesel_demand
+  - transport_final_demand_for_road_compressed_network_gas_demand
+  message:
+   "Klimaatmonitor (2018). Inclusief snelwegen en mobiele werktuigen. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=167c3997-e723-48a4-99f9-f32118aba43a"
+
+- fields: 
+  - input_transport_road_electricity_demand
+  message:
+   "Schatting Quintel gebaseerd op aantal elektrische voertuigen in gemeente (Klimaatmonitor) en typisch verbruik per voertuig. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=167c3997-e723-48a4-99f9-f32118aba43a"
+
+- fields: 
+  - transport_final_demand_hydrogen_demand
+  message:
+   "Schatting Quintel gebaseerd op aantal waterstofvoertuigen in gemeente (Klimaatmonitor) en typisch verbruik per voertuig. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=167c3997-e723-48a4-99f9-f32118aba43a"
+
+- fields: 
+  - transport_final_demand_for_road_lng_demand
+  - transport_final_demand_for_road_bio_lng_demand
+  - input_transport_ship_biodiesel_demand
+  - transport_final_demand_for_shipping_lng_demand
+  - transport_final_demand_for_shipping_bio_lng_demand
+  - transport_final_demand_heavy_fuel_oil_demand
+  - input_transport_rail_biodiesel_demand
+  - transport_final_demand_coal_demand
+  - transport_final_demand_kerosene_demand
+  - input_transport_plane_gasoline_demand
+  - input_transport_plane_bio_ethanol_demand
+  - households_final_demand_coal_demand
+  - input_households_final_demand_crude_oil_demand
+  - households_final_demand_solar_thermal_demand
+  - buildings_final_demand_coal_demand
+  - input_buildings_final_demand_crude_oil_demand
+  - buildings_final_demand_solar_thermal_demand
+  - agriculture_final_demand_wood_pellets_demand
+  - input_agriculture_final_demand_crude_oil_demand
+  - agriculture_final_demand_hydrogen_demand
+  - industry_chp_ultra_supercritical_coal_demand
+  - industry_chp_turbine_gas_power_fuelmix_demand
+  - industry_chp_engine_gas_power_fuelmix_demand
+  - industry_chp_combined_cycle_gas_power_fuelmix_demand
+  - input_share_mixer_gas_fuel_bio_oil
+  - input_share_mixer_gas_fuel_oil
+  - input_share_mixer_gas_fuel_network_gas
+  - input_industry_chemical_other_crude_oil_demand
+  - input_industry_chemical_other_coal_demand
+  - input_industry_chemical_other_network_gas_non_energetic_demand
+  - input_industry_chemical_other_wood_pellets_non_energetic_demand
+  - input_industry_chemical_other_crude_oil_non_energetic_demand
+  - input_industry_chemical_other_coal_non_energetic_demand
+  - input_industry_food_crude_oil_demand
+  - input_industry_food_coal_demand
+  - input_industry_metal_other_crude_oil_demand
+  - input_industry_metal_other_coal_demand
+  - input_industry_other_crude_oil_demand
+  - input_industry_other_coal_demand
+  - input_industry_other_wood_pellets_demand
+  - input_industry_other_network_gas_non_energetic_demand
+  - input_industry_other_wood_pellets_non_energetic_demand
+  - input_industry_other_crude_oil_non_energetic_demand
+  - input_industry_other_coal_non_energetic_demand
+  - input_industry_paper_crude_oil_demand
+  - input_industry_paper_coal_demand
+  - input_industry_paper_wood_pellets_demand
+  - input_industry_chemical_other_steam_hot_water_demand
+  - input_industry_food_steam_hot_water_demand
+  - input_industry_metal_other_steam_hot_water_demand
+  - input_industry_other_steam_hot_water_demand
+  - input_industry_paper_steam_hot_water_demand
+  - input_industry_food_wood_pellets_demand
+  - input_industry_metal_other_wood_pellets_demand
+  - input_industry_chemical_other_wood_pellets_demand
+  - other_final_demand_electricity_demand
+  - other_final_demand_network_gas_demand
+  - other_final_demand_steam_hot_water_demand
+  - other_final_demand_wood_pellets_demand
+  - other_final_demand_coal_demand
+  - other_final_demand_crude_oil_demand
+  - other_final_demand_crude_oil_non_energetic_demand
+  - input_energy_power_ultra_supercritical_coal_production
+  - input_energy_power_supercritical_coal_production
+  - input_energy_power_combined_cycle_coal_production
+  - input_energy_power_ultra_supercritical_cofiring_coal_production
+  - input_energy_power_combined_cycle_ccs_coal_production
+  - input_energy_power_ultra_supercritical_ccs_coal_production
+  - input_energy_chp_ultra_supercritical_coal_production
+  - input_energy_chp_ultra_supercritical_cofiring_coal_production
+  - input_energy_power_ultra_supercritical_network_gas_production
+  - input_energy_power_turbine_network_gas_production
+  - input_energy_power_engine_network_gas_production
+  - input_energy_power_combined_cycle_network_gas_production
+  - input_energy_power_combined_cycle_ccs_network_gas_production
+  - input_energy_chp_combined_cycle_network_gas_production
+  - input_energy_power_nuclear_gen2_uranium_oxide_production
+  - input_energy_power_nuclear_gen3_uranium_oxide_production
+  - input_energy_power_ultra_supercritical_crude_oil_production
+  - input_energy_power_engine_diesel_production
+  - input_energy_heat_burner_network_gas_production
+  - input_energy_heat_burner_coal_production
+  - input_energy_heat_burner_crude_oil_production
+  - input_energy_heat_burner_hydrogen_production
+  - input_energy_heat_solar_thermal_production
+  - energy_heat_distribution_loss_demand
+  - input_energy_power_wind_turbine_coastal_production
+  - input_energy_chp_supercritical_waste_mix_production
+  - input_energy_power_geothermal_production
+  message:
+   "Geen gegevens beschikbaar op Klimaatmonitor"
+
+- fields: 
+  - input_transport_rail_electricity_demand
+  message:
+   "Schatting Quintel. Het aantal reizigers per station is gebruikt als verdeelsleutel om het Nederlands totaalverbruik over gemeentes te verdelen."
+
+- fields: 
+  - transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share
+  - transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share
+  - transport_road_mixer_gasoline_transport_truck_using_gasoline_mix_parent_share
+  - transport_road_mixer_gasoline_transport_motorcycle_using_gasoline_mix_parent_share
+  - transport_road_mixer_diesel_transport_car_using_diesel_mix_parent_share
+  - transport_road_mixer_diesel_transport_bus_using_diesel_mix_parent_share
+  - transport_road_mixer_diesel_transport_truck_using_diesel_mix_parent_share
+  - transport_road_mixer_compressed_network_gas_transport_car_using_compressed_natural_gas_parent_share
+  - transport_road_mixer_compressed_network_gas_transport_bus_using_compressed_natural_gas_parent_share
+  - transport_road_mixer_compressed_network_gas_transport_truck_using_compressed_natural_gas_parent_share
+  message:
+   "Schatting Quintel op basis van emissiegegevens. Emissieregistratie rapporteert per voertuigtype en brandstof hoeveel CO2 er wordt uitgestoten per gemeente. Op basis hiervan is in te schatten hoeveel brandstof er door elk voertuigtype verbruikt is. URL: http://www.emissieregistratie.nl"
+
+- fields: 
+  - transport_final_demand_for_road_electricity_transport_car_using_electricity_parent_share
+  - transport_final_demand_for_road_electricity_transport_bus_using_electricity_parent_share
+  - transport_final_demand_for_road_electricity_transport_motorcycle_using_electricity_parent_share
+  - transport_final_demand_for_road_electricity_transport_bicycle_using_electricity_parent_share
+  - transport_final_demand_for_road_electricity_transport_truck_using_electricity_parent_share
+  - input_transport_road_car_hydrogen_share
+  - transport_final_demand_for_road_hydrogen_transport_bus_using_hydrogen_parent_share
+  - transport_final_demand_for_road_hydrogen_transport_truck_using_hydrogen_parent_share
+  message:
+   "Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor) en typisch verbruik per voertuig. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=167c3997-e723-48a4-99f9-f32118aba43a"
+
+- fields: 
+  - transport_final_demand_for_rail_electricity_transport_passenger_train_using_electricity_parent_share
+  - transport_final_demand_for_rail_electricity_transport_tram_using_electricity_parent_share
+  - transport_final_demand_for_rail_electricity_transport_freight_train_using_electricity_parent_share
+  message:
+   "Schatting Quintel op basis van landelijke data/gemiddelden. Indien er geen tram/metro aanwezig is in een gemeente is het percentage hiervoor op 0 gezet."
+
+- fields: 
+  - households_final_demand_electricity_demand
+  message:
+   "Klimaatmonitor (2018), inclusief verbruik achter de meter. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
+
+- fields: 
+  - input_buildings_electricity_demand
+  message:
+   "Klimaatmonitor (2018), inclusief verbruik achter de meter. Klimaatmonitor rekent het verbruik van de ICT-sector, treinen en elektrisch wegverkeer bij de dienstensector. In het ETM wordt deze energie toegerekend aan respectievelijk industrie en transport. Daarom hebben we het totaal verbruik van de dienstverlening zoals Klimaatmonitor rapporteert gecorrigeerd en een deel van de energie naar industrie en transport verplaatst. Dit heeft geen impact op het totaalverbruik van de gemeente als geheel. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
+
+- fields: 
+  - buildings_final_demand_steam_hot_water_demand
+  message:
+   "Ingeschat o.b.v. Klimaatmonitor (2018), geproduceerde warmte uit WKO, biogas, biomassa en afval. Deze warmte kan ook ingezet worden voor de levering van stadswarmte aan woningen. Om dubbeltelling te voorkomen wordt de warmtevraag in de dienstensector naar beneden bijgesteld als er stadswarmte voor woningen aanwezig is in dit gebied. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a. Zie 'Ontdubbeling stadsverwarming woningen en hernieuwbare warmte' in de 'Rapportage Energiegebruik' op Klimaatmonitor."
+
+- fields: 
+  - buildings_final_demand_wood_pellets_demand
+  message:
+   "Ingeschat o.b.v. Klimaatmonitor (2018), 'biomassaketels bedrijven'. Deze warmte kan ook ingezet worden voor de levering van stadswarmte aan woningen. Om dubbeltelling te voorkomen wordt de warmtevraag in de dienstensector naar beneden bijgesteld als er stadswarmte voor woningen aanwezig is in dit gebied. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a. Zie 'Ontdubbeling stadsverwarming woningen en hernieuwbare warmte' in de 'Rapportage Energiegebruik' op Klimaatmonitor."
+
+- fields: 
+  - agriculture_final_demand_electricity_demand
+  message:
+   "Klimaatmonitor (2018). Inclusief elektriciteitsvraag uit gas-WKKs. Zie gas-WKKs voor meer informatie. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
+
+- fields: 
+  - agriculture_final_demand_network_gas_demand
+  message:
+   "Klimaatmonitor (2018). Wij splitsen het door Klimaatmonitor gerapporteerde gasverbruik uit naar eindgebruik en verbruik door WKK's op basis van Emissiegegevens van Emissieregistratie. URL: Klimaatmonitor (2018). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
+
+- fields: 
+  - agriculture_final_demand_steam_hot_water_demand
+  message:
+   "Warmtevraag landbouw ingeschat op basis van geproduceerde warmte uit biogas- en gas-WKKs"
+
+- fields: 
+  - input_industry_chemical_fertilizers_scaling_factor
+  - input_industry_chemical_refineries_scaling_factor
+  - input_industry_metal_steel_scaling_factor
+  - input_industry_metal_aluminium_scaling_factor
+  message:
+   "Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl"
+
+- fields: 
+  - input_industry_chemical_other_electricity_demand
+  - input_industry_food_electricity_demand
+  - input_industry_metal_other_electricity_demand
+  - input_industry_paper_electricity_demand
+  - input_industry_other_electricity_demand
+  - input_industry_chemical_other_network_gas_demand
+  - input_industry_food_network_gas_demand
+  - input_industry_metal_other_network_gas_demand
+  - input_industry_paper_network_gas_demand
+  - input_industry_other_network_gas_demand
+  message:
+   "Klimaatmonitor (2018). Klimaatmonitor rapporteert het totaalverbruik van de hele industrie. Quintel schat in hoe dit verbruik is onderverdeeld naar industriële subsectoren op basis van emissiegegevens per gemeente. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a & http://www.emissieregistratie.nl."
+
+- fields: 
+  - energy_power_hv_network_loss_demand
+  - energy_distribution_greengas_demand
+  message:
+   "Schatting Quintel op basis van landelijke data"
+
+- fields: 
+  - input_energy_heat_burner_wood_pellets_production
+  message:
+   "Klimaatmonitor (2018). Optelling van warmte uit decentrale biomassa WKKs, meestook en biomassaketels bedrijven (voor zover die laatste gebruikt wordt voor warmtelevering aan huishoudens). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
+
+- fields: 
+  - input_energy_heat_burner_waste_mix_production
+  message:
+   "Klimaatmonitor (2018). We nemen de warmte uit afval die daadwerkelijk gebruikt wordt in de gemeente, niet de totale productie van warmte uit afval. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
+
+- fields: 
+  - input_energy_power_wind_turbine_offshore_production
+  message:
+   "Niet aanwezig in regio."
+
+- fields: 
+  - input_energy_power_supercritical_waste_mix_production
+  message:
+   "Klimaatmonitor (2018). Aanname is dat naast hernieuwbare elektriciteit uit afvalverbranding er evenveel niet-hernieuwbare elektriciteit wordt geproduceerd (uit niet-biogeen afval). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
+
+- fields: 
+  - energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share
+  - energy_distribution_non_biogenic_waste_energy_distribution_waste_mix_child_share
+  message:
+   "Klimaatmonitor (2018). Gebaseerd op verhouding hernieuwbare warmte uit afvalverbranding en totale warmte. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
+
+- fields: 
+  - input_energy_chp_local_engine_biogas_production
+  message:
+   "Klimaatmonitor (2018). De hernieuwbare warmte uit biogas is leidend. De hernieuwbare elektriciteit kan daardoor afwijken van Klimaatmonitor omdat het ETM rekent met vaste efficiënties voor biogas-WKK's die mogelijk lokaal kunnen verschillen. https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
+
+- fields: 
+  - input_energy_heat_heatpump_water_water_electricity_production
+  message:
+   "Schatting Quintel o.b.v. warmte uit WKO volgens Klimaatmonitor (2018). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
+
+- fields: 
+  - input_energy_chp_local_wood_pellets_production
+  message:
+   "Warmteproductie biomassa WKK komt onder biomassaketels in het ETM"
+
+- fields: 
+  - input_energy_chp_local_engine_network_gas_production
+  message:
+   "Klimaatmonitor (2018). Wij splitsen het door Klimaatmonitor gerapporteerde gasverbruik van de landbouw uit naar eindgebruik en verbruik door WKK's op basis van Emissiegegevens van Emissieregistratie. De elektriciteit en warmte uit WKK rekenen we als eindgebruik in de landbouw, niet het gas dat de WKK in is gegaan.URL: Klimaatmonitor (2018). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=c4862f6e-2c80-4fdd-be44-88f1f361cc6a"
+
+- fields: 
+  - file_carriers_imported_electricity_co2_conversion_per_mj
+  message:
+   "Update to 2018 value as specified by Klimaatmonitor: https://klimaatmonitor.databank.nl/Jive?workspace_guid=d2a70db0-97f7-4f73-b636-3e06f3252d0d"
+

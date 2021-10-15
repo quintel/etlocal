@@ -168,7 +168,7 @@ en:
         This is possible on this ETM page: <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/extreme-weather-conditions">Flexibility -> Weather conditions</a>.
         There is a choice of three weather years and you can find a description of these years in the ETM.
       energy_efficiency: |
-        Below you can find the efficiencies for all electricity and heat plants. The same efficiencies are used for many of the regions, but it is also possible to use region-specific efficiencies. 
+        Below you can find the efficiencies for all electricity and heat plants. The same efficiencies are used for many of the regions, but it is also possible to use region-specific efficiencies.
         Please note that all efficiencies assume lower heating values (LHV). More information about the various plant types can be found in the ETM, in the sections
         <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity/coal-plants">
         Supply > Electricity</a>, <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity_renewable/wind-turbines">
@@ -179,7 +179,7 @@ en:
       area_co2_emission_1990: |
         The ETM compares future CO<sub>2</sub> emissions with 1990 emission levels,
         as this is a frequently occurring point of reference in (inter) national climate policy.
-        For an overview of the method used by the ETM, see our <a target="_blank" href="https://docs.energytransitionmodel.com/main/co2-1990-emissions">documentatiom</a>.
+        For an overview of the method used by the ETM, see our <a target="_blank" href="https://docs.energytransitionmodel.com/main/co2-1990-emissions">documentation</a>.
       area_ghg: |
         The ETM calculates the energetic emissions of CO<sub>2</sub> based on the energy demands per sector. Apart from energetic CO<sub>2</sub>
         regions also have energetic emissions from other greenhouse gases (such as methane and nitrous oxide) as well as non-energetic emissions

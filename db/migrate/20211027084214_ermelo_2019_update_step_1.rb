@@ -1,6 +1,6 @@
-class Ermelo2019UpdateStep2 < ActiveRecord::Migration[5.0]
+class Ermelo2019UpdateStep1 < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20211026081715_ermelo_2019_update_step_2')
+    directory    = Rails.root.join('db/migrate/20211027084214_ermelo_2019_update_step_1')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

@@ -107,7 +107,20 @@ class Dataset < ApplicationRecord
     end
   end
 
-  # Public: Retrieves the data source for the dataset if it has data sourced from a CSV file.
+  # Public: Returns if this dataset retrieves some values from a CSV using queries.
+  def queryable_source?
+    # This can be extended in the future if we need to support other types of source.
+    entso_data_source?
+  end
+
+  # Public: Executes the GQL query.
+  def execute_query(query)
+    data_source_file.runtime.execute(query)
+  end
+
+  private
+
+  # Internal: Retrieves the data source for the dataset if it has data sourced from a CSV file.
   #
   # Returns an ETLocal::DatasetSource::ENTSOFile or raises an error if the dataset does not use a
   # CSV.
@@ -118,14 +131,6 @@ class Dataset < ApplicationRecord
 
     @data_source_file ||= DatasetSource::ENTSO::File.from_dataset(self)
   end
-
-  # Public: Returns if this dataset retrieves some values from a CSV using queries.
-  def queryable_source?
-    # This can be extended in the future if we need to support other types of source.
-    entso_data_source?
-  end
-
-  private
 
   def is_province?
     !(geo_id =~ /^(BU|GM|WK)/)

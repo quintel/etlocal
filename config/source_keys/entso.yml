@@ -212,3 +212,7 @@ rows:
   W6100: Industrial waste (non-renewable)
   W6210: Renewable municipal waste
   W6220: Non-renewable municipal waste
+row_groups:
+  Network gas:
+    - Biogases
+    - Natural gas

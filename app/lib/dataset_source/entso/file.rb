@@ -11,13 +11,16 @@ module DatasetSource
       end
 
       def self.energy_balance(csv_table)
-        Map.new(
-          csv_table.each_with_object({}) do |row, data|
-            data[row[:siec]] ||= {}
-            data[row[:siec]][row[:nrg_bal]] = row[:obs_value].to_f
-          end,
-          KeyMap.from_hash(key_map_config['rows']),
-          KeyMap.from_hash(key_map_config['columns'])
+        RowAggregatedMap.new(
+          Map.new(
+            csv_table.each_with_object({}) do |row, data|
+              data[row[:siec]] ||= {}
+              data[row[:siec]][row[:nrg_bal]] = row[:obs_value].to_f
+            end,
+            KeyMap.from_hash(key_map_config['rows']),
+            KeyMap.from_hash(key_map_config['columns'])
+          ),
+          key_map_config['row_groups']
         )
       end
 

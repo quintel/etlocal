@@ -36,7 +36,7 @@ class EditableAttribute
   # fall back to the default value.
   def value
     if @dataset.queryable_source? && @entso_query.present?
-      return @dataset.data_source_file.runtime.execute(@entso_query)
+      return @dataset.execute_query(@entso_query)
     end
 
     latest ? latest.value : default

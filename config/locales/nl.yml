@@ -11,6 +11,8 @@ nl:
   loading: Laden
   view_on_github: Zicht op GitHub
   inherited_file: This file is inherited from the %{parent} dataset.
+  data_source_messages:
+    entso: Value sourced from the ENTSO energy balance.
 
   countries:
     be: België

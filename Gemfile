@@ -32,6 +32,7 @@ gem 'remotipart', '~> 1.2'
 gem 'archive-zip', '~> 0.9.0'
 gem 'sentry-raven'
 gem 'deep_cloneable', '~> 2.3.0'
+gem 'str_enum'
 
 gem 'git'
 

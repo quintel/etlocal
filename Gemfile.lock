@@ -348,6 +348,8 @@ GEM
     sshkit (1.21.2)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
+    str_enum (0.2.0)
+      activesupport (>= 5)
     strings-ansi (0.1.0)
     temple (0.8.0)
     terminal-table (1.8.0)
@@ -445,6 +447,7 @@ DEPENDENCIES
   slim
   spring
   spring-watcher-listen (~> 2.0.0)
+  str_enum
   timecop
   transformer!
   tty-progressbar

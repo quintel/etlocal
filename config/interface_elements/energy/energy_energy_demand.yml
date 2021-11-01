@@ -6,7 +6,7 @@ groups:
         unit: 'TJ'
       - key: energy_power_hv_network_loss_demand
         unit: 'TJ'
-  
+
   - header: energy_gas_network
     items:
       - key: energy_distribution_greengas_demand

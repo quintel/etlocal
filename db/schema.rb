@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2021_11_16_110311) do
     t.integer "user_id"
     t.string "name", default: "", null: false
     t.string "geo_id", default: "", null: false
+    t.string "data_source", default: "db", null: false
     t.string "country"
     t.boolean "has_industry", default: false
     t.boolean "has_agriculture", default: false

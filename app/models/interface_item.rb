@@ -15,11 +15,18 @@ class InterfaceItem
   attribute :hidden, Boolean, default: false
   attribute :precision, Integer, default: 2
 
+  # Queries for CSV-based datasets.
+  attribute :entso, String
+
   # Used by file history items.
   attribute :paths, Array[String], default: []
 
   def whitelisted?
     Etsource.whitelisted_attributes.include?(key) ||
       key.to_s.start_with?('input_')
+  end
+
+  def editable?(dataset)
+    !dataset.queryable_source? || entso.blank?
   end
 end

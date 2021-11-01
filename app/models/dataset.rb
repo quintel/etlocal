@@ -1,4 +1,6 @@
 class Dataset < ApplicationRecord
+  str_enum :data_source, %i[db entso], scopes: false, suffix: :data_source
+
   belongs_to :user
 
   has_many :commits
@@ -103,6 +105,24 @@ class Dataset < ApplicationRecord
         user.name
       end
     end
+  end
+
+  # Public: Retrieves the data source for the dataset if it has data sourced from a CSV file.
+  #
+  # Returns an ETLocal::DatasetSource::ENTSOFile or raises an error if the dataset does not use a
+  # CSV.
+  def data_source_file
+    unless entso_data_source?
+      raise "Datasets whose data source is #{data_source.inspect} do not have a CSV source file"
+    end
+
+    @data_source_file ||= DatasetSource::ENTSO::File.from_dataset(self)
+  end
+
+  # Public: Returns if this dataset retrieves some values from a CSV using queries.
+  def queryable_source?
+    # This can be extended in the future if we need to support other types of source.
+    entso_data_source?
   end
 
   private

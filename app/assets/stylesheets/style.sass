@@ -129,6 +129,10 @@ h1 a
     background-color: $error-color
     border-color: darken($error-color, 20)
 
+input[type="text"]:disabled
+  background-color: darken($bg-color, 5)
+  color: #555
+
 form
   label
     font-weight: normal
@@ -236,14 +240,17 @@ table tbody tr td a.button
         width: 50px
 
     strong
-      margin: 15px 0
       display: block
-      border-top: 0.5px solid #ccc
-      padding-top: 20px
+      margin-bottom: 15px
       &:first-child
         border-top: none
         padding-top: 0
         margin-top: 0
+
+    p + strong
+      border-top: 0.5px solid #ccc
+      padding-top: 20px
+      margin-top: 15px
 
   .editable
     color: black

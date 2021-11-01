@@ -137,7 +137,7 @@ class CSVImporter
 
     if @create_missing && datasets.none?
       Dataset.create!(
-        row.to_h.slice('geo_id', 'name', 'country').merge(user: User.robot)
+        row.to_h.slice('geo_id', 'name', 'country', 'data_source').merge(user: User.robot)
       )
     else
       datasets.first!

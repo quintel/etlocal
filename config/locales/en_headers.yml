@@ -1,4 +1,3 @@
-
 en:
   dataset_edits:
     changed_attributes: 'You changed the following attributes:'
@@ -91,7 +90,16 @@ en:
       industry_heat: Fuel input for CHP
       industry_gas_fuelmix: Fuel for gas-fired CHPs
       industry_final_demand_crude_oil_input: Fuel for oil-fired heaters in all industry sectors
-      industry_metal_steel: Steel
+      industry_metal_steel_final_demand: Final demand
+      energy_cokesoven_transformation_input: Cokesoven - transformation input
+      energy_blastfurnace_transformation_input: Blastfurnace - transformation input
+      energy_cokesoven_transformation_output: Cokesoven - transformation output
+      energy_blastfurnace_transformation_output: Blastfurnace - transformation output
+      energy_cokesoven_own_use: Cokesoven - own use
+      energy_blastfurnace_own_use: Blastfurnace - own use
+      industry_metal_steel_energy_production_input:  Energy production - coal gas input
+      energy_power_combined_cycle_coal_gas_conversion:  Power plant output
+      energy_chp_coal_gas_conversion: CHP output
       industry_metal_aluminium: Aluminium
       industry_metal_other: Other metal industry
       industry_chemical_fertilizers: Fertilizers

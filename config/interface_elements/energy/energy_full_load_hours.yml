@@ -37,3 +37,7 @@ groups:
         unit: 'flh'
       - key: energy_power_engine_diesel_full_load_hours
         unit: 'flh'
+      - key: energy_power_combined_cycle_coal_gas_full_load_hours
+        unit: 'flh'
+      - key: energy_chp_coal_gas_full_load_hours
+        unit: 'flh'

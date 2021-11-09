@@ -21,6 +21,7 @@ transport:
 agriculture:
   - agriculture_energy_demand
 industry:
+  - industry_steel
   - industry_metal
   - industry_chemical
   - industry_food

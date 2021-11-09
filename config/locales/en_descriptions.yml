@@ -88,10 +88,12 @@ en:
         sector in this area.
       industry: |
         In this section you will find information about the industry sector in this area.
+      industry_steel: |
+        In this tab you can see how much energy is used by the steel sector in this area. In energy statistics
       industry_metal: |
         In this tab you can see how much energy is used by the metal sector in this area. You
         can allocate a certain percentage of the total energy use of the national aluminium
-        sectors to your area. For steel and other metals you will find the energy use per energy carrier.
+        sectors to your area. For the 'other metals' sector you will find the energy use per energy carrier.
       industry_chemical: |
         In this tab you can see how much energy is used by the chemical sector in this area.
         You can allocate a certain percentage of the total energy use of the Dutch fertilizers and

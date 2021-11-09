@@ -82,6 +82,7 @@ en:
         households_applications: Applications
 
       industry:
+        industry_steel: Steel
         industry_metal: Metal
         industry_chemical: Chemical
         industry_food: Food

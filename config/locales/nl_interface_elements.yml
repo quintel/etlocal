@@ -343,13 +343,31 @@ nl:
 
         input_industry_metal_steel_electricity_demand: Elektriciteit
         input_industry_metal_steel_network_gas_demand:  Gas
-        input_industry_metal_steel_coal_demand:  Kolen
-        input_industry_metal_steel_cokes_demand:  Kooks
-        input_industry_metal_steel_coal_gas_demand:  Kolengas
-        input_industry_metal_steel_hydrogen_demand:  Waterstof
+        input_industry_metal_steel_coal_demand: Kolen
+        input_industry_metal_steel_cokes_demand: Kooks
+        input_industry_metal_steel_coal_gas_demand: Kolengas
         input_industry_metal_steel_steam_hot_water_demand: Warmte
-        input_industry_metal_steel_wood_pellets_demand:  Biomassa
-        input_industry_metal_steel_crude_oil_demand:  Olie
+        input_industry_metal_steel_wood_pellets_demand: Biomassa
+        input_industry_metal_steel_crude_oil_demand: Olie
+        input_industry_metal_steel_electricity_cokesoven_own_use: Elektriciteit
+        input_industry_metal_steel_network_gas_cokesoven_own_use:  Gas
+        input_industry_metal_steel_coal_cokesoven_own_use: Kolen
+        input_industry_metal_steel_cokes_cokesoven_own_use: Kooks
+        input_industry_metal_steel_coal_gas_cokesoven_own_use: Kolengas
+        input_industry_metal_steel_steam_hot_water_cokesoven_own_use: Warmte
+        input_industry_metal_steel_crude_oil_cokesoven_own_use: Olie
+        input_industry_metal_steel_electricity_blastfurnace_own_use: Elektriciteit
+        input_industry_metal_steel_network_gas_blastfurnace_own_use:  Gas
+        input_industry_metal_steel_coal_blastfurnace_own_use: Kolen
+        input_industry_metal_steel_cokes_blastfurnace_own_use: Kooks
+        input_industry_metal_steel_coal_gas_blastfurnace_own_use: Kolengas
+        input_industry_metal_steel_steam_hot_water_blastfurnace_own_use: Warmte
+        input_industry_metal_steel_crude_oil_blastfurnace_own_use: Olie
+        input_industry_metal_steel_coal_gas_input_power_plant: Kolengas (input)
+        input_industry_metal_steel_electricity_output_power_plant: Elektriciteit (output)
+        input_industry_metal_steel_coal_gas_input_chp: Kolengas (input)
+        input_industry_metal_steel_electricity_output_chp: Elektriciteit (output)
+        input_industry_metal_steel_steam_hot_water_output_chp: Warmte (output)
         input_industry_metal_aluminium_scaling_factor: "% nationale aluminiumsector"
         input_industry_metal_other_electricity_demand: Elektriciteit
         input_industry_metal_other_network_gas_demand: Gas
@@ -402,10 +420,12 @@ nl:
         input_industry_other_wood_pellets_demand: Vaste biomassa
         input_industry_other_crude_oil_demand: Olie
         input_industry_other_coal_demand: Kolen
+        input_industry_other_cokes_demand: Kooks
         input_industry_other_network_gas_non_energetic_demand: Gas (niet-energetisch)
         input_industry_other_wood_pellets_non_energetic_demand: Biomassa (niet-energetisch)
         input_industry_other_crude_oil_non_energetic_demand: Olie (niet-energetisch)
         input_industry_other_coal_non_energetic_demand: Kolen (niet-energetisch)
+        input_industry_other_cokes_non_energetic_demand: Kooks (niet-energetisch)
 
         industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
         industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"

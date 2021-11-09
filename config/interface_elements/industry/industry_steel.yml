@@ -1,0 +1,118 @@
+key: industry_steel
+
+groups:
+  - header: industry_metal_steel_final_demand
+    items:
+      - key: input_industry_metal_steel_coal_demand
+        unit: 'TJ'
+      - key: input_industry_metal_steel_cokes_demand
+        unit: 'TJ'
+      - key: input_industry_metal_steel_coal_gas_demand
+        unit: 'TJ'
+      - key: input_industry_metal_steel_electricity_demand
+        unit: 'TJ'
+      - key: input_industry_metal_steel_network_gas_demand
+        unit: 'TJ'
+      - key: input_industry_metal_steel_steam_hot_water_demand
+        unit: 'TJ'
+      - key: input_industry_metal_steel_wood_pellets_demand
+        unit: 'TJ'
+      - key: input_industry_metal_steel_crude_oil_demand
+        unit: 'TJ'
+
+  - header: energy_cokesoven_transformation_input
+    items:
+      - key: input_energy_cokesoven_transformation_coal_input_demand
+        unit: 'TJ'
+
+  - header: energy_cokesoven_transformation_output
+    type: slider
+    items:
+      - key: input_energy_cokesoven_transformation_cokes_output_conversion
+        unit: '%'
+      - key: input_energy_cokesoven_transformation_coal_gas_output_conversion
+        unit: '%'
+      - key: input_energy_cokesoven_transformation_loss_output_conversion
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: energy_cokesoven_own_use
+    items:
+      - key: input_energy_cokesoven_own_use_coal
+        unit: 'TJ'
+      - key: input_energy_cokesoven_own_use_cokes
+        unit: 'TJ'
+      - key: input_energy_cokesoven_own_use_coal_gas
+        unit: 'TJ'
+      - key: input_energy_cokesoven_own_use_electricity
+        unit: 'TJ'
+      - key: input_energy_cokesoven_own_use_network_gas
+        unit: 'TJ'
+      - key: input_energy_cokesoven_own_use_steam_hot_water
+        unit: 'TJ'
+      - key: input_energy_cokesoven_own_use_crude_oil
+        unit: 'TJ'
+
+  - header: energy_blastfurnace_transformation_input
+    items:
+      - key: input_energy_blastfurnace_transformation_coal_input_demand
+        unit: 'TJ'
+      - key: input_energy_blastfurnace_transformation_cokes_input_demand
+        unit: 'TJ'
+
+  - header: energy_blastfurnace_transformation_output
+    type: slider
+    items:
+      - key: input_energy_blastfurnace_transformation_coal_gas_output_conversion
+        unit: '%'
+      - key: input_energy_blastfurnace_transformation_loss_output_conversion
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: energy_blastfurnace_own_use
+    items:
+      - key: input_energy_blastfurnace_own_use_coal
+        unit: 'TJ'
+      - key: input_energy_blastfurnace_own_use_cokes
+        unit: 'TJ'
+      - key: input_energy_blastfurnace_own_use_coal_gas
+        unit: 'TJ'
+      - key: input_energy_blastfurnace_own_use_electricity
+        unit: 'TJ'
+      - key: input_energy_blastfurnace_own_use_network_gas
+        unit: 'TJ'
+      - key: input_energy_blastfurnace_own_use_steam_hot_water
+        unit: 'TJ'
+      - key: input_energy_blastfurnace_own_use_crude_oil
+        unit: 'TJ'
+
+  - header: industry_metal_steel_energy_production_input
+    items:
+      - key: input_energy_power_combined_cycle_coal_gas_coal_gas_input_demand
+        unit: 'TJ'
+      - key: input_energy_chp_coal_gas_coal_gas_input_demand
+        unit: 'TJ'
+
+  - header: energy_power_combined_cycle_coal_gas_conversion
+    type: slider
+    items:
+      - key: input_energy_power_combined_cycle_coal_gas_electricity_output_conversion
+        unit: '%'
+      - key: input_energy_power_combined_cycle_coal_gas_loss_output_conversion
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: energy_chp_coal_gas_conversion
+    type: slider
+    items:
+      - key: input_energy_chp_coal_gas_electricity_output_conversion
+        unit: '%'
+      - key: input_energy_chp_coal_gas_steam_hot_water_output_conversion
+        unit: '%'
+      - key: input_energy_chp_coal_gas_loss_output_conversion
+        unit: '%'
+        flexible: true
+        skip_validation: true

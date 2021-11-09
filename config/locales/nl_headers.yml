@@ -92,7 +92,17 @@ nl:
       industry_heat: Gebruikte brandstof voor WKK en ketels
       industry_gas_fuelmix: Brandstofmix gasgestookte WKK
       industry_final_demand_crude_oil_input: Brandstoffen voor olieketels in alle industriesectoren
-      industry_metal_steel: Staal
+      industry_metal_steel_final_demand: Eindgebruik
+      industry_metal_steel_transformation_input: Transformatie-inzet
+      industry_metal_steel_cokesoven_transformation: Kooksoven transformatie
+      industry_metal_steel_blastfurnace_transformation: Hoogoven transformatie
+      industry_metal_steel_energy_production_input: Brandstofinput energieproductie
+      industry_metal_steel_power_plant_efficiency: Kolengaselektriciteitscentrale efficiëntie
+      industry_metal_steel_chp_efficiency: Kolengas-WKK efficiëntie
+      industry_metal_steel_cokesoven_own_use: Kooksoven (eigen gebruik)
+      industry_metal_steel_blastfurnace_own_use: Hoogoven (eigen gebruik)
+      industry_metal_steel_power_plant: Elektriciteitsproductie
+      industry_metal_steel_chp: WKK-productie
       industry_metal_aluminium: Aluminium
       industry_metal_other: Overige metaalindustrie
       industry_chemical_fertilizers: Kunstmest

@@ -341,10 +341,40 @@ en:
         input_industry_metal_steel_coal_demand:  Coal
         input_industry_metal_steel_cokes_demand:  Cokes
         input_industry_metal_steel_coal_gas_demand:  Coal gas
-        input_industry_metal_steel_hydrogen_demand:  Hydrogen
         input_industry_metal_steel_steam_hot_water_demand: Heat
         input_industry_metal_steel_wood_pellets_demand:  Biomass
         input_industry_metal_steel_crude_oil_demand:  Oil
+        input_energy_cokesoven_own_use_electricity: Electricity
+        input_energy_cokesoven_own_use_network_gas:  Gas
+        input_energy_cokesoven_own_use_coal:  Coal
+        input_energy_cokesoven_own_use_cokes:  Cokes
+        input_energy_cokesoven_own_use_coal_gas:  Coal gas
+        input_energy_cokesoven_own_use_steam_hot_water: Heat
+        input_energy_cokesoven_own_use_crude_oil:  Oil
+        input_energy_blastfurnace_own_use_electricity: Electricity
+        input_energy_blastfurnace_own_use_network_gas:  Gas
+        input_energy_blastfurnace_own_use_coal:  Coal
+        input_energy_blastfurnace_own_use_cokes:  Cokes
+        input_energy_blastfurnace_own_use_coal_gas:  Coal gas
+        input_energy_blastfurnace_own_use_steam_hot_water: Heat
+        input_energy_blastfurnace_own_use_crude_oil:  Oil
+        input_energy_cokesoven_transformation_coal_input_demand: Coal
+        input_energy_blastfurnace_transformation_coal_input_demand: Coal
+        input_energy_blastfurnace_transformation_cokes_input_demand: Cokes
+        input_energy_cokesoven_transformation_cokes_output_conversion: Cokes
+        input_energy_cokesoven_transformation_coal_gas_output_conversion: Coal gas
+        input_energy_cokesoven_transformation_loss_output_conversion: Loss
+        input_energy_blastfurnace_transformation_coal_gas_output_conversion: Coal gas
+        input_energy_power_combined_cycle_coal_gas_coal_gas_input_demand: Power plant
+        input_energy_chp_coal_gas_coal_gas_input_demand: CHP
+        input_energy_power_combined_cycle_coal_gas_full_load_hours: Coal gas power plant
+        input_energy_chp_coal_gas_full_load_hours: Coal gas CHP
+        input_energy_blastfurnace_transformation_loss_output_conversion: Loss
+        input_energy_power_combined_cycle_coal_gas_electricity_output_conversion: Electricity
+        input_energy_chp_coal_gas_electricity_output_conversion: Electricity
+        input_energy_chp_coal_gas_steam_hot_water_output_conversion: Heat
+        input_energy_chp_coal_gas_loss_output_conversion: Loss
+        input_energy_power_combined_cycle_coal_gas_loss_output_conversion: Loss
         input_industry_metal_aluminium_scaling_factor: "% national aluminium industry"
         input_industry_metal_other_electricity_demand: Electricity
         input_industry_metal_other_network_gas_demand: Gas
@@ -397,10 +427,12 @@ en:
         input_industry_other_wood_pellets_demand: Solid biomass
         input_industry_other_crude_oil_demand: Oil
         input_industry_other_coal_demand: Coal
+        input_industry_other_cokes_demand: Cokes
         input_industry_other_network_gas_non_energetic_demand: Gas (non-energetic)
         input_industry_other_wood_pellets_non_energetic_demand: Biomass (non-energetic)
         input_industry_other_crude_oil_non_energetic_demand: Oil (non-energetic)
         input_industry_other_coal_non_energetic_demand: Coal (non-energetic)
+        input_industry_other_cokes_non_energetic_demand: Cokes (non-energetic)
 
         industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: "Residual heat from processes"
         industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: "Residual heat from flue gasses"

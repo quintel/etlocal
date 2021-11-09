@@ -15,7 +15,9 @@ groups:
         unit: 'TJ'
       - key: input_industry_other_coal_demand
         unit: 'TJ'
-  
+      - key: input_industry_other_cokes_demand
+        unit: 'TJ'
+
   - header: industry_other_non_energetic
     items:
       - key: input_industry_other_network_gas_non_energetic_demand
@@ -25,4 +27,6 @@ groups:
       - key: input_industry_other_crude_oil_non_energetic_demand
         unit: 'TJ'
       - key: input_industry_other_coal_non_energetic_demand
+        unit: 'TJ'
+      - key: input_industry_other_cokes_non_energetic_demand
         unit: 'TJ'

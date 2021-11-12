@@ -336,6 +336,9 @@ en:
         input_percentage_of_bio_oil_industry_final_demand_crude_oil: Other bio oil
         input_percentage_of_crude_oil_industry_final_demand_crude_oil: Other oil
 
+        input_industry_metal_steel_production: Crude steel production
+        input_industry_steel_blastfurnace_bof_share: Blastfurnace BOF
+        input_industry_steel_scrap_hbi_eaf_share: Electric Arc Furnace
         input_industry_metal_steel_electricity_demand: Electricity
         input_industry_metal_steel_network_gas_demand:  Gas
         input_industry_metal_steel_coal_demand:  Coal
@@ -367,6 +370,12 @@ en:
         input_energy_blastfurnace_transformation_coal_gas_output_conversion: Coal gas
         input_energy_power_combined_cycle_coal_gas_coal_gas_input_demand: Power plant
         input_energy_chp_coal_gas_coal_gas_input_demand: CHP
+        industry_final_demand_for_metal_steel_coal_industry_steel_blastfurnace_bof_parent_share: Blastfurnace BOF
+        industry_final_demand_for_metal_steel_coal_industry_steel_scrap_hbi_eaf_parent_share: Electric Arc Furnace
+        industry_final_demand_for_metal_steel_electricity_industry_steel_blastfurnace_bof_parent_share: Blastfurnace BOF
+        industry_final_demand_for_metal_steel_electricity_industry_steel_scrap_hbi_eaf_parent_share: Electric Arc Furnace
+        industry_final_demand_for_metal_steel_network_gas_industry_steel_blastfurnace_bof_parent_share: Blastfurnace BOF
+        industry_final_demand_for_metal_steel_network_gas_industry_steel_scrap_hbi_eaf_parent_share: Electric Arc Furnace
         input_energy_power_combined_cycle_coal_gas_full_load_hours: Coal gas power plant
         input_energy_chp_coal_gas_full_load_hours: Coal gas CHP
         input_energy_blastfurnace_transformation_loss_output_conversion: Loss

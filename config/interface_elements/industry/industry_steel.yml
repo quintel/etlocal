@@ -1,6 +1,20 @@
 key: industry_steel
 
 groups:
+  - header: industry_metal_steel_production
+    items:
+      - key: input_industry_metal_steel_production
+        unit: 'Mton'
+
+  - header: industry_metal_steel_production_route
+    type: slider
+    items:
+      - key: input_industry_steel_blastfurnace_bof_share
+        unit: '%'
+      - key: input_industry_steel_scrap_hbi_eaf_share
+        unit: '%'
+        flexible: true
+
   - header: industry_metal_steel_final_demand
     items:
       - key: input_industry_metal_steel_coal_demand
@@ -116,3 +130,30 @@ groups:
         unit: '%'
         flexible: true
         skip_validation: true
+
+  - header: industry_metal_steel_coal_use
+    type: slider
+    items:
+      - key: industry_final_demand_for_metal_steel_coal_industry_steel_blastfurnace_bof_parent_share
+        unit: '%'
+      - key: industry_final_demand_for_metal_steel_coal_industry_steel_scrap_hbi_eaf_parent_share
+        unit: '%'
+        flexible: true
+
+  - header: industry_metal_steel_electricity_use
+    type: slider
+    items:
+      - key: industry_final_demand_for_metal_steel_electricity_industry_steel_blastfurnace_bof_parent_share
+        unit: '%'
+      - key: industry_final_demand_for_metal_steel_electricity_industry_steel_scrap_hbi_eaf_parent_share
+        unit: '%'
+        flexible: true
+
+  - header: industry_metal_steel_network_gas_use
+    type: slider
+    items:
+      - key: industry_final_demand_for_metal_steel_network_gas_industry_steel_blastfurnace_bof_parent_share
+        unit: '%'
+      - key: industry_final_demand_for_metal_steel_network_gas_industry_steel_scrap_hbi_eaf_parent_share
+        unit: '%'
+        flexible: true

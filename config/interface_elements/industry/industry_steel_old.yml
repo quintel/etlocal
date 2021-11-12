@@ -1,0 +1,8 @@
+key: industry_metal_steel_old
+
+groups:
+  - header: industry_metal_steel_old
+    type: slider
+    items:
+      - key: input_industry_metal_steel_scaling_factor
+        unit: '%'

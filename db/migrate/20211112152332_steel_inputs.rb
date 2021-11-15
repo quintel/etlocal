@@ -7,7 +7,6 @@ class SteelInputs < ActiveRecord::Migration[5.2]
     input_industry_metal_steel_electricity_demand: { nl2015: 9458.9, nl: 9458.9 },
     input_industry_metal_steel_network_gas_demand: { nl2015: 10694.660413136162, nl: 10694.660413136162 },
     input_industry_metal_steel_steam_hot_water_demand: { nl2015: 1.0, nl: 1.0 },
-    input_industry_metal_steel_wood_pellets_demand: { nl2015: 0.0, nl: 0.0 },
     input_industry_metal_steel_crude_oil_demand: { nl2015: 170.4, nl: 170.4 },
     input_energy_cokesoven_transformation_coal_input_demand: { nl2015: 68491.72085616566, nl: 68491.72085616566 },
     input_energy_cokesoven_own_use_coal: { nl2015: 0.0, nl: 0.0 },
@@ -40,7 +39,12 @@ class SteelInputs < ActiveRecord::Migration[5.2]
     input_energy_chp_coal_gas_electricity_output_conversion: { nl2015: 0.423469024, nl: 0.423469024 },
     industry_final_demand_for_metal_steel_electricity_industry_steel_blastfurnace_bof_parent_share: { nl2015: 0.977068424256256, nl: 0.977068424256256 },
     industry_final_demand_for_metal_steel_network_gas_industry_steel_blastfurnace_bof_parent_share: { nl2015: 0.98781761265, nl: 0.98781761265 },
-    industry_final_demand_for_metal_steel_coal_industry_steel_blastfurnace_bof_parent_share: { nl2015: 1.0, nl: 1.0 }
+    industry_final_demand_for_metal_steel_coal_industry_steel_blastfurnace_bof_parent_share: { nl2015: 1.0, nl: 1.0 },
+    input_industry_other_cokes_non_energetic_demand: { nl2015: 0.0, nl: 0.0 },
+    input_industry_other_cokes_demand: { nl2015: 0.0, nl: 0.0 },
+    energy_chp_coal_gas_full_load_hours: { nl2015: 8000.0, nl: 8000.0 },
+    energy_power_combined_cycle_coal_gas_full_load_hours: { nl2015: 8000.0, nl: 8000.0 },
+
   }.freeze
 
   def up
@@ -74,14 +78,18 @@ class SteelInputs < ActiveRecord::Migration[5.2]
           user: User.robot
         )
 
-        SCALABLE_STEEL_KEYS.each do |key, values|
-          base_value = is_2019?(dataset) ? values[:nl] : values[:nl2015]
-          commit.dataset_edits.build(key: key, value: base_value * factor)
-        end
+        year = is_2019?(dataset) ? :nl : :nl2015
 
         UNSCALABLE_STEEL_KEYS.each do |key, values|
-          base_value = is_2019?(dataset) ? values[:nl] : values[:nl2015]
-          commit.dataset_edits.build(key: key, value: base_value)
+            commit.dataset_edits.build(key: key, value: values[year])
+          end
+
+        if factor == 0
+          SCALABLE_STEEL_KEYS.each_key { |key| commit.dataset_edits.build(key: key, value: 0.0) }
+        else
+          SCALABLE_STEEL_KEYS.each do |key, values|
+            commit.dataset_edits.build(key: key, value: values[year] * factor)
+          end
         end
 
         commit.save!

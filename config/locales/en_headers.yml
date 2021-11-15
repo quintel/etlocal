@@ -102,9 +102,9 @@ en:
       industry_metal_steel_energy_production_input:  Energy production - coal gas input
       energy_power_combined_cycle_coal_gas_conversion:  Power plant output
       energy_chp_coal_gas_conversion: CHP output
-      industry_metal_steel_coal_use: Coal use
-      industry_metal_steel_electricity_use: Electricity use
-      industry_metal_steel_network_gas_use: Gas use
+      industry_metal_steel_coal_use: Final demand - Use of coal
+      industry_metal_steel_electricity_use: Final demand - Use of electricity
+      industry_metal_steel_network_gas_use: Final demand - Use of gas
       industry_metal_aluminium: Aluminium
       industry_metal_other: Other metal industry
       industry_chemical_fertilizers: Fertilizers

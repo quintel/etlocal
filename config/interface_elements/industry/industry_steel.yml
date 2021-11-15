@@ -29,8 +29,6 @@ groups:
         unit: 'TJ'
       - key: input_industry_metal_steel_steam_hot_water_demand
         unit: 'TJ'
-      - key: input_industry_metal_steel_wood_pellets_demand
-        unit: 'TJ'
       - key: input_industry_metal_steel_crude_oil_demand
         unit: 'TJ'
 

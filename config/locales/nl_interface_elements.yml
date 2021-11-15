@@ -347,7 +347,6 @@ nl:
         input_industry_metal_steel_cokes_demand: Kooks
         input_industry_metal_steel_coal_gas_demand: Kolengas
         input_industry_metal_steel_steam_hot_water_demand: Warmte
-        input_industry_metal_steel_wood_pellets_demand: Biomassa
         input_industry_metal_steel_crude_oil_demand: Olie
         input_industry_metal_steel_electricity_cokesoven_own_use: Elektriciteit
         input_industry_metal_steel_network_gas_cokesoven_own_use:  Gas

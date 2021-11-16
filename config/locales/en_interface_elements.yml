@@ -488,6 +488,7 @@ en:
         input_energy_power_geothermal_production: Geothermal
         input_energy_chp_local_engine_biogas_production: Biogas CHP
         input_energy_chp_local_wood_pellets_production: Biomass CHP
+        input_energy_power_solar_csp_solar_radiation_production: Concentrated solar power
 
         input_energy_power_ultra_supercritical_coal_production: Pulverized coal
         input_energy_power_supercritical_coal_production: Coal conventional
@@ -497,6 +498,9 @@ en:
         input_energy_power_ultra_supercritical_ccs_coal_production: Pulverized coal with CCS
         input_energy_chp_ultra_supercritical_coal_production: Coal plant with heat production (CHP)
         input_energy_chp_ultra_supercritical_cofiring_coal_production: Co-firing coal plant with heat production (CHP)
+        input_energy_power_supercritical_ccs_waste_mix_production: Waste incinerator CCS
+        input_energy_power_ultra_supercritical_lignite_production: Coal Lignite
+        input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production: Coal Lignite 'oxyfuel' CCS
 
         input_energy_power_ultra_supercritical_network_gas_production: Gas conventional
         input_energy_power_turbine_network_gas_production: Gas turbine
@@ -542,6 +546,37 @@ en:
         energy_chp_combined_cycle_network_gas_full_load_hours: Gas CHP (large-scale)
         energy_power_supercritical_coal_full_load_hours: Coal conventional
         energy_power_engine_diesel_full_load_hours: Diesel generator
+        energy_power_engine_network_gas_full_load_hours: Gas combustion engine
+        energy_power_geothermal_full_load_hours: Geothermal electric
+        energy_power_hydro_mountain_full_load_hours: Hydro-electricity (mountains)
+        energy_power_nuclear_gen2_uranium_oxide_full_load_hours: Nuclear conventional
+        energy_power_nuclear_gen3_uranium_oxide_full_load_hours: Nuclear 3rd Gen
+        energy_power_solar_csp_solar_radiation_full_load_hours: Concentrated solar power
+        energy_power_supercritical_ccs_waste_mix_full_load_hours: Waste incinerator CCS
+        energy_power_ultra_supercritical_ccs_coal_full_load_hours: Pulverized coal CCS
+        energy_power_ultra_supercritical_coal_full_load_hours: Pulverized coal
+        energy_power_ultra_supercritical_cofiring_coal_full_load_hours: Pulverized coal with co-firing
+        energy_power_ultra_supercritical_crude_oil_full_load_hours: Oil-fired
+        energy_power_ultra_supercritical_lignite_full_load_hours: Coal Lignite
+        energy_power_ultra_supercritical_oxyfuel_ccs_lignite_full_load_hours: Coal Lignite 'oxyfuel' CCS
+        energy_heat_burner_wood_pellets_full_load_hours: Biomass heater
+        energy_heat_burner_coal_full_load_hours: Coal heater
+        energy_heat_burner_crude_oil_full_load_hours: Oil heater
+        energy_heat_burner_network_gas_full_load_hours: Gas heater (network gas)
+        energy_heat_solar_thermal_full_load_hours: Solar thermal
+        energy_heat_burner_waste_mix_full_load_hours: Waste heater
+        energy_heat_heatpump_water_water_electricity_full_load_hours: Collective heat pump
+        energy_chp_ultra_supercritical_cofiring_coal_full_load_hours: Co-firing coal CHP
+        energy_chp_ultra_supercritical_coal_full_load_hours: Coal CHP
+        energy_chp_ultra_supercritical_lignite_full_load_hours: Lignite plant with district heat (CHP)
+        industry_chp_turbine_gas_power_fuelmix_full_load_hours: Gas turbine CHP
+        industry_chp_engine_gas_power_fuelmix_full_load_hours: Gas motor CHP
+        industry_chp_combined_cycle_gas_power_fuelmix_full_load_hours: Gas CHP (CCGT)
+        industry_chp_ultra_supercritical_coal_full_load_hours: Coal CHP - industry
+        industry_chp_wood_pellets_full_load_hours: Biomass CHP
+        industry_heat_burner_lignite_full_load_hours: Lignite heater
+        industry_heat_burner_coal_full_load_hours: Coal heater
+        industry_heat_burner_crude_oil_full_load_hours: Oil heater
 
         fuel_production_coal_demand: Coal
         fuel_production_lignite_demand: Lignite
@@ -567,6 +602,7 @@ en:
         input_energy_power_supercritical_waste_mix_electricity_output_conversion: Waste incinerator
         input_energy_power_nuclear_gen2_uranium_oxide_electricity_output_conversion: Conventional nuclear power plant
         input_energy_power_nuclear_gen3_uranium_oxide_electricity_output_conversion: 3rd generation nuclear power plant
+        input_energy_power_supercritical_ccs_waste_mix_electricity_output_conversion: Waste incinerator CCS
 
         input_energy_heat_burner_wood_pellets_steam_hot_water_output_conversion: Biomass-fired heater
         input_energy_heat_burner_coal_steam_hot_water_output_conversion: Coal-fired heater

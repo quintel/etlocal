@@ -12,13 +12,17 @@ groups:
         unit: 'flh'
       - key: energy_power_hydro_river_full_load_hours
         unit: 'flh'
-      - key: energy_chp_local_engine_biogas_full_load_hours
-        unit: 'flh'
-      - key: energy_chp_local_wood_pellets_full_load_hours
-        unit: 'flh'
-      - key: energy_chp_supercritical_waste_mix_full_load_hours
-        unit: 'flh'
       - key: energy_power_supercritical_waste_mix_full_load_hours
+        unit: 'flh'
+      - key: energy_power_geothermal_full_load_hours
+        unit: 'flh'
+      - key: energy_power_hydro_mountain_full_load_hours
+        unit: 'flh'
+      - key: energy_power_solar_csp_solar_radiation_full_load_hours
+        unit: 'flh'
+      - key: energy_power_supercritical_ccs_waste_mix_full_load_hours
+        unit: 'flh'
+      - key: industry_chp_wood_pellets_full_load_hours
         unit: 'flh'
 
   - header: energy_fossil_full_load_hours
@@ -39,5 +43,32 @@ groups:
         unit: 'flh'
       - key: energy_power_combined_cycle_coal_gas_full_load_hours
         unit: 'flh'
+
+  - header: energy_renewable_full_load_hours
+    items:
+      - key: energy_chp_local_engine_biogas_full_load_hours
+        unit: 'flh'
+      - key: energy_chp_local_wood_pellets_full_load_hours
+        unit: 'flh'
+      - key: energy_chp_supercritical_waste_mix_full_load_hours
+        unit: 'flh'
+
+  - header: energy_fossil_chp_full_load_hours
+    items:
+      - key: energy_chp_ultra_supercritical_cofiring_coal_full_load_hours
+        unit: 'flh'
+      - key: energy_chp_ultra_supercritical_coal_full_load_hours
+        unit: 'flh'
+      - key: energy_chp_ultra_supercritical_lignite_full_load_hours
+        unit: 'flh'
+      - key: industry_chp_turbine_gas_power_fuelmix_full_load_hours
+        unit: 'flh'
+      - key: industry_chp_engine_gas_power_fuelmix_full_load_hours
+        unit: 'flh'
+      - key: industry_chp_combined_cycle_gas_power_fuelmix_full_load_hours
+        unit: 'flh'
+      - key: industry_chp_ultra_supercritical_coal_full_load_hours
+        unit: 'flh'
       - key: energy_chp_coal_gas_full_load_hours
         unit: 'flh'
+

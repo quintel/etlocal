@@ -18,6 +18,12 @@ groups:
         unit: 'TJ'
       - key: input_energy_chp_ultra_supercritical_cofiring_coal_production
         unit: 'TJ'
+      - key: input_energy_power_supercritical_ccs_waste_mix_production
+        unit: 'TJ'
+      - key: input_energy_power_ultra_supercritical_lignite_production
+        unit: 'TJ'
+      - key: input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production
+        unit: 'TJ'
 
   - header: energy_electricity_gas
     items:

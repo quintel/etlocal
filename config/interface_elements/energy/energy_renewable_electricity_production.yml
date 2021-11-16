@@ -13,6 +13,8 @@ groups:
     items:
       - key: input_energy_power_solar_pv_solar_radiation_production
         unit: 'TJ'
+      - key: input_energy_power_solar_csp_solar_radiation_production
+        unit: 'TJ'
 
   - header: energy_electricity_waste
     items:

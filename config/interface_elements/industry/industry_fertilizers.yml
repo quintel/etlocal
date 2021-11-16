@@ -1,0 +1,32 @@
+key: industry_fertilizer
+
+groups:
+  - header: industry_fertilizer_demand_energetic
+    type: slider
+    items:
+    - key: input_industry_chemical_fertilizers_electricity_demand
+      unit: '%'
+    - key: input_industry_chemical_fertilizers_network_gas_demand
+      unit: '%'
+    - key: input_industry_chemical_fertilizers_network_gas_demand
+      unit: '%'
+    - key: input_industry_chemical_fertilizers_steam_hot_water_demand
+      unit: '%'
+    - key: input_industry_chemical_fertilizers_wood_pellets_demand
+      unit: '%'
+    - key: input_industry_chemical_fertilizers_crude_oil_demand
+      unit: '%'
+    - key: input_industry_chemical_fertilizers_coal_demand
+      unit: '%'
+
+  - header: industry_fertilizer_demand_non_energetic
+    type: slider
+    items:
+    - key: input_industry_chemical_fertilizers_network_gas_non_energetic_demand
+      unit: '%'
+    - key: input_industry_chemical_fertilizers_wood_pellets_non_energetic_demand
+      unit: '%'
+    - key: input_industry_chemical_fertilizers_crude_oil_non_energetic_demand
+      unit: '%'
+    - key: input_industry_chemical_fertilizers_coal_non_energetic_demand
+      unit: '%'

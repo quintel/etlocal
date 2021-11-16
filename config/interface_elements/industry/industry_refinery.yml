@@ -1,0 +1,73 @@
+key: industry_refinery
+
+groups:
+  - header: industry_refinery_demand
+    type: slider
+    items:
+    - key: industry_useful_demand_for_chemical_refineries_crude_oil_non_energetic_demand
+      unit: '%'
+
+  - header: industry_refinery_demand_energetic
+    type: slider
+    items:
+    - key: input_industry_chemical_refineries_electricity_demand
+      unit: '%'
+    - key: input_industry_chemical_refineries_network_gas_demand
+      unit: '%'
+    - key: input_industry_chemical_refineries_steam_hot_water_demand
+      unit: '%'
+    - key: input_industry_chemical_refineries_wood_pellets_demand
+      unit: '%'
+    - key: input_industry_chemical_refineries_crude_oil_demand
+      unit: '%'
+    - key: input_industry_chemical_refineries_coal_demand
+      unit: '%'
+
+  - header: industry_refinery_demand_energetic
+    type: slider
+    items:
+    - key: input_industry_chemical_refineries_network_gas_non_energetic_demand
+      unit: '%'
+    - key: input_industry_chemical_refineries_wood_pellets_non_energetic_demand
+      unit: '%'    
+    - key: input_industry_chemical_refineries_coal_non_energetic_demand
+      unit: '%'  
+    - key: input_industry_chemical_refineries_crude_oil_non_energetic_demand
+      unit: '%'  
+
+  - header: industry_refinery_demand_non_energetic
+    type: slider
+    items:
+    - key: input_industry_refinery_transformation_crude_oil_crude_oil_output_conversion
+      unit: '%'
+    - key: input_industry_refinery_transformation_crude_oil_gasoline_output_conversion
+      unit: '%'
+    - key: input_industry_refinery_transformation_crude_oil_heavy_fuel_oil_output_conversion
+      unit: '%'
+    - key: input_industry_refinery_transformation_crude_oil_kerosene_output_conversion
+      unit: '%'
+    - key: input_industry_refinery_transformation_crude_oil_lpg_output_conversion
+      unit: '%'
+    - key: input_industry_refinery_transformation_crude_oil_refinery_gas_output_conversion
+      unit: '%'
+    - key: input_industry_refinery_transformation_crude_oil_loss_output_conversion
+      unit: '%'
+    - key: input_industry_refinery_transformation_crude_oil_diesel_output_conversion
+      unit: '%'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

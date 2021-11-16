@@ -1,12 +1,6 @@
 key: industry_metal
 
 groups:
-  - header: industry_metal_aluminium
-    type: slider
-    items:
-      - key: input_industry_metal_aluminium_scaling_factor
-        unit: '%'
-
   - header: industry_metal_other
     items:
       - key: input_industry_metal_other_electricity_demand

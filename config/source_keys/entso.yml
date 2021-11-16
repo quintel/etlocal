@@ -219,6 +219,7 @@ row_groups:
   Coal:
     - Anthracite
     - Coking coal
+    - Other bituminous coal
     - Sub-bituminous coal
     - Lignite
     - Patent fuel
@@ -254,6 +255,14 @@ row_groups:
     - Paraffin waxes
     - Petroleum coke
     - Other oil products
+  Gasoline:
+    - Motor gasoline (excluding biofuel portion)
+    - Aviation gasoline
+    - Gasoline-type jet fuel
+  Bio-diesel:
+    - Pure biodiesels
+    - Blended biodiesels
+    - Other liquid biofuels
   Kerosene:
     - Kerosene-type jet fuel (excluding biofuel portion)
     - Other kerosene

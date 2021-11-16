@@ -14,7 +14,7 @@ groups:
         unit: 'TJ'
       - key: input_energy_heat_heatpump_water_water_electricity_production
         unit: 'TJ'
-  
+
   - header: energy_heat_fossil
     items:
       - key: input_energy_heat_burner_network_gas_production
@@ -33,3 +33,5 @@ groups:
     items:
       - key: energy_heat_distribution_loss_demand
         unit: 'TJ'
+        entsoe: |
+          - EB = ("Distribution losses", "Heat")

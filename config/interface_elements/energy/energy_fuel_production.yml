@@ -4,11 +4,20 @@ groups:
     items:
       - key: energy_extraction_coal_demand
         unit: 'TJ'
+        entsoe: |
+          EB = ("Primary production", "Coal") -
+          EB = ("Primary production", "Lignite")
       - key: energy_extraction_lignite_demand
         unit: 'TJ'
+        entsoe: |
+          EB = ("Primary production", "Lignite")
       - key: energy_extraction_crude_oil_demand
         unit: 'TJ'
+        entsoe: |
+          EB = ("Primary production", "Crude oil aggregated")
       - key: energy_extraction_natural_gas_demand
         unit: 'TJ'
+        entsoe: |
+          EB = ("Primary production", "Natural gas")
       - key: energy_extraction_uranium_oxide_demand
         unit: 'TJ'

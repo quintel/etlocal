@@ -4,32 +4,63 @@ groups:
     items:
     - key: households_final_demand_electricity_demand
       unit: 'TJ'
+      entsoe: |
+        EB = ("Final consumption - other sectors - households - energy use", "Electricity")
     - key: households_final_demand_network_gas_demand
       unit: 'TJ'
+      entsoe: |
+        EB = ("Final consumption - other sectors - households - energy use", "Network gas")
     - key: households_final_demand_steam_hot_water_demand
       unit: 'TJ'
+      entsoe: |
+        EB = ("Final consumption - other sectors - households - energy use", "Heat") +
+        EB = ("Final consumption - other sectors - households - energy use", "Geothermal")
     - key: households_final_demand_wood_pellets_demand
       unit: 'TJ'
+      entsoe: |
+        EB = ("Final consumption - other sectors - households - energy use", "Primary solid biofuels")
     - key: households_final_demand_coal_demand
       unit: 'TJ'
+      entsoe: |
+        EB = ("Final consumption - other sectors - households - energy use", "Coal")
     - key: input_households_final_demand_crude_oil_demand
       unit: 'TJ'
+      entsoe: |
+        EB = ("Final consumption - other sectors - households - energy use", "Crude oil aggregated")
+    - key: households_final_demand_solar_thermal_demand
+      unit: 'TJ'
+      entsoe: |
+        EB = ("Final consumption - other sectors - households - energy use", "Solar thermal")
   - header: households_final_demand_crude_oil_input
     type: slider
     items:
     - key: input_percentage_of_diesel_households_final_demand_crude_oil
       unit: '%'
+      entsoe: |
+        EB = ("Final consumption - other sectors - households - energy use", "Gas oil and diesel oil (excluding biofuel portion)")
     - key: input_percentage_of_biodiesel_households_final_demand_crude_oil
       unit: '%'
+      entsoe: |
+        EB = ("Final consumption - other sectors - households - energy use", "Pure biodiesels")
     - key: input_percentage_of_kerosene_households_final_demand_crude_oil
       unit: '%'
+      entsoe: |
+        EB = ("Final consumption - other sectors - households - energy use", "Kerosene")
     - key: input_percentage_of_bio_kerosene_households_final_demand_crude_oil
       unit: '%'
+      entsoe: |
+        EB = ("Final consumption - other sectors - households - energy use", "Bio-kerosene")
     - key: input_percentage_of_lpg_households_final_demand_crude_oil
       unit: '%'
+      entsoe: |
+        EB = ("Final consumption - other sectors - households - energy use", "Liquefied petroleum gases")
     - key: input_percentage_of_bio_oil_households_final_demand_crude_oil
       unit: '%'
+      entsoe: |
+        EB = ("Final consumption - other sectors - households - energy use", "Bio oil")
     - key: input_percentage_of_crude_oil_households_final_demand_crude_oil
       unit: '%'
+      entsoe: |
+        EB = ("Final consumption - other sectors - households - energy use", "Other oil")
       flexible: true
       skip_validation: true

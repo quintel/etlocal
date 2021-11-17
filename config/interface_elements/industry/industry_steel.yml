@@ -19,18 +19,37 @@ groups:
     items:
       - key: input_industry_metal_steel_coal_demand
         unit: 'TJ'
+        entsoe: |
+          EB = ("Final consumption - industry sector - iron and steel - energy use", "Coal") -
+          EB = ("Final consumption - industry sector - iron and steel - energy use", "Coke oven coke")
       - key: input_industry_metal_steel_cokes_demand
         unit: 'TJ'
+        entsoe: |
+          EB = ("Final consumption - industry sector - iron and steel - energy use", "Coke oven coke")
       - key: input_industry_metal_steel_coal_gas_demand
         unit: 'TJ'
+        entsoe: |
+          EB = ("Final consumption - industry sector - iron and steel - energy use", "Coal gas")
       - key: input_industry_metal_steel_electricity_demand
         unit: 'TJ'
+        entsoe: |
+          EB = ("Final consumption - industry sector - iron and steel - energy use", "Electricity")
       - key: input_industry_metal_steel_network_gas_demand
         unit: 'TJ'
+        entsoe: |
+          EB = ("Final consumption - industry sector - iron and steel - energy use", "Network gas")
       - key: input_industry_metal_steel_steam_hot_water_demand
         unit: 'TJ'
+        entsoe: |
+          EB = ("Final consumption - industry sector - iron and steel - energy use", "Heat")
       - key: input_industry_metal_steel_crude_oil_demand
         unit: 'TJ'
+        entsoe: |
+          EB = ("Final consumption - industry sector - iron and steel - energy use", "Crude oil aggregated")
+      - key: input_industry_metal_steel_wood_pellets_demand
+        unit: 'TJ'
+        entsoe: |
+          EB = ("Final consumption - industry sector - iron and steel - energy use", "Primary solid biofuels")
 
   - header: energy_cokesoven_transformation_input
     items:

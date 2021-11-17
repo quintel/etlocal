@@ -21,10 +21,3 @@ groups:
         unit: 'TJ'
         entsoe: |
           - EB = ("Distribution losses", "Network gas")
-
-  - header: energy_demand_crude_oil_losses
-    items:
-      - key: energy_distribution_crude_oil_loss
-        unit: 'TJ'
-        entsoe: |
-          - EB = ("Distribution losses", "Crude oil aggregated")

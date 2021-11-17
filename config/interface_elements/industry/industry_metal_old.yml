@@ -1,7 +1,7 @@
-key: industry_metal
+key: industry_metal_old
 
 groups:
-  - header: industry_metal_other
+  - header: industry_metal_other_old
     items:
       - key: input_industry_metal_other_electricity_demand
         unit: 'TJ'

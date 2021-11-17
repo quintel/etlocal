@@ -2,31 +2,50 @@ key: industry_fertilizer
 
 groups:
   - header: industry_fertilizer_demand_energetic
-    type: slider
     items:
     - key: input_industry_chemical_fertilizers_electricity_demand
-      unit: '%'
+      unit: 'TJ'
+      entsoe: |
+        EB = ("Final consumption - industry sector - chemical fertilizers - energy use", "Electricity")
     - key: input_industry_chemical_fertilizers_network_gas_demand
-      unit: '%'
-    - key: input_industry_chemical_fertilizers_network_gas_demand
-      unit: '%'
+      unit: 'TJ'
+      entsoe: |
+        EB = ("Final consumption - industry sector - chemical fertilizers - energy use", "Network gas")
     - key: input_industry_chemical_fertilizers_steam_hot_water_demand
-      unit: '%'
+      unit: 'TJ'
+      entsoe: |
+        EB = ("Final consumption - industry sector - chemical fertilizers - energy use", "Heat")
     - key: input_industry_chemical_fertilizers_wood_pellets_demand
-      unit: '%'
+      unit: 'TJ'
+      entsoe: |
+        EB = ("Final consumption - industry sector - chemical fertilizers - energy use", "Primary solid biofuels")
     - key: input_industry_chemical_fertilizers_crude_oil_demand
-      unit: '%'
+      unit: 'TJ'
+      entsoe: |
+        EB = ("Final consumption - industry sector - chemical fertilizers - energy use", "Crude oil aggregated")
     - key: input_industry_chemical_fertilizers_coal_demand
-      unit: '%'
+      unit: 'TJ'
+      entsoe: |
+        EB = ("Final consumption - industry sector - chemical fertilizers - energy use", "Coal") -
+        EB = ("Final consumption - industry sector - chemical fertilizers - energy use", "Coke oven coke")
 
   - header: industry_fertilizer_demand_non_energetic
     type: slider
     items:
     - key: input_industry_chemical_fertilizers_network_gas_non_energetic_demand
-      unit: '%'
+      unit: 'TJ'
+      entsoe: |
+        EB = ("Final consumption - industry sector - chemical fertilizers - non-energy use", "Network gas")
     - key: input_industry_chemical_fertilizers_wood_pellets_non_energetic_demand
-      unit: '%'
+      unit: 'TJ'
+      entsoe: |
+        EB = ("Final consumption - industry sector - chemical fertilizers - non-energy use", "Primary solid biofuels")
     - key: input_industry_chemical_fertilizers_crude_oil_non_energetic_demand
-      unit: '%'
+      unit: 'TJ'
+      entsoe: |
+        EB = ("Final consumption - industry sector - chemical fertilizers - non-energy use", "Crude oil aggregated")
     - key: input_industry_chemical_fertilizers_coal_non_energetic_demand
-      unit: '%'
+      unit: 'TJ'
+      entsoe: |
+        EB = ("Final consumption - industry sector - chemical fertilizers - non-energy use", "Coal") -
+        EB = ("Final consumption - industry sector - chemical fertilizers - non-energy use", "Coke oven coke")

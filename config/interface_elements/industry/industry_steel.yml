@@ -55,6 +55,8 @@ groups:
     items:
       - key: input_energy_cokesoven_transformation_coal_input_demand
         unit: 'TJ'
+        entsoe: |
+          EB = ("Transformation input - coke ovens - energy use", "Coal")
 
   - header: energy_cokesoven_transformation_output
     type: slider
@@ -72,25 +74,43 @@ groups:
     items:
       - key: input_energy_cokesoven_own_use_coal
         unit: 'TJ'
+        entsoe: |
+          EB = ("Energy sector - coke ovens - energy use", "Coal")
       - key: input_energy_cokesoven_own_use_cokes
         unit: 'TJ'
+        entsoe: |
+          EB = ("Energy sector - coke ovens - energy use", "Coke oven coke")
       - key: input_energy_cokesoven_own_use_coal_gas
         unit: 'TJ'
+        entsoe: |
+          EB = ("Energy sector - coke ovens - energy use", "Coal gas")
       - key: input_energy_cokesoven_own_use_electricity
         unit: 'TJ'
+        entsoe: |
+          EB = ("Energy sector - coke ovens - energy use", "Electricity")
       - key: input_energy_cokesoven_own_use_network_gas
         unit: 'TJ'
+        entsoe: |
+          EB = ("Energy sector - coke ovens - energy use", "Network gas")
       - key: input_energy_cokesoven_own_use_steam_hot_water
         unit: 'TJ'
+        entsoe: |
+          EB = ("Energy sector - coke ovens - energy use", "Heat")
       - key: input_energy_cokesoven_own_use_crude_oil
         unit: 'TJ'
+        entsoe: |
+          EB = ("Energy sector - coke ovens - energy use", "Crude oil aggregated")
 
   - header: energy_blastfurnace_transformation_input
     items:
       - key: input_energy_blastfurnace_transformation_coal_input_demand
         unit: 'TJ'
+        entsoe: |
+          EB = ("Transformation input - blast furnaces - energy use", "Coal")
       - key: input_energy_blastfurnace_transformation_cokes_input_demand
         unit: 'TJ'
+        entsoe: |
+          EB = ("Transformation input - blast furnaces - energy use", "Coke oven coke")
 
   - header: energy_blastfurnace_transformation_output
     type: slider
@@ -106,25 +126,43 @@ groups:
     items:
       - key: input_energy_blastfurnace_own_use_coal
         unit: 'TJ'
+        entsoe: |
+          EB = ("Energy sector - blast furnaces - energy use", "Coal")
       - key: input_energy_blastfurnace_own_use_cokes
         unit: 'TJ'
+        entsoe: |
+          EB = ("Energy sector - blast furnaces - energy use", "Coke oven coke")
       - key: input_energy_blastfurnace_own_use_coal_gas
         unit: 'TJ'
+        entsoe: |
+          EB = ("Energy sector - blast furnaces - energy use", "Coal gas")
       - key: input_energy_blastfurnace_own_use_electricity
         unit: 'TJ'
+        entsoe: |
+          EB = ("Energy sector - blast furnaces - energy use", "Electricity")
       - key: input_energy_blastfurnace_own_use_network_gas
         unit: 'TJ'
+        entsoe: |
+          EB = ("Energy sector - blast furnaces - energy use", "Network gas")
       - key: input_energy_blastfurnace_own_use_steam_hot_water
         unit: 'TJ'
+        entsoe: |
+          EB = ("Energy sector - blast furnaces - energy use", "Heat")
       - key: input_energy_blastfurnace_own_use_crude_oil
         unit: 'TJ'
+        entsoe: |
+          EB = ("Energy sector - blast furnaces - energy use", "Crude oil aggregated")
 
   - header: industry_metal_steel_energy_production_input
     items:
       - key: input_energy_power_combined_cycle_coal_gas_coal_gas_input_demand
         unit: 'TJ'
+        entsoe: |
+          EB = ("Gross electricity production - main activity producer electricity only", "Coal gas")
       - key: input_energy_chp_coal_gas_coal_gas_input_demand
         unit: 'TJ'
+        entsoe: |
+          EB = ("Gross electricity production - autoproducer combined heat and power", "Coal gas")
 
   - header: energy_power_combined_cycle_coal_gas_conversion
     type: slider

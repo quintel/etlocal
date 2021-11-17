@@ -22,5 +22,5 @@ groups:
       unit: '%'
     - key: industry_aluminium_smeltoven_electricity_parent_share
       unit: '%'
-    - key: industry_aluminium_carbothermalreduction_electricity_ parent_share
+    - key: industry_aluminium_carbothermalreduction_electricity_parent_share
       unit: '%'

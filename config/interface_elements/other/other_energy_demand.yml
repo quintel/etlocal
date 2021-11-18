@@ -5,34 +5,34 @@ groups:
     items:
     - key: other_final_demand_electricity_demand
       unit: 'TJ'
-      entsoe: |
-        EB = ("Final consumption - other sectors - not elsewhere specified - energy use", "Electricity")
+      entso: |
+        EB("Final consumption - other sectors - not elsewhere specified - energy use", "Electricity")
     - key: other_final_demand_network_gas_demand
       unit: 'TJ'
-      entsoe: |
-        EB = ("Final consumption - other sectors - not elsewhere specified - energy use", "Network gas") +
-        EB = ("Final consumption - transport sector - pipeline transport - energy use", "Total")
+      entso: |
+        EB("Final consumption - other sectors - not elsewhere specified - energy use", "Network gas") +
+        EB("Final consumption - transport sector - pipeline transport - energy use", "Total")
     - key: other_final_demand_steam_hot_water_demand
       unit: 'TJ'
-      entsoe: |
-        EB = ("Final consumption - other sectors - not elsewhere specified - energy use", "Heat")
+      entso: |
+        EB("Final consumption - other sectors - not elsewhere specified - energy use", "Heat")
     - key: other_final_demand_wood_pellets_demand
       unit: 'TJ'
-      entsoe: |
-        EB = ("Final consumption - other sectors - not elsewhere specified - energy use", "Primary solid biofuels")
+      entso: |
+        EB("Final consumption - other sectors - not elsewhere specified - energy use", "Primary solid biofuels")
     - key: other_final_demand_coal_demand
       unit: 'TJ'
-      entsoe: |
-        EB = ("Final consumption - other sectors - not elsewhere specified - energy use", "Coal") +
-        EB = ("Final consumption - other sectors - not elsewhere specified - energy use", "Coal gas") +
-        EB = ("Final consumption - other sectors - not elsewhere specified - energy use", "Gas works gas")
+      entso: |
+        EB("Final consumption - other sectors - not elsewhere specified - energy use", "Coal") +
+        EB("Final consumption - other sectors - not elsewhere specified - energy use", "Coal gas") +
+        EB("Final consumption - other sectors - not elsewhere specified - energy use", "Gas works gas")
     - key: other_final_demand_crude_oil_demand
       unit: 'TJ'
-      entsoe: |
-        EB = ("Final consumption - other sectors - not elsewhere specified - energy use", "Crude oil aggregated") +
-        EB = ("Final consumption - transport sector - not elsewhere specified - energy use", "Total")
+      entso: |
+        EB("Final consumption - other sectors - not elsewhere specified - energy use", "Crude oil aggregated") +
+        EB("Final consumption - transport sector - not elsewhere specified - energy use", "Total")
     - key: other_final_demand_crude_oil_non_energetic_demand
       unit: 'TJ'
-      entsoe: |
-        EB = ("Final consumption - other sectors - non-energy use", "Crude oil aggregated") +
-        EB = ("Final consumption - transport sector - non-energy use", "Total")
+      entso: |
+        EB("Final consumption - other sectors - non-energy use", "Crude oil aggregated") +
+        EB("Final consumption - transport sector - non-energy use", "Total")

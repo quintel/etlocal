@@ -4,42 +4,42 @@ groups:
       items:
         - key: input_transport_ship_gasoline_demand
           unit: 'TJ'
-          entsoe: |
-            EB = ("Final consumption - transport sector - domestic navigation - energy use", "Gasoline") +
-            EB = ("Final consumption - other sectors - fishing - energy use", "Gasoline")
+          entso: |
+            EB("Final consumption - transport sector - domestic navigation - energy use", "Gasoline") +
+            EB("Final consumption - other sectors - fishing - energy use", "Gasoline")
         - key: input_transport_ship_diesel_demand
           unit: 'TJ'
-          entsoe: |
-            EB = ("Final consumption - transport sector - domestic navigation - energy use", "Gas oil and diesel oil (excluding biofuel portion)") +
-            EB = ("Final consumption - other sectors - fishing - energy use", "Gas oil and diesel oil (excluding biofuel portion)")
+          entso: |
+            EB("Final consumption - transport sector - domestic navigation - energy use", "Gas oil and diesel oil (excluding biofuel portion)") +
+            EB("Final consumption - other sectors - fishing - energy use", "Gas oil and diesel oil (excluding biofuel portion)")
         - key: input_transport_ship_biodiesel_demand
           unit: 'TJ'
-          entsoe: |
-            EB = ("Final consumption - transport sector - domestic navigation - energy use", "Bio-diesel") +
-            EB = ("Final consumption - other sectors - fishing - energy use", "Bio-diesel")
+          entso: |
+            EB("Final consumption - transport sector - domestic navigation - energy use", "Bio-diesel") +
+            EB("Final consumption - other sectors - fishing - energy use", "Bio-diesel")
         - key: transport_final_demand_for_shipping_lng_demand
           unit: 'TJ'
-          entsoe: |
-            EB = ("Final consumption - transport sector - domestic navigation - energy use", "Natural gas") +
-            EB = ("Final consumption - other sectors - fishing - energy use", "Natural gas")
+          entso: |
+            EB("Final consumption - transport sector - domestic navigation - energy use", "Natural gas") +
+            EB("Final consumption - other sectors - fishing - energy use", "Natural gas")
         - key: transport_final_demand_for_shipping_bio_lng_demand
           unit: 'TJ'
-          entsoe: |
-            EB = ("Final consumption - transport sector - domestic navigation - energy use", "Biogases") +
-            EB = ("Final consumption - other sectors - fishing - energy use", "Biogases")
+          entso: |
+            EB("Final consumption - transport sector - domestic navigation - energy use", "Biogases") +
+            EB("Final consumption - other sectors - fishing - energy use", "Biogases")
         - key: transport_final_demand_heavy_fuel_oil_demand
           unit: 'TJ'
-          entsoe: |
-            EB = ("Final consumption - transport sector - energy use", "Fuel oil") +
-            EB = ("Final consumption - other sectors - fishing - energy use", "Fuel oil") -
-            EB = ("Final consumption - transport sector - pipeline transport - energy use", "Fuel oil") -
-            EB = ("Final consumption - transport sector - not elsewhere specified - energy use", "Fuel oil")
+          entso: |
+            EB("Final consumption - transport sector - energy use", "Fuel oil") +
+            EB("Final consumption - other sectors - fishing - energy use", "Fuel oil") -
+            EB("Final consumption - transport sector - pipeline transport - energy use", "Fuel oil") -
+            EB("Final consumption - transport sector - not elsewhere specified - energy use", "Fuel oil")
 
     - header: transport_international_ship_transport
       items:
         - key: transport_bunkers_total_useful_demand_shipping_demand
           unit: 'TJ'
-          entsoe: |
-            EB = ("International maritime bunkers", "Natural gas liquids") +
-            EB = ("International maritime bunkers", "Gas oil and diesel oil (excluding biofuel portion)") +
-            EB = ("International maritime bunkers", "Fuel oil")
+          entso: |
+            EB("International maritime bunkers", "Natural gas liquids") +
+            EB("International maritime bunkers", "Gas oil and diesel oil (excluding biofuel portion)") +
+            EB("International maritime bunkers", "Fuel oil")

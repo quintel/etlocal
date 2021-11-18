@@ -38,31 +38,31 @@ groups:
     items:
     - key: input_percentage_of_diesel_industry_final_demand_crude_oil
       unit: 'TJ'
-      entsoe: |
-        EB = ("Final consumption - industry sector - energy use", "Gas oil and diesel oil (excluding biofuel portion)")
+      entso: |
+        EB("Final consumption - industry sector - energy use", "Gas oil and diesel oil (excluding biofuel portion)")
     - key: input_percentage_of_biodiesel_industry_final_demand_crude_oil
       unit: 'TJ'
-      entsoe: |
-        EB = ("Final consumption - industry sector - energy use", "Pure biodiesels")
+      entso: |
+        EB("Final consumption - industry sector - energy use", "Pure biodiesels")
     - key: input_percentage_of_kerosene_industry_final_demand_crude_oil
       unit: 'TJ'
-      entsoe: |
-        EB = ("Final consumption - industry sector - energy use", "Kerosene")
+      entso: |
+        EB("Final consumption - industry sector - energy use", "Kerosene")
     - key: input_percentage_of_bio_kerosene_industry_final_demand_crude_oil
       unit: 'TJ'
-      entsoe: |
-        EB = ("Final consumption - industry sector - energy use", "Bio-kerosene")
+      entso: |
+        EB("Final consumption - industry sector - energy use", "Bio-kerosene")
     - key: input_percentage_of_lpg_industry_final_demand_crude_oil
       unit: 'TJ'
-      entsoe: |
-        EB = ("Final consumption - industry sector - energy use", "Liquefied petroleum gases")
+      entso: |
+        EB("Final consumption - industry sector - energy use", "Liquefied petroleum gases")
     - key: input_percentage_of_bio_oil_industry_final_demand_crude_oil
       unit: 'TJ'
-      entsoe: |
-        EB = ("Final consumption - industry sector - energy use", "Bio oil")
+      entso: |
+        EB("Final consumption - industry sector - energy use", "Bio oil")
     - key: input_percentage_of_crude_oil_industry_final_demand_crude_oil
       unit: 'TJ'
-      entsoe: |
-        EB = ("Final consumption - industry sector - energy use", "Other oil")
+      entso: |
+        EB("Final consumption - industry sector - energy use", "Other oil")
       flexible: true
       skip_validation: true

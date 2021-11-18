@@ -19,7 +19,7 @@
               .slider-wrapper.input
                 = form.label interface_item.key, DatasetEditForm.human_attribute_name(interface_item.key).html_safe
 
-                .slider data-key= interface_item.key data-flexible= ('flex' if interface_item.flexible) data-editable= (policy(@dataset).edit? ? '1' : '0')
+                .slider data-key= interface_item.key data-flexible= ('flex' if interface_item.flexible) data-editable= (policy(@dataset).edit? && interface_item.editable?(@dataset) ? '1' : '0')
                 span.history data-key= interface_item.key
                   .fa.fa-info
 

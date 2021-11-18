@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe DatasetSource::ENTSO::File do
   let(:content) do
     <<-CSV.strip_heredoc
-      DATAFLOW,LAST UPDATE,freq,nrg_bal,siec,unit,geo,TIME_PERIOD,OBS_VALUE,OBS_FLAG
+      DATAFLOW,LAST UPDATE,freq,nrg_bal,siec,unit,geo,TIME_PERIOD,OBS_VAL,OBS_FLAG
       ESTAT:NRG_BAL_C(1.0),06/06/21 23:00:00,A,AFC,BIOE,TJ,EU27_2020,2019,4709715.099,
       ESTAT:NRG_BAL_C(1.0),06/06/21 23:00:00,A,AFC,C0110,TJ,EU27_2020,2019,65522.356,
       ESTAT:NRG_BAL_C(1.0),06/06/21 23:00:00,A,DL,BIOE,TJ,EU27_2020,2019,110554.518,

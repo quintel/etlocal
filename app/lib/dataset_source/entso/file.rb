@@ -21,7 +21,7 @@ module DatasetSource
           Map.new(
             csv_table.each_with_object({}) do |row, data|
               data[row[:nrg_bal]] ||= {}
-              data[row[:nrg_bal]][row[:siec]] = row[:obs_value].to_f
+              data[row[:nrg_bal]][row[:siec]] = row[:obs_val].to_f
             end,
             KeyMap.from_hash(key_map_config['rows']),
             KeyMap.from_hash(key_map_config['columns'])

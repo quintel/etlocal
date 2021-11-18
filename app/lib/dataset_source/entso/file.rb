@@ -5,9 +5,15 @@ module DatasetSource
     # Contains information about an ENTSO energy balance used as a data source for a Dataset.
     class File
       def self.key_map_config
-        @key_map_config ||= YAML
-          .load_file(Rails.root.join('config/source_keys/entso.yml'))
-          .transform_values(&:invert).freeze
+        @key_map_config ||= begin
+          vals = YAML.load_file(Rails.root.join('config/source_keys/entso.yml'))
+
+          {
+            'rows' => vals['rows'].invert,
+            'columns' => vals['columns'].invert,
+            'column_groups' => vals['column_groups']
+          }.freeze
+        end
       end
 
       def self.energy_balance(csv_table)

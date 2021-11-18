@@ -1,6 +1,79 @@
 ---
 # Contains mappings of keys used in ENTSO source CSVs to those used in GQL.
 columns:
+  BIOE: Bioenergy
+  C0000X0350-0370: Solid fossil fuels
+  C0110: Anthracite
+  C0121: Coking coal
+  C0129: Other bituminous coal
+  C0210: Sub-bituminous coal
+  C0220: Lignite
+  C0311: Coke oven coke
+  C0312: Gas coke
+  C0320: Patent fuel
+  C0330: Brown coal briquettes
+  C0340: Coal tar
+  C0350-0370: Manufactured gases
+  C0350: Coke oven gas
+  C0360: Gas works gas
+  C0371: Blast furnace gas
+  C0379: Other recovered gases
+  E7000: Electricity
+  FE: Fossil energy
+  G3000: Natural gas
+  H8000: Heat
+  N900H: Nuclear heat
+  O4000XBIO: Oil and petroleum products
+  O4100_TOT: Crude oil
+  O4200: Natural gas liquids
+  O4300: Refinery feedstocks
+  O4400X4410: Additives and oxygenates (excluding biofuel portion)
+  O4500: Other hydrocarbons
+  O4610: Refinery gas
+  O4620: Ethane
+  O4630: Liquefied petroleum gases
+  O4640: Naphtha
+  O4651: Aviation gasoline
+  O4652XR5210B: Motor gasoline (excluding biofuel portion)
+  O4653: Gasoline-type jet fuel
+  O4661XR5230B: Kerosene-type jet fuel (excluding biofuel portion)
+  O4669: Other kerosene
+  O4671XR5220B: Gas oil and diesel oil (excluding biofuel portion)
+  O4680: Fuel oil
+  O4691: White spirit and special boiling point industrial spirits
+  O4692: Lubricants
+  O4693: Paraffin waxes
+  O4694: Petroleum coke
+  O4695: Bitumen
+  O4699: Other oil products
+  P1000: Peat and peat products
+  P1100: Peat
+  P1200: Peat products
+  R5110-5150_W6000RI: Primary solid biofuels
+  R5160: Charcoal
+  R5210B: Blended biogasoline
+  R5210P: Pure biogasoline
+  R5220B: Blended biodiesels
+  R5220P: Pure biodiesels
+  R5230B: Blended bio jet kerosene
+  R5230P: Pure bio jet kerosene
+  R5290: Other liquid biofuels
+  R5300: Biogases
+  RA000: Renewables and biofuels
+  RA100: Hydro
+  RA200: Geothermal
+  RA300: Wind
+  RA410: Solar thermal
+  RA420: Solar photovoltaic
+  RA500: Tide, wave, ocean
+  RA600: Ambient heat (heat pumps)
+  S2000: Oil shale and oil sands
+  TOTAL: Total
+  W6100_6220: Non-renewable waste
+  W6100: Industrial waste (non-renewable)
+  W6210: Renewable municipal waste
+  W6220: Non-renewable municipal waste
+rows:
   AFC: Available for final consumption
   DL: Distribution losses
   EXP: Exports
@@ -139,80 +212,7 @@ columns:
   TO_RPI_RO: Transformation output - refineries and petrochemical industry - refinery output
   TO_RPI: Transformation output - refineries and petrochemical industry
   TO: Transformation output
-rows:
-  BIOE: Bioenergy
-  C0000X0350-0370: Solid fossil fuels
-  C0110: Anthracite
-  C0121: Coking coal
-  C0129: Other bituminous coal
-  C0210: Sub-bituminous coal
-  C0220: Lignite
-  C0311: Coke oven coke
-  C0312: Gas coke
-  C0320: Patent fuel
-  C0330: Brown coal briquettes
-  C0340: Coal tar
-  C0350-0370: Manufactured gases
-  C0350: Coke oven gas
-  C0360: Gas works gas
-  C0371: Blast furnace gas
-  C0379: Other recovered gases
-  E7000: Electricity
-  FE: Fossil energy
-  G3000: Natural gas
-  H8000: Heat
-  N900H: Nuclear heat
-  O4000XBIO: Oil and petroleum products
-  O4100_TOT: Crude oil
-  O4200: Natural gas liquids
-  O4300: Refinery feedstocks
-  O4400X4410: Additives and oxygenates (excluding biofuel portion)
-  O4500: Other hydrocarbons
-  O4610: Refinery gas
-  O4620: Ethane
-  O4630: Liquefied petroleum gases
-  O4640: Naphtha
-  O4651: Aviation gasoline
-  O4652XR5210B: Motor gasoline (excluding biofuel portion)
-  O4653: Gasoline-type jet fuel
-  O4661XR5230B: Kerosene-type jet fuel (excluding biofuel portion)
-  O4669: Other kerosene
-  O4671XR5220B: Gas oil and diesel oil (excluding biofuel portion)
-  O4680: Fuel oil
-  O4691: White spirit and special boiling point industrial spirits
-  O4692: Lubricants
-  O4693: Paraffin waxes
-  O4694: Petroleum coke
-  O4695: Bitumen
-  O4699: Other oil products
-  P1000: Peat and peat products
-  P1100: Peat
-  P1200: Peat products
-  R5110-5150_W6000RI: Primary solid biofuels
-  R5160: Charcoal
-  R5210B: Blended biogasoline
-  R5210P: Pure biogasoline
-  R5220B: Blended biodiesels
-  R5220P: Pure biodiesels
-  R5230B: Blended bio jet kerosene
-  R5230P: Pure bio jet kerosene
-  R5290: Other liquid biofuels
-  R5300: Biogases
-  RA000: Renewables and biofuels
-  RA100: Hydro
-  RA200: Geothermal
-  RA300: Wind
-  RA410: Solar thermal
-  RA420: Solar photovoltaic
-  RA500: Tide, wave, ocean
-  RA600: Ambient heat (heat pumps)
-  S2000: Oil shale and oil sands
-  TOTAL: Total
-  W6100_6220: Non-renewable waste
-  W6100: Industrial waste (non-renewable)
-  W6210: Renewable municipal waste
-  W6220: Non-renewable municipal waste
-row_groups:
+column_groups:
   Network gas:
     - Biogases
     - Natural gas

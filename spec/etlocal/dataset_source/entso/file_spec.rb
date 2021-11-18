@@ -23,29 +23,29 @@ RSpec.describe DatasetSource::ENTSO::File do
   describe '.energy_balance' do
     let(:balance) { described_class.energy_balance(CSV.table(source_file.path, converters: [])) }
 
-    it 'converts siec "C0110" columns into a column' do
-      expect(balance.row?('Anthracite')).to be(true)
+    it 'converts siec "C0110" values into a column' do
+      expect(balance.column?('Anthracite')).to be(true)
     end
 
-    it 'converts siec "BIOE" columns into a column' do
-      expect(balance.row?('Bioenergy')).to be(true)
+    it 'converts siec "BIOE" values into a column' do
+      expect(balance.column?('Bioenergy')).to be(true)
     end
 
-    it 'converts nrg_bal "AFC" columns into a row' do
-      expect(balance.column?('Available for final consumption')).to be(true)
+    it 'converts nrg_bal "AFC" values into a row' do
+      expect(balance.row?('Available for final consumption')).to be(true)
     end
 
-    it 'converts nrg_bal "DL" columns into a row' do
-      expect(balance.column?('Distribution losses')).to be(true)
+    it 'converts nrg_bal "DL" values into a row' do
+      expect(balance.row?('Distribution losses')).to be(true)
     end
 
     it 'returns values as a numeric' do
-      expect(balance.get('Bioenergy', 'Distribution losses')).to eq(110_554.518)
+      expect(balance.get('Distribution losses', 'Bioenergy')).to eq(110_554.518)
     end
   end
 
   it 'creates a queryable runtime using the source file' do
     file = described_class.new('TEST', source_file)
-    expect(file.runtime.EB('Anthracite', 'Available for final consumption')).to eq(65_522.356)
+    expect(file.runtime.EB('Available for final consumption', 'Anthracite')).to eq(65_522.356)
   end
 end

@@ -28,5 +28,17 @@ module DatasetSource
     def self.from_hash(hash)
       ->(key) { hash.fetch(key) }
     end
+
+    # Creates a Proc KeyMap where each input key maps to a downcased symbol version.
+    #
+    # For example:
+    #   map = KeyMap.symbol
+    #   map.call('Abc (def)') => :abc_def
+    #   map.call('123') => :'123'
+    #
+    # Returns a Proc.
+    def self.symbol
+      ->(key) { key.tr(' ', '_').tr('-()', '').downcase.to_sym }
+    end
   end
 end

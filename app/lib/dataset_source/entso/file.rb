@@ -9,8 +9,6 @@ module DatasetSource
           vals = YAML.load_file(Rails.root.join('config/source_keys/entso.yml'))
 
           {
-            'rows' => vals['rows'].invert,
-            'columns' => vals['columns'].invert,
             'column_groups' => vals['column_groups']
           }.freeze
         end
@@ -20,11 +18,10 @@ module DatasetSource
         ColumnAggregatedMap.new(
           Map.new(
             csv_table.each_with_object({}) do |row, data|
-              data[row[:nrg_bal]] ||= {}
-              data[row[:nrg_bal]][row[:siec]] = row[:obs_val].to_f
+              data[row[:nrg_bal]] = row.to_h.except!(:nrg_bal)
             end,
-            KeyMap.from_hash(key_map_config['rows']),
-            KeyMap.from_hash(key_map_config['columns'])
+            KeyMap.identity,
+            KeyMap.symbol
           ),
           key_map_config['column_groups']
         )
@@ -49,7 +46,7 @@ module DatasetSource
       # human-readable names (based on the XLSX version of the data) to those keys provided by the
       # CSV file.
       def energy_balance
-        @energy_balance ||= self.class.energy_balance(CSV.table(@path, converters: []))
+        @energy_balance ||= self.class.energy_balance(CSV.table(@path, converters: [:numeric]))
       end
     end
   end

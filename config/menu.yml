@@ -22,7 +22,10 @@ agriculture:
   - agriculture_energy_demand
 industry:
   - industry_steel
+  - industry_aluminium
   - industry_metal
+  - industry_refinery
+  - industry_fertilizer
   - industry_chemical
   - industry_food
   - industry_paper

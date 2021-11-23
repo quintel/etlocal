@@ -120,6 +120,14 @@ nl:
       industry_refineries_residual_heat: "Beschikbare restwarmte raffinaderijen"
       industry_fertilizers_residual_heat: "Beschikbare restwarmte kunstmestindustrie"
       industry_ict_residual_heat: "Beschikbare restwarmte ICT"
+      industry_fertilizer_demand_energetic: Energetische vraag
+      industry_fertilizer_demand_non_energetic: Niet-energetische vraag
+      industry_aluminium_demand: Vraag
+      industry_aluminium_technology: Technologie
+      industry_refinery_input: Input
+      industry_refinery_output: Output
+      industry_refinery_demand_energetic: Energetische vraag
+      industry_refinery_demand_non_energetic: Niet-energetische vraag
 
       # other
       other_final_demand: Eindgebruik
@@ -142,14 +150,18 @@ nl:
       energy_heat_renewable: Duurzame warmtebronnen
       energy_heat_fossil: Fossiele warmtebronnen
       energy_heat_distribution_loss: Verlies warmenetten
-      energy_renewable_full_load_hours: Hernieuwbare elektriciteitsproductie
-      energy_fossil_full_load_hours: Fossiele elektriciteitsproductie
+      energy_renewable_full_load_hours: Vollasturen van hernieuwbare elektriciteitsproductie
+      energy_fossil_full_load_hours: Vollasturen van fossiele elektriciteitsproductie
       fuel_production: Brandstofproductie
       energy_efficiency_coal: Efficiënties van kolencentrales
       energy_efficiency_gas: Efficiënties van gascentrales
       energy_efficiency_other_fossil: Efficiënties van overige fossiel centrales
       energy_efficiency_renewable_chp: Efficiënties van hernieuwbare centrales
       energy_efficiency_heat_plants: Efficiënties van warmteketels
+      energy_fossil_chp_full_load_hours: Vollasturen van fossiele WKK's
+      energy_renewable_chp_full_load_hours: Vollasturen van hernieuwbare WKK's
+      energy_fossil_heat_full_load_hours: Vollasturen van fossiele warmteproductie
+      energy_renewable_heat_full_load_hours: Vollasturen van hernieuwbare warmteproductie
 
       # curves
       curves_supply_electricity: Aanbod - Elektriciteit

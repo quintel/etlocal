@@ -122,6 +122,14 @@ en:
       industry_refineries_residual_heat: "Available residual heat refineries"
       industry_fertilizers_residual_heat: "Available residual heat fertilizer industry"
       industry_ict_residual_heat: "Available residual heat ICT"
+      industry_fertilizer_demand_energetic: Energetic demand
+      industry_fertilizer_demand_non_energetic: Non-energetic demand
+      industry_aluminium_demand: Demand
+      industry_aluminium_technology: Technology
+      industry_refinery_input: Input
+      industry_refinery_output: Output
+      industry_refinery_demand_energetic: Energetic demand
+      industry_refinery_demand_non_energetic: Non-energetic demand
 
       # other
       other_final_demand: Final demand
@@ -144,14 +152,18 @@ en:
       energy_heat_renewable: Renewable heat sources
       energy_heat_fossil: Fossil heat sources
       energy_heat_distribution_loss: Heat network losses
-      energy_renewable_full_load_hours: Full load hours of renewable power plants
-      energy_fossil_full_load_hours: Full load hours of fossil power plants
       fuel_production: Fuel production
       energy_efficiency_coal: Efficiencies of coal plants
       energy_efficiency_gas: Efficiencies of gas plants
       energy_efficiency_other_fossil: Efficiencies of other fossil plants
       energy_efficiency_renewable_chp: Efficiencies of renewable plants
       energy_efficiency_heat_plants: Efficiencies of heat plants
+      energy_fossil_full_load_hours: Full load hours of fossil power plants
+      energy_renewable_full_load_hours: Full load hours of renewable power plants
+      energy_fossil_chp_full_load_hours: Full load hours of fossil CHP's
+      energy_renewable_chp_full_load_hours: Full load hours of renewable CHP's
+      energy_fossil_heat_full_load_hours: Full load hours of fossil heat plants
+      energy_renewable_heat_full_load_hours: Full load hours of renewable heat plants
 
       # curves
       curves_supply_electricity: Supply - Electricity

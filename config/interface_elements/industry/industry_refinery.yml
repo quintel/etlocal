@@ -63,7 +63,7 @@ groups:
 
   - header: industry_refinery_demand_transformation_non_energetic
     items:
-    - key: input_industry_refinery_transformation_crude_oil_crude_oil_output_conversion
+    - key: input_industry_refinery_transformation_crude_oil_other_oil_output_conversion
       unit: 'TJ'
 #      entso: |
 #        EB("Transformation output - refineries and petrochemical industry - refinery output", "Crude oil aggregated") -

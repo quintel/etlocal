@@ -16,6 +16,17 @@ column_groups:
     - Coal tar
     - Brown coal briquettes
     - Peat and peat products
+  Coal excl lignite:
+    - Anthracite
+    - Coking coal
+    - Other bituminous coal
+    - Sub-bituminous coal
+    - Patent fuel
+    - Coke oven coke
+    - Gas coke
+    - Coal tar
+    - Brown coal briquettes
+    - Peat and peat products
   Coal gas:
     - Coke oven gas
     - Blast furnace gas

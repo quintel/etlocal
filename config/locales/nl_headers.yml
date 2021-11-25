@@ -134,11 +134,10 @@ nl:
       industry_fertilizer_demand_non_energetic: Niet-energetische vraag
       industry_aluminium_demand: Vraag
       industry_aluminium_technology: Technologie
-      industry_refinery_input: Input
-      industry_refinery_output: Output
+      industry_refinery_input: Olie grondstof vraag
+      industry_refinery_output: Brandstofproductie
       industry_refinery_demand_energetic: Energetische vraag
       industry_refinery_demand_non_energetic: Niet-energetische vraag
-      industry_refinery_demand_transformation_non_energetic: Transformatie output
 
       # other
       other_final_demand: Eindgebruik

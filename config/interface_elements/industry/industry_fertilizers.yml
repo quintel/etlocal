@@ -30,7 +30,6 @@ groups:
 #        EB("Final consumption - industry sector - chemical fertilizers - energy use", "Coke oven coke")
 
   - header: industry_fertilizer_demand_non_energetic
-    type: slider
     items:
     - key: input_industry_chemical_fertilizers_network_gas_non_energetic_demand
       unit: 'TJ'

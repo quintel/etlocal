@@ -424,7 +424,7 @@ nl:
         input_industry_chemical_refineries_network_gas_non_energetic_demand: Gas
         input_industry_chemical_refineries_wood_pellets_non_energetic_demand: Biomassa
         input_industry_chemical_refineries_coal_non_energetic_demand: Kolen
-        input_industry_refinery_transformation_crude_oil_crude_oil_demand: Olie
+        input_industry_refinery_transformation_crude_oil_other_oil_demand: Overige olie
         input_industry_refinery_transformation_crude_oil_gasoline_demand: Benzine
         input_industry_refinery_transformation_crude_oil_heavy_fuel_oil_demand: Zware stookolie
         input_industry_refinery_transformation_crude_oil_kerosene_demand: Kerosine
@@ -432,14 +432,6 @@ nl:
         input_industry_refinery_transformation_crude_oil_refinery_gas_demand: Raffinagegas
         input_industry_refinery_transformation_crude_oil_diesel_demand: Diesel
         input_industry_refinery_transformation_crude_oil_loss_demand: Verliezen
-        input_industry_refinery_transformation_crude_oil_other_oil_output_conversion: Olie
-        input_industry_refinery_transformation_crude_oil_gasoline_output_conversion: Benzine
-        input_industry_refinery_transformation_crude_oil_heavy_fuel_oil_output_conversion: Zware stookolie
-        input_industry_refinery_transformation_crude_oil_kerosene_output_conversion: Kerosine
-        input_industry_refinery_transformation_crude_oil_lpg_output_conversion: LPG
-        input_industry_refinery_transformation_crude_oil_refinery_gas_output_conversion: Raffinagegas
-        input_industry_refinery_transformation_crude_oil_diesel_output_conversion: Diesel
-        input_industry_refinery_transformation_crude_oil_loss_output_conversion: Verliezen
 
         input_industry_chemical_fertilizers_scaling_factor: "% nationale kunstmestsector"
         input_industry_chemical_other_electricity_demand: Elektriciteit

@@ -94,18 +94,26 @@ nl:
       industry_heat: Gebruikte brandstof voor WKK en ketels
       industry_gas_fuelmix: Brandstofmix gasgestookte WKK
       industry_final_demand_crude_oil_input: Brandstoffen voor olieketels in alle industriesectoren
+      industry_metal_steel_production: Steel productie
+      industry_metal_steel_production_route: Steel productietechnologie
       industry_metal_steel_final_demand: Eindgebruik
-      industry_metal_steel_transformation_input: Transformatie-inzet
-      industry_metal_steel_cokesoven_transformation: Kooksoven transformatie
-      industry_metal_steel_blastfurnace_transformation: Hoogoven transformatie
-      industry_metal_steel_energy_production_input: Brandstofinput energieproductie
-      industry_metal_steel_power_plant_efficiency: Kolengaselektriciteitscentrale efficiëntie
-      industry_metal_steel_chp_efficiency: Kolengas-WKK efficiëntie
-      industry_metal_steel_cokesoven_own_use: Kooksoven (eigen gebruik)
-      industry_metal_steel_blastfurnace_own_use: Hoogoven (eigen gebruik)
-      industry_metal_steel_power_plant: Elektriciteitsproductie
-      industry_metal_steel_chp: WKK-productie
-      industry_metal_aluminium: Aluminium
+      energy_cokesoven_transformation_input: Kooksoven transformatie input
+      energy_cokesoven_transformation_output: Kooksoven transformatie output
+      energy_cokesoven_own_use: Kooksoven (eigen gebruik)
+      energy_blastfurnace_transformation_input: Hoogoven - transformatie input
+      energy_blastfurnace_transformation_output: Hoogoven - transformatie output
+      energy_blastfurnace_own_use: Hoogoven (eigen gebruik)
+      industry_metal_steel_energy_production_input:  Brandstofvraag energieproductie
+      energy_power_combined_cycle_coal_gas_conversion:  Elektriciteitsproductie
+      energy_chp_coal_gas_conversion: WKK-productie
+      industry_metal_steel_coal_use: Eindgebruik - gebruik van kolen
+      industry_metal_steel_electricity_use: Eindgebruik - gebruik van elektriciteit
+      industry_metal_steel_network_gas_use: Eindgebruik - gebruik van gas
+      industry_metal_aluminium_production: Aluminium productie
+      industry_metal_aluminium_production_route: Aluminium productietechnologie
+      industry_aluminium_demand: Eindgebruik
+      industry_metal_aluminium_electricity_use: Eindgebruik - gebruik van elektriciteit
+      industry_metal_aluminium_network_gas_use: Eindgebruik - gebruik van gas
       industry_metal_other: Overige metaalindustrie
       industry_chemical_fertilizers: Kunstmest
       industry_chemical_refineries: Raffinaderijen
@@ -130,6 +138,7 @@ nl:
       industry_refinery_output: Output
       industry_refinery_demand_energetic: Energetische vraag
       industry_refinery_demand_non_energetic: Niet-energetische vraag
+      industry_refinery_demand_transformation_non_energetic: Transformatie output
 
       # other
       other_final_demand: Eindgebruik

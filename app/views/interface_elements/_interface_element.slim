@@ -51,6 +51,7 @@
                         = form.hidden_field interface_item.key, class: 'value_input'
                       - else
                         = text_field_tag interface_item.key, number_with_precision(form.object.public_send(interface_item.key), precision: interface_item.precision, strip_insignificant_zeros: true), disabled: true
+                        = form.hidden_field interface_item.key, class: 'value_input'
 
                     - else
                       span.read-only

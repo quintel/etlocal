@@ -25,6 +25,44 @@ describe DatasetEdit do
     end
   end
 
+  describe 'when the edit has a dataset' do
+    let(:dataset_edit) do
+      described_class.new(
+        key: 'thing',
+        value: 10,
+        commit: FactoryBot.build(:commit)
+      )
+    end
+
+    context 'with a DB dataset' do
+      it 'has no errors on the value' do
+        expect(dataset_edit).to have(:no).errors_on(:value)
+      end
+    end
+
+    context 'with an ENTSO dataset' do
+      before do
+        dataset_edit.commit.dataset.data_source = 'entso'
+      end
+
+      it 'has no errors when editable and using an ENTSO dataset' do
+        allow(EditableAttributesCollection).to receive(:item).with('thing').and_return(
+          EditableAttribute.new(dataset_edit.commit.dataset, :thing, [], nil)
+        )
+
+        expect(dataset_edit).to have(:no).errors_on(:value)
+      end
+
+      it 'has an error when editable and using an ENTSO dataset' do
+        allow(EditableAttributesCollection).to receive(:item).with('thing').and_return(
+          EditableAttribute.new(dataset_edit.commit.dataset, :thing, [], nil, entso_query: 'ABC')
+        )
+
+        expect(dataset_edit).to have(1).error_on(:value)
+      end
+    end
+  end
+
   describe '#creator' do
     let(:dataset_edit) { DatasetEdit.new(value: 0, commit: commit) }
     let(:commit) { FactoryBot.create(:commit, user: user) }

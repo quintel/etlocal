@@ -89,11 +89,11 @@ groups:
           EB("Final consumption - other sectors - households - energy use", "Bio oil") )
       - key: input_percentage_of_other_oil_households_final_demand_crude_oil
         unit: '%'
-        # entso: |
-        #   EB("Final consumption - other sectors - households - energy use", "Other oil") / (
-        #   EEB("Final consumption - other sectors - households - energy use", "Crude oil aggregated") +
-        #   EB("Final consumption - other sectors - households - energy use", "Bio-diesel") +
-        #   EB("Final consumption - other sectors - households - energy use", "Bio-kerosene") +
-        #   EB("Final consumption - other sectors - households - energy use", "Bio oil") )
+        entso: |
+          EB("Final consumption - other sectors - households - energy use", "Other oil") / (
+          EEB("Final consumption - other sectors - households - energy use", "Crude oil aggregated") +
+          EB("Final consumption - other sectors - households - energy use", "Bio-diesel") +
+          EB("Final consumption - other sectors - households - energy use", "Bio-kerosene") +
+          EB("Final consumption - other sectors - households - energy use", "Bio oil") )
         flexible: true
         skip_validation: true

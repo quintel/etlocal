@@ -42,6 +42,10 @@ class EditableAttribute
     latest ? latest.value : default
   end
 
+  def editable?(dataset)
+    !dataset.queryable_source? || @entso_query.blank?
+  end
+
   private
 
   def atlas_default

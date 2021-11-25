@@ -4,6 +4,11 @@ groups:
     items:
     - key: co2_emission_1990
       unit: 'Mton'
+    - key: co2_emission_1990_aviation_bunkers
+      unit: 'Mton'
+    - key: co2_emission_1990_marine_bunkers
+      unit: 'Mton'
+      
   - header: area_ghg
   - header: energetic_other_ghg
     items:
@@ -19,6 +24,7 @@ groups:
       unit: 'Mton'
     - key: energetic_emissions_other_ghg_energy
       unit: 'Mton'
+
   - header: non_energetic_co2
     items:
     - key: non_energetic_emissions_co2_chemical_industry
@@ -33,6 +39,7 @@ groups:
       unit: 'Mton'
     - key: indirect_emissions_co2
       unit: 'Mton'
+
   - header: non_energetic_other_ghg
     items:
     - key: non_energetic_emissions_other_ghg_chemical_industry

@@ -28,9 +28,11 @@ en:
       area_emission_factors_transport_fuels: Transport fuels
       area_emission_factors_import: Import
       area_electricity_grid_costs: Present electricity grid costs
+      area_gas_grid_costs: Present gas grid costs
       area_electricity_grid_capacity: Present spare capacity electricity grid
       area_electricity_grid_reinforcement: Electricity grid reinforcement
       area_heat_infrastructure_lengths: District heating pipelines
+      area_interconnector_capacity: Present interconnector capcity
 
       #households
       households_housing_stock_distribution: Housing stock
@@ -164,6 +166,7 @@ en:
       energy_renewable_chp_full_load_hours: Full load hours of renewable CHP's
       energy_fossil_heat_full_load_hours: Full load hours of fossil heat plants
       energy_renewable_heat_full_load_hours: Full load hours of renewable heat plants
+      energy_renewable_full_load_hours_max: Maximum full load hours of renewable power plants
 
       # curves
       curves_supply_electricity: Supply - Electricity

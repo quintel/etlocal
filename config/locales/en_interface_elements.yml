@@ -12,6 +12,8 @@ en:
         number_of_inhabitants: Number of inhabitants
 
         co2_emission_1990: 'CO<sub>2</sub> emissions in 1990'
+        co2_emission_1990_aviation_bunkers: 'CO<sub>2</sub> emissions international aviation in 1990'
+        co2_emission_1990_marine_bunkers: 'CO<sub>2</sub> emissions international shipping in 1990'
         energetic_emissions_other_ghg_households: "Households"
         energetic_emissions_other_ghg_buildings: "Buildings"
         energetic_emissions_other_ghg_transport: "Transport"
@@ -54,11 +56,13 @@ en:
         hv_net_total_costs_present: High voltage grid
         offshore_net_costs_present: Offshore wind grid
         interconnection_net_costs_present: Interconnector capacity
+        annual_infrastructure_cost_gas: Total gas infrastructure costs
         lv_net_spare_capacity: Low voltage grid
         lv_mv_trafo_spare_capacity: LV-MV transformers
         mv_net_spare_capacity: Medium voltage grid
         mv_hv_trafo_spare_capacity: MV-HV transformers
         hv_net_spare_capacity: High voltage grid
+        interconnector_capacity: Interconnector capacity
         lv_net_capacity_per_step: Step size of low voltage grid reinforcement
         lv_net_costs_per_capacity_step: Costs of low voltage grid reinforcement per step
         lv_mv_trafo_capacity_per_step: Step size of lv-mv transformer reinforcement
@@ -619,6 +623,7 @@ en:
         industry_heat_burner_lignite_full_load_hours: Lignite heater
         industry_heat_burner_coal_full_load_hours: Coal heater
         industry_heat_burner_crude_oil_full_load_hours: Oil heater
+        flh_solar_pv_solar_radiation_max: Solar panels (roofs and ground-mount)
 
         fuel_production_coal_demand: Coal
         fuel_production_lignite_demand: Lignite

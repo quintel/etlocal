@@ -13,6 +13,8 @@ nl:
         number_of_inhabitants: Aantal inwoners
 
         co2_emission_1990: 'CO<sub>2</sub>-emissies in 1990'
+        co2_emission_1990_aviation_bunkers: 'CO<sub>2</sub>-emissies internationale luchtvaart in 1990'
+        co2_emission_1990_marine_bunkers: 'CO<sub>2</sub>-emissies internationale scheepvaart in 1990'
         other_emission_built_environment: 'Gebouwde omgeving'
         other_emission_transport: 'Transportsector'
         other_emission_industry_energy: 'Industrie en energiesector'
@@ -59,11 +61,13 @@ nl:
         hv_net_total_costs_present: Hoogspanningsnet
         offshore_net_costs_present: Elektriciteitsnet wind op zee
         interconnection_net_costs_present: Interconnectorcapaciteit
+        annual_infrastructure_cost_gas: Kosten gas infrastructuur
         lv_net_spare_capacity: Laagspanningsnet
         lv_mv_trafo_spare_capacity: LS-MS-transformatoren
         mv_net_spare_capacity: Middenspanningsnet
         mv_hv_trafo_spare_capacity: MS-HS-transformatoren
         hv_net_spare_capacity: Hoogspanningsnet
+        interconnector_capacity: Interconnectorcapaciteit
         lv_net_capacity_per_step: Stapgrootte van laagspanningsnetverzwaring
         lv_net_costs_per_capacity_step: Kosten laagspanningsnetverzwaring per stap
         lv_mv_trafo_capacity_per_step: Stapgrootte van capaciteitsuitbreiding LS-MS-transformatoren
@@ -604,6 +608,7 @@ nl:
         industry_heat_burner_coal_full_load_hours: Kolenketel
         industry_heat_burner_crude_oil_full_load_hours: Olieketel
         input_energy_power_combined_cycle_coal_gas_full_load_hours: Syngas STEG
+        flh_solar_pv_solar_radiation_max: Zonnepanelen (op dak en op land)
 
         fuel_production_coal_demand: Kolen
         fuel_production_lignite_demand: Bruinkool

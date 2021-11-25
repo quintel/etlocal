@@ -36,7 +36,12 @@ class YmlReadOnlyRecord
   def self.load_directory
     items = []
     Dir.glob("#{Rails.root}/config/#{yml_store}/**/*.yml") do |yml_file|
-      items << self.new( YAML.load_file yml_file )
+      begin
+        items << self.new( YAML.load_file yml_file )
+      rescue StandardError => e
+        puts "Error reading #{yml_file}"
+        raise e
+      end
     end
     items
   end

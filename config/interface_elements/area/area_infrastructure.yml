@@ -17,6 +17,11 @@ groups:
       - key: interconnection_net_costs_present
         unit: '€'
 
+  - header: area_gas_grid_costs
+    items:
+      - key: annual_infrastructure_cost_gas
+        unit: '€'
+
   - header: area_electricity_grid_capacity
     type: slider
     items:
@@ -30,6 +35,11 @@ groups:
         unit: '%'
       - key: mv_hv_trafo_spare_capacity
         unit: '%'
+
+  - header: area_interconnector_capacity
+    items:
+      - key: interconnector_capacity
+        unit: 'MW'
 
   - header: area_electricity_grid_reinforcement
     items:

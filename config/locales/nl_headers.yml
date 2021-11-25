@@ -29,9 +29,11 @@ nl:
       area_emission_factors_transport_fuels: Transportbrandstoffen
       area_emission_factors_import: Import
       area_electricity_grid_costs: Kosten elektriciteitsnetwerk
+      area_gas_grid_costs: Kosten gasnetwerk
       area_electricity_grid_capacity: Beschikbare capaciteit huidig elektriciteitsnet
       area_electricity_grid_reinforcement: Verzwaring elektriciteitsnet
       area_heat_infrastructure_lengths: Leidinglengtes warmtenet
+      area_interconnector_capacity: Beschikbare capciteit huidige interconnectors
 
       #households
       households_housing_stock_distribution: Huizenvoorraad
@@ -162,6 +164,7 @@ nl:
       energy_renewable_chp_full_load_hours: Vollasturen van hernieuwbare WKK's
       energy_fossil_heat_full_load_hours: Vollasturen van fossiele warmteproductie
       energy_renewable_heat_full_load_hours: Vollasturen van hernieuwbare warmteproductie
+      energy_renewable_full_load_hours_max: Maximum vollasturen van hernieuwbare centrales
 
       # curves
       curves_supply_electricity: Aanbod - Elektriciteit

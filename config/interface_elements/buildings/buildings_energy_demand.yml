@@ -102,7 +102,7 @@ groups:
           EB("Final consumption - other sectors - commercial and public services - energy use", "Liquefied petroleum gases") +
           EB("Final consumption - other sectors - commercial and public services - energy use", "Bio oil") +
           EB("Final consumption - other sectors - commercial and public services - energy use", "Other oil") )
-      - key: input_percentage_of_crude_oil_buildings_final_demand_crude_oil
+      - key: input_percentage_of_other_oil_buildings_final_demand_crude_oil
         unit: '%'
         # entso: |
         #   EB("Final consumption - other sectors - commercial and public services - energy use", "Other oil") / (

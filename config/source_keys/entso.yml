@@ -61,7 +61,6 @@ column_groups:
   Bio-diesel:
     - Pure biodiesels
     - Blended biodiesels
-    - Other liquid biofuels
   Kerosene:
     - Kerosene-type jet fuel (excluding biofuel portion)
     - Other kerosene
@@ -77,6 +76,7 @@ column_groups:
     - Additives and oxygenates (excluding biofuel portion)
     - Refinery feedstocks
     - Natural gas liquids
+    - Refinery gas
     - Ethane
     - Motor gasoline (excluding biofuel portion)
     - Aviation gasoline

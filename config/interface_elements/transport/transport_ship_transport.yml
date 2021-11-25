@@ -16,7 +16,9 @@ groups:
           unit: 'TJ'
           entso: |
             EB("Final consumption - transport sector - domestic navigation - energy use", "Bio-diesel") +
-            EB("Final consumption - other sectors - fishing - energy use", "Bio-diesel")
+            EB("Final consumption - transport sector - domestic navigation - energy use", "Other liquid biofuels") +
+            EB("Final consumption - other sectors - fishing - energy use", "Bio-diesel") +
+            EB("Final consumption - other sectors - fishing - energy use", "Other liquid biofuels")
         - key: transport_final_demand_for_shipping_lng_demand
           unit: 'TJ'
           entso: |

@@ -34,7 +34,8 @@ groups:
         - key: input_transport_road_biodiesel_demand
           unit: 'TJ'
           entso: |
-            EB("Final consumption - transport sector - road - energy use", "Bio-diesel")
+            EB("Final consumption - transport sector - road - energy use", "Bio-diesel") +
+            EB("Final consumption - transport sector - road - energy use", "other liquid biofuels")
         - key: transport_final_demand_for_road_compressed_network_gas_demand
           unit: 'TJ'
 #          entso: |

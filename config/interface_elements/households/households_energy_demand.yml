@@ -91,7 +91,7 @@ groups:
         unit: '%'
         entso: |
           EB("Final consumption - other sectors - households - energy use", "Other oil") / (
-          EEB("Final consumption - other sectors - households - energy use", "Crude oil aggregated") +
+          EB("Final consumption - other sectors - households - energy use", "Crude oil aggregated") +
           EB("Final consumption - other sectors - households - energy use", "Bio-diesel") +
           EB("Final consumption - other sectors - households - energy use", "Bio-kerosene") +
           EB("Final consumption - other sectors - households - energy use", "Bio oil") )

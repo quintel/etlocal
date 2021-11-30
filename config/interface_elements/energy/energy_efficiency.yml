@@ -4,12 +4,22 @@ groups:
     items:
       - key: input_energy_power_supercritical_coal_electricity_output_conversion
         unit: '%'
-        entso: |
-          EB("Coal conventional", "Electricity") / EB("Coal conventional", "Coal excl lignite") * 100
+        # entso: |
+        #   IF(EB("Coal conventional", "Electricity") > 0.0,
+        #   {EB("Coal conventional", "Electricity") / EB("Coal conventional", "Coal excl lignite") * 100},
+        #   36.0)
       - key: input_energy_power_ultra_supercritical_coal_electricity_output_conversion
         unit: '%'
+        # entso: |
+        #   IF(EB("Coal pulverized", "Electricity") > 0.0,
+        #   {EB("Coal pulverized", "Electricity") / EB("Coal pulverized", "Coal excl lignite") * 100},
+        #   46.0)
       - key: input_energy_power_ultra_supercritical_ccs_coal_electricity_output_conversion
         unit: '%'
+        # entso: |
+        #   IF(EB("Coal pulverized CCS", "Electricity") > 0.0,
+        #   {EB("Coal pulverized CCS", "Electricity") / EB("Coal pulverized CCS", "Coal excl lignite") * 100},
+        #   36.1)
       - key: input_energy_power_ultra_supercritical_cofiring_coal_electricity_output_conversion
         unit: '%'
       - key: input_energy_power_combined_cycle_coal_electricity_output_conversion

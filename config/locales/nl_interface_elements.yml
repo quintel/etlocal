@@ -405,8 +405,8 @@ nl:
         input_industry_metal_aluminium_network_gas_demand: Netwerk gas
         industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_electrolysis_current_electricity_parent_share: Elektrolyse
         industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_smeltoven_electricity_parent_share: Smeltoven
-        industry_final_demand_for_metal_aluminium_network_gas_industry_aluminium_electrolysis_current_electricity_parent_share: Elektrolyse
-        industry_final_demand_for_metal_aluminium_network_gas_industry_aluminium_smeltoven_electricity_parent_share: Smeltoven
+        industry_aluminium_burner_network_gas_industry_aluminium_electrolysis_current_electricity_parent_share: Elektrolyse
+        industry_aluminium_burner_network_gas_industry_aluminium_smeltoven_electricity_parent_share: Smeltoven
 
         input_industry_metal_other_electricity_demand: Elektriciteit
         input_industry_metal_other_network_gas_demand: Gas
@@ -514,6 +514,7 @@ nl:
         input_industry_chemical_fertilizers_wood_pellets_non_energetic_demand: Biomassa
         input_industry_chemical_fertilizers_crude_oil_non_energetic_demand: Olie
         input_industry_chemical_fertilizers_coal_non_energetic_demand: Kolen
+        input_industry_chemical_fertilizers_hydrogen_non_energetic_demand: Waterstof
 
         # Energy
         energy_power_sector_own_use_electricity_demand: Eigen gebruik elektriciteit

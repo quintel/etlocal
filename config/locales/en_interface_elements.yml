@@ -400,8 +400,8 @@ en:
         input_industry_metal_aluminium_network_gas_demand: Network gas
         industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_electrolysis_current_electricity_parent_share: Electrolysis
         industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_smeltoven_electricity_parent_share: Smeltoven
-        industry_final_demand_for_metal_aluminium_network_gas_industry_aluminium_electrolysis_current_electricity_parent_share: Electrolysis
-        industry_final_demand_for_metal_aluminium_network_gas_industry_aluminium_smeltoven_electricity_parent_share: Smeltoven
+        industry_aluminium_burner_network_gas_industry_aluminium_electrolysis_current_electricity_parent_share: Electrolysis
+        industry_aluminium_burner_network_gas_industry_aluminium_smeltoven_electricity_parent_share: Smeltoven
 
         input_industry_metal_other_electricity_demand: Electricity
         input_industry_metal_other_network_gas_demand: Gas
@@ -509,7 +509,7 @@ en:
         input_industry_chemical_fertilizers_wood_pellets_non_energetic_demand: Biomass
         input_industry_chemical_fertilizers_crude_oil_non_energetic_demand: Oil
         input_industry_chemical_fertilizers_coal_non_energetic_demand: Coal
-
+        input_industry_chemical_fertilizers_hydrogen_non_energetic_demand: Hydrogen
 
         # Energy
         energy_power_sector_own_use_electricity_demand: Own use of electricity

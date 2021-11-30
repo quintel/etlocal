@@ -7,7 +7,7 @@ class AddDummyValuesToEmptyKeys < ActiveRecord::Migration[5.2]
     ds_sk = Dataset.find_by(geo_id: 'SK')
     empty_fields = ds_sk.editable_attributes.as_json.reject{ |k,v| v }.keys
 
-    Dataset.where(geo_id: ['SK','DE']).each do |dataset|
+    Dataset.where(geo_id: ['SK']).each do |dataset|
         ActiveRecord::Base.transaction do
           com = Commit.create!(
             user_id: 4,

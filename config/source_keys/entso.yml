@@ -53,6 +53,7 @@ column_groups:
     - Bitumen
     - Paraffin waxes
     - Petroleum coke
+    - Oil shale and oil sands
     - Other oil products
   Gasoline:
     - Motor gasoline (excluding biofuel portion)

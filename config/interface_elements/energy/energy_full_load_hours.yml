@@ -12,7 +12,7 @@ groups:
         unit: 'flh'
       - key: energy_power_supercritical_coal_full_load_hours
         unit: 'flh'
-      - key: input_energy_power_combined_cycle_coal_gas_full_load_hours
+      - key: energy_power_combined_cycle_coal_gas_full_load_hours
         unit: 'flh'
       - key: energy_power_ultra_supercritical_ccs_coal_full_load_hours
         unit: 'flh'
@@ -65,7 +65,7 @@ groups:
 
   - header: energy_fossil_chp_full_load_hours
     items:
-      - key: input_energy_chp_coal_gas_full_load_hours
+      - key: energy_chp_coal_gas_full_load_hours
         unit: 'flh'
       - key: industry_chp_turbine_gas_power_fuelmix_full_load_hours
         unit: 'flh'

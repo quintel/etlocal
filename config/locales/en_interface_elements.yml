@@ -389,8 +389,8 @@ en:
         industry_final_demand_for_metal_steel_electricity_industry_steel_scrap_hbi_eaf_parent_share: Electric Arc Furnace
         industry_final_demand_for_metal_steel_network_gas_industry_steel_blastfurnace_bof_parent_share: Blastfurnace BOF
         industry_final_demand_for_metal_steel_network_gas_industry_steel_scrap_hbi_eaf_parent_share: Electric Arc Furnace
-        input_energy_power_combined_cycle_coal_gas_full_load_hours: Coal gas power plant
-        input_energy_chp_coal_gas_full_load_hours: Coal gas CHP
+        energy_power_combined_cycle_coal_gas_full_load_hours: Coal gas power plant
+        energy_chp_coal_gas_full_load_hours: Coal gas CHP
         input_energy_blastfurnace_transformation_loss_output_conversion: Loss
 
         input_industry_metal_aluminium_production: Aluminium production

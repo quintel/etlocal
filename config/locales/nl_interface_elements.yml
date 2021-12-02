@@ -394,8 +394,8 @@ nl:
         industry_final_demand_for_metal_steel_electricity_industry_steel_scrap_hbi_eaf_parent_share: Elektrische oven
         industry_final_demand_for_metal_steel_network_gas_industry_steel_blastfurnace_bof_parent_share: Hoogoven
         industry_final_demand_for_metal_steel_network_gas_industry_steel_scrap_hbi_eaf_parent_share: Elektrische oven
-        input_energy_power_combined_cycle_coal_gas_full_load_hours: Kolengascentrale
-        input_energy_chp_coal_gas_full_load_hours: Kolengas-WKK
+        energy_power_combined_cycle_coal_gas_full_load_hours: Kolengascentrale
+        energy_chp_coal_gas_full_load_hours: Kolengas-WKK
         input_energy_blastfurnace_transformation_loss_output_conversion: Verliezen
 
         input_industry_metal_aluminium_production: Aluminiumproductie

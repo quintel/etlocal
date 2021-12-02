@@ -13,7 +13,6 @@ groups:
           EB("Energy sector - blast furnaces - energy use", "Electricity") -
           EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Electricity") -
           EB("Final consumption - industry sector - iron and steel - energy use", "Electricity") -
-          EB("Final consumption - industry sector - chemical and petrochemical - energy use", "Electricity") -
           EB("Final consumption - industry sector - non-ferrous metals - energy use", "Electricity") -
           EB("Final consumption - industry sector - food, beverages and tobacco - energy use", "Electricity") -
           EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Electricity")

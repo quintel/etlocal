@@ -5,12 +5,12 @@ groups:
     items:
     - key: industry_useful_demand_for_chemical_refineries_crude_oil_non_energetic_demand
       unit: 'TJ'
-#      entso: |
-#        EB("Final consumption - industry sector - chemical refineries - non-energy use", "Crude oil") +
-#        EB("Final consumption - industry sector - chemical refineries - non-energy use", "Natural gas liquids") +
-#        EB("Final consumption - industry sector - chemical refineries - non-energy use", "Refinery feedstocks") +
-#        EB("Final consumption - industry sector - chemical refineries - non-energy use", "Additives and oxygenates (excluding biofuel portion)") +
-#        EB("Final consumption - industry sector - chemical refineries - non-energy use", "Other hydrocarbons")
+      entso: |
+        EB("Transformation input - refineries and petrochemical industry - refinery intake - energy use", "Crude oil") +
+        EB("Transformation input - refineries and petrochemical industry - refinery intake - energy use", "Natural gas liquids") +
+        EB("Transformation input - refineries and petrochemical industry - refinery intake - energy use", "Refinery feedstocks") +
+        EB("Transformation input - refineries and petrochemical industry - refinery intake - energy use", "Additives and oxygenates (excluding biofuel portion)") +
+        EB("Transformation input - refineries and petrochemical industry - refinery intake - energy use", "Other hydrocarbons")
 
   - header: industry_refinery_demand_energetic
     items:
@@ -45,55 +45,39 @@ groups:
         EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Additives and oxygenates (excluding biofuel portion)") -
         EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Other hydrocarbons")
 
-  - header: industry_refinery_demand_non_energetic
-    items:
-    - key: input_industry_chemical_refineries_network_gas_non_energetic_demand
-      unit: 'TJ'
-#      entso: |
-#        EB("Final consumption - industry sector - chemical refineries - non-energy use", "Network gas")
-    - key: input_industry_chemical_refineries_wood_pellets_non_energetic_demand
-      unit: 'TJ'
-#      entso: |
-#        EB("Final consumption - industry sector - chemical refineries - non-energy use", "Primary solid biofuels")
-    - key: input_industry_chemical_refineries_coal_non_energetic_demand
-      unit: 'TJ'
-#      entso: |
-#        EB("Final consumption - industry sector - chemical refineries - non-energy use", "Coal") -
-#        EB("Final consumption - industry sector - chemical refineries - non-energy use", "Coke oven coke")
-
   - header: industry_refinery_output
     items:
     - key: input_industry_refinery_transformation_crude_oil_other_oil_demand
       unit: 'TJ'
-#      entso: |
-#        EB("Transformation output - refineries and petrochemical industry - refinery output", "Crude oil aggregated") -
-#        EB("Transformation output - refineries and petrochemical industry - refinery output", "Gasoline") -
-#        EB("Transformation output - refineries and petrochemical industry - refinery output", "Fuel oil")
+      entso: |
+        EB("Transformation output - refineries and petrochemical industry - refinery output", "Crude oil aggregated") -
+        EB("Transformation output - refineries and petrochemical industry - refinery output", "Gasoline") -
+        EB("Transformation output - refineries and petrochemical industry - refinery output", "Fuel oil")
     - key: input_industry_refinery_transformation_crude_oil_gasoline_demand
       unit: 'TJ'
-#      entso: |
-#        EB("Transformation output - refineries and petrochemical industry - refinery output", "Gasoline")
+      entso: |
+        EB("Transformation output - refineries and petrochemical industry - refinery output", "Gasoline")
     - key: input_industry_refinery_transformation_crude_oil_heavy_fuel_oil_demand
       unit: 'TJ'
-#      entso: |
-#        EB("Transformation output - refineries and petrochemical industry - refinery output", "Fuel oil")
+      entso: |
+        EB("Transformation output - refineries and petrochemical industry - refinery output", "Fuel oil")
     - key: input_industry_refinery_transformation_crude_oil_kerosene_demand
       unit: 'TJ'
-#      entso: |
-#        EB("Transformation output - refineries and petrochemical industry - refinery output", "Kerosene")
+      entso: |
+        EB("Transformation output - refineries and petrochemical industry - refinery output", "Kerosene")
     - key: input_industry_refinery_transformation_crude_oil_lpg_demand
       unit: 'TJ'
-#      entso: |
-#        EB("Transformation output - refineries and petrochemical industry - refinery output", "Liquefied petroleum gases")
+      entso: |
+        EB("Transformation output - refineries and petrochemical industry - refinery output", "Liquefied petroleum gases")
     - key: input_industry_refinery_transformation_crude_oil_refinery_gas_demand
       unit: 'TJ'
-#      entso: |
-#        EB("Transformation output - refineries and petrochemical industry - refinery output", "Refinery gas")
+      entso: |
+        EB("Transformation output - refineries and petrochemical industry - refinery output", "Refinery gas")
     - key: input_industry_refinery_transformation_crude_oil_diesel_demand
       unit: 'TJ'
-#      entso: |
-#        EB("Transformation output - refineries and petrochemical industry - refinery output", "Gas oil and diesel oil (excluding biofuel portion)")
+      entso: |
+        EB("Transformation output - refineries and petrochemical industry - refinery output", "Gas oil and diesel oil (excluding biofuel portion)")
     - key: input_industry_refinery_transformation_crude_oil_loss_demand
       unit: 'TJ'
-#      entso: |
-#        - EB("Distribution losses", "Crude oil aggregated")
+      entso: |
+        EB("Distribution losses", "Crude oil aggregated")

@@ -212,9 +212,9 @@ groups:
         unit: '%'
         entso: |
           (EB("Gross heat production - main activity producer combined heat and power", "Coal gas") +
-          EB("Gross heat production - autoproducer combined heat and power", "Coal gas") ) +
+          EB("Gross heat production - autoproducer combined heat and power", "Coal gas") +
           EB("Gross heat production - main activity producer heat only", "Coal gas") +
-          EB("Gross heat production - autoproducer heat only", "Coal gas") / (
+          EB("Gross heat production - autoproducer heat only", "Coal gas") ) / (
           EB("Transformation input - electricity and heat generation - main activity producer combined heat and power - energy use", "Coal gas") +
           EB("Transformation input - electricity and heat generation - autoproducer combined heat and power - energy use", "Coal gas") +
           EB("Transformation input - electricity and heat generation - main activity producer heat only - energy use", "Coal gas") +

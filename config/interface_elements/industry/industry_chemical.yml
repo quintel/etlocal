@@ -5,49 +5,49 @@ groups:
     items:
       - key: input_industry_chemical_other_electricity_demand
         unit: 'TJ'
-#        entso: |
-#          EB("Final consumption - industry sector - chemical other - energy use", "Electricity")
+        entso: |
+          EB("Final consumption - industry sector - chemical other - energy use", "Electricity")
       - key: input_industry_chemical_other_network_gas_demand
         unit: 'TJ'
-#        entso: |
-#          EB("Final consumption - industry sector - chemical other - energy use", "Network gas")
+        entso: |
+          EB("Final consumption - industry sector - chemical other - energy use", "Network gas")
       - key: input_industry_chemical_other_steam_hot_water_demand
         unit: 'TJ'
-#        entso: |
-#          EB("Final consumption - industry sector - chemical other - energy use", "Heat")
+        entso: |
+          EB("Final consumption - industry sector - chemical other - energy use", "Heat")
       - key: input_industry_chemical_other_wood_pellets_demand
         unit: 'TJ'
-#        entso: |
-#          EB("Final consumption - industry sector - chemical other - energy use", "Primary solid biofuels")
+        entso: |
+          EB("Final consumption - industry sector - chemical other - energy use", "Primary solid biofuels")
       - key: input_industry_chemical_other_crude_oil_demand
         unit: 'TJ'
-#        entso: |
-#          EB("Final consumption - industry sector - chemical other - energy use", "Crude oil aggregated") +
-#          EB("Final consumption - industry sector - chemical other - energy use", "Bio-diesel") +
-#          EB("Final consumption - industry sector - chemical other - energy use", "Bio-kerosene") +
-#          EB("Final consumption - industry sector - chemical other - energy use", "Bio oil")
+        entso: |
+          EB("Final consumption - industry sector - chemical other - energy use", "Crude oil aggregated") +
+          EB("Final consumption - industry sector - chemical other - energy use", "Bio-diesel") +
+          EB("Final consumption - industry sector - chemical other - energy use", "Bio-kerosene") +
+          EB("Final consumption - industry sector - chemical other - energy use", "Bio oil")
       - key: input_industry_chemical_other_coal_demand
         unit: 'TJ'
-#        entso: |
-#          EB("Final consumption - industry sector - chemical other - energy use", "Coal") -
-#          EB("Final consumption - industry sector - chemical other - energy use", "Coke oven coke")
+        entso: |
+          EB("Final consumption - industry sector - chemical other - energy use", "Coal") -
+          EB("Final consumption - industry sector - chemical other - energy use", "Coke oven coke")
 
   - header: industry_chemical_other_non_energetic
     items:
       - key: input_industry_chemical_other_network_gas_non_energetic_demand
         unit: 'TJ'
-#        entso: |
-#          EB("Final consumption - industry sector - chemical other - non-energy use", "Electricity")
+        entso: |
+          EB("Final consumption - industry sector - chemical other - non-energy use", "Electricity")
       - key: input_industry_chemical_other_wood_pellets_non_energetic_demand
         unit: 'TJ'
-#        entso: |
-#          EB("Final consumption - industry sector - chemical other - non-energy use", "Network gas")
+        entso: |
+          EB("Final consumption - industry sector - chemical other - non-energy use", "Network gas")
       - key: input_industry_chemical_other_crude_oil_non_energetic_demand
         unit: 'TJ'
-#        entso: |
-#          EB("Final consumption - industry sector - chemical other - non-energy use", "Crude oil aggregated")
+        entso: |
+          EB("Final consumption - industry sector - chemical other - non-energy use", "Crude oil aggregated")
       - key: input_industry_chemical_other_coal_non_energetic_demand
         unit: 'TJ'
-#        entso: |
-#          EB("Final consumption - industry sector - chemical other - non-energy use", "Coal") -
-#          EB("Final consumption - industry sector - chemical other - non-energy use", "Coke oven coke")
+        entso: |
+          EB("Final consumption - industry sector - chemical other - non-energy use", "Coal") -
+          EB("Final consumption - industry sector - chemical other - non-energy use", "Coke oven coke")

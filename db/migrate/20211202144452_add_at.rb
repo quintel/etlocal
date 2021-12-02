@@ -1,6 +1,6 @@
-class AddPl < ActiveRecord::Migration[5.0]
+class AddAt < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20211117142906_add_pl')
+    directory    = Rails.root.join('db/migrate/20211202144452_add_at')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

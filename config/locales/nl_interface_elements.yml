@@ -625,21 +625,21 @@ nl:
         energy_heat_burner_wood_pellets_full_load_hours: Biomassaketel
         energy_heat_burner_coal_full_load_hours: Kolenketel
         energy_heat_burner_crude_oil_full_load_hours: Olieketel
-        energy_heat_burner_network_gas_full_load_hours: Gasketel (netwerk gas)
+        energy_heat_burner_network_gas_full_load_hours: Gasketel
         energy_heat_solar_thermal_full_load_hours: Zonthermie
         energy_heat_burner_waste_mix_full_load_hours: Afvalketel
         energy_heat_heatpump_water_water_electricity_full_load_hours: Collectieve warmtepomp
         energy_chp_ultra_supercritical_cofiring_coal_full_load_hours: Bijstookkolencentrale met warmtelevering (WKK)
         energy_chp_ultra_supercritical_coal_full_load_hours: Kolencentrale met warmtelevering (WKK)
         energy_chp_ultra_supercritical_lignite_full_load_hours: Bruinkoolcentrale met warmtelevering (WKK)
-        industry_chp_turbine_gas_power_fuelmix_full_load_hours: Gasturbine-WKK
-        industry_chp_engine_gas_power_fuelmix_full_load_hours: Gasmotor-WKK
-        industry_chp_combined_cycle_gas_power_fuelmix_full_load_hours: Gas WKK (STEG)
+        industry_chp_turbine_gas_power_fuelmix_full_load_hours: Gasturbine-WKK - industrie
+        industry_chp_engine_gas_power_fuelmix_full_load_hours: Gasmotor-WKK - industrie
+        industry_chp_combined_cycle_gas_power_fuelmix_full_load_hours: Gas WKK (STEG) - industrie
         industry_chp_ultra_supercritical_coal_full_load_hours: Kolen WKK - industrie
-        industry_chp_wood_pellets_full_load_hours: Biomassa WKK
-        industry_heat_burner_lignite_full_load_hours: Bruinkoolketel
-        industry_heat_burner_coal_full_load_hours: Kolenketel
-        industry_heat_burner_crude_oil_full_load_hours: Olieketel
+        industry_chp_wood_pellets_full_load_hours: Biomassa WKK - industrie
+        industry_heat_burner_lignite_full_load_hours: Bruinkoolketel - industrie
+        industry_heat_burner_coal_full_load_hours: Kolenketel - industrie
+        industry_heat_burner_crude_oil_full_load_hours: Olieketel - industrie
         input_energy_power_combined_cycle_coal_gas_full_load_hours: Syngas STEG
         flh_solar_pv_solar_radiation_max: Zonnepanelen (op dak en op land)
 

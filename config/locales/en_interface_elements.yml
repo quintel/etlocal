@@ -627,14 +627,14 @@ en:
         energy_chp_ultra_supercritical_cofiring_coal_full_load_hours: Co-firing coal CHP
         energy_chp_ultra_supercritical_coal_full_load_hours: Coal CHP
         energy_chp_ultra_supercritical_lignite_full_load_hours: Lignite plant with district heat (CHP)
-        industry_chp_turbine_gas_power_fuelmix_full_load_hours: Gas turbine CHP
-        industry_chp_engine_gas_power_fuelmix_full_load_hours: Gas motor CHP
-        industry_chp_combined_cycle_gas_power_fuelmix_full_load_hours: Gas CHP (CCGT)
-        industry_chp_ultra_supercritical_coal_full_load_hours: Coal CHP - industry
-        industry_chp_wood_pellets_full_load_hours: Biomass CHP
-        industry_heat_burner_lignite_full_load_hours: Lignite heater
-        industry_heat_burner_coal_full_load_hours: Coal heater
-        industry_heat_burner_crude_oil_full_load_hours: Oil heater
+        industry_chp_turbine_gas_power_fuelmix_full_load_hours: Gas turbine CHP - industrie
+        industry_chp_engine_gas_power_fuelmix_full_load_hours: Gas motor CHP - industrie
+        industry_chp_combined_cycle_gas_power_fuelmix_full_load_hours: Gas CHP (CCGT) - industrie
+        industry_chp_ultra_supercritical_coal_full_load_hours: Coal CHP - industrie
+        industry_chp_wood_pellets_full_load_hours: Biomass CHP- industrie
+        industry_heat_burner_lignite_full_load_hours: Lignite heater - industrie
+        industry_heat_burner_coal_full_load_hours: Coal heater - industrie
+        industry_heat_burner_crude_oil_full_load_hours: Oil heater - industrie
         flh_solar_pv_solar_radiation_max: Solar panels (roofs and ground-mount)
 
         fuel_production_coal_demand: Coal

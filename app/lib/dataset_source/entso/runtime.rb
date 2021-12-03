@@ -29,6 +29,29 @@ module DatasetSource
         ::Kernel.raise "Energy balance for #{@geo_id} does not have an entry matching " \
                        "row=#{row.inspect} and column=#{column.inspect}"
       end
+
+      # Public: Requires both stmt's to be procs, works like an ordinary if statement.
+      def IF(condition, true_stmt, false_stmt)
+        validate_procs(true_stmt, false_stmt)
+
+        if condition
+          true_stmt.call
+        else
+          false_stmt.call
+        end
+      end
+
+      private
+
+      def validate_procs(*procs)
+        procs.each { |proc| validate_proc(proc) }
+      end
+
+      def validate_proc(proc)
+        return if proc.respond_to?(:call)
+
+        ::Kernel.raise "Expression #{proc} in query should be a proc: '-> { #{proc} }'"
+      end
     end
   end
 end

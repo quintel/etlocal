@@ -4,10 +4,10 @@ groups:
     items:
       - key: input_energy_power_supercritical_coal_electricity_output_conversion
         unit: '%'
-        # entso: |
-        #   IF(EB("Coal conventional", "Electricity") > 0.0,
-        #   {EB("Coal conventional", "Electricity") / EB("Coal conventional", "Coal excl lignite") * 100},
-        #   36.0)
+        entso: |
+          IF(EB("Coal conventional", "Electricity") > 0.0,
+          -> { EB("Coal conventional", "Electricity") / EB("Coal conventional", "Coal excl lignite") * 100 },
+          -> { 36.0 })
       - key: input_energy_power_ultra_supercritical_coal_electricity_output_conversion
         unit: '%'
         # entso: |

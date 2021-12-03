@@ -25,4 +25,15 @@ RSpec.describe DatasetSource::ENTSO::Runtime do
         .to raise_error(/does not have an entry matching row="a" and column="y"/)
     end
   end
+
+  describe '#IF' do
+    it 'permits querying with procs' do
+      expect(runtime.IF(true, -> { 50 * 2 }, -> { 20.0 })).to eq(100)
+    end
+
+    it 'raises an error when one of the arguments is not a proc' do
+      expect { runtime.IF(true, -> { 50 * 2 }, 20.0) }
+        .to raise_error(/should be a proc: '-> { 20.0 }'/)
+    end
+  end
 end

@@ -68,14 +68,14 @@ groups:
         unit: '%'
         entso: |
           IF(EB("Transformation input - coke ovens - energy use", "Coal") > 0.0,
-          -> { EB("Transformation input - coke ovens - energy use", "Coke oven coke") /
+          -> { EB("Transformation output - coke ovens", "Coke oven coke") /
           EB("Transformation input - coke ovens - energy use", "Coal") },
           -> { 0.4 })
       - key: input_energy_cokesoven_transformation_coal_gas_output_conversion
         unit: '%'
         entso: |
           IF(EB("Transformation input - coke ovens - energy use", "Coal") > 0.0,
-          -> { EB("Transformation input - coke ovens - energy use", "Coal gas") /
+          -> { EB("Transformation output - coke ovens", "Coal gas") /
           EB("Transformation input - coke ovens - energy use", "Coal") },
           -> { 0.4 })
       - key: input_energy_cokesoven_transformation_loss_output_conversion
@@ -134,7 +134,7 @@ groups:
           IF((
           EB("Transformation input - blast furnaces - energy use", "Coal") +
           EB("Transformation input - blast furnaces - energy use", "Coke oven coke") ) > 0.0,
-          -> { EB("Transformation input - blast furnaces - energy use", "Coal gas") / (
+          -> { EB("Transformation output - blast furnaces", "Coal gas") / (
           EB("Transformation input - blast furnaces - energy use", "Coal") +
           EB("Transformation input - blast furnaces - energy use", "Coke oven coke") ) },
           -> { 0.4 })

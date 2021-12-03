@@ -57,7 +57,7 @@ describe CommitsController do
         {
           dataset_edits_attributes: [
             {
-              "key"=>"gas_consumption",
+              "key"=>"number_of_buildings",
               "value"=>"0.25"
             }
           ]
@@ -86,7 +86,7 @@ describe CommitsController do
         {
           dataset_edits_attributes: {
             "0"=>{
-              "key"=>"gas_consumption",
+              "key"=>"number_of_buildings",
               "value"=>"0.25"
             },
             "1"=>{

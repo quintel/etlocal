@@ -35,7 +35,6 @@
   - hv_net_costs_per_capacity_step
   - hv_net_spare_capacity
   - hv_net_total_costs_present
-  - interconnection_net_costs_present
   - lv_mv_trafo_capacity_per_step
   - lv_mv_trafo_costs_per_capacity_step
   - lv_mv_trafo_spare_capacity
@@ -52,7 +51,6 @@
   - mv_net_costs_per_capacity_step
   - mv_net_spare_capacity
   - mv_net_total_costs_present
-  - offshore_net_costs_present
   - industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share
   - industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share
   - industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_used_heat_parent_share
@@ -71,19 +69,6 @@
   - energy_regasification_lng_energy_national_gas_network_natural_gas_demand
   message:
    "No sufficient European source found."
-
-- fields: 
-  - energy_heat_burner_coal_full_load_hours
-  - energy_heat_heatpump_water_water_electricity_full_load_hours
-  - energy_heat_burner_waste_mix_full_load_hours
-  - energy_heat_solar_thermal_full_load_hours
-  - energy_heat_burner_network_gas_full_load_hours
-  - energy_heat_burner_crude_oil_full_load_hours
-  - industry_heat_burner_lignite_full_load_hours
-  - industry_heat_burner_coal_full_load_hours
-  - industry_heat_burner_crude_oil_full_load_hours
-  message:
-   "niks"
 
 - fields: 
   - input_buildings_heat_demand_reduction
@@ -178,12 +163,24 @@
 - fields: 
   - interconnector_capacity
   message:
-   "Derived from the TYNDP 2025 Scenario's, as this study projects grid capacity for the year 2025 the data will slightly differ from the 2019 grid capacities; author: entso-e & entso-g; year: 2020"
+   "Derived from the TYNDP 2025 Scenario's, as this study projects grid capacity for the year 2025 the data will slightly differ from the 2019 grid capacities; author: entso-e & entso-g; year: 2022"
 
 - fields: 
   - flh_solar_pv_solar_radiation_max
   message:
    "Number based on the highest full load hours found in Europe (in Spain)."
+
+- fields: 
+  - energy_heat_burner_coal_full_load_hours
+  - energy_heat_heatpump_water_water_electricity_full_load_hours
+  - energy_heat_burner_waste_mix_full_load_hours
+  - energy_heat_burner_network_gas_full_load_hours
+  - energy_heat_burner_crude_oil_full_load_hours
+  - industry_heat_burner_lignite_full_load_hours
+  - industry_heat_burner_coal_full_load_hours
+  - industry_heat_burner_crude_oil_full_load_hours
+  message:
+   "No sufficient EU data found, the offshore net costs are therefore calculated using the average offshore net costs from the NL dataset (estimate based on installed capacity and total demand) and multiplied with the offshore wind capcity derived from Eurostat; year: 2019; author: Quintel"
 
 - fields: 
   - transport_final_demand_for_road_electricity_transport_bicycle_using_electricity_parent_share
@@ -193,12 +190,12 @@
 - fields: 
   - transport_road_mixer_lng_transport_bus_using_lng_mix_parent_share
   message:
-   "Data on LNG use in busses is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+   "Data on LNG use in busses is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2021"
 
 - fields: 
   - transport_road_mixer_lng_transport_truck_using_lng_mix_parent_share
   message:
-   "Data on LNG use in trucks is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2020"
+   "Data on LNG use in trucks is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2022"
 
 - fields: 
   - buildings_final_demand_for_cooling_electricity_buildings_cooling_airconditioning_electricity_parent_share
@@ -248,12 +245,12 @@
 - fields: 
   - households_final_demand_for_appliances_electricity_households_appliances_other_electricity_parent_share
   message:
-   "Derived from the annual POTEnCIA reports on country energy consumption, energy consumption from vacuum cleaners issubtracted from the category 'other'; author: Joint Research Center (JRC); year: 2090"
+   "Derived from the annual POTEnCIA reports on country energy consumption, energy consumption from vacuum cleaners issubtracted from the category 'other'; author: Joint Research Center (JRC); year: 2092"
 
 - fields: 
   - households_final_demand_for_appliances_electricity_households_appliances_vacuum_cleaner_electricity_parent_share
   message:
-   "Seperate data on energy use vacuum cleaners is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split and subtracted from the category 'other' containing energy use of vacuum cleaners among other appliances; author: Joint Research Center (JRC); year: 2021"
+   "Seperate data on energy use vacuum cleaners is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split and subtracted from the category 'other' containing energy use of vacuum cleaners among other appliances; author: Joint Research Center (JRC); year: 2023"
 
 - fields: 
   - households_final_demand_for_cooking_electricity_households_cooker_halogen_electricity_parent_share
@@ -349,6 +346,16 @@ inventories'; year: 2017; author: JRC"
    "According to international standards, scope 2 emissions (as a result from the import of electricity or heat) are not accounted for. Therefore emissions from import are set to 0."
 
 - fields: 
+  - interconnection_net_costs_present
+  message:
+   "No sufficient EU data found, the interconnection costs are therefore calculated using the average interconnection costs from the NL dataset derived from the NvdT study (2017) by CE Delft and multiplied with the interconnection capcity derived from the TYNDP 2025 Scenario's by entso-e and entso-g; year: 2019; author: Quintel"
+
+- fields: 
+  - offshore_net_costs_present
+  message:
+   "No sufficient EU data found, the interconnection costs are therefore calculated using the average offshore net costs from the NL dataset derived from the NvdT study (2017) by CE Delft and multiplied with the interconnection capcity derived from Eurostat ny the EU; year: 2019; author: Quintel"
+
+- fields: 
   - energy_production_dry_biomass_max_demand
   message:
    "Derived from th study 'The JRC-EU-TIMES model: Bioenergy potentials  for EU and neighbouring countries.', category: biomass from forest potential; year: 2015; author: JRC"
@@ -381,9 +388,41 @@ inventories'; year: 2017; author: JRC"
    "Derived from Steel Statistical Yearbook 2020 concise version - Tabel 6 (continued): https://www.worldsteel.org/steel-by-topic/statistics/steel-statistical-yearbook.html; year:2020; author: Worldsteel Association"
 
 - fields: 
-  - industry_final_demand_for_metal_steel_electricity_industry_steel_scrap_hbi_eaf_parent_share
-  - industry_final_demand_for_metal_steel_network_gas_industry_steel_scrap_hbi_eaf_parent_share
-  - industry_final_demand_for_metal_steel_coal_industry_steel_scrap_hbi_eaf_parent_share
+  - industry_final_demand_for_metal_steel_electricity_industry_steel_blastfurnace_bof_parent_share
+  - industry_final_demand_for_metal_steel_network_gas_industry_steel_blastfurnace_bof_parent_share
+  - industry_final_demand_for_metal_steel_coal_industry_steel_blastfurnace_bof_parent_share
   message:
    "Estimated using total steel production, steel production technology split and technology specifications from Steel Statistical Yearbook 2020 concise version; year:2020; author: Quintel"
+
+- fields: 
+  - input_industry_aluminium_electrolysis_current_electricity_share
+  - industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_electrolysis_current_electricity_parent_share
+  - industry_aluminium_burner_network_gas_industry_aluminium_electrolysis_current_electricity_parent_share
+  message:
+   "No sufficient European source found, assuming all production is done through electrolysis the share was set to 100%."
+
+- fields: 
+  - input_solar_panels_roofs_and_parks_full_load_hours
+  message:
+   "Full load hours based on solar PV curve from renewables.ninja. These full load hours are scaled down to correct for non-concurrency using data for The Netherlands. For The Netherlands full load hours are calculated using data about installed capacity and production. The full load hours derived from the Renewables Ninja curve is scaled down by a factor: flh data NL / flh Renewables Ninja Netherlands."
+
+- fields: 
+  - energy_heat_solar_thermal_full_load_hours
+  message:
+   "Full load hours based on global horizontal irradiation (GHI) data from renewables.ninja. This GHI data is converted to solar thermal production. For more information see: https://github.com/quintel/etdataset-public/blob/master/curves/supply/solar_thermal/script/README.md"
+
+- fields: 
+  - energy_power_wind_turbine_offshore_full_load_hours
+  message:
+   "Full load hours based on national wind curve from renewables.ninja as specific data for onshore wind is not available."
+
+- fields: 
+  - energy_power_wind_turbine_inland_full_load_hours
+  message:
+   "Full load hours based on national wind curve from renewables.ninja as specific data for offshore wind is not available/relevant."
+
+- fields: 
+  - energy_power_wind_turbine_coastal_full_load_hours
+  message:
+   "Full load hours based on national wind curve from renewables.ninja as specific data for coastal wind is not available/relevant."
 

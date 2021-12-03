@@ -67,13 +67,17 @@ groups:
       - key: input_energy_cokesoven_transformation_cokes_output_conversion
         unit: '%'
         entso: |
-          EB("Transformation input - coke ovens - energy use", "Coke oven coke") /
-          EB("Transformation input - coke ovens - energy use", "Coal")
+          IF(EB("Transformation input - coke ovens - energy use", "Coal") > 0.0,
+          -> { EB("Transformation input - coke ovens - energy use", "Coke oven coke") /
+          EB("Transformation input - coke ovens - energy use", "Coal") },
+          -> { 0.4 })
       - key: input_energy_cokesoven_transformation_coal_gas_output_conversion
         unit: '%'
         entso: |
-          EB("Transformation input - coke ovens - energy use", "Coal gas") /
-          EB("Transformation input - coke ovens - energy use", "Coal")
+          IF(EB("Transformation input - coke ovens - energy use", "Coal") > 0.0,
+          -> { EB("Transformation input - coke ovens - energy use", "Coal gas") /
+          EB("Transformation input - coke ovens - energy use", "Coal") },
+          -> { 0.4 })
       - key: input_energy_cokesoven_transformation_loss_output_conversion
         unit: '%'
         flexible: true
@@ -127,9 +131,13 @@ groups:
       - key: input_energy_blastfurnace_transformation_coal_gas_output_conversion
         unit: '%'
         entso: |
-          EB("Transformation input - blast furnaces - energy use", "Coal gas") / (
+          IF((
           EB("Transformation input - blast furnaces - energy use", "Coal") +
-          EB("Transformation input - blast furnaces - energy use", "Coke oven coke") )
+          EB("Transformation input - blast furnaces - energy use", "Coke oven coke") ) > 0.0,
+          -> { EB("Transformation input - blast furnaces - energy use", "Coal gas") / (
+          EB("Transformation input - blast furnaces - energy use", "Coal") +
+          EB("Transformation input - blast furnaces - energy use", "Coke oven coke") ) },
+          -> { 0.4 })
       - key: input_energy_blastfurnace_transformation_loss_output_conversion
         unit: '%'
         flexible: true
@@ -187,10 +195,14 @@ groups:
       - key: input_energy_power_combined_cycle_coal_gas_electricity_output_conversion
         unit: '%'
         entso: |
-          (EB("Gross electricity production - main activity producer electricity only", "Coal gas") +
+          IF((
+          EB("Transformation input - electricity and heat generation - main activity producer electricity only - energy use", "Coal gas") +
+          EB("Transformation input - electricity and heat generation - autoproducer electricity only - energy use", "Coal gas") ) > 0.0,
+          -> { (EB("Gross electricity production - main activity producer electricity only", "Coal gas") +
           EB("Gross electricity production - autoproducer electricity only", "Coal gas") ) / (
           EB("Transformation input - electricity and heat generation - main activity producer electricity only - energy use", "Coal gas") +
-          EB("Transformation input - electricity and heat generation - autoproducer electricity only - energy use", "Coal gas") )
+          EB("Transformation input - electricity and heat generation - autoproducer electricity only - energy use", "Coal gas") ) },
+          -> { 0.4 })
       - key: input_energy_power_combined_cycle_coal_gas_loss_output_conversion
         unit: '%'
         flexible: true
@@ -202,23 +214,35 @@ groups:
       - key: input_energy_chp_coal_gas_electricity_output_conversion
         unit: '%'
         entso: |
-          (EB("Gross electricity production - main activity producer combined heat and power", "Coal gas") +
+          IF((
+          EB("Transformation input - electricity and heat generation - main activity producer combined heat and power - energy use", "Coal gas") +
+          EB("Transformation input - electricity and heat generation - autoproducer combined heat and power - energy use", "Coal gas") +
+          EB("Transformation input - electricity and heat generation - main activity producer heat only - energy use", "Coal gas") +
+          EB("Transformation input - electricity and heat generation - autoproducer heat only - energy use", "Coal gas") ) > 0.0,
+          -> { (EB("Gross electricity production - main activity producer combined heat and power", "Coal gas") +
           EB("Gross electricity production - autoproducer combined heat and power", "Coal gas") ) / (
           EB("Transformation input - electricity and heat generation - main activity producer combined heat and power - energy use", "Coal gas") +
           EB("Transformation input - electricity and heat generation - autoproducer combined heat and power - energy use", "Coal gas") +
           EB("Transformation input - electricity and heat generation - main activity producer heat only - energy use", "Coal gas") +
-          EB("Transformation input - electricity and heat generation - autoproducer heat only - energy use", "Coal gas") )
+          EB("Transformation input - electricity and heat generation - autoproducer heat only - energy use", "Coal gas") ) },
+          -> { 0.4 })
       - key: input_energy_chp_coal_gas_steam_hot_water_output_conversion
         unit: '%'
         entso: |
-          (EB("Gross heat production - main activity producer combined heat and power", "Coal gas") +
+          IF((
+          EB("Transformation input - electricity and heat generation - main activity producer combined heat and power - energy use", "Coal gas") +
+          EB("Transformation input - electricity and heat generation - autoproducer combined heat and power - energy use", "Coal gas") +
+          EB("Transformation input - electricity and heat generation - main activity producer heat only - energy use", "Coal gas") +
+          EB("Transformation input - electricity and heat generation - autoproducer heat only - energy use", "Coal gas") ) > 0.0,
+          -> { (EB("Gross heat production - main activity producer combined heat and power", "Coal gas") +
           EB("Gross heat production - autoproducer combined heat and power", "Coal gas") +
           EB("Gross heat production - main activity producer heat only", "Coal gas") +
           EB("Gross heat production - autoproducer heat only", "Coal gas") ) / (
           EB("Transformation input - electricity and heat generation - main activity producer combined heat and power - energy use", "Coal gas") +
           EB("Transformation input - electricity and heat generation - autoproducer combined heat and power - energy use", "Coal gas") +
           EB("Transformation input - electricity and heat generation - main activity producer heat only - energy use", "Coal gas") +
-          EB("Transformation input - electricity and heat generation - autoproducer heat only - energy use", "Coal gas") )
+          EB("Transformation input - electricity and heat generation - autoproducer heat only - energy use", "Coal gas") ) },
+          -> { 0.4 })
       - key: input_energy_chp_coal_gas_loss_output_conversion
         unit: '%'
         flexible: true

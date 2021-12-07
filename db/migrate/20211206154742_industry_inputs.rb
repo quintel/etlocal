@@ -119,7 +119,7 @@ SCALABLE_ALUMINUM_KEYS = {
         factor_fertilizer = dataset.editable_attributes.find("input_industry_chemical_fertilizers_scaling_factor").value || 0
         factor_refineries = dataset.editable_attributes.find("input_industry_chemical_refineries_scaling_factor").value || 0
         commit = dataset.commits.build(
-          message: "Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+          message: "Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
             URL: http://www.emissieregistratie.nl",
           user: User.robot
         )

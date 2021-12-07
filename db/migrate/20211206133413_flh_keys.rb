@@ -39,9 +39,18 @@ class FlhKeys < ActiveRecord::Migration[5.2]
       }
     },
     {
-      message: 'No solar csp plants in start year',
+      message: 'No production in start year',
       sliders: {
-        'input_energy_power_solar_csp_solar_radiation_production' => 0.0
+        'input_energy_power_solar_csp_solar_radiation_production' => 0.0,
+        'input_energy_power_supercritical_ccs_waste_mix_production' => 0.0,
+        'input_energy_power_ultra_supercritical_lignite_production' => 0.0,
+        'input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production' => 0.0
+      }
+    },
+    {
+      message: 'No hydrogen demand in start year',
+      sliders: {
+        'input_industry_chemical_fertilizers_hydrogen_non_energetic_demand' => 0.0
       }
     }
   ].freeze

@@ -43,8 +43,6 @@ groups:
         unit: 'flh'
       - key: input_solar_panels_roofs_and_parks_full_load_hours
         unit: 'flh'
-      - key: energy_power_solar_csp_solar_radiation_full_load_hours
-        unit: 'flh'
       - key: energy_power_geothermal_full_load_hours
         unit: 'flh'
       - key: energy_power_hydro_mountain_full_load_hours

@@ -614,7 +614,6 @@ nl:
         energy_power_hydro_mountain_full_load_hours: Waterkracht (bergen)
         energy_power_nuclear_gen2_uranium_oxide_full_load_hours: Kern conventioneel
         energy_power_nuclear_gen3_uranium_oxide_full_load_hours: Kern 3e Gen
-        energy_power_solar_csp_solar_radiation_full_load_hours: Geconcentreerde zonnestroom
         energy_power_supercritical_ccs_waste_mix_full_load_hours: Afvalverbranding CCS
         energy_power_ultra_supercritical_ccs_coal_full_load_hours: Poederkolen CCS
         energy_power_ultra_supercritical_coal_full_load_hours: Poederkolen

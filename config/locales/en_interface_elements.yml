@@ -609,7 +609,6 @@ en:
         energy_power_hydro_mountain_full_load_hours: Hydro-electricity (mountains)
         energy_power_nuclear_gen2_uranium_oxide_full_load_hours: Nuclear conventional
         energy_power_nuclear_gen3_uranium_oxide_full_load_hours: Nuclear 3rd Gen
-        energy_power_solar_csp_solar_radiation_full_load_hours: Concentrated solar power
         energy_power_supercritical_ccs_waste_mix_full_load_hours: Waste incinerator CCS
         energy_power_ultra_supercritical_ccs_coal_full_load_hours: Pulverized coal CCS
         energy_power_ultra_supercritical_coal_full_load_hours: Pulverized coal

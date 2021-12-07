@@ -53,7 +53,7 @@ class SteelInputs < ActiveRecord::Migration[5.2]
     input_industry_metal_steel_network_gas_demand: { nl2015: 10755.84812153748, nl: 11317.021008723761},
     input_industry_metal_steel_steam_hot_water_demand: { nl2015: 1.0, nl: 9.880847999999965},
     input_industry_metal_steel_crude_oil_demand: { nl2015: 170.39999999999984, nl: 0.0},
-    input_energy_cokesoven_transformation_coal_input_demand: { nl2015: 80243.60732815287, nl: 74365.32892849011},
+    input_energy_cokesoven_transformation_coal_input_demand: { nl2015: 81858.27854509203, nl: 76336.12408611234},
     input_energy_cokesoven_own_use_coal: { nl2015: 0.0, nl: 0.0},
     input_energy_cokesoven_own_use_cokes: { nl2015: 0.0, nl: 0.0},
     input_energy_cokesoven_own_use_coal_gas: { nl2015: 8032.169999999999, nl: 7783.97295599998},
@@ -61,8 +61,8 @@ class SteelInputs < ActiveRecord::Migration[5.2]
     input_energy_cokesoven_own_use_network_gas: { nl2015: 0.0, nl: 0.0},
     input_energy_cokesoven_own_use_steam_hot_water: { nl2015: 0.0, nl: 0.0},
     input_energy_cokesoven_own_use_crude_oil: { nl2015: 0.0, nl: 0.0},
-    input_energy_blastfurnace_transformation_coal_input_demand: { nl2015: 39668.68520540507, nl: 41578.22688564937},
-    input_energy_blastfurnace_transformation_cokes_input_demand: { nl2015: 50466.38954094042, nl: 52456.75289932878},
+    input_energy_blastfurnace_transformation_coal_input_demand: { nl2015: 40466.903111450236, nl: 42680.113603417434},
+    input_energy_blastfurnace_transformation_cokes_input_demand: { nl2015: 51481.8801118137, nl: 53846.93722431166},
     input_energy_blastfurnace_own_use_coal: { nl2015: 0.0, nl: 0.0},
     input_energy_blastfurnace_own_use_cokes: { nl2015: 0.0, nl: 0.0},
     input_energy_blastfurnace_own_use_coal_gas: { nl2015: 0.0, nl: 0.0},
@@ -70,7 +70,7 @@ class SteelInputs < ActiveRecord::Migration[5.2]
     input_energy_blastfurnace_own_use_network_gas: { nl2015: 0.0, nl: 0.0},
     input_energy_blastfurnace_own_use_steam_hot_water: { nl2015: 0.0, nl: 0.0},
     input_energy_blastfurnace_own_use_crude_oil: { nl2015: 0.0, nl: 0.0},
-    input_energy_power_combined_cycle_coal_gas_coal_gas_input_demand: { nl2015: 16290., nl: 13274.76171678937},
+    input_energy_power_combined_cycle_coal_gas_coal_gas_input_demand: { nl2015: 17341.21999999998, nl: 14564.41182399992},
     input_energy_chp_coal_gas_coal_gas_input_demand: { nl2015: 8696.740000000002, nl: 8328.382559999955},
   }.freeze
 

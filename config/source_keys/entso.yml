@@ -16,6 +16,7 @@ column_groups:
     - Coal tar
     - Brown coal briquettes
     - Peat and peat products
+    - Oil shale and oil sands
   Coal excl lignite:
     - Anthracite
     - Coking coal
@@ -27,6 +28,7 @@ column_groups:
     - Coal tar
     - Brown coal briquettes
     - Peat and peat products
+    - Oil shale and oil sands
   Coal gas:
     - Coke oven gas
     - Blast furnace gas
@@ -53,7 +55,6 @@ column_groups:
     - Bitumen
     - Paraffin waxes
     - Petroleum coke
-    - Oil shale and oil sands
     - Other oil products
   Gasoline:
     - Motor gasoline (excluding biofuel portion)

@@ -26,6 +26,7 @@ class AddDummyValuesMissingKeys < ActiveRecord::Migration[5.2]
     'input_energy_chp_ultra_supercritical_coal_electricity_output_conversion' => 40,
     'input_energy_chp_ultra_supercritical_lignite_electricity_output_conversion' => 35,
     'input_energy_chp_supercritical_waste_mix_electricity_output_conversion' => 27,
+    'input_energy_power_supercritical_ccs_waste_mix_electricity_output_conversion' => 27,
     'input_industry_chp_turbine_gas_power_fuelmix_electricity_output_conversion' => 38,
     'input_industry_chp_engine_gas_power_fuelmix_electricity_output_conversion' => 42,
     'input_industry_chp_combined_cycle_gas_power_fuelmix_electricity_output_conversion' => 46,

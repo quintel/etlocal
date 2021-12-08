@@ -20,7 +20,7 @@ groups:
           EB("Transformation input - electricity and heat generation - autoproducer combined heat and power - energy use", "Biogases")
       - key: energy_regasification_lng_energy_national_gas_network_natural_gas_demand
         unit: 'TJ'
-      - key: energy_distribution_network_gas_loss
+      - key: energy_distribution_network_gas_loss_demand
         unit: 'TJ'
         entso: |
           EB("Distribution losses", "Network gas")

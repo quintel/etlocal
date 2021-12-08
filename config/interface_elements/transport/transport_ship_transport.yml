@@ -2,11 +2,14 @@ key: transport_ship_transport
 groups:
     - header: transport_ship_fuels
       items:
-        - key: input_transport_ship_gasoline_demand
-          unit: 'TJ'
-          entso: |
-            EB("Final consumption - transport sector - domestic navigation - energy use", "Gasoline") +
-            EB("Final consumption - other sectors - fishing - energy use", "Gasoline")
+        # In the energy balance gasoline is used for inland shipping.
+        # In the ETM there are no gasoline ships yet.
+        #
+        # - key: input_transport_ship_gasoline_demand
+        #   unit: 'TJ'
+        #   entso: |
+        #     EB("Final consumption - transport sector - domestic navigation - energy use", "Gasoline") +
+        #     EB("Final consumption - other sectors - fishing - energy use", "Gasoline")
         - key: input_transport_ship_diesel_demand
           unit: 'TJ'
           entso: |
@@ -39,7 +42,7 @@ groups:
 
     - header: transport_international_ship_transport
       items:
-        - key: transport_bunkers_total_useful_demand_shipping_demand
+        - key: bunkers_total_useful_demand_ships_demand
           unit: 'TJ'
           entso: |
             EB("International maritime bunkers", "Natural gas liquids") +

@@ -19,7 +19,7 @@ groups:
 
     - header: transport_international_plane_transport
       items:
-        - key: transport_bunkers_total_useful_demand_planes_demand
+        - key: bunkers_total_useful_demand_planes_demand
           unit: 'TJ'
           entso: |
             EB("International aviation", "Kerosene") +

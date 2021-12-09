@@ -390,10 +390,18 @@ nl:
         input_energy_chp_coal_gas_loss_output_conversion: Verliezen
         industry_final_demand_for_metal_steel_coal_industry_steel_blastfurnace_bof_parent_share: Hoogoven
         industry_final_demand_for_metal_steel_coal_industry_steel_scrap_hbi_eaf_parent_share: Elektrische oven
+        industry_final_demand_for_metal_steel_cokes_industry_steel_blastfurnace_bof_parent_share: Hoogoven
+        industry_final_demand_for_metal_steel_cokes_industry_steel_scrap_hbi_eaf_parent_share: Elektrische oven
+        industry_final_demand_for_metal_steel_crude_oil_industry_steel_blastfurnace_bof_parent_share: Hoogoven
+        industry_final_demand_for_metal_steel_crude_oil_industry_steel_scrap_hbi_eaf_parent_share: Elektrische oven
         industry_final_demand_for_metal_steel_electricity_industry_steel_blastfurnace_bof_parent_share: Hoogoven
         industry_final_demand_for_metal_steel_electricity_industry_steel_scrap_hbi_eaf_parent_share: Elektrische oven
         industry_final_demand_for_metal_steel_network_gas_industry_steel_blastfurnace_bof_parent_share: Hoogoven
         industry_final_demand_for_metal_steel_network_gas_industry_steel_scrap_hbi_eaf_parent_share: Elektrische oven
+        industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_blastfurnace_bof_parent_share: Hoogoven
+        industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_scrap_hbi_eaf_parent_share: Elektrische oven
+        industry_final_demand_for_metal_steel_wood_pellets_industry_steel_blastfurnace_bof_parent_share: Hoogoven
+        industry_final_demand_for_metal_steel_wood_pellets_industry_steel_scrap_hbi_eaf_parent_share: Elektrische oven
         energy_power_combined_cycle_coal_gas_full_load_hours: Kolengascentrale
         energy_chp_coal_gas_full_load_hours: Kolengas-WKK
         input_energy_blastfurnace_transformation_loss_output_conversion: Verliezen

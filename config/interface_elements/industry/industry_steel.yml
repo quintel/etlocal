@@ -259,6 +259,26 @@ groups:
         flexible: true
         skip_validation: true
 
+  - header: industry_metal_steel_cokes_use
+    type: slider
+    items:
+      - key: industry_final_demand_for_metal_steel_cokes_industry_steel_blastfurnace_bof_parent_share
+        unit: '%'
+      - key: industry_final_demand_for_metal_steel_cokes_industry_steel_scrap_hbi_eaf_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: industry_metal_steel_crude_oil_use
+    type: slider
+    items:
+      - key: industry_final_demand_for_metal_steel_crude_oil_industry_steel_blastfurnace_bof_parent_share
+        unit: '%'
+      - key: industry_final_demand_for_metal_steel_crude_oil_industry_steel_scrap_hbi_eaf_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
   - header: industry_metal_steel_electricity_use
     type: slider
     items:
@@ -278,3 +298,24 @@ groups:
         unit: '%'
         flexible: true
         skip_validation: true
+
+  - header: industry_metal_steel_steam_hot_water_use
+    type: slider
+    items:
+      - key: industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_blastfurnace_bof_parent_share
+        unit: '%'
+      - key: industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_scrap_hbi_eaf_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: industry_metal_steel_wood_pellets_use
+    type: slider
+    items:
+      - key: industry_final_demand_for_metal_steel_wood_pellets_industry_steel_blastfurnace_bof_parent_share
+        unit: '%'
+      - key: industry_final_demand_for_metal_steel_wood_pellets_industry_steel_scrap_hbi_eaf_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+

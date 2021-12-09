@@ -63,6 +63,7 @@ class SteelInputs < ActiveRecord::Migration[5.2]
     industry_final_demand_for_metal_steel_cokes_industry_steel_blastfurnace_bof_parent_share: { nl2015: 1.0, nl: 1.0},
     input_industry_other_cokes_non_energetic_demand: { nl2015: 0.0, nl: 0.0},
     input_industry_other_cokes_demand: { nl2015: 0.0, nl: 0.0},
+    input_industry_metal_steel_wood_pellets_demand: { nl2015: 0.0, nl: 0.0},
     energy_chp_coal_gas_full_load_hours: { nl2015: 6354.38233269404, nl: 5320.0},
     energy_power_combined_cycle_coal_gas_full_load_hours: { nl2015: 2188.0, nl: 1789.0},
 

@@ -37,7 +37,7 @@ class Dataset < ApplicationRecord
       'region'
     elsif geo_id =~ /^RES/
       'res'
-    elsif geo_id =~ /^UKNI/
+    elsif entso_data_source? || geo_id.match?(/^UKNI/)
       'country'
     else
       'province'

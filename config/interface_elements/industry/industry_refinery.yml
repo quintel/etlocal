@@ -86,7 +86,10 @@ groups:
       unit: 'TJ'
       entso: |
         EB("Transformation output - refineries and petrochemical industry - refinery output", "Gas oil and diesel oil (excluding biofuel portion)")
-    - key: input_industry_refinery_transformation_crude_oil_loss_demand
+    
+  - header: distribution_losses_crude_oil
+    items:  
+    - key: energy_distribution_crude_oil_loss_demand
       unit: 'TJ'
       entso: |
         EB("Distribution losses", "Crude oil aggregated")

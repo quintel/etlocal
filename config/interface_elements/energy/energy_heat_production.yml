@@ -5,41 +5,39 @@ groups:
       - key: input_energy_heat_burner_wood_pellets_production
         unit: 'TJ'
         entso: |
-          EB("Biomass-fired heater", "Heat")
+          EB("Biomass heater - residential", "Heat")
       - key: input_energy_heat_well_geothermal_production
         unit: 'TJ' 
         entso: |
-          EB("Geothermal heater", "Heat")
+          EB("Geothermal - residential", "Heat")
       - key: input_energy_heat_burner_waste_mix_production
         unit: 'TJ'
         entso: |
-          EB("Waste-fired heater", "Heat")
+          EB("Waste heater - residential", "Heat")
       - key: input_energy_heat_burner_hydrogen_production
         unit: 'TJ'
       - key: input_energy_heat_solar_thermal_production
         unit: 'TJ'
         entso: |
-          EB("Solar thermal plant", "Heat")
+          EB("Solar thermal - residential", "Heat")
       - key: input_energy_heat_heatpump_water_water_electricity_production
         unit: 'TJ'
-        entso: |
-          EB("Transformation output - electricity and heat generation - electric boilers", "Heat") +
-          EB("Transformation output - electricity and heat generation - electrically driven heat pumps", "Heat")
-
+        entso: 0.0
+        
   - header: energy_heat_fossil
     items:
       - key: input_energy_heat_burner_network_gas_production
         unit: 'TJ'
         entso: |
-          EB("Gas-fired heater", "Heat")
+          EB("Gas heater - residential", "Heat")
       - key: input_energy_heat_burner_coal_production
         unit: 'TJ'
         entso: |
-          EB("Coal-fired heater", "Heat")
+          EB("Coal heater - industrial", "Heat")
       - key: input_energy_heat_burner_crude_oil_production
         unit: 'TJ'
         entso: |
-          EB("Oil-fired heater", "Heat")
+          EB("Oil heater - industrial", "Heat")
 
   - header: energy_heat_import
     items:

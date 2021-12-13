@@ -142,7 +142,11 @@ class AddDummyValuesMissingKeys < ActiveRecord::Migration[5.2]
     'input_share_mixer_gas_fuel_oil' => 0.2,
     'households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share' => 1.0, 
     'households_final_demand_for_space_heating_network_gas_households_space_heater_network_gas_parent_share' => 0.0,
-    'households_final_demand_for_space_heating_network_gas_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share' => 0.0
+    'households_final_demand_for_space_heating_network_gas_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share' => 0.0,
+    'industry_final_demand_for_metal_steel_cokes_industry_steel_blastfurnace_bof_parent_share' => 1.0,
+    'industry_final_demand_for_metal_steel_crude_oil_industry_steel_blastfurnace_bof_parent_share' => 1.0,
+    'industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_blastfurnace_bof_parent_share' => 1.0,
+    'industry_final_demand_for_metal_steel_wood_pellets_industry_steel_blastfurnace_bof_parent_share' => 1.0
   }.freeze
 
   def self.up

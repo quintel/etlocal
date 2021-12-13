@@ -44,6 +44,7 @@ groups:
 #            EB("Final consumption - transport sector - road - energy use", "Bio-CNG")
         - key: transport_final_demand_hydrogen_demand
           unit: 'TJ'
+          entso: 0.0
         - key: transport_final_demand_for_road_lng_demand
           unit: 'TJ'
           entso: 0.0

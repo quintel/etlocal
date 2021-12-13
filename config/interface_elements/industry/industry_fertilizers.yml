@@ -53,3 +53,4 @@ groups:
         EB("Final consumption - industry sector - chemical fertilizers - non-energy use", "Coke oven coke")
     - key: input_industry_chemical_fertilizers_hydrogen_non_energetic_demand
       unit: 'TJ'
+      entso: 0.0

@@ -134,22 +134,22 @@ groups:
     items:
       - key: input_industry_other_network_gas_non_energetic_demand
         unit: 'TJ'
-        # entso: |
-        #   EB("Final consumption - industry sector - other - non-energy use", "Network gas")
+        entso: |
+          EB("Final consumption - industry sector - other - non-energy use", "Network gas")
       - key: input_industry_other_wood_pellets_non_energetic_demand
         unit: 'TJ'
-        # entso: |
-        #   EB("Final consumption - industry sector - other - non-energy use", "Primary solid biofuels")
+        entso: |
+          EB("Final consumption - industry sector - other - non-energy use", "Primary solid biofuels")
       - key: input_industry_other_crude_oil_non_energetic_demand
         unit: 'TJ'
-        # entso: |
-        #   EB("Final consumption - industry sector - other - non-energy use", "Crude oil aggregated")
+        entso: |
+          EB("Final consumption - industry sector - other - non-energy use", "Crude oil aggregated")
       - key: input_industry_other_coal_non_energetic_demand
         unit: 'TJ'
-        # entso: |
-        #   EB("Final consumption - industry sector - other - non-energy use", "Coal") -
-        #   EB("Final consumption - industry sector - other - non-energy use", "Coke oven coke")
+        entso: |
+          EB("Final consumption - industry sector - other - non-energy use", "Coal") -
+          EB("Final consumption - industry sector - other - non-energy use", "Coke oven coke")
       - key: input_industry_other_cokes_non_energetic_demand
         unit: 'TJ'
-        # entso: |
-        #   EB("Final consumption - industry sector - other - non-energy use", "Coke oven coke")
+        entso: |
+          EB("Final consumption - industry sector - other - non-energy use", "Coke oven coke")

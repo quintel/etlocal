@@ -4,5 +4,9 @@ groups:
     items:
       - key: input_households_solar_pv_demand
         unit: 'TJ'
+        entso: |
+          EB("Solar on roof buildings", "Electricity")
       - key: households_final_demand_solar_thermal_demand
         unit: 'TJ'
+        entso: |
+          EB("Final consumption - other sectors - households - energy use", "Solar thermal")

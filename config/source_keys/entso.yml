@@ -91,3 +91,7 @@ column_groups:
     - Paraffin waxes
     - Petroleum coke
     - Other oil products
+  Waste:
+    - Renewable municipal waste
+    - Industrial waste (non-renewable)
+    - Non-renewable municipal waste

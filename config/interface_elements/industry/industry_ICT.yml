@@ -5,5 +5,5 @@ groups:
     items:
       - key: input_industry_ict_electricity_demand
         unit: 'TJ'
-        # entso: |
-        #   EB("Final consumption - industry sector - information and communication - energy use", "Electricity")
+        entso: |
+          EB("Final consumption - industry sector - information and communication - energy use", "Electricity")

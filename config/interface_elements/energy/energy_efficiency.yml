@@ -4,138 +4,271 @@ groups:
     items:
       - key: input_energy_power_supercritical_coal_electricity_output_conversion
         unit: '%'
-        # entso: |
-        #   IF(EB("Coal conventional", "Electricity") > 0.0,
-        #   -> { EB("Coal conventional", "Electricity") / EB("Coal conventional", "Coal excl lignite") * 100 },
-        #   -> { 36.0 })
+        entso: |
+          IF(EB("Coal conventional", "Electricity") > 0.0,
+          -> { EB("Coal conventional", "Electricity") / EB("Coal conventional", "Coal excl lignite") * 100 },
+          -> { 36.0 })
       - key: input_energy_power_ultra_supercritical_coal_electricity_output_conversion
         unit: '%'
-        # entso: |
-        #   IF(EB("Coal pulverized", "Electricity") > 0.0,
-        #   {EB("Coal pulverized", "Electricity") / EB("Coal pulverized", "Coal excl lignite") * 100},
-        #   46.0)
+        entso: |
+          IF(EB("Coal pulverized", "Electricity") > 0.0,
+          -> {EB("Coal pulverized", "Electricity") / EB("Coal pulverized", "Coal excl lignite") * 100},
+          -> {46.0})
       - key: input_energy_power_ultra_supercritical_ccs_coal_electricity_output_conversion
         unit: '%'
-        # entso: |
-        #   IF(EB("Coal pulverized CCS", "Electricity") > 0.0,
-        #   {EB("Coal pulverized CCS", "Electricity") / EB("Coal pulverized CCS", "Coal excl lignite") * 100},
-        #   36.1)
+        entso: 36.1
       - key: input_energy_power_ultra_supercritical_cofiring_coal_electricity_output_conversion
         unit: '%'
+        entso: 42
       - key: input_energy_power_combined_cycle_coal_electricity_output_conversion
         unit: '%'
+        entso: 45.3
       - key: input_energy_power_combined_cycle_ccs_coal_electricity_output_conversion
         unit: '%'
+        entso: 37.3
       - key: input_energy_power_ultra_supercritical_lignite_electricity_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Lignite plant", "Lignite") > 0.0,
+          -> {EB("Lignite plant", "Electricity") / EB("Lignite plant", "Lignite") * 100},
+          -> {40.0})
       - key: input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_electricity_output_conversion
         unit: '%'
+        entso: 30.5
       - key: input_energy_chp_ultra_supercritical_cofiring_coal_electricity_output_conversion
         unit: '%'
+        entso: 37
       - key: input_energy_chp_ultra_supercritical_cofiring_coal_steam_hot_water_output_conversion
         unit: '%'
+        entso: 14
       - key: input_energy_chp_ultra_supercritical_coal_electricity_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Coal CHP - residential", "Electricity") > 0.0,
+          -> {EB("Coal CHP - residential", "Electricity") / EB("Coal CHP - residential", "Coal excl lignite") * 100},
+          -> {40.0})
       - key: input_energy_chp_ultra_supercritical_coal_steam_hot_water_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Coal CHP - residential", "Heat") > 0.0,
+          -> {EB("Coal CHP - residential", "Heat") / EB("Coal CHP - residential", "Coal excl lignite") * 100},
+          -> {40.0})
+      - key: input_industry_chp_ultra_supercritical_coal_electricity_output_conversion
+        unit: '%'
+        entso: |
+          IF(EB("Coal CHP - industrial", "Electricity") > 0.0,
+          -> { EB("Coal CHP - industrial", "Electricity") / EB("Coal CHP - industrial", "Coal excl lignite") * 100 },
+          -> { 40.0 }) 
+      - key: input_industry_chp_ultra_supercritical_coal_steam_hot_water_output_conversion
+        unit: '%'
+        entso: |
+          IF(EB("Coal CHP - industrial", "Electricity") > 0.0,
+          -> { EB("Coal CHP - industrial", "Electricity") / EB("Coal CHP - industrial", "Coal excl lignite") * 100 },
+          -> { 15.0 }) 
       - key: input_energy_chp_ultra_supercritical_lignite_electricity_output_conversion
         unit: '%'
+        entso: 35
       - key: input_energy_chp_ultra_supercritical_lignite_steam_hot_water_output_conversion
         unit: '%'
+        entso: 15
 
   - header: energy_efficiency_gas
     items:
       - key: input_energy_power_turbine_network_gas_electricity_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Gas turbine", "Electricity") > 0.0,
+          -> { EB("Gas turbine", "Electricity") / EB("Gas turbine", "Network gas") * 100 },
+          -> { 34.0 })
       - key: input_energy_power_combined_cycle_network_gas_electricity_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Gas CCGT", "Electricity") > 0.0,
+          -> { EB("Gas CCGT", "Electricity") / EB("Gas CCGT", "Network gas") * 100 },
+          -> { 60.0 })
       - key: input_energy_power_combined_cycle_ccs_network_gas_electricity_output_conversion
         unit: '%'
+        entso: 49.0
       - key: input_energy_power_ultra_supercritical_network_gas_electricity_output_conversion
         unit: '%'
+        entso: 40.0
       - key: input_energy_power_engine_network_gas_electricity_output_conversion
         unit: '%'
+        entso: 48.0
       - key: input_energy_chp_local_engine_network_gas_electricity_output_conversion
         unit: '%'
+        entso: 43.0
       - key: input_energy_chp_local_engine_network_gas_steam_hot_water_output_conversion
         unit: '%'
+        entso: 47.0
       - key: input_energy_chp_combined_cycle_network_gas_electricity_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Gas CHP - residential", "Electricity") > 0.0,
+          -> { EB("Gas CHP - residential", "Electricity") / EB("Gas CHP - residential", "Network gas") * 100 },
+          -> { 46.0 })
       - key: input_energy_chp_combined_cycle_network_gas_steam_hot_water_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Gas CHP - residential", "Heat") > 0.0,
+          -> { EB("Gas CHP - residential", "Heat") / EB("Gas CHP - residential", "Network gas") * 100 },
+          -> { 42.0 })
       - key: input_industry_chp_turbine_gas_power_fuelmix_electricity_output_conversion
         unit: '%'
+        entso: 38.0
       - key: input_industry_chp_turbine_gas_power_fuelmix_steam_hot_water_output_conversion
         unit: '%'
+        entso: 42.0
       - key: input_industry_chp_engine_gas_power_fuelmix_electricity_output_conversion
         unit: '%'
+        entso: 42.0
       - key: input_industry_chp_engine_gas_power_fuelmix_steam_hot_water_output_conversion
         unit: '%'
+        entso: 48.0
       - key: input_industry_chp_combined_cycle_gas_power_fuelmix_electricity_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Gas CHP - industrial", "Electricity") > 0.0,
+          -> { EB("Gas CHP - industrial", "Electricity") / EB("Gas CHP - industrial", "Network gas") * 100 },
+          -> { 46.0 })
       - key: input_industry_chp_combined_cycle_gas_power_fuelmix_steam_hot_water_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Gas CHP - industrial", "Heat") > 0.0,
+          -> { EB("Gas CHP - industrial", "Heat") / EB("Gas CHP - industrial", "Network gas") * 100 },
+          -> { 42.0 })
 
   - header: energy_efficiency_other_fossil
     items:
       - key: input_energy_power_ultra_supercritical_crude_oil_electricity_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Oil-fired plant", "Crude oil aggregated") > 0.0,
+          -> { EB("Oil-fired plant", "Electricity") / EB("Oil-fired plant", "Crude oil aggregated") * 100 },
+          -> { 45.0 })       
       - key: input_energy_power_engine_diesel_electricity_output_conversion
         unit: '%'
+        entso: 38.0
       - key: input_energy_power_supercritical_waste_mix_electricity_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Waste incinerator", "Electricity") > 0.0,
+          -> { EB("Waste incinerator", "Electricity") / EB("Waste incinerator", "Waste") * 100 },
+          -> { 25.0 })
       - key: input_energy_power_supercritical_ccs_waste_mix_electricity_output_conversion
         unit: '%'
+        entso: 27.0
       - key: input_energy_power_nuclear_gen2_uranium_oxide_electricity_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Nuclear conventional", "Electricity") > 0.0,
+          -> { EB("Nuclear conventional", "Electricity") / EB("Nuclear conventional", "Nuclear heat") * 100 },
+          -> { 32.0 })
       - key: input_energy_power_nuclear_gen3_uranium_oxide_electricity_output_conversion
         unit: '%'
+        entso: 36.0
 
   - header: energy_efficiency_renewable_chp
     items:
       - key: input_energy_chp_local_engine_biogas_electricity_output_conversion
         unit: '%'
+        entso: 43.0
       - key: input_energy_chp_local_engine_biogas_steam_hot_water_output_conversion
         unit: '%'
+        entso: 47.0
       - key: input_energy_chp_local_wood_pellets_electricity_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Biomass CHP - residential", "Electricity") > 0.0,
+          -> { EB("Biomass CHP - residential", "Electricity") / EB("Biomass CHP - residential", "Primary solid biofuels") * 100 },
+          -> { 28.9 }) 
       - key: input_energy_chp_local_wood_pellets_steam_hot_water_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Biomass CHP - residential", "Heat") > 0.0,
+          -> { EB("Biomass CHP - residential", "Heat") / EB("Biomass CHP - residential", "Primary solid biofuels") * 100 },
+          -> { 82.1 }) 
       - key: input_energy_chp_supercritical_waste_mix_electricity_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Waste CHP - residential", "Electricity") > 0.0,
+          -> { EB("Waste CHP - residential", "Electricity") / EB("Waste CHP - residential", "Waste") * 100 },
+          -> { 27.0 }) 
       - key: input_energy_chp_supercritical_waste_mix_steam_hot_water_output_conversion
         unit: '%'
-      - key: input_industry_chp_ultra_supercritical_coal_electricity_output_conversion
-        unit: '%'
-      - key: input_industry_chp_ultra_supercritical_coal_steam_hot_water_output_conversion
-        unit: '%'
+        entso: |
+          IF(EB("Waste CHP - residential", "Heat") > 0.0,
+          -> { EB("Waste CHP - residential", "Heat") / EB("Waste CHP - residential", "Waste") * 100 },
+          -> { 15.0 }) 
       - key: input_industry_chp_wood_pellets_electricity_output_conversion
-        unit: '%'
+        unit: '%'   
+        entso: |
+          IF(EB("Biomass CHP - industrial", "Electricity") > 0.0,
+          -> { EB("Biomass CHP - industrial", "Electricity") / EB("Biomass CHP - industrial", "Primary solid biofuels") * 100 },
+          -> { 27.9 }) 
       - key: input_industry_chp_wood_pellets_steam_hot_water_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Biomass CHP - industrial", "Heat") > 0.0,
+          -> { EB("Biomass CHP - industrial", "Heat") / EB("Biomass CHP - industrial", "Primary solid biofuels") * 100 },
+          -> { 83.5 }) 
 
   - header: energy_efficiency_heat_plants
     items:
       - key: input_energy_heat_burner_wood_pellets_steam_hot_water_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Biomass heater - residential", "Heat") > 0.0,
+          -> { EB("Biomass heater - residential", "Heat") / EB("Biomass heater - residential", "Primary solid biofuels") * 100 },
+          -> { 90.0 }) 
       - key: input_energy_heat_burner_coal_steam_hot_water_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Coal heater - residential", "Coal excl lignite") > 0.0,
+          -> { EB("Coal heater - residential", "Heat") / EB("Coal heater - residential", "Coal excl lignite") * 100 },
+          -> { 72.0 }) 
       - key: input_energy_heat_burner_hydrogen_steam_hot_water_output_conversion
         unit: '%'
+        entso: 110.0
       - key: input_energy_heat_burner_crude_oil_steam_hot_water_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Oil heater - residential", "Heat") > 0.0,
+          -> { EB("Oil heater - residential", "Heat") / EB("Oil heater - residential", "Crude oil aggregated") * 100 },
+          -> { 72.0 }) 
       - key: input_energy_heat_burner_network_gas_steam_hot_water_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Gas heater - residential", "Heat") > 0.0,
+          -> { EB("Gas heater - residential", "Heat") / EB("Gas heater - residential", "Network gas") * 100 },
+          -> { 103.0 }) 
       - key: input_energy_heat_burner_waste_mix_steam_hot_water_output_conversion
         unit: '%'
-      - key: input_energy_heat_heatpump_water_water_electricity_steam_hot_water_output_conversion
-        unit: '%'
+        entso: |
+          IF(EB("Waste heater - residential", "Heat") > 0.0,
+          -> { EB("Waste heater - residential", "Heat") / EB("Waste heater - residential", "Waste") * 100 },
+          -> { 105.0 })
       - key: input_industry_heat_burner_lignite_steam_hot_water_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Lignite heater - industrial", "Lignite") > 0.0,
+          -> { EB("Lignite heater - industrial", "Heat") / EB("Lignite heater - industrial", "Lignite") * 100 },
+          -> { 72.0 })
       - key: input_industry_heat_burner_coal_steam_hot_water_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Coal heater - industrial", "Heat") > 0.0,
+          -> { EB("Coal heater - industrial", "Heat") / EB("Coal heater - industrial", "Coal excl lignite") * 100 },
+          -> { 72.0 })
       - key: input_industry_heat_burner_crude_oil_steam_hot_water_output_conversion
         unit: '%'
+        entso: |
+          IF(EB("Oil heater - industrial", "Heat") > 0.0,
+          -> { EB("Oil heater - industrial", "Heat") / EB("Oil heater - industrial", "Crude oil aggregated") * 100 },
+          -> { 72.0 })
+      - key: input_energy_heat_heatpump_water_water_electricity_steam_hot_water_output_conversion
+        unit: '%'
+        entso: 50.0
 
 
 

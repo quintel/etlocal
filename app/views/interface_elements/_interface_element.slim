@@ -90,5 +90,8 @@
               strong= I18n.t("dataset_edits.history")
               .change
                 .reason
-                  = I18n.t("data_source_messages.#{@dataset.data_source}", default: '')
+                  - if I18n.exists?("data_source_messages.#{@dataset.data_source}.#{interface_element.key}")
+                    = I18n.t("data_source_messages.#{@dataset.data_source}.#{interface_element.key}")
+                  - else
+                    = I18n.t("data_source_messages.#{@dataset.data_source}.default", default: '')
 

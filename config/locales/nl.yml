@@ -12,7 +12,10 @@ nl:
   view_on_github: Zicht op GitHub
   inherited_file: This file is inherited from the %{parent} dataset.
   data_source_messages:
-    entso: Value sourced from the Eurostat energy balance.
+    entso:
+      default: Value sourced from the Eurostat energy balance.
+      # households_energy_demand: 'Deze waarde is een test'
+
 
   countries:
     be: België

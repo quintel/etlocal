@@ -43,10 +43,13 @@ groups:
     items:
       - key: input_share_mixer_gas_fuel_bio_oil
         unit: '%'
+        entso: 0.0
       - key: input_share_mixer_gas_fuel_oil
         unit: '%'
+        entso: 0.0
       - key: input_share_mixer_gas_fuel_network_gas
         unit: '%'
+        entso: 1.0
         flexible: true
 
   - header: industry_final_demand_crude_oil_input

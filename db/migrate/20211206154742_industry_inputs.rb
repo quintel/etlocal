@@ -77,7 +77,7 @@ SCALABLE_ALUMINUM_KEYS = {
     input_industry_refinery_transformation_crude_oil_lpg_demand: { nl2015: 79810.00000000006, nl: 70763.99568999997 },
     input_industry_refinery_transformation_crude_oil_refinery_gas_demand: { nl2015: 112711.50000000006, nl: 103595.37399999988 },
     input_industry_refinery_transformation_crude_oil_diesel_demand: { nl2015: 952365.6199999999, nl: 887431.6578 },
-    input_industry_refinery_transformation_crude_oil_loss_demand: { nl2015: 22928.919999998536, nl: 0.0 }
+    energy_distribution_crude_oil_loss_demand: { nl2015: 22928.919999998536, nl: 0.0 }
   }.freeze
 
   UNSCALABLE_INDUSTRY_KEYS = {

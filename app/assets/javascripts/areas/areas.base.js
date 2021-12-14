@@ -24,8 +24,8 @@ var Areas = (function () {
     }
 
     function drawMap() {
-        this.center = [5.494687, 52.231560];
-        this.zoom   = 7.9;
+        this.center = [0, 50.137];
+        this.zoom   = 5.0;
 
         this.view = new ol.View({
             center: ol.proj.fromLonLat(this.center),

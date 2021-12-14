@@ -29,8 +29,11 @@ Areas.DatasetSelector = (function () {
     // All layer features needs an 'id' attribute. See
     // https://github.com/quintel/etlayers why that is.
     //
-    function findDataset(position, feature) {
-        var geoId = feature.get('id');
+    function findDataset(position, layer, feature) {
+        var geoId = feature.get(layer.get('name_attr'))
+
+        geoId = geoId === 'GB' ? 'UK' : geoId
+        geoId = geoId === 'GR' ? 'EL' : geoId
 
         $.ajax({
             url: "/datasets/" + geoId + ".json",
@@ -38,6 +41,7 @@ Areas.DatasetSelector = (function () {
             dataType: 'json',
             success: function (data) {
                 if (data) {
+                    colourDataset.call(this, layer, feature)
                     openPopup.call(this, position, data);
                 } else if (console) {
                     console.log("No dataset with " + geoId + " found");
@@ -49,18 +53,22 @@ Areas.DatasetSelector = (function () {
         });
     }
 
+    function colourDataset(layer, selectedFeature) {
+        var identifier = layer.get('name_attr')
+
+        layer.setStyle(function (feature) {
+            var isFilled = feature.get(identifier) === selectedFeature.get(identifier),
+                style    = isFilled ? 'filled' : 'normal';
+
+            return [this.areas.layers.styles[style]];
+        }.bind(this));
+    }
+
     function click(e) {
         // We'll assume for now that there will be only one feature to click
         // on. If this changes, please do so here.
         this.areas.map.forEachFeatureAtPixel(e.pixel, function (selectedFeature, layer) {
-            layer.setStyle(function (feature) {
-                var isFilled = feature.get('id') === selectedFeature.get('id'),
-                    style    = isFilled ? 'filled' : 'normal';
-
-                return [this.areas.layers.styles[style]];
-            }.bind(this));
-
-            findDataset.call(this, e.coordinate, selectedFeature);
+            findDataset.call(this, e.coordinate, layer, selectedFeature);
         }.bind(this));
     }
 

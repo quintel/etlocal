@@ -9,6 +9,22 @@ mapbox_defaults: &mapbox_defaults
      - 7422845.1362154185771942
 
 dataset_selector:
+  - name: countries
+    id: mapbox.country-boundaries-v1
+    source: country_boundaries
+    minres: 1000
+    maxres: 15000
+    filter: iso_3166_1
+    region: Europe
+    name_attr: iso_3166_1
+    type: 'mvt'
+    url: "https://{a-d}.tiles.mapbox.com/v4/${layer_id}/{z}/{x}/{y}.vector.pbf?access_token=${access_token}"
+    extent:
+      - -2000000.0
+      - 4000000.0
+      - 4000000.0
+      - 11500000.0
+
   - name: provinces
     id: "grdw.8kst3bc1"
     source: "2018_province-df2r8c"

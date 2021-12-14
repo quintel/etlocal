@@ -34,6 +34,7 @@ groups:
       - key: industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_smeltoven_electricity_parent_share
         unit: '%'
         flexible: true
+        skip_validation: true
 
   - header: industry_metal_aluminium_network_gas_use
     type: slider
@@ -43,3 +44,4 @@ groups:
       - key: industry_aluminium_burner_network_gas_industry_aluminium_smeltoven_electricity_parent_share
         unit: '%'
         flexible: true
+        skip_validation: true

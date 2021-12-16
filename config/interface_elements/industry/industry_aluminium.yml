@@ -14,6 +14,7 @@ groups:
       - key: input_industry_aluminium_smeltoven_electricity_share
         unit: '%'
         flexible: true
+        skip_validation: true
 
   - header: industry_aluminium_demand
     items:

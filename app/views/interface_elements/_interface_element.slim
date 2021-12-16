@@ -95,3 +95,8 @@
                   - else
                     = I18n.t("data_source_messages.#{@dataset.data_source}.default", default: '')
 
+                  - if I18n.exists?("data_source_messages.#{@dataset.data_source}.view_file")
+                    p
+                      = link_to "https://github.com/quintel/etlocal/blob/production/data/datasets/#{@dataset.geo_id}.csv", target: '_blank' do
+                        = "#{I18n.t("data_source_messages.#{@dataset.data_source}.view_file")} →"
+

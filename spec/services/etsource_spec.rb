@@ -19,7 +19,7 @@ RSpec.describe "ETLocal's interface", :if => dataset_inputs.any?, type: :interfa
     next if item.skip_validation
 
     if item.key =~ /^input/
-      it "is included in a TQL #{item.key}" do
+      xit "is included in a TQL #{item.key}" do
         expect(dataset_inputs).to include(item.key.to_s)
       end
     else

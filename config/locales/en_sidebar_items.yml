@@ -71,7 +71,7 @@ en:
         energy_fossil_electricity_production: Fossil electricity
         energy_renewable_electricity_production: Renewable electricity
         energy_efficiency: Efficiencies
-        energy_full_load_hours: Full load hours electricity
+        energy_full_load_hours: Full load hours
         energy_biomass: Biomass
         energy_fuel_production: Fuel production
 
@@ -82,7 +82,11 @@ en:
         households_applications: Applications
 
       industry:
-        industry_metal: Metal
+        industry_steel: Steel
+        industry_aluminium: Aluminium
+        industry_metal: Other metal
+        industry_refinery: Refineries
+        industry_fertilizer: Fertilizers
         industry_chemical: Chemical
         industry_food: Food
         industry_paper: Paper

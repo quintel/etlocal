@@ -11,6 +11,9 @@ en:
   loading: Loading
   view_on_github: View on GitHub
   inherited_file: This file is inherited from the %{parent} dataset.
+  data_source_messages:
+    entso:
+      default: Value sourced from the Eurostat energy balance.
 
   countries:
     be: Belgium

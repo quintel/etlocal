@@ -12,6 +12,8 @@ en:
         number_of_inhabitants: Number of inhabitants
 
         co2_emission_1990: 'CO<sub>2</sub> emissions in 1990'
+        co2_emission_1990_aviation_bunkers: 'CO<sub>2</sub> emissions international aviation in 1990'
+        co2_emission_1990_marine_bunkers: 'CO<sub>2</sub> emissions international shipping in 1990'
         energetic_emissions_other_ghg_households: "Households"
         energetic_emissions_other_ghg_buildings: "Buildings"
         energetic_emissions_other_ghg_transport: "Transport"
@@ -54,11 +56,13 @@ en:
         hv_net_total_costs_present: High voltage grid
         offshore_net_costs_present: Offshore wind grid
         interconnection_net_costs_present: Interconnector capacity
+        annual_infrastructure_cost_gas: Total gas infrastructure costs
         lv_net_spare_capacity: Low voltage grid
         lv_mv_trafo_spare_capacity: LV-MV transformers
         mv_net_spare_capacity: Medium voltage grid
         mv_hv_trafo_spare_capacity: MV-HV transformers
         hv_net_spare_capacity: High voltage grid
+        interconnector_capacity: Interconnector capacity
         lv_net_capacity_per_step: Step size of low voltage grid reinforcement
         lv_net_costs_per_capacity_step: Costs of low voltage grid reinforcement per step
         lv_mv_trafo_capacity_per_step: Step size of lv-mv transformer reinforcement
@@ -297,6 +301,9 @@ en:
         transport_rail_mixer_diesel_transport_passenger_train_using_diesel_mix_parent_share: Passenger trains
         transport_rail_mixer_diesel_transport_freight_train_using_diesel_mix_parent_share: Freight trains
 
+        bunkers_total_useful_demand_ships_demand: International navigation
+        bunkers_total_useful_demand_planes_demand: International aviation
+
         # agriculture
         agriculture_final_demand_electricity_demand: Electricity
         agriculture_final_demand_network_gas_demand: Gas
@@ -336,17 +343,100 @@ en:
         input_percentage_of_bio_oil_industry_final_demand_crude_oil: Other bio oil
         input_percentage_of_crude_oil_industry_final_demand_crude_oil: Other oil
 
-        input_industry_metal_steel_scaling_factor: "% national steel industry"
-        input_industry_metal_aluminium_scaling_factor: "% national aluminium industry"
+        input_industry_metal_steel_production: Crude steel production
+        input_industry_steel_blastfurnace_bof_share: Blastfurnace BOF
+        input_industry_steel_scrap_hbi_eaf_share: Electric Arc Furnace
+        input_industry_metal_steel_electricity_demand: Electricity
+        input_industry_metal_steel_network_gas_demand:  Gas
+        input_industry_metal_steel_coal_demand:  Coal
+        input_industry_metal_steel_cokes_demand:  Cokes
+        input_industry_metal_steel_coal_gas_demand:  Coal gas
+        input_industry_metal_steel_steam_hot_water_demand: Heat
+        input_industry_metal_steel_crude_oil_demand:  Oil
+        input_industry_metal_steel_wood_pellets_demand: Wood pellets
+        input_energy_cokesoven_transformation_coal_input_demand: Coal
+        input_energy_cokesoven_transformation_cokes_output_conversion: Cokes
+        input_energy_cokesoven_transformation_coal_gas_output_conversion: Coal gas
+        input_energy_cokesoven_transformation_loss_output_conversion: Loss
+        input_energy_cokesoven_own_use_electricity: Electricity
+        input_energy_cokesoven_own_use_network_gas: Gas
+        input_energy_cokesoven_own_use_coal: Coal
+        input_energy_cokesoven_own_use_cokes: Cokes
+        input_energy_cokesoven_own_use_coal_gas: Coal gas
+        input_energy_cokesoven_own_use_steam_hot_water: Heat
+        input_energy_cokesoven_own_use_crude_oil: Oil
+        input_energy_blastfurnace_transformation_coal_input_demand: Coal
+        input_energy_blastfurnace_transformation_cokes_input_demand: Cokes
+        input_energy_blastfurnace_transformation_coal_gas_output_conversion: Coal gas
+        input_energy_blastfurnace_transformation_loss_output_conversion: Loss
+        input_energy_blastfurnace_own_use_electricity: Electricity
+        input_energy_blastfurnace_own_use_network_gas: Gas
+        input_energy_blastfurnace_own_use_coal: Coal
+        input_energy_blastfurnace_own_use_cokes: Cokes
+        input_energy_blastfurnace_own_use_coal_gas: Coal gas
+        input_energy_blastfurnace_own_use_steam_hot_water: Heat
+        input_energy_blastfurnace_own_use_crude_oil: Oil
+        input_energy_power_combined_cycle_coal_gas_coal_gas_input_demand: Power plant
+        input_energy_chp_coal_gas_coal_gas_input_demand: CHP
+        input_energy_power_combined_cycle_coal_gas_electricity_output_conversion: Electricity
+        input_energy_power_combined_cycle_coal_gas_loss_output_conversion: Loss
+        input_energy_chp_coal_gas_electricity_output_conversion: Electricity
+        input_energy_chp_coal_gas_steam_hot_water_output_conversion: Heat
+        input_energy_chp_coal_gas_loss_output_conversion: Loss
+        industry_final_demand_for_metal_steel_coal_industry_steel_blastfurnace_bof_parent_share: Blastfurnace BOF
+        industry_final_demand_for_metal_steel_coal_industry_steel_scrap_hbi_eaf_parent_share: Electric Arc Furnace
+        industry_final_demand_for_metal_steel_cokes_industry_steel_blastfurnace_bof_parent_share: Blastfurnace BOF
+        industry_final_demand_for_metal_steel_cokes_industry_steel_scrap_hbi_eaf_parent_share: Electric Arc Furnace
+        industry_final_demand_for_metal_steel_crude_oil_industry_steel_blastfurnace_bof_parent_share: Blastfurnace BOF
+        industry_final_demand_for_metal_steel_crude_oil_industry_steel_scrap_hbi_eaf_parent_share: Electric Arc Furnace
+        industry_final_demand_for_metal_steel_electricity_industry_steel_blastfurnace_bof_parent_share: Blastfurnace BOF
+        industry_final_demand_for_metal_steel_electricity_industry_steel_scrap_hbi_eaf_parent_share: Electric Arc Furnace
+        industry_final_demand_for_metal_steel_network_gas_industry_steel_blastfurnace_bof_parent_share: Blastfurnace BOF
+        industry_final_demand_for_metal_steel_network_gas_industry_steel_scrap_hbi_eaf_parent_share: Electric Arc Furnace
+        industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_blastfurnace_bof_parent_share: Blastfurnace BOF
+        industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_scrap_hbi_eaf_parent_share: Electric Arc Furnace
+        industry_final_demand_for_metal_steel_wood_pellets_industry_steel_blastfurnace_bof_parent_share: Blastfurnace BOF
+        industry_final_demand_for_metal_steel_wood_pellets_industry_steel_scrap_hbi_eaf_parent_share: Electric Arc Furnace
+        energy_power_combined_cycle_coal_gas_full_load_hours: Coal gas power plant
+        energy_chp_coal_gas_full_load_hours: Coal gas CHP
+        input_energy_blastfurnace_transformation_loss_output_conversion: Loss
+
+        input_industry_metal_aluminium_production: Aluminium production
+        input_industry_aluminium_electrolysis_current_electricity_share: Electrolysis
+        input_industry_aluminium_smeltoven_electricity_share: Smeltoven
+        input_industry_metal_aluminium_electricity_demand: Electricity
+        input_industry_metal_aluminium_network_gas_demand: Network gas
+        industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_electrolysis_current_electricity_parent_share: Electrolysis
+        industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_smeltoven_electricity_parent_share: Smeltoven
+        industry_aluminium_burner_network_gas_industry_aluminium_electrolysis_current_electricity_parent_share: Electrolysis
+        industry_aluminium_burner_network_gas_industry_aluminium_smeltoven_electricity_parent_share: Smeltoven
+
         input_industry_metal_other_electricity_demand: Electricity
         input_industry_metal_other_network_gas_demand: Gas
         input_industry_metal_other_steam_hot_water_demand: Heat
-        input_industry_metal_other_wood_pellets_demand: Solid biomass
         input_industry_metal_other_crude_oil_demand: Oil
         input_industry_metal_other_coal_demand: Coal
 
+        industry_useful_demand_for_chemical_refineries_crude_oil_non_energetic_demand: Crude oil
+        input_industry_chemical_refineries_electricity_demand: Electricity
+        input_industry_chemical_refineries_network_gas_demand: Network gas
+        input_industry_chemical_refineries_steam_hot_water_demand: Heat
+        input_industry_chemical_refineries_wood_pellets_demand: Biomass
+        input_industry_chemical_refineries_coal_demand: Coal
+        input_industry_chemical_refineries_crude_oil_demand: Oil
+        input_industry_chemical_refineries_network_gas_non_energetic_demand: Network gas
+        input_industry_chemical_refineries_wood_pellets_non_energetic_demand: Biomass
+        input_industry_chemical_refineries_coal_non_energetic_demand: Coal
+        input_industry_refinery_transformation_crude_oil_other_oil_demand: Other oil
+        input_industry_refinery_transformation_crude_oil_gasoline_demand: Gasoline
+        input_industry_refinery_transformation_crude_oil_heavy_fuel_oil_demand: Heavy fuel
+        input_industry_refinery_transformation_crude_oil_kerosene_demand: Kerosene
+        input_industry_refinery_transformation_crude_oil_lpg_demand: LPG
+        input_industry_refinery_transformation_crude_oil_refinery_gas_demand: Refinery gas
+        input_industry_refinery_transformation_crude_oil_diesel_demand: Diesel
+        input_industry_refinery_transformation_crude_oil_loss_demand: Loss
+
         input_industry_chemical_fertilizers_scaling_factor: "% national fertilizer industry"
-        input_industry_chemical_refineries_scaling_factor: "% national refinery industry"
         input_industry_chemical_other_electricity_demand: Electricity
         input_industry_chemical_other_network_gas_demand: Gas
         input_industry_chemical_other_steam_hot_water_demand: Heat
@@ -389,10 +479,12 @@ en:
         input_industry_other_wood_pellets_demand: Solid biomass
         input_industry_other_crude_oil_demand: Oil
         input_industry_other_coal_demand: Coal
+        input_industry_other_cokes_demand: Cokes
         input_industry_other_network_gas_non_energetic_demand: Gas (non-energetic)
         input_industry_other_wood_pellets_non_energetic_demand: Biomass (non-energetic)
         input_industry_other_crude_oil_non_energetic_demand: Oil (non-energetic)
         input_industry_other_coal_non_energetic_demand: Coal (non-energetic)
+        input_industry_other_cokes_non_energetic_demand: Cokes (non-energetic)
 
         industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: "Residual heat from processes"
         industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: "Residual heat from flue gasses"
@@ -406,11 +498,33 @@ en:
         industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share: "Residual heat from servers"
         industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: "No residual heat"
 
+        input_industry_metal_aluminium_electricity_demand: Electricity
+        input_industry_metal_aluminium_network_gas_demand: Network gas
+
+        industry_aluminium_electrolysis_current_electricity_parent_share: Electrolysis
+        industry_aluminium_electrolysis_bat_electricity_parent_share: Electrolysis BAT
+        industry_aluminium_smeltoven_electricity_parent_share: Smelt oven (recycling)
+        industry_aluminium_carbothermalreduction_electricity_parent_share: Carbothermal reduction
+
+        input_industry_chemical_fertilizers_electricity_demand: Electricity
+        input_industry_chemical_fertilizers_network_gas_demand: Network gas
+        input_industry_chemical_fertilizers_steam_hot_water_demand: Heat
+        input_industry_chemical_fertilizers_wood_pellets_demand: Biomass
+        input_industry_chemical_fertilizers_crude_oil_demand: Oil
+        input_industry_chemical_fertilizers_coal_demand: Coal
+
+        input_industry_chemical_fertilizers_network_gas_non_energetic_demand: Network gas
+        input_industry_chemical_fertilizers_wood_pellets_non_energetic_demand: Biomass
+        input_industry_chemical_fertilizers_crude_oil_non_energetic_demand: Oil
+        input_industry_chemical_fertilizers_coal_non_energetic_demand: Coal
+        input_industry_chemical_fertilizers_hydrogen_non_energetic_demand: Hydrogen
+
         # Energy
         energy_power_sector_own_use_electricity_demand: Own use of electricity
         energy_power_hv_network_loss_demand: Network losses
         energy_distribution_greengas_demand: Greengas
         energy_regasification_lng_energy_national_gas_network_natural_gas_demand: Regasified LNG
+        energy_distribution_network_gas_loss_demand: Gas network losses
 
         energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share: Dry gasification
         energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share: Wet gasification
@@ -440,6 +554,7 @@ en:
         input_energy_power_geothermal_production: Geothermal
         input_energy_chp_local_engine_biogas_production: Biogas CHP
         input_energy_chp_local_wood_pellets_production: Biomass CHP
+        input_energy_power_solar_csp_solar_radiation_production: Concentrated solar power
 
         input_energy_power_ultra_supercritical_coal_production: Pulverized coal
         input_energy_power_supercritical_coal_production: Coal conventional
@@ -449,6 +564,9 @@ en:
         input_energy_power_ultra_supercritical_ccs_coal_production: Pulverized coal with CCS
         input_energy_chp_ultra_supercritical_coal_production: Coal plant with heat production (CHP)
         input_energy_chp_ultra_supercritical_cofiring_coal_production: Co-firing coal plant with heat production (CHP)
+        input_energy_power_supercritical_ccs_waste_mix_production: Waste incinerator CCS
+        input_energy_power_ultra_supercritical_lignite_production: Coal Lignite
+        input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production: Coal Lignite 'oxyfuel' CCS
 
         input_energy_power_ultra_supercritical_network_gas_production: Gas conventional
         input_energy_power_turbine_network_gas_production: Gas turbine
@@ -494,6 +612,37 @@ en:
         energy_chp_combined_cycle_network_gas_full_load_hours: Gas CHP (large-scale)
         energy_power_supercritical_coal_full_load_hours: Coal conventional
         energy_power_engine_diesel_full_load_hours: Diesel generator
+        energy_power_engine_network_gas_full_load_hours: Gas combustion engine
+        energy_power_geothermal_full_load_hours: Geothermal electric
+        energy_power_hydro_mountain_full_load_hours: Hydro-electricity (mountains)
+        energy_power_nuclear_gen2_uranium_oxide_full_load_hours: Nuclear conventional
+        energy_power_nuclear_gen3_uranium_oxide_full_load_hours: Nuclear 3rd Gen
+        energy_power_supercritical_ccs_waste_mix_full_load_hours: Waste incinerator CCS
+        energy_power_ultra_supercritical_ccs_coal_full_load_hours: Pulverized coal CCS
+        energy_power_ultra_supercritical_coal_full_load_hours: Pulverized coal
+        energy_power_ultra_supercritical_cofiring_coal_full_load_hours: Pulverized coal with co-firing
+        energy_power_ultra_supercritical_crude_oil_full_load_hours: Oil-fired
+        energy_power_ultra_supercritical_lignite_full_load_hours: Coal Lignite
+        energy_power_ultra_supercritical_oxyfuel_ccs_lignite_full_load_hours: Coal Lignite 'oxyfuel' CCS
+        energy_heat_burner_wood_pellets_full_load_hours: Biomass heater
+        energy_heat_burner_coal_full_load_hours: Coal heater
+        energy_heat_burner_crude_oil_full_load_hours: Oil heater
+        energy_heat_burner_network_gas_full_load_hours: Gas heater (network gas)
+        energy_heat_solar_thermal_full_load_hours: Solar thermal
+        energy_heat_burner_waste_mix_full_load_hours: Waste heater
+        energy_heat_heatpump_water_water_electricity_full_load_hours: Collective heat pump
+        energy_chp_ultra_supercritical_cofiring_coal_full_load_hours: Co-firing coal CHP
+        energy_chp_ultra_supercritical_coal_full_load_hours: Coal CHP
+        energy_chp_ultra_supercritical_lignite_full_load_hours: Lignite plant with district heat (CHP)
+        industry_chp_turbine_gas_power_fuelmix_full_load_hours: Gas turbine CHP - industrie
+        industry_chp_engine_gas_power_fuelmix_full_load_hours: Gas motor CHP - industrie
+        industry_chp_combined_cycle_gas_power_fuelmix_full_load_hours: Gas CHP (CCGT) - industrie
+        industry_chp_ultra_supercritical_coal_full_load_hours: Coal CHP - industrie
+        industry_chp_wood_pellets_full_load_hours: Biomass CHP- industrie
+        industry_heat_burner_lignite_full_load_hours: Lignite heater - industrie
+        industry_heat_burner_coal_full_load_hours: Coal heater - industrie
+        industry_heat_burner_crude_oil_full_load_hours: Oil heater - industrie
+        flh_solar_pv_solar_radiation_max: Solar panels (roofs and ground-mount)
 
         fuel_production_coal_demand: Coal
         fuel_production_lignite_demand: Lignite
@@ -519,6 +668,7 @@ en:
         input_energy_power_supercritical_waste_mix_electricity_output_conversion: Waste incinerator
         input_energy_power_nuclear_gen2_uranium_oxide_electricity_output_conversion: Conventional nuclear power plant
         input_energy_power_nuclear_gen3_uranium_oxide_electricity_output_conversion: 3rd generation nuclear power plant
+        input_energy_power_supercritical_ccs_waste_mix_electricity_output_conversion: Waste incinerator CCS
 
         input_energy_heat_burner_wood_pellets_steam_hot_water_output_conversion: Biomass-fired heater
         input_energy_heat_burner_coal_steam_hot_water_output_conversion: Coal-fired heater

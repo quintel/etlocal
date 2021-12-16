@@ -29,9 +29,11 @@ nl:
       area_emission_factors_transport_fuels: Transportbrandstoffen
       area_emission_factors_import: Import
       area_electricity_grid_costs: Kosten elektriciteitsnetwerk
+      area_gas_grid_costs: Kosten gasnetwerk
       area_electricity_grid_capacity: Beschikbare capaciteit huidig elektriciteitsnet
       area_electricity_grid_reinforcement: Verzwaring elektriciteitsnet
       area_heat_infrastructure_lengths: Leidinglengtes warmtenet
+      area_interconnector_capacity: Beschikbare capciteit huidige interconnectors
 
       #households
       households_housing_stock_distribution: Huizenvoorraad
@@ -92,8 +94,26 @@ nl:
       industry_heat: Gebruikte brandstof voor WKK en ketels
       industry_gas_fuelmix: Brandstofmix gasgestookte WKK
       industry_final_demand_crude_oil_input: Brandstoffen voor olieketels in alle industriesectoren
-      industry_metal_steel: Staal
-      industry_metal_aluminium: Aluminium
+      industry_metal_steel_production: Steel productie
+      industry_metal_steel_production_route: Steel productietechnologie
+      industry_metal_steel_final_demand: Eindgebruik
+      energy_cokesoven_transformation_input: Kooksoven transformatie input
+      energy_cokesoven_transformation_output: Kooksoven transformatie output
+      energy_cokesoven_own_use: Kooksoven (eigen gebruik)
+      energy_blastfurnace_transformation_input: Hoogoven - transformatie input
+      energy_blastfurnace_transformation_output: Hoogoven - transformatie output
+      energy_blastfurnace_own_use: Hoogoven (eigen gebruik)
+      industry_metal_steel_energy_production_input:  Brandstofvraag energieproductie
+      energy_power_combined_cycle_coal_gas_conversion:  Elektriciteitsproductie
+      energy_chp_coal_gas_conversion: WKK-productie
+      industry_metal_steel_coal_use: Eindgebruik - gebruik van kolen
+      industry_metal_steel_electricity_use: Eindgebruik - gebruik van elektriciteit
+      industry_metal_steel_network_gas_use: Eindgebruik - gebruik van gas
+      industry_metal_aluminium_production: Aluminium productie
+      industry_metal_aluminium_production_route: Aluminium productietechnologie
+      industry_aluminium_demand: Eindgebruik
+      industry_metal_aluminium_electricity_use: Eindgebruik - gebruik van elektriciteit
+      industry_metal_aluminium_network_gas_use: Eindgebruik - gebruik van gas
       industry_metal_other: Overige metaalindustrie
       industry_chemical_fertilizers: Kunstmest
       industry_chemical_refineries: Raffinaderijen
@@ -110,6 +130,14 @@ nl:
       industry_refineries_residual_heat: "Beschikbare restwarmte raffinaderijen"
       industry_fertilizers_residual_heat: "Beschikbare restwarmte kunstmestindustrie"
       industry_ict_residual_heat: "Beschikbare restwarmte ICT"
+      industry_fertilizer_demand_energetic: Energetische vraag
+      industry_fertilizer_demand_non_energetic: Niet-energetische vraag
+      industry_aluminium_demand: Vraag
+      industry_aluminium_technology: Technologie
+      industry_refinery_input: Olie grondstof vraag
+      industry_refinery_output: Brandstofproductie
+      industry_refinery_demand_energetic: Energetische vraag
+      industry_refinery_demand_non_energetic: Niet-energetische vraag
 
       # other
       other_final_demand: Eindgebruik
@@ -132,14 +160,19 @@ nl:
       energy_heat_renewable: Duurzame warmtebronnen
       energy_heat_fossil: Fossiele warmtebronnen
       energy_heat_distribution_loss: Verlies warmenetten
-      energy_renewable_full_load_hours: Hernieuwbare elektriciteitsproductie
-      energy_fossil_full_load_hours: Fossiele elektriciteitsproductie
+      energy_renewable_full_load_hours: Vollasturen van hernieuwbare elektriciteitsproductie
+      energy_fossil_full_load_hours: Vollasturen van fossiele elektriciteitsproductie
       fuel_production: Brandstofproductie
       energy_efficiency_coal: Efficiënties van kolencentrales
       energy_efficiency_gas: Efficiënties van gascentrales
       energy_efficiency_other_fossil: Efficiënties van overige fossiel centrales
       energy_efficiency_renewable_chp: Efficiënties van hernieuwbare centrales
       energy_efficiency_heat_plants: Efficiënties van warmteketels
+      energy_fossil_chp_full_load_hours: Vollasturen van fossiele WKK's
+      energy_renewable_chp_full_load_hours: Vollasturen van hernieuwbare WKK's
+      energy_fossil_heat_full_load_hours: Vollasturen van fossiele warmteproductie
+      energy_renewable_heat_full_load_hours: Vollasturen van hernieuwbare warmteproductie
+      energy_renewable_full_load_hours_max: Maximum vollasturen van hernieuwbare centrales
 
       # curves
       curves_supply_electricity: Aanbod - Elektriciteit

@@ -1,0 +1,23 @@
+key: industry_metal_steel_old
+
+groups:
+  - header: industry_metal_steel_old
+    type: slider
+    items:
+      - key: input_industry_metal_steel_scaling_factor
+        unit: '%'
+  - header: industry_metal_steel_old
+    type: slider
+    items:
+      - key: input_industry_metal_aluminium_scaling_factor
+        unit: '%'
+  - header: industry_metal_steel_old
+    type: slider
+    items:
+      - key: input_industry_chemical_refineries_scaling_factor
+        unit: '%'
+  - header: industry_metal_steel_old
+    type: slider
+    items:
+      - key: input_industry_chemical_fertilizers_scaling_factor
+        unit: '%'

@@ -1,0 +1,5 @@
+en:
+  descriptions:
+    interface_items:
+      input_industry_metal_steel_coal_gas_demand: |
+        "Coal gas" is a container term for gaseous energy carriers produced from coal, such as blastfurnaces gases and coke oven gases.

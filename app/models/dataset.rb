@@ -1,4 +1,6 @@
 class Dataset < ApplicationRecord
+  str_enum :data_source, %i[db entso], scopes: false, suffix: :data_source
+
   belongs_to :user
 
   has_many :commits
@@ -35,7 +37,7 @@ class Dataset < ApplicationRecord
       'region'
     elsif geo_id =~ /^RES/
       'res'
-    elsif geo_id =~ /^UKNI/
+    elsif entso_data_source? || geo_id.match?(/^UKNI/)
       'country'
     else
       'province'
@@ -105,7 +107,30 @@ class Dataset < ApplicationRecord
     end
   end
 
+  # Public: Returns if this dataset retrieves some values from a CSV using queries.
+  def queryable_source?
+    # This can be extended in the future if we need to support other types of source.
+    entso_data_source?
+  end
+
+  # Public: Executes the GQL query.
+  def execute_query(query)
+    data_source_file.runtime.execute(query)
+  end
+
   private
+
+  # Internal: Retrieves the data source for the dataset if it has data sourced from a CSV file.
+  #
+  # Returns an ETLocal::DatasetSource::ENTSOFile or raises an error if the dataset does not use a
+  # CSV.
+  def data_source_file
+    unless entso_data_source?
+      raise "Datasets whose data source is #{data_source.inspect} do not have a CSV source file"
+    end
+
+    @data_source_file ||= DatasetSource::ENTSO::File.from_dataset(self)
+  end
 
   def is_province?
     !(geo_id =~ /^(BU|GM|WK)/)

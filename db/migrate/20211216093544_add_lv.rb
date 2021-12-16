@@ -1,6 +1,6 @@
-class Pv24FlevolandAggregation < ActiveRecord::Migration[5.0]
+class AddLv < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20211116110311_pv24_flevoland_aggregation')
+    directory    = Rails.root.join('db/migrate/20211216093544_add_lv')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

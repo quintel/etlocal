@@ -19,7 +19,7 @@
               .slider-wrapper.input
                 = form.label interface_item.key, DatasetEditForm.human_attribute_name(interface_item.key).html_safe
 
-                .slider data-key= interface_item.key data-flexible= ('flex' if interface_item.flexible) data-editable= (policy(@dataset).edit? ? '1' : '0')
+                .slider data-key= interface_item.key data-flexible= ('flex' if interface_item.flexible) data-editable= (policy(@dataset).edit? && interface_item.editable?(@dataset) ? '1' : '0')
                 span.history data-key= interface_item.key
                   .fa.fa-info
 
@@ -46,8 +46,12 @@
 
                   span.val data= conversions_for(interface_item.key)
                     - if policy(@dataset).edit?
-                      = text_field_tag interface_item.key, nil, class: 'display_input', placeholder: interface_item.default, data: { precision: interface_item.precision }
-                      = form.hidden_field interface_item.key, class: 'value_input'
+                      - if interface_item.editable?(@dataset)
+                        = text_field_tag interface_item.key, nil, class: 'display_input', placeholder: interface_item.default, data: { precision: interface_item.precision }
+                        = form.hidden_field interface_item.key, class: 'value_input'
+                      - else
+                        = text_field_tag interface_item.key, number_with_precision(form.object.public_send(interface_item.key), precision: interface_item.precision, strip_insignificant_zeros: true), disabled: true
+                        = form.hidden_field interface_item.key, class: 'value_input'
 
                     - else
                       span.read-only
@@ -70,15 +74,24 @@
             - if I18n.exists?("descriptions.interface_items.#{interface_item.key}")
               p=I18n.t("descriptions.interface_items.#{interface_item.key}").html_safe
 
-            strong= I18n.t("dataset_edits.history")
+            - if interface_item.editable?(@dataset)
+              strong= I18n.t("dataset_edits.history")
+              - @dataset.editable_attributes.edits_for(interface_item.key).each do |dataset_edit|
+                .change
+                  .created_by
+                    .to
+                      => I18n.t("dataset_edits.changed_to", value: number_to_currency(dataset_edit.value, precision: 2, unit: ''))
+                    .by
+                      = "#{dataset_edit.creator}, #{I18n.l dataset_edit.created_at, format: :short}"
 
-            - @dataset.editable_attributes.edits_for(interface_item.key).each do |dataset_edit|
+                  .reason
+                    = simple_format dataset_edit.commit.message
+            - else
+              strong= I18n.t("dataset_edits.history")
               .change
-                .created_by
-                  .to
-                    => I18n.t("dataset_edits.changed_to", value: number_to_currency(dataset_edit.value, precision: 2, unit: ''))
-                  .by
-                    = "#{dataset_edit.creator}, #{I18n.l dataset_edit.created_at, format: :short}"
-
                 .reason
-                  = simple_format dataset_edit.commit.message
+                  - if I18n.exists?("data_source_messages.#{@dataset.data_source}.#{interface_element.key}")
+                    = I18n.t("data_source_messages.#{@dataset.data_source}.#{interface_element.key}")
+                  - else
+                    = I18n.t("data_source_messages.#{@dataset.data_source}.default", default: '')
+

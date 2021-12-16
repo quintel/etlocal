@@ -1,0 +1,97 @@
+---
+# Contains mappings of keys used in ENTSO source CSVs to those used in GQL.
+column_groups:
+  Network gas:
+    - Biogases
+    - Natural gas
+  Coal:
+    - Anthracite
+    - Coking coal
+    - Other bituminous coal
+    - Sub-bituminous coal
+    - Lignite
+    - Patent fuel
+    - Coke oven coke
+    - Gas coke
+    - Coal tar
+    - Brown coal briquettes
+    - Peat and peat products
+    - Oil shale and oil sands
+  Coal excl lignite:
+    - Anthracite
+    - Coking coal
+    - Other bituminous coal
+    - Sub-bituminous coal
+    - Patent fuel
+    - Coke oven coke
+    - Gas coke
+    - Coal tar
+    - Brown coal briquettes
+    - Peat and peat products
+    - Oil shale and oil sands
+  Coal gas:
+    - Coke oven gas
+    - Blast furnace gas
+    - Other recovered gases
+  Crude oil aggregated:
+    - Crude oil
+    - Natural gas liquids
+    - Refinery feedstocks
+    - Additives and oxygenates (excluding biofuel portion)
+    - Other hydrocarbons
+    - Refinery gas
+    - Ethane
+    - Liquefied petroleum gases
+    - Motor gasoline (excluding biofuel portion)
+    - Aviation gasoline
+    - Gasoline-type jet fuel
+    - Kerosene-type jet fuel (excluding biofuel portion)
+    - Other kerosene
+    - Gas oil and diesel oil (excluding biofuel portion)
+    - Fuel oil
+    - Naphtha
+    - White spirit and special boiling point industrial spirits
+    - Lubricants
+    - Bitumen
+    - Paraffin waxes
+    - Petroleum coke
+    - Other oil products
+  Gasoline:
+    - Motor gasoline (excluding biofuel portion)
+    - Aviation gasoline
+    - Gasoline-type jet fuel
+  Bio-diesel:
+    - Pure biodiesels
+    - Blended biodiesels
+  Kerosene:
+    - Kerosene-type jet fuel (excluding biofuel portion)
+    - Other kerosene
+  Bio-kerosene:
+    - Pure bio jet kerosene
+    - Blended bio jet kerosene
+  Bio oil:
+    - Pure biogasoline
+    - Other liquid biofuels
+  Other oil:
+    - Crude oil
+    - Other hydrocarbons
+    - Additives and oxygenates (excluding biofuel portion)
+    - Refinery feedstocks
+    - Natural gas liquids
+    - Refinery gas
+    - Ethane
+    - Motor gasoline (excluding biofuel portion)
+    - Aviation gasoline
+    - Gasoline-type jet fuel
+    - Fuel oil
+    - Naphtha
+    - White spirit and special boiling point industrial spirits
+    - Lubricants
+    - Bitumen
+    - Paraffin waxes
+    - Petroleum coke
+    - Other oil products
+  Waste:
+    - Renewable municipal waste
+    - Industrial waste (non-renewable)
+    - Non-renewable municipal waste

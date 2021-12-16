@@ -852,4 +852,42 @@ RSpec.describe CSVImporter do
       expect { result }.to change(Dataset, :count).by(1)
     end
   end
+
+  context 'with a new dataset, create_missing_datasets, data_source=entso' do
+    let(:commits) do
+      <<~YAML
+        ---
+        - fields:
+          - number_of_residences
+          message:
+            Because 5 is a magic number
+      YAML
+    end
+
+    let(:data) do
+      <<~CSV
+        geo_id,country,name,data_source,number_of_residences
+        GM0340,nl,ABC,entso,5
+      CSV
+    end
+
+    let(:result) do
+      described_class.run(
+        data_csv.path,
+        commits_yml.path,
+        create_missing_datasets: true
+      )
+    end
+
+    before { Dataset.find_by(geo_id: 'GM0340').destroy! }
+
+    it 'creates a new dataset' do
+      expect { result }.to change(Dataset, :count).by(1)
+    end
+
+    it 'sets the dataset data_source' do
+      result
+      expect(Dataset.find_by(geo_id: 'GM0340').data_source).to eq('entso')
+    end
+  end
 end

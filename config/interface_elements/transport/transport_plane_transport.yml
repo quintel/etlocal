@@ -4,7 +4,23 @@ groups:
       items:
         - key: transport_final_demand_kerosene_demand
           unit: 'TJ'
+          entso: |
+            EB("Final consumption - transport sector - energy use", "Kerosene") -
+            EB("Final consumption - transport sector - pipeline transport - energy use", "Kerosene") -
+            EB("Final consumption - transport sector - not elsewhere specified - energy use", "Kerosene")
         - key: input_transport_plane_gasoline_demand
           unit: 'TJ'
+          entso: |
+            EB("Final consumption - transport sector - domestic aviation - energy use", "Gasoline")
         - key: input_transport_plane_bio_ethanol_demand
           unit: 'TJ'
+          entso: |
+            EB("Final consumption - transport sector - domestic aviation - energy use", "Pure biogasoline")
+
+    - header: transport_international_plane_transport
+      items:
+        - key: bunkers_total_useful_demand_planes_demand
+          unit: 'TJ'
+          entso: |
+            EB("International aviation", "Kerosene") +
+            EB("International aviation", "Other liquid biofuels")

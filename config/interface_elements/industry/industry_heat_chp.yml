@@ -5,32 +5,51 @@ groups:
     items:
       - key: industry_chp_combined_cycle_gas_power_fuelmix_demand
         unit: 'TJ'
+        entso: |
+          EB("Gas CHP - industrial", "Network gas")
       - key: industry_chp_engine_gas_power_fuelmix_demand
         unit: 'TJ'
+        entso: 0.0
       - key: industry_chp_turbine_gas_power_fuelmix_demand
         unit: 'TJ'
+        entso: 0.0
       - key: industry_chp_ultra_supercritical_coal_demand
         unit: 'TJ'
+        entso: |
+          EB("Coal CHP - industrial", "Coal excl lignite")
       - key: industry_chp_wood_pellets_demand
         unit: 'TJ'
+        entso: |
+          EB("Biomass CHP - industrial", "Primary solid biofuels")
       - key: industry_heat_burner_lignite_demand
         unit: 'TJ'
+        entso: |
+          EB("Lignite heater - industrial", "Lignite")
       - key: industry_heat_burner_coal_demand
         unit: 'TJ'
+        entso: |
+          EB("Coal heater - industrial", "Coal excl lignite")
       - key: industry_heat_well_geothermal_demand
         unit: 'TJ'
+        entso: |
+          EB("Geothermal - industrial", "Geothermal")
       - key: industry_heat_burner_crude_oil_demand
         unit: 'TJ'
+        entso: |
+          EB("Oil heater - industrial", "Crude oil aggregated")
 
   - header: industry_gas_fuelmix
     type: slider
     items:
       - key: input_share_mixer_gas_fuel_bio_oil
         unit: '%'
+        entso: 0.0
       - key: input_share_mixer_gas_fuel_oil
         unit: '%'
+        entso: 0.0
       - key: input_share_mixer_gas_fuel_network_gas
         unit: '%'
+        entso: 1.0
         flexible: true
 
   - header: industry_final_demand_crude_oil_input
@@ -38,17 +57,59 @@ groups:
     items:
     - key: input_percentage_of_diesel_industry_final_demand_crude_oil
       unit: '%'
+      entso: |
+        EB("Final consumption - industry sector - energy use", "Gas oil and diesel oil (excluding biofuel portion)") / (
+        EB("Final consumption - industry sector - energy use", "Crude oil aggregated") +
+        EB("Final consumption - industry sector - energy use", "Bio-diesel") +
+        EB("Final consumption - industry sector - energy use", "Bio-kerosene") +
+        EB("Final consumption - industry sector - energy use", "Bio oil") )
     - key: input_percentage_of_biodiesel_industry_final_demand_crude_oil
       unit: '%'
+      entso: |
+        EB("Final consumption - industry sector - energy use", "Bio-diesel") / (
+        EB("Final consumption - industry sector - energy use", "Crude oil aggregated") +
+        EB("Final consumption - industry sector - energy use", "Bio-diesel") +
+        EB("Final consumption - industry sector - energy use", "Bio-kerosene") +
+        EB("Final consumption - industry sector - energy use", "Bio oil") )
     - key: input_percentage_of_kerosene_industry_final_demand_crude_oil
       unit: '%'
+      entso: |
+        EB("Final consumption - industry sector - energy use", "Kerosene") / (
+        EB("Final consumption - industry sector - energy use", "Crude oil aggregated") +
+        EB("Final consumption - industry sector - energy use", "Bio-diesel") +
+        EB("Final consumption - industry sector - energy use", "Bio-kerosene") +
+        EB("Final consumption - industry sector - energy use", "Bio oil") )
     - key: input_percentage_of_bio_kerosene_industry_final_demand_crude_oil
       unit: '%'
+      entso: |
+        EB("Final consumption - industry sector - energy use", "Bio-kerosene") / (
+        EB("Final consumption - industry sector - energy use", "Crude oil aggregated") +
+        EB("Final consumption - industry sector - energy use", "Bio-diesel") +
+        EB("Final consumption - industry sector - energy use", "Bio-kerosene") +
+        EB("Final consumption - industry sector - energy use", "Bio oil") )
     - key: input_percentage_of_lpg_industry_final_demand_crude_oil
       unit: '%'
+      entso: |
+        EB("Final consumption - industry sector - energy use", "Liquefied petroleum gases") / (
+        EB("Final consumption - industry sector - energy use", "Crude oil aggregated") +
+        EB("Final consumption - industry sector - energy use", "Bio-diesel") +
+        EB("Final consumption - industry sector - energy use", "Bio-kerosene") +
+        EB("Final consumption - industry sector - energy use", "Bio oil") )
     - key: input_percentage_of_bio_oil_industry_final_demand_crude_oil
       unit: '%'
+      entso: |
+        EB("Final consumption - industry sector - energy use", "Bio oil") / (
+        EB("Final consumption - industry sector - energy use", "Crude oil aggregated") +
+        EB("Final consumption - industry sector - energy use", "Bio-diesel") +
+        EB("Final consumption - industry sector - energy use", "Bio-kerosene") +
+        EB("Final consumption - industry sector - energy use", "Bio oil") )
     - key: input_percentage_of_crude_oil_industry_final_demand_crude_oil
       unit: '%'
+      entso: |
+        EB("Final consumption - industry sector - energy use", "Other oil") / (
+        EB("Final consumption - industry sector - energy use", "Crude oil aggregated") +
+        EB("Final consumption - industry sector - energy use", "Bio-diesel") +
+        EB("Final consumption - industry sector - energy use", "Bio-kerosene") +
+        EB("Final consumption - industry sector - energy use", "Bio oil") )
       flexible: true
       skip_validation: true

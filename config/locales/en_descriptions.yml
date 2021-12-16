@@ -88,15 +88,18 @@ en:
         sector in this area.
       industry: |
         In this section you will find information about the industry sector in this area.
+      industry_steel: |
+        In this tab you can see how much energy is used for the production of steel through different technologies. 
+      industry_aluminium: |
+        In this tab you can see how much energy is used for the production of aluminium and the type of installed technologies.
       industry_metal: |
-        In this tab you can see how much energy is used by the metal sector in this area. You
-        can allocate a certain percentage of the total energy use of the national steel and aluminium
-        sectors to your area. For other metals you will find the energy use per energy carrier.
+        In this tab you can see how much energy is consumed by the metal sector in this area.
+      industry_refinery: |
+        In this tab you can see the crude oil, non-energetic and energetic demand for the refinery of crude oil as well as the amount of produced refinery products. 
+      industry_fertilizer: |
+        In this tab you can see the energetic and non-energetic demand for the fertilizer industry.
       industry_chemical: |
         In this tab you can see how much energy is used by the chemical sector in this area.
-        You can allocate a certain percentage of the total energy use of the Dutch fertilizers and
-        oil refinery sectors to your area. For other chemical industry you will find the energy
-        use per energy carrier.
       industry_food: |
         In this tab you can see how much energy is used by the food sector in this area.
       industry_paper: |

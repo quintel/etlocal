@@ -1,4 +1,3 @@
-
 en:
   dataset_edits:
     changed_attributes: 'You changed the following attributes:'
@@ -29,9 +28,11 @@ en:
       area_emission_factors_transport_fuels: Transport fuels
       area_emission_factors_import: Import
       area_electricity_grid_costs: Present electricity grid costs
+      area_gas_grid_costs: Present gas grid costs
       area_electricity_grid_capacity: Present spare capacity electricity grid
       area_electricity_grid_reinforcement: Electricity grid reinforcement
       area_heat_infrastructure_lengths: District heating pipelines
+      area_interconnector_capacity: Present interconnector capcity
 
       #households
       households_housing_stock_distribution: Housing stock
@@ -91,8 +92,26 @@ en:
       industry_heat: Fuel input for CHP
       industry_gas_fuelmix: Fuel for gas-fired CHPs
       industry_final_demand_crude_oil_input: Fuel for oil-fired heaters in all industry sectors
-      industry_metal_steel: Steel
-      industry_metal_aluminium: Aluminium
+      industry_metal_steel_production: Steel production
+      industry_metal_steel_production_route: Steel production technology
+      industry_metal_steel_final_demand: Final demand
+      energy_cokesoven_transformation_input: Cokesoven - transformation input
+      energy_cokesoven_transformation_output: Cokesoven - transformation output
+      energy_cokesoven_own_use: Cokesoven - own use
+      energy_blastfurnace_transformation_input: Blastfurnace - transformation demand
+      energy_blastfurnace_transformation_output: Blastfurnace - transformation output
+      energy_blastfurnace_own_use: Blastfurnace - own use
+      industry_metal_steel_energy_production_input:  Energy production - coal gas demand
+      energy_power_combined_cycle_coal_gas_conversion:  Power plant output
+      energy_chp_coal_gas_conversion: CHP output
+      industry_metal_steel_coal_use: Final demand - Use of coal
+      industry_metal_steel_electricity_use: Final demand - Use of electricity
+      industry_metal_steel_network_gas_use: Final demand - Use of gas
+      industry_metal_aluminium_production: Aluminium production
+      industry_metal_aluminium_production_route: Aluminium production technology
+      industry_aluminium_demand: Final demand
+      industry_metal_aluminium_electricity_use: Final demand - Use of electricity
+      industry_metal_aluminium_network_gas_use: Final demand - Use of gas
       industry_metal_other: Other metal industry
       industry_chemical_fertilizers: Fertilizers
       industry_chemical_refineries: Refineries
@@ -109,6 +128,14 @@ en:
       industry_refineries_residual_heat: "Available residual heat refineries"
       industry_fertilizers_residual_heat: "Available residual heat fertilizer industry"
       industry_ict_residual_heat: "Available residual heat ICT"
+      industry_fertilizer_demand_energetic: Energetic demand
+      industry_fertilizer_demand_non_energetic: Non-energetic demand
+      industry_aluminium_demand: Demand
+      industry_aluminium_technology: Technology
+      industry_refinery_input: Oil feedstock demand
+      industry_refinery_output: Fuel production
+      industry_refinery_demand_energetic: Energetic demand
+      industry_refinery_demand_non_energetic: Non-energetic demand
 
       # other
       other_final_demand: Final demand
@@ -131,14 +158,19 @@ en:
       energy_heat_renewable: Renewable heat sources
       energy_heat_fossil: Fossil heat sources
       energy_heat_distribution_loss: Heat network losses
-      energy_renewable_full_load_hours: Full load hours of renewable power plants
-      energy_fossil_full_load_hours: Full load hours of fossil power plants
       fuel_production: Fuel production
       energy_efficiency_coal: Efficiencies of coal plants
       energy_efficiency_gas: Efficiencies of gas plants
       energy_efficiency_other_fossil: Efficiencies of other fossil plants
       energy_efficiency_renewable_chp: Efficiencies of renewable plants
       energy_efficiency_heat_plants: Efficiencies of heat plants
+      energy_fossil_full_load_hours: Full load hours of fossil power plants
+      energy_renewable_full_load_hours: Full load hours of renewable power plants
+      energy_fossil_chp_full_load_hours: Full load hours of fossil CHP's
+      energy_renewable_chp_full_load_hours: Full load hours of renewable CHP's
+      energy_fossil_heat_full_load_hours: Full load hours of fossil heat plants
+      energy_renewable_heat_full_load_hours: Full load hours of renewable heat plants
+      energy_renewable_full_load_hours_max: Maximum full load hours of renewable power plants
 
       # curves
       curves_supply_electricity: Supply - Electricity

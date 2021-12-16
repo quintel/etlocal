@@ -3,6 +3,8 @@ en:
     interface_items:
       coast_line: |
         This value is used to determine the potential for coastal wind turbines.
+      total_land_area: |
+        Hello this is a description.
       areable_land: |
         This value determines the maximum area available for wind turbines on land and ground mounted
         solar PV plants.

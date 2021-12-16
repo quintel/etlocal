@@ -60,7 +60,7 @@ nl:
         buildings_energy_supply: Energieaanbod
         buildings_building_stock: Gebouwenvoorraad
         buildings_applications: Toepassingen en apparaten
-      
+
       curves:
         curves_default: Standaardprofielen
         curves_weather_years: Weerjaarprofielen
@@ -72,7 +72,7 @@ nl:
         energy_renewable_electricity_production: Duurzame elektriciteit
         energy_efficiency: Efficiënties
         energy_biomass: Biomassa
-        energy_full_load_hours: Vollasturen elektriciteit
+        energy_full_load_hours: Vollasturen
         energy_fuel_production: Brandstofproductie
 
       households:
@@ -82,7 +82,11 @@ nl:
         households_applications: Toepassingen en apparaten
 
       industry:
-        industry_metal: Metaal
+        industry_steel: Staal
+        industry_aluminium: Aluminium
+        industry_metal: Overige metalen
+        industry_refinery: Raffinaderijen
+        industry_fertilizer: Kunstmest
         industry_chemical: Chemie
         industry_food: Voedsel
         industry_paper: Papier

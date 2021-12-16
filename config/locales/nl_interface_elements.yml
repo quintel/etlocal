@@ -13,6 +13,8 @@ nl:
         number_of_inhabitants: Aantal inwoners
 
         co2_emission_1990: 'CO<sub>2</sub>-emissies in 1990'
+        co2_emission_1990_aviation_bunkers: 'CO<sub>2</sub>-emissies internationale luchtvaart in 1990'
+        co2_emission_1990_marine_bunkers: 'CO<sub>2</sub>-emissies internationale scheepvaart in 1990'
         other_emission_built_environment: 'Gebouwde omgeving'
         other_emission_transport: 'Transportsector'
         other_emission_industry_energy: 'Industrie en energiesector'
@@ -59,11 +61,13 @@ nl:
         hv_net_total_costs_present: Hoogspanningsnet
         offshore_net_costs_present: Elektriciteitsnet wind op zee
         interconnection_net_costs_present: Interconnectorcapaciteit
+        annual_infrastructure_cost_gas: Kosten gas infrastructuur
         lv_net_spare_capacity: Laagspanningsnet
         lv_mv_trafo_spare_capacity: LS-MS-transformatoren
         mv_net_spare_capacity: Middenspanningsnet
         mv_hv_trafo_spare_capacity: MS-HS-transformatoren
         hv_net_spare_capacity: Hoogspanningsnet
+        interconnector_capacity: Interconnectorcapaciteit
         lv_net_capacity_per_step: Stapgrootte van laagspanningsnetverzwaring
         lv_net_costs_per_capacity_step: Kosten laagspanningsnetverzwaring per stap
         lv_mv_trafo_capacity_per_step: Stapgrootte van capaciteitsuitbreiding LS-MS-transformatoren
@@ -302,6 +306,9 @@ nl:
         transport_rail_mixer_diesel_transport_passenger_train_using_diesel_mix_parent_share: Passagierstreinen
         transport_rail_mixer_diesel_transport_freight_train_using_diesel_mix_parent_share: Goederentreinen
 
+        bunkers_total_useful_demand_ships_demand: Internationale scheepvaart
+        bunkers_total_useful_demand_planes_demand: Internationale luchtvaart
+
         # agriculture
         agriculture_final_demand_electricity_demand: Elektriciteit
         agriculture_final_demand_network_gas_demand: Gas (ex WKK)
@@ -341,17 +348,100 @@ nl:
         input_percentage_of_bio_oil_industry_final_demand_crude_oil: Andere bio-olie
         input_percentage_of_crude_oil_industry_final_demand_crude_oil: Andere olie
 
-        input_industry_metal_steel_scaling_factor: "% nationale staalsector"
-        input_industry_metal_aluminium_scaling_factor: "% nationale aluminiumsector"
+        input_industry_metal_steel_production: Staalproductie
+        input_industry_steel_blastfurnace_bof_share: Hoogoven
+        input_industry_steel_scrap_hbi_eaf_share: Elektrische oven
+        input_industry_metal_steel_electricity_demand: Elektriciteit
+        input_industry_metal_steel_network_gas_demand:  Gas
+        input_industry_metal_steel_coal_demand: Kolen
+        input_industry_metal_steel_cokes_demand: Kooks
+        input_industry_metal_steel_coal_gas_demand: Kolengas
+        input_industry_metal_steel_steam_hot_water_demand: Warmte
+        input_industry_metal_steel_crude_oil_demand: Olie
+        input_industry_metal_steel_wood_pellets_demand: Vaste biomassa
+        input_energy_cokesoven_transformation_coal_input_demand: Kolen
+        input_energy_cokesoven_transformation_cokes_output_conversion: Kooks
+        input_energy_cokesoven_transformation_coal_gas_output_conversion: Kolengas
+        input_energy_cokesoven_transformation_loss_output_conversion: Verliezen
+        input_energy_cokesoven_own_use_electricity: Elektriciteit
+        input_energy_cokesoven_own_use_network_gas:  Gas
+        input_energy_cokesoven_own_use_coal: Kolen
+        input_energy_cokesoven_own_use_cokes: Kooks
+        input_energy_cokesoven_own_use_coal_gas: Kolengas
+        input_energy_cokesoven_own_use_steam_hot_water: Warmte
+        input_energy_cokesoven_own_use_crude_oil:  Olie
+        input_energy_blastfurnace_transformation_coal_input_demand: Kolen
+        input_energy_blastfurnace_transformation_cokes_input_demand: Kooks
+        input_energy_blastfurnace_transformation_coal_gas_output_conversion: Kolengas
+        input_energy_blastfurnace_transformation_loss_output_conversion: Verliezen
+        input_energy_blastfurnace_own_use_electricity: Elektriciteit
+        input_energy_blastfurnace_own_use_network_gas:  Gas
+        input_energy_blastfurnace_own_use_coal: Kolen
+        input_energy_blastfurnace_own_use_cokes: Kooks
+        input_energy_blastfurnace_own_use_coal_gas: Kolengas
+        input_energy_blastfurnace_own_use_steam_hot_water: Warmte
+        input_energy_blastfurnace_own_use_crude_oil: Olie
+        input_energy_power_combined_cycle_coal_gas_coal_gas_input_demand: Elektriciteitscentrale
+        input_energy_chp_coal_gas_coal_gas_input_demand: WKK
+        input_energy_power_combined_cycle_coal_gas_electricity_output_conversion: Elektriciteit
+        input_energy_power_combined_cycle_coal_gas_loss_output_conversion: Verliezen
+        input_energy_chp_coal_gas_electricity_output_conversion: Elektriciteit
+        input_energy_chp_coal_gas_steam_hot_water_output_conversion: Warmte
+        input_energy_chp_coal_gas_loss_output_conversion: Verliezen
+        industry_final_demand_for_metal_steel_coal_industry_steel_blastfurnace_bof_parent_share: Hoogoven
+        industry_final_demand_for_metal_steel_coal_industry_steel_scrap_hbi_eaf_parent_share: Elektrische oven
+        industry_final_demand_for_metal_steel_cokes_industry_steel_blastfurnace_bof_parent_share: Hoogoven
+        industry_final_demand_for_metal_steel_cokes_industry_steel_scrap_hbi_eaf_parent_share: Elektrische oven
+        industry_final_demand_for_metal_steel_crude_oil_industry_steel_blastfurnace_bof_parent_share: Hoogoven
+        industry_final_demand_for_metal_steel_crude_oil_industry_steel_scrap_hbi_eaf_parent_share: Elektrische oven
+        industry_final_demand_for_metal_steel_electricity_industry_steel_blastfurnace_bof_parent_share: Hoogoven
+        industry_final_demand_for_metal_steel_electricity_industry_steel_scrap_hbi_eaf_parent_share: Elektrische oven
+        industry_final_demand_for_metal_steel_network_gas_industry_steel_blastfurnace_bof_parent_share: Hoogoven
+        industry_final_demand_for_metal_steel_network_gas_industry_steel_scrap_hbi_eaf_parent_share: Elektrische oven
+        industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_blastfurnace_bof_parent_share: Hoogoven
+        industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_scrap_hbi_eaf_parent_share: Elektrische oven
+        industry_final_demand_for_metal_steel_wood_pellets_industry_steel_blastfurnace_bof_parent_share: Hoogoven
+        industry_final_demand_for_metal_steel_wood_pellets_industry_steel_scrap_hbi_eaf_parent_share: Elektrische oven
+        energy_power_combined_cycle_coal_gas_full_load_hours: Kolengascentrale
+        energy_chp_coal_gas_full_load_hours: Kolengas-WKK
+        input_energy_blastfurnace_transformation_loss_output_conversion: Verliezen
+
+        input_industry_metal_aluminium_production: Aluminiumproductie
+        input_industry_aluminium_electrolysis_current_electricity_share: Elektrolyse
+        input_industry_aluminium_smeltoven_electricity_share: Smeltoven
+        input_industry_metal_aluminium_electricity_demand: Elektriciteit
+        input_industry_metal_aluminium_network_gas_demand: Netwerk gas
+        industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_electrolysis_current_electricity_parent_share: Elektrolyse
+        industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_smeltoven_electricity_parent_share: Smeltoven
+        industry_aluminium_burner_network_gas_industry_aluminium_electrolysis_current_electricity_parent_share: Elektrolyse
+        industry_aluminium_burner_network_gas_industry_aluminium_smeltoven_electricity_parent_share: Smeltoven
+
         input_industry_metal_other_electricity_demand: Elektriciteit
         input_industry_metal_other_network_gas_demand: Gas
         input_industry_metal_other_steam_hot_water_demand: Warmte
-        input_industry_metal_other_wood_pellets_demand: Vaste biomassa
         input_industry_metal_other_crude_oil_demand: Olie
         input_industry_metal_other_coal_demand: Kolen
 
+        industry_useful_demand_for_chemical_refineries_crude_oil_non_energetic_demand: Olie
+        input_industry_chemical_refineries_electricity_demand: Elektriciteit
+        input_industry_chemical_refineries_network_gas_demand: Gas
+        input_industry_chemical_refineries_steam_hot_water_demand: Warmte
+        input_industry_chemical_refineries_wood_pellets_demand: Biomassa
+        input_industry_chemical_refineries_coal_demand: Kolen
+        input_industry_chemical_refineries_crude_oil_demand: Olie
+        input_industry_chemical_refineries_network_gas_non_energetic_demand: Gas
+        input_industry_chemical_refineries_wood_pellets_non_energetic_demand: Biomassa
+        input_industry_chemical_refineries_coal_non_energetic_demand: Kolen
+        input_industry_refinery_transformation_crude_oil_other_oil_demand: Overige olie
+        input_industry_refinery_transformation_crude_oil_gasoline_demand: Benzine
+        input_industry_refinery_transformation_crude_oil_heavy_fuel_oil_demand: Zware stookolie
+        input_industry_refinery_transformation_crude_oil_kerosene_demand: Kerosine
+        input_industry_refinery_transformation_crude_oil_lpg_demand: LPG
+        input_industry_refinery_transformation_crude_oil_refinery_gas_demand: Raffinagegas
+        input_industry_refinery_transformation_crude_oil_diesel_demand: Diesel
+        input_industry_refinery_transformation_crude_oil_loss_demand: Verliezen
+
         input_industry_chemical_fertilizers_scaling_factor: "% nationale kunstmestsector"
-        input_industry_chemical_refineries_scaling_factor: "% nationale raffinaderijensector"
         input_industry_chemical_other_electricity_demand: Elektriciteit
         input_industry_chemical_other_network_gas_demand: Gas
         input_industry_chemical_other_steam_hot_water_demand: Warmte
@@ -394,10 +484,12 @@ nl:
         input_industry_other_wood_pellets_demand: Vaste biomassa
         input_industry_other_crude_oil_demand: Olie
         input_industry_other_coal_demand: Kolen
+        input_industry_other_cokes_demand: Kooks
         input_industry_other_network_gas_non_energetic_demand: Gas (niet-energetisch)
         input_industry_other_wood_pellets_non_energetic_demand: Biomassa (niet-energetisch)
         input_industry_other_crude_oil_non_energetic_demand: Olie (niet-energetisch)
         input_industry_other_coal_non_energetic_demand: Kolen (niet-energetisch)
+        input_industry_other_cokes_non_energetic_demand: Kooks (niet-energetisch)
 
         industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
         industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
@@ -411,11 +503,33 @@ nl:
         industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share: "Restwarmte uit servers"
         industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: "Geen restwarmte"
 
+        input_industry_metal_aluminium_electricity_demand: Elektriciteit
+        input_industry_metal_aluminium_network_gas_demand: Gas
+
+        industry_aluminium_electrolysis_current_electricity_parent_share: Electrolyse
+        industry_aluminium_electrolysis_bat_electricity_parent_share: Electrolyse BAT
+        industry_aluminium_smeltoven_electricity_parent_share: Smeltoven (recycling)
+        industry_aluminium_carbothermalreduction_electricity_parent_share: Carbothermische reductie
+
+        input_industry_chemical_fertilizers_electricity_demand: Elektriciteit
+        input_industry_chemical_fertilizers_network_gas_demand: Gas
+        input_industry_chemical_fertilizers_steam_hot_water_demand: Warmte
+        input_industry_chemical_fertilizers_wood_pellets_demand: Biomassa
+        input_industry_chemical_fertilizers_crude_oil_demand: Olie
+        input_industry_chemical_fertilizers_coal_demand: Kolen
+
+        input_industry_chemical_fertilizers_network_gas_non_energetic_demand: Gas
+        input_industry_chemical_fertilizers_wood_pellets_non_energetic_demand: Biomassa
+        input_industry_chemical_fertilizers_crude_oil_non_energetic_demand: Olie
+        input_industry_chemical_fertilizers_coal_non_energetic_demand: Kolen
+        input_industry_chemical_fertilizers_hydrogen_non_energetic_demand: Waterstof
+
         # Energy
         energy_power_sector_own_use_electricity_demand: Eigen gebruik elektriciteit
         energy_power_hv_network_loss_demand: Netverliezen
         energy_distribution_greengas_demand: Groen gas
         energy_regasification_lng_energy_national_gas_network_natural_gas_demand: Hervergast LNG
+        energy_distribution_network_gas_loss_demand: Verliezen gasnetwerk
 
         energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share: Droge vergassing
         energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share: Natte vergassing
@@ -445,6 +559,7 @@ nl:
         input_energy_power_geothermal_production: Geothermie
         input_energy_chp_local_engine_biogas_production: Biogas WKK
         input_energy_chp_local_wood_pellets_production: Biomassa WKK
+        input_energy_power_solar_csp_solar_radiation_production: Geconcentreerde zonnestroom
 
         input_energy_power_ultra_supercritical_coal_production: Poederkolen
         input_energy_power_supercritical_coal_production: Kolen conventioneel
@@ -454,6 +569,9 @@ nl:
         input_energy_power_ultra_supercritical_ccs_coal_production: Poederkolen met CCS
         input_energy_chp_ultra_supercritical_coal_production: Kolencentrale met warmtelevering (WKK)
         input_energy_chp_ultra_supercritical_cofiring_coal_production: Bijstookcentrale met warmtelevering (WKK)
+        input_energy_power_supercritical_ccs_waste_mix_production: Afvalverbrander CCS
+        input_energy_power_ultra_supercritical_lignite_production: Bruinkolen
+        input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production: Bruinkolen 'oxyfuel' CCS
 
         input_energy_power_ultra_supercritical_network_gas_production: Gas conventioneel
         input_energy_power_turbine_network_gas_production: Gasturbine
@@ -499,6 +617,38 @@ nl:
         energy_chp_combined_cycle_network_gas_full_load_hours: Gas WKK (grootschalig) met warmtelevering
         energy_power_supercritical_coal_full_load_hours: Kolen conventioneel
         energy_power_engine_diesel_full_load_hours: Dieselgenerator
+        energy_power_engine_network_gas_full_load_hours: Gasmotor
+        energy_power_geothermal_full_load_hours: Geothermisch elektrisch
+        energy_power_hydro_mountain_full_load_hours: Waterkracht (bergen)
+        energy_power_nuclear_gen2_uranium_oxide_full_load_hours: Kern conventioneel
+        energy_power_nuclear_gen3_uranium_oxide_full_load_hours: Kern 3e Gen
+        energy_power_supercritical_ccs_waste_mix_full_load_hours: Afvalverbranding CCS
+        energy_power_ultra_supercritical_ccs_coal_full_load_hours: Poederkolen CCS
+        energy_power_ultra_supercritical_coal_full_load_hours: Poederkolen
+        energy_power_ultra_supercritical_cofiring_coal_full_load_hours: Poederkolen met bijstook
+        energy_power_ultra_supercritical_crude_oil_full_load_hours: Oliecentrale
+        energy_power_ultra_supercritical_lignite_full_load_hours: Bruinkolen
+        energy_power_ultra_supercritical_oxyfuel_ccs_lignite_full_load_hours: Bruinkolen 'oxyfuel' CCS
+        energy_heat_burner_wood_pellets_full_load_hours: Biomassaketel
+        energy_heat_burner_coal_full_load_hours: Kolenketel
+        energy_heat_burner_crude_oil_full_load_hours: Olieketel
+        energy_heat_burner_network_gas_full_load_hours: Gasketel
+        energy_heat_solar_thermal_full_load_hours: Zonthermie
+        energy_heat_burner_waste_mix_full_load_hours: Afvalketel
+        energy_heat_heatpump_water_water_electricity_full_load_hours: Collectieve warmtepomp
+        energy_chp_ultra_supercritical_cofiring_coal_full_load_hours: Bijstookkolencentrale met warmtelevering (WKK)
+        energy_chp_ultra_supercritical_coal_full_load_hours: Kolencentrale met warmtelevering (WKK)
+        energy_chp_ultra_supercritical_lignite_full_load_hours: Bruinkoolcentrale met warmtelevering (WKK)
+        industry_chp_turbine_gas_power_fuelmix_full_load_hours: Gasturbine-WKK - industrie
+        industry_chp_engine_gas_power_fuelmix_full_load_hours: Gasmotor-WKK - industrie
+        industry_chp_combined_cycle_gas_power_fuelmix_full_load_hours: Gas WKK (STEG) - industrie
+        industry_chp_ultra_supercritical_coal_full_load_hours: Kolen WKK - industrie
+        industry_chp_wood_pellets_full_load_hours: Biomassa WKK - industrie
+        industry_heat_burner_lignite_full_load_hours: Bruinkoolketel - industrie
+        industry_heat_burner_coal_full_load_hours: Kolenketel - industrie
+        industry_heat_burner_crude_oil_full_load_hours: Olieketel - industrie
+        input_energy_power_combined_cycle_coal_gas_full_load_hours: Syngas STEG
+        flh_solar_pv_solar_radiation_max: Zonnepanelen (op dak en op land)
 
         fuel_production_coal_demand: Kolen
         fuel_production_lignite_demand: Bruinkool
@@ -535,6 +685,7 @@ nl:
         input_industry_heat_burner_lignite_steam_hot_water_output_conversion: Bruinkoolketel (industrie)
         input_industry_heat_burner_coal_steam_hot_water_output_conversion: Kolenketel (industrie)
         input_industry_heat_burner_crude_oil_steam_hot_water_output_conversion: Olieketel (industrie)
+        input_energy_power_supercritical_ccs_waste_mix_electricity_output_conversion: Afvalverbranding CCS
 
         input_energy_chp_local_engine_network_gas_electricity_output_conversion: Kleinschalige gas WKK - efficiëntie elektriciteit
         input_energy_chp_local_engine_biogas_electricity_output_conversion: Biogas WKK - efficiëntie elektriciteit

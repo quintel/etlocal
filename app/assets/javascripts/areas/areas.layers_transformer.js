@@ -41,6 +41,7 @@ Areas.LayersTransformer = (function () {
         layers: {
             mvt: function (layer, source) {
                 return new ol.layer.VectorTile({
+                    name_attr:     layer.name_attr,
                     extent:        layer.extent,
                     minResolution: layer.minres,
                     maxResolution: layer.maxres,

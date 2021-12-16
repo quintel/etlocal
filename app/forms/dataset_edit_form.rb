@@ -20,12 +20,10 @@ class DatasetEditForm
       commit = dataset.commits.build
 
       attributes.except(:country).each_pair do |key, val|
-        if val.present? && previous[key.to_s] != val
-          commit.dataset_edits.build(
-            key: key,
-            value: val
-          )
-        end
+        item = EditableAttributesCollection.item(key)
+        next unless val.present? && previous[key.to_s] != val && item.editable?(dataset)
+
+        commit.dataset_edits.build(key: key, value: val)
       end
 
       return commit

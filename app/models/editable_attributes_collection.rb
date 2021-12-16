@@ -3,6 +3,16 @@ class EditableAttributesCollection
     @items ||= InterfaceElement.items
   end
 
+  def self.item(key)
+    items_by_key[key.to_sym]
+  end
+
+  def self.items_by_key
+    @items_by_key ||= items.index_by(&:key)
+  end
+
+  private_class_method :items_by_key
+
   def initialize(dataset)
     @dataset    = dataset
     @attributes = setup_attributes(dataset)
@@ -39,7 +49,7 @@ class EditableAttributesCollection
 
   def setup_attributes(dataset)
     self.class.items.flatten.map do |item|
-      EditableAttribute.new(dataset, item.key.to_s, edits, item.default)
+      EditableAttribute.new(dataset, item.key.to_s, edits, item.default, entso_query: item.entso)
     end
   end
 end

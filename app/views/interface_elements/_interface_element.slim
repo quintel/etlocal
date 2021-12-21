@@ -91,7 +91,7 @@
               .change
                 .reason
                   - if I18n.exists?("data_source_messages.#{@dataset.data_source}.#{interface_element.key}")
-                    = I18n.t("data_source_messages.#{@dataset.data_source}.#{interface_element.key}")
+                    = simple_format I18n.t("data_source_messages.#{@dataset.data_source}.#{interface_element.key}")
                   - else
                     = I18n.t("data_source_messages.#{@dataset.data_source}.default", default: '')
 

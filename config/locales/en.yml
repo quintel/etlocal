@@ -15,6 +15,45 @@ en:
     entso:
       default: Value sourced from the Eurostat energy balance.
       view_file: View energy balance
+      industry_ICT: |
+        Value sourced from the Eurostat energy balance.
+
+        ICT sector demand is included in the 'final consumption - other sectors - commercial and public services' on the energy balance, but there is no explicit flow. 
+        An estimate of this demand is therefore made.
+
+        This demand is then moved in <a href="https://github.com/quintel/etdataset-public/blob/master/tools/energy_balance_generator/etm_tools/energy_balance_operations/converters/industry_ict.py" target=\"_blank\"> this script</a> from the commercial and public services to a new sub-sector of the industry, the ICT sector.
+      industry_metal: |
+        Value sourced from the Eurostat energy balance.
+
+        Other metals demand is included in the 'final consumption - industry sector - non-ferrous metals' on the energy balance, but there is no explicit flow. 
+
+        An estimate of the aluminium demand is therefore made in a source analysis, which can be found <a href="https://github.com/quintel/etdataset-public/blob/master/tools/energy_balance_generator/etm_tools/source_analysis/non_ferrous_metals_demands.py" target=\"_blank\"> here</a>.
+
+        This aluminium demand is then defined as a sub-category of the non-ferrous demand and the remaining demand is categorized as other metals demand in <a href="https://github.com/quintel/etdataset-public/blob/master/tools/energy_balance_generator/etm_tools/energy_balance_operations/converters/industry_metal.py" target=\"_blank\"> this script</a>.
+      industry_aluminium: |
+        Value sourced from the Eurostat energy balance.
+
+        Aluminium demand is included in the 'final consumption - industry sector - non-ferrous metals' on the energy balance, but there is no explicit flow. 
+
+        An estimate of the aluminium demand is therefore made in a source analysis, which can be found <a href="https://github.com/quintel/etdataset-public/blob/master/tools/energy_balance_generator/etm_tools/source_analysis/non_ferrous_metals_demands.py" target=\"_blank\"> here</a>.
+
+        This aluminium demand is then defined as a sub-category of the non-ferrous demand and the remaining demand is categorized as other metals demand in <a href="https://github.com/quintel/etdataset-public/blob/master/tools/energy_balance_generator/etm_tools/energy_balance_operations/converters/industry_metal.py" target=\"_blank\"> this script</a>.
+      industry_fertilizer: |
+        Value sourced from the Eurostat energy balance.
+
+        Fertilizer demand is included in the 'final consumption - industry sector - chemical and petrochemical' on the energy balance, but there is no explicit flow. 
+
+        An estimate of the fertilizer demand is therefore made in a source analysis, which can be found <a href="https://github.com/quintel/etdataset-public/blob/master/tools/energy_balance_generator/etm_tools/source_analysis/fertilizer_demands.py" target=\"_blank\"> here</a>. 
+
+        This fertilizer demand is then defined as a sub-category of the chemical and petrochemical demand and the remaining demand is categorized as other chemicals demand in <a href="https://github.com/quintel/etdataset-public/blob/master/tools/energy_balance_generator/etm_tools/energy_balance_operations/converters/industry_chemical.py" target=\"_blank\"> this script</a>.
+      industry_chemical: |
+        Value sourced from the Eurostat energy balance.
+
+        Other chemicals demand is included in the 'final consumption - industry sector - chemical and petrochemical' on the energy balance, but there is no explicit flow. 
+
+        An estimate of the fertilizer demand is therefore made in a source analysis, which can be found <a href="https://github.com/quintel/etdataset-public/blob/master/tools/energy_balance_generator/etm_tools/source_analysis/fertilizer_demands.py" target=\"_blank\"> here</a>. 
+        
+        This fertilizer demand is then defined as a sub-category of the chemical and petrochemical demand and the remaining demand is categorized as other chemicals demand in <a href="https://github.com/quintel/etdataset-public/blob/master/tools/energy_balance_generator/etm_tools/energy_balance_operations/converters/industry_chemical.py" target=\"_blank\"> this script</a>.
 
   countries:
     be: Belgium

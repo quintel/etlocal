@@ -54,7 +54,45 @@ en:
         An estimate of the fertilizer demand is therefore made in a source analysis, which can be found <a href="https://github.com/quintel/etdataset-public/blob/master/tools/energy_balance_generator/etm_tools/source_analysis/fertilizer_demands.py" target=\"_blank\"> here</a>. 
         
         This fertilizer demand is then defined as a sub-category of the chemical and petrochemical demand and the remaining demand is categorized as other chemicals demand in <a href="https://github.com/quintel/etdataset-public/blob/master/tools/energy_balance_generator/etm_tools/energy_balance_operations/converters/industry_chemical.py" target=\"_blank\"> this script</a>.
+      energy_fossil_electricity_production: |
+        The total electricity production per energy carrier is sourced from the Eurostat energy balance. 
+        
+        Since the ETM distinguishes several plant types per energy carrier an additional analysis has been done to calculate the production per plant type. This calculation was done based on aggregated power plant capacities provided by TenneT.
+        
+        These power plants have been added to the "complemented energy balance" that can be found in the link below this message.
+        
+        Links:
+        - <a href="https://github.com/quintel/etdataset-public/blob/master/eu_datasets/power_plants/20211209_EU_power_plants.xlsx" target="_blank">This GitHub-link</a> brings you to the Excel with the calculations
+        - <a href="https://github.com/quintel/etdataset-public/tree/master/tools/energy_balance_generator" target="_blank">This GitHub-link</a> brings you to the python scripts that were used to add the power plants to the "complemented energy balance" including their fuel input and production
+      energy_renewable_electricity_production: |
+        The total electricity production per energy carrier is sourced from the Eurostat energy balance. 
 
+        Since the ETM distinguishes several plant types per energy carrier an additional analysis has been done to calculate the production per plant type. This calculation was done based on renewable capacities from <a href="https://ec.europa.eu/eurostat/databrowser/bookmark/cb78d4e5-82c0-4874-963f-fb265ae2025f?lang=en&page=time:2019" target="_blank">this Eurostat table</a>. 
+        
+        These renewable plants have been added to the "complemented energy balance" that can be found in the link below this message.
+
+        Links:
+        - <a href="https://github.com/quintel/etdataset-public/blob/master/eu_datasets/power_plants/20211209_EU_power_plants.xlsx" target="_blank">This GitHub-link</a> brings you to the Excel with the calculations
+        - <a href="https://github.com/quintel/etdataset-public/tree/master/tools/energy_balance_generator" target="_blank">This GitHub-link</a> brings you to the python scripts that were used to add the renewable plants to the "complemented energy balance" including their fuel input and production
+      energy_heat_production: |
+        The total heat production per energy carrier is sourced from the Eurostat energy balance. 
+        
+        A simple analysis has been done to assign the heat production to the district heating technologies available in the ETM, taking into account the heat demand on the two district heating networks that are modelled in het ETM: a residential and industrial heating network.
+        
+        The heat plants have been added to the "complemented energy balance" that can be found in the link below this message.
+
+        Links:
+        - <a href="https://github.com/quintel/etdataset-public/tree/master/tools/energy_balance_generator" target="_blank">This GitHub-link</a> brings you to the python scripts that were used to add the heat plants to the "complemented energy balance" including their fuel input and production
+      energy_efficiency: |
+        The total electricity and heat production per energy carrier is sourced from the Eurostat energy balance. 
+        
+        Since the ETM distinguishes several plant types per energy carrier an additional analysis has been done to calculate the production per plant type. This calculation was done based on aggregated power plant capacities provided by TenneT.
+        
+        These power plants have been added to the "complemented energy balance" that can be found in the link below this message. The efficiencies have been calculated by dividing the electricity or heat output by the fuel input from the energy balance. For other power plants default efficiencies are used.
+        
+        Links:
+        - <a href="https://github.com/quintel/etdataset-public/blob/master/eu_datasets/power_plants/20211209_EU_power_plants.xlsx" target="_blank">This GitHub-link</a> brings you to the Excel with the calculations
+        - <a href="https://github.com/quintel/etdataset-public/tree/master/tools/energy_balance_generator" target="_blank">This GitHub-link</a> brings you to the python scripts that were used to add the power plants to the "complemented energy balance" including their fuel input and production
   countries:
     be: Belgium
     nl2018: Netherlands

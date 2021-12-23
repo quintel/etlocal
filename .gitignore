@@ -21,7 +21,6 @@ public/system/
 
 .env
 config/.etsource_password
-config/database.yml
 config/email.yml
 db/shapes/*
 db/datasets/*.csv

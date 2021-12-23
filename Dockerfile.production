@@ -1,0 +1,35 @@
+FROM ruby:2.7-slim
+
+LABEL maintainer="dev@quintel.com"
+
+RUN apt-get update -yqq && \
+  DEBIAN_FRONTEND=noninteractive apt-get install -yqq --no-install-recommends \
+    automake \
+    autoconf \
+    build-essential \
+    curl \
+    default-libmysqlclient-dev \
+    git \
+    gnupg \
+    nodejs
+
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
+  && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
+  && apt-get update && apt-get install -y yarn && rm -rf /var/lib/apt/lists/*
+
+# Throw errors if Gemfile has been modified since Gemfile.lock
+RUN bundle config --global frozen 1
+
+COPY Gemfile* /app/
+WORKDIR /app
+
+RUN bundle config set deployment 'true'
+RUN bundle install --jobs=4 --retry=3 --without="development test"
+
+COPY . /app/
+
+RUN git clone --depth=1 https://github.com/quintel/etsource.git /etsource
+RUN RAILS_ENV=production bundle exec rails assets:precompile
+
+CMD [".docker/entrypoint.sh"]
+

@@ -94,5 +94,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.etsource_export_root = "https://data.energytransitionmodel.com"
-  config.etsource_path = Rails.root.join('etsource')
+  config.etsource_path = Pathname.new(ENV.fetch('ETSOURCE_PATH', '/etsource'))
 end

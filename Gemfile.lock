@@ -173,7 +173,11 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (2.3.0)
+    libv8-node (15.14.0.1)
     libv8-node (15.14.0.1-arm64-darwin-21)
+    libv8-node (15.14.0.1-x86_64-darwin-20)
+    libv8-node (15.14.0.1-x86_64-darwin-21)
+    libv8-node (15.14.0.1-x86_64-linux)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -203,6 +207,12 @@ GEM
     nio4r (2.5.7)
     nokogiri (1.11.7)
       mini_portile2 (~> 2.5.0)
+      racc (~> 1.4)
+    nokogiri (1.11.7-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.11.7-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.11.7-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.21.0)
@@ -402,7 +412,11 @@ GEM
     websocket-extensions (0.1.5)
 
 PLATFORMS
+  arm64-darwin-21
   ruby
+  x86_64-darwin-20
+  x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   archive-zip (~> 0.9.0)

@@ -85,5 +85,5 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.etsource_path = Rails.root.join('etsource')
+  config.etsource_path = Pathname.new(ENV.fetch('ETSOURCE_PATH', '/etsource'))
 end

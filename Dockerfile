@@ -22,6 +22,8 @@ RUN gem install bundler -v '>= 2'
 
 COPY Gemfile* /app/
 WORKDIR /app
+
+RUN bundle config set --local without 'development test'
 RUN bundle install --jobs=4 --retry=3
 
 COPY . /app/

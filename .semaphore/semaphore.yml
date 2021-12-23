@@ -36,4 +36,4 @@ promotions:
   - name: Deploy to production
     pipeline_file: deploy_production.yml
     auto_promote:
-      when: "result = 'passed' and branch = 'docker'"
+      when: "result = 'passed' and branch = 'production'"

@@ -27,8 +27,8 @@ blocks:
             - cache store
             - cat /dev/null > config/database.yml
             - bundle exec rails db:setup
-            - bundle exec rspec --format RspecJunitFormatter --out /tmp/junit-results/rspec.xml --format progress
             - git clone git@github.com:quintel/etsource.git --depth 1 tmp/etsource
+            - bundle exec rspec --format RspecJunitFormatter --out /tmp/junit-results/rspec.xml --format progress
             - bundle exec rspec spec/services/etsource_spec.rb --format RspecJunitFormatter --out /tmp/junit-results/etsource.xml --format progress
       epilogue:
         always:

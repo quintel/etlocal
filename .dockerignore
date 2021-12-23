@@ -1,8 +1,12 @@
 .git
 .gitignore
+
+.ruby-version
 .rvmrc
 
 # Docker
+Dockerfile*
+
 # Ignore bundler config.
 /.bundle
 /vendor/bundle
@@ -22,8 +26,6 @@ node_modules
 # Comment out this rule if you are OK with secrets being uploaded to the repo
 config/initializers/secret_token.rb
 config/master.key
-config/*.local.*
-config/email.yml
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -56,3 +58,11 @@ config/email.yml
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Ignore dotenv
+.env
+.docker-env
+
+# Docker-specific.
+Dockerfile*
+docker-compose.yml

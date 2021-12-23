@@ -14,8 +14,6 @@ blocks:
           value: test
         - name: BUNDLE_JOBS
           value: '4'
-        - name: ETSOURCE_PATH
-          value: 'tmp/etsource'
       jobs:
         - name: Test
           commands:
@@ -27,9 +25,9 @@ blocks:
             - cache store
             - cat /dev/null > config/database.yml
             - bundle exec rails db:setup
-            - git clone git@github.com:quintel/etsource.git --depth 1 tmp/etsource
             - bundle exec rspec --format RspecJunitFormatter --out /tmp/junit-results/rspec.xml --format progress
-            - bundle exec rspec spec/services/etsource_spec.rb --format RspecJunitFormatter --out /tmp/junit-results/etsource.xml --format progress
+            - git clone git@github.com:quintel/etsource.git --depth 1 tmp/etsource
+            - ETSOURCE_PATH=tmp/etsource bundle exec rspec spec/services/etsource_spec.rb --format RspecJunitFormatter --out /tmp/junit-results/etsource.xml --format progress
       epilogue:
         always:
           commands:

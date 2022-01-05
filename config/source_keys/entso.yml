@@ -60,15 +60,18 @@ column_groups:
     - Motor gasoline (excluding biofuel portion)
     - Aviation gasoline
     - Gasoline-type jet fuel
-  Bio-diesel:
-    - Pure biodiesels
-    - Blended biodiesels
   Kerosene:
     - Kerosene-type jet fuel (excluding biofuel portion)
     - Other kerosene
+  Bio-diesel:
+    - Pure biodiesels
+    - Blended biodiesels
   Bio-kerosene:
     - Pure bio jet kerosene
     - Blended bio jet kerosene
+  Bio-ethanol:
+    - Pure biogasoline
+    - Blended biogasoline
   Bio oil:
     - Pure biogasoline
     - Other liquid biofuels

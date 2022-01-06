@@ -69,11 +69,16 @@ column_groups:
   Bio-kerosene:
     - Pure bio jet kerosene
     - Blended bio jet kerosene
-  Bio-ethanol:
+  Biogasoline:
     - Pure biogasoline
     - Blended biogasoline
-  Bio oil:
+  Liquid biofuels aggregated:
+    - Pure biodiesels
+    - Blended biodiesels
+    - Pure bio jet kerosene
+    - Blended bio jet kerosene
     - Pure biogasoline
+    - Blended biogasoline
     - Other liquid biofuels
   Other oil:
     - Crude oil

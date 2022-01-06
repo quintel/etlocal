@@ -246,7 +246,7 @@ en:
         input_transport_road_diesel_demand: Diesel
         transport_final_demand_lpg_demand: LPG
         input_transport_road_electricity_demand: Electricity
-        input_transport_road_bio_ethanol_demand: Bio-ethanol
+        input_transport_road_bio_ethanol_demand: Biogasoline
         input_transport_road_biodiesel_demand: Biodiesel
         transport_final_demand_for_road_compressed_network_gas_demand: CNG (compressed natural gas)
         transport_final_demand_hydrogen_demand: Hydrogen
@@ -266,7 +266,7 @@ en:
 
         transport_final_demand_kerosene_demand: Kerosene
         input_transport_plane_gasoline_demand: Gasoline
-        input_transport_plane_bio_ethanol_demand: Bio-ethanol
+        input_transport_plane_bio_ethanol_demand: Biogasoline
 
         transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share: Cars
         transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share: Busses
@@ -333,7 +333,7 @@ en:
 
         input_share_mixer_gas_fuel_network_gas: Gas
         input_share_mixer_gas_fuel_oil: Oil
-        input_share_mixer_gas_fuel_bio_oil: Bio oil
+        input_share_mixer_gas_fuel_bio_oil: Liquid biofuels aggregated
 
         input_percentage_of_diesel_industry_final_demand_crude_oil: Diesel
         input_percentage_of_biodiesel_industry_final_demand_crude_oil: Biodiesel

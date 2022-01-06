@@ -61,17 +61,11 @@ groups:
         unit: 'TJ'
         entso: |
           EB("Final consumption - industry sector - iron and steel - energy use", "Crude oil aggregated") +
-          EB("Final consumption - industry sector - iron and steel - energy use", "Bio-diesel") +
-          EB("Final consumption - industry sector - iron and steel - energy use", "Bio-kerosene") +
-          EB("Final consumption - industry sector - iron and steel - energy use", "Bio oil") +
+          EB("Final consumption - industry sector - iron and steel - energy use", "Liquid biofuels aggregated") +
           EB("Energy sector - coke ovens - energy use", "Crude oil aggregated") +
-          EB("Energy sector - coke ovens - energy use", "Bio-diesel") +
-          EB("Energy sector - coke ovens - energy use", "Bio-kerosene") +
-          EB("Energy sector - coke ovens - energy use", "Bio oil") +
+          EB("Energy sector - coke ovens - energy use", "Liquid biofuels aggregated") +
           EB("Energy sector - blast furnaces - energy use", "Crude oil aggregated") +
-          EB("Energy sector - blast furnaces - energy use", "Bio-diesel") +
-          EB("Energy sector - blast furnaces - energy use", "Bio-kerosene") +
-          EB("Energy sector - blast furnaces - energy use", "Bio oil") 
+          EB("Energy sector - blast furnaces - energy use", "Liquid biofuels aggregated") 
       - key: input_industry_metal_steel_wood_pellets_demand
         unit: 'TJ'
         entso: |

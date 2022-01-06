@@ -25,9 +25,7 @@ groups:
         unit: 'TJ'
         entso: |
           EB("Final consumption - other sectors - agriculture and forestry - energy use", "Crude oil aggregated") +
-          EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-diesel") +
-          EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-kerosene") +
-          EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio oil")
+          EB("Final consumption - other sectors - agriculture and forestry - energy use", "Liquid biofuels aggregated")
       - key: agriculture_final_demand_hydrogen_demand
         unit: 'TJ'
         entso: 0.0
@@ -40,56 +38,43 @@ groups:
       entso: |
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Gas oil and diesel oil (excluding biofuel portion)") / (
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Crude oil aggregated") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-diesel") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-kerosene") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio oil") )
+        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Liquid biofuels aggregated") )
     - key: input_percentage_of_biodiesel_agriculture_final_demand_crude_oil
       unit: '%'
       entso: |
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-diesel") / (
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Crude oil aggregated") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-diesel") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-kerosene") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio oil") )
+        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Liquid biofuels aggregated") )
     - key: input_percentage_of_kerosene_agriculture_final_demand_crude_oil
       unit: '%'
       entso: |
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Kerosene") / (
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Crude oil aggregated") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-diesel") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-kerosene") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio oil") )
+        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Liquid biofuels aggregated") )
     - key: input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil
       unit: '%'
       entso: |
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-kerosene") / (
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Crude oil aggregated") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-diesel") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-kerosene") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio oil") )
+        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Liquid biofuels aggregated") )
     - key: input_percentage_of_lpg_agriculture_final_demand_crude_oil
       unit: '%'
       entso: |
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Liquefied petroleum gases") / (
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Crude oil aggregated") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-diesel") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-kerosene") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio oil") )
+        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Liquid biofuels aggregated") )
     - key: input_percentage_of_bio_oil_agriculture_final_demand_crude_oil
       unit: '%'
       entso: |
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio oil") / (
+        (EB("Final consumption - other sectors - agriculture and forestry - energy use", "Biogasoline") +
+        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Other liquid biofuels")) / (
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Crude oil aggregated") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-diesel") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-kerosene") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio oil") )
+        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Liquid biofuels aggregated") )
     - key: input_percentage_of_crude_oil_agriculture_final_demand_crude_oil
       unit: '%'
       entso: |
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Other oil") / (
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Crude oil aggregated") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-diesel") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-kerosene") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio oil") )
+        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Liquid biofuels aggregated") )
       flexible: true
       skip_validation: true

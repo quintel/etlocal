@@ -23,9 +23,7 @@ groups:
       unit: 'TJ'
       entso: |
         EB("Final consumption - industry sector - chemical fertilizers - energy use", "Crude oil aggregated") +
-        EB("Final consumption - industry sector - chemical fertilizers - energy use", "Bio-diesel") +
-        EB("Final consumption - industry sector - chemical fertilizers - energy use", "Bio-kerosene") +
-        EB("Final consumption - industry sector - chemical fertilizers - energy use", "Bio oil")
+        EB("Final consumption - industry sector - chemical fertilizers - energy use", "Liquid biofuels aggregated")
     - key: input_industry_chemical_fertilizers_coal_demand
       unit: 'TJ'
       entso: |

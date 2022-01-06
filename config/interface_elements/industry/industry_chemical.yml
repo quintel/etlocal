@@ -23,9 +23,7 @@ groups:
         unit: 'TJ'
         entso: |
           EB("Final consumption - industry sector - chemical other - energy use", "Crude oil aggregated") +
-          EB("Final consumption - industry sector - chemical other - energy use", "Bio-diesel") +
-          EB("Final consumption - industry sector - chemical other - energy use", "Bio-kerosene") +
-          EB("Final consumption - industry sector - chemical other - energy use", "Bio oil")
+          EB("Final consumption - industry sector - chemical other - energy use", "Liquid biofuels aggregated")
       - key: input_industry_chemical_other_coal_demand
         unit: 'TJ'
         entso: |

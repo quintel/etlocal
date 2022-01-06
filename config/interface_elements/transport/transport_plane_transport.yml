@@ -15,7 +15,7 @@ groups:
         - key: input_transport_plane_bio_ethanol_demand
           unit: 'TJ'
           entso: |
-            EB("Final consumption - transport sector - domestic aviation - energy use", "Bio-ethanol")
+            EB("Final consumption - transport sector - domestic aviation - energy use", "Biogasoline")
 
     - header: transport_international_plane_transport
       items:

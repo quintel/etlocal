@@ -22,7 +22,8 @@ groups:
       - key: input_industry_paper_crude_oil_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Crude oil aggregated")
+          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Crude oil aggregated") +
+          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Liquid biofuels aggregated")
       - key: input_industry_paper_coal_demand
         unit: 'TJ'
         entso: |

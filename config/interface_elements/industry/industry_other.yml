@@ -116,19 +116,12 @@ groups:
       - key: input_industry_other_cokes_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - energy use", "Coke oven coke") +
+          EB("Final consumption - industry sector - energy use", "Coke oven coke") -
+          EB("Final consumption - industry sector - iron and steel - energy use", "Coke oven coke") +
           EB("Energy sector - energy use", "Coke oven coke") -
           EB("Energy sector - electricity and heat generation - energy use", "Coke oven coke") -
           EB("Energy sector - coke ovens - energy use", "Coke oven coke") -
-          EB("Energy sector - blast furnaces - energy use", "Coke oven coke") -
-          EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Coke oven coke") -
-          EB("Final consumption - industry sector - iron and steel - energy use", "Coke oven coke") -
-          EB("Final consumption - industry sector - chemical fertilizers - energy use", "Coke oven coke") -
-          EB("Final consumption - industry sector - chemical other - energy use", "Coke oven coke") -
-          EB("Final consumption - industry sector - metal aluminium - energy use", "Coke oven coke") -
-          EB("Final consumption - industry sector - metal other - energy use", "Coke oven coke") -
-          EB("Final consumption - industry sector - food, beverages and tobacco - energy use", "Coke oven coke") -
-          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Coke oven coke")
+          EB("Energy sector - blast furnaces - energy use", "Coke oven coke")
 
   - header: industry_other_non_energetic
     items:

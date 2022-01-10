@@ -23,9 +23,7 @@ groups:
         unit: 'TJ'
         entso: |
           EB("Final consumption - industry sector - chemical other - energy use", "Crude oil aggregated") +
-          EB("Final consumption - industry sector - chemical other - energy use", "Bio-diesel") +
-          EB("Final consumption - industry sector - chemical other - energy use", "Bio-kerosene") +
-          EB("Final consumption - industry sector - chemical other - energy use", "Bio oil")
+          EB("Final consumption - industry sector - chemical other - energy use", "Liquid biofuels aggregated")
       - key: input_industry_chemical_other_coal_demand
         unit: 'TJ'
         entso: |
@@ -37,15 +35,16 @@ groups:
       - key: input_industry_chemical_other_network_gas_non_energetic_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - chemical other - non-energy use", "Electricity")
+          EB("Final consumption - industry sector - chemical other - non-energy use", "Network gas")
       - key: input_industry_chemical_other_wood_pellets_non_energetic_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - chemical other - non-energy use", "Network gas")
+          EB("Final consumption - industry sector - chemical other - non-energy use", "Primary solid biofuels")
       - key: input_industry_chemical_other_crude_oil_non_energetic_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - chemical other - non-energy use", "Crude oil aggregated")
+          EB("Final consumption - industry sector - chemical other - non-energy use", "Crude oil aggregated") +
+          EB("Final consumption - industry sector - chemical other - non-energy use", "Liquid biofuels aggregated")
       - key: input_industry_chemical_other_coal_non_energetic_demand
         unit: 'TJ'
         entso: |

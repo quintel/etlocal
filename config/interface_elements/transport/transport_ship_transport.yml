@@ -45,6 +45,4 @@ groups:
         - key: bunkers_total_useful_demand_ships_demand
           unit: 'TJ'
           entso: |
-            EB("International maritime bunkers", "Natural gas liquids") +
-            EB("International maritime bunkers", "Gas oil and diesel oil (excluding biofuel portion)") +
-            EB("International maritime bunkers", "Fuel oil")
+            EB("International maritime bunkers", "Total")

@@ -60,56 +60,43 @@ groups:
       entso: |
         EB("Final consumption - industry sector - energy use", "Gas oil and diesel oil (excluding biofuel portion)") / (
         EB("Final consumption - industry sector - energy use", "Crude oil aggregated") +
-        EB("Final consumption - industry sector - energy use", "Bio-diesel") +
-        EB("Final consumption - industry sector - energy use", "Bio-kerosene") +
-        EB("Final consumption - industry sector - energy use", "Bio oil") )
+        EB("Final consumption - industry sector - energy use", "Liquid biofuels aggregated") )
     - key: input_percentage_of_biodiesel_industry_final_demand_crude_oil
       unit: '%'
       entso: |
         EB("Final consumption - industry sector - energy use", "Bio-diesel") / (
         EB("Final consumption - industry sector - energy use", "Crude oil aggregated") +
-        EB("Final consumption - industry sector - energy use", "Bio-diesel") +
-        EB("Final consumption - industry sector - energy use", "Bio-kerosene") +
-        EB("Final consumption - industry sector - energy use", "Bio oil") )
+        EB("Final consumption - industry sector - energy use", "Liquid biofuels aggregated") )
     - key: input_percentage_of_kerosene_industry_final_demand_crude_oil
       unit: '%'
       entso: |
         EB("Final consumption - industry sector - energy use", "Kerosene") / (
         EB("Final consumption - industry sector - energy use", "Crude oil aggregated") +
-        EB("Final consumption - industry sector - energy use", "Bio-diesel") +
-        EB("Final consumption - industry sector - energy use", "Bio-kerosene") +
-        EB("Final consumption - industry sector - energy use", "Bio oil") )
+        EB("Final consumption - industry sector - energy use", "Liquid biofuels aggregated") )
     - key: input_percentage_of_bio_kerosene_industry_final_demand_crude_oil
       unit: '%'
       entso: |
         EB("Final consumption - industry sector - energy use", "Bio-kerosene") / (
         EB("Final consumption - industry sector - energy use", "Crude oil aggregated") +
-        EB("Final consumption - industry sector - energy use", "Bio-diesel") +
-        EB("Final consumption - industry sector - energy use", "Bio-kerosene") +
-        EB("Final consumption - industry sector - energy use", "Bio oil") )
+        EB("Final consumption - industry sector - energy use", "Liquid biofuels aggregated") )
     - key: input_percentage_of_lpg_industry_final_demand_crude_oil
       unit: '%'
       entso: |
         EB("Final consumption - industry sector - energy use", "Liquefied petroleum gases") / (
         EB("Final consumption - industry sector - energy use", "Crude oil aggregated") +
-        EB("Final consumption - industry sector - energy use", "Bio-diesel") +
-        EB("Final consumption - industry sector - energy use", "Bio-kerosene") +
-        EB("Final consumption - industry sector - energy use", "Bio oil") )
+        EB("Final consumption - industry sector - energy use", "Liquid biofuels aggregated") )
     - key: input_percentage_of_bio_oil_industry_final_demand_crude_oil
       unit: '%'
       entso: |
-        EB("Final consumption - industry sector - energy use", "Bio oil") / (
+        (EB("Final consumption - industry sector - energy use", "Biogasoline") +
+        EB("Final consumption - industry sector - energy use", "Other liquid biofuels")) / (
         EB("Final consumption - industry sector - energy use", "Crude oil aggregated") +
-        EB("Final consumption - industry sector - energy use", "Bio-diesel") +
-        EB("Final consumption - industry sector - energy use", "Bio-kerosene") +
-        EB("Final consumption - industry sector - energy use", "Bio oil") )
+        EB("Final consumption - industry sector - energy use", "Liquid biofuels aggregated") )
     - key: input_percentage_of_crude_oil_industry_final_demand_crude_oil
       unit: '%'
       entso: |
         EB("Final consumption - industry sector - energy use", "Other oil") / (
         EB("Final consumption - industry sector - energy use", "Crude oil aggregated") +
-        EB("Final consumption - industry sector - energy use", "Bio-diesel") +
-        EB("Final consumption - industry sector - energy use", "Bio-kerosene") +
-        EB("Final consumption - industry sector - energy use", "Bio oil") )
+        EB("Final consumption - industry sector - energy use", "Liquid biofuels aggregated") )
       flexible: true
       skip_validation: true

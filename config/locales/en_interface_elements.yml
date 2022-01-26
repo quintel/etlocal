@@ -564,6 +564,7 @@ en:
         input_energy_power_ultra_supercritical_ccs_coal_production: Pulverized coal with CCS
         input_energy_chp_ultra_supercritical_coal_production: Coal plant with heat production (CHP)
         input_energy_chp_ultra_supercritical_cofiring_coal_production: Co-firing coal plant with heat production (CHP)
+        input_energy_chp_ultra_supercritical_lignite_production: Lignite plant for district heat (CHP)
         input_energy_power_supercritical_ccs_waste_mix_production: Waste incinerator CCS
         input_energy_power_ultra_supercritical_lignite_production: Coal Lignite
         input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production: Coal Lignite 'oxyfuel' CCS

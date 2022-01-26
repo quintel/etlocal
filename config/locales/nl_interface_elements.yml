@@ -569,6 +569,7 @@ nl:
         input_energy_power_ultra_supercritical_ccs_coal_production: Poederkolen met CCS
         input_energy_chp_ultra_supercritical_coal_production: Kolencentrale met warmtelevering (WKK)
         input_energy_chp_ultra_supercritical_cofiring_coal_production: Bijstookcentrale met warmtelevering (WKK)
+        input_energy_chp_ultra_supercritical_lignite_production: Bruinkoolcentrale met warmtelevering (WKK)
         input_energy_power_supercritical_ccs_waste_mix_production: Afvalverbrander CCS
         input_energy_power_ultra_supercritical_lignite_production: Bruinkolen
         input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production: Bruinkolen 'oxyfuel' CCS

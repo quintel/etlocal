@@ -33,6 +33,9 @@ groups:
         unit: 'TJ'
         entso: |
           EB("Lignite plant", "Electricity")
+      - key: input_energy_chp_ultra_supercritical_lignite_production
+        unit: 'TJ'
+        entso: 0.0
       - key: input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production
         unit: 'TJ'
         entso: 0.0

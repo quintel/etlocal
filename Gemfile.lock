@@ -1,11 +1,12 @@
 GIT
   remote: https://github.com/quintel/atlas.git
-  revision: 0546b99596e7b5234113c49eba307f389e0b311d
-  ref: 0546b99
+  revision: cfa8b8c32b41146905b57c32feb24b5ddaa3c0dc
+  ref: cfa8b8c
   specs:
     atlas (1.0.0)
       activemodel (>= 4.1.14.1)
       activesupport (>= 4.1.14.1)
+      gpgme (~> 2.0)
       turbine-graph (>= 0.1)
       virtus (~> 1.0)
 
@@ -28,8 +29,8 @@ GIT
 
 GIT
   remote: https://github.com/quintel/transformer.git
-  revision: 721f8f0fdf331099547732fae1d07599b8a34610
-  ref: 721f8f0
+  revision: 5b7ea098044df3bf9b847302720f929ea6961730
+  ref: 5b7ea09
   specs:
     transformer (1.0.0)
       atlas (~> 1.0)
@@ -156,6 +157,8 @@ GEM
       rchardet (~> 1.8)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    gpgme (2.0.20)
+      mini_portile2 (~> 2.3)
     gradients (0.0.2)
     hashdiff (0.3.7)
     http-cookie (1.0.3)

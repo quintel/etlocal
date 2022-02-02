@@ -34,5 +34,4 @@ COPY . /app/
 RUN git clone --depth=1 https://github.com/quintel/etsource.git /etsource
 RUN RAILS_ENV=production bundle exec rails assets:precompile
 
-CMD [".docker/entrypoint.sh"]
-
+CMD ["bundle", "exec", "--keep-file-descriptors", "puma", "-C", "config/puma.rb"]

@@ -36,8 +36,8 @@ gem 'str_enum'
 
 gem 'git'
 
-gem 'transformer', ref: '721f8f0', github: 'quintel/transformer'
-gem 'atlas',       ref: '0546b99', github: 'quintel/atlas'
+gem 'transformer', ref: '5b7ea09', github: 'quintel/transformer'
+gem 'atlas',       ref: 'cfa8b8c', github: 'quintel/atlas'
 gem 'rubel',       ref: 'ad3d44e', github: 'quintel/rubel'
 gem 'refinery',    ref: '72eacf8', github: 'quintel/refinery'
 

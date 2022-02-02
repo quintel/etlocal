@@ -16,7 +16,6 @@ set :bundle_binstubs, (-> { shared_path.join('sbin') })
 
 # Default value for :linked_files is []
 append :linked_files, *%w[
-  config/.etsource_password
   config/database.yml
   config/email.yml
   config/secrets.yml
@@ -34,7 +33,6 @@ append :linked_dirs, *%w[
 ]
 
 namespace :deploy do
-  after :finishing, 'deploy:etsource'
   after :publishing, :restart
 end
 

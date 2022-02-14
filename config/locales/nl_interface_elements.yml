@@ -251,7 +251,7 @@ nl:
         input_transport_road_diesel_demand: Diesel
         transport_final_demand_lpg_demand: LPG
         input_transport_road_electricity_demand: Elektriciteit
-        input_transport_road_bio_ethanol_demand: Biogasoline
+        input_transport_road_bio_ethanol_demand: Bio-ethanol
         input_transport_road_biodiesel_demand: Biodiesel
         transport_final_demand_for_road_compressed_network_gas_demand: CNG (gas-onder-druk)
         transport_final_demand_hydrogen_demand: Waterstof

@@ -141,7 +141,10 @@ en:
       other_final_demand: Final demand
 
       # energy
-      energy_demand_power_sector: Energy demand of the power sector
+      energy_demand_power_sector: Electricity demand of the power sector
+      energy_demand_gas_network: Gas demand of the power sector
+
+
       energy_gas_network: Gas mix in the gas network
       energy_greengas_production: Green gas production
       energy_waste_mix: Waste mix

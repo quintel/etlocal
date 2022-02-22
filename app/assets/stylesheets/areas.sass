@@ -159,12 +159,15 @@ $map-height: 100%
           max-height: 300px
           overflow: scroll
           li
-            padding: 5px
+            padding: 5px 5px 5px 10px
             border-radius: 4px
             &.selected-option
               cursor: pointer
               background-color: $selected-color
               color: #fff
+            &.subheader
+              font-weight: 600
+              padding-left: 5px
             &:active
               background-color: darken($selected-color, 5)
             &:last-child
@@ -190,7 +193,7 @@ $map-height: 100%
         padding: 20px 60px 30px
 
       .heading
-        padding: 15px 265px
+        padding: 15px 35px
         text-align: center
         border-bottom: 1px solid $border-color-dark
 

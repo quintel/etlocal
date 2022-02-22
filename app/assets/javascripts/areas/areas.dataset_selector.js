@@ -90,7 +90,7 @@ Areas.DatasetSelector = (function () {
                 history.pushState('', '', '/');
                 $("#dataset-overlay").hide();
                 $('#dataset-overlay .content').empty();
-                $('.content-map .container #search-bar').show();
+                $('.content-map .container #search-bar-holder').show();
             });
         },
 

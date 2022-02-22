@@ -49,6 +49,15 @@ nl:
     si: Slovenië
     any: Alle landen
 
+  groups:
+    country: Landen
+    province: Provincies
+    region: Regio's
+    res: RES regio's
+    municipality: Gemeentes
+    district: Wijken
+    neighbourhood: Buurten
+
   time:
     formats:
       simple: "%Y-%m-%d:%H:%M"

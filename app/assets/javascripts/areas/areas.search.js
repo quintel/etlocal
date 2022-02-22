@@ -34,8 +34,14 @@ Areas.Search = (function () {
         // Create an option in the list for each dataset if there were multiple results
         if (data.length >= 1){
             var self = this;
+            let lastGroup = '';
 
             $.each(data, function(_key, dataset) {
+                if (lastGroup != dataset.group) {
+                    lastGroup = dataset.group;
+                    list.append($('<li class="subheader">' + dataset.group + '</li>'));
+                }
+
                 var option = $('<li>' + dataset.name +'<span>' + dataset.id +'</span></li>');
                 option.data('id', dataset.id);
                 option.on('click', function() {
@@ -48,7 +54,7 @@ Areas.Search = (function () {
                 list.append(option);
             });
             // Highlight first item to show what will open if you press enter
-            list.find(">:first-child").addClass('selected-option');
+            list.find(">:first-child").next().addClass('selected-option');
         } else {
             list.append('<li>No results</li>');
             this.scope

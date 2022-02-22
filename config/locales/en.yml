@@ -124,6 +124,15 @@ en:
     si: Slovenia
     any: All countries
 
+  groups:
+    country: Countries
+    province: Provinces
+    region: Regions
+    res: RES regions
+    municipality: Municipality
+    district: Districts
+    neighbourhood: Neighbourhoods
+
   time:
     formats:
       simple: "%Y-%m-%d:%H:%M"

@@ -108,8 +108,11 @@ $map-height: 100%
     .dataset-selector
       width: 300px
 
-    #search-bar
+    #search-bar-holder
       .form
+        form#search
+          display: flex
+
         form, input
           margin-bottom: 0
 
@@ -126,10 +129,20 @@ $map-height: 100%
             background-color: $bg-color
             color: #000
 
+        select#country-select
+          border: 1px solid #bbb
+          border-radius: 4px 0 0 4px
+          line-height: 34px
+          color: #555
+
+        .search-bar
+          display: flex
+          flex-direction: column
+
         input#search-bar
           border: 1px solid #bbb
           line-height: 34px
-          border-radius: 4px 0 0 4px
+          border-radius: 0
           width: 300px
 
         input#search-submit
@@ -157,6 +170,11 @@ $map-height: 100%
             &:last-child
               margin-bottom: 0
 
+            span
+              float: right
+              color: $map-water-color
+              font-size: 1.25rem
+
 
     #dataset-overlay
       background-color: $bg-color
@@ -172,7 +190,7 @@ $map-height: 100%
         padding: 20px 60px 30px
 
       .heading
-        padding: 15px 35px
+        padding: 15px 265px
         text-align: center
         border-bottom: 1px solid $border-color-dark
 

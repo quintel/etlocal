@@ -42,7 +42,12 @@ describe Dataset do
   end
 
   describe '.fuzzy_search' do
-    subject { described_class.fuzzy_search(query) }
+    subject { described_class.fuzzy_search(query, 'any') }
+
+    before do
+      dataset
+      eland
+    end
 
     let(:eland) do
       Dataset.create!(name: 'Eland', country: 'nl', geo_id: 'AM3568', user: User.robot)

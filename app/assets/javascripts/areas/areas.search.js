@@ -36,7 +36,7 @@ Areas.Search = (function () {
             var self = this;
 
             $.each(data, function(_key, dataset) {
-                var option = $('<li>' + dataset.name +' (' + dataset.id +')</li>');
+                var option = $('<li>' + dataset.name +'<span>' + dataset.id +'</span></li>');
                 option.data('id', dataset.id);
                 option.on('click', function() {
                     openPopup.call(self, dataset.id);
@@ -56,7 +56,7 @@ Areas.Search = (function () {
                 .attr('title', "No results for: " + this.result.value)
         }
 
-        this.scope.append(list);
+        this.scope.find('.search-holder').append(list);
         bindOptionsListener.call(this);
     }
 
@@ -91,7 +91,7 @@ Areas.Search = (function () {
                 url: "/datasets/search.json",
                 type: 'GET',
                 dataType: 'json',
-                data: { query: this.result.value },
+                data: { query: this.result.value, country: this.country.value },
                 success: parseResults.bind(this),
                 error: function (e) {
                     alert(e);
@@ -106,6 +106,8 @@ Areas.Search = (function () {
 
             if (selected.length == 1){
                 openPopup.call(this, $(selected[0]).data('id'));
+            } else if (this.country.value != 'any') {
+                openPopup.call(this, this.country.value);
             }
         }
     };
@@ -113,6 +115,7 @@ Areas.Search = (function () {
     function Search(areas, scope) {
         this.areas = areas;
         this.scope = scope;
+        this.country = this.scope.find('#country-select')[0];
         this.scope.on('submit', this.openSelectedOption.bind(this));
         this.scope.find('#search-bar').on('input', this.search.bind(this));
         this.scope.find('#search-bar').on('click', this.search.bind(this));

@@ -2,7 +2,7 @@ nl:
   application: Dataset Manager
   cancel: Annuleren
   edit: Aanpassen
-  search: Zoeken
+  search: Open
   click_or_search: Gebruik de kaart of zoek hier...
   or: of
   to: naar
@@ -20,9 +20,34 @@ nl:
 
   countries:
     be: België
-    nl2018: Nederlands 2018
-    nl: Nederlands
+    nl2018: Nederland 2018
+    nl: Nederland
     uk: Verenigd Koninkrijk
+    sk: Slowakije
+    at: Oostenrijk
+    bg: Bulgarije
+    cy: Cyprus
+    cz: Tsjechië
+    de: Duitsland
+    dk: Denemarken
+    es: Spanje
+    ee: Estland
+    fi: Finland
+    fr: Frankrijk
+    el: Griekenland
+    hr: Kroatië
+    hu: Hongarije
+    ie: Ierland
+    it: Italië
+    lt: Litouwen
+    lu: Luxemburg
+    lv: Letland
+    pl: Polen
+    pt: Portugal
+    ro: Romenië
+    se: Zweden
+    si: Slovenië
+    any: Alle landen
 
   time:
     formats:

@@ -48,4 +48,9 @@ module DatasetHelper
       file_key: file.relative_path
     )
   end
+
+  def options_for_country_select
+    countries = ['any'] + Dataset.all.map(&:actual_country).uniq
+    options_for_select(countries.map { |c| [I18n.t("countries.#{c}"), c] }, 'any')
+  end
 end

@@ -15,15 +15,28 @@ class Dataset < ApplicationRecord
     end
   end
 
+  ORDER = %w[
+    country
+    province
+    res
+    region
+    municipality
+    district
+    neighborhood
+  ].freeze
+
   def self.clones(dataset, user)
     where(geo_id: dataset.geo_id)
       .order(Arel.sql("FIELD(`id`, #{dataset.id}) DESC, `created_at` DESC"))
   end
 
-  # Search for query in geo_id and name - works kind of fine, but not as fuzzy as I hoped
-  def self.fuzzy_search(query)
+  # Search for query in geo_id and name, if a country is specified, filters to that country
+  def self.fuzzy_search(query, in_country)
     pattern = "%#{query}%"
-    where(arel_table[:geo_id].matches(pattern)).or(where(arel_table[:name].matches(pattern)))
+    results = where(arel_table[:geo_id].matches(pattern))
+      .or(where(arel_table[:name].matches(pattern)))
+    results = results.select { |d| d.actual_country == in_country } if in_country != 'any'
+    results.sort_by { |d| ORDER.index(d.group) || ORDER.length + 1 }
   end
 
   def group
@@ -105,6 +118,14 @@ class Dataset < ApplicationRecord
         user.name
       end
     end
+  end
+
+  # This is not the parent dataset as defined in country, but the 'real world'country
+  def actual_country
+    return geo_id.downcase if entso_data_source?
+    return geo_id[..1].downcase if %w[UK BE].include?(geo_id[..1])
+
+    country[..1]
   end
 
   # Public: Returns if this dataset retrieves some values from a CSV using queries.

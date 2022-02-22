@@ -12,10 +12,13 @@
         span.max_value
 
     .interface.dataset_selector
-      #search-bar
+      #search-bar-holder
         .form
           form#search
-            = text_field_tag :q, nil, id: "search-bar", placeholder: t('click_or_search'), autocomplete: "off"
+            select#country-select name="country"
+              = options_for_country_select
+            .search-holder
+              = text_field_tag :q, nil, id: "search-bar", placeholder: t('click_or_search'), autocomplete: "off"
             input#search-submit type='submit' value=I18n.t('search')
 
   #dataset-overlay

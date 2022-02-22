@@ -18,7 +18,7 @@ cp config/email.sample.yml config/email.yml
 
 2. Run `rake db:create`
 
-3. Add a `.env` file with a mapbox api key to enable the map on your local environment. Like such:
+3. Add a `.env` file with a mapbox api key to enable the map on your local environment. You can copy the template `.env.template` and fill in the key there, or create your own file like such:
 
 ```bash
 echo "MAPBOX_API_KEY=xx.xxxxxxxxxxxxxxxxxxxxxxxxx" >> .env

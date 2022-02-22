@@ -39,7 +39,9 @@ class DatasetsController < ApplicationController
   # GET search.json
   def search
     results = Dataset.fuzzy_search(params[:query], params[:country])
-    render json: results.map { |d| { id: d.geo_id, name: d.name } }.uniq
+      .map { |d| { id: d.geo_id, name: d.name, group: I18n.t("groups.#{d.group}") } }
+      .uniq
+    render json: results
   end
 
   # POST download

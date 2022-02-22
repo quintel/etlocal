@@ -31,12 +31,18 @@ class Dataset < ApplicationRecord
   end
 
   # Search for query in geo_id and name, if a country is specified, filters to that country
+  # Sorts the results by group, and puts the most relevant results first in each group
   def self.fuzzy_search(query, in_country)
     pattern = "%#{query}%"
     results = where(arel_table[:geo_id].matches(pattern))
       .or(where(arel_table[:name].matches(pattern)))
+
     results = results.select { |d| d.actual_country == in_country } if in_country != 'any'
-    results.sort_by { |d| ORDER.index(d.group) || ORDER.length + 1 }
+
+    results.sort_by do |d|
+      (ORDER.index(d.group) || ORDER.length + 1) -
+        ((d.name.start_with?(query.capitalize) && 0.5) || 0)
+    end
   end
 
   def group

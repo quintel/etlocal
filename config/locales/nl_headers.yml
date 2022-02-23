@@ -85,6 +85,7 @@ nl:
       transport_rail_electricity_distribution: Verdeling elektriciteit treinverkeer
       transport_rail_diesel_distribution: Verdeling diesel treinverkeer
       transport_energy_demand_crude_oil_non_energetic: Niet-energetisch oliegebruik
+      transport_road_lpg_distribution: Verdeling LPG wegverkeer
 
       # agriculture
       agriculture_final_demand: Eindgebruik

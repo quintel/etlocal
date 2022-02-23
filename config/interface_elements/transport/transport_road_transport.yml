@@ -54,11 +54,18 @@ groups:
           entso: 0.0
 #          entso: |
 #            EB("Final consumption - transport sector - road - energy use", "Bio-LNG")
+        - key: transport_final_demand_for_road_bio_lng_demand
+          unit: 'TJ'
+          entso: 0.0
+#          entso: |
+#            EB("Final consumption - transport sector - road - energy use", "Bio-LNG")
 
     - header: transport_road_gasoline_distribution
       type: slider
       items:
         - key: transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share
+          unit: '%'
+        - key: transport_road_mixer_gasoline_transport_vans_using_gasoline_mix_parent_share
           unit: '%'
         - key: transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share
           unit: '%'
@@ -74,6 +81,8 @@ groups:
       items:
         - key: transport_road_mixer_diesel_transport_car_using_diesel_mix_parent_share
           unit: '%'
+        - key: transport_road_mixer_diesel_transport_vans_using_diesel_mix_parent_share
+          unit: '%'
         - key: transport_road_mixer_diesel_transport_bus_using_diesel_mix_parent_share
           unit: '%'
         - key: transport_road_mixer_diesel_transport_truck_using_diesel_mix_parent_share
@@ -85,6 +94,8 @@ groups:
       type: slider
       items:
         - key: transport_final_demand_for_road_electricity_transport_car_using_electricity_parent_share
+          unit: '%'
+        - key: transport_final_demand_for_road_electricity_transport_vans_using_electricity_parent_share
           unit: '%'
         - key: transport_final_demand_for_road_electricity_transport_bus_using_electricity_parent_share
           unit: '%'
@@ -104,6 +115,8 @@ groups:
           unit: '%'
         - key: transport_road_mixer_compressed_network_gas_transport_car_using_compressed_natural_gas_parent_share
           unit: '%'
+        - key: transport_road_mixer_compressed_network_gas_transport_vans_using_compressed_natural_gas_parent_share
+          unit: '%'
         - key: transport_road_mixer_compressed_network_gas_transport_truck_using_compressed_natural_gas_parent_share
           unit: '%'
           flexible: true
@@ -113,6 +126,8 @@ groups:
       type: slider
       items:
         - key: input_transport_road_car_hydrogen_share
+          unit: '%'
+        - key: transport_final_demand_for_road_hydrogen_transport_vans_using_hydrogen_parent_share
           unit: '%'
         - key: transport_final_demand_for_road_hydrogen_transport_bus_using_hydrogen_parent_share
           unit: '%'
@@ -130,3 +145,11 @@ groups:
           unit: '%'
           flexible: true
           skip_validation: true
+
+    - header: transport_road_lpg_distribution
+      type: slider
+      items:
+        - key: transport_road_mixer_lpg_transport_car_using_lng_mix_parent_share
+          unit: '%'
+        - key: transport_road_mixer_lpg_transport_vans_using_lng_mix_parent_share
+          unit: '%'

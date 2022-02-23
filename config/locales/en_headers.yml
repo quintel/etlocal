@@ -83,6 +83,7 @@ en:
       transport_rail_electricity_distribution: Rail electricity distribution
       transport_rail_diesel_distribution: Rail diesel distribution
       transport_energy_demand_crude_oil_non_energetic: Non-energetic oil use
+      transport_road_lpg_distribution: Road LPG distribution
 
       # agriculture
       agriculture_final_demand: Final demand

@@ -34,7 +34,7 @@ Areas.Search = (function () {
         // Create an option in the list for each dataset if there were multiple results
         if (data.length >= 1){
             var self = this;
-            let lastGroup = '';
+            var lastGroup = '';
 
             $.each(data, function(_key, dataset) {
                 if (lastGroup != dataset.group) {

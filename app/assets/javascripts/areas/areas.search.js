@@ -42,7 +42,13 @@ Areas.Search = (function () {
                     list.append($('<li class="subheader">' + dataset.group + '</li>'));
                 }
 
-                var option = $('<li>' + dataset.name +'<span>' + dataset.id +'</span></li>');
+                var option = $(
+                    '<li><span class="name">' +
+                    dataset.name +
+                    '</span><span class="key">' +
+                    dataset.id +
+                    '</span></li>'
+                );
                 option.data('id', dataset.id);
                 option.on('click', function() {
                     openPopup.call(self, dataset.id);

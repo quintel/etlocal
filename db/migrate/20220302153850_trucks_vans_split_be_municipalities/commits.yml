@@ -10,8 +10,8 @@
   - transport_final_demand_for_road_hydrogen_transport_vans_using_hydrogen_parent_share
   - transport_final_demand_for_road_electricity_transport_vans_using_electricity_parent_share
   - transport_road_mixer_diesel_transport_vans_using_diesel_mix_parent_share
-  - transport_road_mixer_lpg_transport_vans_using_lng_mix_parent_share
+  - transport_road_mixer_lpg_transport_vans_using_lpg_mix_parent_share
   - transport_road_mixer_gasoline_transport_vans_using_gasoline_mix_parent_share
-  - transport_road_mixer_lpg_transport_car_using_lng_mix_parent_share
+  - transport_road_mixer_lpg_transport_car_using_lpg_mix_parent_share
   message:
     No source was found regarding the split between vans and trucks. The split from national Belgian data was used to determine this data.

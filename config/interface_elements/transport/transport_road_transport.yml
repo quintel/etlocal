@@ -149,7 +149,7 @@ groups:
     - header: transport_road_lpg_distribution
       type: slider
       items:
-        - key: transport_road_mixer_lpg_transport_car_using_lng_mix_parent_share
+        - key: transport_road_mixer_lpg_transport_car_using_lpg_mix_parent_share
           unit: '%'
-        - key: transport_road_mixer_lpg_transport_vans_using_lng_mix_parent_share
+        - key: transport_road_mixer_lpg_transport_vans_using_lpg_mix_parent_share
           unit: '%'

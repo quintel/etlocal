@@ -301,8 +301,8 @@ en:
         transport_road_mixer_lng_transport_bus_using_lng_mix_parent_share: Busses
         transport_road_mixer_lng_transport_truck_using_lng_mix_parent_share: Trucks
 
-        transport_road_mixer_lpg_transport_car_using_lpg_mix_parent_share: Auto's
-        transport_road_mixer_lpg_transport_vans_using_lpg_mix_parent_share: Vans
+        transport_final_demand_for_road_lpg_transport_car_using_lpg_parent_share: Auto's
+        transport_final_demand_for_road_lpg_transport_van_using_lpg_parent_share: Vans
 
         transport_final_demand_for_rail_electricity_transport_passenger_train_using_electricity_parent_share: Passenger trains
         transport_final_demand_for_rail_electricity_transport_freight_train_using_electricity_parent_share: Freight trains

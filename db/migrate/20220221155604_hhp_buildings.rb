@@ -20,7 +20,7 @@ class HhpBuildings < ActiveRecord::Migration[5.2]
 
           DatasetEdit.create!(
             commit_id: commit.id,
-            key: 'buildings_final_demand_for_space_heating_electricity_buildings_space_heater_hybrid_heatpump_air_water_gas_parent_share',
+            key: 'buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_hybrid_heatpump_air_water_gas_parent_share',
             value: 0.0
           )
 

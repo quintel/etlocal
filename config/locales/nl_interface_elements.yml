@@ -279,29 +279,29 @@ nl:
         transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share: Bussen
         transport_road_mixer_gasoline_transport_truck_using_gasoline_mix_parent_share: Vrachtwagens
         transport_road_mixer_gasoline_transport_motorcycle_using_gasoline_mix_parent_share: Motorfietsen
-        transport_road_mixer_gasoline_transport_vans_using_gasoline_mix_parent_share: Bestelbussen
+        transport_road_mixer_gasoline_transport_van_using_gasoline_mix_parent_share: Bestelbussen
 
         transport_road_mixer_diesel_transport_car_using_diesel_mix_parent_share: Auto's
         transport_road_mixer_diesel_transport_bus_using_diesel_mix_parent_share: Bussen
         transport_road_mixer_diesel_transport_truck_using_diesel_mix_parent_share: Vrachtwagens
-        transport_road_mixer_diesel_transport_vans_using_diesel_mix_parent_share: Bestelbussen
+        transport_road_mixer_diesel_transport_van_using_diesel_mix_parent_share: Bestelbussen
 
         transport_final_demand_for_road_electricity_transport_car_using_electricity_parent_share: Auto's
         transport_final_demand_for_road_electricity_transport_bus_using_electricity_parent_share: Bussen
         transport_final_demand_for_road_electricity_transport_truck_using_electricity_parent_share: Vrachtwagens
         transport_final_demand_for_road_electricity_transport_motorcycle_using_electricity_parent_share: Motorfietsen
         transport_final_demand_for_road_electricity_transport_bicycle_using_electricity_parent_share: Fietsen
-        transport_final_demand_for_road_electricity_transport_vans_using_electricity_parent_share: Bestelbussen
+        transport_final_demand_for_road_electricity_transport_van_using_electricity_parent_share: Bestelbussen
 
         transport_road_mixer_compressed_network_gas_transport_car_using_compressed_natural_gas_parent_share: Auto's
         transport_road_mixer_compressed_network_gas_transport_bus_using_compressed_natural_gas_parent_share: Bussen
         transport_road_mixer_compressed_network_gas_transport_truck_using_compressed_natural_gas_parent_share: Vrachtwagens
-        transport_road_mixer_compressed_network_gas_transport_vans_using_compressed_natural_gas_parent_share: Bestelbussen
+        transport_road_mixer_compressed_network_gas_transport_van_using_compressed_natural_gas_parent_share: Bestelbussen
 
         input_transport_road_car_hydrogen_share: Auto's
         transport_final_demand_for_road_hydrogen_transport_bus_using_hydrogen_parent_share: Bussen
         transport_final_demand_for_road_hydrogen_transport_truck_using_hydrogen_parent_share: Vrachtwagens
-        transport_final_demand_for_road_hydrogen_transport_vans_using_hydrogen_parent_share: Bestelbussen
+        transport_final_demand_for_road_hydrogen_transport_van_using_hydrogen_parent_share: Bestelbussen
 
         transport_road_mixer_lng_transport_bus_using_lng_mix_parent_share: Bussen
         transport_road_mixer_lng_transport_truck_using_lng_mix_parent_share: Vrachtwagens

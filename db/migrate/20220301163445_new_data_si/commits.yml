@@ -146,8 +146,8 @@
   - households_final_demand_for_appliances_electricity_households_appliances_fridge_freezer_electricity_parent_share
   - households_final_demand_for_appliances_electricity_households_appliances_television_electricity_parent_share
   - households_final_demand_for_appliances_electricity_households_appliances_washing_machine_electricity_parent_share
-  - transport_road_mixer_compressed_network_gas_transport_vans_using_compressed_natural_gas_parent_share
-  - transport_final_demand_for_road_electricity_transport_vans_using_electricity_parent_share
+  - transport_road_mixer_compressed_network_gas_transport_van_using_compressed_natural_gas_parent_share
+  - transport_final_demand_for_road_electricity_transport_van_using_electricity_parent_share
   - transport_final_demand_for_road_lpg_transport_van_using_lpg_parent_share
   - transport_final_demand_for_road_lpg_transport_car_using_lpg_parent_share
   message:
@@ -505,9 +505,9 @@ inventories'; year: 2017; author: JRC"
    "Derived from Steel Statistical Yearbook 2020 concise version - Tabel 6 (continued): https://www.worldsteel.org/steel-by-topic/statistics/steel-statistical-yearbook.html; year:2020; author: Worldsteel Association"
 
 - fields: 
-  - transport_final_demand_for_road_hydrogen_transport_vans_using_hydrogen_parent_share
-  - transport_road_mixer_diesel_transport_vans_using_diesel_mix_parent_share
-  - transport_road_mixer_gasoline_transport_vans_using_gasoline_mix_parent_share
+  - transport_final_demand_for_road_hydrogen_transport_van_using_hydrogen_parent_share
+  - transport_road_mixer_diesel_transport_van_using_diesel_mix_parent_share
+  - transport_road_mixer_gasoline_transport_van_using_gasoline_mix_parent_share
   message:
    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2044"
 

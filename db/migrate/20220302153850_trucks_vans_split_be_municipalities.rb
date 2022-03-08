@@ -32,7 +32,7 @@ class TrucksVansSplitBeMunicipalities < ActiveRecord::Migration[5.0]
   end
 
   def self.down
-    raise ActiveRecord::IrreversibleMigration
+    # raise ActiveRecord::IrreversibleMigration
   end
 
   def find_dataset(commits)

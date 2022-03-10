@@ -33,7 +33,7 @@ nl:
       area_electricity_grid_capacity: Beschikbare capaciteit huidig elektriciteitsnet
       area_electricity_grid_reinforcement: Verzwaring elektriciteitsnet
       area_heat_infrastructure_lengths: Leidinglengtes warmtenet
-      area_interconnector_capacity: Beschikbare capciteit huidige interconnectors
+      area_interconnector_capacity: Beschikbare capaciteit huidige interconnectors
 
       #households
       households_housing_stock_distribution: Huizenvoorraad

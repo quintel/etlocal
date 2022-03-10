@@ -148,3 +148,5 @@ groups:
           unit: '%'
         - key: transport_final_demand_for_road_lpg_transport_van_using_lpg_parent_share
           unit: '%'
+          flexible: true
+          skip_validation: true

@@ -31,10 +31,6 @@ class NewDataEs < ActiveRecord::Migration[5.0]
     puts "  #{datasets.map(&:id).join(',')}"
   end
 
-  def self.down
-    raise ActiveRecord::IrreversibleMigration
-  end
-
   def find_dataset(commits)
     commits.each do |commit|
       return commit.dataset if commit&.dataset

@@ -1,7 +1,7 @@
 class HhpBuildings < ActiveRecord::Migration[5.2]
 
   def up
-    say_with_time('Setting steel inputs for non nl datasets') do
+    say_with_time('Setting HHP buildings to zero for all datasets') do
       counter = 0
       Dataset.where(data_source: 'db').find_each do |dataset|
 

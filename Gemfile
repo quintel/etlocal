@@ -48,12 +48,6 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'dotenv-rails'
-
-  gem 'capistrano',         '~> 3.0',   require: false
-  gem 'capistrano-rbenv',   '~> 2.0',   require: false
-  gem 'capistrano-rails',   '~> 1.1',   require: false
-  gem 'capistrano-bundler', '~> 1.1',   require: false
-  gem 'capistrano3-puma',   '~> 5.0.4', require: false
 end
 
 group :test do

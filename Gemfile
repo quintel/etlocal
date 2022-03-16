@@ -12,7 +12,7 @@ gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails', '>= 1.0.3'
 gem 'mysql2'
-gem 'puma', '< 5'
+gem 'puma'
 gem 'rails', '~> 5.2'
 gem 'rails-i18n', '~> 5.1'
 gem 'sass-rails', '~> 5.0'

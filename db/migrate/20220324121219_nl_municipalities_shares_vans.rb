@@ -1,6 +1,6 @@
-class NlMunicipalitiesVans < ActiveRecord::Migration[5.0]
+class NlMunicipalitiesSharesVans < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20220310095607_nl_municipalities_vans')
+    directory    = Rails.root.join('db/migrate/20220324121219_nl_municipalities_shares_vans')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

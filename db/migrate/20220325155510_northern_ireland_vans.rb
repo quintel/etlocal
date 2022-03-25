@@ -1,6 +1,6 @@
-class NiVanTruckSplit < ActiveRecord::Migration[5.0]
+class NorthernIrelandVans < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20220310100859_ni_van_truck_split')
+    directory    = Rails.root.join('db/migrate/20220325155510_northern_ireland_vans')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

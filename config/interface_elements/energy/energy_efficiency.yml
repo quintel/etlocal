@@ -69,13 +69,13 @@ groups:
         unit: '%'
         entso: |
           IF(EB("Lignite CHP - residential", "Lignite and peat") > 0.0,
-          -> { EB("Lignite CHP - residential", "Electricity") / EB("Coal CHP - industrial", "Lignite and peat") * 100 },
+          -> { EB("Lignite CHP - residential", "Electricity") / EB("Lignite CHP - residential", "Lignite and peat") * 100 },
           -> { 35.0 }) 
       - key: input_energy_chp_ultra_supercritical_lignite_steam_hot_water_output_conversion
         unit: '%'
         entso: |
           IF(EB("Lignite CHP - residential", "Lignite and peat") > 0.0,
-          -> { EB("Lignite CHP - residential", "Heat") / EB("Coal CHP - industrial", "Lignite and peat") * 100 },
+          -> { EB("Lignite CHP - residential", "Heat") / EB("Lignite CHP - residential", "Lignite and peat") * 100 },
           -> { 15.0 }) 
 
   - header: energy_efficiency_gas

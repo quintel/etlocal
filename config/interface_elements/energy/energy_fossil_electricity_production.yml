@@ -36,7 +36,7 @@ groups:
       - key: input_energy_chp_ultra_supercritical_lignite_production
         unit: 'TJ'
         entso: |
-          EB("Lignite CHP", "Electricity")
+          EB("Lignite CHP - residential", "Electricity")
       - key: input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production
         unit: 'TJ'
         entso: 0.0

@@ -343,7 +343,7 @@ en:
 
         input_share_mixer_gas_fuel_network_gas: Gas
         input_share_mixer_gas_fuel_oil: Oil
-        input_share_mixer_gas_fuel_bio_oil: Liquid biofuels aggregated
+        input_share_mixer_gas_fuel_bio_oil: Renewable oil
 
         input_percentage_of_diesel_industry_final_demand_crude_oil: Diesel
         input_percentage_of_biodiesel_industry_final_demand_crude_oil: Biodiesel

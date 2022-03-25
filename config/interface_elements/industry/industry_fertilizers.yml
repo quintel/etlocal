@@ -22,12 +22,11 @@ groups:
     - key: input_industry_chemical_fertilizers_crude_oil_demand
       unit: 'TJ'
       entso: |
-        EB("Final consumption - industry sector - chemical fertilizers - energy use", "Crude oil aggregated") +
-        EB("Final consumption - industry sector - chemical fertilizers - energy use", "Liquid biofuels aggregated")
+        EB("Final consumption - industry sector - chemical fertilizers - energy use", "Oil")
     - key: input_industry_chemical_fertilizers_coal_demand
       unit: 'TJ'
       entso: |
-        EB("Final consumption - industry sector - chemical fertilizers - energy use", "Coal") -
+        EB("Final consumption - industry sector - chemical fertilizers - energy use", "Coal incl lignite and peat") -
         EB("Final consumption - industry sector - chemical fertilizers - energy use", "Coke oven coke")
 
   - header: industry_fertilizer_demand_non_energetic
@@ -43,12 +42,11 @@ groups:
     - key: input_industry_chemical_fertilizers_crude_oil_non_energetic_demand
       unit: 'TJ'
       entso: |
-        EB("Final consumption - industry sector - chemical fertilizers - non-energy use", "Crude oil aggregated") +
-        EB("Final consumption - industry sector - chemical fertilizers - non-energy use", "Liquid biofuels aggregated")
+        EB("Final consumption - industry sector - chemical fertilizers - non-energy use", "Oil")
     - key: input_industry_chemical_fertilizers_coal_non_energetic_demand
       unit: 'TJ'
       entso: |
-        EB("Final consumption - industry sector - chemical fertilizers - non-energy use", "Coal") -
+        EB("Final consumption - industry sector - chemical fertilizers - non-energy use", "Coal incl lignite and peat") -
         EB("Final consumption - industry sector - chemical fertilizers - non-energy use", "Coke oven coke")
     - key: input_industry_chemical_fertilizers_hydrogen_non_energetic_demand
       unit: 'TJ'

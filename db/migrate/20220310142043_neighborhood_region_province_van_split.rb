@@ -1,43 +1,50 @@
 class NeighborhoodRegionProvinceVanSplit < ActiveRecord::Migration[5.0]
+  # Create the same commit with the same values for all regions, provinces and neighbourhoods
+  GROUPS = %w[neighbourhood region res province].freeze
+
+  MSG_VANS = 'Geen data beschikbaar. Aanname is daarom dat het aandeel bestelbussen 0 is.'
+  VANS = {
+    transport_road_mixer_gasoline_transport_van_using_gasoline_mix_parent_share: 0.0,
+    transport_road_mixer_diesel_transport_van_using_diesel_mix_parent_share: 0.0,
+    transport_road_mixer_compressed_network_gas_transport_van_using_compressed_natural_gas_parent_share: 0.0,
+    transport_final_demand_for_road_lpg_transport_van_using_lpg_parent_share: 0.0,
+    transport_final_demand_for_road_electricity_transport_van_using_electricity_parent_share: 0.0,
+    transport_final_demand_for_road_hydrogen_transport_van_using_hydrogen_parent_share: 0.0
+  }.freeze
+
+  MSG_CARS = "Geen data beschikbaar. Aanname is daarom dat het aandeel van auto's 100% is.".freeze
+  CARS_KEY = 'transport_final_demand_for_road_lpg_transport_car_using_lpg_parent_share'.freeze
+  CARS_VAL = 1.0
+
   def self.up
-    directory    = Rails.root.join('db/migrate/20220310142043_neighborhood_region_province_van_split')
-    data_path    = directory.join('data.csv')
-    commits_path = directory.join('commits.yml')
-    datasets     = []
-
-    # By default, CSVImporter only allows updating existing datasets. If the
-    # migration is adding a new dataset, add the `create_missing_datasets`
-    # keyword argument. For example:
-    #
-    #   CSVImporter.run(data_path, commits_path, create_missing_datasets: true) do |row, runner|
-    #     # ...
-    #   end
-    #
-    CSVImporter.run(data_path, commits_path) do |row, runner|
-      print "Updating #{row['geo_id']}... "
-      commits = runner.call
-
-      if commits.any?
-        datasets.push(find_dataset(commits))
-        puts 'done!'
-      else
-        puts 'nothing to change!'
-      end
+    Dataset.all.select{ |d| GROUPS.include? d.group }.each do |dataset|
+      create_commits(dataset)
     end
-
-    sleep(1)
-    puts
-    puts "Updated #{datasets.length} datasets with the following IDs:"
-    puts "  #{datasets.map(&:id).join(',')}"
   end
 
-  def self.down
-    raise ActiveRecord::IrreversibleMigration
+  # def self.down
+  #   raise ActiveRecord::IrreversibleMigration
+  # end
+
+  def create_commits(dataset)
+    commit_vans = build_vans_commit(dataset)
+    commit_vans.save!
+
+    commit_cars = build_cars_commit(dataset)
+    commit_cars.save!
   end
 
-  def find_dataset(commits)
-    commits.each do |commit|
-      return commit.dataset if commit&.dataset
-    end
+  def build_cars_commit(dataset)
+    commit = Commit.new(dataset: dataset, message: MSG_CARS, user: User.robot)
+    commit.dataset_edits.build(key: CARS_KEY, value: CARS_VAL)
+
+    commit
+  end
+
+  def build_vans_commit(dataset)
+    commit = Commit.new(dataset: dataset, message: MSG_VANS, user: User.robot)
+    VANS.each { |key, value| commit.dataset_edits.build(key: key, value: value) }
+
+    commit
   end
 end

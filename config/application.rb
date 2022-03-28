@@ -13,7 +13,7 @@ module Etlocal
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-    config.time_zone           = "Europe/Amsterdam"
+    config.time_zone           = "Etc/UTC"
 
     config.encoding             = "utf-8"
     config.assumptions_path     = Rails.root.join("config", "assumptions.yml")

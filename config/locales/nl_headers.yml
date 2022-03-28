@@ -33,7 +33,7 @@ nl:
       area_electricity_grid_capacity: Beschikbare capaciteit huidig elektriciteitsnet
       area_electricity_grid_reinforcement: Verzwaring elektriciteitsnet
       area_heat_infrastructure_lengths: Leidinglengtes warmtenet
-      area_interconnector_capacity: Beschikbare capciteit huidige interconnectors
+      area_interconnector_capacity: Beschikbare capaciteit huidige interconnectors
 
       #households
       households_housing_stock_distribution: Huizenvoorraad
@@ -160,7 +160,7 @@ nl:
       energy_heat_import: Geïmporteerde warmte
       energy_heat_renewable: Duurzame warmtebronnen
       energy_heat_fossil: Fossiele warmtebronnen
-      energy_heat_distribution_loss: Verlies warmenetten
+      energy_heat_distribution_loss: Verlies warmtenetten
       energy_renewable_full_load_hours: Vollasturen van hernieuwbare elektriciteitsproductie
       energy_fossil_full_load_hours: Vollasturen van fossiele elektriciteitsproductie
       fuel_production: Brandstofproductie

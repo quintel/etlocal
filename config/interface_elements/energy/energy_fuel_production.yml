@@ -5,16 +5,15 @@ groups:
       - key: energy_extraction_coal_demand
         unit: 'TJ'
         entso: |
-          EB("Primary production", "Coal") -
-          EB("Primary production", "Lignite")
+          EB("Primary production", "Coal")
       - key: energy_extraction_lignite_demand
         unit: 'TJ'
         entso: |
-          EB("Primary production", "Lignite")
+          EB("Primary production", "Lignite and peat")
       - key: energy_extraction_crude_oil_demand
         unit: 'TJ'
         entso: |
-          EB("Primary production", "Crude oil aggregated")
+          EB("Primary production", "Fossil oil")
       - key: energy_extraction_natural_gas_demand
         unit: 'TJ'
         entso: |

@@ -23,12 +23,11 @@ groups:
       - key: buildings_final_demand_coal_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Coal")
+          EB("Final consumption - other sectors - commercial and public services - energy use", "Coal incl lignite and peat")
       - key: input_buildings_final_demand_crude_oil_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Crude oil aggregated") +
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Liquid biofuels aggregated")
+          EB("Final consumption - other sectors - commercial and public services - energy use", "Oil")
       - key: buildings_final_demand_solar_thermal_demand
         unit: 'TJ'
         entso: |
@@ -40,45 +39,38 @@ groups:
       - key: input_percentage_of_diesel_buildings_final_demand_crude_oil
         unit: '%'
         entso: |
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Gas oil and diesel oil (excluding biofuel portion)") / (
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Crude oil aggregated") +
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Liquid biofuels aggregated") )
+          EB("Final consumption - other sectors - commercial and public services - energy use", "Gas oil and diesel oil (excluding biofuel portion)") /
+          EB("Final consumption - other sectors - commercial and public services - energy use", "Oil")
       - key: input_percentage_of_biodiesel_buildings_final_demand_crude_oil
         unit: '%'
         entso: |
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Bio-diesel") / (
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Crude oil aggregated") +
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Liquid biofuels aggregated") )
+          EB("Final consumption - other sectors - commercial and public services - energy use", "Bio-diesel") /
+          EB("Final consumption - other sectors - commercial and public services - energy use", "Oil")
       - key: input_percentage_of_kerosene_buildings_final_demand_crude_oil
         unit: '%'
         entso: |
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Kerosene") / (
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Crude oil aggregated") +
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Liquid biofuels aggregated") )
+          EB("Final consumption - other sectors - commercial and public services - energy use", "Kerosene") /
+          EB("Final consumption - other sectors - commercial and public services - energy use", "Oil")
       - key: input_percentage_of_bio_kerosene_buildings_final_demand_crude_oil
         unit: '%'
         entso: |
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Bio-kerosene") / (
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Crude oil aggregated") +
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Liquid biofuels aggregated") )
+          EB("Final consumption - other sectors - commercial and public services - energy use", "Bio-kerosene") /
+          EB("Final consumption - other sectors - commercial and public services - energy use", "Oil")
       - key: input_percentage_of_lpg_buildings_final_demand_crude_oil
         unit: '%'
         entso: |
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Liquefied petroleum gases") / (
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Crude oil aggregated") +
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Liquid biofuels aggregated") )
+          EB("Final consumption - other sectors - commercial and public services - energy use", "Liquefied petroleum gases") /
+          EB("Final consumption - other sectors - commercial and public services - energy use", "Oil")
       - key: input_percentage_of_bio_oil_buildings_final_demand_crude_oil
         unit: '%'
         entso: |
           (EB("Final consumption - other sectors - agriculture and forestry - energy use", "Biogasoline") +
-          EB("Final consumption - other sectors - agriculture and forestry - energy use", "Other liquid biofuels")) / (
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Crude oil aggregated") +
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Liquid biofuels aggregated") )
+          EB("Final consumption - other sectors - agriculture and forestry - energy use", "Other liquid biofuels")) /
+          EB("Final consumption - other sectors - commercial and public services - energy use", "Oil")
       - key: input_percentage_of_crude_oil_buildings_final_demand_crude_oil
         unit: '%'
         entso: |
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Other oil") / (
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Crude oil aggregated") +
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Liquid biofuels aggregated") )
+          EB("Final consumption - other sectors - commercial and public services - energy use", "Other oil") /
+          EB("Final consumption - other sectors - commercial and public services - energy use", "Oil")
         flexible: true
         skip_validation: true

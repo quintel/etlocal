@@ -22,12 +22,11 @@ groups:
       - key: input_industry_chemical_other_crude_oil_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - chemical other - energy use", "Crude oil aggregated") +
-          EB("Final consumption - industry sector - chemical other - energy use", "Liquid biofuels aggregated")
+          EB("Final consumption - industry sector - chemical other - energy use", "Oil")
       - key: input_industry_chemical_other_coal_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - chemical other - energy use", "Coal") -
+          EB("Final consumption - industry sector - chemical other - energy use", "Coal incl lignite and peat") -
           EB("Final consumption - industry sector - chemical other - energy use", "Coke oven coke")
 
   - header: industry_chemical_other_non_energetic
@@ -43,10 +42,9 @@ groups:
       - key: input_industry_chemical_other_crude_oil_non_energetic_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - chemical other - non-energy use", "Crude oil aggregated") +
-          EB("Final consumption - industry sector - chemical other - non-energy use", "Liquid biofuels aggregated")
+          EB("Final consumption - industry sector - chemical other - non-energy use", "Oil")
       - key: input_industry_chemical_other_coal_non_energetic_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - chemical other - non-energy use", "Coal") -
+          EB("Final consumption - industry sector - chemical other - non-energy use", "Coal incl lignite and peat") -
           EB("Final consumption - industry sector - chemical other - non-energy use", "Coke oven coke")

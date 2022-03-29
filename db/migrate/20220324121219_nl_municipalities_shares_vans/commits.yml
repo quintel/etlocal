@@ -1,0 +1,40 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - transport_road_mixer_gasoline_transport_truck_using_gasoline_mix_parent_share
+  - transport_road_mixer_gasoline_transport_motorcycle_using_gasoline_mix_parent_share
+  - transport_road_mixer_gasoline_transport_van_using_gasoline_mix_parent_share
+  - transport_road_mixer_diesel_transport_truck_using_diesel_mix_parent_share
+  - transport_road_mixer_diesel_transport_van_using_diesel_mix_parent_share
+  - transport_road_mixer_compressed_network_gas_transport_car_using_compressed_natural_gas_parent_share
+  - transport_road_mixer_compressed_network_gas_transport_bus_using_compressed_natural_gas_parent_share
+  - transport_road_mixer_compressed_network_gas_transport_truck_using_compressed_natural_gas_parent_share
+  - transport_road_mixer_compressed_network_gas_transport_van_using_compressed_natural_gas_parent_share
+  - transport_final_demand_for_road_lpg_transport_car_using_lpg_parent_share
+  - transport_final_demand_for_road_lpg_transport_van_using_lpg_parent_share
+  - transport_road_mixer_lng_transport_truck_using_lng_mix_parent_share
+  - transport_road_mixer_lng_transport_bus_using_lng_mix_parent_share
+  message:
+    "Schatting Quintel op basis van emissiegegevens. Emissieregistratie rapporteert per voertuigtype en brandstof hoeveel CO2 er wordt uitgestoten per gemeente. Op basis hiervan is in te schatten hoeveel brandstof er door elk voertuigtype verbruikt is. URL: http://www.emissieregistratie.nl"
+
+- fields:
+  - transport_final_demand_for_road_electricity_transport_motorcycle_using_electricity_parent_share
+  - transport_final_demand_for_road_electricity_transport_bicycle_using_electricity_parent_share
+  - transport_final_demand_for_road_electricity_transport_truck_using_electricity_parent_share
+  - transport_final_demand_for_road_electricity_transport_van_using_electricity_parent_share
+  - input_transport_road_car_hydrogen_share
+  - transport_final_demand_for_road_hydrogen_transport_bus_using_hydrogen_parent_share
+  - transport_final_demand_for_road_hydrogen_transport_truck_using_hydrogen_parent_share
+  - transport_final_demand_for_road_hydrogen_transport_van_using_hydrogen_parent_share
+  message:
+    "Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor) en typisch verbruik per voertuig. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=167c3997-e723-48a4-99f9-f32118aba43a"
+
+- fields:
+  - transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share
+  - transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share
+  - transport_road_mixer_diesel_transport_car_using_diesel_mix_parent_share
+  - transport_road_mixer_diesel_transport_bus_using_diesel_mix_parent_share
+  - transport_final_demand_for_road_electricity_transport_car_using_electricity_parent_share
+  - transport_final_demand_for_road_electricity_transport_bus_using_electricity_parent_share
+  message:
+    "Schatting Quintel gebaseerd op het landelijk energieverbruik en de CO2 emissie met bijbehorende emissiefactoren van auto's, autobussen en bestelauto's per gemeente. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=81823c28-68d2-418b-bc4e-48474e8749c4."

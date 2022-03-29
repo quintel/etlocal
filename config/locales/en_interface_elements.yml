@@ -223,12 +223,14 @@ en:
         buildings_final_demand_crude_oil_buildings_final_demand_for_space_heating_crude_oil_parent_share: Space heating
         buildings_final_demand_crude_oil_buildings_final_demand_for_appliances_crude_oil_parent_share: Appliances
 
-        buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_heatpump_air_water_network_gas_parent_share: Gas-fired heatpump
+        buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_heatpump_air_water_network_gas_parent_share: Gas-fired heat pump
         buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_network_gas_parent_share: Gas-fired heater
+        buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_hybrid_heatpump_air_water_electricity_parent_share: Hybrid heat pump
 
         buildings_final_demand_for_space_heating_electricity_buildings_space_heater_collective_heatpump_water_water_ts_electricity_parent_share: Heat pump (ground) with thermal storage
         buildings_final_demand_for_space_heating_electricity_buildings_space_heater_electricity_parent_share: Electric heater
         buildings_final_demand_for_space_heating_electricity_buildings_space_heater_heatpump_air_water_electricity_parent_share: Heat pump (air)
+        buildings_final_demand_for_space_heating_electricity_buildings_space_heater_hybrid_heatpump_air_water_electricity_parent_share: Hybrid heat pump
 
         buildings_final_demand_for_lighting_electricity_buildings_lighting_efficient_fluorescent_electricity_parent_share: High-performance fluorescent tube
         buildings_final_demand_for_lighting_electricity_buildings_lighting_led_electricity_parent_share: LED tube
@@ -272,27 +274,35 @@ en:
         transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share: Busses
         transport_road_mixer_gasoline_transport_truck_using_gasoline_mix_parent_share: Trucks
         transport_road_mixer_gasoline_transport_motorcycle_using_gasoline_mix_parent_share: Motorbikes
+        transport_road_mixer_gasoline_transport_van_using_gasoline_mix_parent_share: Vans
 
         transport_road_mixer_diesel_transport_car_using_diesel_mix_parent_share: Cars
         transport_road_mixer_diesel_transport_bus_using_diesel_mix_parent_share: Busses
         transport_road_mixer_diesel_transport_truck_using_diesel_mix_parent_share: Trucks
+        transport_road_mixer_diesel_transport_van_using_diesel_mix_parent_share: Vans
 
         transport_final_demand_for_road_electricity_transport_car_using_electricity_parent_share: Cars
         transport_final_demand_for_road_electricity_transport_bus_using_electricity_parent_share: Busses
         transport_final_demand_for_road_electricity_transport_truck_using_electricity_parent_share: Trucks
         transport_final_demand_for_road_electricity_transport_motorcycle_using_electricity_parent_share: Motorbikes
         transport_final_demand_for_road_electricity_transport_bicycle_using_electricity_parent_share: Bicycles
+        transport_final_demand_for_road_electricity_transport_van_using_electricity_parent_share: Vans
 
         transport_road_mixer_compressed_network_gas_transport_car_using_compressed_natural_gas_parent_share: Cars
         transport_road_mixer_compressed_network_gas_transport_bus_using_compressed_natural_gas_parent_share: Busses
         transport_road_mixer_compressed_network_gas_transport_truck_using_compressed_natural_gas_parent_share: Trucks
+        transport_road_mixer_compressed_network_gas_transport_van_using_compressed_natural_gas_parent_share: Vans
 
         input_transport_road_car_hydrogen_share: Cars
         transport_final_demand_for_road_hydrogen_transport_bus_using_hydrogen_parent_share: Busses
         transport_final_demand_for_road_hydrogen_transport_truck_using_hydrogen_parent_share: Trucks
+        transport_final_demand_for_road_hydrogen_transport_van_using_hydrogen_parent_share: Vans
 
         transport_road_mixer_lng_transport_bus_using_lng_mix_parent_share: Busses
         transport_road_mixer_lng_transport_truck_using_lng_mix_parent_share: Trucks
+
+        transport_final_demand_for_road_lpg_transport_car_using_lpg_parent_share: Auto's
+        transport_final_demand_for_road_lpg_transport_van_using_lpg_parent_share: Vans
 
         transport_final_demand_for_rail_electricity_transport_passenger_train_using_electricity_parent_share: Passenger trains
         transport_final_demand_for_rail_electricity_transport_freight_train_using_electricity_parent_share: Freight trains
@@ -333,7 +343,7 @@ en:
 
         input_share_mixer_gas_fuel_network_gas: Gas
         input_share_mixer_gas_fuel_oil: Oil
-        input_share_mixer_gas_fuel_bio_oil: Liquid biofuels aggregated
+        input_share_mixer_gas_fuel_bio_oil: Renewable oil
 
         input_percentage_of_diesel_industry_final_demand_crude_oil: Diesel
         input_percentage_of_biodiesel_industry_final_demand_crude_oil: Biodiesel

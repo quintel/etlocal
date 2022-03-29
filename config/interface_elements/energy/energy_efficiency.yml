@@ -5,14 +5,14 @@ groups:
       - key: input_energy_power_supercritical_coal_electricity_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Coal conventional", "Coal excl lignite") > 0.0,
-          -> { EB("Coal conventional", "Electricity") / EB("Coal conventional", "Coal excl lignite") * 100 },
+          IF(EB("Coal conventional", "Coal") > 0.0,
+          -> { EB("Coal conventional", "Electricity") / EB("Coal conventional", "Coal") * 100 },
           -> { 36.0 })
       - key: input_energy_power_ultra_supercritical_coal_electricity_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Coal pulverized", "Coal excl lignite") > 0.0,
-          -> {EB("Coal pulverized", "Electricity") / EB("Coal pulverized", "Coal excl lignite") * 100},
+          IF(EB("Coal pulverized", "Coal") > 0.0,
+          -> {EB("Coal pulverized", "Electricity") / EB("Coal pulverized", "Coal") * 100},
           -> {46.0})
       - key: input_energy_power_ultra_supercritical_ccs_coal_electricity_output_conversion
         unit: '%'
@@ -29,8 +29,8 @@ groups:
       - key: input_energy_power_ultra_supercritical_lignite_electricity_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Lignite plant", "Lignite") > 0.0,
-          -> {EB("Lignite plant", "Electricity") / EB("Lignite plant", "Lignite") * 100},
+          IF(EB("Lignite plant", "Lignite and peat") > 0.0,
+          -> {EB("Lignite plant", "Electricity") / EB("Lignite plant", "Lignite and peat") * 100},
           -> {40.0})
       - key: input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_electricity_output_conversion
         unit: '%'
@@ -44,33 +44,39 @@ groups:
       - key: input_energy_chp_ultra_supercritical_coal_electricity_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Coal CHP - residential", "Coal excl lignite") > 0.0,
-          -> {EB("Coal CHP - residential", "Electricity") / EB("Coal CHP - residential", "Coal excl lignite") * 100},
+          IF(EB("Coal CHP - residential", "Coal") > 0.0,
+          -> {EB("Coal CHP - residential", "Electricity") / EB("Coal CHP - residential", "Coal") * 100},
           -> {40.0})
       - key: input_energy_chp_ultra_supercritical_coal_steam_hot_water_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Coal CHP - residential", "Coal excl lignite") > 0.0,
-          -> {EB("Coal CHP - residential", "Heat") / EB("Coal CHP - residential", "Coal excl lignite") * 100},
+          IF(EB("Coal CHP - residential", "Coal") > 0.0,
+          -> {EB("Coal CHP - residential", "Heat") / EB("Coal CHP - residential", "Coal") * 100},
           -> {40.0})
       - key: input_industry_chp_ultra_supercritical_coal_electricity_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Coal CHP - industrial", "Coal excl lignite") > 0.0,
-          -> { EB("Coal CHP - industrial", "Electricity") / EB("Coal CHP - industrial", "Coal excl lignite") * 100 },
+          IF(EB("Coal CHP - industrial", "Coal") > 0.0,
+          -> { EB("Coal CHP - industrial", "Electricity") / EB("Coal CHP - industrial", "Coal") * 100 },
           -> { 40.0 }) 
       - key: input_industry_chp_ultra_supercritical_coal_steam_hot_water_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Coal CHP - industrial", "Coal excl lignite") > 0.0,
-          -> { EB("Coal CHP - industrial", "Heat") / EB("Coal CHP - industrial", "Coal excl lignite") * 100 },
+          IF(EB("Coal CHP - industrial", "Coal") > 0.0,
+          -> { EB("Coal CHP - industrial", "Heat") / EB("Coal CHP - industrial", "Coal") * 100 },
           -> { 15.0 }) 
       - key: input_energy_chp_ultra_supercritical_lignite_electricity_output_conversion
         unit: '%'
-        entso: 35
+        entso: |
+          IF(EB("Lignite CHP - residential", "Lignite and peat") > 0.0,
+          -> { EB("Lignite CHP - residential", "Electricity") / EB("Lignite CHP - residential", "Lignite and peat") * 100 },
+          -> { 35.0 }) 
       - key: input_energy_chp_ultra_supercritical_lignite_steam_hot_water_output_conversion
         unit: '%'
-        entso: 15
+        entso: |
+          IF(EB("Lignite CHP - residential", "Lignite and peat") > 0.0,
+          -> { EB("Lignite CHP - residential", "Heat") / EB("Lignite CHP - residential", "Lignite and peat") * 100 },
+          -> { 15.0 }) 
 
   - header: energy_efficiency_gas
     items:
@@ -143,8 +149,8 @@ groups:
       - key: input_energy_power_ultra_supercritical_crude_oil_electricity_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Oil-fired plant", "Crude oil aggregated") > 0.0,
-          -> { EB("Oil-fired plant", "Electricity") / EB("Oil-fired plant", "Crude oil aggregated") * 100 },
+          IF(EB("Oil-fired plant", "Oil") > 0.0,
+          -> { EB("Oil-fired plant", "Electricity") / EB("Oil-fired plant", "Oil") * 100 },
           -> { 45.0 })       
       - key: input_energy_power_engine_diesel_electricity_output_conversion
         unit: '%'
@@ -224,8 +230,8 @@ groups:
       - key: input_energy_heat_burner_coal_steam_hot_water_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Coal heater - residential", "Coal excl lignite") > 0.0,
-          -> { EB("Coal heater - residential", "Heat") / EB("Coal heater - residential", "Coal excl lignite") * 100 },
+          IF(EB("Coal heater - residential", "Coal") > 0.0,
+          -> { EB("Coal heater - residential", "Heat") / EB("Coal heater - residential", "Coal") * 100 },
           -> { 72.0 }) 
       - key: input_energy_heat_burner_hydrogen_steam_hot_water_output_conversion
         unit: '%'
@@ -233,8 +239,8 @@ groups:
       - key: input_energy_heat_burner_crude_oil_steam_hot_water_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Oil heater - residential", "Crude oil aggregated") > 0.0,
-          -> { EB("Oil heater - residential", "Heat") / EB("Oil heater - residential", "Crude oil aggregated") * 100 },
+          IF(EB("Oil heater - residential", "Oil") > 0.0,
+          -> { EB("Oil heater - residential", "Heat") / EB("Oil heater - residential", "Oil") * 100 },
           -> { 72.0 }) 
       - key: input_energy_heat_burner_network_gas_steam_hot_water_output_conversion
         unit: '%'
@@ -251,20 +257,20 @@ groups:
       - key: input_industry_heat_burner_lignite_steam_hot_water_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Lignite heater - industrial", "Lignite") > 0.0,
-          -> { EB("Lignite heater - industrial", "Heat") / EB("Lignite heater - industrial", "Lignite") * 100 },
+          IF(EB("Lignite heater - industrial", "Lignite and peat") > 0.0,
+          -> { EB("Lignite heater - industrial", "Heat") / EB("Lignite heater - industrial", "Lignite and peat") * 100 },
           -> { 72.0 })
       - key: input_industry_heat_burner_coal_steam_hot_water_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Coal heater - industrial", "Coal excl lignite") > 0.0,
-          -> { EB("Coal heater - industrial", "Heat") / EB("Coal heater - industrial", "Coal excl lignite") * 100 },
+          IF(EB("Coal heater - industrial", "Coal") > 0.0,
+          -> { EB("Coal heater - industrial", "Heat") / EB("Coal heater - industrial", "Coal") * 100 },
           -> { 72.0 })
       - key: input_industry_heat_burner_crude_oil_steam_hot_water_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Oil heater - industrial", "Crude oil aggregated") > 0.0,
-          -> { EB("Oil heater - industrial", "Heat") / EB("Oil heater - industrial", "Crude oil aggregated") * 100 },
+          IF(EB("Oil heater - industrial", "Oil") > 0.0,
+          -> { EB("Oil heater - industrial", "Heat") / EB("Oil heater - industrial", "Oil") * 100 },
           -> { 72.0 })
       - key: input_energy_heat_heatpump_water_water_electricity_steam_hot_water_output_conversion
         unit: '%'

@@ -42,12 +42,12 @@ groups:
     - key: input_industry_chemical_refineries_coal_demand
       unit: 'TJ'
       entso: |
-        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Coal") -
+        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Coal incl lignite and peat") -
         EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Coke oven coke")
     - key: input_industry_chemical_refineries_crude_oil_demand
       unit: 'TJ'
       entso: |
-        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Crude oil aggregated") -
+        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Fossil oil") -
         EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Crude oil") -
         EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Natural gas liquids") -
         EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Refinery feedstocks") -
@@ -59,7 +59,7 @@ groups:
     - key: input_industry_refinery_transformation_crude_oil_other_oil_demand
       unit: 'TJ'
       entso: |
-        EB("Transformation output - refineries and petrochemical industry - refinery output", "Crude oil aggregated") -
+        EB("Transformation output - refineries and petrochemical industry - refinery output", "Fossil oil") -
         EB("Transformation output - refineries and petrochemical industry - refinery output", "Gasoline") -
         EB("Transformation output - refineries and petrochemical industry - refinery output", "Fuel oil")
     - key: input_industry_refinery_transformation_crude_oil_gasoline_demand
@@ -92,4 +92,4 @@ groups:
     - key: energy_distribution_crude_oil_loss_demand
       unit: 'TJ'
       entso: |
-        EB("Distribution losses", "Crude oil aggregated")
+        EB("Distribution losses", "Fossil oil")

@@ -61,6 +61,8 @@ groups:
     items:
       - key: buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_heatpump_air_water_network_gas_parent_share
         unit: '%'
+      - key: buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_hybrid_heatpump_air_water_electricity_parent_share
+        unit: '%'
       - key: buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_network_gas_parent_share
         unit: '%'
         flexible: true
@@ -72,6 +74,8 @@ groups:
       - key: buildings_final_demand_for_space_heating_electricity_buildings_space_heater_collective_heatpump_water_water_ts_electricity_parent_share
         unit: '%'
       - key: buildings_final_demand_for_space_heating_electricity_buildings_space_heater_heatpump_air_water_electricity_parent_share
+        unit: '%'
+      - key: buildings_final_demand_for_space_heating_electricity_buildings_space_heater_hybrid_heatpump_air_water_electricity_parent_share
         unit: '%'
       - key: buildings_final_demand_for_space_heating_electricity_buildings_space_heater_electricity_parent_share
         unit: '%'

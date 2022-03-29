@@ -21,11 +21,11 @@ groups:
       - key: input_industry_metal_steel_coal_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - iron and steel - energy use", "Coal") -
+          EB("Final consumption - industry sector - iron and steel - energy use", "Coal incl lignite and peat") -
           EB("Final consumption - industry sector - iron and steel - energy use", "Coke oven coke") +
-          EB("Energy sector - coke ovens - energy use", "Coal") -
+          EB("Energy sector - coke ovens - energy use", "Coal incl lignite and peat") -
           EB("Energy sector - coke ovens - energy use", "Coke oven coke") +
-          EB("Energy sector - blast furnaces - energy use", "Coal") -
+          EB("Energy sector - blast furnaces - energy use", "Coal incl lignite and peat") -
           EB("Energy sector - blast furnaces - energy use", "Coke oven coke")
       - key: input_industry_metal_steel_cokes_demand
         unit: 'TJ'
@@ -60,12 +60,9 @@ groups:
       - key: input_industry_metal_steel_crude_oil_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - iron and steel - energy use", "Crude oil aggregated") +
-          EB("Final consumption - industry sector - iron and steel - energy use", "Liquid biofuels aggregated") +
-          EB("Energy sector - coke ovens - energy use", "Crude oil aggregated") +
-          EB("Energy sector - coke ovens - energy use", "Liquid biofuels aggregated") +
-          EB("Energy sector - blast furnaces - energy use", "Crude oil aggregated") +
-          EB("Energy sector - blast furnaces - energy use", "Liquid biofuels aggregated") 
+          EB("Final consumption - industry sector - iron and steel - energy use", "Oil") +
+          EB("Energy sector - coke ovens - energy use", "Oil") +
+          EB("Energy sector - blast furnaces - energy use", "Oil")
       - key: input_industry_metal_steel_wood_pellets_demand
         unit: 'TJ'
         entso: |
@@ -78,7 +75,7 @@ groups:
       - key: input_energy_cokesoven_transformation_coal_input_demand
         unit: 'TJ'
         entso: |
-          EB("Transformation input - coke ovens - energy use", "Coal")
+          EB("Transformation input - coke ovens - energy use", "Coal incl lignite and peat")
 
   - header: energy_cokesoven_transformation_output
     type: slider
@@ -86,16 +83,16 @@ groups:
       - key: input_energy_cokesoven_transformation_cokes_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Transformation input - coke ovens - energy use", "Coal") > 0.0,
+          IF(EB("Transformation input - coke ovens - energy use", "Coal incl lignite and peat") > 0.0,
           -> { EB("Transformation output - coke ovens", "Coke oven coke") /
-          EB("Transformation input - coke ovens - energy use", "Coal") },
+          EB("Transformation input - coke ovens - energy use", "Coal incl lignite and peat") },
           -> { 0.4 })
       - key: input_energy_cokesoven_transformation_coal_gas_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Transformation input - coke ovens - energy use", "Coal") > 0.0,
+          IF(EB("Transformation input - coke ovens - energy use", "Coal incl lignite and peat") > 0.0,
           -> { EB("Transformation output - coke ovens", "Coal gas") /
-          EB("Transformation input - coke ovens - energy use", "Coal") },
+          EB("Transformation input - coke ovens - energy use", "Coal incl lignite and peat") },
           -> { 0.4 })
       - key: input_energy_cokesoven_transformation_loss_output_conversion
         unit: '%'
@@ -107,7 +104,7 @@ groups:
       - key: input_energy_blastfurnace_transformation_coal_input_demand
         unit: 'TJ'
         entso: |
-          EB("Transformation input - blast furnaces - energy use", "Coal")
+          EB("Transformation input - blast furnaces - energy use", "Coal incl lignite and peat")
       - key: input_energy_blastfurnace_transformation_cokes_input_demand
         unit: 'TJ'
         entso: |
@@ -120,10 +117,10 @@ groups:
         unit: '%'
         entso: |
           IF((
-          EB("Transformation input - blast furnaces - energy use", "Coal") +
+          EB("Transformation input - blast furnaces - energy use", "Coal incl lignite and peat") +
           EB("Transformation input - blast furnaces - energy use", "Coke oven coke") ) > 0.0,
           -> { EB("Transformation output - blast furnaces", "Coal gas") / (
-          EB("Transformation input - blast furnaces - energy use", "Coal") +
+          EB("Transformation input - blast furnaces - energy use", "Coal incl lignite and peat") +
           EB("Transformation input - blast furnaces - energy use", "Coke oven coke") ) },
           -> { 0.4 })
       - key: input_energy_blastfurnace_transformation_loss_output_conversion

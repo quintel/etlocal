@@ -1,9 +1,8 @@
-class HhpBuildings < ActiveRecord::Migration[5.2]
-
+class HhpBuildingsZero < ActiveRecord::Migration[5.2]
   def up
     say_with_time('Setting HHP buildings to zero for all datasets') do
       counter = 0
-      Dataset.where(data_source: 'db').find_each do |dataset|
+      Dataset.all.find_each do |dataset|
 
         ActiveRecord::Base.transaction do
           commit = Commit.create!(

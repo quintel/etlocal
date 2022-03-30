@@ -1,0 +1,13 @@
+---
+- fields:
+  - input_industry_metal_steel_coal_demand
+  - input_industry_metal_steel_cokes_demand
+  - input_industry_metal_steel_coal_gas_demand
+  - input_industry_metal_steel_electricity_demand
+  - input_industry_metal_steel_network_gas_demand
+  - input_industry_metal_steel_steam_hot_water_demand
+  - input_industry_metal_steel_crude_oil_demand
+  - input_industry_metal_steel_wood_pellets_demand
+  message:
+    "Derived from the Netherlands 2019 dataset as all steel production takes place in Velsen."
+

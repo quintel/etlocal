@@ -12,7 +12,9 @@ def weighted_average(array):
 
 def combined_values(interface_data):
   for each in interface_data:
-    if each.method == 'sum':
+    if all(value is None for value in each.data):
+      each.combined_data = None
+    elif each.method == 'sum':
       each.combined_data = sum(each.data)
     elif each.method == 'average':
       each.combined_data = average(each.data)
@@ -27,7 +29,10 @@ def combined_values(interface_data):
 
 def rounded_values(interface_data):
   for each in interface_data:
-    each.combined_data = round(each.combined_data, 6)
+    if all(value is None for value in each.data):
+      each.combined_data = None
+    else:
+      each.combined_data = round(each.combined_data, 6)
 
 def flexible_shares(interface_data):
   for each in interface_data:

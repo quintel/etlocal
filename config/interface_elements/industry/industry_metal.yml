@@ -18,10 +18,9 @@ groups:
       - key: input_industry_metal_other_crude_oil_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - metal other - energy use", "Crude oil aggregated") +
-          EB("Final consumption - industry sector - metal other - energy use", "Liquid biofuels aggregated")
+          EB("Final consumption - industry sector - metal other - energy use", "Oil")
       - key: input_industry_metal_other_coal_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - metal other - energy use", "Coal") -
+          EB("Final consumption - industry sector - metal other - energy use", "Coal incl lignite and peat") -
           EB("Final consumption - industry sector - metal other - energy use", "Coke oven coke")

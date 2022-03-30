@@ -1,6 +1,6 @@
-class NewDataEs < ActiveRecord::Migration[5.0]
+class NlMunicipalitiesSharesVans < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20220310161920_new_data_es')
+    directory    = Rails.root.join('db/migrate/20220324121219_nl_municipalities_shares_vans')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []
@@ -13,7 +13,7 @@ class NewDataEs < ActiveRecord::Migration[5.0]
     #     # ...
     #   end
     #
-    CSVImporter.run(data_path, commits_path, create_missing_datasets: true) do |row, runner|
+    CSVImporter.run(data_path, commits_path) do |row, runner|
       print "Updating #{row['geo_id']}... "
       commits = runner.call
 
@@ -29,6 +29,10 @@ class NewDataEs < ActiveRecord::Migration[5.0]
     puts
     puts "Updated #{datasets.length} datasets with the following IDs:"
     puts "  #{datasets.map(&:id).join(',')}"
+  end
+
+  def self.down
+    raise ActiveRecord::IrreversibleMigration
   end
 
   def find_dataset(commits)

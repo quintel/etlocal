@@ -23,16 +23,16 @@ groups:
     - key: other_final_demand_coal_demand
       unit: 'TJ'
       entso: |
-        EB("Final consumption - other sectors - not elsewhere specified - energy use", "Coal") +
+        EB("Final consumption - other sectors - not elsewhere specified - energy use", "Coal incl lignite and peat") +
         EB("Final consumption - other sectors - not elsewhere specified - energy use", "Coal gas") +
         EB("Final consumption - other sectors - not elsewhere specified - energy use", "Gas works gas")
     - key: other_final_demand_crude_oil_demand
       unit: 'TJ'
       entso: |
-        EB("Final consumption - other sectors - not elsewhere specified - energy use", "Crude oil aggregated") +
+        EB("Final consumption - other sectors - not elsewhere specified - energy use", "Oil") +
         EB("Final consumption - transport sector - not elsewhere specified - energy use", "Total")
     - key: other_final_demand_crude_oil_non_energetic_demand
       unit: 'TJ'
       entso: |
-        EB("Final consumption - other sectors - non-energy use", "Crude oil aggregated") +
+        EB("Final consumption - other sectors - non-energy use", "Oil") +
         EB("Final consumption - transport sector - non-energy use", "Total")

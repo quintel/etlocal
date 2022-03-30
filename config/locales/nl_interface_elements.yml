@@ -42,8 +42,8 @@ nl:
         file_carriers_coal_co2_conversion_per_mj: Kolen
         file_carriers_crude_oil_co2_conversion_per_mj: Aardolie
         file_carriers_diesel_co2_conversion_per_mj: Diesel
-        file_carriers_gasoline_co2_conversion_per_mj : Gasoline
-        file_carriers_heavy_fuel_oil_co2_conversion_per_mj: Zware Stookolie
+        file_carriers_gasoline_co2_conversion_per_mj : Benzine
+        file_carriers_heavy_fuel_oil_co2_conversion_per_mj: Zware stookolie
         file_carriers_imported_electricity_co2_conversion_per_mj: Geïmporteerde elektriciteit
         file_carriers_imported_heat_co2_conversion_per_mj: Geïmporteerde warmte
         file_carriers_imported_hydrogen_co2_conversion_per_mj: Geïmporteerde waterstof
@@ -230,7 +230,7 @@ nl:
 
         buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_heatpump_air_water_network_gas_parent_share: Gaswarmtepomp
         buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_network_gas_parent_share: Gasketel
-        buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_hybrid_heatpump_air_water_gas_parent_share: Hybride warmtepomp
+        buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_hybrid_heatpump_air_water_electricity_parent_share: Hybride warmtepomp
 
         buildings_final_demand_for_space_heating_electricity_buildings_space_heater_collective_heatpump_water_water_ts_electricity_parent_share: Warmtepomp (bodem) met WKO
         buildings_final_demand_for_space_heating_electricity_buildings_space_heater_electricity_parent_share: Elektrische ketel
@@ -273,7 +273,7 @@ nl:
 
         transport_final_demand_kerosene_demand: Kerosine
         input_transport_plane_gasoline_demand: Benzine
-        input_transport_plane_bio_ethanol_demand: Biogasoline
+        input_transport_plane_bio_ethanol_demand: Bio-ethanol
 
         transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share: Auto's
         transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share: Bussen

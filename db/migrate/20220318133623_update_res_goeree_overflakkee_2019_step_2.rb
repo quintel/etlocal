@@ -1,6 +1,6 @@
-class NiVanTruckSplit2 < ActiveRecord::Migration[5.0]
+class UpdateResGoereeOverflakkee2019Step2 < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20220310173726_ni_van_truck_split2')
+    directory    = Rails.root.join('db/migrate/20220318133623_update_res_goeree_overflakkee_2019_step_2')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []
@@ -32,7 +32,7 @@ class NiVanTruckSplit2 < ActiveRecord::Migration[5.0]
   end
 
   def self.down
-    raise ActiveRecord::IrreversibleMigration
+    #raise ActiveRecord::IrreversibleMigration
   end
 
   def find_dataset(commits)

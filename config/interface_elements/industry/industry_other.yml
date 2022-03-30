@@ -71,35 +71,35 @@ groups:
       - key: input_industry_other_crude_oil_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - energy use", "Crude oil aggregated") +
-          EB("Energy sector - energy use", "Crude oil aggregated") -
-          EB("Energy sector - electricity and heat generation - energy use", "Crude oil aggregated") -
-          EB("Energy sector - coke ovens - energy use", "Crude oil aggregated") -
-          EB("Energy sector - blast furnaces - energy use", "Crude oil aggregated") -
-          EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Crude oil aggregated") -
-          EB("Final consumption - industry sector - iron and steel - energy use", "Crude oil aggregated") -
-          EB("Final consumption - industry sector - chemical fertilizers - energy use", "Crude oil aggregated") -
-          EB("Final consumption - industry sector - chemical other - energy use", "Crude oil aggregated") -
-          EB("Final consumption - industry sector - metal aluminium - energy use", "Crude oil aggregated") -
-          EB("Final consumption - industry sector - metal other - energy use", "Crude oil aggregated") -
-          EB("Final consumption - industry sector - food, beverages and tobacco - energy use", "Crude oil aggregated") -
-          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Crude oil aggregated")
+          EB("Final consumption - industry sector - energy use", "Oil") +
+          EB("Energy sector - energy use", "Oil") -
+          EB("Energy sector - electricity and heat generation - energy use", "Oil") -
+          EB("Energy sector - coke ovens - energy use", "Oil") -
+          EB("Energy sector - blast furnaces - energy use", "Oil") -
+          EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Oil") -
+          EB("Final consumption - industry sector - iron and steel - energy use", "Oil") -
+          EB("Final consumption - industry sector - chemical fertilizers - energy use", "Oil") -
+          EB("Final consumption - industry sector - chemical other - energy use", "Oil") -
+          EB("Final consumption - industry sector - metal aluminium - energy use", "Oil") -
+          EB("Final consumption - industry sector - metal other - energy use", "Oil") -
+          EB("Final consumption - industry sector - food, beverages and tobacco - energy use", "Oil") -
+          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Oil")
       - key: input_industry_other_coal_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - energy use", "Coal") +
-          EB("Energy sector - energy use", "Coal") -
-          EB("Energy sector - electricity and heat generation - energy use", "Coal") -
-          EB("Energy sector - coke ovens - energy use", "Coal") -
-          EB("Energy sector - blast furnaces - energy use", "Coal") -
-          EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Coal") -
-          EB("Final consumption - industry sector - iron and steel - energy use", "Coal") -
-          EB("Final consumption - industry sector - chemical fertilizers - energy use", "Coal") -
-          EB("Final consumption - industry sector - chemical other - energy use", "Coal") -
-          EB("Final consumption - industry sector - metal aluminium - energy use", "Coal") -
-          EB("Final consumption - industry sector - metal other - energy use", "Coal") -
-          EB("Final consumption - industry sector - food, beverages and tobacco - energy use", "Coal") -
-          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Coal") - (
+          EB("Final consumption - industry sector - energy use", "Coal incl lignite and peat") +
+          EB("Energy sector - energy use", "Coal incl lignite and peat") -
+          EB("Energy sector - electricity and heat generation - energy use", "Coal incl lignite and peat") -
+          EB("Energy sector - coke ovens - energy use", "Coal incl lignite and peat") -
+          EB("Energy sector - blast furnaces - energy use", "Coal incl lignite and peat") -
+          EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Coal incl lignite and peat") -
+          EB("Final consumption - industry sector - iron and steel - energy use", "Coal incl lignite and peat") -
+          EB("Final consumption - industry sector - chemical fertilizers - energy use", "Coal incl lignite and peat") -
+          EB("Final consumption - industry sector - chemical other - energy use", "Coal incl lignite and peat") -
+          EB("Final consumption - industry sector - metal aluminium - energy use", "Coal incl lignite and peat") -
+          EB("Final consumption - industry sector - metal other - energy use", "Coal incl lignite and peat") -
+          EB("Final consumption - industry sector - food, beverages and tobacco - energy use", "Coal incl lignite and peat") -
+          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Coal incl lignite and peat") - (
           EB("Final consumption - industry sector - energy use", "Coke oven coke") +
           EB("Energy sector - energy use", "Coke oven coke") -
           EB("Energy sector - electricity and heat generation - energy use", "Coke oven coke") -
@@ -136,12 +136,11 @@ groups:
       - key: input_industry_other_crude_oil_non_energetic_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - other - non-energy use", "Crude oil aggregated") +
-          EB("Final consumption - industry sector - other - non-energy use", "Liquid biofuels aggregated")
+          EB("Final consumption - industry sector - other - non-energy use", "Oil")
       - key: input_industry_other_coal_non_energetic_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - other - non-energy use", "Coal") -
+          EB("Final consumption - industry sector - other - non-energy use", "Coal incl lignite and peat") -
           EB("Final consumption - industry sector - other - non-energy use", "Coke oven coke")
       - key: input_industry_other_cokes_non_energetic_demand
         unit: 'TJ'

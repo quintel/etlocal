@@ -97,8 +97,7 @@ groups:
             - input_energy_power_wind_turbine_offshore_production
       - key: input_solar_panels_roofs_and_parks_full_load_hours
         unit: 'flh'
-        combination_method:
-          weighted_average: average
+        combination_method: average
       - key: energy_power_geothermal_full_load_hours
         unit: 'flh'
         combination_method:
@@ -153,7 +152,7 @@ groups:
         unit: 'flh'
         combination_method:
           weighted_average:
-            - input_industry_chp_combined_cycle_gas_power_fuelmix
+            - input_industry_chp_combined_cycle_gas_power_fuelmix_electricity_output_conversion
       - key: energy_chp_local_engine_network_gas_full_load_hours
         unit: 'flh'
         combination_method:

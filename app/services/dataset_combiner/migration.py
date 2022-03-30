@@ -12,7 +12,10 @@ def create_for(geo_id, name):
     record = proc.stdout.readline()
     if not record:
       break
-    migration = re.search(r'(?<=db/migrate/)(.*)(?=\.rb)', str(record)).group()
+    match = re.search(r'(?<=db/migrate/)(.*)(?=\.rb)', str(record))
+    if match:
+      migration = match.group()
+      break
   proc.wait()
   return migration
 

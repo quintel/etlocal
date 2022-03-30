@@ -8,5 +8,5 @@ def process(args):
       migration_name = arg.replace('migration_name=', '').replace(" ", "_")
     if arg.startswith('dataset_ids='):
       dataset_ids = arg.replace('dataset_ids=', '')
-      dataset_ids = tuple( int(id) for id in dataset_ids.split(',') )
+      dataset_ids = tuple( str(id).strip() for id in dataset_ids.split(',') )
   return geo_id, name, migration_name, dataset_ids

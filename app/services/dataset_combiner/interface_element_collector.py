@@ -32,7 +32,7 @@ def data_from(interface_files):
       if 'groups' in interface_file.keys():
         for header in interface_file['groups']:
           # loop over each interface element ('item') in each 'group'
-          if 'items' in header.keys():
+          if 'items' in header.keys() and header['items']:
               for item in header['items']:
                 element = Interface_element(item.get('key'))
                 # check if item if a flexible share, if so add an attribute 'share_group' containing all other shares

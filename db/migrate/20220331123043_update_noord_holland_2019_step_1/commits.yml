@@ -509,34 +509,3 @@ Op deze manier maken we dus een schatting van hoe hoog de CO2 per gemeente is al
   message:
    "Klimaatmonitor (2019). Wij splitsen het door Klimaatmonitor gerapporteerde gasverbruik van de landbouw uit naar eindgebruik en verbruik door WKK's op basis van Emissiegegevens van Emissieregistratie. De elektriciteit en warmte uit WKK rekenen we als eindgebruik in de landbouw, niet het gas dat de WKK in is gegaan.URL: Klimaatmonitor (2019). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=0cd61e23-94d0-4edf-ac96-67241c64d133"
 
-- fields:
-  - input_percentage_of_diesel_buildings_final_demand_crude_oil
-  - input_percentage_of_biodiesel_buildings_final_demand_crude_oil
-  - input_percentage_of_kerosene_buildings_final_demand_crude_oil
-  - input_percentage_of_bio_kerosene_buildings_final_demand_crude_oil
-  - input_percentage_of_lpg_buildings_final_demand_crude_oil
-  - input_percentage_of_bio_oil_buildings_final_demand_crude_oil
-  - input_percentage_of_crude_oil_buildings_final_demand_crude_oil
-  - input_percentage_of_diesel_households_final_demand_crude_oil
-  - input_percentage_of_biodiesel_households_final_demand_crude_oil
-  - input_percentage_of_kerosene_households_final_demand_crude_oil
-  - input_percentage_of_bio_kerosene_households_final_demand_crude_oil
-  - input_percentage_of_lpg_households_final_demand_crude_oil
-  - input_percentage_of_bio_oil_households_final_demand_crude_oil
-  - input_percentage_of_crude_oil_households_final_demand_crude_oil
-  - input_percentage_of_diesel_industry_final_demand_crude_oil
-  - input_percentage_of_biodiesel_industry_final_demand_crude_oil
-  - input_percentage_of_kerosene_industry_final_demand_crude_oil
-  - input_percentage_of_bio_kerosene_industry_final_demand_crude_oil
-  - input_percentage_of_lpg_industry_final_demand_crude_oil
-  - input_percentage_of_bio_oil_industry_final_demand_crude_oil
-  - input_percentage_of_crude_oil_industry_final_demand_crude_oil
-  - input_percentage_of_diesel_agriculture_final_demand_crude_oil
-  - input_percentage_of_biodiesel_agriculture_final_demand_crude_oil
-  - input_percentage_of_kerosene_agriculture_final_demand_crude_oil
-  - input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil
-  - input_percentage_of_lpg_agriculture_final_demand_crude_oil
-  - input_percentage_of_bio_oil_agriculture_final_demand_crude_oil
-  - input_percentage_of_crude_oil_agriculture_final_demand_crude_oil
-  message:
-   "Geen gegevens beschikbaar."

@@ -106,7 +106,6 @@ groups:
       - key: energy_power_hydro_mountain_full_load_hours
         unit: 'flh'
         combination_method:
-          weighted_average:
             - input_energy_power_hydro_mountain_production
       - key: energy_power_hydro_river_full_load_hours
         unit: 'flh'
@@ -207,10 +206,6 @@ groups:
         combination_method:
           weighted_average:
             - input_industry_chp_wood_pellets_steam_hot_water_output_conversion
-      - key: energy_chp_supercritical_waste_mix_full_load_hours
-        combination_method:
-          weighted_average:
-            - input_energy_chp_local_wood_pellets_production
       - key: energy_chp_supercritical_waste_mix_full_load_hours
         unit: 'flh'
         combination_method:

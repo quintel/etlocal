@@ -55,6 +55,7 @@ groups:
 
   - header: industry_final_demand_crude_oil_input
     type: slider
+    combination_method: average
     items:
     - key: input_percentage_of_diesel_industry_final_demand_crude_oil
       unit: '%'

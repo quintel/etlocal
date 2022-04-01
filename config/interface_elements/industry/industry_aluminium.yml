@@ -8,6 +8,7 @@ groups:
 
   - header: industry_metal_aluminium_production_route
     type: slider
+    combination_method: average
     items:
       - key: input_industry_aluminium_electrolysis_current_electricity_share
         unit: '%'
@@ -29,6 +30,9 @@ groups:
 
   - header: industry_metal_aluminium_electricity_use
     type: slider
+    combination_method:
+      weighted_average:
+        - input_industry_metal_aluminium_electricity_demand
     items:
       - key: industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_electrolysis_current_electricity_parent_share
         unit: '%'
@@ -39,6 +43,9 @@ groups:
 
   - header: industry_metal_aluminium_network_gas_use
     type: slider
+    combination_method:
+      weighted_average:
+        - input_industry_metal_aluminium_network_gas_demand
     items:
       - key: industry_aluminium_burner_network_gas_industry_aluminium_electrolysis_current_electricity_parent_share
         unit: '%'

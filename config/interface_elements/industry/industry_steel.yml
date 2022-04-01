@@ -8,6 +8,7 @@ groups:
 
   - header: industry_metal_steel_production_route
     type: slider
+    combination_method: average
     items:
       - key: input_industry_steel_blastfurnace_bof_share
         unit: '%'
@@ -79,6 +80,7 @@ groups:
 
   - header: energy_cokesoven_transformation_output
     type: slider
+    combination_method: average
     items:
       - key: input_energy_cokesoven_transformation_cokes_output_conversion
         unit: '%'
@@ -112,6 +114,7 @@ groups:
 
   - header: energy_blastfurnace_transformation_output
     type: slider
+    combination_method: average
     items:
       - key: input_energy_blastfurnace_transformation_coal_gas_output_conversion
         unit: '%'
@@ -145,6 +148,7 @@ groups:
 
   - header: energy_power_combined_cycle_coal_gas_conversion
     type: slider
+    combination_method: average
     items:
       - key: input_energy_power_combined_cycle_coal_gas_electricity_output_conversion
         unit: '%'
@@ -164,6 +168,7 @@ groups:
 
   - header: energy_chp_coal_gas_conversion
     type: slider
+    combination_method: average
     items:
       - key: input_energy_chp_coal_gas_electricity_output_conversion
         unit: '%'
@@ -204,6 +209,7 @@ groups:
 
   - header: industry_metal_steel_coal_use
     type: slider
+    combination_method: average
     items:
       - key: industry_final_demand_for_metal_steel_coal_industry_steel_blastfurnace_bof_parent_share
         unit: '%'
@@ -214,6 +220,7 @@ groups:
 
   - header: industry_metal_steel_cokes_use
     type: slider
+    combination_method: average
     items:
       - key: industry_final_demand_for_metal_steel_cokes_industry_steel_blastfurnace_bof_parent_share
         unit: '%'
@@ -224,6 +231,7 @@ groups:
 
   - header: industry_metal_steel_crude_oil_use
     type: slider
+    combination_method: average
     items:
       - key: industry_final_demand_for_metal_steel_crude_oil_industry_steel_blastfurnace_bof_parent_share
         unit: '%'
@@ -234,6 +242,7 @@ groups:
 
   - header: industry_metal_steel_electricity_use
     type: slider
+    combination_method: average
     items:
       - key: industry_final_demand_for_metal_steel_electricity_industry_steel_blastfurnace_bof_parent_share
         unit: '%'
@@ -244,6 +253,7 @@ groups:
 
   - header: industry_metal_steel_network_gas_use
     type: slider
+    combination_method: average
     items:
       - key: industry_final_demand_for_metal_steel_network_gas_industry_steel_blastfurnace_bof_parent_share
         unit: '%'
@@ -254,6 +264,7 @@ groups:
 
   - header: industry_metal_steel_steam_hot_water_use
     type: slider
+    combination_method: average
     items:
       - key: industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_blastfurnace_bof_parent_share
         unit: '%'
@@ -264,6 +275,7 @@ groups:
 
   - header: industry_metal_steel_wood_pellets_use
     type: slider
+    combination_method: average
     items:
       - key: industry_final_demand_for_metal_steel_wood_pellets_industry_steel_blastfurnace_bof_parent_share
         unit: '%'

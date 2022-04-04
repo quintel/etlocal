@@ -1,0 +1,5 @@
+---
+- fields:
+  - annual_infrastructure_cost_gas
+  message:
+    No data available. Estimation done by Quintel based on the total final demand gas.

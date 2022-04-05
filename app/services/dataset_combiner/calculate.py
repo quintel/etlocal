@@ -15,24 +15,22 @@ def combined_values(interface_data):
     if all(value is None for value in each.data):
       each.combined_data = None
     elif each.method == 'sum':
-      each.combined_data = sum(each.data)
+      each.combined_data = round_val(sum(each.data))
     elif each.method == 'average':
-      each.combined_data = average(each.data)
+      each.combined_data = round_val(average(each.data))
     elif each.method == 'min':
-      each.combined_data = min(each.data)
+      each.combined_data = round_val(min(each.data))
     elif each.method == 'max':
-      each.combined_data = max(each.data)
+      each.combined_data = round_val(max(each.data))
     elif type(each.method) == dict:
-      each.combined_data = weighted_average(each.data)
+      each.combined_data = round_val(weighted_average(each.data))
     else:
-      return 'Unknown combination method \'{}\' for \'{}\''.format(each.method, each.key)
+      raise ValueError('Unknown combination method \'{}\' for \'{}\''.format(each.method, each.key))
 
-def rounded_values(interface_data):
-  for each in interface_data:
-    if all(value is None for value in each.data):
-      each.combined_data = None
-    else:
-      each.combined_data = round(each.combined_data, 6)
+
+def round_val(value):
+  return round(value, 6)
+
 
 def flexible_shares(interface_data):
   for each in interface_data:

@@ -1,6 +1,6 @@
-class VelsenSteelUpdate2 < ActiveRecord::Migration[5.0]
+class VelsenUpdateSteel2019 < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20220401085643_velsen_steel_update2')
+    directory    = Rails.root.join('db/migrate/20220405133454_velsen_update_steel2019')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

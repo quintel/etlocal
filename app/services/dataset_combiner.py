@@ -23,7 +23,6 @@ dataset_names = dataset_collector.collect_names(datasets)
 
 
 calculate.combined_values(interface_data)
-calculate.rounded_values(interface_data)
 calculate.flexible_shares(interface_data)
 
 migration_name = migration.create_for(geo_id, name.replace(" ", "_"))

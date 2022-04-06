@@ -1,6 +1,6 @@
-class ZonpotentieEtm < ActiveRecord::Migration[5.0]
+class VelsenSteelUpdate2019 < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20200831161557_zonpotentie_etm')
+    directory    = Rails.root.join('db/migrate/20220406095353_velsen_steel_update2019')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []
@@ -32,7 +32,7 @@ class ZonpotentieEtm < ActiveRecord::Migration[5.0]
   end
 
   def self.down
-    #raise ActiveRecord::IrreversibleMigration
+    raise ActiveRecord::IrreversibleMigration
   end
 
   def find_dataset(commits)

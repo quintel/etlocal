@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Calculated using the demand based on the Eurostat country energy balance and installed capacities from Eurostat and PEMDBB database. In case the plant has no production, a default value of 8000 is assumed; year: 2019; author: Quintel."

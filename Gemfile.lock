@@ -133,7 +133,7 @@ GEM
     faraday (0.17.3)
       multipart-post (>= 1.2, < 3)
     ffi (1.15.4)
-    git (1.8.1)
+    git (1.11.0)
       rchardet (~> 1.8)
     globalid (1.0.0)
       activesupport (>= 5.0)

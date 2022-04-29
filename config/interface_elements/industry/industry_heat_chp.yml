@@ -6,17 +6,19 @@ groups:
       - key: industry_chp_combined_cycle_gas_power_fuelmix_demand
         unit: 'TJ'
         entso: |
-          EB("Gas CHP - industrial", "Network gas")
+          EB("Gas CHP (CCGT)", "Network gas")
       - key: industry_chp_engine_gas_power_fuelmix_demand
         unit: 'TJ'
-        entso: 0.0
+        entso: |
+          EB("Gas motor CHP", "Network gas")
       - key: industry_chp_turbine_gas_power_fuelmix_demand
         unit: 'TJ'
-        entso: 0.0
+        entso: |
+          EB("Gas Turbine CHP", "Network gas")
       - key: industry_chp_ultra_supercritical_coal_demand
         unit: 'TJ'
         entso: |
-          EB("Coal CHP - industrial", "Coal")
+          EB("Coal CHP", "Coal")
       - key: industry_chp_wood_pellets_demand
         unit: 'TJ'
         entso: |
@@ -24,7 +26,7 @@ groups:
       - key: industry_heat_burner_lignite_demand
         unit: 'TJ'
         entso: |
-          EB("Lignite heater - industrial", "Lignite and peat")
+          EB("Lignite heater", "Lignite and peat")
       - key: industry_heat_burner_coal_demand
         unit: 'TJ'
         entso: |

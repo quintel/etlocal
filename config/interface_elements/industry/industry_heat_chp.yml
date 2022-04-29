@@ -6,15 +6,15 @@ groups:
       - key: industry_chp_combined_cycle_gas_power_fuelmix_demand
         unit: 'TJ'
         entso: |
-          EB("Gas CHP (CCGT)", "Network gas")
+          EB("Gas CHP (CCGT)", "Fuelmix")
       - key: industry_chp_engine_gas_power_fuelmix_demand
         unit: 'TJ'
         entso: |
-          EB("Gas motor CHP", "Network gas")
+          EB("Gas motor CHP", "Fuelmix")
       - key: industry_chp_turbine_gas_power_fuelmix_demand
         unit: 'TJ'
         entso: |
-          EB("Gas Turbine CHP", "Network gas")
+          EB("Gas Turbine CHP", "Fuelmix")
       - key: industry_chp_ultra_supercritical_coal_demand
         unit: 'TJ'
         entso: |
@@ -45,13 +45,31 @@ groups:
     items:
       - key: input_share_mixer_gas_fuel_bio_oil
         unit: '%'
-        entso: 0.0
+        entso: |
+          (EB("Gas CHP (CCGT)", "Renewable oil") +
+          EB("Gas motor CHP", "Renewable oil") + 
+          EB("Gas Turbine CHP", "Renewable oil")) / 
+          (EB("Gas CHP (CCGT)", "Fuelmix") +
+          EB("Gas motor CHP", "Fuelmix") + 
+          EB("Gas Turbine CHP", "Fuelmix"))
       - key: input_share_mixer_gas_fuel_oil
         unit: '%'
-        entso: 0.0
+        entso: |
+          (EB("Gas CHP (CCGT)", "Fossil oil") +
+          EB("Gas motor CHP", "Fossil oil") + 
+          EB("Gas Turbine CHP", "Fossil oil")) / 
+          (EB("Gas CHP (CCGT)", "Fuelmix") +
+          EB("Gas motor CHP", "Fuelmix") + 
+          EB("Gas Turbine CHP", "Fuelmix"))
       - key: input_share_mixer_gas_fuel_network_gas
         unit: '%'
-        entso: 1.0
+        entso: |
+          (EB("Gas CHP (CCGT)", "Network gas") +
+          EB("Gas motor CHP", "Network gas") + 
+          EB("Gas Turbine CHP", "Network gas")) / 
+          (EB("Gas CHP (CCGT)", "Fuelmix") +
+          EB("Gas motor CHP", "Fuelmix") + 
+          EB("Gas Turbine CHP", "Fuelmix"))
         flexible: true
 
   - header: industry_final_demand_crude_oil_input

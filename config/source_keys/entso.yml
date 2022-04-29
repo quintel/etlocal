@@ -136,3 +136,36 @@ column_groups:
     - Renewable municipal waste
     - Industrial waste (non-renewable)
     - Non-renewable municipal waste
+  Fuelmix:
+    - Biogases
+    - Natural gas
+    - Oil shale and oil sands
+    - Crude oil
+    - Natural gas liquids
+    - Refinery feedstocks
+    - Additives and oxygenates (excluding biofuel portion)
+    - Other hydrocarbons
+    - Refinery gas
+    - Ethane
+    - Liquefied petroleum gases
+    - Motor gasoline (excluding biofuel portion)
+    - Aviation gasoline
+    - Gasoline-type jet fuel
+    - Kerosene-type jet fuel (excluding biofuel portion)
+    - Other kerosene
+    - Gas oil and diesel oil (excluding biofuel portion)
+    - Fuel oil
+    - Naphtha
+    - White spirit and special boiling point industrial spirits
+    - Lubricants
+    - Bitumen
+    - Paraffin waxes
+    - Petroleum coke
+    - Other oil products
+    - Pure biodiesels
+    - Blended biodiesels
+    - Pure bio jet kerosene
+    - Blended bio jet kerosene
+    - Pure biogasoline
+    - Blended biogasoline
+    - Other liquid biofuels

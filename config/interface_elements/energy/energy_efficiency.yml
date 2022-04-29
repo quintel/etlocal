@@ -100,7 +100,7 @@ groups:
         entso: |
           IF(EB("Gas conventional", "Network gas") > 0.0,
           -> { EB("Gas conventional", "Electricity") / EB("Gas conventional", "Network gas") * 100 },
-          -> { 60.0 })
+          -> { 40.0 })
       - key: input_energy_power_engine_network_gas_electricity_output_conversion
         unit: '%'
         entso: 48.0
@@ -109,13 +109,13 @@ groups:
         entso: |
           IF(EB("Small-scale gas plant for district heat (CHP)", "Network gas") > 0.0,
           -> { EB("Small-scale gas plant for district heat (CHP)", "Electricity") / EB("Small-scale gas plant for district heat (CHP)", "Network gas") * 100 },
-          -> { 46.0 })
+          -> { 43.0 })
       - key: input_energy_chp_local_engine_network_gas_steam_hot_water_output_conversion
         unit: '%'
         entso: |
           IF(EB("Small-scale gas plant for district heat (CHP)", "Network gas") > 0.0,
           -> { EB("Small-scale gas plant for district heat (CHP)", "Heat") / EB("Small-scale gas plant for district heat (CHP)", "Network gas") * 100 },
-          -> { 46.0 })
+          -> { 47.0 })
       - key: input_energy_chp_combined_cycle_network_gas_electricity_output_conversion
         unit: '%'
         entso: |
@@ -131,38 +131,38 @@ groups:
       - key: input_industry_chp_turbine_gas_power_fuelmix_electricity_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Gas Turbine CHP", "Network gas") > 0.0,
-          -> { EB("Gas Turbine CHP", "Electricity") / EB("Gas Turbine CHP", "Network gas") * 100 },
-          -> { 46.0 })
+          IF(EB("Gas Turbine CHP", "Fuelmix") > 0.0,
+          -> { EB("Gas Turbine CHP", "Electricity") / EB("Gas Turbine CHP", "Fuelmix") * 100 },
+          -> { 38.0 })
       - key: input_industry_chp_turbine_gas_power_fuelmix_steam_hot_water_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Gas Turbine CHP", "Network gas") > 0.0,
-          -> { EB("Gas Turbine CHP", "Heat") / EB("Gas Turbine CHP", "Network gas") * 100 },
-          -> { 46.0 })
+          IF(EB("Gas Turbine CHP", "Fuelmix") > 0.0,
+          -> { EB("Gas Turbine CHP", "Heat") / EB("Gas Turbine CHP", "Fuelmix") * 100 },
+          -> { 42.0 })
       - key: input_industry_chp_engine_gas_power_fuelmix_electricity_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Gas motor CHP", "Network gas") > 0.0,
-          -> { EB("Gas motor CHP", "Electricity") / EB("Gas motor CHP", "Network gas") * 100 },
-          -> { 46.0 })
+          IF(EB("Gas motor CHP", "Fuelmix") > 0.0,
+          -> { EB("Gas motor CHP", "Electricity") / EB("Gas motor CHP", "Fuelmix") * 100 },
+          -> { 42.0 })
       - key: input_industry_chp_engine_gas_power_fuelmix_steam_hot_water_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Gas motor CHP", "Network gas") > 0.0,
-          -> { EB("Gas motor CHP", "Heat") / EB("Gas motor CHP", "Network gas") * 100 },
-          -> { 46.0 })
+          IF(EB("Gas motor CHP", "Fuelmix") > 0.0,
+          -> { EB("Gas motor CHP", "Heat") / EB("Gas motor CHP", "Fuelmix") * 100 },
+          -> { 48.0 })
       - key: input_industry_chp_combined_cycle_gas_power_fuelmix_electricity_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Gas CHP (CCGT)", "Network gas") > 0.0,
-          -> { EB("Gas CHP (CCGT)", "Electricity") / EB("Gas CHP (CCGT)", "Network gas") * 100 },
+          IF(EB("Gas CHP (CCGT)", "Fuelmix") > 0.0,
+          -> { EB("Gas CHP (CCGT)", "Electricity") / EB("Gas CHP (CCGT)", "Fuelmix") * 100 },
           -> { 46.0 })
       - key: input_industry_chp_combined_cycle_gas_power_fuelmix_steam_hot_water_output_conversion
         unit: '%'
         entso: |
-          IF(EB("Gas CHP (CCGT)", "Network gas") > 0.0,
-          -> { EB("Gas CHP (CCGT)", "Heat") / EB("Gas CHP (CCGT)", "Network gas") * 100 },
+          IF(EB("Gas CHP (CCGT)", "Fuelmix") > 0.0,
+          -> { EB("Gas CHP (CCGT)", "Heat") / EB("Gas CHP (CCGT)", "Fuelmix") * 100 },
           -> { 42.0 })
 
   - header: energy_efficiency_other_fossil
@@ -202,13 +202,13 @@ groups:
         entso: |
           IF(EB("Biogas CHP", "Primary solid biofuels") > 0.0,
           -> { EB("Biogas CHP", "Electricity") / EB("Biogas CHP", "Primary solid biofuels") * 100 },
-          -> { 28.9 }) 
+          -> { 43.0 }) 
       - key: input_energy_chp_local_engine_biogas_steam_hot_water_output_conversion
         unit: '%'
         entso: |
           IF(EB("Biogas CHP", "Primary solid biofuels") > 0.0,
           -> { EB("Biogas CHP", "Heat") / EB("Biogas CHP", "Primary solid biofuels") * 100 },
-          -> { 28.9 }) 
+          -> { 47.0 }) 
       - key: input_energy_chp_local_wood_pellets_electricity_output_conversion
         unit: '%'
         entso: |

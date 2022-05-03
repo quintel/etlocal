@@ -46,31 +46,23 @@ groups:
       - key: input_share_mixer_gas_fuel_bio_oil
         unit: '%'
         entso: |
-          (EB("Gas CHP (CCGT)", "Renewable oil") +
-          EB("Gas motor CHP", "Renewable oil") + 
-          EB("Gas Turbine CHP", "Renewable oil")) / 
-          (EB("Gas CHP (CCGT)", "Fuelmix") +
-          EB("Gas motor CHP", "Fuelmix") + 
-          EB("Gas Turbine CHP", "Fuelmix"))
+          IF((EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) > 0.0,
+          -> { (EB("Gas CHP (CCGT)", "Renewable oil") + EB("Gas motor CHP", "Renewable oil") + EB("Gas Turbine CHP", "Renewable oil")) / (EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) },
+          -> { 0.0 })
       - key: input_share_mixer_gas_fuel_oil
         unit: '%'
         entso: |
-          (EB("Gas CHP (CCGT)", "Fossil oil") +
-          EB("Gas motor CHP", "Fossil oil") + 
-          EB("Gas Turbine CHP", "Fossil oil")) / 
-          (EB("Gas CHP (CCGT)", "Fuelmix") +
-          EB("Gas motor CHP", "Fuelmix") + 
-          EB("Gas Turbine CHP", "Fuelmix"))
+          IF((EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) > 0.0,
+          -> { (EB("Gas CHP (CCGT)", "Fossil oil") + EB("Gas motor CHP", "Fossil oil") + EB("Gas Turbine CHP", "Fossil oil")) / (EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) },
+          -> { 0.0 })
       - key: input_share_mixer_gas_fuel_network_gas
         unit: '%'
         entso: |
-          (EB("Gas CHP (CCGT)", "Network gas") +
-          EB("Gas motor CHP", "Network gas") + 
-          EB("Gas Turbine CHP", "Network gas")) / 
-          (EB("Gas CHP (CCGT)", "Fuelmix") +
-          EB("Gas motor CHP", "Fuelmix") + 
-          EB("Gas Turbine CHP", "Fuelmix"))
+          IF((EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) > 0.0,
+          -> { (EB("Gas CHP (CCGT)", "Network gas") + EB("Gas motor CHP", "Network gas") + EB("Gas Turbine CHP", "Network gas")) / (EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) },
+          -> { 100.0 })
         flexible: true
+        skip_validation: true
 
   - header: industry_final_demand_crude_oil_input
     type: slider

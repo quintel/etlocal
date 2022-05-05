@@ -5,7 +5,7 @@ groups:
       - key: input_energy_heat_burner_wood_pellets_production
         unit: 'TJ'
         entso: |
-          EB("Biomass heater - residential", "Heat")
+          EB("Biomass heater", "Heat")
       - key: input_energy_heat_well_geothermal_production
         unit: 'TJ' 
         entso: |
@@ -13,14 +13,14 @@ groups:
       - key: input_energy_heat_burner_waste_mix_production
         unit: 'TJ'
         entso: |
-          EB("Waste heater - residential", "Heat")
+          EB("Waste heater", "Heat")
       - key: input_energy_heat_burner_hydrogen_production
         unit: 'TJ'
         entso: 0.0
       - key: input_energy_heat_solar_thermal_production
         unit: 'TJ'
         entso: |
-          EB("Solar thermal - residential", "Heat")
+          EB("Solar thermal", "Heat")
       - key: input_energy_heat_heatpump_water_water_electricity_production
         unit: 'TJ'
         entso: 0.0
@@ -30,7 +30,7 @@ groups:
       - key: input_energy_heat_burner_network_gas_production
         unit: 'TJ'
         entso: |
-          EB("Gas heater - residential", "Heat")
+          EB("Gas heater", "Heat")
       - key: input_energy_heat_burner_coal_production
         unit: 'TJ'
         entso: |

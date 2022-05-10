@@ -12,6 +12,7 @@ def weighted_average(array):
 
 def combined_values(interface_data):
   for each in interface_data:
+    # print(each)
     if all(value is None for value in each.data):
       each.combined_data = None
     elif each.method == 'sum':
@@ -23,6 +24,7 @@ def combined_values(interface_data):
     elif each.method == 'max':
       each.combined_data = round_val(max(each.data))
     elif type(each.method) == dict:
+      # print(each.data)
       each.combined_data = round_val(weighted_average(each.data))
     else:
       raise ValueError('Unknown combination method \'{}\' for \'{}\''.format(each.method, each.key))

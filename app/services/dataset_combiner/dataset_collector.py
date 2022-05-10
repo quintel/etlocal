@@ -22,6 +22,8 @@ def group_user_inputs(datasets, interface_elements):
                 weight = 1.0
                 for key in element.method['weighted_average']:
                     weight *= dataset[0][key]
+                print('hi', element.key)
+                print(dataset[0])
                 gathered_values[element.key].append((dataset[0][element.key], weight))
             else:
                 gathered_values[element.key].append(dataset[0][element.key])

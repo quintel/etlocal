@@ -316,8 +316,8 @@ nl:
         transport_rail_mixer_diesel_transport_passenger_train_using_diesel_mix_parent_share: Passagierstreinen
         transport_rail_mixer_diesel_transport_freight_train_using_diesel_mix_parent_share: Goederentreinen
 
-        bunkers_total_useful_demand_ships_demand: Internationale scheepvaart
-        bunkers_total_useful_demand_planes_demand: Internationale luchtvaart
+        bunkers_total_useful_demand_ships_demand: Stookolie
+        bunkers_total_useful_demand_planes_demand: Kerosine
 
         # agriculture
         agriculture_final_demand_electricity_demand: Elektriciteit
@@ -364,30 +364,30 @@ nl:
         input_industry_metal_steel_electricity_demand: Elektriciteit
         input_industry_metal_steel_network_gas_demand:  Gas
         input_industry_metal_steel_coal_demand: Kolen
-        input_industry_metal_steel_cokes_demand: Kooks
+        input_industry_metal_steel_cokes_demand: Cokes
         input_industry_metal_steel_coal_gas_demand: Kolengas
         input_industry_metal_steel_steam_hot_water_demand: Warmte
         input_industry_metal_steel_crude_oil_demand: Olie
         input_industry_metal_steel_wood_pellets_demand: Vaste biomassa
         input_energy_cokesoven_transformation_coal_input_demand: Kolen
-        input_energy_cokesoven_transformation_cokes_output_conversion: Kooks
+        input_energy_cokesoven_transformation_cokes_output_conversion: Cokes
         input_energy_cokesoven_transformation_coal_gas_output_conversion: Kolengas
         input_energy_cokesoven_transformation_loss_output_conversion: Verliezen
         input_energy_cokesoven_own_use_electricity: Elektriciteit
         input_energy_cokesoven_own_use_network_gas:  Gas
         input_energy_cokesoven_own_use_coal: Kolen
-        input_energy_cokesoven_own_use_cokes: Kooks
+        input_energy_cokesoven_own_use_cokes: Cokes
         input_energy_cokesoven_own_use_coal_gas: Kolengas
         input_energy_cokesoven_own_use_steam_hot_water: Warmte
         input_energy_cokesoven_own_use_crude_oil:  Olie
         input_energy_blastfurnace_transformation_coal_input_demand: Kolen
-        input_energy_blastfurnace_transformation_cokes_input_demand: Kooks
+        input_energy_blastfurnace_transformation_cokes_input_demand: Cokes
         input_energy_blastfurnace_transformation_coal_gas_output_conversion: Kolengas
         input_energy_blastfurnace_transformation_loss_output_conversion: Verliezen
         input_energy_blastfurnace_own_use_electricity: Elektriciteit
         input_energy_blastfurnace_own_use_network_gas:  Gas
         input_energy_blastfurnace_own_use_coal: Kolen
-        input_energy_blastfurnace_own_use_cokes: Kooks
+        input_energy_blastfurnace_own_use_cokes: Cokes
         input_energy_blastfurnace_own_use_coal_gas: Kolengas
         input_energy_blastfurnace_own_use_steam_hot_water: Warmte
         input_energy_blastfurnace_own_use_crude_oil: Olie
@@ -494,12 +494,12 @@ nl:
         input_industry_other_wood_pellets_demand: Vaste biomassa
         input_industry_other_crude_oil_demand: Olie
         input_industry_other_coal_demand: Kolen
-        input_industry_other_cokes_demand: Kooks
+        input_industry_other_cokes_demand: Cokes
         input_industry_other_network_gas_non_energetic_demand: Gas (niet-energetisch)
         input_industry_other_wood_pellets_non_energetic_demand: Biomassa (niet-energetisch)
         input_industry_other_crude_oil_non_energetic_demand: Olie (niet-energetisch)
         input_industry_other_coal_non_energetic_demand: Kolen (niet-energetisch)
-        input_industry_other_cokes_non_energetic_demand: Kooks (niet-energetisch)
+        input_industry_other_cokes_non_energetic_demand: Cokes (niet-energetisch)
 
         industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
         industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
@@ -539,7 +539,8 @@ nl:
         energy_power_hv_network_loss_demand: Netverliezen
         energy_distribution_greengas_demand: Groen gas
         energy_regasification_lng_energy_national_gas_network_natural_gas_demand: Hervergast LNG
-        energy_distribution_network_gas_loss_demand: Verliezen gasnetwerk
+        energy_distribution_network_gas_loss_demand: Netverliezen
+        energy_distribution_crude_oil_loss_demand: Netverliezen
 
         energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share: Droge vergassing
         energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share: Natte vergassing

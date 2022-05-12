@@ -134,7 +134,8 @@ nl:
       energy: |
         In deze sectie vind je informatie over de (centrale) energieproductie in deze regio.
       energy_energy_demand: |
-        In dit tablad vind je informatie over het eigen gebruik en de netverliezen van het elektriciteitsnet.
+        In dit tablad vind je informatie over het eigen gebruik en de netverliezen van het elektriciteitsnet. Ook vind je hier
+        informatie over het gasnetwerk: wat is de gasmix? Hoeveel verliezen treden er op?
       energy_renewable_electricity_production: |
         In dit tabblad vind je informatie over de hernieuwbare elektriciteitsproductie. Meer informatie over de verschillende centrales kun je vinden in het
         <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/supply/electricity_renewable/wind-turbines">
@@ -285,7 +286,7 @@ nl:
       industry_food_electricity: |
         Onderstaande percentages geven aan hoeveel van het eindgebruik elektriciteit wordt gebruikt voor het genereren van warmte en hoeveel
         voor industriële processen (machines, verlichting etc.).
-      energy_gas_network: |
+      energy_mix_gas_network: |
         Hoeveel groen gas en hervergast LNG wordt er bijgemengd in het gasnetwerk? De resterende gasvraag wordt in het ETM door aardgas geleverd.
       energy_greengas_production: |
         Hieronder staat aangeven welke productietechnologieën er zijn gebruikt voor de productie van groen gas. Meer informatie over deze technologieën

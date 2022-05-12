@@ -96,7 +96,7 @@ nl:
         industry_residual_heat: Restwarmtepotentie
 
       transport:
-        transport_rail_transport: Treinverkeer
+        transport_rail_transport: Railverkeer
         transport_road_transport: Wegverkeer
         transport_ship_transport: Scheepvaart
         transport_plane_transport: Luchtvaart

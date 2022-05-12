@@ -7,7 +7,7 @@ class DataMigrationGenerator < ActiveRecord::Generators::MigrationGenerator
     set_local_assigns!
     validate_file_name!
 
-    migration_template('migration.rb', "db/migrate/#{file_name}.rb")
+    migration_template('migration.rb.erb', "db/migrate/#{file_name}.rb")
 
     FileUtils.mkdir("db/migrate/#{migration_number}_#{file_name}")
 

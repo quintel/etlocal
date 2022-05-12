@@ -6,7 +6,6 @@ groups:
         unit: '#'
       - key: input_transport_road_human_powered_bicycle_demand
         unit: 'km'
-        entso: 0.0
 
     - header: transport_road_fuels
       items:

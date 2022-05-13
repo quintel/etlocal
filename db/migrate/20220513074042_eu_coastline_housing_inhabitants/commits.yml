@@ -1,0 +1,35 @@
+---
+- fields:
+  - coast_line
+  message:
+    "Based (roughly) on Corine Land Cover database; Author: European Environment Agency; year: 2009"
+
+- fields:
+  - input_percentage_of_apartments
+  message:
+    "Derived from Eurostat, category: Flat, share of population is used here as no share of houses was available; year: 2019; author: Eurostat"
+
+- fields:
+  - input_percentage_of_corner_houses
+  message:
+    "Corner houses are not a separate category in Eurostat."
+
+- fields:
+  - input_percentage_of_detached_houses
+  message:
+    "Derived from Eurostat, category: Detached house, share of population is used here as no share of houses was available: Detached house; year: 2019; author: Eurostat"
+
+- fields:
+  - input_percentage_of_semi_detached_houses
+  message:
+    "Derived from Eurostat, category: Semi-detached house, share of population is used here as no share of houses was available; year: 2019; author: Eurostat"
+
+- fields:
+  - input_percentage_of_terraced_houses
+  message:
+    "Terraced houses are not a separate category in Eurostat."
+
+- fields:
+  - number_of_inhabitants
+  message:
+    "Derived from Eurostat, population on 1 January; year: 2019; author: Eurostat."

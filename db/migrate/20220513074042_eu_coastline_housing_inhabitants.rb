@@ -1,6 +1,6 @@
-class CoastlineEuCountries < ActiveRecord::Migration[5.0]
+class EuCoastlineHousingInhabitants < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20220513074042_coastline_eu_countries')
+    directory    = Rails.root.join('db/migrate/20220513074042_eu_coastline_housing_inhabitants')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

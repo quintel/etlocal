@@ -1,0 +1,6 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - coast_line
+  message:
+    "Based (roughly) on Corine Land Cover database; Author: European Environment Agency; year: 2009"

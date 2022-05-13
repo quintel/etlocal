@@ -10,64 +10,34 @@
     "Summation of all EU27 countries, derived from Eurostat database, regards all agricultural land; year: 2018; author: Eurostat"
 
 - fields:
-  - coast_line
-  message:
-    "No sufficient European source found."
-
-- fields:
   - input_buildings_heat_demand_reduction
   message:
-    "No sufficient European data found, set to 0."
+    "No sufficient European data found, set to 0 to have the maximum insulation potential."
 
 - fields:
   - input_households_apartments_heat_demand_reduction
   message:
-    "No sufficient European data found, set to 0."
+    "No sufficient European data found, set to 0 to have the maximum insulation potential."
 
 - fields:
   - input_households_corner_houses_heat_demand_reduction
   message:
-    "No sufficient European data found, set to 0."
+    "No sufficient European data found, set to 0 to have the maximum insulation potential."
 
 - fields:
   - input_households_detached_houses_heat_demand_reduction
   message:
-    "No sufficient European data found, set to 0."
+    "No sufficient European data found, set to 0 to have the maximum insulation potential."
 
 - fields:
   - input_households_semi_detached_houses_heat_demand_reduction
   message:
-    "No sufficient European data found, set to 0."
+    "No sufficient European data found, set to 0 to have the maximum insulation potential."
 
 - fields:
   - input_households_terraced_houses_heat_demand_reduction
   message:
-    "No sufficient European data found, set to 0."
-
-- fields:
-  - input_percentage_of_apartments
-  message:
-    "Derived from Eurostat, category: multi-family dwellings; year: 2019; author: Eurostat"
-
-- fields:
-  - input_percentage_of_corner_houses
-  message:
-    "Derived from Eurostat, category: multi-family dwellings; year: 2019; author: Eurostat"
-
-- fields:
-  - input_percentage_of_detached_houses
-  message:
-    "Derived from Eurostat, category: multi-family dwellings; year: 2019; author: Eurostat"
-
-- fields:
-  - input_percentage_of_semi_detached_houses
-  message:
-    "Derived from Eurostat, category: multi-family dwellings; year: 2019; author: Eurostat"
-
-- fields:
-  - input_percentage_of_terraced_houses
-  message:
-    "Derived from Eurostat, category: multi-family dwellings; year: 2019; author: Eurostat"
+    "No sufficient European data found, set to 0 to have the maximum insulation potential."
 
 - fields:
   - number_of_buildings
@@ -77,12 +47,7 @@
 - fields:
   - number_of_cars
   message:
-    "Data on type technology using network gas for space heating in households is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
-
-- fields:
-  - number_of_inhabitants
-  message:
-    "Summation of all EU27 countries, derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
 
 - fields:
   - number_of_residences
@@ -457,33 +422,15 @@
 
 - fields:
   - buildings_final_demand_for_space_heating_electricity_buildings_space_heater_collective_heatpump_water_water_ts_electricity_parent_share
-  message:
-    "No data available, summation of all EU27 countries from the
-    results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2022"
-
-- fields:
+  - buildings_final_demand_for_space_heating_electricity_buildings_space_heater_hybrid_heatpump_air_water_electricity_parent_share
   - buildings_final_demand_for_space_heating_electricity_buildings_space_heater_electricity_parent_share
-  message:
-    "No data available, summation of all EU27 countries from the
-    results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2023"
-
-- fields:
   - buildings_final_demand_for_space_heating_electricity_buildings_space_heater_heatpump_air_water_electricity_parent_share
-  message:
-    "No data available, summation of all EU27 countries from the
-    results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2024"
-
-- fields:
+  - buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_hybrid_heatpump_air_water_electricity_parent_share
   - buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_heatpump_air_water_network_gas_parent_share
-  message:
-    "No data available, summation of all EU27 countries from the
-    results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2026"
-
-- fields:
   - buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_network_gas_parent_share
   message:
-    "No data available, summation of all EU27 countries from the
-    results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2027"
+    "Summation of all EU27 countries from the
+    results of the TYNDP (draft) scenarios into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2015"
 
 - fields:
   - households_final_demand_for_appliances_electricity_households_appliances_clothes_dryer_electricity_parent_share
@@ -591,37 +538,37 @@
   - households_final_demand_for_space_heating_electricity_households_space_heater_electricity_parent_share
   message:
     "No data available, summation of all EU27 countries from the
-    results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2029"
+    results of the TYNDP (draft) scenarios into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2015"
 
 - fields:
   - households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_air_water_electricity_parent_share
   message:
     "No data available, summation of all EU27 countries from the
-    results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2030"
+    results of the TYNDP (draft) scenarios into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2015"
 
 - fields:
   - households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_ground_water_electricity_parent_share
   message:
     "No data available, summation of all EU27 countries from the
-    results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2031"
+    results of the TYNDP (draft) scenarios into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2015"
 
 - fields:
   - households_final_demand_for_space_heating_electricity_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share
   message:
     "No data available, summation of all EU27 countries from the
-    results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2032"
+    results of the TYNDP (draft) scenarios into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2015"
 
 - fields:
   - households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share
   message:
     "No data available, summation of all EU27 countries from the
-    results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2033"
+    results of the TYNDP (draft) scenarios into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2015"
 
 - fields:
   - households_final_demand_for_space_heating_network_gas_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share
   message:
     "No data available, summation of all EU27 countries from the
-    results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2034"
+    results of the TYNDP (draft) scenarios into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2015"
 
 - fields:
   - households_final_demand_for_space_heating_network_gas_households_space_heater_network_gas_parent_share

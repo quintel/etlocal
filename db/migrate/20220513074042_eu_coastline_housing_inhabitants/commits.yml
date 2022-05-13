@@ -33,3 +33,8 @@
   - number_of_inhabitants
   message:
     "Derived from Eurostat, population on 1 January; year: 2019; author: Eurostat."
+
+- fields:
+  - input_transport_road_human_powered_bicycle_demand
+  message:
+    "No sufficient European source found."

@@ -17,7 +17,7 @@ groups:
           entso: |
             EB("Final consumption - transport sector - domestic aviation - energy use", "Biogasoline")
 
-    - header: transport_international_plane_transport
+    - header: transport_international_plane_fuels
       items:
         - key: bunkers_total_useful_demand_planes_demand
           unit: 'TJ'

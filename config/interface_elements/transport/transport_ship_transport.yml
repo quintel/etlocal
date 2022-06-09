@@ -40,7 +40,7 @@ groups:
             EB("Final consumption - transport sector - pipeline transport - energy use", "Fuel oil") -
             EB("Final consumption - transport sector - not elsewhere specified - energy use", "Fuel oil")
 
-    - header: transport_international_ship_transport
+    - header: transport_international_ship_fuels
       items:
         - key: bunkers_total_useful_demand_ships_demand
           unit: 'TJ'

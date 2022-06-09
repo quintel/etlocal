@@ -74,8 +74,10 @@ nl:
       # transport
       transport_road_fuels: Brandstoffen wegverkeer
       transport_rail_fuels: Brandstoffen treinverkeer
-      transport_ship_fuels: Brandstoffen scheepvaart
-      transport_plane_fuels: Brandstoffen luchtvaart
+      transport_ship_fuels: Brandstoffen nationale scheepvaart
+      transport_international_ship_fuels: Brandstoffen internationale scheepvaart
+      transport_plane_fuels: Brandstoffen nationale luchtvaart
+      transport_international_plane_fuels: Brandstoffen internationale luchtvaart
       transport_road_gasoline_distribution: Verdeling benzine wegverkeer
       transport_road_diesel_distribution: Verdeling diesel wegverkeer
       transport_road_electricity_distribution: Verdeling elektriciteit wegverkeer
@@ -98,9 +100,9 @@ nl:
       industry_metal_steel_production: Steel productie
       industry_metal_steel_production_route: Steel productietechnologie
       industry_metal_steel_final_demand: Eindgebruik
-      energy_cokesoven_transformation_input: Kooksoven transformatie input
-      energy_cokesoven_transformation_output: Kooksoven transformatie output
-      energy_cokesoven_own_use: Kooksoven (eigen gebruik)
+      energy_cokesoven_transformation_input: Cokesoven transformatie input
+      energy_cokesoven_transformation_output: Cokesoven transformatie output
+      energy_cokesoven_own_use: Cokesoven (eigen gebruik)
       energy_blastfurnace_transformation_input: Hoogoven - transformatie input
       energy_blastfurnace_transformation_output: Hoogoven - transformatie output
       energy_blastfurnace_own_use: Hoogoven (eigen gebruik)
@@ -110,6 +112,10 @@ nl:
       industry_metal_steel_coal_use: Eindgebruik - gebruik van kolen
       industry_metal_steel_electricity_use: Eindgebruik - gebruik van elektriciteit
       industry_metal_steel_network_gas_use: Eindgebruik - gebruik van gas
+      industry_metal_steel_cokes_use: Eindgebruik - gebruik van cokes
+      industry_metal_steel_crude_oil_use: Eindgebruik - gebruik van olie
+      industry_metal_steel_steam_hot_water_use: Eindgebruik - gebruik van warmte
+      industry_metal_steel_wood_pellets_use: Eindgebruik - gebruik van vaste biomassa
       industry_metal_aluminium_production: Aluminium productie
       industry_metal_aluminium_production_route: Aluminium productietechnologie
       industry_aluminium_demand: Eindgebruik
@@ -144,8 +150,10 @@ nl:
       other_final_demand: Eindgebruik
 
       # energy
-      energy_demand_power_sector: Energiegebruik elektriciteitsopwek
-      energy_gas_network: Gasmix in het gasnet
+      energy_demand_power_sector: Elektriciteitsnet - energievraag
+      energy_mix_gas_network: Gas - gasmix in netwerk
+      energy_losses_gas_network: Gas - netwerkverliezen
+      energy_losses_oil_network: Olie - netwerkverliezen
       energy_greengas_production: Groengasproductie
       energy_waste_mix: Afvalmix
       energy_extraction: Brandstofproductie en winning natuurlijke hulpbronnen

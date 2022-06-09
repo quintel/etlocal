@@ -96,10 +96,10 @@ en:
         industry_residual_heat: Residual heat potential
 
       transport:
-        transport_rail_transport: Trains
-        transport_road_transport: Road vehicles
-        transport_ship_transport: Ships
-        transport_plane_transport: Airplanes
+        transport_rail_transport: Rail transport
+        transport_road_transport: Road transport
+        transport_ship_transport: Shipping
+        transport_plane_transport: Aviation
 
       other:
         other_energy_demand: Energy demand

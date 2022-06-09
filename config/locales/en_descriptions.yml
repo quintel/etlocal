@@ -131,7 +131,8 @@ en:
       energy: |
         In this section you will find information about the (central) energy sector in this area.
       energy_energy_demand: |
-        In this tab you will find information about the own use and the grid losses of the electricity grid.
+        In this tab you will find information about the own use and the grid losses of the electricity grid. Also you will
+        find information on the gas network: the gas mix and network losses.
       energy_renewable_electricity_production: |
         In this tab you will find how much electricity is produced from renewable sources in this
         area. More information about the various plant types can be found in the
@@ -289,7 +290,7 @@ en:
       industry_food_electricity: |
         The percentages below indicate how much of the final demand electricity is used to generate heat and how much
         for industrial processes (machines, lighting, etc.).
-      energy_gas_network: |
+      energy_mix_gas_network: |
         How much green gas and regasified LNG is mixed in the gas network? The remaining gas demand in the ETM is supplied by natural gas.
       energy_greengas_production: |
         Below you can see which production technologies have been used for the production of green gas. More information on these technologies can be found in the

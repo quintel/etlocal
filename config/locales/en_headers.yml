@@ -72,8 +72,10 @@ en:
       # transport
       transport_road_fuels: Road fuels
       transport_rail_fuels: Train fuels
-      transport_ship_fuels: Ship fuels
-      transport_plane_fuels: Airplane fuels
+      transport_ship_fuels: Fuels inland navigation
+      transport_international_ship_fuels: Fuels international navigation
+      transport_plane_fuels: Fuels national plane transport
+      transport_international_plane_fuels: Fuels international plane transport
       transport_road_gasoline_distribution: Road gasoline distribution
       transport_road_diesel_distribution: Road diesel distribution
       transport_road_electricity_distribution: Road electricity distribution
@@ -106,6 +108,10 @@ en:
       energy_power_combined_cycle_coal_gas_conversion:  Power plant output
       energy_chp_coal_gas_conversion: CHP output
       industry_metal_steel_coal_use: Final demand - Use of coal
+      industry_metal_steel_cokes_use: Final demand - Use of cokes
+      industry_metal_steel_crude_oil_use: Final demand - Use of oil
+      industry_metal_steel_steam_hot_water_use: Final demand - Use of hot water
+      industry_metal_steel_wood_pellets_use: Final demand - Use of solid biomass
       industry_metal_steel_electricity_use: Final demand - Use of electricity
       industry_metal_steel_network_gas_use: Final demand - Use of gas
       industry_metal_aluminium_production: Aluminium production
@@ -142,8 +148,10 @@ en:
       other_final_demand: Final demand
 
       # energy
-      energy_demand_power_sector: Energy demand of the power sector
-      energy_gas_network: Gas mix in the gas network
+      energy_demand_power_sector: Power sector - energy demand
+      energy_mix_gas_network: Gas network - gas mix
+      energy_losses_gas_network: Gas network - losses
+      energy_losses_oil_network: Oil network - losses
       energy_greengas_production: Green gas production
       energy_waste_mix: Waste mix
       energy_extraction: Fuel production and natural resource extraction

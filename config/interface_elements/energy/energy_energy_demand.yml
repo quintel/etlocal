@@ -11,7 +11,7 @@ groups:
         entso: |
           EB("Distribution losses", "Electricity")
 
-  - header: energy_demand_gas_network
+  - header: energy_mix_gas_network
     items:
       - key: energy_distribution_greengas_demand
         unit: 'TJ'
@@ -20,7 +20,11 @@ groups:
           EB("Transformation input - electricity and heat generation - autoproducer combined heat and power - energy use", "Biogases")
       - key: energy_regasification_lng_energy_national_gas_network_natural_gas_demand
         unit: 'TJ'
+
+  - header: energy_losses_gas_network
+    items:
       - key: energy_distribution_network_gas_loss_demand
         unit: 'TJ'
         entso: |
           EB("Distribution losses", "Network gas")
+

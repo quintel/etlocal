@@ -3,4 +3,4 @@
   - energy_power_wind_turbine_offshore_full_load_hours
   - energy_power_wind_turbine_inland_full_load_hours
   message:
-    "Full load hours based on wind curve from renewables.ninja, 2019, authors: Stefan Pfenninger and Iain Staffell."
+    "Full load hours based on wind curve from Renewables.ninja, 2019."

@@ -1,0 +1,44 @@
+---
+- fields:
+  - households_final_demand_wood_pellets_demand
+  message:
+    "UK domestic wood consumption data from DUKES and made it NI specific using the NI proportion of Total wood fuel used indoors from Annex B Table 4.1"
+
+- fields:
+  - bunkers_total_useful_demand_planes_demand
+  message:
+    "NAEI - Fuel consumption from Domestic Aviation are estimated by Ricardo based on the NI share of UK energy data"
+
+- fields:
+  - bunkers_total_useful_demand_ships_demand
+  message:
+    "NAEI - Fuel consumption from national navigation (shipping) are estimated by Ricardo based on the NI share of UK energy data. This value includes the use of Marine Gas oil converted to Hevay fuel oil using BEIS converstion factors`"
+
+- fields:
+  - co2_emission_1990
+  - co2_emission_1990_aviation_bunkers
+  - co2_emission_1990_marine_bunkers
+  - energetic_emissions_other_ghg_households
+  - energetic_emissions_other_ghg_buildings
+  - energetic_emissions_other_ghg_transport
+  - energetic_emissions_other_ghg_agriculture
+  - energetic_emissions_other_ghg_industry
+  - energetic_emissions_other_ghg_energy
+  - non_energetic_emissions_co2_chemical_industry
+  - non_energetic_emissions_co2_waste_management
+  - non_energetic_emissions_co2_other_industry
+  - non_energetic_emissions_co2_agriculture_manure
+  - non_energetic_emissions_co2_agriculture_soil_cultivation
+  - indirect_emissions_co2
+  - non_energetic_emissions_other_ghg_chemical_industry
+  - non_energetic_emissions_other_ghg_waste_management
+  - non_energetic_emissions_other_ghg_other_industry
+  - non_energetic_emissions_other_ghg_agriculture_manure
+  - non_energetic_emissions_other_ghg_agriculture_soil_cultivation
+  - non_energetic_emissions_other_ghg_agriculture_fermentation
+  - non_energetic_emissions_other_ghg_agriculture_other
+  message:
+    "UK NAEI - National Atmospheric Emissions Inventory"
+
+
+

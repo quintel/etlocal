@@ -38,12 +38,9 @@ RSpec.describe "ETLocal's interface", :if => dataset_inputs.any?, type: :interfa
   transformers.each do |key, attribute|
     if attribute.respond_to?('sparse_graph_query') && attribute['sparse_graph_query'].blank?
       it "has a present sparse graph key for #{ key }" do
-        unless key.to_sym == :bunkers_final_demand_hydrogen_demand ||
-            key.to_sym == :buildings_final_demand_for_space_heating_electricity_buildings_space_heater_hybrid_hydrogen_heatpump_air_water_electricity_parent_share
-          expect(InterfaceElement.items.detect do |item|
-            item.key == key.to_sym
-          end).to_not be_nil
-        end
+        expect(InterfaceElement.items.detect do |item|
+          item.key == key.to_sym
+        end).to_not be_nil
       end
     end
   end

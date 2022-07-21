@@ -1,5 +1,5 @@
 ---
-- fields: 
+- fields:
   - lv_net_total_costs_present
   - mv_net_total_costs_present
   - hv_net_total_costs_present
@@ -27,6 +27,5 @@
   - energy_power_hv_network_loss_demand
   - energy_distribution_greengas_demand
   message:
-   "Schatting Quintel. Geen data beschikbaar voor 2019. De schatting is gebaseerd op het totaal energie/elektriciteits/gasgebruik in de gemeente (zoals gerapporteerd door Klimaatmonitor) en/of op data uit voorgaande jaren. Zie: https://klimaatmonitor.databank.nl/Jive?workspace_guid=59c3f31c-ab95-420f-b592-5c90d934d2ef 
+   "Schatting Quintel. Geen data beschikbaar voor 2019. De schatting is gebaseerd op het totaal energie/elektriciteits/gasgebruik in de gemeente (zoals gerapporteerd door Klimaatmonitor) en/of op data uit voorgaande jaren. Zie: https://klimaatmonitor.databank.nl/Jive?workspace_guid=59c3f31c-ab95-420f-b592-5c90d934d2ef
 En: https://klimaatmonitor.databank.nl/Jive?workspace_guid=04e40306-c921-4a5f-8b2f-bdc258886267"
-

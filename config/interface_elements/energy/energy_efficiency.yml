@@ -277,6 +277,3 @@ groups:
           IF(EB("Oil heater - industrial", "Oil") > 0.0,
           -> { EB("Oil heater - industrial", "Heat") / EB("Oil heater - industrial", "Oil") * 100 },
           -> { 72.0 })
-      - key: input_energy_heat_heatpump_water_water_electricity_steam_hot_water_output_conversion
-        unit: '%'
-        entso: 50.0

@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Set to 0.0"

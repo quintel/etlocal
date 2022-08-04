@@ -285,6 +285,8 @@ class SetupPanama < ActiveRecord::Migration[5.2]
     )
 
     inputs_to_zero(clone)
+
+    sleep(10)
   end
 
   def down

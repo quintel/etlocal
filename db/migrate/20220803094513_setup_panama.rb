@@ -4,7 +4,7 @@
 class SetupPanama < ActiveRecord::Migration[5.2]
   BASE_DATASET_GEO = :UKNI01
   NEW_GEO_ID = :RGPA01
-  NEW_NAME = 'Panama - Port of Cristobal and Balboa (poor quality)'.freeze
+  NEW_NAME = 'Panama - Ports of Cristobal and Balboa'.freeze
 
   TO_ZERO = %w[
     agriculture_final_demand_electricity_demand
@@ -32,13 +32,6 @@ class SetupPanama < ActiveRecord::Migration[5.2]
     buildings_final_demand_coal_demand
     input_buildings_final_demand_crude_oil_demand
     buildings_final_demand_solar_thermal_demand
-    input_percentage_of_diesel_buildings_final_demand_crude_oil
-    input_percentage_of_biodiesel_buildings_final_demand_crude_oil
-    input_percentage_of_kerosene_buildings_final_demand_crude_oil
-    input_percentage_of_bio_kerosene_buildings_final_demand_crude_oil
-    input_percentage_of_lpg_buildings_final_demand_crude_oil
-    input_percentage_of_bio_oil_buildings_final_demand_crude_oil
-    input_percentage_of_crude_oil_buildings_final_demand_crude_oil
     number_of_buildings
     buildings_roof_surface_available_for_pv
     input_buildings_heat_demand_reduction
@@ -160,11 +153,6 @@ class SetupPanama < ActiveRecord::Migration[5.2]
     input_energy_power_hydro_river_production
     input_energy_power_hydro_mountain_production
     input_energy_power_geothermal_production
-    energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share
-    energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share
-    energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share
-    energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share
-    energy_distribution_non_biogenic_waste_energy_distribution_waste_mix_child_share
     energy_production_dry_biomass_max_demand
     energy_production_wet_biomass_max_demand
     energy_production_oily_biomass_max_demand
@@ -175,7 +163,6 @@ class SetupPanama < ActiveRecord::Migration[5.2]
     other_final_demand_coal_demand
     other_final_demand_crude_oil_demand
     other_final_demand_crude_oil_non_energetic_demand
-    number_of_inhabitants
     number_of_residences
     residences_roof_surface_available_for_pv
     input_households_solar_pv_demand

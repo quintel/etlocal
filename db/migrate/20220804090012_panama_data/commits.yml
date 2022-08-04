@@ -1,0 +1,57 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - buildings_final_demand_electricity_buildings_final_demand_for_lighting_electricity_parent_share
+  - buildings_final_demand_electricity_buildings_final_demand_for_appliances_electricity_parent_share
+  - buildings_final_demand_electricity_buildings_final_demand_for_cooling_electricity_parent_share
+  - buildings_final_demand_electricity_buildings_final_demand_for_space_heating_electricity_parent_share
+  - buildings_final_demand_for_lighting_electricity_buildings_lighting_standard_fluorescent_electricity_parent_share
+  - buildings_final_demand_for_lighting_electricity_buildings_lighting_efficient_fluorescent_electricity_parent_share
+  - buildings_final_demand_for_lighting_electricity_buildings_lighting_led_electricity_parent_share
+  - buildings_final_demand_for_cooling_electricity_buildings_cooling_airconditioning_electricity_parent_share
+  - buildings_final_demand_for_cooling_electricity_buildings_cooling_heatpump_air_water_electricity_parent_share
+  - buildings_final_demand_for_cooling_electricity_buildings_cooling_collective_heatpump_water_water_ts_electricity_parent_share
+  - input_buildings_electricity_demand
+  - input_industry_other_electricity_demand
+  - input_transport_road_gasoline_demand
+  - input_transport_road_diesel_demand
+  message:
+    Estimation based on Wilsmeier and Zotz, based on ECLAC Energy Efficiency Questionnaire 2014; and FAL Bulletin, Issue Number 350/6, 2016
+
+# If you are creating only a single commit, you may instead use a single :all
+# field to have all of the CSV columns be included. This cannot be used when
+# creating multiple commits.
+- fields:
+  - number_of_buildings
+  - offshore_suitable_for_wind
+  - coast_line
+  - number_of_inhabitants
+  - number_of_residences
+  - interconnector_capacity
+  - transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share
+  - transport_road_mixer_gasoline_transport_van_using_gasoline_mix_parent_share
+  - transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share
+  - transport_road_mixer_gasoline_transport_truck_using_gasoline_mix_parent_share
+  - transport_road_mixer_gasoline_transport_motorcycle_using_gasoline_mix_parent_share
+  - transport_road_mixer_diesel_transport_truck_using_diesel_mix_parent_share
+  - transport_road_mixer_diesel_transport_car_using_diesel_mix_parent_share
+  - transport_road_mixer_diesel_transport_van_using_diesel_mix_parent_share
+  - transport_road_mixer_diesel_transport_bus_using_diesel_mix_parent_share
+  message:
+    Estimation
+
+- fields:
+  - buildings_roof_surface_available_for_pv
+  - total_land_area
+  - areable_land
+  message: Panama Logistics Web Portal https://logistics.gatech.pa/en/
+
+- fields:
+  - buildings_final_demand_network_gas_demand
+  message:
+    Set to a minimal demand, otherwise dataset would not load
+
+- fields:
+  - analysis_year
+  message:
+    Most data originates from 2016

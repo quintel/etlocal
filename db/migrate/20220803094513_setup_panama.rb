@@ -163,7 +163,6 @@ class SetupPanama < ActiveRecord::Migration[5.2]
     other_final_demand_coal_demand
     other_final_demand_crude_oil_demand
     other_final_demand_crude_oil_non_energetic_demand
-    number_of_residences
     residences_roof_surface_available_for_pv
     input_households_solar_pv_demand
     households_final_demand_solar_thermal_demand

@@ -1,0 +1,43 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - households_final_demand_electricity_households_final_demand_for_cooking_electricity_parent_share
+  - households_final_demand_electricity_households_final_demand_for_cooling_electricity_parent_share
+  - households_final_demand_electricity_households_final_demand_for_hot_water_electricity_parent_share
+  - households_final_demand_electricity_households_final_demand_for_lighting_electricity_parent_share
+  - households_final_demand_electricity_households_final_demand_for_space_heating_electricity_parent_share
+  - households_final_demand_electricity_households_final_demand_for_appliances_electricity_parent_share
+  - households_final_demand_network_gas_households_final_demand_for_cooking_network_gas_parent_share
+  - households_final_demand_network_gas_households_final_demand_for_hot_water_network_gas_parent_share
+  - households_final_demand_network_gas_households_final_demand_for_space_heating_network_gas_parent_share
+  - households_final_demand_network_gas_households_final_demand_for_cooling_network_gas_parent_share
+  - households_final_demand_wood_pellets_households_final_demand_for_hot_water_wood_pellets_parent_share
+  - households_final_demand_wood_pellets_households_final_demand_for_space_heating_wood_pellets_parent_share
+  - households_final_demand_wood_pellets_households_final_demand_for_cooking_wood_pellets_parent_share
+  - households_final_demand_crude_oil_households_final_demand_for_hot_water_crude_oil_parent_share
+  - households_final_demand_crude_oil_households_final_demand_for_space_heating_crude_oil_parent_share
+  - households_final_demand_coal_households_final_demand_for_hot_water_coal_parent_share
+  - households_final_demand_coal_households_final_demand_for_space_heating_coal_parent_share
+  message:
+    No Northern Ireland available. These are modelled data at the UK Level.
+    Final Energy Consumption sourced from Digest of UK Energy Statistics (DUKES) 2019
+    BEIS UK Domestic sector proportions are estimated using data collected for BEIS' Fuel Poverty statistics. https://www.gov.uk/government/collections/fuel-poverty-statistics
+    The splits for end use are sourced from data collected for the English Housing Survey conducted by the Department for Housing, Communities and Local Government (MHCLG). https://www.gov.uk/government/collections/english-housing-survey
+    The data are then modelled by the Building Research Establishment and their methodology can be found here;
+    https://www.bre.co.uk/page.jsp?id=3176
+
+- fields:
+  - transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share
+  message:
+    Northern Ireland modelled data available. Provides LAU1 Area/District Council (11) areas as well as NI. Only BEIS figure available is 'Personal - Petrol cars' mapped into this ETM category.
+
+- fields:
+  - transport_road_mixer_gasoline_transport_truck_using_gasoline_mix_parent_share
+  message:
+    Northern Ireland modelled data available. Provides LAU1 Area/District Council (11) areas as well as NI. Only BEIS figure available is 'Freight - Petrol LGV' mapped into ETM category.  
+    Please note that LGVs can be used for a number of tasks such as carrying freight, providing transport, carrying equipment or for private use, meaning that not all LGV traffic is related to freight transportation.
+
+- fields:
+  - transport_road_mixer_gasoline_transport_motorcycle_using_gasoline_mix_parent_share
+  message:
+    Northern Ireland modelled data available. Provides LAU1 Area/District Council (11) areas as well as NI. Only BEIS figure available is 'Personal - Motorcycles' mapped into ETM category.

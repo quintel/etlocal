@@ -60,7 +60,7 @@ groups:
         entso: |
           IF((EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) > 0.0,
           -> { (EB("Gas CHP (CCGT)", "Network gas") + EB("Gas motor CHP", "Network gas") + EB("Gas Turbine CHP", "Network gas")) / (EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) },
-          -> { 100.0 })
+          -> { 1.0 })
         flexible: true
         skip_validation: true
 

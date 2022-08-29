@@ -64,8 +64,8 @@ groups:
       - key: input_percentage_of_bio_oil_buildings_final_demand_crude_oil
         unit: '%'
         entso: |
-          (EB("Final consumption - other sectors - agriculture and forestry - energy use", "Biogasoline") +
-          EB("Final consumption - other sectors - agriculture and forestry - energy use", "Other liquid biofuels")) /
+          (EB("Final consumption - other sectors - commercial and public services - energy use", "Biogasoline") +
+          EB("Final consumption - other sectors - commercial and public services - energy use", "Other liquid biofuels")) /
           EB("Final consumption - other sectors - commercial and public services - energy use", "Oil")
       - key: input_percentage_of_crude_oil_buildings_final_demand_crude_oil
         unit: '%'

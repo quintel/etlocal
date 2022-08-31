@@ -8,16 +8,16 @@ describe EditableAttribute do
     expect(attribute.key).to eq(:key)
   end
 
-  describe 'when the dataset uses an ENTSO source' do
-    let(:dataset) { FactoryBot.build(:dataset, data_source: 'entso') }
+  describe 'when the dataset uses an energy balance source' do
+    let(:dataset) { FactoryBot.build(:dataset, data_source: 'energy_balance') }
 
     before do
       allow(dataset).to receive(:execute_query).and_return(1337)
     end
 
-    context 'when the attribute has an ENTSO query' do
+    context 'when the attribute has an energy balance query' do
       let(:attribute) do
-        described_class.new(dataset, :mykey, {}, 1.0, entso_query: 'myquery')
+        described_class.new(dataset, :mykey, {}, 1.0, energy_balance_query: 'myquery')
       end
 
       it 'returns the executed query value' do
@@ -25,7 +25,7 @@ describe EditableAttribute do
       end
     end
 
-    context 'when the attribute has no ENTSO query' do
+    context 'when the attribute has no energy balance query' do
       let(:attribute) do
         described_class.new(dataset, :mykey, {}, 1.0)
       end
@@ -41,9 +41,9 @@ describe EditableAttribute do
 
     before { allow(dataset).to receive(:execute_query).and_return(1337) }
 
-    context 'when the attribute defines an ENTSO query' do
+    context 'when the attribute defines an energy balance query' do
       let(:attribute) do
-        described_class.new(dataset, :mykey, {}, 1.0, entso_query: 'myquery')
+        described_class.new(dataset, :mykey, {}, 1.0, energy_balance_query: 'myquery')
       end
 
       it 'returns the attribute value' do
@@ -51,7 +51,7 @@ describe EditableAttribute do
       end
     end
 
-    context 'when the attribute has no ENTSO query' do
+    context 'when the attribute has no energy balance query' do
       let(:attribute) do
         described_class.new(dataset, :mykey, {}, 1.0)
       end

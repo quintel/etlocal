@@ -3,7 +3,7 @@
 # rubocop:disable Naming/MethodName
 
 module DatasetSource
-  module ENTSO
+  module EnergyBalance
     # Runtime for executing queries in CSV-sourced datasets.
     class Runtime < Rubel::Runtime::Sandbox
       # Public: Creates a new Runtime instance with the given DatasetSource.

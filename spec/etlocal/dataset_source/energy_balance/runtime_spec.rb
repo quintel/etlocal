@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe DatasetSource::ENTSO::Runtime do
+RSpec.describe DatasetSource::EnergyBalance::Runtime do
   let(:map) { DatasetSource::Map.new('a' => { 'x' => '1' }) }
   let(:runtime) { described_class.new('TEST01', map) }
 

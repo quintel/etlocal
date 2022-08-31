@@ -5,39 +5,39 @@ groups:
     items:
       - key: industry_chp_combined_cycle_gas_power_fuelmix_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Gas CHP (CCGT)", "Fuelmix")
       - key: industry_chp_engine_gas_power_fuelmix_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Gas motor CHP", "Fuelmix")
       - key: industry_chp_turbine_gas_power_fuelmix_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Gas Turbine CHP", "Fuelmix")
       - key: industry_chp_ultra_supercritical_coal_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Coal CHP", "Coal")
       - key: industry_chp_wood_pellets_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Biomass CHP - industrial", "Primary solid biofuels")
       - key: industry_heat_burner_lignite_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Lignite heater", "Lignite and peat")
       - key: industry_heat_burner_coal_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Coal heater - industrial", "Coal")
       - key: industry_heat_well_geothermal_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Geothermal - industrial", "Geothermal")
       - key: industry_heat_burner_crude_oil_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Oil heater - industrial", "Oil")
 
   - header: industry_gas_fuelmix
@@ -45,19 +45,19 @@ groups:
     items:
       - key: input_share_mixer_gas_fuel_bio_oil
         unit: '%'
-        entso: |
+        energy_balance: |
           IF((EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) > 0.0,
           -> { (EB("Gas CHP (CCGT)", "Renewable oil") + EB("Gas motor CHP", "Renewable oil") + EB("Gas Turbine CHP", "Renewable oil")) / (EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) },
           -> { 0.0 })
       - key: input_share_mixer_gas_fuel_oil
         unit: '%'
-        entso: |
+        energy_balance: |
           IF((EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) > 0.0,
           -> { (EB("Gas CHP (CCGT)", "Fossil oil") + EB("Gas motor CHP", "Fossil oil") + EB("Gas Turbine CHP", "Fossil oil")) / (EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) },
           -> { 0.0 })
       - key: input_share_mixer_gas_fuel_network_gas
         unit: '%'
-        entso: |
+        energy_balance: |
           IF((EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) > 0.0,
           -> { (EB("Gas CHP (CCGT)", "Network gas") + EB("Gas motor CHP", "Network gas") + EB("Gas Turbine CHP", "Network gas")) / (EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) },
           -> { 1.0 })
@@ -69,38 +69,38 @@ groups:
     items:
     - key: input_percentage_of_diesel_industry_final_demand_crude_oil
       unit: '%'
-      entso: |
+      energy_balance: |
         EB("Final consumption - industry sector - energy use", "Gas oil and diesel oil (excluding biofuel portion)") /
         EB("Final consumption - industry sector - energy use", "Oil")
     - key: input_percentage_of_biodiesel_industry_final_demand_crude_oil
       unit: '%'
-      entso: |
+      energy_balance: |
         EB("Final consumption - industry sector - energy use", "Bio-diesel") /
         EB("Final consumption - industry sector - energy use", "Oil")
     - key: input_percentage_of_kerosene_industry_final_demand_crude_oil
       unit: '%'
-      entso: |
+      energy_balance: |
         EB("Final consumption - industry sector - energy use", "Kerosene") /
         EB("Final consumption - industry sector - energy use", "Oil")
     - key: input_percentage_of_bio_kerosene_industry_final_demand_crude_oil
       unit: '%'
-      entso: |
+      energy_balance: |
         EB("Final consumption - industry sector - energy use", "Bio-kerosene") /
         EB("Final consumption - industry sector - energy use", "Oil")
     - key: input_percentage_of_lpg_industry_final_demand_crude_oil
       unit: '%'
-      entso: |
+      energy_balance: |
         EB("Final consumption - industry sector - energy use", "Liquefied petroleum gases") /
         EB("Final consumption - industry sector - energy use", "Oil")
     - key: input_percentage_of_bio_oil_industry_final_demand_crude_oil
       unit: '%'
-      entso: |
+      energy_balance: |
         (EB("Final consumption - industry sector - energy use", "Biogasoline") +
         EB("Final consumption - industry sector - energy use", "Other liquid biofuels")) /
         EB("Final consumption - industry sector - energy use", "Oil")
     - key: input_percentage_of_crude_oil_industry_final_demand_crude_oil
       unit: '%'
-      entso: |
+      energy_balance: |
         EB("Final consumption - industry sector - energy use", "Other oil") /
         EB("Final consumption - industry sector - energy use", "Oil")
       flexible: true

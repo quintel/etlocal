@@ -49,7 +49,13 @@ class EditableAttributesCollection
 
   def setup_attributes(dataset)
     self.class.items.flatten.map do |item|
-      EditableAttribute.new(dataset, item.key.to_s, edits, item.default, entso_query: item.entso)
+      EditableAttribute.new(
+        dataset,
+        item.key.to_s,
+        edits,
+        item.default,
+        energy_balance_query: item.energy_balance
+      )
     end
   end
 end

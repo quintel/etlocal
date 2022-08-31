@@ -5,27 +5,27 @@ groups:
     items:
       - key: input_industry_chemical_other_electricity_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - chemical other - energy use", "Electricity")
       - key: input_industry_chemical_other_network_gas_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - chemical other - energy use", "Network gas")
       - key: input_industry_chemical_other_steam_hot_water_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - chemical other - energy use", "Heat")
       - key: input_industry_chemical_other_wood_pellets_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - chemical other - energy use", "Primary solid biofuels")
       - key: input_industry_chemical_other_crude_oil_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - chemical other - energy use", "Oil")
       - key: input_industry_chemical_other_coal_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - chemical other - energy use", "Coal incl lignite and peat") -
           EB("Final consumption - industry sector - chemical other - energy use", "Coke oven coke")
 
@@ -33,18 +33,18 @@ groups:
     items:
       - key: input_industry_chemical_other_network_gas_non_energetic_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - chemical other - non-energy use", "Network gas")
       - key: input_industry_chemical_other_wood_pellets_non_energetic_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - chemical other - non-energy use", "Primary solid biofuels")
       - key: input_industry_chemical_other_crude_oil_non_energetic_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - chemical other - non-energy use", "Oil")
       - key: input_industry_chemical_other_coal_non_energetic_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - chemical other - non-energy use", "Coal incl lignite and peat") -
           EB("Final consumption - industry sector - chemical other - non-energy use", "Coke oven coke")

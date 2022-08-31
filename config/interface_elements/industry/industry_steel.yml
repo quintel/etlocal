@@ -20,7 +20,7 @@ groups:
     items:
       - key: input_industry_metal_steel_coal_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - iron and steel - energy use", "Coal incl lignite and peat") -
           EB("Final consumption - industry sector - iron and steel - energy use", "Coke oven coke") +
           EB("Energy sector - coke ovens - energy use", "Coal incl lignite and peat") -
@@ -29,43 +29,43 @@ groups:
           EB("Energy sector - blast furnaces - energy use", "Coke oven coke")
       - key: input_industry_metal_steel_cokes_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - iron and steel - energy use", "Coke oven coke") +
           EB("Energy sector - coke ovens - energy use", "Coke oven coke") +
           EB("Energy sector - blast furnaces - energy use", "Coke oven coke")
       - key: input_industry_metal_steel_coal_gas_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - iron and steel - energy use", "Coal gas") +
           EB("Energy sector - coke ovens - energy use", "Coal gas") +
           EB("Energy sector - blast furnaces - energy use", "Coal gas")
       - key: input_industry_metal_steel_electricity_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - iron and steel - energy use", "Electricity") +
           EB("Energy sector - coke ovens - energy use", "Electricity") +
           EB("Energy sector - blast furnaces - energy use", "Electricity")
       - key: input_industry_metal_steel_network_gas_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - iron and steel - energy use", "Network gas") +
           EB("Energy sector - coke ovens - energy use", "Network gas") +
           EB("Energy sector - blast furnaces - energy use", "Network gas")
       - key: input_industry_metal_steel_steam_hot_water_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - iron and steel - energy use", "Heat") +
           EB("Energy sector - coke ovens - energy use", "Heat") +
           EB("Energy sector - blast furnaces - energy use", "Heat")
       - key: input_industry_metal_steel_crude_oil_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - iron and steel - energy use", "Oil") +
           EB("Energy sector - coke ovens - energy use", "Oil") +
           EB("Energy sector - blast furnaces - energy use", "Oil")
       - key: input_industry_metal_steel_wood_pellets_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - industry sector - iron and steel - energy use", "Primary solid biofuels") +
           EB("Energy sector - coke ovens - energy use", "Primary solid biofuels") +
           EB("Energy sector - blast furnaces - energy use", "Primary solid biofuels")
@@ -74,7 +74,7 @@ groups:
     items:
       - key: input_energy_cokesoven_transformation_coal_input_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Transformation input - coke ovens - energy use", "Coal incl lignite and peat")
 
   - header: energy_cokesoven_transformation_output
@@ -82,14 +82,14 @@ groups:
     items:
       - key: input_energy_cokesoven_transformation_cokes_output_conversion
         unit: '%'
-        entso: |
+        energy_balance: |
           IF(EB("Transformation input - coke ovens - energy use", "Coal incl lignite and peat") > 0.0,
           -> { EB("Transformation output - coke ovens", "Coke oven coke") /
           EB("Transformation input - coke ovens - energy use", "Coal incl lignite and peat") },
           -> { 0.4 })
       - key: input_energy_cokesoven_transformation_coal_gas_output_conversion
         unit: '%'
-        entso: |
+        energy_balance: |
           IF(EB("Transformation input - coke ovens - energy use", "Coal incl lignite and peat") > 0.0,
           -> { EB("Transformation output - coke ovens", "Coal gas") /
           EB("Transformation input - coke ovens - energy use", "Coal incl lignite and peat") },
@@ -103,11 +103,11 @@ groups:
     items:
       - key: input_energy_blastfurnace_transformation_coal_input_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Transformation input - blast furnaces - energy use", "Coal incl lignite and peat")
       - key: input_energy_blastfurnace_transformation_cokes_input_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Transformation input - blast furnaces - energy use", "Coke oven coke")
 
   - header: energy_blastfurnace_transformation_output
@@ -115,7 +115,7 @@ groups:
     items:
       - key: input_energy_blastfurnace_transformation_coal_gas_output_conversion
         unit: '%'
-        entso: |
+        energy_balance: |
           IF((
           EB("Transformation input - blast furnaces - energy use", "Coal incl lignite and peat") +
           EB("Transformation input - blast furnaces - energy use", "Coke oven coke") ) > 0.0,
@@ -132,12 +132,12 @@ groups:
     items:
       - key: input_energy_power_combined_cycle_coal_gas_coal_gas_input_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Transformation input - electricity and heat generation - main activity producer electricity only - energy use", "Coal gas") +
           EB("Transformation input - electricity and heat generation - autoproducer electricity only - energy use", "Coal gas")
       - key: input_energy_chp_coal_gas_coal_gas_input_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Transformation input - electricity and heat generation - main activity producer combined heat and power - energy use", "Coal gas") +
           EB("Transformation input - electricity and heat generation - autoproducer combined heat and power - energy use", "Coal gas") +
           EB("Transformation input - electricity and heat generation - main activity producer heat only - energy use", "Coal gas") +
@@ -148,7 +148,7 @@ groups:
     items:
       - key: input_energy_power_combined_cycle_coal_gas_electricity_output_conversion
         unit: '%'
-        entso: |
+        energy_balance: |
           IF((
           EB("Transformation input - electricity and heat generation - main activity producer electricity only - energy use", "Coal gas") +
           EB("Transformation input - electricity and heat generation - autoproducer electricity only - energy use", "Coal gas") ) > 0.0,
@@ -167,7 +167,7 @@ groups:
     items:
       - key: input_energy_chp_coal_gas_electricity_output_conversion
         unit: '%'
-        entso: |
+        energy_balance: |
           IF((
           EB("Transformation input - electricity and heat generation - main activity producer combined heat and power - energy use", "Coal gas") +
           EB("Transformation input - electricity and heat generation - autoproducer combined heat and power - energy use", "Coal gas") +
@@ -182,7 +182,7 @@ groups:
           -> { 0.4 })
       - key: input_energy_chp_coal_gas_steam_hot_water_output_conversion
         unit: '%'
-        entso: |
+        energy_balance: |
           IF((
           EB("Transformation input - electricity and heat generation - main activity producer combined heat and power - energy use", "Coal gas") +
           EB("Transformation input - electricity and heat generation - autoproducer combined heat and power - energy use", "Coal gas") +

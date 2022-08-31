@@ -4,20 +4,20 @@ groups:
       items:
         - key: input_transport_rail_electricity_demand
           unit: 'TJ'
-          entso: |
+          energy_balance: |
             EB("Final consumption - transport sector - rail - energy use", "Electricity")
         - key: input_transport_rail_diesel_demand
           unit: 'TJ'
-          entso: |
+          energy_balance: |
             EB("Final consumption - transport sector - rail - energy use", "Gas oil and diesel oil (excluding biofuel portion)")
         - key: input_transport_rail_biodiesel_demand
           unit: 'TJ'
-          entso: |
+          energy_balance: |
             EB("Final consumption - transport sector - rail - energy use", "Bio-diesel") +
             EB("Final consumption - transport sector - rail - energy use", "Other liquid biofuels")
         - key: transport_final_demand_coal_demand
           unit: 'TJ'
-          entso: |
+          energy_balance: |
             EB("Final consumption - transport sector - energy use", "Coal incl lignite and peat") +
             EB("Final consumption - transport sector - energy use", "Coal gas") +
             EB("Final consumption - transport sector - energy use", "Gas works gas") -

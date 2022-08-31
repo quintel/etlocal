@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe DatasetSource::ENTSO::File do
+RSpec.describe DatasetSource::EnergyBalance::File do
   let(:content) do
     <<-CSV.strip_heredoc
       nrg_bal,Total,Solid fossil fuels,Anthracite,Coking coal,Additives and oxygenates (excluding biofuel portion)

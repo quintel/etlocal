@@ -1,5 +1,5 @@
 class Dataset < ApplicationRecord
-  str_enum :data_source, %i[db entso], scopes: false, suffix: :data_source
+  str_enum :data_source, %i[db energy_balance], scopes: false, suffix: :data_source
 
   belongs_to :user
 
@@ -56,7 +56,7 @@ class Dataset < ApplicationRecord
       'region'
     elsif geo_id =~ /^RES/
       'res'
-    elsif entso_data_source? || geo_id.match?(/^UKNI/)
+    elsif energy_balance_data_source? || geo_id.match?(/^UKNI/)
       'country'
     else
       'province'
@@ -128,7 +128,7 @@ class Dataset < ApplicationRecord
 
   # This is not the parent dataset as defined in country, but the 'real world'country
   def actual_country
-    return geo_id.downcase if entso_data_source?
+    return geo_id.downcase if energy_balance_data_source?
     return geo_id[..1].downcase if %w[UK BE].include?(geo_id[..1])
 
     country[..1]
@@ -137,7 +137,7 @@ class Dataset < ApplicationRecord
   # Public: Returns if this dataset retrieves some values from a CSV using queries.
   def queryable_source?
     # This can be extended in the future if we need to support other types of source.
-    entso_data_source?
+    energy_balance_data_source?
   end
 
   # Public: Executes the GQL query.
@@ -149,14 +149,14 @@ class Dataset < ApplicationRecord
 
   # Internal: Retrieves the data source for the dataset if it has data sourced from a CSV file.
   #
-  # Returns an ETLocal::DatasetSource::ENTSOFile or raises an error if the dataset does not use a
-  # CSV.
+  # Returns an ETLocal::DatasetSource::EnergyBalance::File or raises an error if the dataset does
+  # not use a CSV.
   def data_source_file
-    unless entso_data_source?
+    unless energy_balance_data_source?
       raise "Datasets whose data source is #{data_source.inspect} do not have a CSV source file"
     end
 
-    @data_source_file ||= DatasetSource::ENTSO::File.from_dataset(self)
+    @data_source_file ||= DatasetSource::EnergyBalance::File.from_dataset(self)
   end
 
   def is_province?

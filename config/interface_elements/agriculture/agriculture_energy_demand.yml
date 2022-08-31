@@ -5,67 +5,67 @@ groups:
     items:
       - key: agriculture_final_demand_electricity_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - agriculture and forestry - energy use", "Electricity")
       - key: agriculture_final_demand_network_gas_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - agriculture and forestry - energy use", "Network gas")
       - key: agriculture_final_demand_steam_hot_water_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - agriculture and forestry - energy use", "Heat")
       - key: agriculture_final_demand_wood_pellets_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - agriculture and forestry - energy use", "Primary solid biofuels")
         # this one should have 'input_' in front, in order for theh etsource spec to succeed
         # should also create / add this key-change to the migration
       - key: input_agriculture_final_demand_crude_oil_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil")
       - key: agriculture_final_demand_hydrogen_demand
         unit: 'TJ'
-        entso: 0.0
+        energy_balance: 0.0
 
   - header: agriculture_final_demand_crude_oil_input
     type: slider
     items:
     - key: input_percentage_of_diesel_agriculture_final_demand_crude_oil
       unit: '%'
-      entso: |
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Gas oil and diesel oil (excluding biofuel portion)") / 
+      energy_balance: |
+        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Gas oil and diesel oil (excluding biofuel portion)") /
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil")
     - key: input_percentage_of_biodiesel_agriculture_final_demand_crude_oil
       unit: '%'
-      entso: |
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-diesel") / 
+      energy_balance: |
+        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-diesel") /
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil")
     - key: input_percentage_of_kerosene_agriculture_final_demand_crude_oil
       unit: '%'
-      entso: |
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Kerosene") / 
+      energy_balance: |
+        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Kerosene") /
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil")
     - key: input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil
       unit: '%'
-      entso: |
+      energy_balance: |
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-kerosene") /
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil")
     - key: input_percentage_of_lpg_agriculture_final_demand_crude_oil
       unit: '%'
-      entso: |
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Liquefied petroleum gases") / 
+      energy_balance: |
+        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Liquefied petroleum gases") /
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil")
     - key: input_percentage_of_bio_oil_agriculture_final_demand_crude_oil
       unit: '%'
-      entso: |
+      energy_balance: |
         (EB("Final consumption - other sectors - agriculture and forestry - energy use", "Biogasoline") +
-        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Other liquid biofuels")) / 
+        EB("Final consumption - other sectors - agriculture and forestry - energy use", "Other liquid biofuels")) /
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil")
     - key: input_percentage_of_crude_oil_agriculture_final_demand_crude_oil
       unit: '%'
-      entso: |
+      energy_balance: |
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Other oil") /
         EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil")
       flexible: true

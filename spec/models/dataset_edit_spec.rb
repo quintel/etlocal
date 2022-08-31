@@ -40,12 +40,12 @@ describe DatasetEdit do
       end
     end
 
-    context 'with an ENTSO dataset' do
+    context 'with an energy_balance dataset' do
       before do
-        dataset_edit.commit.dataset.data_source = 'entso'
+        dataset_edit.commit.dataset.data_source = 'energy_balance'
       end
 
-      it 'has no errors when editable and using an ENTSO dataset' do
+      it 'has no errors when editing and not using a query' do
         allow(EditableAttributesCollection).to receive(:item).with('thing').and_return(
           EditableAttribute.new(dataset_edit.commit.dataset, :thing, [], nil)
         )
@@ -53,9 +53,15 @@ describe DatasetEdit do
         expect(dataset_edit).to have(:no).errors_on(:value)
       end
 
-      it 'has an error when editable and using an ENTSO dataset' do
+      it 'has an error editing and using a query' do
         allow(EditableAttributesCollection).to receive(:item).with('thing').and_return(
-          EditableAttribute.new(dataset_edit.commit.dataset, :thing, [], nil, entso_query: 'ABC')
+          EditableAttribute.new(
+            dataset_edit.commit.dataset,
+            :thing,
+            [],
+            nil,
+            energy_balance_query: 'ABC'
+          )
         )
 
         expect(dataset_edit).to have(1).error_on(:value)

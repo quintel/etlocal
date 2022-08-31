@@ -20,11 +20,11 @@ groups:
     items:
     - key: input_industry_metal_aluminium_electricity_demand
       unit: 'TJ'
-      entso: |
+      energy_balance: |
         EB("Final consumption - industry sector - metal aluminium - energy use", "Electricity")
     - key: input_industry_metal_aluminium_network_gas_demand
       unit: 'TJ'
-      entso: |
+      energy_balance: |
         EB("Final consumption - industry sector - metal aluminium - energy use", "Network gas")
 
   - header: industry_metal_aluminium_electricity_use

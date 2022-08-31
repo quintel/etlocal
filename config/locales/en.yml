@@ -12,7 +12,7 @@ en:
   view_on_github: View on GitHub
   inherited_file: This file is inherited from the %{parent} dataset.
   data_source_messages:
-    entso:
+    energy_balance:
       default: Value sourced from the Eurostat energy balance.
       view_file: View energy balance
       industry_ICT: |

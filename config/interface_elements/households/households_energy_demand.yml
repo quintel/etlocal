@@ -5,32 +5,32 @@ groups:
     items:
       - key: households_final_demand_electricity_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - households - energy use", "Electricity")
       - key: households_final_demand_network_gas_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - households - energy use", "Network gas")
       - key: households_final_demand_steam_hot_water_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - households - energy use", "Heat") +
           EB("Final consumption - other sectors - households - energy use", "Geothermal")
       - key: households_final_demand_wood_pellets_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - households - energy use", "Primary solid biofuels")
       - key: households_final_demand_coal_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - households - energy use", "Coal incl lignite and peat")
       - key: input_households_final_demand_crude_oil_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - households - energy use", "Oil")
       - key: households_final_demand_solar_thermal_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - households - energy use", "Solar thermal")
 
   - header: households_final_demand_crude_oil_input
@@ -38,38 +38,38 @@ groups:
     items:
       - key: input_percentage_of_diesel_households_final_demand_crude_oil
         unit: '%'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - households - energy use", "Gas oil and diesel oil (excluding biofuel portion)") /
           EB("Final consumption - other sectors - households - energy use", "Oil")
       - key: input_percentage_of_biodiesel_households_final_demand_crude_oil
         unit: '%'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - households - energy use", "Bio-diesel") /
           EB("Final consumption - other sectors - households - energy use", "Oil")
       - key: input_percentage_of_kerosene_households_final_demand_crude_oil
         unit: '%'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - households - energy use", "Kerosene") /
           EB("Final consumption - other sectors - households - energy use", "Oil")
       - key: input_percentage_of_bio_kerosene_households_final_demand_crude_oil
         unit: '%'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - households - energy use", "Bio-kerosene") /
           EB("Final consumption - other sectors - households - energy use", "Oil")
       - key: input_percentage_of_lpg_households_final_demand_crude_oil
         unit: '%'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - households - energy use", "Liquefied petroleum gases") /
           EB("Final consumption - other sectors - households - energy use", "Oil")
       - key: input_percentage_of_bio_oil_households_final_demand_crude_oil
         unit: '%'
-        entso: |
+        energy_balance: |
           (EB("Final consumption - other sectors - households - energy use", "Biogasoline") +
           EB("Final consumption - other sectors - households - energy use", "Other liquid biofuels")) /
           EB("Final consumption - other sectors - households - energy use", "Oil")
       - key: input_percentage_of_crude_oil_households_final_demand_crude_oil
         unit: '%'
-        entso: |
+        energy_balance: |
           EB("Final consumption - other sectors - households - energy use", "Other oil") /
           EB("Final consumption - other sectors - households - energy use", "Oil")
         flexible: true

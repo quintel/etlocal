@@ -16,7 +16,7 @@ class InterfaceItem
   attribute :precision, Integer, default: 2
 
   # Queries for CSV-based datasets.
-  attribute :entso, String
+  attribute :energy_balance, String
 
   # Used by file history items.
   attribute :paths, Array[String], default: []
@@ -27,6 +27,6 @@ class InterfaceItem
   end
 
   def editable?(dataset)
-    !dataset.queryable_source? || entso.blank?
+    !dataset.queryable_source? || energy_balance.blank?
   end
 end

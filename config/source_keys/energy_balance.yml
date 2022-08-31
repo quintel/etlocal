@@ -1,5 +1,5 @@
 ---
-# Contains mappings of keys used in ENTSO source CSVs to those used in GQL.
+# Contains mappings of keys used in energy balance CSVs to those used in GQL.
 column_groups:
   Network gas:
     - Biogases

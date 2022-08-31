@@ -136,8 +136,12 @@ class CSVImporter
     datasets = Dataset.where(geo_id: row['geo_id'], user: User.robot)
 
     if @create_missing && datasets.none?
+      # Backwards compatiblity with old migrations which used "entso" instead of "energy_balance".
+      data_source = row['data_source'] == 'entso' ? 'energy_balance' : row['data_source']
+
       Dataset.create!(
-        row.to_h.slice('geo_id', 'name', 'country', 'data_source').merge(user: User.robot)
+        row.to_h.slice('geo_id', 'name', 'country')
+          .merge(data_source: data_source, user: User.robot)
       )
     else
       datasets.first!

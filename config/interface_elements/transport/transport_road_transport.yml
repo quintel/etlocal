@@ -11,47 +11,47 @@ groups:
       items:
         - key: input_transport_road_gasoline_demand
           unit: 'TJ'
-          entso: |
+          energy_balance: |
             EB("Final consumption - transport sector - road - energy use", "Gasoline")
         - key: input_transport_road_diesel_demand
           unit: 'TJ'
-          entso: |
+          energy_balance: |
             EB("Final consumption - transport sector - road - energy use", "Gas oil and diesel oil (excluding biofuel portion)")
         - key: transport_final_demand_lpg_demand
           unit: 'TJ'
-          entso: |
+          energy_balance: |
             EB("Final consumption - transport sector - energy use", "Liquefied petroleum gases") -
             EB("Final consumption - transport sector - pipeline transport - energy use", "Liquefied petroleum gases") -
             EB("Final consumption - transport sector - not elsewhere specified - energy use", "Liquefied petroleum gases")
         - key: input_transport_road_electricity_demand
           unit: 'TJ'
-          entso: |
+          energy_balance: |
             EB("Final consumption - transport sector - road - energy use", "Electricity")
         - key: input_transport_road_bio_ethanol_demand
           unit: 'TJ'
-          entso: |
+          energy_balance: |
             EB("Final consumption - transport sector - road - energy use", "Biogasoline")
         - key: input_transport_road_biodiesel_demand
           unit: 'TJ'
-          entso: |
+          energy_balance: |
             EB("Final consumption - transport sector - road - energy use", "Bio-diesel") +
             EB("Final consumption - transport sector - road - energy use", "Other liquid biofuels")
         - key: transport_final_demand_for_road_compressed_network_gas_demand
           unit: 'TJ'
-          entso: |
+          energy_balance: |
             EB("Final consumption - transport sector - road - energy use", "Network gas")
         - key: transport_final_demand_hydrogen_demand
           unit: 'TJ'
-          entso: 0.0
+          energy_balance: 0.0
         - key: transport_final_demand_for_road_lng_demand
           unit: 'TJ'
-          entso: 0.0
-#          entso: |
+          energy_balance: 0.0
+#          energy_balance: |
 #            EB("Final consumption - transport sector - road - energy use", "LNG")
         - key: transport_final_demand_for_road_bio_lng_demand
           unit: 'TJ'
-          entso: 0.0
-#          entso: |
+          energy_balance: 0.0
+#          energy_balance: |
 #            EB("Final consumption - transport sector - road - energy use", "Bio-LNG")
 
     - header: transport_road_gasoline_distribution

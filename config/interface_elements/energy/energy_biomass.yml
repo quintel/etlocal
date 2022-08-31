@@ -16,19 +16,19 @@ groups:
     items:
       - key: energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share
         unit: '%'
-        entso:
-          IF(EB("Transformation input - energy use","Waste") > 0.0,     
-          -> {EB("Transformation input - energy use","Renewable municipal waste") / 
+        energy_balance:
+          IF(EB("Transformation input - energy use","Waste") > 0.0,
+          -> {EB("Transformation input - energy use","Renewable municipal waste") /
           EB("Transformation input - energy use","Waste")},
-          -> { 50.0 }) 
+          -> { 50.0 })
       - key: energy_distribution_non_biogenic_waste_energy_distribution_waste_mix_child_share
         unit: '%'
-        entso:
-          IF(EB("Transformation input - energy use","Waste") > 0.0,     
+        energy_balance:
+          IF(EB("Transformation input - energy use","Waste") > 0.0,
           -> {(EB("Transformation input - energy use","Industrial waste (non-renewable)") +
-          EB("Transformation input - energy use","Non-renewable municipal waste")) / 
+          EB("Transformation input - energy use","Non-renewable municipal waste")) /
           EB("Transformation input - energy use","Waste")},
-          -> { 50.0 }) 
+          -> { 50.0 })
         flexible: true
 
   - header: energy_potentials

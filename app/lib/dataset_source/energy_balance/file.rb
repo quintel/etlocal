@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 module DatasetSource
-  module ENTSO
-    # Contains information about an ENTSO energy balance used as a data source for a Dataset.
+  module EnergyBalance
+    # Contains information about an energy balance used as a data source for a Dataset.
     class File
       def self.key_map_config
         @key_map_config ||= begin
-          vals = YAML.load_file(Rails.root.join('config/source_keys/entso.yml'))
+          vals = YAML.load_file(Rails.root.join('config/source_keys/energy_balance.yml'))
 
           {
             'column_groups' => vals['column_groups']
@@ -42,7 +42,7 @@ module DatasetSource
 
       private
 
-      # Creates a DatasetSource::Data using an ENTSO source CSV file, including mapping from
+      # Creates a DatasetSource::Data using an energy balance CSV file, including mapping from
       # human-readable names (based on the XLSX version of the data) to those keys provided by the
       # CSV file.
       def energy_balance

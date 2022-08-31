@@ -4,40 +4,40 @@ groups:
     items:
       - key: input_energy_heat_burner_wood_pellets_production
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Biomass heater", "Heat")
       - key: input_energy_heat_well_geothermal_production
-        unit: 'TJ' 
-        entso: |
+        unit: 'TJ'
+        energy_balance: |
           EB("Geothermal - residential", "Heat")
       - key: input_energy_heat_burner_waste_mix_production
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Waste heater", "Heat")
       - key: input_energy_heat_burner_hydrogen_production
         unit: 'TJ'
-        entso: 0.0
+        energy_balance: 0.0
       - key: input_energy_heat_solar_thermal_production
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Solar thermal", "Heat")
       - key: input_energy_heat_heatpump_water_water_electricity_production
         unit: 'TJ'
-        entso: 0.0
-        
+        energy_balance: 0.0
+
   - header: energy_heat_fossil
     items:
       - key: input_energy_heat_burner_network_gas_production
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Gas heater", "Heat")
       - key: input_energy_heat_burner_coal_production
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Coal heater - industrial", "Heat")
       - key: input_energy_heat_burner_crude_oil_production
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Oil heater - industrial", "Heat")
 
   - header: energy_heat_import
@@ -49,5 +49,5 @@ groups:
     items:
       - key: energy_heat_distribution_loss_demand
         unit: 'TJ'
-        entso: |
+        energy_balance: |
           EB("Distribution losses", "Heat")

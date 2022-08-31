@@ -853,7 +853,7 @@ RSpec.describe CSVImporter do
     end
   end
 
-  context 'with a new dataset, create_missing_datasets, data_source=entso' do
+  context 'with a new dataset, create_missing_datasets, data_source=energy_balance' do
     let(:commits) do
       <<~YAML
         ---
@@ -867,7 +867,7 @@ RSpec.describe CSVImporter do
     let(:data) do
       <<~CSV
         geo_id,country,name,data_source,number_of_residences
-        GM0340,nl,ABC,entso,5
+        GM0340,nl,ABC,energy_balance,5
       CSV
     end
 
@@ -887,7 +887,38 @@ RSpec.describe CSVImporter do
 
     it 'sets the dataset data_source' do
       result
-      expect(Dataset.find_by(geo_id: 'GM0340').data_source).to eq('entso')
+      expect(Dataset.find_by(geo_id: 'GM0340').data_source).to eq('energy_balance')
+    end
+  end
+
+  context 'with a new dataset, create_missing_datasets, data_source=entso' do
+    let(:commits) do
+      <<~YAML
+        ---
+        - fields:
+          - number_of_residences
+          message:
+            Because 5 is a magic number
+      YAML
+    end
+
+    let(:data) do
+      <<~CSV
+        geo_id,country,name,data_source,number_of_residences
+        GM0340,nl,ABC,energy_balance,5
+      CSV
+    end
+
+    before { Dataset.find_by(geo_id: 'GM0340').destroy! }
+
+    it 'sets the created dataset source to "energy_balance' do
+      described_class.run(
+        data_csv.path,
+        commits_yml.path,
+        create_missing_datasets: true
+      )
+
+      expect(Dataset.find_by(geo_id: 'GM0340').data_source).to eq('energy_balance')
     end
   end
 end

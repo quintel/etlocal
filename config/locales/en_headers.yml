@@ -71,7 +71,7 @@ en:
 
       # transport
       transport_road_fuels: Road fuels
-      transport_rail_fuels: Train fuels
+      transport_rail_fuels: Rail fuels
       transport_ship_fuels: Fuels inland navigation
       transport_international_ship_fuels: Fuels international navigation
       transport_plane_fuels: Fuels national plane transport

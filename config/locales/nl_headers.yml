@@ -73,7 +73,7 @@ nl:
 
       # transport
       transport_road_fuels: Brandstoffen wegverkeer
-      transport_rail_fuels: Brandstoffen treinverkeer
+      transport_rail_fuels: Brandstoffen railverkeer
       transport_ship_fuels: Brandstoffen nationale scheepvaart
       transport_international_ship_fuels: Brandstoffen internationale scheepvaart
       transport_plane_fuels: Brandstoffen nationale luchtvaart

@@ -1,0 +1,6 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - input_solar_panels_roofs_and_parks_full_load_hours
+  message:
+    Take non-concurrency into account.

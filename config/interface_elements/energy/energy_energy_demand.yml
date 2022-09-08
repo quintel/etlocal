@@ -16,8 +16,9 @@ groups:
       - key: energy_distribution_greengas_demand
         unit: 'TJ'
         entso: |
-          EB("Total energy supply", "Biogases") +
-          EB("Transformation input - electricity and heat generation - autoproducer combined heat and power - energy use", "Biogases")
+          0.995 * (EB("Total energy supply", "Biogases") -
+          EB("Transformation input - electricity and heat generation - autoproducer combined heat and power - energy use", "Biogases") -
+          EB("Transformation input - electricity and heat generation - main activity producer combined heat and power - energy use", "Biogases"))
       - key: energy_regasification_lng_energy_national_gas_network_natural_gas_demand
         unit: 'TJ'
 

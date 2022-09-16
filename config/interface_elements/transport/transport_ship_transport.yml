@@ -39,6 +39,11 @@ groups:
             EB("Final consumption - other sectors - fishing - energy use", "Fuel oil") -
             EB("Final consumption - transport sector - pipeline transport - energy use", "Fuel oil") -
             EB("Final consumption - transport sector - not elsewhere specified - energy use", "Fuel oil")
+        - key: input_transport_ship_electricity_demand
+          unit: 'TJ'
+          entso: |
+            EB("Final consumption - transport sector - domestic navigation - energy use", "Electricity") +
+            EB("Final consumption - other sectors - fishing - energy use", "Electricity")
 
     - header: transport_international_ship_fuels
       items:

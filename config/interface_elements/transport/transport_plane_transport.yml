@@ -16,6 +16,10 @@ groups:
           unit: 'TJ'
           entso: |
             EB("Final consumption - transport sector - domestic aviation - energy use", "Biogasoline")
+        - key: input_transport_plane_electricity_demand
+          unit: 'TJ'
+          entso: |
+            EB("Final consumption - transport sector - domestic aviation - energy use", "Electricity")
 
     - header: transport_international_plane_fuels
       items:

@@ -265,10 +265,12 @@ en:
         transport_final_demand_for_shipping_lng_demand: LNG
         transport_final_demand_for_shipping_bio_lng_demand: Bio LNG
         transport_final_demand_heavy_fuel_oil_demand: Heavy fuel oil
+        input_transport_ship_electricity_demand: Electricity
 
         transport_final_demand_kerosene_demand: Kerosene
         input_transport_plane_gasoline_demand: Gasoline
         input_transport_plane_bio_ethanol_demand: Biogasoline
+        input_transport_plane_electricity_demand: Electricity
 
         transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share: Cars
         transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share: Busses

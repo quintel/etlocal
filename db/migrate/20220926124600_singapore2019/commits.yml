@@ -350,16 +350,8 @@
   message: "www.singstat.gov.sg/find-data/search-by-theme/population/population-and-population-structure/latest-data"
 
 - fields:
-  - number_of_inhabitants
+  - buildings_final_demand_electricity_buildings_final_demand_for_space_heating_electricity_parent_share
   message: "Split for electricity distribution is provided by the Building and Construction Authority's Super Low Energy Building Technology Roadmap, Figure 3: https://www1.bca.gov.sg/docs/default-source/docs-corp-buildsg/sustainability/sle_tech_roadmap71ca8c3032b240b9b37b02961ebe6f2b.pdf?sfvrsn=c171a1aa_0"
-
-- fields:
-  - buildings_final_demand_electricity_buildings_final_demand_for_space_heating_electricity_parent_share
-  message: "www.singstat.gov.sg/find-data/search-by-theme/population/population-and-population-structure/latest-data"
-
-- fields:
-  - buildings_final_demand_electricity_buildings_final_demand_for_space_heating_electricity_parent_share
-  message: "www.singstat.gov.sg/publications/reference/ebook/industry/energy-and-utilities"
 
 - fields:
   - number_of_buildings

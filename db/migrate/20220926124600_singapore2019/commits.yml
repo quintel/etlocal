@@ -30,6 +30,7 @@
   - transport_road_mixer_diesel_transport_car_using_diesel_mix_parent_share
   - transport_road_mixer_diesel_transport_van_using_diesel_mix_parent_share
   - transport_road_mixer_diesel_transport_bus_using_diesel_mix_parent_share
+  - transport_road_mixer_diesel_transport_truck_using_diesel_mix_parent_share
   - transport_final_demand_for_road_electricity_transport_car_using_electricity_parent_share
   - transport_final_demand_for_road_electricity_transport_van_using_electricity_parent_share
   - transport_final_demand_for_road_electricity_transport_bus_using_electricity_parent_share
@@ -189,7 +190,7 @@
 - fields:
   - file_carriers_imported_electricity_co2_conversion_per_mj
   message:
-    "https://www.nccs.gov.sg/singapores-climate-action/power-generation/"
+    "Set to 0.0"
 
 - fields:
   - co2_emission_1990
@@ -313,20 +314,6 @@
   - industry_final_demand_for_other_food_electricity_industry_other_food_heater_electricity_parent_share
   - industry_final_demand_for_other_paper_electricity_industry_useful_demand_for_other_paper_electricity_parent_share
   - industry_final_demand_for_other_paper_electricity_industry_other_paper_heater_electricity_parent_share
-  message:
-    "No data available, based on 'dummy data'."
-
-- fields:
-  - buildings_final_demand_electricity_buildings_final_demand_for_space_heating_electricity_parent_share
-  - buildings_final_demand_network_gas_buildings_final_demand_for_appliances_network_gas_parent_share
-  - number_of_buildings
-  - buildings_roof_surface_available_for_pv
-  - number_of_cars
-  - transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share
-  - total_land_area
-  - number_of_inhabitants
-  - residences_roof_surface_available_for_pv
-  - input_industry_metal_aluminium_production
   - households_final_demand_electricity_households_final_demand_for_cooking_electricity_parent_share
   - households_final_demand_electricity_households_final_demand_for_cooling_electricity_parent_share
   - households_final_demand_electricity_households_final_demand_for_hot_water_electricity_parent_share
@@ -347,9 +334,56 @@
   - households_final_demand_coal_households_final_demand_for_hot_water_coal_parent_share
   - households_final_demand_coal_households_final_demand_for_space_heating_coal_parent_share
   - buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_hybrid_heatpump_air_water_electricity_parent_share
-  - transport_road_mixer_diesel_transport_truck_using_diesel_mix_parent_share
   message:
-    "WIP"
+    "No data available, based on 'dummy data'."
+
+- fields:
+  - buildings_final_demand_network_gas_buildings_final_demand_for_appliances_network_gas_parent_share
+  message: "www.singstat.gov.sg/publications/reference/ebook/industry/energy-and-utilities"
+
+- fields:
+  - total_land_area
+  message: "www.singstat.gov.sg/find-data/search-by-theme/society/environment/latest-data"
+
+- fields:
+  - number_of_inhabitants
+  message: "www.singstat.gov.sg/find-data/search-by-theme/population/population-and-population-structure/latest-data"
+
+- fields:
+  - number_of_inhabitants
+  message: "Split for electricity distribution is provided by the Building and Construction Authority's Super Low Energy Building Technology Roadmap, Figure 3: https://www1.bca.gov.sg/docs/default-source/docs-corp-buildsg/sustainability/sle_tech_roadmap71ca8c3032b240b9b37b02961ebe6f2b.pdf?sfvrsn=c171a1aa_0"
+
+- fields:
+  - buildings_final_demand_electricity_buildings_final_demand_for_space_heating_electricity_parent_share
+  message: "www.singstat.gov.sg/find-data/search-by-theme/population/population-and-population-structure/latest-data"
+
+- fields:
+  - buildings_final_demand_electricity_buildings_final_demand_for_space_heating_electricity_parent_share
+  message: "www.singstat.gov.sg/publications/reference/ebook/industry/energy-and-utilities"
+
+- fields:
+  - number_of_buildings
+  message: "tablebuilder.singstat.gov.sg/table/TS/M601471, tablebuilder.singstat.gov.sg/table/TS/M890531"
+
+- fields:
+  - buildings_roof_surface_available_for_pv
+  message: "Update of the Solar PV Roadmap for Singapore: www.nccs.gov.sg/files/docs/default-source/default-document-library/Solar%20PV%20Roadmap%20for%20Singapore%202020.pdf"
+
+- fields:
+  - number_of_cars
+  message: "www.lta.gov.sg/content/ltagov/en/who_we_are/statistics_and_publications/statistics.html; Vehicle Population, General Vehicles, By Vehicle Type, Vehicle Statistics (yearly)."
+
+- fields:
+  - transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share
+  message: "See 8_transport_source_analysis - 2015 edit.xlsx, sheet SG - road transport for analysis. Major sources of information from https://data.gov.sg/group/transport and https://datamall.lta.gov.sg/content/datamall/en/static-data.html#Public%20Transport."
+
+- fields:
+  - residences_roof_surface_available_for_pv
+  message: "Update of the Solar PV Roadmap for Singapore: www.nccs.gov.sg/files/docs/default-source/default-document-library/Solar%20PV%20Roadmap%20for%20Singapore%202020.pdf"
+
+- fields:
+  - input_industry_metal_aluminium_production
+  message: "Singapore's Fourth Biennial Update Report to the UNFCCC: https://www.nea.gov.sg/docs/default-source/our-services/climate-change/singapore's-fourth-biennial-update-report-2020.pdf"
 
 
 

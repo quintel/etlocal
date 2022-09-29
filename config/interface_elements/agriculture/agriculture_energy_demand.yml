@@ -3,29 +3,29 @@ key: agriculture_energy_demand
 groups:
   - header: agriculture_final_demand
     items:
-      - key: input_agriculture_final_demand_electricity_demand
+      - key: agriculture_final_demand_electricity_demand
         unit: 'TJ'
         entso: |
           EB("Final consumption - other sectors - agriculture and forestry - energy use", "Electricity")
-      - key: input_agriculture_final_demand_network_gas_demand
+      - key: agriculture_final_demand_network_gas_demand
         unit: 'TJ'
         entso: |
           EB("Final consumption - other sectors - agriculture and forestry - energy use", "Network gas")
-      - key: input_agriculture_final_demand_steam_hot_water_demand
+      - key: agriculture_final_demand_steam_hot_water_demand
         unit: 'TJ'
         entso: |
           EB("Final consumption - other sectors - agriculture and forestry - energy use", "Heat")
-      - key: input_agriculture_final_demand_wood_pellets_demand
+      - key: agriculture_final_demand_wood_pellets_demand
         unit: 'TJ'
         entso: |
           EB("Final consumption - other sectors - agriculture and forestry - energy use", "Primary solid biofuels")
         # this one should have 'input_' in front, in order for the etsource spec to succeed
         # should also create / add this key-change to the migration
-      - key: input_agriculture_final_demand_crude_oil_demand
+      - key: agriculture_final_demand_crude_oil_demand
         unit: 'TJ'
         entso: |
           EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil")
-      - key: input_agriculture_final_demand_hydrogen_demand
+      - key: agriculture_final_demand_hydrogen_demand
         unit: 'TJ'
         entso: 0.0
 

@@ -12,23 +12,18 @@ groups:
           EB("Coal conventional", "Electricity")
       - key: input_energy_power_combined_cycle_coal_production
         unit: 'TJ'
-        entso: 0.0
       - key: input_energy_power_ultra_supercritical_cofiring_coal_production
         unit: 'TJ'
-        entso: 0.0
       - key: input_energy_power_combined_cycle_ccs_coal_production
         unit: 'TJ'
-        entso: 0.0
       - key: input_energy_power_ultra_supercritical_ccs_coal_production
         unit: 'TJ'
-        entso: 0.0
       - key: input_energy_chp_ultra_supercritical_coal_production
         unit: 'TJ'
         entso: |
           EB("Coal plant for district heat (CHP)", "Electricity")
       - key: input_energy_chp_ultra_supercritical_cofiring_coal_production
         unit: 'TJ'
-        entso: 0.0
       - key: input_energy_power_ultra_supercritical_lignite_production
         unit: 'TJ'
         entso: |
@@ -39,7 +34,6 @@ groups:
           EB("Lignite plant for district heat (CHP)", "Electricity")
       - key: input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production
         unit: 'TJ'
-        entso: 0.0
 
   - header: energy_electricity_gas
     items:
@@ -53,14 +47,12 @@ groups:
           EB("Gas turbine", "Electricity")
       - key: input_energy_power_engine_network_gas_production
         unit: 'TJ'
-        entso: 0.0
       - key: input_energy_power_combined_cycle_network_gas_production
         unit: 'TJ'
         entso: |
           EB("Gas CCGT", "Electricity")
       - key: input_energy_power_combined_cycle_ccs_network_gas_production
         unit: 'TJ'
-        entso: 0.0
       - key: input_energy_chp_combined_cycle_network_gas_production
         unit: 'TJ'
         entso: |
@@ -78,11 +70,9 @@ groups:
           EB("Nuclear conventional", "Electricity")
       - key: input_energy_power_nuclear_gen3_uranium_oxide_production
         unit: 'TJ'
-        entso: 0.0
       - key: input_energy_power_ultra_supercritical_crude_oil_production
         unit: 'TJ'
         entso: |
           EB("Oil-fired plant", "Electricity")
       - key: input_energy_power_engine_diesel_production
         unit: 'TJ'
-        entso: 0.0

@@ -16,14 +16,12 @@ groups:
           EB("Waste heater", "Heat")
       - key: input_energy_heat_burner_hydrogen_production
         unit: 'TJ'
-        entso: 0.0
       - key: input_energy_heat_solar_thermal_production
         unit: 'TJ'
         entso: |
           EB("Solar thermal", "Heat")
       - key: input_energy_heat_heatpump_water_water_electricity_production
         unit: 'TJ'
-        entso: 0.0
         
   - header: energy_heat_fossil
     items:

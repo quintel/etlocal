@@ -1,0 +1,19 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - energy_extraction_uranium_oxide_demand
+  - agriculture_final_demand_hydrogen_demand
+  - input_energy_heat_burner_hydrogen_production
+  - input_energy_heat_heatpump_water_water_electricity_production
+  - input_energy_power_wind_turbine_coastal_production
+  - input_energy_power_supercritical_ccs_waste_mix_production
+  - input_energy_power_geothermal_production
+  - input_industry_chemical_fertilizers_hydrogen_non_energetic_demand
+  - input_industry_chemical_refineries_wood_pellets_non_energetic_demand
+  - input_industry_chemical_refineries_network_gas_non_energetic_demand
+  - input_industry_chemical_refineries_coal_non_energetic_demand
+  - transport_final_demand_hydrogen_demand
+  - transport_final_demand_for_road_lng_demand
+  - transport_final_demand_for_road_bio_lng_demand
+  message:
+    "No data available, set to 0.0"

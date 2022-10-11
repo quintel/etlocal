@@ -27,7 +27,6 @@ groups:
           EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil")
       - key: agriculture_final_demand_hydrogen_demand
         unit: 'TJ'
-        entso: 0.0
 
   - header: agriculture_final_demand_crude_oil_input
     type: slider

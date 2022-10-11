@@ -13,13 +13,10 @@ groups:
         EB("Transformation input - refineries and petrochemical industry - refinery intake - energy use", "Other hydrocarbons")
     - key: input_industry_chemical_refineries_wood_pellets_non_energetic_demand
       unit: 'TJ'
-      entso: 0.0
     - key: input_industry_chemical_refineries_network_gas_non_energetic_demand
       unit: 'TJ'
-      entso: 0.0
     - key: input_industry_chemical_refineries_coal_non_energetic_demand
       unit: 'TJ'
-      entso: 0.0
 
   - header: industry_refinery_demand_energetic
     items:

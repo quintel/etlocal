@@ -20,4 +20,3 @@ groups:
           EB("Primary production", "Natural gas")
       - key: energy_extraction_uranium_oxide_demand
         unit: 'TJ'
-        entso: 0.0

@@ -14,7 +14,7 @@
   - input_energy_power_nuclear_gen3_uranium_oxide_electricity_output_conversion
   - input_energy_heat_burner_hydrogen_steam_hot_water_output_conversion
   message:
-    "No data available in the Energy Balance, number is based on NL2019."
+    "No data available in the Energy Balance, number is based on NL2015."
 
 - fields:
   - input_energy_power_combined_cycle_coal_production

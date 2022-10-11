@@ -1,0 +1,45 @@
+---
+- fields:
+  - input_energy_power_ultra_supercritical_ccs_coal_electricity_output_conversion
+  - input_energy_power_ultra_supercritical_cofiring_coal_electricity_output_conversion
+  - input_energy_power_combined_cycle_coal_electricity_output_conversion
+  - input_energy_power_combined_cycle_ccs_coal_electricity_output_conversion
+  - input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_electricity_output_conversion
+  - input_energy_chp_ultra_supercritical_cofiring_coal_electricity_output_conversion
+  - input_energy_chp_ultra_supercritical_cofiring_coal_steam_hot_water_output_conversion
+  - input_energy_power_combined_cycle_ccs_network_gas_electricity_output_conversion
+  - input_energy_power_engine_network_gas_electricity_output_conversion
+  - input_energy_power_engine_diesel_electricity_output_conversion
+  - input_energy_power_supercritical_ccs_waste_mix_electricity_output_conversion
+  - input_energy_power_nuclear_gen3_uranium_oxide_electricity_output_conversion
+  - input_energy_heat_burner_hydrogen_steam_hot_water_output_conversion
+  message:
+    "No data available in the Energy Balance, number is based on NL2015."
+
+- fields:
+  - input_energy_power_combined_cycle_coal_production
+  - input_energy_power_ultra_supercritical_cofiring_coal_production
+  - input_energy_power_combined_cycle_ccs_coal_production
+  - input_energy_power_ultra_supercritical_ccs_coal_production
+  - input_energy_chp_ultra_supercritical_cofiring_coal_production
+  - input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production
+  - input_energy_power_engine_network_gas_production
+  - input_energy_power_combined_cycle_ccs_network_gas_production
+  - input_energy_power_nuclear_gen3_uranium_oxide_production
+  - input_energy_power_engine_diesel_production
+  - energy_extraction_uranium_oxide_demand
+  - agriculture_final_demand_hydrogen_demand
+  - input_energy_heat_burner_hydrogen_production
+  - input_energy_heat_heatpump_water_water_electricity_production
+  - input_energy_power_wind_turbine_coastal_production
+  - input_energy_power_supercritical_ccs_waste_mix_production
+  - input_energy_power_geothermal_production
+  - input_industry_chemical_fertilizers_hydrogen_non_energetic_demand
+  - input_industry_chemical_refineries_wood_pellets_non_energetic_demand
+  - input_industry_chemical_refineries_network_gas_non_energetic_demand
+  - input_industry_chemical_refineries_coal_non_energetic_demand
+  - transport_final_demand_hydrogen_demand
+  - transport_final_demand_for_road_lng_demand
+  - transport_final_demand_for_road_bio_lng_demand
+  message:
+    "No data available in the Energy Balance, set to 0.0"

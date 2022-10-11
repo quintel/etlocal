@@ -60,3 +60,6 @@ yarn-debug.log*
 
 # Ignore Mac specific files
 .DS_Store
+
+# Ignore pycache
+__pycache__

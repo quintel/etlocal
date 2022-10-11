@@ -1,6 +1,6 @@
-class TholenUpdate2019Step2 < ActiveRecord::Migration[5.0]
+class TholenUpdate2019Step1 < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20221010130338_tholen_update_2019_step_2')
+    directory    = Rails.root.join('db/migrate/20221011122701_tholen_update_2019_step_1')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

@@ -18,7 +18,8 @@ groups:
           EB("Final consumption - industry sector - metal aluminium - energy use", "Electricity") -
           EB("Final consumption - industry sector - metal other - energy use", "Electricity") -
           EB("Final consumption - industry sector - food, beverages and tobacco - energy use", "Electricity") -
-          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Electricity")
+          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Electricity") -
+          EB("Final consumption - industry sector - information and communication - energy use", "Electricity")
 
       - key: input_industry_other_network_gas_demand
         unit: 'TJ'
@@ -35,7 +36,8 @@ groups:
           EB("Final consumption - industry sector - metal aluminium - energy use", "Network gas") -
           EB("Final consumption - industry sector - metal other - energy use", "Network gas") -
           EB("Final consumption - industry sector - food, beverages and tobacco - energy use", "Network gas") -
-          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Network gas")
+          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Network gas") -
+          EB("Final consumption - industry sector - information and communication - energy use", "Network gas")
       - key: input_industry_other_steam_hot_water_demand
         unit: 'TJ'
         entso: |
@@ -51,7 +53,8 @@ groups:
           EB("Final consumption - industry sector - metal aluminium - energy use", "Heat") -
           EB("Final consumption - industry sector - metal other - energy use", "Heat") -
           EB("Final consumption - industry sector - food, beverages and tobacco - energy use", "Heat") -
-          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Heat")
+          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Heat") -
+          EB("Final consumption - industry sector - information and communication - energy use", "Heat")
       - key: input_industry_other_wood_pellets_demand
         unit: 'TJ'
         entso: |
@@ -67,7 +70,8 @@ groups:
           EB("Final consumption - industry sector - metal aluminium - energy use", "Primary solid biofuels") -
           EB("Final consumption - industry sector - metal other - energy use", "Primary solid biofuels") -
           EB("Final consumption - industry sector - food, beverages and tobacco - energy use", "Primary solid biofuels") -
-          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Primary solid biofuels")
+          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Primary solid biofuels") -
+          EB("Final consumption - industry sector - information and communication - energy use", "Primary solid biofuels")
       - key: input_industry_other_crude_oil_demand
         unit: 'TJ'
         entso: |
@@ -83,7 +87,8 @@ groups:
           EB("Final consumption - industry sector - metal aluminium - energy use", "Oil") -
           EB("Final consumption - industry sector - metal other - energy use", "Oil") -
           EB("Final consumption - industry sector - food, beverages and tobacco - energy use", "Oil") -
-          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Oil")
+          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Oil") -
+          EB("Final consumption - industry sector - information and communication - energy use", "Oil")
       - key: input_industry_other_coal_demand
         unit: 'TJ'
         entso: |
@@ -99,7 +104,8 @@ groups:
           EB("Final consumption - industry sector - metal aluminium - energy use", "Coal incl lignite and peat") -
           EB("Final consumption - industry sector - metal other - energy use", "Coal incl lignite and peat") -
           EB("Final consumption - industry sector - food, beverages and tobacco - energy use", "Coal incl lignite and peat") -
-          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Coal incl lignite and peat") - (
+          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Coal incl lignite and peat") -
+          EB("Final consumption - industry sector - information and communication - energy use", "Coal incl lignite and peat") - (
           EB("Final consumption - industry sector - energy use", "Coke oven coke") +
           EB("Energy sector - energy use", "Coke oven coke") -
           EB("Energy sector - electricity and heat generation - energy use", "Coke oven coke") -
@@ -112,7 +118,8 @@ groups:
           EB("Final consumption - industry sector - metal aluminium - energy use", "Coke oven coke") -
           EB("Final consumption - industry sector - metal other - energy use", "Coke oven coke") -
           EB("Final consumption - industry sector - food, beverages and tobacco - energy use", "Coke oven coke") -
-          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Coke oven coke") )
+          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Coke oven coke") -
+          EB("Final consumption - industry sector - information and communication - energy use", "Coke oven coke") )
       - key: input_industry_other_cokes_demand
         unit: 'TJ'
         entso: |

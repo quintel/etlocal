@@ -46,3 +46,10 @@ groups:
     - key: file_carriers_imported_heat_co2_conversion_per_mj
       unit: 'kg/MJ'
       precision: 4
+    - key: file_carriers_imported_hydrogen_co2_conversion_per_mj
+      unit: 'kg/MJ'
+      precision: 4
+    - key: file_carriers_imported_ammonia_co2_conversion_per_mj
+      unit: 'kg/MJ'
+      precision: 4
+

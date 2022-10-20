@@ -47,6 +47,7 @@ nl:
         file_carriers_imported_electricity_co2_conversion_per_mj: Geïmporteerde elektriciteit
         file_carriers_imported_heat_co2_conversion_per_mj: Geïmporteerde warmte
         file_carriers_imported_hydrogen_co2_conversion_per_mj: Geïmporteerde waterstof
+        file_carriers_imported_ammonia_co2_conversion_per_mj: Geïmporteerde ammoniak
         file_carriers_kerosene_co2_conversion_per_mj: Kerosine
         file_carriers_lignite_co2_conversion_per_mj: Bruinkool
         file_carriers_lng_co2_conversion_per_mj: LNG

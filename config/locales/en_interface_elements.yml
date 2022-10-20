@@ -42,6 +42,7 @@ en:
         file_carriers_imported_electricity_co2_conversion_per_mj: Imported electricity
         file_carriers_imported_heat_co2_conversion_per_mj: Imported heat
         file_carriers_imported_hydrogen_co2_conversion_per_mj: Imported hydrogen
+        file_carriers_imported_ammonia_co2_conversion_per_mj: Imported ammonia
         file_carriers_kerosene_co2_conversion_per_mj: Kerosene
         file_carriers_lignite_co2_conversion_per_mj: Lignite
         file_carriers_lng_co2_conversion_per_mj: LNG

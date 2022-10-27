@@ -1,6 +1,6 @@
 class Res02Drechtsteden < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20190403142808_res02_drechtsteden')
+    directory    = Rails.root.join('db/migrate/20221027154434_res02_drechtsteden')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []
@@ -18,13 +18,14 @@ class Res02Drechtsteden < ActiveRecord::Migration[5.0]
       commits = runner.call
 
       if commits.any?
-        datasets.push(commits.first.dataset)
+        datasets.push(find_dataset(commits))
         puts 'done!'
       else
         puts 'nothing to change!'
       end
     end
 
+    sleep(1)
     puts
     puts "Updated #{datasets.length} datasets with the following IDs:"
     puts "  #{datasets.map(&:id).join(',')}"
@@ -32,5 +33,11 @@ class Res02Drechtsteden < ActiveRecord::Migration[5.0]
 
   def self.down
     raise ActiveRecord::IrreversibleMigration
+  end
+
+  def find_dataset(commits)
+    commits.each do |commit|
+      return commit.dataset if commit&.dataset
+    end
   end
 end

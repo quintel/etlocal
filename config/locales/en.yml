@@ -107,6 +107,7 @@ en:
     dk: Denemark
     es: Spain
     ee: Estonia
+    eu27: European Union (27 countries)
     fi: Finland
     fr: France
     el: Greece
@@ -117,10 +118,12 @@ en:
     lt: Lithuania
     lu: Luxemburg
     lv: Latvia
+    mt: Malta
     pl: Poland
     pt: Portugal
     ro: Romania
     se: Sweden
+    sg: Singapore
     si: Slovenia
     any: All countries
 

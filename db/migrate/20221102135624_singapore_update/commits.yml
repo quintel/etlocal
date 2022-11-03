@@ -1,0 +1,11 @@
+---
+- fields:
+  - interconnector_capacity
+  message:
+    "No interconnector capacity present in Singapore, changed based on data provided by W+B"
+
+- fields:
+  - energy_power_combined_cycle_network_gas_full_load_hours
+  - input_solar_panels_roofs_and_parks_full_load_hours
+  message:
+    "Changed based on data provided by W+B"

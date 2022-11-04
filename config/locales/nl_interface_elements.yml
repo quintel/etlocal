@@ -510,9 +510,9 @@ nl:
         industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
         industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
         industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share: "Geen restwarmte"
-        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
-        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
-        industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_used_heat_parent_share: "Geen restwarmte"
+        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
+        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
+        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_used_heat_parent_share: "Geen restwarmte"
         industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share: "Restwarmte uit servers"
         industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: "Geen restwarmte"
 

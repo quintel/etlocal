@@ -233,6 +233,10 @@ groups:
           IF(EB("Biomass CHP - industrial", "Primary solid biofuels") > 0.0,
           -> { EB("Biomass CHP - industrial", "Heat") / EB("Biomass CHP - industrial", "Primary solid biofuels") * 100 },
           -> { 83.5 }) 
+      - key: input_industry_chp_turbine_hydrogen_electricity_output_conversion
+        unit: '%'
+      - key: input_industry_chp_turbine_hydrogen_steam_hot_water_output_conversion
+        unit: '%'  
 
   - header: energy_efficiency_heat_plants
     items:
@@ -286,6 +290,8 @@ groups:
           IF(EB("Oil heater - industrial", "Oil") > 0.0,
           -> { EB("Oil heater - industrial", "Heat") / EB("Oil heater - industrial", "Oil") * 100 },
           -> { 72.0 })
+      - key: input_industry_heat_burner_hydrogen_steam_hot_water_output_conversion
+        unit: '%'
 
 
 

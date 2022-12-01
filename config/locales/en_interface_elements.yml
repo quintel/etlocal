@@ -337,6 +337,10 @@ en:
         input_percentage_of_bio_oil_agriculture_final_demand_crude_oil: Other bio oil
         input_percentage_of_crude_oil_agriculture_final_demand_crude_oil: Other oil
 
+        agriculture_chp_engine_network_gas_dispatchable_demand: Gas motor CHP
+        agriculture_chp_engine_biogas_demand: Biogas CHP
+        agriculture_chp_wood_pellets_demand: Biomass CHP
+
         # industry
         industry_chp_combined_cycle_gas_power_fuelmix_demand: Gas CHP
         industry_chp_engine_gas_power_fuelmix_demand: Gas motor CHP
@@ -594,8 +598,8 @@ en:
         input_energy_power_engine_network_gas_production: Gas combustion engine
         input_energy_power_combined_cycle_network_gas_production: Gas CCGT
         input_energy_power_combined_cycle_ccs_network_gas_production: Gas CCGT with CCS
-        input_energy_chp_combined_cycle_network_gas_production: Gas plant (large-scale) with heat production (CHP)
-        input_energy_chp_local_engine_network_gas_production: Gas plant (small-scale) with heat production (CHP)
+        input_energy_chp_combined_cycle_network_gas_production: Gas CHP (large-scale) with heat production (CHP)
+        input_energy_chp_local_engine_network_gas_production: Gas CHP (small-scale) with heat production (CHP)
 
         input_energy_power_nuclear_gen2_uranium_oxide_production: 2nd generation nuclear power plant
         input_energy_power_nuclear_gen3_uranium_oxide_production: 3rd generation nuclear power plant
@@ -630,8 +634,8 @@ en:
         energy_power_combined_cycle_network_gas_full_load_hours: Gas CCGT
         energy_power_ultra_supercritical_network_gas_full_load_hours: Gas conventional
         energy_power_turbine_network_gas_full_load_hours: Gas turbine
-        energy_chp_local_engine_network_gas_full_load_hours: Gas CHP (small-scale)
-        energy_chp_combined_cycle_network_gas_full_load_hours: Gas CHP (large-scale)
+        energy_chp_local_engine_network_gas_full_load_hours: Gas motor CHP (small-scale)
+        energy_chp_combined_cycle_network_gas_full_load_hours: Gas CCGT CHP (large-scale)
         energy_power_supercritical_coal_full_load_hours: Coal conventional
         energy_power_engine_diesel_full_load_hours: Diesel generator
         energy_power_engine_network_gas_full_load_hours: Gas combustion engine
@@ -661,11 +665,15 @@ en:
         industry_chp_engine_gas_power_fuelmix_full_load_hours: Gas motor CHP - industry
         industry_chp_combined_cycle_gas_power_fuelmix_full_load_hours: Gas CHP (CCGT) - industry
         industry_chp_ultra_supercritical_coal_full_load_hours: Coal CHP - industry
-        industry_chp_wood_pellets_full_load_hours: Biomass CHP- industry
+        industry_chp_wood_pellets_full_load_hours: Biomass CHP - industry
         industry_heat_burner_lignite_full_load_hours: Lignite heater - industry
         industry_heat_burner_coal_full_load_hours: Coal heater - industry
         industry_heat_burner_crude_oil_full_load_hours: Oil heater - industry
         flh_solar_pv_solar_radiation_max: Solar panels (roofs and ground-mount)
+        agriculture_chp_wood_pellets_full_load_hours: Biomass CHP - agriculture
+        agriculture_chp_engine_biogas_full_load_hours: Biogas CHP - agriculture
+        agriculture_chp_engine_network_gas_dispatchable_full_load_hours: Gas motor CHP - agriculture
+
 
         fuel_production_coal_demand: Coal
         fuel_production_lignite_demand: Lignite
@@ -705,10 +713,10 @@ en:
         input_industry_heat_burner_crude_oil_steam_hot_water_output_conversion: Oil-fired heater (industry)
         input_industry_heat_burner_hydrogen_steam_hot_water_output_conversion: Hydrogen heater (industry)
 
-        input_energy_chp_local_engine_network_gas_electricity_output_conversion: Gas CHP (small-scale) - electrical efficiency
+        input_energy_chp_local_engine_network_gas_electricity_output_conversion: Gas motor CHP (small-scale) - electrical efficiency
         input_energy_chp_local_engine_biogas_electricity_output_conversion: Biogas CHP - electrical efficiency
         input_energy_chp_local_wood_pellets_electricity_output_conversion: Biomass CHP - electrical efficiency
-        input_energy_chp_combined_cycle_network_gas_electricity_output_conversion: Gas CHP (large-scale) - electrical efficiency
+        input_energy_chp_combined_cycle_network_gas_electricity_output_conversion: Gas CCGT CHP (large-scale) - electrical efficiency
         input_energy_chp_ultra_supercritical_cofiring_coal_electricity_output_conversion: Co-firing coal CHP - electrical efficiency
         input_energy_chp_ultra_supercritical_coal_electricity_output_conversion: Coal CHP - electrical efficiency
         input_energy_chp_ultra_supercritical_lignite_electricity_output_conversion: Lignite CHP - electrical efficiency
@@ -719,11 +727,12 @@ en:
         input_industry_chp_ultra_supercritical_coal_electricity_output_conversion: Coal CHP (industry) - electrical efficiency
         input_industry_chp_wood_pellets_electricity_output_conversion: Biomass CHP (industry) - electrical efficiency
         input_industry_chp_turbine_hydrogen_electricity_output_conversion: Hydrogen turbine CHP (industry) - electrical efficiency
+        input_agriculture_chp_engine_network_gas_dispatchable_electricity_output_conversion: Gas motor CHP (agriculture) - electrical efficiency
 
-        input_energy_chp_local_engine_network_gas_steam_hot_water_output_conversion: Gas plant (small-scale) - heat efficiency
+        input_energy_chp_local_engine_network_gas_steam_hot_water_output_conversion: Gas motor CHP (small-scale) - heat efficiency
         input_energy_chp_local_engine_biogas_steam_hot_water_output_conversion: Biogas CHP - heat efficiency
         input_energy_chp_local_wood_pellets_steam_hot_water_output_conversion: Biomass CHP - heat efficiency
-        input_energy_chp_combined_cycle_network_gas_steam_hot_water_output_conversion: Gas plant (large-scale) - heat efficiency
+        input_energy_chp_combined_cycle_network_gas_steam_hot_water_output_conversion: Gas CCGT CHP (large-scale) - heat efficiency
         input_energy_chp_ultra_supercritical_cofiring_coal_steam_hot_water_output_conversion: Co-firing coal CHP - heat efficiency
         input_energy_chp_ultra_supercritical_coal_steam_hot_water_output_conversion: Coal CHP - heat efficiency
         input_energy_chp_ultra_supercritical_lignite_steam_hot_water_output_conversion: Lignite CHP - heat efficiency
@@ -734,6 +743,7 @@ en:
         input_industry_chp_ultra_supercritical_coal_steam_hot_water_output_conversion: Coal CHP (industry) - heat efficiency
         input_industry_chp_wood_pellets_steam_hot_water_output_conversion: Biomass CHP (industry) - heat efficiency
         input_industry_chp_turbine_hydrogen_steam_hot_water_output_conversion: Hydrogen turbine CHP (industry) - heat efficiency
+        input_agriculture_chp_engine_network_gas_dispatchable_steam_hot_water_output_conversion: Gas motor CHP (agriculture) - heat efficiency
 
         #Other
         other_final_demand_electricity_demand: Electricity

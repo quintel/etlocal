@@ -86,6 +86,10 @@ en:
       agriculture_energy_demand: |
         In this section you will find information about the energy use of the agricultural
         sector in this area.
+      agriculture_heat_chp: |
+        In this tab you can see how much energy is used for Combined Heat and Power (CHP) in agriculture. 
+        These are collective or central heating appliances that supply steam or heat to agricultural companies.
+        The demand for heat can be found in the tab "Energy demand".
       industry: |
         In this section you will find information about the industry sector in this area.
       industry_steel: |
@@ -202,6 +206,10 @@ en:
       agriculture_final_demand_crude_oil_input: |
         The composition below describes the different types of oil that fuel oil-fired heaters. Each percentage describes
         the share of this oil type in the total oil demand.
+      agriculture_heat: |
+        Below you can see how much fuel has been used per CHP type. More information about the various plant types can be found in the
+        <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/demand/agriculture/heat-network-sources">
+        Energy Transition Model</a>.
       households_final_demand_crude_oil_input: |
         Describes the mix of different oil types used in heating for households.
       households_housing_stock_distribution: |

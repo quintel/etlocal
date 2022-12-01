@@ -20,6 +20,7 @@ transport:
   - transport_plane_transport
 agriculture:
   - agriculture_energy_demand
+  - agriculture_heat_chp
 industry:
   - industry_steel
   - industry_aluminium

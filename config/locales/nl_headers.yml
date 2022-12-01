@@ -92,6 +92,7 @@ nl:
       # agriculture
       agriculture_final_demand: Eindgebruik
       agriculture_final_demand_crude_oil_input: Samenstelling olie
+      agriculture_heat: Gebruikte brandstof voor WKK en ketels
 
       # industry
       industry_heat: Gebruikte brandstof voor WKK en ketels

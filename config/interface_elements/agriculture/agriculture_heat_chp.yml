@@ -1,0 +1,11 @@
+key: agriculture_heat_chp
+
+groups:
+  - header: agriculture_heat
+    items:
+      - key: agriculture_chp_engine_network_gas_dispatchable_demand
+        unit: 'TJ'
+      - key: agriculture_chp_engine_biogas_demand
+        unit: 'TJ'
+      - key: agriculture_chp_wood_pellets_demand
+        unit: 'TJ'

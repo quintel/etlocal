@@ -54,6 +54,7 @@ en:
 
       agriculture:
         agriculture_energy_demand: Energy demand
+        agriculture_heat_chp: Heat and CHP
 
       buildings:
         buildings_energy_demand: Energy demand

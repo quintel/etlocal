@@ -23,6 +23,8 @@ groups:
         unit: 'TJ'
         entso: |
           EB("Biomass CHP - industrial", "Primary solid biofuels")
+      - key: industry_chp_turbine_hydrogen_demand
+        unit: 'TJ'
       - key: industry_heat_burner_lignite_demand
         unit: 'TJ'
         entso: |
@@ -39,6 +41,8 @@ groups:
         unit: 'TJ'
         entso: |
           EB("Oil heater - industrial", "Oil")
+      - key: industry_heat_burner_hydrogen_demand
+        unit: 'TJ'
 
   - header: industry_gas_fuelmix
     type: slider

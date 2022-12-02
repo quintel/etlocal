@@ -92,6 +92,8 @@ groups:
         unit: 'flh'
       - key: energy_chp_supercritical_waste_mix_full_load_hours
         unit: 'flh'
+      - key: industry_chp_turbine_hydrogen_full_load_hours
+        unit: 'flh'
 
   - header: energy_fossil_heat_full_load_hours
     items:
@@ -118,4 +120,7 @@ groups:
         unit: 'flh'
       - key: energy_heat_heatpump_water_water_electricity_full_load_hours
         unit: 'flh'
+      - key: industry_heat_burner_hydrogen_full_load_hours
+        unit: 'flh'
+
           

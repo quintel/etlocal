@@ -32,6 +32,11 @@ groups:
           entso: |
             EB("Final consumption - transport sector - domestic navigation - energy use", "Biogases") +
             EB("Final consumption - other sectors - fishing - energy use", "Biogases")
+        - key: input_transport_ship_bio_ethanol_demand
+          unit: 'TJ'
+          entso: |
+            EB("Final consumption - transport sector - domestic navigation - energy use", "Biogasoline") +
+            EB("Final consumption - other sectors - fishing - energy use", "Biogasoline")
         - key: transport_final_demand_heavy_fuel_oil_demand
           unit: 'TJ'
           entso: |

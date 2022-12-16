@@ -96,6 +96,28 @@ class AddChpsAgriculture < ActiveRecord::Migration[5.2]
 
           counter += 1
         end
+
+        ActiveRecord::Base.transaction do
+          commit = Commit.create!(
+            user_id: 4,
+            dataset_id: dataset.id,
+            message: 'New attribute (added to ETM in Dec 2022). Assumed that all agricultural heat is produced by local CHPs.'
+          )
+
+          DatasetEdit.create!(
+            commit_id: commit.id,
+            key: 'agriculture_final_demand_local_steam_hot_water_agriculture_final_demand_steam_hot_water_child_share',
+            value: 1.0
+          )
+
+          DatasetEdit.create!(
+            commit_id: commit.id,
+            key: 'agriculture_final_demand_central_steam_hot_water_agriculture_final_demand_steam_hot_water_child_share',
+            value: 0.0
+          )
+
+          counter += 1
+        end
       end
       counter
     end

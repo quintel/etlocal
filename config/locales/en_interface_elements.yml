@@ -334,6 +334,8 @@ en:
         input_percentage_of_bio_oil_agriculture_final_demand_crude_oil: Other bio oil
         input_percentage_of_crude_oil_agriculture_final_demand_crude_oil: Other oil
 
+        agriculture_final_demand_local_steam_hot_water_agriculture_final_demand_steam_hot_water_child_share: Local heat from CHPs
+        agriculture_final_demand_central_steam_hot_water_agriculture_final_demand_steam_hot_water_child_share: Heat from district heating network
         agriculture_chp_engine_network_gas_dispatchable_demand: Gas motor CHP
         agriculture_chp_engine_biogas_demand: Biogas CHP
         agriculture_chp_wood_pellets_demand: Biomass CHP

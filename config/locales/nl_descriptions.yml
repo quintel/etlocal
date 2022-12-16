@@ -85,9 +85,8 @@ nl:
       agriculture_energy_demand: |
         In deze sectie vind je informatie over de hoeveelheid energie die er gebruikt wordt door de landbouwsector.
       agriculture_heat_chp: |
-        In dit tabblad vind je informatie over hoeveel brandstof er gebruikt wordt door warmtekrachtkoppelingen (WKK) in de landbouw.
-        Het gaat om collectieve of centrale verwarmingsapparaten, die stoom of warmte leveren aan landbouwbedrijven. De vraag naar warmte
-        kan worden ingesteld in het tabblad "Energievraag".
+        In dit tabblad vind je informatie over waar de benodigde warmte vandaan komt en hoeveel brandstof er gebruikt wordt door warmtekrachtkoppelingen (WKK) in de landbouw.
+        De vraag naar warmte kan worden ingesteld in het tabblad "Energievraag".
       industry: |
         In deze sectie vind je informatie over de industriesector.
       industry_steel: |
@@ -211,8 +210,10 @@ nl:
       agriculture_final_demand_crude_oil_input: |
         De samenstelling hieronder beschrijft de aandelen van verschillende olietypes die gebruikt worden in olieketels.
         Ieder percentage staat voor het aandeel van dit type olie in het totale olieverbruik.
+      agriculture_heat_local_central: |
+        Hieroner zie je waar het benodigde finaal gebruik aan warmte in de landbouw vandaan komt: wordt het geproduceerd door lokale WKK's of wordt het geleverd door stadsverwarming?
       agriculture_heat: |
-        Hieronder staat per WKK-type angegeven hoeveel brandstof er is gebruikt. Meer informatie over de verschillende type ketels kun je vinden in het
+        Hieronder staat per WKK-type aangegeven hoeveel brandstof er is gebruikt. Meer informatie over de verschillende type ketels kun je vinden in het
         <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/demand/agriculture/heat-network-sources">
         Energietransitiemodel</a>.
       households_final_demand_crude_oil_input: |

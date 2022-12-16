@@ -1,0 +1,53 @@
+---
+- fields:
+  - agriculture_chp_wood_pellets_demand
+  - agriculture_final_demand_local_steam_hot_water_agriculture_final_demand_steam_hot_water_child_share
+  - agriculture_final_demand_central_steam_hot_water_agriculture_final_demand_steam_hot_water_child_share
+  message:
+    Geen gegevens beschikbaar op Klimaatmonitor
+
+- fields:
+  - input_agriculture_chp_engine_network_gas_dispatchable_electricity_output_conversion
+  - input_agriculture_chp_engine_network_gas_dispatchable_steam_hot_water_output_conversion
+  - input_agriculture_chp_engine_biogas_electricity_output_conversion
+  - input_agriculture_chp_engine_biogas_steam_hot_water_output_conversion
+  - input_agriculture_chp_wood_pellets_electricity_output_conversion
+  - input_agriculture_chp_wood_pellets_steam_hot_water_output_conversion
+  - agriculture_chp_engine_network_gas_dispatchable_full_load_hours
+  - agriculture_chp_wood_pellets_full_load_hours
+  - agriculture_chp_engine_biogas_full_load_hours
+  message:
+    Schatting Quintel o.b.v. de landelijke NL 2019 dataset
+
+- fields:
+  - buildings_final_demand_steam_hot_water_demand
+  message: |
+    Ingeschat o.b.v. Klimaatmonitor (2019), geproduceerde warmte uit WKO, biogas, biomassa en afval. Deze warmte kan ook ingezet worden voor de levering van stadswarmte aan woningen. Om dubbeltelling te voorkomen wordt de warmtevraag in de dienstensector naar beneden bijgesteld als er stadswarmte voor woningen aanwezig is in dit gebied. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=0cd61e23-94d0-4edf-ac96-67241c64d133. Zie 'Ontdubbeling stadsverwarming woningen en hernieuwbare warmte' in de 'Rapportage Energiegebruik' op Klimaatmonitor.
+
+- fields:
+  - agriculture_final_demand_electricity_demand
+  - agriculture_final_demand_network_gas_demand
+  - agriculture_final_demand_steam_hot_water_demand
+  message: |
+    Schatting Quintel. Geen data beschikbaar voor 2019. De schatting is gebaseerd op het totaal energie/elektriciteits/gasgebruik in de gemeente (zoals gerapporteerd door Klimaatmonitor) en/of op data uit voorgaande jaren. Zie: https://klimaatmonitor.databank.nl/Jive?workspace_guid=59c3f31c-ab95-420f-b592-5c90d934d2ef 
+    En: https://klimaatmonitor.databank.nl/Jive?workspace_guid=04e40306-c921-4a5f-8b2f-bdc258886267
+
+- fields:
+  - input_energy_chp_local_engine_biogas_production
+  message: | 
+    Klimaatmonitor (2019). Klimaatmonitor rapporteert een totale warmteproductie uit biogas, echter is het niet duidelijk waar deze warmte gebruikt wordt. Quintel heeft deze warmte verdeeld over het finaal gebruik van de landbouw- en dienstensector o.b.v. het gasverbruik van beide sectoren. De productiie van biogas WKKs wordt op dezelfde manier verdeeld over twee biogas WKKs in het ETM: deze WKK aan het warmtenet en een WKK in de landbouw. De hernieuwbare warmte uit biogas is leidend. De hernieuwbare elektriciteit kan daardoor afwijken van Klimaatmonitor omdat het ETM rekent met vaste efficiënties voor biogas-WKK's die mogelijk lokaal kunnen verschillen. https://klimaatmonitor.databank.nl/Jive?workspace_guid=0cd61e23-94d0-4edf-ac96-67241c64d133
+
+- fields:
+  - agriculture_chp_engine_network_gas_dispatchable_demand
+  message: |
+    Klimaatmonitor (2019). Wij splitsen het door Klimaatmonitor gerapporteerde gasverbruik uit naar eindgebruik en verbruik door WKK's op basis van Emissiegegevens van Emissieregistratie. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=0cd61e23-94d0-4edf-ac96-67241c64d133
+
+- fields:
+  - agriculture_chp_engine_biogas_demand
+  message: |
+    Klimaatmonitor (2019). Klimaatmonitor rapporteert een totale warmteproductie uit biogas, echter is het niet duidelijk waar deze warmte gebruikt wordt. Quintel heeft deze warmte verdeeld over het finaal gebruik van de landbouw- en dienstensector o.b.v. het gasverbruik van beide sectoren. De productiie van biogas WKKs wordt op dezelfde manier verdeeld over twee biogas WKKs in het ETM: deze WKK in de landbouw en een WKK aan het warmtenet. https://klimaatmonitor.databank.nl/Jive?workspace_guid=0cd61e23-94d0-4edf-ac96-67241c64d133
+
+- fields:
+  - input_energy_chp_local_engine_network_gas_production
+  message: | 
+    Geen gegevens beschikbaar op Klimaatmonitor. In eerdere versies van deze dataset werd hier de gasvraag van landbouw WKKs gezet. Door de toevoeging van landbouw WKKs aan het ETM in december 2022, zijn deze WKKs op nul gezet.

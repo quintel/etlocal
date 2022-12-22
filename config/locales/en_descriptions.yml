@@ -208,7 +208,7 @@ en:
         Below you can see the breakdown of housing types in your region.
       households_insulation: |
         These percentages indicate the heat demand reduction compared to a poorly insulated house (label G).
-        Have a look at our <a target="_blank" href="https://docs.energytransitionmodel.com/main/insulation">documentatie</a>
+        Have a look at our <a target="_blank" href="https://docs.energytransitionmodel.com/main/insulation">documentation</a>
         for more information on insulation.
       households_electricity_distribution: |
         Below you can see what percentage of total household electricity demand is used by these
@@ -248,7 +248,7 @@ en:
         these different cooling technologies.
       buildings_insulation: |
         These percentages indicate the heat demand reduction compared to a poorly insulated house (label G).
-        Have a look at our <a target="_blank" href="https://docs.energytransitionmodel.com/main/insulation">documentatie</a>
+        Have a look at our <a target="_blank" href="https://docs.energytransitionmodel.com/main/insulation">documentation</a>
         for more information on insulation.
       buildings_electricity_distribution: |
         Below you can see what percentage of total electricity demand is used by these applications.

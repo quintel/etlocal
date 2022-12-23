@@ -101,19 +101,19 @@ class AddChpsAgriculture < ActiveRecord::Migration[5.2]
           commit = Commit.create!(
             user_id: 4,
             dataset_id: dataset.id,
-            message: 'New attribute (added to ETM in Dec 2022). Assumed that all agricultural heat is produced by local CHPs.'
+            message: 'New attribute (added to ETM in Dec 2022). Assumed that all agricultural heat is produced by district heating.'
           )
 
           DatasetEdit.create!(
             commit_id: commit.id,
             key: 'agriculture_final_demand_local_steam_hot_water_agriculture_final_demand_steam_hot_water_child_share',
-            value: 1.0
+            value: 0.0
           )
 
           DatasetEdit.create!(
             commit_id: commit.id,
             key: 'agriculture_final_demand_central_steam_hot_water_agriculture_final_demand_steam_hot_water_child_share',
-            value: 0.0
+            value: 1.0
           )
 
           counter += 1

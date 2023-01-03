@@ -46,7 +46,7 @@ class Dataset < ApplicationRecord
   end
 
   def group
-    if geo_id =~ /^GM/ or geo_id =~ /^BEGM/
+    if geo_id =~ /^GM/ or geo_id =~ /^BEGM/ or geo_id =~ /^DKGM/
       'municipality'
     elsif geo_id =~ /^WK/
       'district'

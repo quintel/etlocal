@@ -1,0 +1,17 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - input_energy_chp_local_wood_pellets_production
+  - input_energy_chp_supercritical_waste_mix_production
+  - input_energy_chp_ultra_supercritical_coal_production
+  - input_energy_power_ultra_supercritical_crude_oil_production
+  - input_energy_heat_burner_crude_oil_production
+  - input_energy_heat_burner_network_gas_production
+  - input_energy_heat_heatpump_water_water_electricity_production
+  - input_energy_heat_burner_waste_mix_production
+  - input_energy_heat_burner_wood_pellets_production
+  - input_energy_chp_local_engine_biogas_production
+  - input_energy_chp_local_engine_network_gas_production
+  message:
+    "Concept dataset Arhus 2020."
+

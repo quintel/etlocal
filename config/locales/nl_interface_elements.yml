@@ -248,6 +248,9 @@ nl:
 
         # transport
         number_of_cars: Aantal auto's
+        number_of_vans: Aantal bestelbussen
+        number_of_trucks: Aantal vrachtwagens
+        number_of_busses: Aantal bussen
         input_transport_road_human_powered_bicycle_demand: Fietskilometers (niet-elektrisch)
 
         input_transport_road_gasoline_demand: Benzine

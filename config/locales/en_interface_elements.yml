@@ -243,6 +243,9 @@ en:
 
         # transport
         number_of_cars: Number of cars
+        number_of_vans: Number of vans
+        number_of_trucks: Number of trucks
+        number_of_busses: Number of buses
         input_transport_road_human_powered_bicycle_demand: Bicycle kilometres (non-electric)
 
         input_transport_road_gasoline_demand: Gasoline

@@ -1,0 +1,18 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - number_of_busses
+  message:
+    "Derived from Eurostat, online data code: ROAD_EQS_BUSVEH, total; year: 2019; author: Eurostat; link: https://ec.europa.eu/eurostat/databrowser/bookmark/d0d2aabd-c915-4276-9be3-6d18a399fc88?lang=en"
+
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - number_of_trucks
+  message:
+    "Derived from Eurostat, online data code: ROAD_EQS_LORMOT, variable: goods vehicles > 3.5 tonnes; year: 2019; author: Eurostat; link: https://ec.europa.eu/eurostat/databrowser/bookmark/20ae666c-9f6f-427b-b19a-5edb9167c95c?lang=en&page=time:2019"
+
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - number_of_vans
+  message:
+    "Derived from Eurostat, online data code: ROAD_EQS_LORMOT, variable: goods vehicles <= 3.5 tonnes; year: 2019; author: Eurostat; link: https://ec.europa.eu/eurostat/databrowser/bookmark/20ae666c-9f6f-427b-b19a-5edb9167c95c?lang=en&page=time:2019"

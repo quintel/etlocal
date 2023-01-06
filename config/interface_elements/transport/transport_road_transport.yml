@@ -4,6 +4,12 @@ groups:
       items:
       - key: number_of_cars
         unit: '#'
+      - key: number_of_vans
+        unit: '#'
+      - key: number_of_busses
+        unit: '#' 
+      - key: number_of_trucks
+        unit: '#'  
       - key: input_transport_road_human_powered_bicycle_demand
         unit: 'km'
 

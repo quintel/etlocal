@@ -1,0 +1,18 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - number_of_busses
+  message:
+    "Derived from Land Transport Authority, Buses: https://www.lta.gov.sg/content/dam/ltagov/who_we_are/statistics_and_publications/statistics/pdf/MVP01-1_MVP_by_type.pdf"
+
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - number_of_trucks
+  message:
+    "Derived from Land Transport Authority, Heavy Goods Vehicles (HGVs) and Very Heavy Goods Vehicles (VHGVs): https://www.lta.gov.sg/content/dam/ltagov/who_we_are/statistics_and_publications/statistics/pdf/MVP01-1_MVP_by_type.pdf"
+
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - number_of_vans
+  message:
+    "Derived from Land Transport Authority, Light Goods Vehicles (LGVs): https://www.lta.gov.sg/content/dam/ltagov/who_we_are/statistics_and_publications/statistics/pdf/MVP01-1_MVP_by_type.pdf"

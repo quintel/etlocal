@@ -21,7 +21,8 @@ blocks:
             - mkdir /tmp/junit-results
             - sem-service start mysql 8
             - cache restore
-            - bundle install --deployment --path vendor/bundle
+            - bundle config set --local deployment 'true'
+            - bundle install || (rm -rf vendor/bundle && cache clear && bundle install)
             - cache store
             - cat /dev/null > config/database.yml
             - bundle exec rails db:setup

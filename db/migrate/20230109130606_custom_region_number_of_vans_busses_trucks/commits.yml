@@ -1,0 +1,8 @@
+---
+- fields:
+  - number_of_busses
+  - number_of_vans
+  - number_of_trucks
+  message:
+    No data available for this region, set to zero.
+

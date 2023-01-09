@@ -1,0 +1,15 @@
+---
+- fields:
+  - number_of_busses
+  message:
+    Estimation done by Quintel. Scaling of national number of vehicles based on number of passenger kilometers of busses in this region.
+
+- fields:
+  - number_of_vans
+  message:
+    Estimation done by Quintel. Scaling of national number of vehicles based on number of freight tonne kilometers of vans in this region.
+
+- fields:
+  - number_of_trucks
+  message:
+    Estimation done by Quintel. Scaling of national number of vehicles based on number of freight tonne kilometers of trucks in this region.

@@ -1,11 +1,12 @@
 GIT
   remote: https://github.com/quintel/atlas.git
-  revision: cfa8b8c32b41146905b57c32feb24b5ddaa3c0dc
-  ref: cfa8b8c
+  revision: bb01d607ccb3f0c00febb0fe63275adc88027912
+  ref: bb01d60
   specs:
     atlas (1.0.0)
-      activemodel (>= 4.1.14.1)
-      activesupport (>= 4.1.14.1)
+      activemodel (>= 7)
+      activesupport (>= 7)
+      csv (>= 3)
       gpgme (~> 2.0)
       turbine-graph (>= 0.1)
       virtus (~> 1.0)
@@ -126,6 +127,7 @@ GEM
     crack (0.4.5)
       rexml
     crass (1.0.6)
+    csv (3.2.6)
     database_cleaner (2.0.1)
       database_cleaner-active_record (~> 2.0.0)
     database_cleaner-active_record (2.0.1)
@@ -224,7 +226,8 @@ GEM
       net-protocol
     netrc (0.11.0)
     nio4r (2.5.8)
-    nokogiri (1.13.10-arm64-darwin)
+    nokogiri (1.13.10)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.22.1)
@@ -478,7 +481,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 2.7.5p203
+   ruby 3.2.0p0
 
 BUNDLED WITH
    2.3.8

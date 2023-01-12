@@ -1,4 +1,4 @@
-ruby '~> 2.7.5'
+ruby '~> 3.2.0'
 
 source 'https://rubygems.org'
 
@@ -37,7 +37,7 @@ gem 'str_enum'
 gem 'git'
 
 gem 'transformer', ref: 'b1364cd', github: 'quintel/transformer'
-gem 'atlas',       ref: 'cfa8b8c', github: 'quintel/atlas'
+gem 'atlas',       ref: 'bb01d60', github: 'quintel/atlas'
 gem 'rubel',       ref: 'ad3d44e', github: 'quintel/rubel'
 gem 'refinery',    ref: '72eacf8', github: 'quintel/refinery'
 

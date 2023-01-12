@@ -9,14 +9,14 @@ end
 
 gem 'bootsnap', require: false
 
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder'
 gem 'jquery-rails', '>= 1.0.3'
 gem 'mysql2'
 gem 'puma'
-gem 'rails', '~> 5.2'
-gem 'rails-i18n', '~> 5.1'
-gem 'sass-rails', '~> 5.0'
-gem 'turbolinks', '~> 5'
+gem 'rails', '~> 7.0'
+gem 'rails-i18n'
+gem 'sass-rails'
+gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'http_accept_language'
 
@@ -31,7 +31,7 @@ gem 'tty-progressbar'
 gem 'remotipart', '~> 1.2'
 gem 'archive-zip', '~> 0.9.0'
 gem 'sentry-raven'
-gem 'deep_cloneable', '~> 2.3.0'
+gem 'deep_cloneable'
 gem 'str_enum'
 
 gem 'git'
@@ -60,10 +60,9 @@ group :test do
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '~> 3.0.5'
+  gem 'listen'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'web-console', '>= 3.3.0'
 
   gem 'rubocop'
   gem 'rubocop-performance'
@@ -71,6 +70,7 @@ group :development do
   gem 'rubocop-rspec'
 end
 
-gem 'mini_racer', '~> 0.4.0'
+gem 'mini_racer', '~> 0.6.3'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

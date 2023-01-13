@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Full load hours were copied from the value in the Dutch ETM dataset; year: 2019"

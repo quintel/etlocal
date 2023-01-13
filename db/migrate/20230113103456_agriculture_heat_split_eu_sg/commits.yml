@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Production by local CHPs is set to 0, therefore the share of heat demand is allocated fully to the central district heating network."

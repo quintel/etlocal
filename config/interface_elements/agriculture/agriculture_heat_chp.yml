@@ -1,0 +1,26 @@
+key: agriculture_heat_chp
+
+groups:
+  - header: agriculture_heat_local_central
+    type: slider
+    items:
+      - key: agriculture_final_demand_local_steam_hot_water_agriculture_final_demand_steam_hot_water_child_share
+        unit: '%'
+      - key: agriculture_final_demand_central_steam_hot_water_agriculture_final_demand_steam_hot_water_child_share
+        unit: '%'
+        flexible: true
+    
+  - header: agriculture_heat
+    items:
+      - key: agriculture_chp_engine_network_gas_dispatchable_demand
+        unit: 'TJ'
+        entso: |
+          EB("Gas motor CHP - agricultural", "Network gas")
+      - key: agriculture_chp_engine_biogas_demand
+        unit: 'TJ'
+        entso: |
+          EB("Biogas CHP - agricultural", "Biogases")
+      - key: agriculture_chp_wood_pellets_demand
+        unit: 'TJ'
+        entso: |
+          EB("Biomass CHP - agricultural", "Biogases")

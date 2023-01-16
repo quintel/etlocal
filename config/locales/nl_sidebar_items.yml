@@ -54,6 +54,7 @@ nl:
 
       agriculture:
         agriculture_energy_demand: Energievraag
+        agriculture_heat_chp: Warmte en WKK
 
       buildings:
         buildings_energy_demand: Energievraag

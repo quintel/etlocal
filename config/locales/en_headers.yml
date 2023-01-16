@@ -90,6 +90,8 @@ en:
       # agriculture
       agriculture_final_demand: Final demand
       agriculture_final_demand_crude_oil_input: Fuel for oil-fired heaters
+      agriculture_heat_local_central: Origin final demand heat
+      agriculture_heat: Fuel input for local CHPs
 
       # industry
       industry_heat: Fuel input for CHP

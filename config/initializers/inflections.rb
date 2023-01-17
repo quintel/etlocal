@@ -16,6 +16,7 @@
 # end
 
 ActiveSupport::Inflector.inflections(:en) do |inflect|
+  inflect.acronym('CSV')
   inflect.acronym('ENTSO')
   inflect.acronym('ETLocal')
 end

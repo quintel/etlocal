@@ -33,7 +33,7 @@ class DatasetImporter
 
   def destroy_old_values!
     # Delete all commits belonging to datasets owned by the Robot.
-    commits = Commit.select(:id)
+    commits = Commit.select(:id, :dataset_id)
       .includes(:dataset)
       .where(datasets: { user: User.robot })
 

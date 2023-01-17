@@ -155,7 +155,7 @@ describe DatasetsController do
       end
 
       it 'returns 404 Not Found' do
-        expect { response }.to raise_error(ActiveRecord::RecordNotFound, "Couldn't find Dataset")
+        expect { response }.to raise_error(ActiveRecord::RecordNotFound, /Couldn't find Dataset/)
       end
     end
 
@@ -170,7 +170,7 @@ describe DatasetsController do
 
       it 'returns 404 Not Found' do
         expect { response }
-          .to raise_error(ActiveRecord::RecordNotFound, "Couldn't find InterfaceElement")
+          .to raise_error(ActiveRecord::RecordNotFound, /Couldn't find InterfaceElement/)
       end
     end
 

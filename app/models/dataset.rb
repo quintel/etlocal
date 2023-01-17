@@ -108,7 +108,7 @@ class Dataset < ApplicationRecord
   #
   # Returns a string.
   def normalized_name
-    name.strip.mb_chars.normalize(:kd).to_s
+    I18n.transliterate(name.strip, locale: :en)
       .downcase.gsub(/[^0-9a-z_\s\-]/, '').gsub(/[\s_-]+/, '_')
   end
 

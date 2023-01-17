@@ -6,13 +6,10 @@ groups:
         unit: '#'
       - key: number_of_vans
         unit: '#'
-        skip_validation: true
       - key: number_of_busses
-        unit: '#' 
-        skip_validation: true
+        unit: '#'
       - key: number_of_trucks
-        unit: '#'  
-        skip_validation: true
+        unit: '#'
       - key: input_transport_road_human_powered_bicycle_demand
         unit: 'km'
 

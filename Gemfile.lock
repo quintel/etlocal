@@ -169,7 +169,7 @@ GEM
     git (1.13.0)
       addressable (~> 2.8)
       rchardet (~> 1.8)
-    globalid (1.0.0)
+    globalid (1.0.1)
       activesupport (>= 5.0)
     gpgme (2.0.22)
       mini_portile2 (~> 2.7)

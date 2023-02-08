@@ -730,6 +730,8 @@ en:
         input_industry_chp_wood_pellets_electricity_output_conversion: Biomass CHP (industry) - electrical efficiency
         input_industry_chp_turbine_hydrogen_electricity_output_conversion: Hydrogen turbine CHP (industry) - electrical efficiency
         input_agriculture_chp_engine_network_gas_dispatchable_electricity_output_conversion: Gas motor CHP (agriculture) - electrical efficiency
+        input_agriculture_chp_wood_pellets_electricity_output_conversion: Biomass CHP (agriculture) - electrical efficiency
+        input_agriculture_chp_engine_biogas_electricity_output_conversion: Biogas CHP (agriculture) - electrical efficiency
 
         input_energy_chp_local_engine_network_gas_steam_hot_water_output_conversion: Gas motor CHP (small-scale) - heat efficiency
         input_energy_chp_local_engine_biogas_steam_hot_water_output_conversion: Biogas CHP - heat efficiency
@@ -746,6 +748,8 @@ en:
         input_industry_chp_wood_pellets_steam_hot_water_output_conversion: Biomass CHP (industry) - heat efficiency
         input_industry_chp_turbine_hydrogen_steam_hot_water_output_conversion: Hydrogen turbine CHP (industry) - heat efficiency
         input_agriculture_chp_engine_network_gas_dispatchable_steam_hot_water_output_conversion: Gas motor CHP (agriculture) - heat efficiency
+        input_agriculture_chp_wood_pellets_steam_hot_water_output_conversion: Biomass CHP (agriculture) - heat efficiency
+        input_agriculture_chp_engine_biogas_steam_hot_water_output_conversion: Biogas CHP (agriculture) - heat efficiency
 
         #Other
         other_final_demand_electricity_demand: Electricity

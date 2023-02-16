@@ -1,0 +1,6 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - interconnector_capacity
+  message:
+    "500 MW HVDC Moyle Interconnector from Northern Ireland to Scotland"

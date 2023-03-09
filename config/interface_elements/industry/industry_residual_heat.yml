@@ -20,7 +20,7 @@ groups:
     type: slider
     combination_method:
       weighted_average:
-        - input_industry_chemical_refineries_scaling_factor
+        - input_industry_chemical_refineries_network_gas_demand
     items:
       - key: industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share
         unit: '%'
@@ -35,7 +35,7 @@ groups:
     type: slider
     combination_method:
       weighted_average:
-         - input_industry_chemical_fertilizers_scaling_factor
+         - input_industry_chemical_fertilizers_network_gas_demand
     items:
       - key: industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share
         unit: '%'

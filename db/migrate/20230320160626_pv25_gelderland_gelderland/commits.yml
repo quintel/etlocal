@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Aalten, Apeldoorn, Arnhem, Barneveld, Berg en dal, Berkelland, Beuningen, Bronckhorst, Brummen, Buren, Culemborg, Doesburg, Doetinchem, Druten, Duiven, Ede, Elburg, Epe, Ermelo, Harderwijk, Hattem, Heerde, Heumen, Lingewaard, Lochem, Maasdriel, Montferland, Neder_betuwe, Nijkerk, Nijmegen, Nunspeet, Oldebroek, Oost_gelre, Oude IJsselstreek, Overbetuwe, Putten, Renkum, Rheden, Rozendaal, Scherpenzeel, Tiel, Voorst, Wageningen, West betuwe, West maas en waal, Westervoort, Wijchen, Winterswijk, Zaltbommel, Zevenaar, Zutphen"

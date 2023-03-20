@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Apeldoorn, Brummen, Epe, Heerde, Lochem, Voorst, Zutphen"

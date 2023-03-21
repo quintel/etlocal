@@ -2,9 +2,9 @@ import subprocess
 import re
 import csv
 
-def create_for(geo_id, name):
+def create_for(geo_id, name, migration_name):
   if name:
-    migration_name = '{}_{}'.format(geo_id, name)
+    migration_name = f'{geo_id}_{name}_{migration_name}'
   else:
     migration_name = geo_id
   proc = subprocess.Popen("bundle exec rails generate data_migration {}".format(migration_name), shell=True ,stdout=subprocess.PIPE)

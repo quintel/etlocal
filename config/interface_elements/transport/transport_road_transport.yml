@@ -163,6 +163,9 @@ groups:
 
     - header: transport_road_lpg_distribution
       type: slider
+      combination_method:
+        weighted_average:
+          - transport_final_demand_lpg_demand
       items:
         - key: transport_final_demand_for_road_lpg_transport_car_using_lpg_parent_share
           unit: '%'

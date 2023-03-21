@@ -5,17 +5,17 @@ import re
 def get_datasets_for(*dataset_ids):
   datasets = list()
   for dataset_id in dataset_ids:
-    # api_url = "http://localhost:5000/api/v1/exports/" + str(dataset_id)
-    api_url = "http://data.energytransitionmodel.com/api/v1/exports/" + str(dataset_id)
+    api_url = "http://localhost:4000/api/v1/exports/" + str(dataset_id)
+    # api_url = "http://data.energytransitionmodel.com/api/v1/exports/" + str(dataset_id)
     response = requests.get(api_url)
     data = response.json()
     datasets.append(data)
   return datasets
 
-
 def group_user_inputs(datasets, interface_elements):
     gathered_values = dict()
     for dataset in datasets:
+        if not dataset: continue
         for element in interface_elements:
             gathered_values[element.key] = gathered_values.get(element.key, [])
             if type(element.method) == dict:
@@ -26,7 +26,6 @@ def group_user_inputs(datasets, interface_elements):
             else:
                 gathered_values[element.key].append(dataset[0][element.key])
     return gathered_values
-
 
 def add_data_to_elements(data, elements):
     for element in elements:

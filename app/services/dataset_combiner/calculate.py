@@ -12,7 +12,8 @@ def weighted_average(array):
   try:
     return numerator / denominator
   except ZeroDivisionError:
-    return average(array)
+    return average((x for x,y in array))
+
 
 def combined_values(interface_data):
   for each in interface_data:

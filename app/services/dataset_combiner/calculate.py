@@ -3,12 +3,16 @@ def average(array):
   return sum(array) / len(array)
 
 def weighted_average(array):
+  '''
+  If the denominator is zero this means we can't calculate a weighted average.
+  Instead calculate the 'normal' average.
+  '''
   numerator = sum(x*y for (x, y) in array)
   denominator = sum(y for (x,y) in array)
   try:
     return numerator / denominator
   except ZeroDivisionError:
-    return 0.0
+    return average(array)
 
 def combined_values(interface_data):
   for each in interface_data:

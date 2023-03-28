@@ -1,6 +1,6 @@
-class Res01AchterhoekAchterhoek2019 < ActiveRecord::Migration[5.0]
+class Res23ArnhemNijmegenArnhemNijmegen2019 < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20230323155214_res01_achterhoek_achterhoek2019')
+    directory    = Rails.root.join('db/migrate/20230324145027_res23_arnhem_nijmegen_arnhem_nijmegen2019')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

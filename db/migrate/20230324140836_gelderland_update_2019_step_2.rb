@@ -1,6 +1,6 @@
-class GelderlandUpdate2019Step1 < ActiveRecord::Migration[5.0]
+class GelderlandUpdate2019Step2 < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20230323151222_gelderland_update_2019_step_1')
+    directory    = Rails.root.join('db/migrate/20230324140836_gelderland_update_2019_step_2')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

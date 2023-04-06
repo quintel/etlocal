@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Delft, S_gravenhage, Leidschendam_voorburg, Wassenaar, Rijswijk"

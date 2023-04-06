@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Lansingerland, Pijnacker_nootdorp, Waddinxveen, Zoetermeer, Zuidplas"

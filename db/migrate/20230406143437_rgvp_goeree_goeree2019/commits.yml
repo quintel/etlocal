@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Goeree_overflakkee, Hoeksche_waard, Nissewaard, Westvoorne, Brielle, Hellevoetsluis"

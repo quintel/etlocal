@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Buren, Culemborg, Maasdriel, Neder_betuwe, Tiel, West_betuwe, West_maas_en_waal, Zaltbommel"

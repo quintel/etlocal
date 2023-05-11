@@ -1,0 +1,6 @@
+jupyterlab==3.6.3
+notebook==6.5.4
+numpy==1.24.3
+pandas==2.0.1
+PyYAML==6.0
+requests==2.30.0

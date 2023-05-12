@@ -1,6 +1,6 @@
-class MunicipalitiesUpdate2019Step2 < ActiveRecord::Migration[5.0]
+class Mun20193 < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20230510184546_municipalities_update_2019_step_2')
+    directory    = Rails.root.join('db/migrate/20230512132502_mun2019_3')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []
@@ -13,7 +13,7 @@ class MunicipalitiesUpdate2019Step2 < ActiveRecord::Migration[5.0]
     #     # ...
     #   end
     #
-    CSVImporter.run(data_path, commits_path) do |row, runner|
+    CSVImporter.run(data_path, commits_path, create_missing_datasets: true) do |row, runner|
       print "Updating #{row['geo_id']}... "
       commits = runner.call
 

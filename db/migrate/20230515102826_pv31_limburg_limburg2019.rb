@@ -1,6 +1,6 @@
-class Pv25GelderlandGelderland2019 < ActiveRecord::Migration[5.0]
+class Pv31LimburgLimburg2019 < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20230324144628_pv25_gelderland_gelderland2019')
+    directory    = Rails.root.join('db/migrate/20230515102826_pv31_limburg_limburg2019')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

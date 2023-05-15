@@ -20,6 +20,7 @@ def combined_values(interface_data):
     if all(value is None for value in each.data):
       each.combined_data = None
     elif each.method == 'sum':
+      print(each)
       each.combined_data = round_val(sum(each.data))
     elif each.method == 'average':
       each.combined_data = round_val(average(each.data))

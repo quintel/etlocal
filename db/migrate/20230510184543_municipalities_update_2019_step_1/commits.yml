@@ -557,6 +557,10 @@ Op deze manier maken we dus een schatting van hoe hoog de CO2 per gemeente is al
   - input_industry_heat_burner_hydrogen_steam_hot_water_output_conversion
   - industry_chp_turbine_hydrogen_full_load_hours
   - industry_heat_burner_hydrogen_full_load_hours
+  - co2_emission_1990_aviation_bunkers
+  - co2_emission_1990_marine_bunkers
+  - interconnector_capacity
+  - annual_infrastructure_cost_gas
   message:
    "No data available, set to default values."
 

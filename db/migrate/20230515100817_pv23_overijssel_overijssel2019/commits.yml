@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Almelo, Borne, Dalfsen, Deventer, Dinkelland, Enschede, Haaksbergen, Hardenberg, Hellendoorn, Hengelo, Hof_van_twente, Kampen, Losser, Oldenzaal, Olst_wijhe, Ommen, Raalte, Rijssen_holten, Staphorst, Steenwijkerland, Tubbergen, Twenterand, Wierden, Zwartewaterland, Zwolle"

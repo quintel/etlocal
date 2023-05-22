@@ -1,0 +1,11 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - energy_power_ultra_supercritical_network_gas_full_load_hours
+  - energy_power_ultra_supercritical_lignite_full_load_hours
+  - energy_power_ultra_supercritical_crude_oil_full_load_hours
+  - energy_power_geothermal_full_load_hours
+  - energy_power_hydro_river_full_load_hours
+  - energy_power_supercritical_waste_mix_full_load_hours
+  message:
+    "Derived from the NL 2019 dataset."

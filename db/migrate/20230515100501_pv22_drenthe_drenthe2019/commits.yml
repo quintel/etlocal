@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Aa_en_hunze, Assen, Borger_odoorn, Coevorden, Emmen, Hoogeveen, Meppel, Midden_drenthe, Noordenveld, Tynaarlo, Westerveld, De_wolden"

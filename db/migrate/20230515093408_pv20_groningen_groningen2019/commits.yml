@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Eemsdelta, Groningen, Het_hogeland, Midden_groningen, Oldambt, Pekela, Stadskanaal, Veendam, Westerkwartier, Westerwolde"

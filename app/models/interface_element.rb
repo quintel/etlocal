@@ -10,6 +10,10 @@ class InterfaceElement < YmlReadOnlyRecord
   attribute :key, Symbol
   attribute :groups, Array[InterfaceGroup]
 
+  def self.groups
+    @groups ||= all.flat_map(&:groups)
+  end
+
   def self.items
     @items ||= all.flat_map(&:groups).flat_map(&:items)
   end

@@ -21,6 +21,18 @@ class InterfaceItem
   # Used by file history items.
   attribute :paths, Array[String], default: []
 
+  def self.all
+    InterfaceElement.items
+  end
+
+  def group
+    InterfaceGroup.all.select{ |group| group.items.select{ |item| item.key == key }.present? }.first
+  end
+
+  def combination_method
+    group.combination_method || combination_method
+  end
+
   def whitelisted?
     Etsource.whitelisted_attributes.include?(key) ||
       key.to_s.start_with?('input_')

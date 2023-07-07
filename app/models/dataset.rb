@@ -9,7 +9,7 @@ class Dataset < ApplicationRecord
   validates :geo_id,  presence: true
   validates :name,    presence: true
   validates :country, presence: true
-  validates_each :country, allow_nil: true do |record, atrr, value|
+  validates_each :country, allow_nil: true do |record, _attr, value|
     unless Etsource.available_countries.include? value.downcase
       record.errors.add(value.downcase, 'must be in ETsource')
     end
@@ -25,7 +25,7 @@ class Dataset < ApplicationRecord
     neighborhood
   ].freeze
 
-  def self.clones(dataset, user)
+  def self.clones(dataset, _user)
     where(geo_id: dataset.geo_id)
       .order(Arel.sql("FIELD(`id`, #{dataset.id}) DESC, `created_at` DESC"))
   end

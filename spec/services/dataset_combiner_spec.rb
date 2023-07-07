@@ -88,9 +88,51 @@ RSpec.describe DatasetCombiner do
 
     describe 'when setting defaults' do
 
+      let!(:dataset_pv20) { FactoryBot.create(:dataset, geo_id: 'PV20', name: 'Groningen') }
+
+      let(:combiner) do
+        described_class.new(
+          target_dataset_id: 'PV20',
+          source_data_year: 2000,
+          source_dataset_ids: [dataset_1.geo_id, dataset_2.geo_id],
+        )
+      end
+
+      it 'should set target_area_name if empty and dataset for target_dataset_id is found' do
+        expect_any_instance_of(
+          DatasetCombiner::DataExporter
+        ).to receive(
+          :perform
+        ).with(
+          target_dataset_id: 'PV20',
+          target_area_name: 'Groningen',
+          source_area_names: [dataset_1.name, dataset_2.name],
+          combined_item_values: nil,
+          migration_slug: '2000'
+        )
+
+        combiner.export_data
+      end
+
+      it 'should set migration_slug to source_data_year if empty' do
+        expect_any_instance_of(
+          DatasetCombiner::DataExporter
+        ).to receive(
+          :perform
+        ).with(
+          target_dataset_id: 'PV20',
+          target_area_name: 'Groningen',
+          source_area_names: [dataset_1.name, dataset_2.name],
+          combined_item_values: nil,
+          migration_slug: '2000'
+        )
+
+        combiner.export_data
+      end
+
     end
 
-  end # / during initialization
+  end # /during initialization
 
   describe 'when performing the data combination' do
 
@@ -137,8 +179,8 @@ RSpec.describe DatasetCombiner do
         combiner.export_data
       end
 
-    end
+    end # /#export_migrations
 
-  end
+  end # /'when performing the data combination'
 
 end

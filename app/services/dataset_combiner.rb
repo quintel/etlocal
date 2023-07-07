@@ -7,7 +7,7 @@ class DatasetCombiner
   #   source_dataset_ids: Identifiers for areas to be combined, e.g.: ['GM306','GM307']
   #   target_area_name (optional): Name of combined area, e.g.: 'Groningen'
   #   migration_slug (optional): Short description of migration in lowercase and underscores, e.g.: 'update_2023'
-  def initialize(target_dataset_id:, source_data_year:, source_dataset_ids:, target_area_name:, migration_slug: nil)
+  def initialize(target_dataset_id:, source_data_year:, source_dataset_ids:, target_area_name: nil, migration_slug: nil)
     @target_dataset_id = target_dataset_id
     @source_data_year = source_data_year
     @source_dataset_ids = source_dataset_ids
@@ -47,8 +47,7 @@ class DatasetCombiner
     empty_args = {
       target_dataset_id: @target_dataset_id,
       source_data_year: @source_data_year,
-      source_dataset_ids: @source_dataset_ids,
-      target_area_name: @target_area_name
+      source_dataset_ids: @source_dataset_ids
     }.select { |_arg, v| v.blank? }
 
     if empty_args.present?
@@ -90,7 +89,7 @@ class DatasetCombiner
 
   def set_defaults
     # No target_area_name was provided. Attempt to derive it from the given target_dataset_id
-    if @target_area_name.empty?
+    if @target_area_name.blank?
       target_dataset = Dataset.find_by(geo_id: @target_dataset_id)
 
       if target_dataset.nil? || target_dataset.name.blank?

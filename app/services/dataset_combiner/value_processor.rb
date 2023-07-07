@@ -2,19 +2,20 @@
 
 class DatasetCombiner
 
-  # The ValueCombiner combines the values for each unique InterfaceItem found
-  # in all given datasets. The manner in which these values are combined
+  # The ValueProcessor is the core worker of the DatasetCombiner classes.
+  # It combines the values for each unique InterfaceItem found
+  # in the given datasets. The manner in which these values are combined
   # is determined by the 'combination_method' property in each item.
   #
-  # The ValueCombiner returns a hash with the item keys as keys and
-  # the items combined value as values.
-  class ValueCombiner
+  # The ValueProcessor returns a hash with the item keys as keys and
+  # the items' combined value as values.
+  class ValueProcessor
 
     def perform(datasets)
       combined_item_values = {}
 
       InterfaceElement.items.each do |item|
-        plucked_item_values = @datasets.pluck(item.key.to_sym)
+        plucked_item_values = datasets.map { |set| set.editable_attributes.find(item.key.to_s).value }
 
         # Skip this item unless data for it is present in any of the given datasets
         next if plucked_item_values.blank?
@@ -35,9 +36,8 @@ class DatasetCombiner
         end
       end
 
-      # We loop through the items twice to make sure all of their combined values
-      # are present in @combined_item_values so they can be matched with share groups
-      # in the next loop.
+      # We loop through the items twice to make sure all of the combined values are present
+      # in @combined_item_values so they can be matched with share groups in the next loop.
       InterfaceElement.items.each do |item|
         next unless item.flexible
 

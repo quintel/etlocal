@@ -1,19 +1,18 @@
 # frozen_string_literal: true
 
 class DatasetCombiner
-
   # Arguments:
   #   target_dataset_id: Identifier of dataset to combine into, e.g.: 'PV20'
   #   source_data_year: The year over which new data should be calculated
   #   source_dataset_ids: Identifiers for areas to be combined, e.g.: ['GM306','GM307']
-  #   target_area_name: Name of combined area, e.g.: 'Groningen'
+  #   target_area_name (optional): Name of combined area, e.g.: 'Groningen'
   #   migration_slug (optional): Short description of migration in lowercase and underscores, e.g.: 'update_2023'
   def initialize(target_dataset_id:, source_data_year:, source_dataset_ids:, target_area_name:, migration_slug: nil)
     @target_dataset_id = target_dataset_id
     @source_data_year = source_data_year
     @source_dataset_ids = source_dataset_ids
     @target_area_name = target_area_name
-    @migration_slug = migration_slug || Time.zone.today.year
+    @migration_slug = migration_slug
 
     # Validate whether all required arguments are present
     validate_input
@@ -24,61 +23,91 @@ class DatasetCombiner
     @source_datasets = Dataset.where(geo_id: @source_dataset_ids)
 
     # Validate whether all source datasets are up to date until at least the requested source_data_year
-    validate_datasets
+    validate_dataset_data_year
   end
 
   def combine_datasets
-    @combined_item_values = ValueCombiner.perform(@source_datasets)
+    @combined_item_values = DatasetCombiner::ValueProcessor.new.perform(@source_datasets)
   end
 
-  def export_migrations
-    MigrationGenerator.perform(
+  def export_data
+    DatasetCombiner::DataExporter.new.perform(
       target_dataset_id: @target_dataset_id,
       target_area_name: @target_area_name,
       migration_slug: @migration_slug,
       combined_item_values: @combined_item_values,
-      source_area_names: @datasets.pluck(:area)
+      source_area_names: @source_datasets.pluck(:name)
     )
   end
 
   private
 
   def validate_input
-    raise ArgumentError, 'Error! No target_dataset_id given to combine into. Aborting.' if @target_dataset_id.empty?
+    # Check for missing mandatory arguments
+    empty_args = {
+      target_dataset_id: @target_dataset_id,
+      source_data_year: @source_data_year,
+      source_dataset_ids: @source_dataset_ids,
+      target_area_name: @target_area_name
+    }.select { |_arg, v| v.blank? }
 
-    raise ArgumentError, 'Error! No source_data_year was given to check for consistency. Aborting.' if @source_data_year.empty?
-
-    raise ArgumentError, 'Error! No source_dataset_ids given to combine data from. Aborting.' if @source_dataset_ids.empty?
-
-    raise ArgumentError, 'Error! No target_area_name given. Aborting.' if @target_area_name.empty?
-  end
-
-  def validate_datasets
-    if @source_datasets.empty?
-      raise ArgumentError, 'Error! No source datasets found for given ids. Aborting'
+    if empty_args.present?
+      argument_error("The following mandatory arguments were omitted: #{empty_args.keys.join(', ')}")
     end
 
-    source_data_years = @source_datasets.select { |set| set.analysis_year < @source_data_year }
+    # Check target_dataset_id
+    unless @target_dataset_id.is_a?(String)
+      argument_error('The target_dataset_id should be a (numeric) string')
+    end
 
-    if source_data_years.present?
-      raise ArgumentError, <<~ERROR_MSG
-        Error! The following datasets are not up to date to the requested source_data_year:
-          #{source_data_years.pluck(:area)}
-        Aborting."
-      ERROR_MSG
+    # Check source_data_year
+    if /^(19|20|21)\d{2}$/.match(@source_data_year.to_s).blank?
+      argument_error('The source_data_year provided is not a valid year. A valid year is between 1900 and 2199')
+    end
+
+    # Check source_dataset_ids
+    unless @source_dataset_ids.is_a?(Array) && @source_dataset_ids.all? { |id| id.is_a?(Numeric) || id.is_a?(String) }
+      argument_error('The source_dataset_ids should be a set of ids')
+    end
+  end
+
+  def validate_dataset_data_year
+    if @source_datasets.empty?
+      argument_error('Could not find datasets for the given source_dataset_ids')
+    end
+
+    outdated_datasets = @source_datasets.select do |set|
+      set.editable_attributes.find('analysis_year').value < @source_data_year
+    end
+
+    if outdated_datasets.present?
+      argument_error(
+        "The following datasets are not up to date to the requested source_data_year (#{@source_data_year}):\n
+        #{outdated_datasets.pluck(:name).join(', ')}\n"
+      )
     end
   end
 
   def set_defaults
-    # No name was passed. Derive it from the given target_dataset_id
-    if @area_name.empty?
-      # @TODO
+    # No target_area_name was provided. Attempt to derive it from the given target_dataset_id
+    if @target_area_name.empty?
+      target_dataset = Dataset.find_by(geo_id: @target_dataset_id)
+
+      if target_dataset.nil? || target_dataset.name.blank?
+        argument_error('No target_area_name was provided, and it could not be derived through the target_dataset_id')
+      end
+
+      @target_area_name = target_dataset.name
     end
 
-    # No migration name was passed. Derive it from the given target_dataset_id and source_data_year
-    if @migration_slug.empty?
-      # @TODO
+    # No migration slug was provided. Derive it from the given source_data_year
+    if @migration_slug.blank?
+      @migration_slug = @source_data_year.to_s
     end
+  end
+
+  def argument_error(msg)
+    raise ArgumentError, "Error! #{msg}. Aborting."
   end
 
 end

@@ -11,74 +11,97 @@ class DatasetCombiner
   # the items' combined value as values.
   class ValueProcessor
 
-    def perform(datasets)
-      combined_item_values = {}
+    class << self
 
-      InterfaceElement.items.each do |item|
-        plucked_item_values = datasets.map { |set| set.editable_attributes.find(item.key.to_s).value }
+      def perform(datasets)
+        combined_item_values = combine_item_values(datasets)
 
-        # Skip this item unless data for it is present in any of the given datasets
-        next if plucked_item_values.blank?
+        combined_item_values = calculate_flexible_values(combined_item_values)
 
-        case item.combination_method
-        when 'sum'
-          combined_item_values[item.key] = plucked_item_values.sum
-        when 'average'
-          combined_item_values[item.key] = (plucked_item_values.sum.to_f / plucked_item_values.length)
-        when 'min'
-          combined_item_values[item.key] = plucked_item_values.min
-        when 'max'
-          combined_item_values[item.key] = plucked_item_values.max
-        when Hash # When combination_method is a hash this means it is the weighted average
-          combined_item_values[item.key] = calculate_weighted_average(item, plucked_item_values)
-        else
-          raise StandardError, "Combination method for item '#{item.key}' is unknown: #{item.combination_method}. Aborting!"
+        combined_item_values.transform_values! { |value| value.round(6) }
+      end
+
+      def combine_item_values(datasets)
+        combined_item_values = {}
+
+        InterfaceElement.items.map do |item|
+          plucked_item_values = datasets.map { |set| set.editable_attributes.find(item.key.to_s).value }
+
+          # Skip this item unless data for it is present in any of the given datasets
+          next if plucked_item_values.blank?
+
+          case item.combination_method
+          when 'average'
+            combined_item_values[item.key] = avg(plucked_item_values)
+          when 'min'
+            combined_item_values[item.key] = plucked_item_values.min
+          when 'max'
+            combined_item_values[item.key] = plucked_item_values.max
+          when Hash # When combination_method is a hash this means it is the weighted average
+            combined_item_values[item.key] = calculate_weighted_average(item, datasets, plucked_item_values)
+          else # Default to 'sum'
+            combined_item_values[item.key] = plucked_item_values.sum
+          end
+        end
+
+        combined_item_values
+      end
+
+      def calculate_flexible_values(combined_item_values)
+        InterfaceElement.items.each do |item|
+          next unless item.flexible
+
+          total = 0.0
+
+          item.share_group.each { |group| total += combined_item_values[group] }
+
+          combined_item_values[item.key] = (1 - total)
+        end
+
+        combined_item_values
+      end
+
+      private
+
+      def avg(values)
+        values.sum.to_f / values.length
+      end
+
+      def calculate_weighted_average(item, datasets, plucked_item_values)
+        weighing_keys = item.combination_method[:weighted_average]
+
+        if weighing_keys.blank?
+          raise(
+            ArgumentError, <<~MSG
+              "Error! No weighing keys defined for combination method 'weighted average' in item #{item.key}
+              (parent element: #{item.try(:group).try(:element).try(:key)}, parent group: #{item.try(:group).try(:header)})"
+            MSG
+          )
+        end
+
+        weighted_averages = datasets.map do |dataset|
+          weight = 1.0
+          weighing_keys.each { |key| weight *= dataset.editable_attributes.find(key.to_s).value }
+
+          [dataset.editable_attributes.find(item.key.to_s).value, weight]
+        end
+
+        # If the value of all weighted averages is 0 we return the 'normal' average.
+        # See: https://github.com/quintel/etlocal/issues/464
+        if weighted_averages.all? { |wa| wa[0].zero? }
+          return avg(plucked_item_values)
+        end
+
+        numerator = weighted_averages.sum { |wa| wa[0] * wa[1] }
+        denominator = weighted_averages.sum(&:last)
+
+        begin
+          numerator / denominator
+        rescue ZeroDivisionError
+          avg(plucked_item_values)
         end
       end
 
-      # We loop through the items twice to make sure all of the combined values are present
-      # in @combined_item_values so they can be matched with share groups in the next loop.
-      InterfaceElement.items.each do |item|
-        next unless item.flexible
-
-        total = 0.0
-
-        item.share_group.each { |group| total += combined_item_values[group] }
-
-        combined_item_values[item.key] = (1 - total)
-      end
-
-      combined_item_values.map! { |value| value.round(6) }
-    end
-
-    private
-
-    def calculate_weighted_average(item, plucked_item_values)
-      weighing_keys = item.combination_method['weighted_average']
-
-      weighted_averages = @datasets.map do |dataset|
-        weight = 1.0
-
-        [
-          dataset[item.key],
-          weighing_keys.map { |weighing_key| weight *= dataset[weighing_key] }
-        ]
-      end
-
-      # If the value of all weighted averages is 0 we return the 'normal' average.
-      # See: https://github.com/quintel/etlocal/issues/464
-      if weighted_averages.all? { |wa| wa[0].zero? }
-        return (plucked_item_values.sum.to_f / plucked_item_values.length)
-      end
-
-      numerator = weighted_averages.sum { |wa| wa[0] * wa[1] }
-      denominator = weighted_averages.sum(&:last)
-
-      begin
-        numerator / denominator
-      rescue ZeroDivisionError
-        (plucked_item_values.sum.to_f / plucked_item_values.length)
-      end
     end
 
   end

@@ -27,7 +27,7 @@ class DatasetCombiner
   end
 
   def combine_datasets
-    @combined_item_values = DatasetCombiner::ValueProcessor.new.perform(@source_datasets)
+    @combined_item_values = DatasetCombiner::ValueProcessor.perform(@source_datasets)
   end
 
   def export_data

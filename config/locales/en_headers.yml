@@ -45,6 +45,7 @@ en:
       households_steam_hot_water_distribution: Heat distribution
       households_wood_pellets_distribution: Biomass distribution
       households_crude_oil_distribution: Oil distribution
+      households_final_demand_steam_hot_water_input: Temperature levels district heating networks
       households_final_demand_crude_oil_input: Mix of oil types
       households_coal_distribution: Coal distribution
       households_network_gas_space_heating_hot_water_distribution: Space heating and hot water technologies - gas
@@ -89,6 +90,7 @@ en:
 
       # agriculture
       agriculture_final_demand: Final demand
+      agriculture_final_demand_steam_hot_water_input: Temperature levels of district heating networks
       agriculture_final_demand_crude_oil_input: Fuel for oil-fired heaters
       agriculture_heat_local_central: Origin final demand heat
       agriculture_heat: Fuel input for local CHPs

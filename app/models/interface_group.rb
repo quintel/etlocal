@@ -23,6 +23,10 @@ class InterfaceGroup
     InterfaceElement.groups
   end
 
+  def element
+    InterfaceElement.all.select{ |element| element.groups.select{ |group| group.header == header }.present? }.first
+  end
+
   def files?
     type == :files
   end

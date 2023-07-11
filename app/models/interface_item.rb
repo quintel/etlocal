@@ -30,7 +30,7 @@ class InterfaceItem
   end
 
   def combination_method
-    group.combination_method || combination_method
+    group.combination_method || attributes[:combination_method]
   end
 
   def whitelisted?

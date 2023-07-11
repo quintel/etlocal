@@ -8,7 +8,8 @@ RSpec.describe DatasetCombiner do
   describe 'during initialization' do
 
     # We test the arguments quite extensively since the DatasetCombiner is a service class
-    # that will be evoked from the command-line and thus can have more error-prone given arguments.
+    # that will mostly be evoked from the command-line
+    # and thus can have more error-prone given arguments.
     describe 'when validating arguments' do
 
       it 'should raise an ArgumentError if mandatory arguments are ommitted' do
@@ -48,7 +49,7 @@ RSpec.describe DatasetCombiner do
         end.not_to raise_error(ArgumentError)
       end
 
-      it 'should check whether source_dataset_ids is one-dimensional array' do
+      it 'should check whether source_dataset_ids is a one-dimensional array' do
         expect do
           described_class.new(
             target_dataset_id: 'PV20',
@@ -81,7 +82,6 @@ RSpec.describe DatasetCombiner do
             target_area_name: 'Groningen'
           )
         end.not_to raise_error(ArgumentError)
-
       end
 
     end
@@ -89,7 +89,6 @@ RSpec.describe DatasetCombiner do
     describe 'when setting defaults' do
 
       let!(:dataset_pv20) { FactoryBot.create(:dataset, geo_id: 'PV20', name: 'Groningen') }
-
       let(:combiner) do
         described_class.new(
           target_dataset_id: 'PV20',
@@ -130,9 +129,9 @@ RSpec.describe DatasetCombiner do
         combiner.export_data
       end
 
-    end
+    end # /'when setting defaults'
 
-  end # /during initialization
+  end # /'during initialization'
 
   describe 'when performing the data combination' do
 

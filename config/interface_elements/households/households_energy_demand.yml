@@ -33,6 +33,18 @@ groups:
         entso: |
           EB("Final consumption - other sectors - households - energy use", "Solar thermal")
 
+  - header: households_final_demand_steam_hot_water_input
+    type: slider
+    items:
+      - key: input_percentage_of_lt_steam_hot_water_households_final_demand_steam_hot_water
+        unit: '%'
+      - key: input_percentage_of_mt_steam_hot_water_households_final_demand_steam_hot_water
+        unit: '%'
+        flexible: true
+      - key: input_percentage_of_ht_steam_hot_water_households_final_demand_steam_hot_water
+        unit: '%'
+        skip_validation: true
+
   - header: households_final_demand_crude_oil_input
     type: slider
     combination_method:

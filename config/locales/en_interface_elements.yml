@@ -3,7 +3,7 @@ en:
     attributes:
       dataset_edit_form:
 
-        #area
+        # area
         analysis_year: Starting year
         total_land_area: Total land area
         offshore_suitable_for_wind: Available area for offshore wind turbines
@@ -85,7 +85,7 @@ en:
         heat_length_of_connection_pipelines_in_meter_per_residence_fourth_bracket: Length connection pipes per house (80% connected)
         heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket: Length connection pipes per house (100% connected)
 
-        #households
+        # households
         number_of_residences: Number of residences
         input_percentage_of_apartments: Apartement
         input_percentage_of_terraced_houses: Terraced house
@@ -175,6 +175,10 @@ en:
         households_final_demand_electricity_households_final_demand_for_lighting_electricity_parent_share: Lighting
         households_final_demand_electricity_households_final_demand_for_space_heating_electricity_parent_share: Space heating
 
+        input_percentage_of_lt_steam_hot_water_households_final_demand_steam_hot_water: LT heat
+        input_percentage_of_mt_steam_hot_water_households_final_demand_steam_hot_water: MT heat
+        input_percentage_of_ht_steam_hot_water_households_final_demand_steam_hot_water: HT heat
+
         input_percentage_of_diesel_households_final_demand_crude_oil: Diesel
         input_percentage_of_biodiesel_households_final_demand_crude_oil: Biodiesel
         input_percentage_of_kerosene_households_final_demand_crude_oil: Kerosene
@@ -183,7 +187,7 @@ en:
         input_percentage_of_bio_oil_households_final_demand_crude_oil: Other bio oil
         input_percentage_of_crude_oil_households_final_demand_crude_oil: Other oil
 
-        #buildings
+        # buildings
         number_of_buildings: Number of buildings
         buildings_roof_surface_available_for_pv: Roof surface suitable for solar PV
 
@@ -328,6 +332,10 @@ en:
         agriculture_final_demand_wood_pellets_demand: Solid biomass
         input_agriculture_final_demand_crude_oil_demand: Oil
         agriculture_final_demand_hydrogen_demand: Hydrogen
+
+        input_percentage_of_lt_steam_hot_water_agriculture_final_demand_steam_hot_water: LT heat
+        input_percentage_of_mt_steam_hot_water_agriculture_final_demand_steam_hot_water: MT heat
+        input_percentage_of_ht_steam_hot_water_agriculture_final_demand_steam_hot_water: HT heat
 
         input_percentage_of_diesel_agriculture_final_demand_crude_oil: Diesel
         input_percentage_of_biodiesel_agriculture_final_demand_crude_oil: Biodiesel

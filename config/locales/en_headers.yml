@@ -17,7 +17,7 @@ en:
       attribute_not_found: "Attribute not found '%{attribute}'"
 
     groups:
-      #area
+      # area
       area_co2_emission_1990: "CO<sub>2</sub> emissions 1990"
       area_ghg: "Greenhouse gas emissions"
       energetic_other_ghg: "Energetic emissions of greenhouse gases (ex. CO<sub>2</sub>)"
@@ -34,7 +34,7 @@ en:
       area_heat_infrastructure_lengths: District heating pipelines
       area_interconnector_capacity: Present interconnector capacity
 
-      #households
+      # households
       households_housing_stock_distribution: Housing stock
       households_apartments_block_heating: Block heating
       households_final_demand: Final demand
@@ -55,7 +55,7 @@ en:
       households_electricity_appliances_distribution: Appliances - electricity
       households_electricity_cooling_distribution: Cooling technologies - electricity
 
-      #buildings
+      # buildings
       buildings_final_demand: Final demand
       buildings_insulation: Insulation
       buildings_local_production: Local energy production
@@ -64,6 +64,7 @@ en:
       buildings_wood_pellets_distribution: Biomass distribution
       buildings_crude_oil_distribution: Oil distribution
       buildings_coal_distribution: Coal distribution
+      households_final_demand_steam_hot_water_input: Temperature levels district heating networks
       buildings_final_demand_crude_oil_input: Fuel for oil-fired heaters
       buildings_network_gas_space_heating_distribution: Space heating technologies - gas
       buildings_electricity_space_heating_distribution: Space heating technologies - electricity

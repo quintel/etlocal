@@ -250,6 +250,10 @@ nl:
         buildings_final_demand_for_cooling_electricity_buildings_cooling_collective_heatpump_water_water_ts_electricity_parent_share: Warmtepomp (bodem) met WKO
         buildings_final_demand_for_cooling_electricity_buildings_cooling_heatpump_air_water_electricity_parent_share: Luchtwarmtepomp
 
+        input_percentage_of_lt_steam_hot_water_buildings_final_demand_steam_hot_water: LT warmte
+        input_percentage_of_mt_steam_hot_water_buildings_final_demand_steam_hot_water: MT warmte
+        input_percentage_of_ht_steam_hot_water_buildings_final_demand_steam_hot_water: HT warmte
+
         # transport
         number_of_cars: Aantal auto's
         number_of_vans: Aantal bestelbussen
@@ -346,7 +350,6 @@ nl:
         input_percentage_of_bio_oil_agriculture_final_demand_crude_oil: Andere bio-olie
         input_percentage_of_crude_oil_agriculture_final_demand_crude_oil: Andere olie
 
-        input_percentage_of_lt_steam_hot_water_agriculture_final_demand_steam_hot_water: LT warmte
         input_percentage_of_mt_steam_hot_water_agriculture_final_demand_steam_hot_water: MT warmte
         input_percentage_of_ht_steam_hot_water_agriculture_final_demand_steam_hot_water: HT warmte
 

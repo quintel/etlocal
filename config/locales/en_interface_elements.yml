@@ -245,6 +245,10 @@ en:
         buildings_final_demand_for_cooling_electricity_buildings_cooling_collective_heatpump_water_water_ts_electricity_parent_share: Heat pump (ground) with thermal storage
         buildings_final_demand_for_cooling_electricity_buildings_cooling_heatpump_air_water_electricity_parent_share: Heat pump (air)
 
+        input_percentage_of_lt_steam_hot_water_buildings_final_demand_steam_hot_water: LT heat
+        input_percentage_of_mt_steam_hot_water_buildings_final_demand_steam_hot_water: MT heat
+        input_percentage_of_ht_steam_hot_water_buildings_final_demand_steam_hot_water: HT heat
+
         # transport
         number_of_cars: Number of cars
         number_of_vans: Number of vans
@@ -333,7 +337,6 @@ en:
         input_agriculture_final_demand_crude_oil_demand: Oil
         agriculture_final_demand_hydrogen_demand: Hydrogen
 
-        input_percentage_of_lt_steam_hot_water_agriculture_final_demand_steam_hot_water: LT heat
         input_percentage_of_mt_steam_hot_water_agriculture_final_demand_steam_hot_water: MT heat
         input_percentage_of_ht_steam_hot_water_agriculture_final_demand_steam_hot_water: HT heat
 

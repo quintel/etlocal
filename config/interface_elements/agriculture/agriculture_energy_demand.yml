@@ -31,8 +31,6 @@ groups:
   - header: agriculture_final_demand_steam_hot_water_input
     type: slider
     items:
-      - key: input_percentage_of_lt_steam_hot_water_agriculture_final_demand_steam_hot_water
-        unit: '%'
       - key: input_percentage_of_mt_steam_hot_water_agriculture_final_demand_steam_hot_water
         unit: '%'
         flexible: true

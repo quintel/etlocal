@@ -225,6 +225,7 @@ groups:
           weighted_average:
             - input_energy_chp_supercritical_waste_mix_production
       - key: industry_chp_turbine_hydrogen_full_load_hours
+        unit: 'flh'
         combination_method:
           weighted_average:
             - industry_chp_turbine_hydrogen_demand

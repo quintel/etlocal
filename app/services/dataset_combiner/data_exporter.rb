@@ -39,7 +39,7 @@ class DatasetCombiner
     end
 
     def migration_name
-      @migration_name ||= [@target_dataset_geo_id, @target_area_name, @migration_slug].join('_')
+      @migration_name ||= [@target_dataset_geo_id, @target_area_name, @migration_slug].join('_').downcase
     end
 
     def migration_version

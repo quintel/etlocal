@@ -8,9 +8,9 @@ class Dataset < ApplicationRecord
 
   validates :geo_id,  presence: true
   validates :name,    presence: true
-  validates :country, presence: true
+  validates :country, presence: true # This references the country in etsource.
   validates_each :country, allow_nil: true do |record, _attr, value|
-    unless Etsource.available_countries.include? value.downcase
+    unless Etsource.available_countries.include?(value.downcase)
       record.errors.add(value.downcase, 'must be in ETsource')
     end
   end
@@ -40,23 +40,23 @@ class Dataset < ApplicationRecord
     results = results.select { |d| d.actual_country == in_country } if in_country != 'any'
 
     results.sort_by do |d|
-      (ORDER.index(d.group) || ORDER.length + 1) -
+      (ORDER.index(d.group) || (ORDER.length + 1)) -
         ((d.name.start_with?(query.capitalize) && 0.5) || 0)
     end
   end
 
   def group
-    if geo_id =~ /^GM/ or geo_id =~ /^BEGM/ or geo_id =~ /^DKGM/
+    if geo_id.starts_with?('GM', 'BEGM', 'DKGM')
       'municipality'
-    elsif geo_id =~ /^WK/
+    elsif geo_id.starts_with?('WK')
       'district'
-    elsif geo_id =~ /^BU/ or geo_id =~ /^BEBU/
+    elsif geo_id.starts_with?('BU', 'BEBU')
       'neighbourhood'
-    elsif geo_id =~ /^RG/
+    elsif geo_id.starts_with?('RG')
       'region'
-    elsif geo_id =~ /^RES/
+    elsif geo_id.starts_with?('RES')
       'res'
-    elsif entso_data_source? || geo_id.match?(/^UKNI/)
+    elsif entso_data_source? || geo_id.starts_with?('UKNI')
       'country'
     else
       'province'

@@ -15,11 +15,11 @@ class DatasetCombiner
 
       # The values for the given datasets are combined in 3 steps:
       # 1. Combine the values according to the combination_method of the value belonging to the InterfaceItem
-      # 2. If flexible is true for an InterfaceItem, spread out any values over the 'share group' it belongs to
+      # 2. If flexible is true for an InterfaceItem, make it fill out the share of the group it belongs to
       # 3. Round all combined values to 6 decimals and return those.
       def perform(datasets)
         combined_item_values = combine_item_values(datasets)
-        combined_item_values = calculate_flexible_values(combined_item_values)
+        combined_item_values = calculate_flexible_shares(combined_item_values)
 
         combined_item_values.transform_values! { |value| value.round(6) }
       end
@@ -64,8 +64,9 @@ class DatasetCombiner
         end.compact
       end
 
-      # Takes the hash created by the method above and modifies its values if necessary.
-      def calculate_flexible_values(combined_item_values)
+      # Goes through the combined values created above and then determines if flexible items exist
+      # that need to fill up the share left in the group it belongs to, to 100% (represented as '1' here)
+      def calculate_flexible_shares(combined_item_values)
         combined_item_values.to_h do |item_key, value|
           item = InterfaceItem.find(item_key)
 
@@ -73,6 +74,17 @@ class DatasetCombiner
           # if it is 'flexible' and the item is part of a group of multiple items
           unless item.flexible && item.group.try(:present?) && item.group.items.length > 1
             next [item_key, value]
+          end
+
+          # Raise an error if more than one items in the group are defined as 'flexible'
+          if item.group.items.sum { |group_item| group_item.flexible ? 1 : 0 } > 1
+            raise(
+              ArgumentError, <<~MSG
+                Multiple flexible InterfaceItems found in InterfaceGroup #{item.try(:group).try(:header)}
+                (parent element: #{item.try(:group).try(:element).try(:key)}
+                Aborting.
+              MSG
+            )
           end
 
           total = 0.0
@@ -86,14 +98,6 @@ class DatasetCombiner
           [item_key, (1 - total)]
         end
       end
-
-      # def flexible_shares(interface_data):
-      #   for each in interface_data:
-      #     if each.flexible:
-      #       total = 0.0
-      #       for share in each.share_group:
-      #         total += [ele.combined_data for ele in interface_data if ele.key == share][0]
-      #       each.combined_data = round(1 - total, 6)
 
       private
 

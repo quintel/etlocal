@@ -15,7 +15,7 @@ RSpec.describe DatasetCombiner::ValueProcessor do
     ]
   end
 
-  describe 'when processing the given dataset' do
+  describe 'when combining values for the given datasets' do
 
     it 'combines values according to the combination_method set in each item' do
       items = [
@@ -36,6 +36,22 @@ RSpec.describe DatasetCombiner::ValueProcessor do
         annual_infrastructure_cost_gas: 50.0,               # avg of [25.0,  50.0,  75.0]
         households_final_demand_solar_thermal_demand: 75.0, # min of [75.0, 150.0, 225.0]
         energy_distribution_greengas_demand: 10.5           # max of [ 3.5,   7.0,  10.5]
+      })
+    end
+
+    it 'defaults the combination_method to sum if it is not set on an item' do
+      items = [
+        instance_double(InterfaceItem, key: :agriculture_final_demand_network_gas_demand, combination_method: nil, flexible: false, default: nil, entso: nil),
+      ]
+
+      prepare_datasets(items)
+
+      allow(InterfaceElement).to receive(:items).and_return(items)
+
+      expect(
+        described_class.perform([dataset1])
+      ).to eq({
+        agriculture_final_demand_network_gas_demand: 60.0  # sum of [10.0,  20.0,  30.0]
       })
     end
 
@@ -61,23 +77,33 @@ RSpec.describe DatasetCombiner::ValueProcessor do
       })
     end
 
-    it 'raises an error for an item with combination_method "weighted_average" without keys' do
-      items << instance_double(
-        InterfaceItem,
-        key: :number_of_inhabitants,
-        combination_method: { weighted_average: [] },
-        flexible: false,
-        default: nil,
-        entso: nil
-      )
+    it "raises an error for an item with a combination_method we're unfamiliar with" do
+      items = [
+        instance_double(InterfaceItem, key: :agriculture_final_demand_network_gas_demand, combination_method: 'apples', flexible: false, default: nil, entso: nil),
+      ]
+
+      prepare_datasets(items)
 
       allow(InterfaceElement).to receive(:items).and_return(items)
 
-      expect do
-        described_class.perform([dataset1, dataset2])
-      end.to raise_error(
+      expect { described_class.perform([dataset1]) }.to raise_error(
         ArgumentError,
-        /Error! No weighing keys defined for combination method 'weighted average' in item/
+        /Error! Don't know how to deal with combination_method '#{items[0].combination_method}', set in item #{items[0].key}/
+      )
+    end
+
+    it 'raises an error for an item with combination_method "weighted_average" without keys' do
+      items = [
+        instance_double(InterfaceItem, key: :number_of_inhabitants, combination_method: { weighted_average: [] }, flexible: false, default: nil, entso: nil)
+      ]
+
+      prepare_datasets(items)
+
+      allow(InterfaceElement).to receive(:items).and_return(items)
+
+      expect { described_class.perform([dataset1]) }.to raise_error(
+        ArgumentError,
+        /Error! No weighing keys defined for combination method 'weighted average' in item #{items[0].key}/
       )
     end
 

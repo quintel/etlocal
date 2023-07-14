@@ -15,9 +15,9 @@ RSpec.describe DatasetCombiner do
       it 'should raise an ArgumentError if mandatory arguments are ommitted' do
         expect do
           described_class.new(
-            target_dataset_id: nil,
+            target_dataset_geo_id: nil,
             source_data_year: nil,
-            source_dataset_ids: nil,
+            source_dataset_geo_ids: nil,
             target_area_name: nil
           )
         end.to raise_error(
@@ -29,9 +29,9 @@ RSpec.describe DatasetCombiner do
       it 'should check whether source_data_year is a valid year' do
         expect do
           described_class.new(
-            target_dataset_id: 'PV20',
+            target_dataset_geo_id: 'PV20',
             source_data_year: 1,
-            source_dataset_ids: [dataset_1.geo_id],
+            source_dataset_geo_ids: [dataset_1.geo_id],
             target_area_name: 'Groningen'
           )
         end.to raise_error(
@@ -41,44 +41,44 @@ RSpec.describe DatasetCombiner do
 
         expect do
           described_class.new(
-            target_dataset_id: 'PV20',
+            target_dataset_geo_id: 'PV20',
             source_data_year: 2000,
-            source_dataset_ids: [dataset_1.geo_id],
+            source_dataset_geo_ids: [dataset_1.geo_id],
             target_area_name: 'Groningen'
           )
         end.not_to raise_error(ArgumentError)
       end
 
-      it 'should check whether source_dataset_ids is a one-dimensional array' do
+      it 'should check whether source_dataset_geo_ids is a one-dimensional array' do
         expect do
           described_class.new(
-            target_dataset_id: 'PV20',
+            target_dataset_geo_id: 'PV20',
             source_data_year: 2000,
-            source_dataset_ids: { a: 1, b: 2 },
+            source_dataset_geo_ids: { a: 1, b: 2 },
             target_area_name: 'Groningen'
           )
         end.to raise_error(
           ArgumentError,
-          /Error! The source_dataset_ids should be a set of ids/
+          /Error! The source_dataset_geo_ids should be a set of ids/
         )
 
         expect do
           described_class.new(
-            target_dataset_id: 'PV20',
+            target_dataset_geo_id: 'PV20',
             source_data_year: 2000,
-            source_dataset_ids: [[1], [2]],
+            source_dataset_geo_ids: [[1], [2]],
             target_area_name: 'Groningen'
           )
         end.to raise_error(
           ArgumentError,
-          /Error! The source_dataset_ids should be a set of ids/
+          /Error! The source_dataset_geo_ids should be a set of ids/
         )
 
         expect do
           described_class.new(
-            target_dataset_id: 'PV20',
+            target_dataset_geo_id: 'PV20',
             source_data_year: 2000,
-            source_dataset_ids: [dataset_1.geo_id, dataset_2.geo_id],
+            source_dataset_geo_ids: [dataset_1.geo_id, dataset_2.geo_id],
             target_area_name: 'Groningen'
           )
         end.not_to raise_error(ArgumentError)
@@ -91,19 +91,19 @@ RSpec.describe DatasetCombiner do
       let!(:dataset_pv20) { FactoryBot.create(:dataset, geo_id: 'PV20', name: 'Groningen') }
       let(:combiner) do
         described_class.new(
-          target_dataset_id: 'PV20',
+          target_dataset_geo_id: 'PV20',
           source_data_year: 2000,
-          source_dataset_ids: [dataset_1.geo_id, dataset_2.geo_id],
+          source_dataset_geo_ids: [dataset_1.geo_id, dataset_2.geo_id],
         )
       end
 
-      it 'should set target_area_name if empty and dataset for target_dataset_id is found' do
+      it 'should set target_area_name if empty and dataset for target_dataset_geo_id is found' do
         expect_any_instance_of(
           DatasetCombiner::DataExporter
         ).to receive(
           :perform
         ).with(
-          target_dataset_id: 'PV20',
+          target_dataset_geo_id: 'PV20',
           target_area_name: 'Groningen',
           source_area_names: [dataset_1.name, dataset_2.name],
           combined_item_values: nil,
@@ -119,7 +119,7 @@ RSpec.describe DatasetCombiner do
         ).to receive(
           :perform
         ).with(
-          target_dataset_id: 'PV20',
+          target_dataset_geo_id: 'PV20',
           target_area_name: 'Groningen',
           source_area_names: [dataset_1.name, dataset_2.name],
           combined_item_values: nil,
@@ -137,9 +137,9 @@ RSpec.describe DatasetCombiner do
 
     let(:combiner) do
       described_class.new(
-        target_dataset_id: 'PV20',
+        target_dataset_geo_id: 'PV20',
         source_data_year: 2000,
-        source_dataset_ids: [dataset_1.geo_id, dataset_2.geo_id],
+        source_dataset_geo_ids: [dataset_1.geo_id, dataset_2.geo_id],
         target_area_name: 'Groningen'
       )
     end
@@ -168,7 +168,7 @@ RSpec.describe DatasetCombiner do
         ).to receive(
           :perform
         ).with(
-          target_dataset_id: 'PV20',
+          target_dataset_geo_id: 'PV20',
           target_area_name: 'Groningen',
           source_area_names: [dataset_1.name, dataset_2.name],
           combined_item_values: nil,

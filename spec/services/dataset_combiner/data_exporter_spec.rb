@@ -61,13 +61,13 @@ RSpec.describe DatasetCombiner::DataExporter do
 
     it 'creates a migration directory with the correct name' do
       expect(
-        Dir.exist?(exporter.send(:migration_directory))
+        Dir.exist?(exporter.send(:migration_data_directory))
       ).to be(false)
 
       exporter.send(:create_migration)
 
       expect(
-        Dir.exist?(exporter.send(:migration_directory))
+        Dir.exist?(exporter.send(:migration_data_directory))
       ).to be(true)
     end
   end
@@ -75,21 +75,21 @@ RSpec.describe DatasetCombiner::DataExporter do
   describe 'when generating the data file' do
 
     before do
-      exporter.send(:migration_directory).mkdir
+      exporter.send(:migration_data_directory).mkdir
       exporter.send(:export_data_file)
     end
 
     it 'creates the file in the correct migration directory' do
       expect(
         File.exist?(
-          tmpdir.join(exporter.send(:migration_directory).join(described_class::DATA_FILENAME))
+          tmpdir.join(exporter.send(:migration_data_directory).join(described_class::DATA_FILENAME))
         )
       ).to be(true)
     end
 
     it 'fills the data file in a CSV format with a header line and a data line' do
       csv_contents = File.open(
-        tmpdir.join(exporter.send(:migration_directory).join(described_class::DATA_FILENAME))
+        tmpdir.join(exporter.send(:migration_data_directory).join(described_class::DATA_FILENAME))
       ).to_a
 
       # Check header contents on first line
@@ -107,14 +107,14 @@ RSpec.describe DatasetCombiner::DataExporter do
   describe 'when generating the commits file' do
 
     before do
-      exporter.send(:migration_directory).mkdir
+      exporter.send(:migration_data_directory).mkdir
       exporter.send(:export_commits_file)
     end
 
     it 'creates the file in the correct migration directory' do
       expect(
         File.exist?(
-          tmpdir.join(exporter.send(:migration_directory).join(described_class::COMMITS_FILENAME))
+          tmpdir.join(exporter.send(:migration_data_directory).join(described_class::COMMITS_FILENAME))
         )
       ).to be(true)
     end
@@ -122,7 +122,7 @@ RSpec.describe DatasetCombiner::DataExporter do
     it 'fills the commits file in a yml format a description containing the names of the combined areas' do
       expect(
         YAML.load_file(
-          tmpdir.join(exporter.send(:migration_directory).join(described_class::COMMITS_FILENAME))
+          tmpdir.join(exporter.send(:migration_data_directory).join(described_class::COMMITS_FILENAME))
         )
       ).to eq(
         {

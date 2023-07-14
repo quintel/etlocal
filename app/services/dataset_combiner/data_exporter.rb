@@ -50,8 +50,9 @@ class DatasetCombiner
       @migration_filename ||= "#{migration_version}_#{migration_name}.rb"
     end
 
-    def migration_directory
-      @migration_directory ||= migrate_directory.join(migration_filename[0..-4])
+    # Please note the distinction between this method and 'migrate_directory' above!
+    def migration_data_directory
+      @migration_data_directory ||= migrate_directory.join(migration_filename[0..-4])
     end
 
     def create_migration
@@ -59,6 +60,12 @@ class DatasetCombiner
       template = Rails.root.join(
         'lib', 'generators', 'data_migration', 'templates', 'migration.rb.erb'
       ).read
+
+      # Check if a migration with the name of the generated migration_name already exists.
+      # If so, append the month and day to it.
+      if File.exist?(migrate_directory.join(migration_filename))
+        @migration_name += "_#{DateTime.now.strftime('%b_%d')}".downcase
+      end
 
       # Set values to variables to be rendered within the template
       class_name = migration_name
@@ -81,13 +88,13 @@ class DatasetCombiner
           )
       )
 
-      migration_directory.mkdir unless migration_directory.exist?
+      migration_data_directory.mkdir unless migration_data_directory.exist?
     end
 
     # Create CSV that contains the data that was combined and returned by the Dataset::ValueProcessor
     # The CSV will contain two lines: the first contains the header, the second contains the data
     def export_data_file
-      migration_directory.join(DATA_FILENAME).write(
+      migration_data_directory.join(DATA_FILENAME).write(
         <<~CSV_CONTENTS
           name,geo_id,#{@combined_item_values.keys.join(',')}
           #{@target_area_name},#{@target_dataset_geo_id},#{@combined_item_values.values.join(',')}
@@ -97,7 +104,7 @@ class DatasetCombiner
 
     # Create a commits file describing the area names of the datasets that were used to create the combined one
     def export_commits_file
-      migration_directory.join(COMMITS_FILENAME).write(
+      migration_data_directory.join(COMMITS_FILENAME).write(
         {
           fields: [:all],
           message: "Optelling van de volgende gebieden: #{@source_area_names.join(', ')}"

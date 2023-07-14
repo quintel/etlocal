@@ -1,9 +1,9 @@
 # ETLocal
 
-[![Build Status](https://travis-ci.org/quintel/etlocal.svg?branch=master)](https://travis-ci.org/quintel/etlocal)
+[![Build Status](https://quintel.semaphoreci.com/badges/etlocal/branches/production.svg?style=shields)](https://quintel.semaphoreci.com/projects/etlocal)
 
-Provinces, municipalities, districts and neighborhoods have their own unique
-questions for their energy systems. ETLocal provides a way to get meaningful
+Countries, provinces, municipalities, districts and neighborhoods have their own unique
+questions for their energy systems. The ETM dataset manger (etlocal) provides a way to get meaningful
 insight into their current situation and allows to customize and create stable,
 transparent present situations for usage inside of ETModel.
 

@@ -14,6 +14,7 @@ class InterfaceItem
   attribute :skip_validation, Boolean, default: false
   attribute :hidden, Boolean, default: false
   attribute :precision, Integer, default: 2
+  attribute :combination_method
 
   # Queries for CSV-based datasets.
   attribute :entso, String
@@ -25,11 +26,15 @@ class InterfaceItem
     InterfaceElement.items
   end
 
-  def group
-    InterfaceGroup.all.select{ |group| group.items.select{ |item| item.key == key }.present? }.first
+  def self.find(key)
+    all.select { |item| item.key == key }.first
   end
 
-  def combination_method
+  def group
+    InterfaceGroup.all.select { |group| group.items.select { |item| item.key == key }.present? }.first
+  end
+
+  def nested_combination_method
     group.combination_method || attributes[:combination_method]
   end
 

@@ -11,10 +11,10 @@ class InterfaceElement < YmlReadOnlyRecord
   attribute :groups, Array[InterfaceGroup]
 
   def self.groups
-    @groups ||= all.flat_map(&:groups)
+    @groups ||= all.flat_map(&:groups).compact
   end
 
   def self.items
-    @items ||= all.flat_map(&:groups).flat_map(&:items)
+    @items ||= all.flat_map(&:groups).flat_map(&:items).compact
   end
 end

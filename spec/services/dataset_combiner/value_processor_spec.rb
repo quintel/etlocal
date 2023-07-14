@@ -180,7 +180,7 @@ RSpec.describe DatasetCombiner::ValueProcessor do
 
       expect { described_class.perform([dataset1, dataset2, dataset3]) }.to raise_error(
         ArgumentError,
-        /Multiple flexible InterfaceItems found in InterfaceGroup #{items[0].group.header}/
+        /More than one flexible InterfaceItems found in InterfaceGroup #{items[0].group.header}/
       )
     end
 

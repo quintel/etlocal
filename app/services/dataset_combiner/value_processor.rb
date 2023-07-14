@@ -80,7 +80,7 @@ class DatasetCombiner
           if item.group.items.sum { |group_item| group_item.flexible ? 1 : 0 } > 1
             raise(
               ArgumentError, <<~MSG
-                Multiple flexible InterfaceItems found in InterfaceGroup #{item.try(:group).try(:header)}
+                More than one flexible InterfaceItems found in InterfaceGroup #{item.try(:group).try(:header)}
                 (parent element: #{item.try(:group).try(:element).try(:key)}
                 Aborting.
               MSG

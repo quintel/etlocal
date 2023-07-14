@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe DatasetCombiner do
 
-  let(:dataset_1) { FactoryBot.create(:dataset) }
-  let(:dataset_2) { FactoryBot.create(:dataset) }
+  let(:dataset_1) { create(:dataset) }
+  let(:dataset_2) { create(:dataset) }
 
   describe 'during initialization' do
 
@@ -22,7 +22,7 @@ RSpec.describe DatasetCombiner do
           )
         end.to raise_error(
           ArgumentError,
-          /Error! The following mandatory arguments were omitted:/
+          /The following mandatory arguments were omitted:/
         )
       end
 
@@ -36,7 +36,7 @@ RSpec.describe DatasetCombiner do
           )
         end.to raise_error(
           ArgumentError,
-          /Error! The source_data_year provided is not a valid year/
+          /The source_data_year provided is not a valid year/
         )
 
         expect do
@@ -59,7 +59,7 @@ RSpec.describe DatasetCombiner do
           )
         end.to raise_error(
           ArgumentError,
-          /Error! The source_dataset_geo_ids should be a set of ids/
+          /The source_dataset_geo_ids should be a set of ids/
         )
 
         expect do
@@ -71,7 +71,7 @@ RSpec.describe DatasetCombiner do
           )
         end.to raise_error(
           ArgumentError,
-          /Error! The source_dataset_geo_ids should be a set of ids/
+          /The source_dataset_geo_ids should be a set of ids/
         )
 
         expect do
@@ -88,7 +88,7 @@ RSpec.describe DatasetCombiner do
 
     describe 'when setting defaults' do
 
-      let!(:dataset_pv20) { FactoryBot.create(:dataset, geo_id: 'PV20', name: 'Groningen') }
+      let!(:dataset_pv20) { create(:dataset, geo_id: 'PV20', name: 'Groningen') }
       let(:combiner) do
         described_class.new(
           target_dataset_geo_id: 'PV20',
@@ -97,34 +97,38 @@ RSpec.describe DatasetCombiner do
         )
       end
 
+      before do
+        allow_any_instance_of(DatasetCombiner::DataExporter).to receive(:perform).and_return(true)
+      end
+
       it 'should set target_area_name if empty and dataset for target_dataset_geo_id is found' do
-        expect_any_instance_of(
+        expect(
           DatasetCombiner::DataExporter
         ).to receive(
-          :perform
+          :new
         ).with(
           target_dataset_geo_id: 'PV20',
           target_area_name: 'Groningen',
           source_area_names: [dataset_1.name, dataset_2.name],
           combined_item_values: nil,
           migration_slug: '2000'
-        )
+        ).and_call_original
 
         combiner.export_data
       end
 
       it 'should set migration_slug to source_data_year if empty' do
-        expect_any_instance_of(
+        expect(
           DatasetCombiner::DataExporter
         ).to receive(
-          :perform
+          :new
         ).with(
           target_dataset_geo_id: 'PV20',
           target_area_name: 'Groningen',
           source_area_names: [dataset_1.name, dataset_2.name],
           combined_item_values: nil,
           migration_slug: '2000'
-        )
+        ).and_call_original
 
         combiner.export_data
       end
@@ -147,7 +151,7 @@ RSpec.describe DatasetCombiner do
     context '#combine_datasets' do
 
       it 'should call the DatasetCombiner::ValueProcessor with the correct initialized datasets' do
-        expect_any_instance_of(
+        expect(
           DatasetCombiner::ValueProcessor
         ).to receive(
           :perform
@@ -163,17 +167,19 @@ RSpec.describe DatasetCombiner do
     context '#export_migrations' do
 
       it 'should call the DatasetCombiner::DataExporter with the correct attributes' do
+        allow_any_instance_of(DatasetCombiner::DataExporter).to receive(:perform).and_return(true)
+
         expect_any_instance_of(
           DatasetCombiner::DataExporter
         ).to receive(
-          :perform
+          :initialize
         ).with(
           target_dataset_geo_id: 'PV20',
           target_area_name: 'Groningen',
           source_area_names: [dataset_1.name, dataset_2.name],
           combined_item_values: nil,
           migration_slug: '2000'
-        )
+        ).and_call_original
 
         combiner.export_data
       end

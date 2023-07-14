@@ -19,10 +19,10 @@ RSpec.describe DatasetCombiner::ValueProcessor do
 
     it 'combines values according to the combination_method set in each item' do
       items = [
-        instance_double(InterfaceItem, key: :agriculture_final_demand_network_gas_demand, combination_method: 'sum', flexible: false, default: nil, entso: nil),
-        instance_double(InterfaceItem, key: :annual_infrastructure_cost_gas, combination_method: 'average', flexible: false, default: nil, entso: nil),
-        instance_double(InterfaceItem, key: :households_final_demand_solar_thermal_demand, combination_method: 'min', flexible: false, default: nil, entso: nil),
-        instance_double(InterfaceItem, key: :energy_distribution_greengas_demand, combination_method: 'max', flexible: false, default: nil, entso: nil),
+        instance_double(InterfaceItem, key: :agriculture_final_demand_network_gas_demand, nested_combination_method: 'sum', flexible: false, default: nil, entso: nil),
+        instance_double(InterfaceItem, key: :annual_infrastructure_cost_gas, nested_combination_method: 'average', flexible: false, default: nil, entso: nil),
+        instance_double(InterfaceItem, key: :households_final_demand_solar_thermal_demand, nested_combination_method: 'min', flexible: false, default: nil, entso: nil),
+        instance_double(InterfaceItem, key: :energy_distribution_greengas_demand, nested_combination_method: 'max', flexible: false, default: nil, entso: nil),
       ]
 
       prepare_datasets(items)
@@ -41,7 +41,7 @@ RSpec.describe DatasetCombiner::ValueProcessor do
 
     it 'defaults the combination_method to sum if it is not set on an item' do
       items = [
-        instance_double(InterfaceItem, key: :agriculture_final_demand_network_gas_demand, combination_method: nil, flexible: false, default: nil, entso: nil),
+        instance_double(InterfaceItem, key: :agriculture_final_demand_network_gas_demand, nested_combination_method: nil, flexible: false, default: nil, entso: nil),
       ]
 
       prepare_datasets(items)
@@ -49,18 +49,18 @@ RSpec.describe DatasetCombiner::ValueProcessor do
       allow(InterfaceElement).to receive(:items).and_return(items)
 
       expect(
-        described_class.perform([dataset1])
+        described_class.perform([dataset1, dataset2, dataset3])
       ).to eq({
-        agriculture_final_demand_network_gas_demand: 60.0  # sum of [10.0,  20.0,  30.0]
+        agriculture_final_demand_network_gas_demand: 60.0 # sum of [10.0,  20.0,  30.0]
       })
     end
 
     it 'correctly calculates values for items with combination_method "weighted_averages"' do
       items = [
-        instance_double(InterfaceItem, key: :agriculture_final_demand_network_gas_demand, combination_method: { weighted_average: [:agriculture_final_demand_network_gas_demand, :annual_infrastructure_cost_gas] }, flexible: false, default: nil, entso: nil),
-        instance_double(InterfaceItem, key: :annual_infrastructure_cost_gas, combination_method: { weighted_average: [:agriculture_final_demand_network_gas_demand, :annual_infrastructure_cost_gas] }, flexible: false, default: nil, entso: nil),
-        instance_double(InterfaceItem, key: :households_final_demand_solar_thermal_demand, combination_method: { weighted_average: [:agriculture_final_demand_network_gas_demand, :annual_infrastructure_cost_gas] }, flexible: false, default: nil, entso: nil),
-        instance_double(InterfaceItem, key: :energy_distribution_greengas_demand, combination_method: { weighted_average: [:agriculture_final_demand_network_gas_demand, :annual_infrastructure_cost_gas] }, flexible: false, default: nil, entso: nil),
+        instance_double(InterfaceItem, key: :agriculture_final_demand_network_gas_demand, nested_combination_method: { 'weighted_average' => [:agriculture_final_demand_network_gas_demand, :annual_infrastructure_cost_gas] }, flexible: false, default: nil, entso: nil),
+        instance_double(InterfaceItem, key: :annual_infrastructure_cost_gas, nested_combination_method: { 'weighted_average' => [:agriculture_final_demand_network_gas_demand, :annual_infrastructure_cost_gas] }, flexible: false, default: nil, entso: nil),
+        instance_double(InterfaceItem, key: :households_final_demand_solar_thermal_demand, nested_combination_method: { 'weighted_average' => [:agriculture_final_demand_network_gas_demand, :annual_infrastructure_cost_gas] }, flexible: false, default: nil, entso: nil),
+        instance_double(InterfaceItem, key: :energy_distribution_greengas_demand, nested_combination_method: { 'weighted_average' => [:agriculture_final_demand_network_gas_demand, :annual_infrastructure_cost_gas] }, flexible: false, default: nil, entso: nil),
       ]
 
       prepare_datasets(items)
@@ -79,7 +79,7 @@ RSpec.describe DatasetCombiner::ValueProcessor do
 
     it "raises an error for an item with a combination_method we're unfamiliar with" do
       items = [
-        instance_double(InterfaceItem, key: :agriculture_final_demand_network_gas_demand, combination_method: 'apples', flexible: false, default: nil, entso: nil),
+        instance_double(InterfaceItem, key: :agriculture_final_demand_network_gas_demand, nested_combination_method: 'apples', flexible: false, default: nil, entso: nil),
       ]
 
       prepare_datasets(items)
@@ -88,13 +88,13 @@ RSpec.describe DatasetCombiner::ValueProcessor do
 
       expect { described_class.perform([dataset1]) }.to raise_error(
         ArgumentError,
-        /Error! Don't know how to deal with combination_method '#{items[0].combination_method}', set in item #{items[0].key}/
+        /Don't know how to deal with combination_method '#{items[0].nested_combination_method}' in item #{items[0].key}/
       )
     end
 
     it 'raises an error for an item with combination_method "weighted_average" without keys' do
       items = [
-        instance_double(InterfaceItem, key: :number_of_inhabitants, combination_method: { weighted_average: [] }, flexible: false, default: nil, entso: nil)
+        instance_double(InterfaceItem, key: :number_of_inhabitants, nested_combination_method: { weighted_average: [] }, flexible: false, default: nil, entso: nil)
       ]
 
       prepare_datasets(items)
@@ -103,7 +103,7 @@ RSpec.describe DatasetCombiner::ValueProcessor do
 
       expect { described_class.perform([dataset1]) }.to raise_error(
         ArgumentError,
-        /Error! No weighing keys defined for combination method 'weighted average' in item #{items[0].key}/
+        /No weighing keys defined for combination method 'weighted average' in item #{items[0].key}/
       )
     end
 

@@ -48,7 +48,7 @@ class DatasetCombiner
               plucked_item_values.max
             when Hash # When combination_method is a hash this means it is the weighted average
               calculate_weighted_average(item, datasets, plucked_item_values)
-            when '', nil # Default to 'sum'
+            when 'sum', '', nil # Default to 'sum'
               plucked_item_values.sum
             else # combined_value is set to a value we can't process
               raise(

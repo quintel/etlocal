@@ -630,12 +630,18 @@ nl:
         input_energy_heat_burner_waste_mix_production: Warmte uit afvalverbranding
         input_energy_heat_burner_hydrogen_production: Waterstofketels
         input_energy_heat_solar_thermal_production: Zonthermiepark
+        input_energy_heat_surface_water_aquathermal_production: Aquathermie (TEO)
+        input_energy_heat_waste_water_aquathermal_production: Aquathermie (TEA)
+        input_energy_heat_drink_water_aquathermal_production: Aquathermie (TED)
         input_energy_heat_heatpump_water_water_electricity_production: Elektrische warmtepompen
+        input_energy_heat_electric_boiler_electricity_production: Elektrische boilers
         input_energy_heat_burner_network_gas_production: Gasketels
         input_energy_heat_burner_coal_production: Kolenketels
         input_energy_heat_burner_crude_oil_production: Olieketels
 
-        energy_import_heat_demand: (Rest)warmte geïmporteerd van buiten de regio
+        energy_import_ht_heat_demand: HT (rest)warmte geïmporteerd van buiten de regio
+        energy_import_mt_heat_demand: MT (rest)warmte geïmporteerd van buiten de regio
+        energy_import_lt_heat_demand: LT (rest)warmte geïmporteerd van buiten de regio
 
         energy_heat_distribution_loss_demand: Transportverliezen in warmtenetten
 

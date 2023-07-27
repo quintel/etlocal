@@ -20,7 +20,15 @@ groups:
         unit: 'TJ'
         entso: |
           EB("Solar thermal", "Heat")
+      - key: input_energy_heat_surface_water_aquathermal_production
+        unit: 'TJ'
+      - key: input_energy_heat_waste_water_aquathermal_production
+        unit: 'TJ'
+      - key: input_energy_heat_drink_water_aquathermal_production
+        unit: 'TJ'
       - key: input_energy_heat_heatpump_water_water_electricity_production
+        unit: 'TJ'
+      - key: input_energy_heat_electric_boiler_electricity_production
         unit: 'TJ'
         
   - header: energy_heat_fossil
@@ -40,7 +48,11 @@ groups:
 
   - header: energy_heat_import
     items:
-      - key: energy_import_heat_demand
+      - key: energy_import_ht_heat_demand
+        unit: 'TJ'
+      - key: energy_import_mt_heat_demand
+        unit: 'TJ'
+      - key: energy_import_lt_heat_demand
         unit: 'TJ'
 
   - header: energy_heat_distribution_loss

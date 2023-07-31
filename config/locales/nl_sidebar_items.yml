@@ -94,7 +94,6 @@ nl:
         industry_ict: ICT
         industry_other: Overige industrie
         industry_heat_chp: Warmte en WKK
-        industry_residual_heat: Restwarmtepotentie
 
       transport:
         transport_rail_transport: Railverkeer

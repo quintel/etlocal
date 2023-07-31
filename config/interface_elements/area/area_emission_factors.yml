@@ -43,7 +43,13 @@ groups:
     - key: file_carriers_imported_electricity_co2_conversion_per_mj
       unit: 'kg/MJ'
       precision: 4
-    - key: file_carriers_imported_heat_co2_conversion_per_mj
+    - key: file_carriers_imported_heat_ht_co2_conversion_per_mj
+      unit: 'kg/MJ'
+      precision: 4
+    - key: file_carriers_imported_heat_mt_co2_conversion_per_mj
+      unit: 'kg/MJ'
+      precision: 4
+    - key: file_carriers_imported_heat_lt_co2_conversion_per_mj
       unit: 'kg/MJ'
       precision: 4
     - key: file_carriers_imported_hydrogen_co2_conversion_per_mj

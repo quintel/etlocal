@@ -33,7 +33,6 @@ industry:
   - industry_ict
   - industry_other
   - industry_heat_chp
-  - industry_residual_heat
 other:
   - other_energy_demand
 energy:

@@ -40,9 +40,9 @@ groups:
         unit: '%'
       - key: input_percentage_of_mt_steam_hot_water_buildings_final_demand_steam_hot_water
         unit: '%'
-        flexible: true
       - key: input_percentage_of_ht_steam_hot_water_buildings_final_demand_steam_hot_water
         unit: '%'
+        flexible: true
         skip_validation: true
   
   - header: buildings_final_demand_crude_oil_input

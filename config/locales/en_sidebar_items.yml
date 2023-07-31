@@ -94,7 +94,6 @@ en:
         industry_ict: ICT
         industry_other: Other industry
         industry_heat_chp: Heat and CHP
-        industry_residual_heat: Residual heat potential
 
       transport:
         transport_rail_transport: Rail transport

@@ -18,20 +18,26 @@ groups:
         unit: 'TJ'
       - key: input_energy_power_ultra_supercritical_ccs_coal_production
         unit: 'TJ'
-      - key: input_energy_chp_ultra_supercritical_coal_production
+      - key: input_energy_chp_ultra_supercritical_ht_coal_production
         unit: 'TJ'
         entso: |
           EB("Coal plant for district heat (CHP)", "Electricity")
-      - key: input_energy_chp_ultra_supercritical_cofiring_coal_production
+      - key: input_energy_chp_ultra_supercritical_mt_coal_production
+        unit: 'TJ'
+      - key: input_energy_chp_ultra_supercritical_cofiring_ht_coal_production
+        unit: 'TJ'
+      - key: input_energy_chp_ultra_supercritical_cofiring_mt_coal_production
         unit: 'TJ'
       - key: input_energy_power_ultra_supercritical_lignite_production
         unit: 'TJ'
         entso: |
           EB("Lignite plant", "Electricity")
-      - key: input_energy_chp_ultra_supercritical_lignite_production
+      - key: input_energy_chp_ultra_supercritical_ht_lignite_production
         unit: 'TJ'
         entso: |
           EB("Lignite plant for district heat (CHP)", "Electricity")
+      - key: input_energy_chp_ultra_supercritical_mt_lignite_production
+        unit: 'TJ'
       - key: input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production
         unit: 'TJ'
 
@@ -53,14 +59,18 @@ groups:
           EB("Gas CCGT", "Electricity")
       - key: input_energy_power_combined_cycle_ccs_network_gas_production
         unit: 'TJ'
-      - key: input_energy_chp_combined_cycle_network_gas_production
+      - key: input_energy_chp_combined_cycle_ht_network_gas_production
         unit: 'TJ'
         entso: |
           EB("Large-scale gas plant for district heat (CHP)", "Electricity")
-      - key: input_energy_chp_local_engine_network_gas_production
+      - key: input_energy_chp_combined_cycle_mt_network_gas_production
+        unit: 'TJ'
+      - key: input_energy_chp_local_engine_ht_network_gas_production
         unit: 'TJ'
         entso: |
           EB("Small-scale gas plant for district heat (CHP)", "Electricity")
+      - key: input_energy_chp_local_engine_mt_network_gas_production
+        unit: 'TJ'
 
   - header: energy_electricity_other_fossil
     items:

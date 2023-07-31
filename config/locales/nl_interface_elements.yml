@@ -45,7 +45,9 @@ nl:
         file_carriers_gasoline_co2_conversion_per_mj : Benzine
         file_carriers_heavy_fuel_oil_co2_conversion_per_mj: Zware stookolie
         file_carriers_imported_electricity_co2_conversion_per_mj: Geïmporteerde elektriciteit
-        file_carriers_imported_heat_co2_conversion_per_mj: Geïmporteerde warmte
+        file_carriers_imported_heat_ht_co2_conversion_per_mj: Geïmporteerde warmte (HT)
+        file_carriers_imported_heat_mt_co2_conversion_per_mj: Geïmporteerde warmte (MT)
+        file_carriers_imported_heat_lt_co2_conversion_per_mj: Geïmporteerde warmte (LT)
         file_carriers_imported_hydrogen_co2_conversion_per_mj: Geïmporteerde waterstof
         file_carriers_imported_ammonia_co2_conversion_per_mj: Geïmporteerde ammoniak
         file_carriers_kerosene_co2_conversion_per_mj: Kerosine
@@ -527,18 +529,6 @@ nl:
         input_industry_other_coal_non_energetic_demand: Kolen (niet-energetisch)
         input_industry_other_cokes_non_energetic_demand: Cokes (niet-energetisch)
 
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share: "Geen restwarmte"
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share: "Geen restwarmte"
-        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share: "Restwarmte uit processen"
-        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share: "Restwarmte uit rookgassen"
-        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_used_heat_parent_share: "Geen restwarmte"
-        industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share: "Restwarmte uit servers"
-        industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: "Geen restwarmte"
-
         input_industry_metal_aluminium_electricity_demand: Elektriciteit
         input_industry_metal_aluminium_network_gas_demand: Gas
 
@@ -590,12 +580,15 @@ nl:
         input_energy_power_wind_turbine_offshore_production: Wind op zee
         input_energy_power_solar_pv_solar_radiation_production: Zon-PV-centrale
         input_energy_power_supercritical_waste_mix_production: Afvalverbrander
-        input_energy_chp_supercritical_waste_mix_production: Afvalverbrander met warmtelevering (WKK)
+        input_energy_chp_supercritical_ht_waste_mix_production: Afvalverbrander met warmtelevering (WKK, HT)
+        input_energy_chp_supercritical_mt_waste_mix_production: Afvalverbrander met warmtelevering (WKK, MT)
         input_energy_power_hydro_river_production: Waterkracht (rivier)
         input_energy_power_hydro_mountain_production: Waterkracht (bergen)
         input_energy_power_geothermal_production: Geothermie
-        input_energy_chp_local_engine_biogas_production: Biogas WKK
-        input_energy_chp_local_wood_pellets_production: Biomassa WKK
+        input_energy_chp_local_engine_ht_biogas_production: Biogas WKK (HT)
+        input_energy_chp_local_engine_mt_biogas_production: Biogas WKK (MT)
+        input_energy_chp_local_ht_wood_pellets_production: Biomassa WKK (HT)
+        input_energy_chp_local_mt_wood_pellets_production: Biomassa WKK (MT)
         input_energy_power_solar_csp_solar_radiation_production: Geconcentreerde zonnestroom
 
         input_energy_power_ultra_supercritical_coal_production: Poederkolen
@@ -604,9 +597,12 @@ nl:
         input_energy_power_ultra_supercritical_cofiring_coal_production: Poederkolen met biomassabijstook
         input_energy_power_combined_cycle_ccs_coal_production: Kolenvergassing met CCS
         input_energy_power_ultra_supercritical_ccs_coal_production: Poederkolen met CCS
-        input_energy_chp_ultra_supercritical_coal_production: Kolencentrale met warmtelevering (WKK)
-        input_energy_chp_ultra_supercritical_cofiring_coal_production: Bijstookcentrale met warmtelevering (WKK)
-        input_energy_chp_ultra_supercritical_lignite_production: Bruinkoolcentrale met warmtelevering (WKK)
+        input_energy_chp_ultra_supercritical_ht_coal_production: Kolencentrale met warmtelevering (WKK, HT)
+        input_energy_chp_ultra_supercritical_mt_coal_production: Kolencentrale met warmtelevering (WKK, MT)
+        input_energy_chp_ultra_supercritical_cofiring_ht_coal_production: Bijstookcentrale met warmtelevering (WKK, HT)
+        input_energy_chp_ultra_supercritical_cofiring_mt_coal_production: Bijstookcentrale met warmtelevering (WKK, MT)
+        input_energy_chp_ultra_supercritical_ht_lignite_production: Bruinkoolcentrale met warmtelevering (WKK, HT)
+        input_energy_chp_ultra_supercritical_mt_lignite_production: Bruinkoolcentrale met warmtelevering (WKK, MT)
         input_energy_power_supercritical_ccs_waste_mix_production: Afvalverbrander CCS
         input_energy_power_ultra_supercritical_lignite_production: Bruinkolen
         input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production: Bruinkolen 'oxyfuel' CCS
@@ -616,8 +612,10 @@ nl:
         input_energy_power_engine_network_gas_production: Gasmotor
         input_energy_power_combined_cycle_network_gas_production: Gas STEG
         input_energy_power_combined_cycle_ccs_network_gas_production: Gas STEG met CCS
-        input_energy_chp_combined_cycle_network_gas_production: Gas WKK (120 MW) met warmtelevering
-        input_energy_chp_local_engine_network_gas_production: Gas WKK (2 MW) met warmtelevering
+        input_energy_chp_combined_cycle_ht_network_gas_production: Gas WKK (120 MW) met warmtelevering (HT)
+        input_energy_chp_combined_cycle_mt_network_gas_production: Gas WKK (120 MW) met warmtelevering (MT)
+        input_energy_chp_local_engine_ht_network_gas_production: Gas WKK (2 MW) met warmtelevering (HT)
+        input_energy_chp_local_engine_mt_network_gas_production: Gas WKK (2 MW) met warmtelevering (MT)
 
         input_energy_power_nuclear_gen2_uranium_oxide_production: 2e generatie kerncentrale
         input_energy_power_nuclear_gen3_uranium_oxide_production: 3e generatie kerncentrale
@@ -625,25 +623,65 @@ nl:
         input_energy_power_ultra_supercritical_crude_oil_production: Oliecentrale
         input_energy_power_engine_diesel_production: Dieselgenerator
 
-        input_energy_heat_burner_wood_pellets_production: Biomassaketels
-        input_energy_heat_well_geothermal_production: Geothermie
-        input_energy_heat_burner_waste_mix_production: Warmte uit afvalverbranding
-        input_energy_heat_burner_hydrogen_production: Waterstofketels
-        input_energy_heat_solar_thermal_production: Zonthermiepark
+        input_energy_heat_burner_ht_wood_pellets_production: Biomassaketels (HT)
+        input_energy_heat_burner_mt_wood_pellets_production: Biomassaketels (MT)
+        input_energy_heat_well_ht_geothermal_production: Diepe geothermie (HT)
+        input_energy_heat_well_mt_geothermal_production: Diepe geothermie (MT)
+        input_energy_heat_well_shallow_mt_geothermal_production: Ondiepe geothermie met booster (MT)
+        input_energy_heat_well_shallow_lt_geothermal_production: Ondiepe geothermie (LT)
+        input_energy_heat_burner_ht_waste_mix_production: Warmte uit afvalverbranding (HT)
+        input_energy_heat_burner_mt_waste_mix_production: Warmte uit afvalverbranding (MT)
+        input_energy_heat_burner_ht_hydrogen_production: Waterstofketels (HT)
+        input_energy_heat_burner_mt_hydrogen_production: Waterstofketels (MT)
+        input_energy_heat_burner_lt_hydrogen_production: Waterstofketels (LT)
+        input_energy_heat_mt_solar_thermal_production: Zonthermiepark (MT)
+        input_energy_heat_lt_solar_thermal_production: Zonthermiepark (LT)
         input_energy_heat_surface_water_aquathermal_production: Aquathermie (TEO)
         input_energy_heat_waste_water_aquathermal_production: Aquathermie (TEA)
         input_energy_heat_drink_water_aquathermal_production: Aquathermie (TED)
-        input_energy_heat_heatpump_water_water_electricity_production: Elektrische warmtepompen
-        input_energy_heat_electric_boiler_electricity_production: Elektrische boilers
-        input_energy_heat_burner_network_gas_production: Gasketels
-        input_energy_heat_burner_coal_production: Kolenketels
-        input_energy_heat_burner_crude_oil_production: Olieketels
+        input_energy_heat_heatpump_water_water_ht_electricity_production: Elektrische warmtepompen (HT)
+        input_energy_heat_heatpump_water_water_mt_electricity_production: Elektrische warmtepompen (MT)
+        input_energy_heat_heatpump_water_water_lt_electricity_production: Elektrische warmtepompen (LT)
+        input_energy_heat_boiler_ht_electricity_production: Elektrische boilers (HT)
+        input_energy_heat_boiler_mt_electricity_production: Elektrische boilers (MT)
+        input_energy_heat_boiler_lt_electricity_production: Elektrische boilers (LT)
+        input_energy_heat_burner_ht_network_gas_production: Gasketels (HT)
+        input_energy_heat_burner_mt_network_gas_production: Gasketels (MT)
+        input_energy_heat_burner_ht_coal_production: Kolenketels (HT)
+        input_energy_heat_burner_mt_coal_production: Kolenketels (MT)
+        input_energy_heat_burner_ht_crude_oil_production: Olieketels (HT)
+        input_energy_heat_burner_mt_crude_oil_production: Olieketels (MT)
 
-        energy_import_ht_heat_demand: HT (rest)warmte geïmporteerd van buiten de regio
-        energy_import_mt_heat_demand: MT (rest)warmte geïmporteerd van buiten de regio
-        energy_import_lt_heat_demand: LT (rest)warmte geïmporteerd van buiten de regio
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: Restwarmte uit processen
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: Restwarmte uit rookgassen
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share: Geen restwarmte
+        industry_chemicals_other_ht_residual_heat: HT warmte
+        industry_chemicals_other_mt_residual_heat: MT warmte
+        
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share: Restwarmte uit processen
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share: Restwarmte uit rookgassen
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share: Geen restwarmte
+        industry_chemicals_refineries_ht_residual_heat: HT warmte
+        industry_chemicals_refineries_mt_residual_heat: MT warmte
 
-        energy_heat_distribution_loss_demand: Transportverliezen in warmtenetten
+        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share: Restwarmte uit processen
+        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share: Restwarmte uit rookgassen
+        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_used_heat_parent_share: Geen restwarmte
+        industry_chemicals_fertilizers_ht_residual_heat: HT warmte
+        industry_chemicals_fertilizers_mt_residual_heat: MT warmte
+
+        industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share: Restwarmte uit servers
+        industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: Geen restwarmte
+        industry_ict_mt_residual_heat: MT warmte (incl. booster)
+        industry_ict_lt_residual_heat: LT warmte (excl. booster)
+
+        energy_import_ht_heat_demand: (Rest)warmte geïmporteerd van buiten de regio (HT)
+        energy_import_mt_heat_demand: (Rest)warmte geïmporteerd van buiten de regio (MT)
+        energy_import_lt_heat_demand: (Rest)warmte geïmporteerd van buiten de regio (LT)
+
+        energy_heat_distribution_ht_loss_share: Transportverliezen in warmtenetten (HT)
+        energy_heat_distribution_mt_loss_share: Transportverliezen in warmtenetten (MT)
+        energy_heat_distribution_lt_loss_share: Transportverliezen in warmtenetten (LT)
 
         energy_power_wind_turbine_inland_full_load_hours: Wind (op land)
         energy_power_wind_turbine_coastal_full_load_hours: Wind (aan de kust)

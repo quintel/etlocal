@@ -121,13 +121,6 @@ nl:
         In dit tabblad vind je informatie over hoeveel brandstof er gebruikt wordt door warmtekrachtkoppelingen (WKK) en andere ketels in de industrie.
         Het gaat om collectieve of centrale verwarmingsapparaten, die stoom of warmte leveren aan industriële bedrijven. De vraag naar deze
         warmte vind je terug in de tabbladen voor de verschillende industriesectoren.
-      industry_residual_heat: |
-        In dit tabblad vind je hoeveel restwarmte er beschikbaar is voor verschillende industriële sectoren.
-        Het Energietransitiemodel maakt een onderscheid tussen restwarmte uit industriële processen en
-        restwarmte uit rookgassen. De restwarmte kan worden ingevoed op een warmtenet voor de verwarming van woningen en gebouwen.
-        Meer informatie over industriële restwarmte kan gevonden worden in onze
-        <a target="_blank" href="https://docs.energytransitionmodel.com/main/residual-heat-industry">
-        documentatie</a>.
       other: |
         In deze sectie vind je informatie over het overige energiegebruik in deze regio. Dit is al het
         energiegebruik dat niet in een van de bovenstaande secties aan bod is gekomen.

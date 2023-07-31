@@ -118,13 +118,6 @@ en:
         In this tab you can see how much energy is used for Combined Heat and Power (CHP) and other heaters
         in industrial firms. These are collective or central heating appliances that supply steam or heat to industrial companies.
         The demand for this heat can be found in the tabs for the various industrial sectors.
-      industry_residual_heat: |
-        In this tab you can see how much residual heat is available in different industrial processes.
-        The Energy Transition Model distinguishes between residual heat from industrial processes and residual
-        heat from flue gases. The residual heat can be fed into a heat network for heating homes and buildings.
-        More information about industrial residual heat can be found in our
-        <a target="_blank" href="https://docs.energytransitionmodel.com/main/residual-heat-industry">
-        documentation</a>.
       other: |
         In this section you will find information about other energy use in this area. This all
         energy that is not taken into account in any of the above sections.

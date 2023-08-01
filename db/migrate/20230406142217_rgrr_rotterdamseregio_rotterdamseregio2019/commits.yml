@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Albrandswaard, Barendrecht, Capelle_aan_den_ijssel, Ridderkerk, Rotterdam, Schiedam, Vlaardingen"

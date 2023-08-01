@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Optelling van de volgende gebieden: Alphen_aan_den_rijn, Hillegom, Kaag_en_braassem, Katwijk, Leiden, Leiderdorp, Lisse, Nieuwkoop, Noordwijk, Oegstgeest, Voorschoten, Zoeterwoude, Teylingen"

@@ -46,17 +46,17 @@ class Dataset < ApplicationRecord
   end
 
   def group
-    if geo_id.starts_with?('GM', 'BEGM', 'DKGM')
+    if geo_id.start_with?('GM', 'BEGM', 'DKGM')
       'municipality'
-    elsif geo_id.starts_with?('WK')
+    elsif geo_id.start_with?('WK')
       'district'
-    elsif geo_id.starts_with?('BU', 'BEBU')
+    elsif geo_id.start_with?('BU', 'BEBU')
       'neighbourhood'
-    elsif geo_id.starts_with?('RG')
+    elsif geo_id.start_with?('RG')
       'region'
-    elsif geo_id.starts_with?('RES')
+    elsif geo_id.start_with?('RES')
       'res'
-    elsif entso_data_source? || geo_id.starts_with?('UKNI')
+    elsif entso_data_source? || geo_id.start_with?('UKNI')
       'country'
     else
       'province'

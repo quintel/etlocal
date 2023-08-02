@@ -17,7 +17,6 @@ RSpec.describe DatasetCombiner::ValueProcessor do
   end
 
   describe 'when combining values for the given datasets' do
-
     let(:values) do
       [
         # dataset1, dataset2, dataset3
@@ -166,7 +165,7 @@ RSpec.describe DatasetCombiner::ValueProcessor do
       })
     end
 
-    it 'should raise an error if more than one item per group is defined as flexible' do
+    it 'raises an error if more than one item per group is defined as flexible' do
       items = [
         InterfaceItem.find(:input_energy_cokesoven_transformation_loss_output_conversion), # This one is flexible
         InterfaceItem.find(:input_energy_cokesoven_transformation_cokes_output_conversion),

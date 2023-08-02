@@ -12,7 +12,7 @@ RSpec.describe DatasetCombiner do
     # and thus can have more error-prone given arguments.
     describe 'when validating arguments' do
 
-      it 'should raise an ArgumentError if mandatory arguments are ommitted' do
+      it 'raises an ArgumentError when mandatory arguments are ommitted' do
         expect do
           described_class.new(
             target_dataset_geo_id: nil,
@@ -26,13 +26,14 @@ RSpec.describe DatasetCombiner do
         )
       end
 
-      it 'should check whether source_data_year is a valid year' do
+      it 'validates source_data_year is a valid year' do
         expect do
           described_class.new(
             target_dataset_geo_id: 'PV20',
             source_data_year: 1,
             source_dataset_geo_ids: [dataset_1.geo_id],
-            target_area_name: 'Groningen'
+            target_area_name: 'Groningen',
+            target_country_name: 'nl'
           )
         end.to raise_error(
           ArgumentError,
@@ -44,18 +45,20 @@ RSpec.describe DatasetCombiner do
             target_dataset_geo_id: 'PV20',
             source_data_year: 2000,
             source_dataset_geo_ids: [dataset_1.geo_id],
-            target_area_name: 'Groningen'
+            target_area_name: 'Groningen',
+            target_country_name: 'nl'
           )
         end.not_to raise_error(ArgumentError)
       end
 
-      it 'should check whether source_dataset_geo_ids is a one-dimensional array' do
+      it 'validates source_dataset_geo_ids is a one-dimensional array' do
         expect do
           described_class.new(
             target_dataset_geo_id: 'PV20',
             source_data_year: 2000,
             source_dataset_geo_ids: { a: 1, b: 2 },
-            target_area_name: 'Groningen'
+            target_area_name: 'Groningen',
+            target_country_name: 'nl'
           )
         end.to raise_error(
           ArgumentError,
@@ -67,7 +70,8 @@ RSpec.describe DatasetCombiner do
             target_dataset_geo_id: 'PV20',
             source_data_year: 2000,
             source_dataset_geo_ids: [[1], [2]],
-            target_area_name: 'Groningen'
+            target_area_name: 'Groningen',
+            target_country_name: 'nl'
           )
         end.to raise_error(
           ArgumentError,
@@ -79,7 +83,34 @@ RSpec.describe DatasetCombiner do
             target_dataset_geo_id: 'PV20',
             source_data_year: 2000,
             source_dataset_geo_ids: [dataset_1.geo_id, dataset_2.geo_id],
-            target_area_name: 'Groningen'
+            target_area_name: 'Groningen',
+            target_country_name: 'nl'
+          )
+        end.not_to raise_error(ArgumentError)
+      end
+
+      # target_country_name is required if the target dataset is a province or RES-region
+      # and a target dataset with the given geo-id does not already exist
+      it 'validates target_country_name is present if required' do
+        expect do
+          described_class.new(
+            target_dataset_geo_id: 'PV20',
+            source_data_year: 2000,
+            source_dataset_geo_ids: [[1], [2]],
+            target_area_name: 'Groningen',
+          )
+        end.to raise_error(
+          ArgumentError,
+          /You are attempting to create a combined dataset for a province or RES-region which required a country name/
+        )
+
+        expect do
+          described_class.new(
+            target_dataset_geo_id: 'PV20',
+            source_data_year: 2000,
+            source_dataset_geo_ids: [dataset_1.geo_id, dataset_2.geo_id],
+            target_area_name: 'Groningen',
+            target_country_name: 'nl'
           )
         end.not_to raise_error(ArgumentError)
       end
@@ -93,7 +124,7 @@ RSpec.describe DatasetCombiner do
         described_class.new(
           target_dataset_geo_id: 'PV20',
           source_data_year: 2000,
-          source_dataset_geo_ids: [dataset_1.geo_id, dataset_2.geo_id],
+          source_dataset_geo_ids: [dataset_1.geo_id, dataset_2.geo_id]
         )
       end
 
@@ -101,33 +132,37 @@ RSpec.describe DatasetCombiner do
         allow_any_instance_of(DatasetCombiner::DataExporter).to receive(:perform).and_return(true)
       end
 
-      it 'should set target_area_name if empty and dataset for target_dataset_geo_id is found' do
+      it 'derives target_area_name from existing target dataset if not passed as an argument' do
         expect(
           DatasetCombiner::DataExporter
         ).to receive(
           :new
         ).with(
-          target_dataset_geo_id: 'PV20',
-          target_area_name: 'Groningen',
-          source_area_names: [dataset_1.name, dataset_2.name],
-          combined_item_values: nil,
-          migration_slug: '2000'
+          hash_including(target_area_name: 'Groningen')
         ).and_call_original
 
         combiner.export_data
       end
 
-      it 'should set migration_slug to source_data_year if empty' do
+      it 'derives target_country_name from existing target dataset if not passed as an argument' do
         expect(
           DatasetCombiner::DataExporter
         ).to receive(
           :new
         ).with(
-          target_dataset_geo_id: 'PV20',
-          target_area_name: 'Groningen',
-          source_area_names: [dataset_1.name, dataset_2.name],
-          combined_item_values: nil,
-          migration_slug: '2000'
+          hash_including(target_country_name: 'nl')
+        ).and_call_original
+
+        combiner.export_data
+      end
+
+      it 'sets migration_slug to source_data_year if empty' do
+        expect(
+          DatasetCombiner::DataExporter
+        ).to receive(
+          :new
+        ).with(
+          hash_including(migration_slug: '2000')
         ).and_call_original
 
         combiner.export_data
@@ -144,13 +179,14 @@ RSpec.describe DatasetCombiner do
         target_dataset_geo_id: 'PV20',
         source_data_year: 2000,
         source_dataset_geo_ids: [dataset_1.geo_id, dataset_2.geo_id],
-        target_area_name: 'Groningen'
+        target_area_name: 'Groningen',
+        target_country_name: 'nl'
       )
     end
 
     context '#combine_datasets' do
 
-      it 'should call the DatasetCombiner::ValueProcessor with the correct initialized datasets' do
+      it 'calls the DatasetCombiner::ValueProcessor with the correct initialized datasets' do
         expect(
           DatasetCombiner::ValueProcessor
         ).to receive(
@@ -166,16 +202,17 @@ RSpec.describe DatasetCombiner do
 
     context '#export_migrations' do
 
-      it 'should call the DatasetCombiner::DataExporter with the correct attributes' do
+      it 'calls the DatasetCombiner::DataExporter with the correct attributes' do
         allow_any_instance_of(DatasetCombiner::DataExporter).to receive(:perform).and_return(true)
 
-        expect_any_instance_of(
+        expect(
           DatasetCombiner::DataExporter
         ).to receive(
-          :initialize
+          :new
         ).with(
           target_dataset_geo_id: 'PV20',
           target_area_name: 'Groningen',
+          target_country_name: 'nl',
           source_area_names: [dataset_1.name, dataset_2.name],
           combined_item_values: nil,
           migration_slug: '2000'

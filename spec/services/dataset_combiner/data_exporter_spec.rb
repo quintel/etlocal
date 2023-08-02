@@ -4,13 +4,15 @@ RSpec.describe DatasetCombiner::DataExporter do
 
   let(:target_geo_id) { 'PV20' }
   let(:target_area_name) { 'Groningen' }
+  let(:target_country_name) { 'nl_2019' }
   let(:migration_slug) { 'update_2020' }
-  let(:combined_item_values) { { electricity: 1, water: 2, coal: 3, gas: 4} }
+  let(:combined_item_values) { { electricity: 1, water: 2, coal: 3, gas: 4 } }
   let(:source_area_names) { ['Groningen', 'Haren', 'Hoogkerk', 'Ten Boer'] }
   let(:exporter) do
     described_class.new(
       target_dataset_geo_id: target_geo_id,
       target_area_name: target_area_name,
+      target_country_name: target_country_name,
       migration_slug: migration_slug,
       combined_item_values: combined_item_values,
       source_area_names: source_area_names
@@ -48,7 +50,7 @@ RSpec.describe DatasetCombiner::DataExporter do
       expect(
         migration_contents[2].strip
       ).to eq(
-        "directory    = Rails.root.join('db/migrate/#{exporter.send(:migration_filename)}')"
+        "directory    = Rails.root.join('db/migrate/#{exporter.send(:migration_version)}_#{exporter.send(:migration_name)}')"
       )
 
       # Also verify the 'create_missing_datasets: true' argument was added to the CSVImporter line
@@ -94,12 +96,12 @@ RSpec.describe DatasetCombiner::DataExporter do
 
       # Check header contents on first line
       expect(csv_contents[0].strip).to eq(
-        "name,geo_id,#{combined_item_values.keys.join(',')}"
+        "name,geo_id,country,#{combined_item_values.keys.join(',')}"
       )
 
       # Check data contents on second line
       expect(csv_contents[1].strip).to eq(
-        "#{target_area_name},#{target_geo_id},#{combined_item_values.values.join(',')}"
+        "#{target_area_name},#{target_geo_id},#{target_country_name},#{combined_item_values.values.join(',')}"
       )
     end
   end
@@ -125,10 +127,10 @@ RSpec.describe DatasetCombiner::DataExporter do
           tmpdir.join(exporter.send(:migration_data_directory).join(described_class::COMMITS_FILENAME))
         )
       ).to eq(
-        {
-          fields: [:all],
-          message: "Optelling van de volgende gebieden: #{source_area_names.join(', ')}"
-        }
+        [{
+          'fields' => [:all],
+          'message' => "Optelling van de volgende gebieden: #{source_area_names.join(', ')}"
+        }]
       )
     end
   end

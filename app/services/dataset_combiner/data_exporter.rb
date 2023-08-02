@@ -69,8 +69,8 @@ class DatasetCombiner
 
       # Set values to variables to be rendered within the template
       class_name = migration_name
+      file_name = migration_name
       migration_number = migration_version
-      file_name = "#{migration_name}.rb"
 
       # Use ERB to render the data migration template
       require 'erb'

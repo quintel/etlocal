@@ -105,10 +105,10 @@ class DatasetCombiner
     # Create a commits file describing the area names of the datasets that were used to create the combined one
     def export_commits_file
       migration_data_directory.join(COMMITS_FILENAME).write(
-        {
-          fields: [:all],
-          message: "Optelling van de volgende gebieden: #{@source_area_names.join(', ')}"
-        }.to_yaml
+        [{
+          'fields' => [:all],
+          'message' => "Optelling van de volgende gebieden: #{@source_area_names.join(', ')}"
+        }].to_yaml
       )
     end
 

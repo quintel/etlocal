@@ -7,12 +7,17 @@ class DatasetCombiner
   #   source_data_year: The year over which new data should be calculated
   #   source_dataset_geo_ids: Identifiers for areas to be combined, e.g.: ['GM306','GM307']
   #   target_area_name (optional): Name of combined area, e.g.: 'Groningen'
+  #   target_country_name (optional): Name of country of the target dataset, e.g. 'nl2019'
   #   migration_slug (optional): Short description of migration in lowercase and underscores, e.g.: 'update_2023'
-  def initialize(target_dataset_geo_id:, source_data_year:, source_dataset_geo_ids:, target_area_name: nil, migration_slug: nil)
+  def initialize(
+    target_dataset_geo_id:, source_data_year:, source_dataset_geo_ids:,
+    target_area_name: nil, target_country_name: nil, migration_slug: nil
+  )
     @target_dataset_geo_id = target_dataset_geo_id
     @source_data_year = source_data_year
     @source_dataset_geo_ids = source_dataset_geo_ids
     @target_area_name = target_area_name
+    @target_country_name = target_country_name
     @migration_slug = migration_slug
 
     # Validate whether all required arguments are present
@@ -35,6 +40,7 @@ class DatasetCombiner
     DatasetCombiner::DataExporter.new(
       target_dataset_geo_id: @target_dataset_geo_id,
       target_area_name: @target_area_name,
+      target_country_name: @target_country_name,
       migration_slug: @migration_slug,
       combined_item_values: @combined_item_values,
       source_area_names: @source_datasets.pluck(:name)
@@ -56,28 +62,50 @@ class DatasetCombiner
     end
 
     # Check target_dataset_geo_id
-    unless @target_dataset_geo_id.is_a?(String)
+    unless @target_dataset_geo_id.present? && @target_dataset_geo_id.is_a?(String)
       argument_error('The target_dataset_geo_id should be a (numeric) string')
     end
 
-    # Check source_data_year
-    if /^(19|20|21)\d{2}$/.match(@source_data_year.to_s).blank?
-      argument_error('The source_data_year provided is not a valid year. A valid year is between 1900 and 2199')
+    @target_dataset = Dataset.find_by(geo_id: @target_dataset_geo_id)
+
+    # No target_area_name was provided, so we should derive it from an existing dataset
+    # with the given 'target_dataset_geo_id'. We raise an error if we can't.
+    if @target_area_name.blank? && (@target_dataset.nil? || @target_dataset.name.blank?)
+      argument_error('No target_area_name was provided, and it cannot be derived through the target_dataset_geo_id')
+    end
+
+    # If the target dataset is a province or RES region we need to include a country name.
+    # This should either be passed as the 'target_country_name' argument, or be derived
+    # from the dataset that belongs to the given 'target_dataset_geo_id'.
+    # We raise an error if this is not the case.
+    if @target_dataset_geo_id.start_with?('PV', 'RES') && @target_country_name.blank? && @target_dataset.nil?
+      argument_error(
+        <<~MSG
+          You are attempting to create a combined dataset for a province or RES-region which required a country name.
+          The country name could not be derived from an existing dataset with geo-id '#{@target_dataset_geo_id}' however.
+          Please pass the country name as the "target_country_name" argument.\n
+        MSG
+      )
+    end
+
+    # Check if the source_data_year lies between 1900 and the current year.
+    unless @source_data_year.to_i.between?(1900, Time.zone.today.year)
+      argument_error("The source_data_year provided is not a valid year. A valid year is between 1900 and #{Time.zone.today.year}")
     end
 
     # Check source_dataset_geo_ids
-    unless @source_dataset_geo_ids.is_a?(Array) && @source_dataset_geo_ids.all? { |id| id.is_a?(Numeric) || id.is_a?(String) }
+    unless @source_dataset_geo_ids.is_a?(Array) && @source_dataset_geo_ids.all? { |id| id.is_a?(String) }
       argument_error('The source_dataset_geo_ids should be a set of ids')
     end
   end
 
   def validate_dataset_data_year
     if @source_datasets.empty?
-      argument_error('Could not find datasets for the given source_dataset_geo_ids')
+      argument_error('Could not find any datasets for the given source_dataset_geo_ids')
     end
 
     outdated_datasets = @source_datasets.select do |set|
-      set.editable_attributes.find('analysis_year').value.to_i < @source_data_year
+      set.editable_attributes.find('analysis_year').value.to_i < @source_data_year.to_i
     end
 
     if outdated_datasets.present?
@@ -89,15 +117,14 @@ class DatasetCombiner
   end
 
   def set_defaults
-    # No target_area_name was provided. Attempt to derive it from the given target_dataset_geo_id
+    # No target_area_name was provided. Derive it from the target dataset.
     if @target_area_name.blank?
-      target_dataset = Dataset.find_by(geo_id: @target_dataset_geo_id)
+      @target_area_name = @target_dataset.name
+    end
 
-      if target_dataset.nil? || target_dataset.name.blank?
-        argument_error('No target_area_name was provided, and it could not be derived through the target_dataset_geo_id')
-      end
-
-      @target_area_name = target_dataset.name
+    # No target_country_name was provided, but it is required. Derive it from the target dataset.
+    if @target_country_name.blank? && @target_dataset_geo_id.start_with?('PV', 'RES')
+      @target_country_name = @target_dataset.country
     end
 
     # No migration slug was provided. Derive it from the given source_data_year

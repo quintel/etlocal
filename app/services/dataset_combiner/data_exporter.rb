@@ -6,16 +6,20 @@ class DatasetCombiner
   # to a CSV file so it can be processed by the migration anywhere. It also adds a commits
   # file containing the names of the source areas that were combined.
   #
-  # All of the DataExporter's arguments are mandatory. For a description of the arguments
-  # see the DatasetCombiner parent class.
+  # All of the DataExporter's arguments are mandatory, expect for the target_country_name.
+  # For a description of the arguments see the DatasetCombiner parent class.
   class DataExporter
 
     DATA_FILENAME = 'data.csv'
     COMMITS_FILENAME = 'commits.yml'
 
-    def initialize(target_dataset_geo_id:, target_area_name:, migration_slug:, combined_item_values:, source_area_names:)
+    def initialize(
+      target_dataset_geo_id:, target_area_name:, target_country_name: nil,
+      migration_slug:, combined_item_values:, source_area_names:
+    )
       @target_dataset_geo_id = target_dataset_geo_id
       @target_area_name = target_area_name
+      @target_country_name = target_country_name
       @migration_slug = migration_slug
       @combined_item_values = combined_item_values
       @source_area_names = source_area_names
@@ -94,10 +98,18 @@ class DatasetCombiner
     # Create CSV that contains the data that was combined and returned by the Dataset::ValueProcessor
     # The CSV will contain two lines: the first contains the header, the second contains the data
     def export_data_file
+      if @target_dataset_geo_id.start_with?('PV', 'RES')
+        mandatory_headers = %w[name geo_id country]
+        mandatory_values = [@target_area_name, @target_dataset_geo_id, @target_country_name]
+      else
+        mandatory_headers = %w[geo_id]
+        mandatory_values = [@target_dataset_geo_id]
+      end
+
       migration_data_directory.join(DATA_FILENAME).write(
         <<~CSV_CONTENTS
-          name,geo_id,#{@combined_item_values.keys.join(',')}
-          #{@target_area_name},#{@target_dataset_geo_id},#{@combined_item_values.values.join(',')}
+          #{(mandatory_headers + @combined_item_values.keys).join(',')}
+          #{(mandatory_values + @combined_item_values.values).join(',')}
         CSV_CONTENTS
       )
     end

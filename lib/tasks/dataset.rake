@@ -11,6 +11,8 @@ namespace :dataset do
     - source_dataset_geo_ids: Geo-ids for regions that provide source-information to be combined, e.g.: 'GM306,GM307,GM308'.
     - target_area_name (optional): Name of region to combine into, e.g.: 'Groningen'
         If omitted the script will attempt to lookup the name of the dataset belonging to the given 'target_dataset_geo_id'
+    - target_country_name (optional): Name of country of the target dataset, e.g.: 'nl2019'
+        If omitted the script will attempt to lookup the country through the dataset belonging to the given target_dataset_geo_id.
     - migration_slug (optional): Name of migration to generate, e.g.: 'update_2019'
         If omitted the source_data_year will be used.
 
@@ -20,39 +22,46 @@ namespace :dataset do
                             migration_slug=update_2019
   DESC
   task combine: :environment do
+    puts "\nInitializing DatasetCombiner with given datasets..."
+
     combiner = DatasetCombiner.new(
       target_dataset_geo_id: ENV.fetch('target_dataset_geo_id', nil),
-      source_data_year: ENV.fetch('source_data_year', nil).try(:to_i),
+      source_data_year: ENV.fetch('source_data_year', nil),
       source_dataset_geo_ids: ENV.fetch('source_dataset_geo_ids', nil).try(:split, ','),
       target_area_name: ENV.fetch('target_area_name', nil),
+      target_country_name: ENV.fetch('target_country_name', nil),
       migration_slug: ENV.fetch('migration_slug', nil)
     )
 
-    puts "Dataset combiner initialized. Combining datasets...\n\n"
+    puts '✅ Dataset combiner initialized!'
+    puts 'Combining datasets... '
 
     begin
       combiner.combine_datasets
     rescue StandardError => e
-      puts '!! Something went wrong while attempting to combine the datasets:'
+      puts '❌ Something went wrong while attempting to combine the datasets:'
       puts e.message
       puts "\n"
 
       exit
     end
 
-    puts "Datasets combined. Exporting data...\n\n"
+    puts '✅ Datasets combined!'
+    puts 'Exporting data...'
 
     begin
       migration_filename = combiner.export_data
     rescue StandardError => e
-      puts '!! Something went wrong while attempting to export the newly combined dataset:'
+      puts '❌ Something went wrong while attempting to export the newly combined dataset:'
       puts e.message
       puts "\n"
 
       exit
     end
 
-    puts "Datasets combined and exported!\nMigration file can be found at: #{migration_filename}\n\nAll done! Have a nice day :)\n\n"
+    puts '✅ Datasets combined and exported!'
+    puts "Migration file can be found at: #{migration_filename}\n\n"
+    puts 'All done! Have a nice day :)'
   end
 
 end

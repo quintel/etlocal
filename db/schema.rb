@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_19_132950) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_02_144742) do
   create_table "commits", id: :integer, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "source_id"
     t.integer "user_id"
@@ -74,4 +74,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_19_132950) do
     t.index ["group_id"], name: "index_users_on_group_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
 end

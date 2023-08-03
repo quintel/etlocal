@@ -31,6 +31,9 @@ groups:
 
   - header: industry_food_electricity
     type: slider
+    combination_method:
+      weighted_average:
+        - input_industry_food_electricity_demand
     items:
       - key: industry_final_demand_for_other_food_electricity_industry_useful_demand_for_other_food_electricity_parent_share
         unit: '%'

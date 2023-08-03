@@ -40,56 +40,59 @@ groups:
 
   - header: agriculture_final_demand_crude_oil_input
     type: slider
+    combination_method:
+      weighted_average:
+        - input_agriculture_final_demand_crude_oil_demand
     items:
-    - key: input_percentage_of_diesel_agriculture_final_demand_crude_oil
-      unit: '%'
-      entso: |
-        IF(EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") > 0.0,
-          -> { EB("Final consumption - other sectors - agriculture and forestry - energy use", "Gas oil and diesel oil (excluding biofuel portion)") / 
-              EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") },
-          -> { 1.0 })
-    - key: input_percentage_of_biodiesel_agriculture_final_demand_crude_oil
-      unit: '%'
-      entso: |
-        IF(EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") > 0.0,
-          -> { EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-diesel") / 
-              EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") },
-          -> { 0.0 })
-    - key: input_percentage_of_kerosene_agriculture_final_demand_crude_oil
-      unit: '%'
-      entso: |
-        IF(EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") > 0.0,
-          -> { EB("Final consumption - other sectors - agriculture and forestry - energy use", "Kerosene") / 
-              EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") },
-          -> { 0.0 })
-    - key: input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil
-      unit: '%'
-      entso: |
-        IF(EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") > 0.0,
-          -> { EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-kerosene") / 
-              EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") },
-          -> { 0.0 })
-    - key: input_percentage_of_lpg_agriculture_final_demand_crude_oil
-      unit: '%'
-      entso: |
-        IF(EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") > 0.0,
-          -> { EB("Final consumption - other sectors - agriculture and forestry - energy use", "Liquefied petroleum gases") / 
-              EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") },
-          -> { 0.0 })
-    - key: input_percentage_of_bio_oil_agriculture_final_demand_crude_oil
-      unit: '%'
-      entso: |
-        IF(EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") > 0.0,
-          -> { (EB("Final consumption - other sectors - agriculture and forestry - energy use", "Biogasoline") +
-              EB("Final consumption - other sectors - agriculture and forestry - energy use", "Other liquid biofuels")) / 
-              EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") },
-          -> { 0.0 })
-    - key: input_percentage_of_crude_oil_agriculture_final_demand_crude_oil
-      unit: '%'
-      entso: |
-        IF(EB("Final consumption - other sectors - agriculture and forestry - energy use", "Other oil") > 0.0,
-          -> { EB("Final consumption - other sectors - agriculture and forestry - energy use", "Gas oil and diesel oil (excluding biofuel portion)") / 
-              EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") },
-          -> { 0.0 })
-      flexible: true
-      skip_validation: true
+      - key: input_percentage_of_diesel_agriculture_final_demand_crude_oil
+        unit: '%'
+        entso: |
+          IF(EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") > 0.0,
+            -> { EB("Final consumption - other sectors - agriculture and forestry - energy use", "Gas oil and diesel oil (excluding biofuel portion)") / 
+                EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") },
+            -> { 1.0 })
+      - key: input_percentage_of_biodiesel_agriculture_final_demand_crude_oil
+        unit: '%'
+        entso: |
+          IF(EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") > 0.0,
+            -> { EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-diesel") / 
+                EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") },
+            -> { 0.0 })
+      - key: input_percentage_of_kerosene_agriculture_final_demand_crude_oil
+        unit: '%'
+        entso: |
+          IF(EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") > 0.0,
+            -> { EB("Final consumption - other sectors - agriculture and forestry - energy use", "Kerosene") / 
+                EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") },
+            -> { 0.0 })
+      - key: input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil
+        unit: '%'
+        entso: |
+          IF(EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") > 0.0,
+            -> { EB("Final consumption - other sectors - agriculture and forestry - energy use", "Bio-kerosene") / 
+                EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") },
+            -> { 0.0 })
+      - key: input_percentage_of_lpg_agriculture_final_demand_crude_oil
+        unit: '%'
+        entso: |
+          IF(EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") > 0.0,
+            -> { EB("Final consumption - other sectors - agriculture and forestry - energy use", "Liquefied petroleum gases") / 
+                EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") },
+            -> { 0.0 })
+      - key: input_percentage_of_bio_oil_agriculture_final_demand_crude_oil
+        unit: '%'
+        entso: |
+          IF(EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") > 0.0,
+            -> { (EB("Final consumption - other sectors - agriculture and forestry - energy use", "Biogasoline") +
+                EB("Final consumption - other sectors - agriculture and forestry - energy use", "Other liquid biofuels")) / 
+                EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") },
+            -> { 0.0 })
+      - key: input_percentage_of_crude_oil_agriculture_final_demand_crude_oil
+        unit: '%'
+        entso: |
+          IF(EB("Final consumption - other sectors - agriculture and forestry - energy use", "Other oil") > 0.0,
+            -> { EB("Final consumption - other sectors - agriculture and forestry - energy use", "Gas oil and diesel oil (excluding biofuel portion)") / 
+                EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil") },
+            -> { 0.0 })
+        flexible: true
+        skip_validation: true

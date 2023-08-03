@@ -2,6 +2,7 @@ key: area_emission_factors
 groups:
   - header: area_emission_factors
   - header: area_emission_factors_general
+    combination_method: average
     items:
     - key: file_carriers_natural_gas_co2_conversion_per_mj
       unit: 'kg/MJ'
@@ -19,6 +20,7 @@ groups:
       unit: 'kg/MJ'
       precision: 4
   - header: area_emission_factors_transport_fuels
+    combination_method: average
     items:
     - key: file_carriers_diesel_co2_conversion_per_mj
       unit: 'kg/MJ'
@@ -39,6 +41,7 @@ groups:
       unit: 'kg/MJ'
       precision: 4
   - header: area_emission_factors_import
+    combination_method: average
     items:
     - key: file_carriers_imported_electricity_co2_conversion_per_mj
       unit: 'kg/MJ'

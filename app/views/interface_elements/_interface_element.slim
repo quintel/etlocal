@@ -65,7 +65,7 @@
                         | &nbsp;
 
                   span.unit data-to= interface_item.unit
-                    = I18n.t("units.#{ interface_item.key }.from", default: interface_item.unit).html_safe
+                    = I18n.t("units.#{ interface_item.key }.from", default: interface_item.unit)&.html_safe
                 .clear
 
           .history.hidden class= interface_item.key

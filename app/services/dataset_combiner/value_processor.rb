@@ -34,8 +34,8 @@ class DatasetCombiner
         InterfaceElement.items.to_h do |item|
           plucked_item_values = datasets.map { |set| set.editable_attributes.find(item.key.to_s).value }
 
-          # Skip this item unless data for it is present in any of the given datasets
-          next [nil, nil] if plucked_item_values.compact.blank?
+          # Skip this item unless data for it is present in any of the given datasets, or if it's flexible
+          next [nil, nil] if plucked_item_values.compact.blank? || item.flexible
 
           # We use the nested_combination_method since that will also look for the group combination method
           combined_value =
@@ -92,6 +92,16 @@ class DatasetCombiner
             .items
             .reject { |group_item| group_item.key == item.key }
             .each { |group_item| total += combined_item_values[group_item.key] }
+
+          if total > 1.0
+            puts <<~MSG
+              💩 The summed value of group shares was more than 1.0 (#{total}) when attempting to calculate flexible share #{item.key}
+              (parent element: #{item.try(:group).try(:element).try(:key)}, parent group: #{item.try(:group).try(:header)})
+              Skipping flexible share calculation!
+            MSG
+
+            next [item.key, combined_item_values[item.key]]
+          end
 
           [item.key, (1 - total)]
         end

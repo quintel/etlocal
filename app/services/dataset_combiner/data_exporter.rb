@@ -51,7 +51,7 @@ class DatasetCombiner
     end
 
     def migration_filename
-      @migration_filename ||= "#{migration_version}_#{migration_name}.rb"
+      @migration_filename ||= "#{migration_version}_#{migration_name.gsub(/[^\w]/, '_')}.rb"
     end
 
     # Please note the distinction between this method and 'migrate_directory' above!

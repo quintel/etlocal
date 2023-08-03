@@ -109,10 +109,10 @@ RSpec.describe DatasetCombiner::ValueProcessor do
       expect(
         described_class.perform([dataset1, dataset2, dataset3])
       ).to eq({
-        "#{item_keys[0]}": 25.714286,  # weighted avg of [10.0,  20.0,  30.0]
-        "#{item_keys[1]}": 64.285714,  # weighted avg of [25.0,  50.0,  75.0]
-        "#{item_keys[2]}": 192.857143, # weighted avg of [75.0, 150.0, 225.0]
-        "#{item_keys[3]}": 9.0         # weighted avg of [ 3.5,   7.0,  10.5]
+        "#{item_keys[0]}": 25.71428571,  # weighted avg of [10.0,  20.0,  30.0]
+        "#{item_keys[1]}": 64.28571429,  # weighted avg of [25.0,  50.0,  75.0]
+        "#{item_keys[2]}": 192.85714286, # weighted avg of [75.0, 150.0, 225.0]
+        "#{item_keys[3]}": 9.0           # weighted avg of [ 3.5,   7.0,  10.5]
       })
     end
 

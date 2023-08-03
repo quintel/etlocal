@@ -14,12 +14,29 @@ class InterfaceItem
   attribute :skip_validation, Boolean, default: false
   attribute :hidden, Boolean, default: false
   attribute :precision, Integer, default: 2
+  attribute :combination_method
 
   # Queries for CSV-based datasets.
   attribute :entso, String
 
   # Used by file history items.
   attribute :paths, Array[String], default: []
+
+  def self.all
+    InterfaceElement.items
+  end
+
+  def self.find(key)
+    all.select { |item| item.key == key }.first
+  end
+
+  def group
+    InterfaceGroup.all.select { |group| group.items.select { |item| item.key == key }.present? }.first
+  end
+
+  def nested_combination_method
+    group.combination_method || attributes[:combination_method]
+  end
 
   def whitelisted?
     Etsource.whitelisted_attributes.include?(key) ||

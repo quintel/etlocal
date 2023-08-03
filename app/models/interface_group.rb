@@ -14,9 +14,18 @@ class InterfaceGroup
   attribute :type, Symbol, default: :static
   attribute :items, Array[InterfaceItem]
   attribute :subgroups, Array[InterfaceGroup]
+  attribute :combination_method
 
   # Used by file history pages.
   attribute :paths, Array[String]
+
+  def self.all
+    InterfaceElement.groups
+  end
+
+  def element
+    InterfaceElement.all.select{ |element| element.groups.select{ |group| group.header == header }.present? }.first
+  end
 
   def files?
     type == :files

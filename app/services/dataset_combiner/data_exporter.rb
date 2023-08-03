@@ -43,7 +43,11 @@ class DatasetCombiner
     end
 
     def migration_name
-      @migration_name ||= [@target_dataset_geo_id, @target_area_name, @migration_slug].join('_').downcase
+      @migration_name ||=
+        [@target_dataset_geo_id, @target_area_name, @migration_slug]
+          .join('_')
+          .gsub(/[^\w]/, '_')
+          .downcase
     end
 
     def migration_version
@@ -51,7 +55,7 @@ class DatasetCombiner
     end
 
     def migration_filename
-      @migration_filename ||= "#{migration_version}_#{migration_name.gsub(/[^\w]/, '_')}.rb"
+      @migration_filename ||= "#{migration_version}_#{migration_name}.rb"
     end
 
     # Please note the distinction between this method and 'migrate_directory' above!

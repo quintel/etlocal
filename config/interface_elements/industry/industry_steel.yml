@@ -11,6 +11,7 @@ groups:
     items:
       - key: input_industry_steel_blastfurnace_bof_share
         unit: '%'
+        combination_method: average
       - key: input_industry_steel_scrap_hbi_eaf_share
         unit: '%'
         flexible: true
@@ -87,6 +88,7 @@ groups:
           -> { EB("Transformation output - coke ovens", "Coke oven coke") /
           EB("Transformation input - coke ovens - energy use", "Coal incl lignite and peat") },
           -> { 0.4 })
+        combination_method: average
       - key: input_energy_cokesoven_transformation_coal_gas_output_conversion
         unit: '%'
         entso: |
@@ -94,6 +96,7 @@ groups:
           -> { EB("Transformation output - coke ovens", "Coal gas") /
           EB("Transformation input - coke ovens - energy use", "Coal incl lignite and peat") },
           -> { 0.4 })
+        combination_method: average
       - key: input_energy_cokesoven_transformation_loss_output_conversion
         unit: '%'
         flexible: true
@@ -123,6 +126,7 @@ groups:
           EB("Transformation input - blast furnaces - energy use", "Coal incl lignite and peat") +
           EB("Transformation input - blast furnaces - energy use", "Coke oven coke") ) },
           -> { 0.4 })
+        combination_method: average
       - key: input_energy_blastfurnace_transformation_loss_output_conversion
         unit: '%'
         flexible: true
@@ -157,6 +161,7 @@ groups:
           EB("Transformation input - electricity and heat generation - main activity producer electricity only - energy use", "Coal gas") +
           EB("Transformation input - electricity and heat generation - autoproducer electricity only - energy use", "Coal gas") ) },
           -> { 0.4 })
+        combination_method: average
       - key: input_energy_power_combined_cycle_coal_gas_loss_output_conversion
         unit: '%'
         flexible: true
@@ -180,6 +185,7 @@ groups:
           EB("Transformation input - electricity and heat generation - main activity producer heat only - energy use", "Coal gas") +
           EB("Transformation input - electricity and heat generation - autoproducer heat only - energy use", "Coal gas") ) },
           -> { 0.4 })
+        combination_method: average
       - key: input_energy_chp_coal_gas_steam_hot_water_output_conversion
         unit: '%'
         entso: |
@@ -197,6 +203,7 @@ groups:
           EB("Transformation input - electricity and heat generation - main activity producer heat only - energy use", "Coal gas") +
           EB("Transformation input - electricity and heat generation - autoproducer heat only - energy use", "Coal gas") ) },
           -> { 0.4 })
+        combination_method: average
       - key: input_energy_chp_coal_gas_loss_output_conversion
         unit: '%'
         flexible: true
@@ -207,6 +214,7 @@ groups:
     items:
       - key: industry_final_demand_for_metal_steel_coal_industry_steel_blastfurnace_bof_parent_share
         unit: '%'
+        combination_method: average
       - key: industry_final_demand_for_metal_steel_coal_industry_steel_scrap_hbi_eaf_parent_share
         unit: '%'
         flexible: true
@@ -217,6 +225,7 @@ groups:
     items:
       - key: industry_final_demand_for_metal_steel_cokes_industry_steel_blastfurnace_bof_parent_share
         unit: '%'
+        combination_method: average
       - key: industry_final_demand_for_metal_steel_cokes_industry_steel_scrap_hbi_eaf_parent_share
         unit: '%'
         flexible: true
@@ -227,6 +236,7 @@ groups:
     items:
       - key: industry_final_demand_for_metal_steel_crude_oil_industry_steel_blastfurnace_bof_parent_share
         unit: '%'
+        combination_method: average
       - key: industry_final_demand_for_metal_steel_crude_oil_industry_steel_scrap_hbi_eaf_parent_share
         unit: '%'
         flexible: true
@@ -237,6 +247,7 @@ groups:
     items:
       - key: industry_final_demand_for_metal_steel_electricity_industry_steel_blastfurnace_bof_parent_share
         unit: '%'
+        combination_method: average
       - key: industry_final_demand_for_metal_steel_electricity_industry_steel_scrap_hbi_eaf_parent_share
         unit: '%'
         flexible: true
@@ -247,6 +258,7 @@ groups:
     items:
       - key: industry_final_demand_for_metal_steel_network_gas_industry_steel_blastfurnace_bof_parent_share
         unit: '%'
+        combination_method: average
       - key: industry_final_demand_for_metal_steel_network_gas_industry_steel_scrap_hbi_eaf_parent_share
         unit: '%'
         flexible: true
@@ -257,6 +269,7 @@ groups:
     items:
       - key: industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_blastfurnace_bof_parent_share
         unit: '%'
+        combination_method: average
       - key: industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_scrap_hbi_eaf_parent_share
         unit: '%'
         flexible: true
@@ -267,6 +280,7 @@ groups:
     items:
       - key: industry_final_demand_for_metal_steel_wood_pellets_industry_steel_blastfurnace_bof_parent_share
         unit: '%'
+        combination_method: average
       - key: industry_final_demand_for_metal_steel_wood_pellets_industry_steel_scrap_hbi_eaf_parent_share
         unit: '%'
         flexible: true

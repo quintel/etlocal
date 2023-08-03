@@ -67,13 +67,11 @@ class DatasetCombiner
       # Goes through the combined values created above and then determines if flexible items exist
       # that need to fill up the share left in the group it belongs to, to 100% (represented as '1' here)
       def calculate_flexible_shares(combined_item_values)
-        combined_item_values.to_h do |item_key, value|
-          item = InterfaceItem.find(item_key)
-
+        InterfaceElement.items.to_h do |item|
           # Only attempt to calculate the flexible value for this item
           # if it is 'flexible' and the item is part of a group of multiple items
           unless item.flexible && item.group.try(:present?) && item.group.items.length > 1
-            next [item_key, value]
+            next [item.key, combined_item_values[item.key]]
           end
 
           # Raise an error if more than one items in the group are defined as 'flexible'
@@ -92,10 +90,10 @@ class DatasetCombiner
           item
             .group
             .items
-            .reject { |group_item| group_item.key == item_key }
+            .reject { |group_item| group_item.key == item.key }
             .each { |group_item| total += combined_item_values[group_item.key] }
 
-          [item_key, (1 - total)]
+          [item.key, (1 - total)]
         end
       end
 

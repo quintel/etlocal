@@ -59,7 +59,7 @@ namespace :dataset do
       exit
     end
 
-    puts '✅ Datasets combined and exported!'
+    puts '✅ Datasets exported!'
     puts "Migration file can be found at: #{migration_filename}\n\n"
     puts 'All done! Have a nice day :)'
   end

@@ -103,6 +103,18 @@ class DatasetCombiner
             next [item.key, combined_item_values[item.key]]
           end
 
+          total_including_flexible = total + (1 - total)
+
+          if total_including_flexible > 1.0
+            puts <<~MSG
+              💩 The group total was more than 1.0 (#{total_including_flexible}) after calculating flexible share #{item.key}
+              (parent element: #{item.try(:group).try(:element).try(:key)}, parent group: #{item.try(:group).try(:header)})
+              Skipping flexible share calculation!
+            MSG
+
+            next [item.key, combined_item_values[item.key]]
+          end
+
           [item.key, (1 - total)]
         end
       end

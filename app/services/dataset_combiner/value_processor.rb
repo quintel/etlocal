@@ -21,7 +21,7 @@ class DatasetCombiner
         combined_item_values = combine_item_values(datasets)
         combined_item_values = calculate_flexible_shares(combined_item_values)
 
-        combined_item_values.transform_values! { |value| value.round(6) }
+        combined_item_values.transform_values! { |value| value.present? ? value.round(6) : 0.0 }
       end
 
       # Creates a hash with the item's keys as keys and the combined values of all datasets as values, e.g.:

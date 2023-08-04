@@ -13,13 +13,16 @@ class DatasetCombiner
 
     class << self
 
-      # The values for the given datasets are combined in 3 steps:
-      # 1. Combine the values according to the combination_method of the value belonging to the InterfaceItem
-      # 2. Round all combined values to 8 decimals and return those.
+      # The values for the given datasets are processed in 3 steps:
+      # 1. Combine the values according to the combination_method of set in the InterfaceItem
+      # 2. Round all combined values to 8 decimals
       # 3. If flexible is true for an InterfaceItem, make it fill out the share of the group it belongs to
       def perform(datasets)
-        combined_item_values = combine_item_values(datasets).transform_values! { |value| value.present? ? value.round(8) : 0.0 }
+        combined_item_values = combine_item_values(datasets)
+        combined_item_values.transform_values! { |value| value.present? ? value.round(8) : 0.0 }
         combined_item_values = calculate_flexible_shares(combined_item_values)
+
+        combined_item_values
       end
 
       # Creates a hash with the item's keys as keys and the combined values of all datasets as values, e.g.:
@@ -28,14 +31,28 @@ class DatasetCombiner
       #   co2_emission_1990: 1000,
       #   interconnector_capacity: 100
       # }
+      # The method uses the combination method set in the InterfaceItem to determine how values should be combined.
       def combine_item_values(datasets)
         InterfaceElement.items.to_h do |item|
-          plucked_item_values = datasets.map { |set| set.editable_attributes.find(item.key.to_s).value }
+          plucked_item_values = datasets.filter_map do |set|
+            value = set.editable_attributes.find(item.key.to_s).value
 
-          # Skip this item unless data for it is present in any of the given datasets, or if it's flexible
-          next [nil, nil] if plucked_item_values.compact.blank? || item.flexible
+            # All non-flexible item values should be numbers. Nil or String values are not allowed.
+            if !item.flexible && !value.is_a?(Numeric)
+              puts <<~MSG
+                💩 Dataset with geo-id '#{set.geo_id}' contains a non-numeric value (#{value}) for interface item:
+                #{item.key}
+                (parent element: #{item.try(:group).try(:element).try(:key)}, parent group: #{item.try(:group).try(:header)})
+              MSG
+            end
 
-          # We use the nested_combination_method since that will also look for the group combination method
+            value
+          end
+
+          next [item.key, 0] if plucked_item_values.all?(0)
+
+          # We use the nested_combination_method. This will return the group combination_method
+          # if a combination_method is not set in the InterfaceItem itself.
           combined_value =
             case item.nested_combination_method
             when 'average'
@@ -48,12 +65,12 @@ class DatasetCombiner
               calculate_weighted_average(item, datasets, plucked_item_values)
             when 'sum', '', nil # Default to 'sum'
               plucked_item_values.sum
-            else # combined_value is set to a value we can't process
-              raise(
-                ArgumentError, <<~MSG
-                  Don't know how to deal with combination_method '#{item.nested_combination_method}' in item #{item.key}
+            else # combination_method is set to an unknown value
+              argument_error(
+                <<~MSG
+                  Don't know how to deal with combination_method '#{item.nested_combination_method}' in interface item:
+                  #{item.key}
                   (parent element: #{item.try(:group).try(:element).try(:key)}, parent group: #{item.try(:group).try(:header)})
-                  Aborting.
                 MSG
               )
             end
@@ -74,11 +91,10 @@ class DatasetCombiner
 
           # Raise an error if more than one items in the group are defined as 'flexible'
           if item.group.items.sum { |group_item| group_item.flexible ? 1 : 0 } > 1
-            raise(
-              ArgumentError, <<~MSG
+            argument_error(
+              <<~MSG
                 More than one flexible InterfaceItems found in InterfaceGroup #{item.try(:group).try(:header)}
                 (parent element: #{item.try(:group).try(:element).try(:key)}
-                Aborting.
               MSG
             )
           end
@@ -93,9 +109,10 @@ class DatasetCombiner
 
           if group_total > 1.0
             puts <<~MSG
-              💩 The summed value of group shares was more than 1.0 (#{group_total}) before attempting to calculate flexible share #{item.key}
+              💩 The summed value of group shares was more than 1.0 (#{group_total}) before attempting to calculate flexible share:
+              #{item.key}
               (parent element: #{item.try(:group).try(:element).try(:key)}, parent group: #{item.try(:group).try(:header)})
-              Skipping flexible share calculation!
+              Skipping flexible share calculation for this interface item!
             MSG
 
             next [item.key, combined_item_values[item.key]]
@@ -105,9 +122,10 @@ class DatasetCombiner
 
           if group_total_including_flexible > 1.0
             puts <<~MSG
-              💩 The group total was more than 1.0 (#{group_total_including_flexible}) after calculating flexible share #{item.key}
+              💩 The group total was more than 1.0 (#{group_total_including_flexible}) after calculating flexible share:
+              #{item.key}
               (parent element: #{item.try(:group).try(:element).try(:key)}, parent group: #{item.try(:group).try(:header)})
-              Skipping flexible share calculation!
+              Skipping flexible share calculation for this interface item!
             MSG
 
             next [item.key, combined_item_values[item.key]]
@@ -127,9 +145,10 @@ class DatasetCombiner
         weighing_keys = item.nested_combination_method['weighted_average']
 
         if weighing_keys.blank?
-          raise(
-            ArgumentError, <<~MSG
-              No weighing keys defined for combination method 'weighted average' in item #{item.key}
+          argument_error(
+            <<~MSG
+              No weighing keys defined for combination method 'weighted average' in interface item:
+              #{item.key}
               (parent element: #{item.try(:group).try(:element).try(:key)}, parent group: #{item.try(:group).try(:header)})
               Aborting.
             MSG
@@ -160,6 +179,10 @@ class DatasetCombiner
         rescue ZeroDivisionError
           avg(plucked_item_values)
         end
+      end
+
+      def argument_error(msg)
+        raise ArgumentError, "#{msg}. Aborting."
       end
 
     end

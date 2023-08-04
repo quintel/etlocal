@@ -1,5 +1,30 @@
 # frozen_string_literal: true
 
+# The DatasetCombiner parent class acts as the interface through which smaller areas can be
+# combined into a bigger one. It validates user input, sets defaults and then delegates the work
+# to the ValueProcessor and DataExporter that do the actual combining.
+# See the 'initialize' method for (expected) arguments.
+#
+# Example usage:
+#
+#   # Init the combiner with information on source- and target datasets
+#   combiner = DatasetCombiner.new(
+#     target_dataset_geo_id: 'PV20',
+#     source_data_year: '2019',
+#     source_dataset_geo_ids: %w[GM306 GM307 GM308],
+#     target_area_name: 'Groningen',                  # Optional
+#     target_country_name: 'nl2019',                  # Optional
+#     migration_slug: 'update_2019'                   # Optional
+#   )
+#
+#   # Instruct the combiner to combine the datasets into a new one
+#   # (lets ValueProcessor do its job, see for details on combining)
+#   combiner.combine_datasets
+#
+#   # Instruct the combiner to export the new dataset to several files
+#   # (lets DataExporter do its job, see for details on exporting)
+#   migration_filename = combiner.export_data
+#
 class DatasetCombiner
 
   # Arguments:

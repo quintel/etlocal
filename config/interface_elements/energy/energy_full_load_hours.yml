@@ -229,31 +229,6 @@ groups:
         combination_method:
           weighted_average:
             - industry_chp_turbine_hydrogen_demand
-      - key: energy_power_hydro_river_full_load_hours
-        unit: 'flh'
-        combination_method:
-          weighted_average:
-            - input_energy_power_hydro_river_production
-      - key: energy_chp_local_engine_biogas_full_load_hours
-        unit: 'flh'
-        combination_method:
-          weighted_average:
-            - input_energy_chp_local_engine_biogas_production
-      - key: energy_chp_local_wood_pellets_full_load_hours
-        unit: 'flh'
-        combination_method:
-          weighted_average:
-            - input_energy_chp_local_wood_pellets_production
-      - key: energy_chp_supercritical_waste_mix_full_load_hours
-        unit: 'flh'
-        combination_method:
-          weighted_average:
-            - input_energy_chp_supercritical_waste_mix_production
-      - key: energy_power_supercritical_waste_mix_full_load_hours
-        unit: 'flh'
-        combination_method:
-          weighted_average:
-            - input_energy_power_supercritical_waste_mix_production
 
   - header: energy_fossil_heat_full_load_hours
     items:

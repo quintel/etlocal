@@ -6,8 +6,10 @@ groups:
       unit: 'Mton'
     - key: co2_emission_1990_aviation_bunkers
       unit: 'Mton'
+      combination_method: average
     - key: co2_emission_1990_marine_bunkers
       unit: 'Mton'
+      combination_method: average
       
   - header: area_ghg
   - header: energetic_other_ghg

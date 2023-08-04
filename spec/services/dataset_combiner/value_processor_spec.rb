@@ -76,7 +76,7 @@ RSpec.describe DatasetCombiner::ValueProcessor do
 
       expect { described_class.perform([dataset1]) }.to raise_error(
         ArgumentError,
-        /Don't know how to deal with combination_method '#{items[0].nested_combination_method}' in item #{items[0].key}/
+        /Don't know how to deal with combination_method '#{items[0].nested_combination_method}' in interface item:\n#{items[0].key}/
       )
     end
 
@@ -127,7 +127,7 @@ RSpec.describe DatasetCombiner::ValueProcessor do
 
       expect { described_class.perform([dataset1]) }.to raise_error(
         ArgumentError,
-        /No weighing keys defined for combination method 'weighted average' in item #{items[0].key}/
+        /No weighing keys defined for combination method 'weighted average' in interface item:\n#{items[0].key}/
       )
     end
 

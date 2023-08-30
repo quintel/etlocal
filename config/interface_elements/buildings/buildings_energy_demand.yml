@@ -35,6 +35,9 @@ groups:
 
   - header: buildings_final_demand_steam_hot_water_input
     type: slider
+    combination_method:
+      weighted_average:
+        - buildings_final_demand_steam_hot_water_demand
     items:
       - key: input_percentage_of_lt_steam_hot_water_buildings_final_demand_steam_hot_water
         unit: '%'

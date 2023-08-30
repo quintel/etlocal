@@ -165,27 +165,27 @@ groups:
         unit: 'flh'
         combination_method:
           weighted_average:
-            - input_energy_chp_local_engine_network_gas_production
+            - input_energy_chp_local_engine_ht_network_gas_production # + input_energy_chp_local_engine_mt_network_gas_production
       - key: input_energy_chp_combined_cycle_network_gas_full_load_hours
         unit: 'flh'
         combination_method:
           weighted_average:
-            - input_energy_chp_combined_cycle_network_gas_production
+            - input_energy_chp_combined_cycle_ht_network_gas_production # input_energy_chp_combined_cycle_mt_network_gas_production
       - key: input_energy_chp_ultra_supercritical_cofiring_coal_full_load_hours
         unit: 'flh'
         combination_method:
           weighted_average:
-            - input_energy_chp_ultra_supercritical_cofiring_coal_production
+            - input_energy_chp_ultra_supercritical_cofiring_ht_coal_production # input_energy_chp_ultra_supercritical_cofiring_mt_coal_production
       - key: input_energy_chp_ultra_supercritical_coal_full_load_hours
         unit: 'flh'
         combination_method:
           weighted_average:
-            - input_energy_chp_ultra_supercritical_coal_production
+            - input_energy_chp_ultra_supercritical_ht_coal_production # input_energy_chp_ultra_supercritical_mt_coal_production
       - key: input_energy_chp_ultra_supercritical_lignite_full_load_hours
         unit: 'flh'
         combination_method:
           weighted_average:
-            - input_energy_chp_ultra_supercritical_lignite_production
+            - input_energy_chp_ultra_supercritical_ht_lignite_production # input_energy_chp_ultra_supercritical_mt_lignite_production
       - key: industry_chp_ultra_supercritical_coal_full_load_hours
         unit: 'flh'
         combination_method:
@@ -198,7 +198,7 @@ groups:
         unit: 'flh'
         combination_method:
           weighted_average:
-            - input_energy_chp_local_wood_pellets_production
+            - input_energy_chp_local_ht_wood_pellets_production # + input_energy_chp_local_ht_wood_pellets_production
       - key: industry_chp_wood_pellets_full_load_hours
         unit: 'flh'
         combination_method:
@@ -213,7 +213,7 @@ groups:
         unit: 'flh'
         combination_method:
           weighted_average:
-            - input_energy_chp_local_engine_biogas_production
+            - input_energy_chp_local_engine_ht_biogas_production # + input_energy_chp_local_engine_mt_biogas_production
       - key: agriculture_chp_engine_biogas_full_load_hours
         unit: 'flh'
         combination_method:
@@ -223,7 +223,7 @@ groups:
         unit: 'flh'
         combination_method:
           weighted_average:
-            - input_energy_chp_supercritical_waste_mix_production
+            - input_energy_chp_supercritical_ht_waste_mix_production # + input_energy_chp_supercritical_mt_waste_mix_production
       - key: industry_chp_turbine_hydrogen_full_load_hours
         unit: 'flh'
         combination_method:
@@ -236,7 +236,7 @@ groups:
         unit: 'flh'
         combination_method:
           weighted_average:
-            - input_energy_heat_burner_coal_production
+            - input_energy_heat_burner_ht_coal_production # + input_energy_heat_burner_mt_coal_production
       - key: industry_heat_burner_coal_full_load_hours
         unit: 'flh'
         combination_method:
@@ -251,17 +251,12 @@ groups:
         unit: 'flh'
         combination_method:
           weighted_average:
-            - industry_heat_burner_crude_oil_demand
-      - key: energy_heat_burner_crude_oil_full_load_hours
-        unit: 'flh'
-        combination_method:
-          weighted_average:
-            - input_energy_heat_burner_crude_oil_production
+            - input_energy_heat_burner_ht_crude_oil_production # + input_energy_heat_burner_mt_crude_oil_production
       - key: input_energy_heat_burner_network_gas_full_load_hours
         unit: 'flh'
         combination_method:
           weighted_average:
-            - input_energy_heat_burner_network_gas_production
+            - input_energy_heat_burner_ht_network_gas_production # + input_energy_heat_burner_mt_network_gas_production
       - key: industry_heat_burner_lignite_full_load_hours
         unit: 'flh'
         combination_method:
@@ -274,22 +269,22 @@ groups:
         unit: 'flh'
         combination_method:
           weighted_average:
-            - input_energy_heat_burner_wood_pellets_production
+            - input_energy_heat_burner_ht_wood_pellets_production # + input_energy_heat_burner_mt_wood_pellets_production
       - key: input_energy_heat_solar_solar_thermal_full_load_hours
         unit: 'flh'
         combination_method:
           weighted_average:
-            - input_energy_heat_solar_thermal_production
+            - input_energy_heat_solar_mt_solar_thermal_production # + input_energy_heat_solar_lt_solar_thermal_production
       - key: input_energy_heat_burner_waste_mix_full_load_hours
         unit: 'flh'
         combination_method:
           weighted_average:
-            - input_energy_heat_burner_waste_mix_production
+            - input_energy_heat_burner_ht_waste_mix_production # + input_energy_heat_burner_mt_waste_mix_production
       - key: input_energy_heat_heatpump_water_water_electricity_full_load_hours
         unit: 'flh'
         combination_method:
           weighted_average:
-            - input_energy_heat_heatpump_water_water_electricity_production
+            - input_energy_heat_heatpump_water_water_ht_electricity_production # + input_energy_heat_heatpump_water_water_mt_electricity_production + input_energy_heat_heatpump_water_water_lt_electricity_production
       - key: industry_heat_burner_hydrogen_full_load_hours
         unit: 'flh' 
         combination_method:

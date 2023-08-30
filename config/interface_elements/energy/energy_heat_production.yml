@@ -114,6 +114,9 @@ groups:
   # Residual heat (chemical industry - other)    
   - header: industry_chemical_residual_heat_potential
     type: slider
+    combination_method:
+      weighted_average:
+        - input_industry_chemical_other_network_gas_demand
     items:
       - key: industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share
         unit: '%'
@@ -137,6 +140,9 @@ groups:
   # Residual heat (chemical industry - fertilizers)
   - header: industry_fertilizers_residual_heat_potential
     type: slider
+    combination_method:
+      weighted_average:
+         - input_industry_chemical_fertilizers_network_gas_demand
     items:
       - key: industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share
         unit: '%'
@@ -160,6 +166,9 @@ groups:
   # Residual heat (chemical industry - refineries)   
   - header: industry_refineries_residual_heat_potential
     type: slider
+    combination_method:
+      weighted_average:
+        - input_industry_chemical_refineries_network_gas_demand
     items:
       - key: industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share
         unit: '%'
@@ -183,6 +192,9 @@ groups:
   # Residual heat (ICT)
   - header: industry_ict_residual_heat_potential
     type: slider
+    combination_method:
+      weighted_average:
+        - input_industry_ict_electricity_demand
     items:
       - key: industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share
         unit: '%'

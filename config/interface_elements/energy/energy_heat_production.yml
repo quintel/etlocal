@@ -60,13 +60,13 @@ groups:
   # Geothermal
   - header: energy_heat_geothermal
     items:
-      - key: input_energy_heat_well_ht_geothermal_production
+      - key: input_energy_heat_well_deep_ht_geothermal_production
         unit: 'TJ' 
         entso: |
           EB("Geothermal - residential", "Heat")
-      - key: input_energy_heat_well_mt_geothermal_production
+      - key: input_energy_heat_well_deep_mt_geothermal_production
         unit: 'TJ'
-      - key: input_energy_heat_well_shallow_mt_geothermal_production
+      - key: input_energy_heat_well_shallow_heatpump_mt_geothermal_production
         unit: 'TJ'
       - key: input_energy_heat_well_shallow_lt_geothermal_production
         unit: 'TJ'
@@ -94,11 +94,11 @@ groups:
   # Solar thermal
   - header: energy_heat_solar_thermal
     items:
-      - key: input_energy_heat_mt_solar_thermal_production
+      - key: input_energy_heat_solar_mt_solar_thermal_production
         unit: 'TJ'
         entso: |
           EB("Solar thermal", "Heat")
-      - key: input_energy_heat_lt_solar_thermal_production
+      - key: input_energy_heat_solar_lt_solar_thermal_production
         unit: 'TJ'
 
   # Waste mix

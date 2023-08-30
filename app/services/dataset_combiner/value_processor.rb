@@ -61,8 +61,10 @@ class DatasetCombiner
               plucked_item_values.min
             when 'max'
               plucked_item_values.max
-            when Hash # When combination_method is a hash this means it is the weighted average
-              calculate_weighted_average(item, datasets, plucked_item_values)
+            when ->(cm) { cm.is_a?(Hash) && cm.key?('weighted_average') }
+              calculate_weighted_values(item, datasets, plucked_item_values)
+            when ->(cm) { cm.is_a?(Hash) && cm.key?('weighted_sum') }
+              calculate_weighted_values(item, datasets, plucked_item_values, summed: true)
             when 'sum', '', nil # Default to 'sum'
               plucked_item_values.sum
             else # combination_method is set to an unknown value
@@ -141,13 +143,15 @@ class DatasetCombiner
         values.sum.to_f / values.length
       end
 
-      def calculate_weighted_average(item, datasets, plucked_item_values)
-        weighing_keys = item.nested_combination_method['weighted_average']
+      def calculate_weighted_values(item, datasets, plucked_item_values, summed: false)
+        puts item.nested_combination_method
+        weighing_method = summed ? 'weighted_sum' : 'weighted_average'
+        weighing_keys = item.nested_combination_method[weighing_method]
 
         if weighing_keys.blank?
           argument_error(
             <<~MSG
-              No weighing keys defined for combination method 'weighted average' in interface item:
+              No weighing keys defined for combination method '#{weighing_method}' in interface item:
               #{item.key}
               (parent element: #{item.try(:group).try(:element).try(:key)}, parent group: #{item.try(:group).try(:header)})
               Aborting.
@@ -155,11 +159,18 @@ class DatasetCombiner
           )
         end
 
-        weighted_averages = datasets.map do |dataset|
+        weighted_values = datasets.map do |dataset|
           weight = 1.0
           weighing_keys.each do |key|
             value = dataset.editable_attributes.find(key.to_s).value
-            weight *= value unless value.zero?
+
+            next if value.zero? || value.blank?
+
+            if summed
+              weight += value
+            else
+              weight *= value
+            end
           end
 
           [dataset.editable_attributes.find(item.key.to_s).value, weight]
@@ -167,12 +178,12 @@ class DatasetCombiner
 
         # If the value of all weighted averages is 0 we return the 'normal' average.
         # See: https://github.com/quintel/etlocal/issues/464
-        if weighted_averages.all? { |wa| wa[0].zero? }
+        if weighted_values.all? { |wa| wa[0].zero? }
           return avg(plucked_item_values)
         end
 
-        numerator = weighted_averages.sum { |wa| wa[0] * wa[1] }
-        denominator = weighted_averages.sum(&:last)
+        numerator = weighted_values.sum { |wa| wa[0] * wa[1] }
+        denominator = weighted_values.sum(&:last)
 
         begin
           numerator / denominator

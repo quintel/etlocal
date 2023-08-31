@@ -1,30 +1,6 @@
 class HeatImprovements < ActiveRecord::Migration[5.0]
 
-  KEYS = {
-    # old_key: :new_key
-    input_energy_chp_ultra_supercritical_coal_production: :input_energy_chp_ultra_supercritical_ht_coal_production,
-    input_energy_chp_ultra_supercritical_cofiring_coal_production: :input_energy_chp_ultra_supercritical_cofiring_ht_coal_production,
-    input_energy_chp_ultra_supercritical_lignite_production: :input_energy_chp_ultra_supercritical_ht_lignite_production,
-    input_energy_chp_combined_cycle_network_gas_production: :input_energy_chp_combined_cycle_ht_network_gas_production,
-    input_energy_chp_local_engine_network_gas_production: :input_energy_chp_local_engine_ht_network_gas_production,
-    input_energy_chp_supercritical_waste_mix_production: :input_energy_chp_supercritical_ht_waste_mix_production,
-    input_energy_chp_local_wood_pellets_production: :input_energy_chp_local_ht_wood_pellets_production,
-    input_energy_chp_local_engine_biogas_production: :input_energy_chp_local_engine_ht_biogas_production,
-    input_energy_heat_well_geothermal_production: :input_energy_heat_well_ht_geothermal_production,
-    input_energy_heat_burner_wood_pellets_production: :input_energy_heat_burner_ht_wood_pellets_production,
-    input_energy_heat_burner_waste_mix_production: :input_energy_heat_burner_ht_waste_mix_production,
-    input_energy_heat_burner_hydrogen_production: :input_energy_heat_burner_ht_hydrogen_production,
-    input_energy_heat_heatpump_water_water_electricity_production: :input_energy_heat_heatpump_water_water_ht_electricity_production,
-    input_energy_heat_boiler_electricity_production: :input_energy_heat_boiler_ht_electricity_production,
-    input_energy_heat_burner_network_gas_production: :input_energy_heat_burner_ht_network_gas_production,
-    input_energy_heat_burner_coal_production: :input_energy_heat_burner_ht_coal_production,
-    input_energy_heat_burner_crude_oil_production: :input_energy_heat_burner_ht_crude_oil_production
-  }
-
   def self.up
-    # @THOMAS: Could you add some lines to rename the old keys to the new keys (and keep the old value) for all datasets?
-    # Should we create a separate migration for this action?
-
     directory    = Rails.root.join('db/migrate/20230825075654_heat_improvements')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')

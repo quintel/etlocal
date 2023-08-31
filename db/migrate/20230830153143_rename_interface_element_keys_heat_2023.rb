@@ -25,7 +25,7 @@ class RenameInterfaceElementKeysHeat2023 < ActiveRecord::Migration[5.0]
     dataset_edits = DatasetEdit.where(key: KEYS.keys)
 
     KEYS.each do |old_key, new_key|
-      dataset_edits.where(key: old_key).update_all(key: new_key)
+      dataset_edits.where(key: old_key).in_batches { |batch| batch.update_all(key: new_key) }
     end
   end
 

@@ -1,6 +1,6 @@
 class RenameInterfaceElementKeysHeat2023 < ActiveRecord::Migration[5.0]
 
-  # old_key_name => new_key_name
+  # old_key => new_key
   KEYS = {
     'input_energy_chp_ultra_supercritical_coal_production' => 'input_energy_chp_ultra_supercritical_ht_coal_production',
     'input_energy_chp_ultra_supercritical_cofiring_coal_production' => 'input_energy_chp_ultra_supercritical_cofiring_ht_coal_production',
@@ -21,38 +21,38 @@ class RenameInterfaceElementKeysHeat2023 < ActiveRecord::Migration[5.0]
     'input_energy_heat_burner_crude_oil_production' => 'input_energy_heat_burner_ht_crude_oil_production'
   }.freeze
 
-  # def self.up
-  #   dataset_edits = DatasetEdit.where(key: KEYS.keys)
-  #
-  #   KEYS.each do |old_key, new_key|
-  #     dataset_edits.where(key: old_key).update_all(key: new_key)
-  #   end
-  # end
-
   def self.up
-    updated_count = 0
+    dataset_edits = DatasetEdit.where(key: KEYS.keys)
 
-    Dataset.find_each.with_index do |dataset, index|
-      if index.positive? && (index % 500).zero?
-        puts "#{index + 1} datasets checked - #{updated_count} updated"
-      end
-
-      KEYS.each do |old_key, new_key|
-        dataset_edit = find_edit(dataset, old_key)
-
-        next unless edit
-
-        dataset_edit.update_column(key: new_key)
-
-        destroy_edits(dataset, old_key)
-
-        updated_count += 1
-      end
-
+    KEYS.each do |old_key, new_key|
+      dataset_edits.where(key: old_key).update_all(key: new_key)
     end
-
-    puts "Done! #{updated_count} datasets updated"
   end
+
+  # def self.up
+  #   updated_count = 0
+  #
+  #   Dataset.find_each.with_index do |dataset, index|
+  #     if index.positive? && (index % 500).zero?
+  #       puts "#{index + 1} datasets checked - #{updated_count} updated"
+  #     end
+  #
+  #     KEYS.each do |old_key, new_key|
+  #       dataset_edit = find_edit(dataset, old_key)
+  #
+  #       next unless edit
+  #
+  #       dataset_edit.update_column(key: new_key)
+  #
+  #       destroy_edits(dataset, old_key)
+  #
+  #       updated_count += 1
+  #     end
+  #
+  #   end
+  #
+  #   puts "Done! #{updated_count} datasets updated"
+  # end
 
   def self.down
     raise ActiveRecord::IrreversibleMigration

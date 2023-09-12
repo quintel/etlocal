@@ -622,7 +622,7 @@ en:
         input_energy_heat_burner_mt_wood_pellets_production: Biomass-fired heater (MT)
         input_energy_heat_well_deep_ht_geothermal_production: Deep geothermal heater (HT)
         input_energy_heat_well_deep_mt_geothermal_production: Deep geothermal heater (MT)
-        input_energy_heat_well_shallow_mt_geothermal_production: Shallow geothermal heater with booster (MT)
+        input_energy_heat_well_shallow_heatpump_mt_geothermal_production: Shallow geothermal heater with booster (MT)
         input_energy_heat_well_shallow_lt_geothermal_production: Shallow geothermal heater (LT)
         input_energy_heat_burner_ht_waste_mix_production: Waste-fired heater (HT)
         input_energy_heat_burner_mt_waste_mix_production: Waste-fired heater (MT)

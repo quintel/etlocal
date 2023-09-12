@@ -63,11 +63,11 @@
   message: No data available. All CHPs are assumed to produce only HT heat and zero
     MT heat.
 - fields:
-  - input_energy_heat_well_mt_geothermal_production
+  - input_energy_heat_well_deep_mt_geothermal_production
   message: No data available. All heat producers are assumed to produce only HT heat
     and zero MT or LT heat.
 - fields:
-  - input_energy_heat_well_shallow_mt_geothermal_production
+  - input_energy_heat_well_shallow_heatpump_mt_geothermal_production
   message: No data available. Production of MT heat is set to zero.
 - fields:
   - input_energy_heat_well_shallow_lt_geothermal_production
@@ -89,10 +89,10 @@
   message: No data available. All heat producers are assumed to produce only HT heat
     and zero MT or LT heat.
 - fields:
-  - input_energy_heat_lt_solar_thermal_production
+  - input_energy_heat_solar_lt_solar_thermal_production
   message: No data available. Production of LT heat is set to zero.
 - fields:
-  - input_energy_heat_mt_solar_thermal_production
+  - input_energy_heat_solar_mt_solar_thermal_production
   message: No data available. Production of MT heat is set to zero.
 - fields:
   - input_energy_heat_heatpump_water_water_mt_electricity_production

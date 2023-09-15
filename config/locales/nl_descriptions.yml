@@ -297,7 +297,7 @@ nl:
       energy_waste_mix: |
         Hieronder staat de samenstelling van de afvalmix in deze regio. Hoeveel van het afval heeft een biogene oorsprong (zoals GFT-afval)
         en hoeveel een niet-biogene oorsprong (bijv plastics)? Dit is alleen relevant voor regio's met afvalverbranding.
-      energy_potentials: |
+      energy_biomass_potentials: |
         Hoeveel biomassa kan er in deze regio potentieel gewonnen worden? Klik op de 'i' voor meer informatie over elke categorie.
       fuel_production: |
         Hoeveel brandstoffen worden er geproduceerd binnen de grenzen van jouw regio? Deze waarden bepalen hoeveel er moet worden geïmporteerd en geëxporteerd.

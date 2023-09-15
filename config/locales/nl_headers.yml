@@ -158,7 +158,7 @@ nl:
       energy_greengas_production: Groengasproductie
       energy_waste_mix: Afvalmix
       energy_extraction: Brandstofproductie en winning natuurlijke hulpbronnen
-      energy_potentials: Potentie natuurlijke hulpbronnen
+      energy_biomass_potentials: Potentie biomassa
       energy_electricity_wind: Elektriciteitsopwek wind
       energy_electricity_solar: Elektriciteitsopwek zon
       energy_electricity_other_renewable: Overige duurzame elektriciteitsopwek
@@ -172,6 +172,7 @@ nl:
       energy_heat_hydrogen: Waterstofgestookte warmteproductie
       energy_heat_solar_thermal: Zonthermische warmteproductie
       energy_heat_aquathermal: Aquathermische warmteproductie
+      energy_aquathermal_potentials: Potentie aquathermie
       energy_heat_electricity: Elektrische warmteproductie
       energy_heat_network_gas: Gasgestookte warmteproductie
       energy_heat_coal: Kolengestookte warmteproductie

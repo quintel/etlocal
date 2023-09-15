@@ -156,7 +156,7 @@ en:
       energy_greengas_production: Green gas production
       energy_waste_mix: Waste mix
       energy_extraction: Fuel production and natural resource extraction
-      energy_potentials: Natural resource potentials
+      energy_biomass_potentials: Biomass potentials
       energy_electricity_wind: Wind electricity production
       energy_electricity_solar: Solar electricity production
       energy_electricity_other_renewable: Other renewable electricity production
@@ -170,6 +170,7 @@ en:
       energy_heat_hydrogen: Hydrogen-fired heat production
       energy_heat_solar_thermal: Solar thermal heat production
       energy_heat_aquathermal: Aquathermal heat production
+      energy_aquathermal_potentials: Aquathermal heat potentials
       energy_heat_electricity: Electric heat production
       energy_heat_network_gas: Gas-fired heat production
       energy_heat_coal: Coal-fired heat production

@@ -154,13 +154,13 @@
   message: No data available. Fallback value set to 0.0 to ensure share totals sum
     to one.
 - fields:
-  - energy_import_ht_heat_demand
+  - energy_heat_import_ht_steam_hot_water_demand
   message: No data available. By default, the import of heat is set to zero.
 - fields:
-  - energy_import_mt_heat_demand
+  - energy_heat_import_mt_steam_hot_water_demand
   message: No data available. By default, the import of heat is set to zero.
 - fields:
-  - energy_import_lt_heat_demand
+  - energy_heat_import_lt_steam_hot_water_demand
   message: No data available. By default, the import of heat is set to zero.
 - fields:
   - energy_heat_distribution_ht_loss_share

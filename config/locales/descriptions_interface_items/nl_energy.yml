@@ -108,5 +108,9 @@ nl:
         documentatie</a>.
       industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: |
         Hoeveel van de totale warmteproductie uit datacenters in dit gebied kan niet worden hergebruikt als restwarmte?
-      energy_import_heat_demand: |
+      energy_heat_import_ht_steam_hot_water_demand: |
+        Hoeveel (rest)warmte wordt er geïmporteerd van buiten de regio?
+      energy_heat_import_mt_steam_hot_water_demand: |
+        Hoeveel (rest)warmte wordt er geïmporteerd van buiten de regio?
+      energy_heat_import_lt_steam_hot_water_demand: |
         Hoeveel (rest)warmte wordt er geïmporteerd van buiten de regio?

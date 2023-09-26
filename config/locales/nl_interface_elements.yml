@@ -45,9 +45,7 @@ nl:
         file_carriers_gasoline_co2_conversion_per_mj : Benzine
         file_carriers_heavy_fuel_oil_co2_conversion_per_mj: Zware stookolie
         file_carriers_imported_electricity_co2_conversion_per_mj: Geïmporteerde elektriciteit
-        file_carriers_imported_heat_ht_co2_conversion_per_mj: Geïmporteerde warmte (HT)
-        file_carriers_imported_heat_mt_co2_conversion_per_mj: Geïmporteerde warmte (MT)
-        file_carriers_imported_heat_lt_co2_conversion_per_mj: Geïmporteerde warmte (LT)
+        file_carriers_imported_heat_co2_conversion_per_mj: Geïmporteerde warmte
         file_carriers_imported_hydrogen_co2_conversion_per_mj: Geïmporteerde waterstof
         file_carriers_imported_ammonia_co2_conversion_per_mj: Geïmporteerde ammoniak
         file_carriers_kerosene_co2_conversion_per_mj: Kerosine
@@ -682,9 +680,9 @@ nl:
         industry_ict_mt_residual_heat: MT warmte (incl. booster)
         industry_ict_lt_residual_heat: LT warmte (excl. booster)
 
-        energy_import_ht_heat_demand: (Rest)warmte geïmporteerd van buiten de regio (HT)
-        energy_import_mt_heat_demand: (Rest)warmte geïmporteerd van buiten de regio (MT)
-        energy_import_lt_heat_demand: (Rest)warmte geïmporteerd van buiten de regio (LT)
+        energy_heat_import_ht_steam_hot_water_demand: (Rest)warmte geïmporteerd van buiten de regio (HT)
+        energy_heat_import_mt_steam_hot_water_demand: (Rest)warmte geïmporteerd van buiten de regio (MT)
+        energy_heat_import_lt_steam_hot_water_demand: (Rest)warmte geïmporteerd van buiten de regio (LT)
 
         energy_heat_distribution_ht_loss_share: Transportverliezen in warmtenetten (HT)
         energy_heat_distribution_mt_loss_share: Transportverliezen in warmtenetten (MT)

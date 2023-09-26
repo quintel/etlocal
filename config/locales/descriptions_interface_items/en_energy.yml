@@ -78,9 +78,9 @@ en:
         documentation</a>.
       industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: |
         What share of total heat production by the ICT sector cannot be re-used as residual heat?
-      energy_import_ht_heat_demand: |
+      energy_heat_import_ht_steam_hot_water_demand: |
         The field below shows the amount of (residual) heat that is imported from outside this region. This heat is used in district heating networks to heat homes and other buildings.
-      energy_import_mt_heat_demand: |
+      energy_heat_import_mt_steam_hot_water_demand: |
         The field below shows the amount of (residual) heat that is imported from outside this region. This heat is used in district heating networks to heat homes and other buildings.
-      energy_import_lt_heat_demand: |
+      energy_heat_import_lt_steam_hot_water_demand: |
         The field below shows the amount of (residual) heat that is imported from outside this region. This heat is used in district heating networks to heat homes and other buildings.

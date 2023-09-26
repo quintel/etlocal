@@ -40,9 +40,7 @@ en:
         file_carriers_gasoline_co2_conversion_per_mj : Gasoline
         file_carriers_heavy_fuel_oil_co2_conversion_per_mj: Heavy fuel oil
         file_carriers_imported_electricity_co2_conversion_per_mj: Imported electricity
-        file_carriers_imported_heat_ht_co2_conversion_per_mj: Imported heat (HT)
-        file_carriers_imported_heat_mt_co2_conversion_per_mj: Imported heat (MT)
-        file_carriers_imported_heat_lt_co2_conversion_per_mj: Imported heat (LT)
+        file_carriers_imported_heat_co2_conversion_per_mj: Imported heat
         file_carriers_imported_hydrogen_co2_conversion_per_mj: Imported hydrogen
         file_carriers_imported_ammonia_co2_conversion_per_mj: Imported ammonia
         file_carriers_kerosene_co2_conversion_per_mj: Kerosene
@@ -677,9 +675,9 @@ en:
         industry_ict_mt_residual_heat: MT heat (incl. booster)
         industry_ict_lt_residual_heat: LT heat (excl. booster)
 
-        energy_import_ht_heat_demand: (Residual) heat imported from outside your region (HT)
-        energy_import_mt_heat_demand: (Residual) heat imported from outside your region (MT)
-        energy_import_lt_heat_demand: (Residual) heat imported from outside your region (LT)
+        energy_heat_import_ht_steam_hot_water_demand: (Residual) heat imported from outside your region (HT)
+        energy_heat_import_mt_steam_hot_water_demand: (Residual) heat imported from outside your region (MT)
+        energy_heat_import_lt_steam_hot_water_demand: (Residual) heat imported from outside your region (LT)
 
         energy_heat_distribution_ht_loss_share: Heat distribution loss (HT)
         energy_heat_distribution_mt_loss_share: Heat distribution loss (MT)

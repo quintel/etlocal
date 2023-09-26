@@ -244,9 +244,9 @@ groups:
   # Import
   - header: energy_heat_import
     items:
-      - key: energy_import_ht_heat_demand
+      - key: energy_heat_import_ht_steam_hot_water_demand
         unit: 'TJ'
-      - key: energy_import_mt_heat_demand
+      - key: energy_heat_import_mt_steam_hot_water_demand
         unit: 'TJ'
-      - key: energy_import_lt_heat_demand
+      - key: energy_heat_import_lt_steam_hot_water_demand
         unit: 'TJ'

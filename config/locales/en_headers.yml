@@ -32,7 +32,7 @@ en:
       area_electricity_grid_capacity: Present spare capacity electricity grid
       area_electricity_grid_reinforcement: Electricity grid reinforcement
       area_heat_infrastructure_lengths: District heating pipelines
-      area_interconnector_capacity: Present interconnector capcity
+      area_interconnector_capacity: Present interconnector capacity
 
       #households
       households_housing_stock_distribution: Housing stock

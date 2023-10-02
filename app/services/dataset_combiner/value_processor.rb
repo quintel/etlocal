@@ -62,9 +62,7 @@ class DatasetCombiner
             when 'max'
               plucked_item_values.max
             when ->(cm) { cm.is_a?(Hash) && cm.key?('weighted_average') }
-              calculate_weighted_values(item, datasets, plucked_item_values)
-            when ->(cm) { cm.is_a?(Hash) && cm.key?('weighted_sum') }
-              calculate_weighted_values(item, datasets, plucked_item_values, summed: true)
+              calculate_weighted_average(item, datasets, plucked_item_values)
             when 'sum', '', nil # Default to 'sum'
               plucked_item_values.sum
             else # combination_method is set to an unknown value
@@ -143,15 +141,13 @@ class DatasetCombiner
         values.sum.to_f / values.length
       end
 
-      def calculate_weighted_values(item, datasets, plucked_item_values, summed: false)
-        puts item.nested_combination_method
-        weighing_method = summed ? 'weighted_sum' : 'weighted_average'
-        weighing_keys = item.nested_combination_method[weighing_method]
+      def calculate_weighted_average(item, datasets, plucked_item_values)
+        weighing_keys = item.nested_combination_method['weighted_average']
 
         if weighing_keys.blank?
           argument_error(
             <<~MSG
-              No weighing keys defined for combination method '#{weighing_method}' in interface item:
+              No weighing keys defined for combination method 'weighted_average' in interface item:
               #{item.key}
               (parent element: #{item.try(:group).try(:element).try(:key)}, parent group: #{item.try(:group).try(:header)})
               Aborting.
@@ -162,15 +158,16 @@ class DatasetCombiner
         weighted_values = datasets.map do |dataset|
           weight = 1.0
           weighing_keys.each do |key|
-            value = dataset.editable_attributes.find(key.to_s).value
+            value = \
+              if key.is_a?(Hash)
+                aggregate_weighing_function(key, dataset)
+              else
+                dataset.editable_attributes.find(key.to_s).value
+              end
 
             next if value.zero? || value.blank?
 
-            if summed
-              weight += value
-            else
-              weight *= value
-            end
+            weight *= value
           end
 
           [dataset.editable_attributes.find(item.key.to_s).value, weight]
@@ -189,6 +186,20 @@ class DatasetCombiner
           numerator / denominator
         rescue ZeroDivisionError
           avg(plucked_item_values)
+        end
+      end
+
+      def aggregate_weighing_function(fn_hash, dataset)
+        function = fn_hash.keys.first
+        attributes = fn_hash.values.first
+
+        case function
+        when 'sum'
+          attributes.sum { |a| dataset.editable_attributes.find(a.to_s).value }
+        # when 'max'
+        #   ...
+        # when 'min'
+        #   ...
         end
       end
 

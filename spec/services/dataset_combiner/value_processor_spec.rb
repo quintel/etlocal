@@ -83,7 +83,7 @@ RSpec.describe DatasetCombiner::ValueProcessor do
 
   end # / when combining values for the given datasets
 
-  describe 'when calculating weighted values' do
+  describe 'when calculating weighted average' do
 
     let(:values) do
       [
@@ -116,27 +116,6 @@ RSpec.describe DatasetCombiner::ValueProcessor do
       })
     end
 
-    it 'correctly uses the set items as weights for weighted_sum' do items = [
-        instance_double(InterfaceItem, item_attrs.merge(key: item_keys[0], nested_combination_method: { 'weighted_sum' => [item_keys[0], item_keys[1]] })),
-        instance_double(InterfaceItem, item_attrs.merge(key: item_keys[1], nested_combination_method: { 'weighted_sum' => [item_keys[0], item_keys[1]] })),
-        instance_double(InterfaceItem, item_attrs.merge(key: item_keys[2], nested_combination_method: { 'weighted_sum' => [item_keys[0], item_keys[1]] })),
-        instance_double(InterfaceItem, item_attrs.merge(key: item_keys[3], nested_combination_method: { 'weighted_sum' => [item_keys[0], item_keys[1]] }))
-      ]
-
-      prepare_datasets(items)
-
-      allow(InterfaceElement).to receive(:items).and_return(items)
-
-      expect(
-        described_class.perform([dataset1, dataset2, dataset3])
-      ).to eq({
-        "#{item_keys[0]}": 23.28638498,  # weighted sum of [10.0,  20.0,  30.0]
-        "#{item_keys[1]}": 58.21596244,  # weighted sum of [25.0,  50.0,  75.0]
-        "#{item_keys[2]}": 174.64788732, # weighted sum of [75.0, 150.0, 225.0]
-        "#{item_keys[3]}": 8.15023474    # weighted sum of [ 3.5,   7.0,  10.5]
-      })
-    end
-
     it 'raises an error when no items have been set as weights (e.g. weighted_average is empty)' do
       items = [
         instance_double(InterfaceItem, item_attrs.merge(nested_combination_method: { 'weighted_average' => [] }))
@@ -152,7 +131,7 @@ RSpec.describe DatasetCombiner::ValueProcessor do
       )
     end
 
-  end # / when calculating weighted_values
+  end # / when calculating weighted_average
 
   describe 'when determining flexible shares' do
 

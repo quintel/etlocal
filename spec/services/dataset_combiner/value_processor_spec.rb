@@ -83,7 +83,7 @@ RSpec.describe DatasetCombiner::ValueProcessor do
 
   end # / when combining values for the given datasets
 
-  describe 'when calculating weighted_averages' do
+  describe 'when calculating weighted average' do
 
     let(:values) do
       [
@@ -95,7 +95,7 @@ RSpec.describe DatasetCombiner::ValueProcessor do
       ]
     end
 
-    it 'correctly uses the set items as weights' do items = [
+    it 'correctly uses the set items as weights for weighted_average' do items = [
         instance_double(InterfaceItem, item_attrs.merge(key: item_keys[0], nested_combination_method: { 'weighted_average' => [item_keys[0], item_keys[1]] })),
         instance_double(InterfaceItem, item_attrs.merge(key: item_keys[1], nested_combination_method: { 'weighted_average' => [item_keys[0], item_keys[1]] })),
         instance_double(InterfaceItem, item_attrs.merge(key: item_keys[2], nested_combination_method: { 'weighted_average' => [item_keys[0], item_keys[1]] })),
@@ -127,11 +127,11 @@ RSpec.describe DatasetCombiner::ValueProcessor do
 
       expect { described_class.perform([dataset1]) }.to raise_error(
         ArgumentError,
-        /No weighing keys defined for combination method 'weighted average' in interface item:\n#{items[0].key}/
+        /No weighing keys defined for combination method 'weighted_average' in interface item:\n#{items[0].key}/
       )
     end
 
-  end # / when calculating weighted_averages
+  end # / when calculating weighted_average
 
   describe 'when determining flexible shares' do
 

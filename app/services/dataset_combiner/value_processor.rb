@@ -61,7 +61,7 @@ class DatasetCombiner
               plucked_item_values.min
             when 'max'
               plucked_item_values.max
-            when Hash # When combination_method is a hash this means it is the weighted average
+            when ->(cm) { cm.is_a?(Hash) && cm.key?('weighted_average') }
               calculate_weighted_average(item, datasets, plucked_item_values)
             when 'sum', '', nil # Default to 'sum'
               plucked_item_values.sum
@@ -147,7 +147,7 @@ class DatasetCombiner
         if weighing_keys.blank?
           argument_error(
             <<~MSG
-              No weighing keys defined for combination method 'weighted average' in interface item:
+              No weighing keys defined for combination method 'weighted_average' in interface item:
               #{item.key}
               (parent element: #{item.try(:group).try(:element).try(:key)}, parent group: #{item.try(:group).try(:header)})
               Aborting.
@@ -155,11 +155,19 @@ class DatasetCombiner
           )
         end
 
-        weighted_averages = datasets.map do |dataset|
+        weighted_values = datasets.map do |dataset|
           weight = 1.0
           weighing_keys.each do |key|
-            value = dataset.editable_attributes.find(key.to_s).value
-            weight *= value unless value.zero?
+            value = \
+              if key.is_a?(Hash)
+                aggregate_weighing_function(key, dataset)
+              else
+                dataset.editable_attributes.find(key.to_s).value
+              end
+
+            next if value.zero? || value.blank?
+
+            weight *= value
           end
 
           [dataset.editable_attributes.find(item.key.to_s).value, weight]
@@ -167,17 +175,31 @@ class DatasetCombiner
 
         # If the value of all weighted averages is 0 we return the 'normal' average.
         # See: https://github.com/quintel/etlocal/issues/464
-        if weighted_averages.all? { |wa| wa[0].zero? }
+        if weighted_values.all? { |wa| wa[0].zero? }
           return avg(plucked_item_values)
         end
 
-        numerator = weighted_averages.sum { |wa| wa[0] * wa[1] }
-        denominator = weighted_averages.sum(&:last)
+        numerator = weighted_values.sum { |wa| wa[0] * wa[1] }
+        denominator = weighted_values.sum(&:last)
 
         begin
           numerator / denominator
         rescue ZeroDivisionError
           avg(plucked_item_values)
+        end
+      end
+
+      def aggregate_weighing_function(fn_hash, dataset)
+        function = fn_hash.keys.first
+        attributes = fn_hash.values.first
+
+        case function
+        when 'sum'
+          attributes.sum { |a| dataset.editable_attributes.find(a.to_s).value }
+        # when 'max'
+        #   ...
+        # when 'min'
+        #   ...
         end
       end
 

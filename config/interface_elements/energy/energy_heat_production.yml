@@ -1,32 +1,6 @@
 key: energy_heat_production
 
 groups:
-  # Aquathermal
-  - header: energy_heat_aquathermal
-    items:
-      - key: input_energy_heat_surface_water_heatpump_lt_aquathermal_production 
-        unit: 'TJ'
-      - key: input_energy_heat_surface_water_heatpump_mt_aquathermal_production
-        unit: 'TJ'
-      - key: input_energy_heat_waste_water_heatpump_lt_aquathermal_production
-        unit: 'TJ'
-      - key: input_energy_heat_waste_water_heatpump_mt_aquathermal_production
-        unit: 'TJ'
-      - key: input_energy_heat_drink_water_heatpump_lt_aquathermal_production
-        unit: 'TJ'
-      - key: input_energy_heat_drink_water_heatpump_mt_aquathermal_production
-        unit: 'TJ'
-
-  # Potentials
-  - header: energy_aquathermal_potentials
-    items:
-        - key: energy_heat_surface_water_production_aquathermal_max_demand
-          unit: 'TJ'
-        - key: energy_heat_waste_water_production_aquathermal_max_demand
-          unit: 'TJ'
-        - key: energy_heat_drink_water_production_aquathermal_max_demand
-          unit: 'TJ'
-
   # Biomass
   - header: energy_heat_wood_pellets
     items:

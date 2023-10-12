@@ -93,7 +93,7 @@ nl:
 
       # agriculture
       agriculture_final_demand: Eindgebruik
-      agriculture_final_demand_steam_hot_water_input: Temperatuurniveaus warmtenetten
+      agriculture_final_demand_steam_hot_water_input: Verdeling warmte
       agriculture_final_demand_crude_oil_input: Samenstelling olie
       agriculture_heat: Gebruikte brandstof door lokale WKKs
       agriculture_heat_local_central: Oorsprong finaal gebruik warmte

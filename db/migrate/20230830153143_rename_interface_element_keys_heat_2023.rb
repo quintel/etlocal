@@ -2,6 +2,10 @@ class RenameInterfaceElementKeysHeat2023 < ActiveRecord::Migration[5.0]
 
   # old_key => new_key
   KEYS = {
+    # demand
+    'agriculture_final_demand_local_steam_hot_water_agriculture_final_demand_steam_hot_water_child_share' => 'input_percentage_of_local_steam_hot_water_agriculture_final_demand_steam_hot_water',
+    'agriculture_final_demand_central_steam_hot_water_agriculture_final_demand_steam_hot_water_child_share' => 'input_percentage_of_central_ht_steam_hot_water_agriculture_final_demand_steam_hot_water',
+
     # production
     'input_energy_chp_ultra_supercritical_coal_production' => 'input_energy_chp_ultra_supercritical_ht_coal_production',
     'input_energy_chp_ultra_supercritical_cofiring_coal_production' => 'input_energy_chp_ultra_supercritical_cofiring_ht_coal_production',

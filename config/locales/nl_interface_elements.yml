@@ -350,8 +350,9 @@ nl:
         input_percentage_of_bio_oil_agriculture_final_demand_crude_oil: Andere bio-olie
         input_percentage_of_crude_oil_agriculture_final_demand_crude_oil: Andere olie
 
-        input_percentage_of_mt_steam_hot_water_agriculture_final_demand_steam_hot_water: MT warmte
-        input_percentage_of_ht_steam_hot_water_agriculture_final_demand_steam_hot_water: HT warmte
+        input_percentage_of_central_mt_steam_hot_water_agriculture_final_demand_steam_hot_water: Centrale MT-warmte
+        input_percentage_of_central_ht_steam_hot_water_agriculture_final_demand_steam_hot_water: Centrale HT-warmte
+        input_percentage_of_local_steam_hot_water_agriculture_final_demand_steam_hot_water: Lokale WKK-warmte
 
         agriculture_final_demand_local_steam_hot_water_agriculture_final_demand_steam_hot_water_child_share: Lokale warmte van WKKs
         agriculture_final_demand_central_steam_hot_water_agriculture_final_demand_steam_hot_water_child_share: Warmte van stadsverwarming

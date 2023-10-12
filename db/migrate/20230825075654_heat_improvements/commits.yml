@@ -23,12 +23,8 @@
   message: No data available. Fallback value set to 1.0 to ensure share totals sum
     to 1.
 - fields:
-  - input_percentage_of_mt_steam_hot_water_agriculture_final_demand_steam_hot_water
+  - input_percentage_of_central_mt_steam_hot_water_agriculture_final_demand_steam_hot_water
   message: No data available. Fallback value set to 0.0 to ensure share totals sum
-    to 1.
-- fields:
-  - input_percentage_of_ht_steam_hot_water_agriculture_final_demand_steam_hot_water
-  message: No data available. Fallback value set to 1.0 to ensure share totals sum
     to 1.
 - fields:
   - input_energy_chp_ultra_supercritical_mt_coal_production

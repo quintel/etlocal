@@ -11,7 +11,7 @@ groups:
         unit: 'TJ'
         entso: |
           EB("Final consumption - other sectors - commercial and public services - energy use", "Network gas")
-      - key: buildings_final_demand_steam_hot_water_demand
+      - key: input_buildings_final_demand_steam_hot_water_demand
         unit: 'TJ'
         entso: |
           EB("Final consumption - other sectors - commercial and public services - energy use", "Heat") +

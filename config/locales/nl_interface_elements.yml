@@ -102,7 +102,7 @@ nl:
 
         households_final_demand_electricity_demand: Elektriciteit
         households_final_demand_network_gas_demand: Gas
-        households_final_demand_steam_hot_water_demand: Warmte
+        input_households_final_demand_steam_hot_water_demand: Warmte
         households_final_demand_wood_pellets_demand: Vaste biomassa
         input_households_final_demand_crude_oil_demand: Olie
         households_final_demand_coal_demand: Kolen
@@ -198,7 +198,7 @@ nl:
 
         input_buildings_electricity_demand: Elektriciteit
         buildings_final_demand_network_gas_demand: Gas
-        buildings_final_demand_steam_hot_water_demand: Warmte
+        input_buildings_final_demand_steam_hot_water_demand: Warmte
         buildings_final_demand_wood_pellets_demand: Vaste biomassa
         buildings_final_demand_coal_demand: Kolen
         input_buildings_final_demand_crude_oil_demand: Olie
@@ -337,7 +337,7 @@ nl:
         # agriculture
         agriculture_final_demand_electricity_demand: Elektriciteit
         agriculture_final_demand_network_gas_demand: Gas (ex WKK)
-        agriculture_final_demand_steam_hot_water_demand: Warmte
+        input_agriculture_final_demand_steam_hot_water_demand: Warmte
         agriculture_final_demand_wood_pellets_demand: Biomassa (ex WKK)
         input_agriculture_final_demand_crude_oil_demand: Olie
         agriculture_final_demand_hydrogen_demand: Waterstof

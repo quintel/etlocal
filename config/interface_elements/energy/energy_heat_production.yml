@@ -84,10 +84,12 @@ groups:
   # Solar thermal
   - header: energy_heat_solar_thermal
     items:
-      - key: input_energy_heat_solar_mt_solar_thermal_production
+      - key: input_energy_heat_solar_ht_solar_thermal_production
         unit: 'TJ'
         entso: |
           EB("Solar thermal", "Heat")
+      - key: input_energy_heat_solar_mt_solar_thermal_production
+        unit: 'TJ'
       - key: input_energy_heat_solar_lt_solar_thermal_production
         unit: 'TJ'
 

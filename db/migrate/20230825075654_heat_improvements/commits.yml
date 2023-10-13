@@ -91,6 +91,9 @@
   - input_energy_heat_solar_mt_solar_thermal_production
   message: No data available. Production of MT heat is set to zero.
 - fields:
+  - input_energy_heat_solar_ht_solar_thermal_production
+  message: No data available. Production of HT heat is set to zero.
+- fields:
   - input_energy_heat_heatpump_water_water_mt_electricity_production
   message: No data available. All heat producers are assumed to produce only HT heat
     and zero MT or LT heat.

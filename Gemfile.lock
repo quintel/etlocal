@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/quintel/atlas.git
-  revision: 0dad20efae3fb80447eb867ed2fb25e9d8de7b05
-  ref: 0dad20e
+  revision: b2b6b235605b1cec4386a7ea2185a7dfdc795b27
+  ref: b2b6b23
   specs:
     atlas (1.0.0)
       activemodel (>= 7)
@@ -217,7 +217,7 @@ GEM
       libv8-node (~> 16.10.0.0)
     minitest (5.17.0)
     msgpack (1.6.0)
-    mysql2 (0.5.4)
+    mysql2 (0.5.5)
     net-imap (0.3.4)
       date
       net-protocol

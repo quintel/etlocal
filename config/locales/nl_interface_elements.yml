@@ -633,6 +633,7 @@ nl:
         input_energy_heat_burner_ht_hydrogen_production: Waterstofketels (HT)
         input_energy_heat_burner_mt_hydrogen_production: Waterstofketels (MT)
         input_energy_heat_burner_lt_hydrogen_production: Waterstofketels (LT)
+        input_energy_heat_solar_ht_solar_thermal_production: Zonthermiepark (HT)
         input_energy_heat_solar_mt_solar_thermal_production: Zonthermiepark (MT)
         input_energy_heat_solar_lt_solar_thermal_production: Zonthermiepark (LT)
         input_energy_heat_surface_water_heatpump_lt_aquathermal_production: Thermische energie uit pppervlaktewater met booster (LT)

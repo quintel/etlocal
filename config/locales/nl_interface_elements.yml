@@ -820,7 +820,7 @@ nl:
 
         #Other
         other_final_demand_electricity_demand: Elektriciteit
-        other_final_demand_network_gas_demand: Gas
+        input_other_final_demand_network_gas_demand: Gas
         other_final_demand_steam_hot_water_demand: Warmte
         other_final_demand_wood_pellets_demand: Vaste biomassa
         other_final_demand_coal_demand: Kolen

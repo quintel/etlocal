@@ -8,6 +8,8 @@ class RenameInterfaceElementKeysHeat2023 < ActiveRecord::Migration[5.0]
     'agriculture_final_demand_steam_hot_water_demand' => 'input_agriculture_final_demand_steam_hot_water_demand',
     'buildings_final_demand_steam_hot_water_demand' => 'input_buildings_final_demand_steam_hot_water_demand',
     'households_final_demand_steam_hot_water_demand' => 'input_households_final_demand_steam_hot_water_demand',
+    'other_final_demand_steam_hot_water_demand' => 'input_other_final_demand_steam_hot_water_demand',
+
 
     # production
     'input_energy_chp_ultra_supercritical_coal_production' => 'input_energy_chp_ultra_supercritical_ht_coal_production',
@@ -23,7 +25,6 @@ class RenameInterfaceElementKeysHeat2023 < ActiveRecord::Migration[5.0]
     'input_energy_heat_burner_waste_mix_production' => 'input_energy_heat_burner_ht_waste_mix_production',
     'input_energy_heat_burner_hydrogen_production' => 'input_energy_heat_burner_ht_hydrogen_production',
     'input_energy_heat_heatpump_water_water_electricity_production' => 'input_energy_heat_heatpump_water_water_ht_electricity_production',
-    'input_energy_heat_boiler_electricity_production' => 'input_energy_heat_boiler_ht_electricity_production',
     'input_energy_heat_burner_network_gas_production' => 'input_energy_heat_burner_ht_network_gas_production',
     'input_energy_heat_burner_coal_production' => 'input_energy_heat_burner_ht_coal_production',
     'input_energy_heat_burner_crude_oil_production' => 'input_energy_heat_burner_ht_crude_oil_production',

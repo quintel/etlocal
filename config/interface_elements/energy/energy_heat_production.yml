@@ -119,19 +119,6 @@ groups:
         flexible: true
         skip_validation: true
 
-  - header: industry_chemical_residual_heat_distribution
-    type: slider
-    combination_method:
-      weighted_average:
-        - input_industry_chemical_other_network_gas_demand
-    items:
-      - key: industry_chemicals_other_ht_residual_heat # TODO: rename?
-        unit: '%'
-        flexible: true
-      - key: industry_chemicals_other_mt_residual_heat # TODO: rename?
-        unit: '%'
-        skip_validation: true
-
   # Residual heat (chemical industry - fertilizers)
   - header: industry_fertilizers_residual_heat_potential
     type: slider
@@ -146,19 +133,6 @@ groups:
       - key: industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_used_heat_parent_share
         unit: '%'
         flexible: true
-        skip_validation: true
-
-  - header: industry_fertilizers_residual_heat_distribution
-    type: slider
-    combination_method:
-      weighted_average:
-         - input_industry_chemical_fertilizers_network_gas_demand
-    items:
-      - key: industry_chemicals_fertilizers_ht_residual_heat # TODO: rename?
-        unit: '%'
-        flexible: true
-      - key: industry_chemicals_fertilizers_mt_residual_heat # TODO: rename?
-        unit: '%'
         skip_validation: true
 
   # Residual heat (chemical industry - refineries)   
@@ -177,19 +151,6 @@ groups:
         flexible: true
         skip_validation: true
 
-  - header: industry_refineries_residual_heat_distribution
-    type: slider
-    combination_method:
-      weighted_average:
-        - input_industry_chemical_refineries_network_gas_demand
-    items:
-      - key: industry_chemicals_refineries_ht_residual_heat # TODO: rename?
-        unit: '%'
-        flexible: true
-      - key: industry_chemicals_refineries_mt_residual_heat # TODO: rename?
-        unit: '%'
-        skip_validation: true
-
   # Residual heat (ICT)
   - header: industry_ict_residual_heat_potential
     type: slider
@@ -202,19 +163,6 @@ groups:
       - key: industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share
         unit: '%'
         flexible: true
-        skip_validation: true
-
-  - header: industry_ict_residual_heat_distribution
-    type: slider
-    combination_method:
-      weighted_average:
-        - input_industry_ict_electricity_demand
-    items:
-      - key: industry_ict_mt_residual_heat # TODO: rename?
-        unit: '%'
-        flexible: true
-      - key: industry_ict_lt_residual_heat # TODO: rename?
-        unit: '%'
         skip_validation: true
   
   # Import

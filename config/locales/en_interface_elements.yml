@@ -816,7 +816,7 @@ en:
         #Other
         other_final_demand_electricity_demand: Electricity
         other_final_demand_network_gas_demand: Gas
-        other_final_demand_steam_hot_water_demand: Heat
+        input_other_final_demand_steam_hot_water_demand: Heat
         other_final_demand_wood_pellets_demand: Solid biomass
         other_final_demand_coal_demand: Coal
         other_final_demand_crude_oil_demand: Oil

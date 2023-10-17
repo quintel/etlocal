@@ -37,9 +37,40 @@ groups:
       - key: energy_heat_distribution_ht_loss_share
         unit: '%'
         entso: |
-          EB("Distribution losses", "Heat")
+          EB("Distribution losses", "Heat") /
+          (
+            EB("Final consumption - other sectors - agriculture and forestry - energy use", "Heat") +
+            EB("Final consumption - other sectors - commercial and public services - energy use", "Heat") +
+            EB("Final consumption - other sectors - commercial and public services - energy use", "Geothermal") +
+            EB("Final consumption - other sectors - households - energy use", "Heat") +
+            EB("Final consumption - other sectors - households - energy use", "Geothermal") +
+            EB("Final consumption - other sectors - not elsewhere specified - energy use", "Heat") +
+            EB("Distribution losses", "Heat")
+          ) * 100
       - key: energy_heat_distribution_mt_loss_share
         unit: '%'
+        entso: |
+          EB("Distribution losses", "Heat") /
+          (
+            EB("Final consumption - other sectors - agriculture and forestry - energy use", "Heat") +
+            EB("Final consumption - other sectors - commercial and public services - energy use", "Heat") +
+            EB("Final consumption - other sectors - commercial and public services - energy use", "Geothermal") +
+            EB("Final consumption - other sectors - households - energy use", "Heat") +
+            EB("Final consumption - other sectors - households - energy use", "Geothermal") +
+            EB("Final consumption - other sectors - not elsewhere specified - energy use", "Heat") +
+            EB("Distribution losses", "Heat")
+          ) * 100
       - key: energy_heat_distribution_lt_loss_share
         unit: '%'
+        entso: |
+          EB("Distribution losses", "Heat") /
+          (
+            EB("Final consumption - other sectors - agriculture and forestry - energy use", "Heat") +
+            EB("Final consumption - other sectors - commercial and public services - energy use", "Heat") +
+            EB("Final consumption - other sectors - commercial and public services - energy use", "Geothermal") +
+            EB("Final consumption - other sectors - households - energy use", "Heat") +
+            EB("Final consumption - other sectors - households - energy use", "Geothermal") +
+            EB("Final consumption - other sectors - not elsewhere specified - energy use", "Heat") +
+            EB("Distribution losses", "Heat")
+          ) * 100
 

@@ -12,7 +12,7 @@ groups:
       entso: |
         EB("Final consumption - other sectors - not elsewhere specified - energy use", "Network gas") +
         EB("Final consumption - transport sector - pipeline transport - energy use", "Total")
-    - key: other_final_demand_steam_hot_water_demand
+    - key: input_other_final_demand_steam_hot_water_demand
       unit: 'TJ'
       entso: |
         EB("Final consumption - other sectors - not elsewhere specified - energy use", "Heat")

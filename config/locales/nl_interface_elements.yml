@@ -125,8 +125,8 @@ nl:
         households_final_demand_for_appliances_electricity_households_appliances_vacuum_cleaner_electricity_parent_share: Stofzuiger
         households_final_demand_for_appliances_electricity_households_appliances_washing_machine_electricity_parent_share: Wasmachine
 
-        households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share: Warm water
-        households_final_demand_steam_hot_water_households_final_demand_for_space_heating_steam_hot_water_parent_share: Ruimteverwarming
+        input_households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share: Warm water
+        input_households_final_demand_steam_hot_water_households_final_demand_for_space_heating_steam_hot_water_parent_share: Ruimteverwarming
 
         households_final_demand_wood_pellets_households_final_demand_for_cooking_wood_pellets_parent_share: Koken
         households_final_demand_wood_pellets_households_final_demand_for_hot_water_wood_pellets_parent_share: Warm water

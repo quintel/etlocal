@@ -9,7 +9,8 @@ class RenameInterfaceElementKeysHeat2023 < ActiveRecord::Migration[5.0]
     'buildings_final_demand_steam_hot_water_demand' => 'input_buildings_final_demand_steam_hot_water_demand',
     'households_final_demand_steam_hot_water_demand' => 'input_households_final_demand_steam_hot_water_demand',
     'other_final_demand_steam_hot_water_demand' => 'input_other_final_demand_steam_hot_water_demand',
-
+    'households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share' => 'input_households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share',
+    'households_final_demand_steam_hot_water_households_final_demand_for_space_heating_steam_hot_water_parent_share' => 'input_households_final_demand_steam_hot_water_households_final_demand_for_space_heating_steam_hot_water_parent_share',
 
     # production
     'input_energy_chp_ultra_supercritical_coal_production' => 'input_energy_chp_ultra_supercritical_ht_coal_production',

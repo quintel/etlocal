@@ -654,29 +654,6 @@ en:
         energy_heat_waste_water_production_aquathermal_max_demand: Potential aquathermal heat from waste water
         energy_heat_drink_water_production_aquathermal_max_demand: Potential aquathermal heat from drink water
 
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: Residual heat from processes
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: Residual heat from flue gasses
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share: No residual heat
-        industry_chemicals_other_ht_residual_heat: HT heat
-        industry_chemicals_other_mt_residual_heat: MT heat
-
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share: Residual heat from processes
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share: Residual heat from flue gasses
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share: No residual heat
-        industry_chemicals_refineries_ht_residual_heat: HT heat
-        industry_chemicals_refineries_mt_residual_heat: MT heat
-
-        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share: Residual heat from processes
-        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share: Residual heat from flue gasses
-        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_used_heat_parent_share: No residual heat
-        industry_chemicals_fertilizers_ht_residual_heat: HT heat
-        industry_chemicals_fertilizers_mt_residual_heat: MT heat
-
-        industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share: Residual heat from servers
-        industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: No residual heat
-        industry_ict_mt_residual_heat: MT heat (incl. booster)
-        industry_ict_lt_residual_heat: LT heat (excl. booster)
-
         energy_heat_import_ht_steam_hot_water_demand: (Residual) heat imported from outside your region (HT)
         energy_heat_import_mt_steam_hot_water_demand: (Residual) heat imported from outside your region (MT)
         energy_heat_import_lt_steam_hot_water_demand: (Residual) heat imported from outside your region (LT)

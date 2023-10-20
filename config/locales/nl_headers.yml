@@ -177,14 +177,6 @@ nl:
       energy_heat_network_gas: Gasgestookte warmteproductie
       energy_heat_coal: Kolengestookte warmteproductie
       energy_heat_crude_oil: Oliegestookte warmteproductie
-      industry_chemical_residual_heat_potential: "Beschikbare restwarmte chemische industrie"
-      industry_refineries_residual_heat_potential: "Beschikbare restwarmte raffinaderijen"
-      industry_fertilizers_residual_heat_potential: "Beschikbare restwarmte kunstmestindustrie"
-      industry_ict_residual_heat_potential: "Beschikbare restwarmte ICT"
-      industry_chemical_residual_heat_distribution: "Verdeling restwarmte chemische industrie naar temperatuurniveau"
-      industry_refineries_residual_heat_distribution: "Verdeling restwarmte raffinaderijen naar temperatuurniveau"
-      industry_fertilizers_residual_heat_distribution: "Verdeling restwarmte kunstmestindustrie naar temperatuurniveau"
-      industry_ict_residual_heat_distribution: "Verdeling restwarmte ICT naar temperatuurniveau"
       energy_heat_import: Geïmporteerde warmte
       energy_heat_distribution_loss: Warmtenetten - distributieverliezen
       energy_renewable_full_load_hours: Vollasturen van hernieuwbare elektriciteitsproductie

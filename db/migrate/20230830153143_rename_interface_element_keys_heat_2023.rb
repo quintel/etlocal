@@ -44,7 +44,7 @@ class RenameInterfaceElementKeysHeat2023 < ActiveRecord::Migration[5.0]
     'energy_heat_burner_crude_oil_full_load_hours' => 'input_energy_heat_burner_crude_oil_full_load_hours', 
     'energy_heat_burner_network_gas_full_load_hours' => 'input_energy_heat_burner_network_gas_full_load_hours', 
     'energy_heat_burner_wood_pellets_full_load_hours' => 'input_energy_heat_burner_wood_pellets_full_load_hours', 
-    'energy_heat_solar_thermal_full_load_hours' => 'input_energy_heat_solar_thermal_full_load_hours', 
+    'energy_heat_solar_thermal_full_load_hours' => 'input_energy_heat_solar_solar_thermal_full_load_hours', 
     'energy_heat_burner_waste_mix_full_load_hours' => 'input_energy_heat_burner_waste_mix_full_load_hours', 
     'energy_heat_heatpump_water_water_electricity_full_load_hours' => 'input_energy_heat_heatpump_water_water_electricity_full_load_hours'
   }.freeze

@@ -18,7 +18,7 @@ nl:
       attribute_not_found: "Attribuut niet gevonden '%{attribute}'"
 
     groups:
-      #area
+      # area
       area_co2_emission_1990: "CO<sub>2</sub>-emissies 1990"
       area_ghg: "Uitstoot broeikasgassen"
       energetic_other_ghg: "Energetische uitstoot van broeikasgassen (excl. CO<sub>2</sub>)"
@@ -35,7 +35,7 @@ nl:
       area_heat_infrastructure_lengths: Leidinglengtes warmtenet
       area_interconnector_capacity: Beschikbare capaciteit huidige interconnectors
 
-      #households
+      # households
       households_housing_stock_distribution: Huizenvoorraad
       households_apartments_block_heating: Blokverwarming
       households_final_demand: Eindgebruik
@@ -46,6 +46,7 @@ nl:
       households_steam_hot_water_distribution: Verdeling warmte
       households_wood_pellets_distribution: Verdeling biomassa
       households_crude_oil_distribution: Verdeling olie
+      households_final_demand_steam_hot_water_input: Temperatuurniveaus warmtenetten
       households_final_demand_crude_oil_input: Samenstelling olie
       households_coal_distribution: Verdeling kolen
       households_network_gas_space_heating_hot_water_distribution: Ruimteverwarming en warm water - gas
@@ -56,7 +57,7 @@ nl:
       households_electricity_cooling_distribution: Koelsysteem - elektriciteit
       households_solar_thermal_distribution: Verdeling zonthermie
 
-      #buildings
+      # buildings
       buildings_final_demand: Eindgebruik
       buildings_insulation: Isolatie
       buildings_local_production: Lokale energieproductie
@@ -66,6 +67,7 @@ nl:
       buildings_crude_oil_distribution: Verdeling olie
       buildings_coal_distribution: Verdeling kolen
       buildings_final_demand_crude_oil_input: Samenstelling olie
+      buildings_final_demand_steam_hot_water_input: Temperatuurniveaus warmtenetten
       buildings_network_gas_space_heating_distribution: Ruimteverwarming - gas
       buildings_electricity_space_heating_distribution: Ruimteverwarming - elektriciteit
       buildings_electricity_lighting_distribution: Verlichting - elektriciteit
@@ -91,6 +93,7 @@ nl:
 
       # agriculture
       agriculture_final_demand: Eindgebruik
+      agriculture_final_demand_steam_hot_water_input: Verdeling warmte
       agriculture_final_demand_crude_oil_input: Samenstelling olie
       agriculture_heat: Gebruikte brandstof door lokale WKKs
       agriculture_heat_local_central: Oorsprong finaal gebruik warmte
@@ -135,10 +138,6 @@ nl:
       industry_ict: Centrale ICT-diensten
       industry_other_energetic: Energetische vraag
       industry_other_non_energetic: Niet-energetische vraag / grondstoffen
-      industry_chemical_residual_heat: "Beschikbare restwarmte chemische industrie"
-      industry_refineries_residual_heat: "Beschikbare restwarmte raffinaderijen"
-      industry_fertilizers_residual_heat: "Beschikbare restwarmte kunstmestindustrie"
-      industry_ict_residual_heat: "Beschikbare restwarmte ICT"
       industry_fertilizer_demand_energetic: Energetische vraag
       industry_fertilizer_demand_non_energetic: Niet-energetische vraag
       industry_aluminium_demand: Vraag
@@ -159,7 +158,7 @@ nl:
       energy_greengas_production: Groengasproductie
       energy_waste_mix: Afvalmix
       energy_extraction: Brandstofproductie en winning natuurlijke hulpbronnen
-      energy_potentials: Potentie natuurlijke hulpbronnen
+      energy_biomass_potentials: Potentie biomassa
       energy_electricity_wind: Elektriciteitsopwek wind
       energy_electricity_solar: Elektriciteitsopwek zon
       energy_electricity_other_renewable: Overige duurzame elektriciteitsopwek
@@ -167,10 +166,27 @@ nl:
       energy_electricity_gas: Elektriciteitsopwek gascentrales per type
       energy_electricity_waste: Elektriciteitsopwek afvalverbranding
       energy_electricity_other_fossil: Overige fossiele elektriciteitsopwek
+      energy_heat_geothermal: Geothermische warmteproductie
+      energy_heat_wood_pellets: Biomassagestookte warmteproductie
+      energy_heat_waste_mix: Afvalgestookte warmteproductie
+      energy_heat_hydrogen: Waterstofgestookte warmteproductie
+      energy_heat_solar_thermal: Zonthermische warmteproductie
+      energy_heat_aquathermal: Aquathermische warmteproductie
+      energy_aquathermal_potentials: Potentie aquathermie
+      energy_heat_electricity: Elektrische warmteproductie
+      energy_heat_network_gas: Gasgestookte warmteproductie
+      energy_heat_coal: Kolengestookte warmteproductie
+      energy_heat_crude_oil: Oliegestookte warmteproductie
+      industry_chemical_residual_heat_potential: "Beschikbare restwarmte chemische industrie"
+      industry_refineries_residual_heat_potential: "Beschikbare restwarmte raffinaderijen"
+      industry_fertilizers_residual_heat_potential: "Beschikbare restwarmte kunstmestindustrie"
+      industry_ict_residual_heat_potential: "Beschikbare restwarmte ICT"
+      industry_chemical_residual_heat_distribution: "Verdeling restwarmte chemische industrie naar temperatuurniveau"
+      industry_refineries_residual_heat_distribution: "Verdeling restwarmte raffinaderijen naar temperatuurniveau"
+      industry_fertilizers_residual_heat_distribution: "Verdeling restwarmte kunstmestindustrie naar temperatuurniveau"
+      industry_ict_residual_heat_distribution: "Verdeling restwarmte ICT naar temperatuurniveau"
       energy_heat_import: Geïmporteerde warmte
-      energy_heat_renewable: Duurzame warmtebronnen
-      energy_heat_fossil: Fossiele warmtebronnen
-      energy_heat_distribution_loss: Verlies warmtenetten
+      energy_heat_distribution_loss: Warmtenetten - distributieverliezen
       energy_renewable_full_load_hours: Vollasturen van hernieuwbare elektriciteitsproductie
       energy_fossil_full_load_hours: Vollasturen van fossiele elektriciteitsproductie
       fuel_production: Brandstofproductie

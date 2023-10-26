@@ -35,7 +35,7 @@ groups:
           -> { 50.0 }) 
         flexible: true
 
-  - header: energy_potentials
+  - header: energy_biomass_potentials
     items:
         - key: energy_production_dry_biomass_max_demand
           unit: 'TJ'

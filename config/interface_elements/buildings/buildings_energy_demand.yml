@@ -11,7 +11,7 @@ groups:
         unit: 'TJ'
         entso: |
           EB("Final consumption - other sectors - commercial and public services - energy use", "Network gas")
-      - key: buildings_final_demand_steam_hot_water_demand
+      - key: input_buildings_final_demand_steam_hot_water_demand
         unit: 'TJ'
         entso: |
           EB("Final consumption - other sectors - commercial and public services - energy use", "Heat") +
@@ -33,6 +33,21 @@ groups:
         entso: |
           EB("Final consumption - other sectors - commercial and public services - energy use", "Solar thermal")
 
+  - header: buildings_final_demand_steam_hot_water_input
+    type: slider
+    combination_method:
+      weighted_average:
+        - input_buildings_final_demand_steam_hot_water_demand
+    items:
+      - key: input_percentage_of_lt_steam_hot_water_buildings_final_demand_steam_hot_water
+        unit: '%'
+      - key: input_percentage_of_mt_steam_hot_water_buildings_final_demand_steam_hot_water
+        unit: '%'
+      - key: input_percentage_of_ht_steam_hot_water_buildings_final_demand_steam_hot_water
+        unit: '%'
+        flexible: true
+        skip_validation: true
+  
   - header: buildings_final_demand_crude_oil_input
     type: slider
     combination_method:

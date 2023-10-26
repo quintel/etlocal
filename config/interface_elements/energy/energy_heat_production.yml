@@ -1,51 +1,176 @@
 key: energy_heat_production
+
 groups:
-  - header: energy_heat_renewable
+  # Biomass
+  - header: energy_heat_wood_pellets
     items:
-      - key: input_energy_heat_burner_wood_pellets_production
+      - key: input_energy_heat_burner_ht_wood_pellets_production
         unit: 'TJ'
         entso: |
           EB("Biomass heater", "Heat")
-      - key: input_energy_heat_well_geothermal_production
-        unit: 'TJ' 
-        entso: |
-          EB("Geothermal - residential", "Heat")
-      - key: input_energy_heat_burner_waste_mix_production
+      - key: input_energy_heat_burner_mt_wood_pellets_production
         unit: 'TJ'
-        entso: |
-          EB("Waste heater", "Heat")
-      - key: input_energy_heat_burner_hydrogen_production
-        unit: 'TJ'
-      - key: input_energy_heat_solar_thermal_production
-        unit: 'TJ'
-        entso: |
-          EB("Solar thermal", "Heat")
-      - key: input_energy_heat_heatpump_water_water_electricity_production
-        unit: 'TJ'
-        
-  - header: energy_heat_fossil
+
+  # Coal
+  - header: energy_heat_coal
     items:
-      - key: input_energy_heat_burner_network_gas_production
-        unit: 'TJ'
-        entso: |
-          EB("Gas heater", "Heat")
-      - key: input_energy_heat_burner_coal_production
+      - key: input_energy_heat_burner_ht_coal_production
         unit: 'TJ'
         entso: |
           EB("Coal heater - industrial", "Heat")
-      - key: input_energy_heat_burner_crude_oil_production
+      - key: input_energy_heat_burner_mt_coal_production
+        unit: 'TJ'
+
+  # Crude oil
+  - header: energy_heat_crude_oil
+    items:
+      - key: input_energy_heat_burner_ht_crude_oil_production
         unit: 'TJ'
         entso: |
           EB("Oil heater - industrial", "Heat")
-
-  - header: energy_heat_import
-    items:
-      - key: energy_import_heat_demand
+      - key: input_energy_heat_burner_mt_crude_oil_production
         unit: 'TJ'
 
-  - header: energy_heat_distribution_loss
+  # Electric
+  - header: energy_heat_electricity
     items:
-      - key: energy_heat_distribution_loss_demand
+      - key: input_energy_heat_heatpump_water_water_ht_electricity_production
+        unit: 'TJ'
+      - key: input_energy_heat_heatpump_water_water_mt_electricity_production
+        unit: 'TJ'
+      - key: input_energy_heat_heatpump_water_water_lt_electricity_production
+        unit: 'TJ'
+      - key: input_energy_heat_boiler_ht_electricity_production
+        unit: 'TJ'
+      - key: input_energy_heat_boiler_mt_electricity_production
+        unit: 'TJ'
+      - key: input_energy_heat_boiler_lt_electricity_production
+        unit: 'TJ'
+
+  # Geothermal
+  - header: energy_heat_geothermal
+    items:
+      - key: input_energy_heat_well_deep_ht_geothermal_production
+        unit: 'TJ' 
+        entso: |
+          EB("Geothermal - residential", "Heat")
+      - key: input_energy_heat_well_deep_mt_geothermal_production
+        unit: 'TJ'
+      - key: input_energy_heat_well_shallow_heatpump_mt_geothermal_production
+        unit: 'TJ'
+      - key: input_energy_heat_well_shallow_lt_geothermal_production
+        unit: 'TJ'
+
+  # Hydrogen
+  - header: energy_heat_hydrogen
+    items:
+      - key: input_energy_heat_burner_ht_hydrogen_production
+        unit: 'TJ'
+      - key: input_energy_heat_burner_mt_hydrogen_production
+        unit: 'TJ'
+      - key: input_energy_heat_burner_lt_hydrogen_production
+        unit: 'TJ'
+
+  # Network gas
+  - header: energy_heat_network_gas
+    items:
+      - key: input_energy_heat_burner_ht_network_gas_production
         unit: 'TJ'
         entso: |
-          EB("Distribution losses", "Heat")
+          EB("Gas heater", "Heat")
+      - key: input_energy_heat_burner_mt_network_gas_production
+        unit: 'TJ'
+
+  # Solar thermal
+  - header: energy_heat_solar_thermal
+    items:
+      - key: input_energy_heat_solar_ht_solar_thermal_production
+        unit: 'TJ'
+        entso: |
+          EB("Solar thermal", "Heat")
+      - key: input_energy_heat_solar_mt_solar_thermal_production
+        unit: 'TJ'
+      - key: input_energy_heat_solar_lt_solar_thermal_production
+        unit: 'TJ'
+
+  # Waste mix
+  - header: energy_heat_waste_mix
+    items:
+      - key: input_energy_heat_burner_ht_waste_mix_production
+        unit: 'TJ'
+        entso: |
+          EB("Waste heater", "Heat")
+      - key: input_energy_heat_burner_mt_waste_mix_production
+        unit: 'TJ'
+
+  # Residual heat (chemical industry - other)    
+  - header: industry_chemical_residual_heat_potential
+    type: slider
+    combination_method:
+      weighted_average:
+        - input_industry_chemical_other_network_gas_demand
+    items:
+      - key: industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share
+        unit: '%'
+      - key: industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share
+        unit: '%'
+      - key: industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  # Residual heat (chemical industry - fertilizers)
+  - header: industry_fertilizers_residual_heat_potential
+    type: slider
+    combination_method:
+      weighted_average:
+         - input_industry_chemical_fertilizers_network_gas_demand
+    items:
+      - key: industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share
+        unit: '%'
+      - key: industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share
+        unit: '%'
+      - key: industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_used_heat_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  # Residual heat (chemical industry - refineries)   
+  - header: industry_refineries_residual_heat_potential
+    type: slider
+    combination_method:
+      weighted_average:
+        - input_industry_chemical_refineries_network_gas_demand
+    items:
+      - key: industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share
+        unit: '%'
+      - key: industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share
+        unit: '%'
+      - key: industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  # Residual heat (ICT)
+  - header: industry_ict_residual_heat_potential
+    type: slider
+    combination_method:
+      weighted_average:
+        - input_industry_ict_electricity_demand
+    items:
+      - key: industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share
+        unit: '%'
+      - key: industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+  
+  # Import
+  - header: energy_heat_import
+    items:
+      - key: energy_heat_import_ht_steam_hot_water_demand
+        unit: 'TJ'
+      - key: energy_heat_import_mt_steam_hot_water_demand
+        unit: 'TJ'
+      - key: energy_heat_import_lt_steam_hot_water_demand
+        unit: 'TJ'

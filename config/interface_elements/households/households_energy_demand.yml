@@ -11,7 +11,7 @@ groups:
         unit: 'TJ'
         entso: |
           EB("Final consumption - other sectors - households - energy use", "Network gas")
-      - key: households_final_demand_steam_hot_water_demand
+      - key: input_households_final_demand_steam_hot_water_demand
         unit: 'TJ'
         entso: |
           EB("Final consumption - other sectors - households - energy use", "Heat") +
@@ -32,6 +32,21 @@ groups:
         unit: 'TJ'
         entso: |
           EB("Final consumption - other sectors - households - energy use", "Solar thermal")
+
+  - header: households_final_demand_steam_hot_water_input
+    type: slider
+    combination_method:
+      weighted_average:
+        - input_households_final_demand_steam_hot_water_demand
+    items:
+      - key: input_percentage_of_lt_steam_hot_water_households_final_demand_steam_hot_water
+        unit: '%'
+      - key: input_percentage_of_mt_steam_hot_water_households_final_demand_steam_hot_water
+        unit: '%'
+      - key: input_percentage_of_ht_steam_hot_water_households_final_demand_steam_hot_water
+        unit: '%'
+        flexible: true
+        skip_validation: true
 
   - header: households_final_demand_crude_oil_input
     type: slider

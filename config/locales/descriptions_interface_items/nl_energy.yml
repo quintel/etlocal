@@ -41,49 +41,76 @@ nl:
         informatie.
       input_energy_power_solar_pv_solar_radiation_production: |
         Hoeveel elektriciteit wordt er opgewekt met grondgebonden zon-PV (zonneweides) en zon op water?
-      input_energy_chp_local_engine_biogas_production: |
+      input_energy_chp_local_engine_ht_biogas_production: |
+        Hoeveel elektriciteit wordt er opgewekt met biomassa-WKK's? Hieronder worden alle warmte-kracht-koppeling-installaties
+        verstaan die draaien op biomassa (met uitzondering van biogas en afvalverbranding).
+      input_energy_chp_local_engine_mt_biogas_production: |
         Hoeveel elektriciteit wordt er opgewekt met biomassa-WKK's? Hieronder worden alle warmte-kracht-koppeling-installaties
         verstaan die draaien op biomassa (met uitzondering van biogas en afvalverbranding).
       input_energy_power_geothermal_production: |
         Hoeveel elektriciteit wordt er opgewekt met behulp van aardwarmte? Dit is een nieuwe technologie die (nog)
         niet veel wordt gebruikt.
-      energy_heat_distribution_loss_demand: |
+      energy_heat_distribution_ht_loss_demand: |
+        De verliezen die optreden bij het transport en de distributie van warmte in warmtenetten. Bij
+        huidige warmtenetten is dit vaak 20%+ van de jaarlijkse geleverde warmte.
+      energy_heat_distribution_mt_loss_demand: |
+        De verliezen die optreden bij het transport en de distributie van warmte in warmtenetten. Bij
+        huidige warmtenetten is dit vaak 20%+ van de jaarlijkse geleverde warmte.
+      energy_heat_distribution_lt_loss_demand: |
         De verliezen die optreden bij het transport en de distributie van warmte in warmtenetten. Bij
         huidige warmtenetten is dit vaak 20%+ van de jaarlijkse geleverde warmte.
       industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: |
         Hoeveel van de totale warmteproductie in de chemiesector in dit gebied is beschikbaar als restwarmte uit processen? Het
         Energietransitiemodel maakt een onderscheid tussen restwarmte uit industriële processen en restwarmte uit rookgassen. De restwarmte
-        kan worden ingevoed op een warmtenet voor de verwarming van woningen en gebouwen.
+        kan worden ingevoed op een warmtenet voor de verwarming van woningen en gebouwen. Meer informatie over industriële restwarmte kan gevonden worden in onze
+        <a target="_blank" href="https://docs.energytransitionmodel.com/main/residual-heat-industry">
+        documentatie</a>.
       industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: |
         Hoeveel van de totale warmteproductie in de chemiesector in dit gebied is beschikbaar als restwarmte uit rookgassen? Het
         Energietransitiemodel maakt een onderscheid tussen restwarmte uit industriële processen en restwarmte uit rookgassen. De restwarmte
-        kan worden ingevoed op een warmtenet voor de verwarming van woningen en gebouwen.
+        kan worden ingevoed op een warmtenet voor de verwarming van woningen en gebouwen. Meer informatie over industriële restwarmte kan gevonden worden in onze
+        <a target="_blank" href="https://docs.energytransitionmodel.com/main/residual-heat-industry">
+        documentatie</a>.
       industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share: |
         Hoeveel van de totale warmteproductie in de chemiesector kan niet worden hergebruikt als restwarmte?
       industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share: |
         Hoeveel van de totale warmteproductie in de raffinagesector in dit gebied is beschikbaar als restwarmte uit processen? Het
         Energietransitiemodel maakt een onderscheid tussen restwarmte uit industriële processen en restwarmte uit rookgassen. De restwarmte
-        kan worden ingevoed op een warmtenet voor de verwarming van woningen en gebouwen.
+        kan worden ingevoed op een warmtenet voor de verwarming van woningen en gebouwen. Meer informatie over industriële restwarmte kan gevonden worden in onze
+        <a target="_blank" href="https://docs.energytransitionmodel.com/main/residual-heat-industry">
+        documentatie</a>.
       industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share: |
         Hoeveel van de totale warmteproductie in de raffinagesector in dit gebied is beschikbaar als restwarmte uit rookgassen? Het
         Energietransitiemodel maakt een onderscheid tussen restwarmte uit industriële processen en restwarmte uit rookgassen. De restwarmte
-        kan worden ingevoed op een warmtenet voor de verwarming van woningen en gebouwen.
+        kan worden ingevoed op een warmtenet voor de verwarming van woningen en gebouwen. Meer informatie over industriële restwarmte kan gevonden worden in onze
+        <a target="_blank" href="https://docs.energytransitionmodel.com/main/residual-heat-industry">
+        documentatie</a>.
       industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share: |
         Hoeveel van de totale warmteproductie in de raffinagesector kan niet worden hergebruikt als restwarmte?
       industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share: |
         Hoeveel van de totale warmteproductie in de kunstmestsector in dit gebied is beschikbaar als restwarmte uit processen? Het
         Energietransitiemodel maakt een onderscheid tussen restwarmte uit industriële processen en restwarmte uit rookgassen. De restwarmte
-        kan worden ingevoed op een warmtenet voor de verwarming van woningen en gebouwen.
+        kan worden ingevoed op een warmtenet voor de verwarming van woningen en gebouwen. Meer informatie over industriële restwarmte kan gevonden worden in onze
+        <a target="_blank" href="https://docs.energytransitionmodel.com/main/residual-heat-industry">
+        documentatie</a>.
       industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share: |
         Hoeveel van de totale warmteproductie in de kunstmestsector in dit gebied is beschikbaar als restwarmte uit rookgassen? Het
         Energietransitiemodel maakt een onderscheid tussen restwarmte uit industriële processen en restwarmte uit rookgassen. De restwarmte
-        kan worden ingevoed op een warmtenet voor de verwarming van woningen en gebouwen.
+        kan worden ingevoed op een warmtenet voor de verwarming van woningen en gebouwen. Meer informatie over industriële restwarmte kan gevonden worden in onze
+        <a target="_blank" href="https://docs.energytransitionmodel.com/main/residual-heat-industry">
+        documentatie</a>.
       industry_chemicals_fertilizers_haber_bosch_process_hydrogen_industry_chemicals_fertilizers_used_heat_parent_share: |
         Hoeveel van de totale warmteproductie in de kunstmestsector kan niet worden hergebruikt als restwarmte?
       industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share: |
         Hoeveel van de totale warmteproductie uit datacenters in dit gebied is beschikbaar als restwarmte? De restwarmte
-        kan worden ingevoed op een warmtenet voor de verwarming van woningen en gebouwen.
+        kan worden ingevoed op een warmtenet voor de verwarming van woningen en gebouwen. Meer informatie over industriële restwarmte kan gevonden worden in onze
+        <a target="_blank" href="https://docs.energytransitionmodel.com/main/residual-heat-industry">
+        documentatie</a>.
       industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: |
         Hoeveel van de totale warmteproductie uit datacenters in dit gebied kan niet worden hergebruikt als restwarmte?
-      energy_import_heat_demand: |
+      energy_heat_import_ht_steam_hot_water_demand: |
+        Hoeveel (rest)warmte wordt er geïmporteerd van buiten de regio?
+      energy_heat_import_mt_steam_hot_water_demand: |
+        Hoeveel (rest)warmte wordt er geïmporteerd van buiten de regio?
+      energy_heat_import_lt_steam_hot_water_demand: |
         Hoeveel (rest)warmte wordt er geïmporteerd van buiten de regio?

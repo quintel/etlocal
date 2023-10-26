@@ -3,7 +3,7 @@ en:
     attributes:
       dataset_edit_form:
 
-        #area
+        # area
         analysis_year: Starting year
         total_land_area: Total land area
         offshore_suitable_for_wind: Available area for offshore wind turbines
@@ -85,7 +85,7 @@ en:
         heat_length_of_connection_pipelines_in_meter_per_residence_fourth_bracket: Length connection pipes per house (80% connected)
         heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket: Length connection pipes per house (100% connected)
 
-        #households
+        # households
         number_of_residences: Number of residences
         input_percentage_of_apartments: Apartement
         input_percentage_of_terraced_houses: Terraced house
@@ -97,7 +97,7 @@ en:
 
         households_final_demand_electricity_demand: Electricity
         households_final_demand_network_gas_demand: Gas
-        households_final_demand_steam_hot_water_demand: Heat
+        input_households_final_demand_steam_hot_water_demand: Heat
         households_final_demand_wood_pellets_demand: Solid biomass
         input_households_final_demand_crude_oil_demand: Oil
         households_final_demand_coal_demand: Coal
@@ -120,8 +120,8 @@ en:
         households_final_demand_for_appliances_electricity_households_appliances_vacuum_cleaner_electricity_parent_share: Vacuum cleaner
         households_final_demand_for_appliances_electricity_households_appliances_washing_machine_electricity_parent_share: Washing machine
 
-        households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share: Hot water
-        households_final_demand_steam_hot_water_households_final_demand_for_space_heating_steam_hot_water_parent_share: Space heating
+        input_households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share: Hot water
+        input_households_final_demand_steam_hot_water_households_final_demand_for_space_heating_steam_hot_water_parent_share: Space heating
 
         households_final_demand_wood_pellets_households_final_demand_for_cooking_wood_pellets_parent_share: Cooking
         households_final_demand_wood_pellets_households_final_demand_for_hot_water_wood_pellets_parent_share: Hot water
@@ -175,6 +175,10 @@ en:
         households_final_demand_electricity_households_final_demand_for_lighting_electricity_parent_share: Lighting
         households_final_demand_electricity_households_final_demand_for_space_heating_electricity_parent_share: Space heating
 
+        input_percentage_of_lt_steam_hot_water_households_final_demand_steam_hot_water: LT heat
+        input_percentage_of_mt_steam_hot_water_households_final_demand_steam_hot_water: MT heat
+        input_percentage_of_ht_steam_hot_water_households_final_demand_steam_hot_water: HT heat
+
         input_percentage_of_diesel_households_final_demand_crude_oil: Diesel
         input_percentage_of_biodiesel_households_final_demand_crude_oil: Biodiesel
         input_percentage_of_kerosene_households_final_demand_crude_oil: Kerosene
@@ -183,13 +187,13 @@ en:
         input_percentage_of_bio_oil_households_final_demand_crude_oil: Other bio oil
         input_percentage_of_crude_oil_households_final_demand_crude_oil: Other oil
 
-        #buildings
+        # buildings
         number_of_buildings: Number of buildings
         buildings_roof_surface_available_for_pv: Roof surface suitable for solar PV
 
         input_buildings_electricity_demand: Electricity
         buildings_final_demand_network_gas_demand: Gas
-        buildings_final_demand_steam_hot_water_demand: Heat
+        input_buildings_final_demand_steam_hot_water_demand: Heat
         buildings_final_demand_wood_pellets_demand: Solid biomass
         buildings_final_demand_coal_demand: Coal
         input_buildings_final_demand_crude_oil_demand: Oil
@@ -240,6 +244,10 @@ en:
         buildings_final_demand_for_cooling_electricity_buildings_cooling_airconditioning_electricity_parent_share: Airconditioning
         buildings_final_demand_for_cooling_electricity_buildings_cooling_collective_heatpump_water_water_ts_electricity_parent_share: Heat pump (ground) with thermal storage
         buildings_final_demand_for_cooling_electricity_buildings_cooling_heatpump_air_water_electricity_parent_share: Heat pump (air)
+
+        input_percentage_of_lt_steam_hot_water_buildings_final_demand_steam_hot_water: LT heat
+        input_percentage_of_mt_steam_hot_water_buildings_final_demand_steam_hot_water: MT heat
+        input_percentage_of_ht_steam_hot_water_buildings_final_demand_steam_hot_water: HT heat
 
         # transport
         number_of_cars: Number of cars
@@ -324,10 +332,14 @@ en:
         # agriculture
         agriculture_final_demand_electricity_demand: Electricity
         agriculture_final_demand_network_gas_demand: Gas
-        agriculture_final_demand_steam_hot_water_demand: Heat
+        input_agriculture_final_demand_steam_hot_water_demand: Heat
         agriculture_final_demand_wood_pellets_demand: Solid biomass
         input_agriculture_final_demand_crude_oil_demand: Oil
         agriculture_final_demand_hydrogen_demand: Hydrogen
+
+        input_percentage_of_central_mt_steam_hot_water_agriculture_final_demand_steam_hot_water: Central MT heat
+        input_percentage_of_central_ht_steam_hot_water_agriculture_final_demand_steam_hot_water: Central HT heat
+        input_percentage_of_local_steam_hot_water_agriculture_final_demand_steam_hot_water: Local CHP heat
 
         input_percentage_of_diesel_agriculture_final_demand_crude_oil: Diesel
         input_percentage_of_biodiesel_agriculture_final_demand_crude_oil: Biodiesel
@@ -511,18 +523,6 @@ en:
         input_industry_other_coal_non_energetic_demand: Coal (non-energetic)
         input_industry_other_cokes_non_energetic_demand: Cokes (non-energetic)
 
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: "Residual heat from processes"
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: "Residual heat from flue gasses"
-        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share: "No residual heat"
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share: "Residual heat from processes"
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share: "Residual heat from flue gasses"
-        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share: "No residual heat"
-        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share: "Residual heat from processes"
-        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share: "Residual heat from flue gasses"
-        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_used_heat_parent_share: "No residual heat"
-        industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share: "Residual heat from servers"
-        industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: "No residual heat"
-
         input_industry_metal_aluminium_electricity_demand: Electricity
         input_industry_metal_aluminium_network_gas_demand: Network gas
 
@@ -574,12 +574,15 @@ en:
         input_energy_power_wind_turbine_offshore_production: Wind (offshore)
         input_energy_power_solar_pv_solar_radiation_production: Solar PV plant
         input_energy_power_supercritical_waste_mix_production: Waste incinerator
-        input_energy_chp_supercritical_waste_mix_production: Waste plant with heat production (CHP)
+        input_energy_chp_supercritical_ht_waste_mix_production: Waste plant with heat production (CHP, HT)
+        input_energy_chp_supercritical_mt_waste_mix_production: Waste plant with heat production (CHP, MT)
         input_energy_power_hydro_river_production: Hydro (river)
         input_energy_power_hydro_mountain_production: Hydro (mountain)
         input_energy_power_geothermal_production: Geothermal
-        input_energy_chp_local_engine_biogas_production: Biogas CHP
-        input_energy_chp_local_wood_pellets_production: Biomass CHP
+        input_energy_chp_local_engine_ht_biogas_production: Biogas CHP (HT)
+        input_energy_chp_local_engine_mt_biogas_production: Biogas CHP (MT)
+        input_energy_chp_local_ht_wood_pellets_production: Biomass CHP (HT)
+        input_energy_chp_local_mt_wood_pellets_production: Biomass CHP (MT)
         input_energy_power_solar_csp_solar_radiation_production: Concentrated solar power
 
         input_energy_power_ultra_supercritical_coal_production: Pulverized coal
@@ -588,9 +591,12 @@ en:
         input_energy_power_ultra_supercritical_cofiring_coal_production: Pulverized coal with biomass co-firing
         input_energy_power_combined_cycle_ccs_coal_production: Coal IGCC CCS
         input_energy_power_ultra_supercritical_ccs_coal_production: Pulverized coal with CCS
-        input_energy_chp_ultra_supercritical_coal_production: Coal plant with heat production (CHP)
-        input_energy_chp_ultra_supercritical_cofiring_coal_production: Co-firing coal plant with heat production (CHP)
-        input_energy_chp_ultra_supercritical_lignite_production: Lignite plant for district heat (CHP)
+        input_energy_chp_ultra_supercritical_ht_coal_production: Coal plant with heat production (CHP, HT)
+        input_energy_chp_ultra_supercritical_mt_coal_production: Coal plant with heat production (CHP, MT)
+        input_energy_chp_ultra_supercritical_cofiring_ht_coal_production: Co-firing coal plant with heat production (CHP, HT)
+        input_energy_chp_ultra_supercritical_cofiring_mt_coal_production: Co-firing coal plant with heat production (CHP, MT)
+        input_energy_chp_ultra_supercritical_ht_lignite_production: Lignite plant for district heat (CHP, HT)
+        input_energy_chp_ultra_supercritical_mt_lignite_production: Lignite plant for district heat (CHP, MT)
         input_energy_power_supercritical_ccs_waste_mix_production: Waste incinerator CCS
         input_energy_power_ultra_supercritical_lignite_production: Coal Lignite
         input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production: Coal Lignite 'oxyfuel' CCS
@@ -600,8 +606,10 @@ en:
         input_energy_power_engine_network_gas_production: Gas combustion engine
         input_energy_power_combined_cycle_network_gas_production: Gas CCGT
         input_energy_power_combined_cycle_ccs_network_gas_production: Gas CCGT with CCS
-        input_energy_chp_combined_cycle_network_gas_production: Gas CHP (large-scale) with heat production (CHP)
-        input_energy_chp_local_engine_network_gas_production: Gas CHP (small-scale) with heat production (CHP)
+        input_energy_chp_combined_cycle_ht_network_gas_production: Gas CHP (large-scale) with heat production (CHP, HT)
+        input_energy_chp_combined_cycle_mt_network_gas_production: Gas CHP (large-scale) with heat production (CHP, MT)
+        input_energy_chp_local_engine_ht_network_gas_production: Gas CHP (small-scale) with heat production (CHP, HT)
+        input_energy_chp_local_engine_mt_network_gas_production: Gas CHP (small-scale) with heat production (CHP, MT)
 
         input_energy_power_nuclear_gen2_uranium_oxide_production: 2nd generation nuclear power plant
         input_energy_power_nuclear_gen3_uranium_oxide_production: 3rd generation nuclear power plant
@@ -609,35 +617,89 @@ en:
         input_energy_power_ultra_supercritical_crude_oil_production: Oil-fired power plant
         input_energy_power_engine_diesel_production: Diesel generator
 
-        input_energy_heat_burner_wood_pellets_production: Biomass-fired heater
-        input_energy_heat_well_geothermal_production: Geothermal heater
-        input_energy_heat_burner_waste_mix_production: Waste-fired heater
-        input_energy_heat_burner_hydrogen_production: Hydrogen-fired heater
-        input_energy_heat_solar_thermal_production: Solar thermal plant
-        input_energy_heat_heatpump_water_water_electricity_production: Electric heatpump
-        input_energy_heat_burner_network_gas_production: Gas-fired heater
-        input_energy_heat_burner_coal_production: Coal-fired heater
-        input_energy_heat_burner_crude_oil_production: Oil-fired heater
+        input_energy_heat_burner_ht_wood_pellets_production: Biomass-fired heater (HT)
+        input_energy_heat_burner_mt_wood_pellets_production: Biomass-fired heater (MT)
+        input_energy_heat_well_deep_ht_geothermal_production: Deep geothermal heater (HT)
+        input_energy_heat_well_deep_mt_geothermal_production: Deep geothermal heater (MT)
+        input_energy_heat_well_shallow_heatpump_mt_geothermal_production: Shallow geothermal heater with booster (MT)
+        input_energy_heat_well_shallow_lt_geothermal_production: Shallow geothermal heater (LT)
+        input_energy_heat_burner_ht_waste_mix_production: Waste-fired heater (HT)
+        input_energy_heat_burner_mt_waste_mix_production: Waste-fired heater (MT)
+        input_energy_heat_burner_ht_hydrogen_production: Hydrogen-fired heater (HT)
+        input_energy_heat_burner_mt_hydrogen_production: Hydrogen-fired heater (MT)
+        input_energy_heat_burner_lt_hydrogen_production: Hydrogen-fired heater (LT)
+        input_energy_heat_solar_ht_solar_thermal_production: Solar thermal plant (HT)
+        input_energy_heat_solar_mt_solar_thermal_production: Solar thermal plant (MT)
+        input_energy_heat_solar_lt_solar_thermal_production: Solar thermal plant (LT)
+        input_energy_heat_surface_water_heatpump_lt_aquathermal_production: Aquathermal heat from surface water with booster (LT)
+        input_energy_heat_surface_water_heatpump_mt_aquathermal_production: Aquathermal heat from surface water with booster (MT)
+        input_energy_heat_waste_water_heatpump_lt_aquathermal_production: Aquathermal heat from waste water with booster (LT)
+        input_energy_heat_waste_water_heatpump_mt_aquathermal_production: Aquathermal heat from waste water with booster (MT)
+        input_energy_heat_drink_water_heatpump_lt_aquathermal_production: Aquathermal heat from drink water with booster (LT)
+        input_energy_heat_drink_water_heatpump_mt_aquathermal_production: Aquathermal heat from drink water with booster (MT)
+        input_energy_heat_heatpump_water_water_ht_electricity_production: Electric heatpump (HT)
+        input_energy_heat_heatpump_water_water_mt_electricity_production: Electric heatpump (MT)
+        input_energy_heat_heatpump_water_water_lt_electricity_production: Electric heatpump (LT)
+        input_energy_heat_boiler_ht_electricity_production: Electric boiler (HT)
+        input_energy_heat_boiler_mt_electricity_production: Electric boiler (MT)
+        input_energy_heat_boiler_lt_electricity_production: Electric boiler (LT)
+        input_energy_heat_burner_ht_network_gas_production: Gas-fired heater (HT)
+        input_energy_heat_burner_mt_network_gas_production: Gas-fired heater (MT)
+        input_energy_heat_burner_ht_coal_production: Coal-fired heater (HT)
+        input_energy_heat_burner_mt_coal_production: Coal-fired heater (MT)
+        input_energy_heat_burner_ht_crude_oil_production: Oil-fired heater (HT)
+        input_energy_heat_burner_mt_crude_oil_production: Oil-fired heater (MT)
 
-        energy_import_heat_demand: (Residual) heat imported from outside your region
+        energy_heat_surface_water_production_aquathermal_max_demand: Potential aquathermal heat from surface water
+        energy_heat_waste_water_production_aquathermal_max_demand: Potential aquathermal heat from waste water
+        energy_heat_drink_water_production_aquathermal_max_demand: Potential aquathermal heat from drink water
 
-        energy_heat_distribution_loss_demand: Heat distribution loss
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: Residual heat from processes
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: Residual heat from flue gasses
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share: No residual heat
+        industry_chemicals_other_ht_residual_heat: HT heat
+        industry_chemicals_other_mt_residual_heat: MT heat
+
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share: Residual heat from processes
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share: Residual heat from flue gasses
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share: No residual heat
+        industry_chemicals_refineries_ht_residual_heat: HT heat
+        industry_chemicals_refineries_mt_residual_heat: MT heat
+
+        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_processes_potential_residual_heat_parent_share: Residual heat from processes
+        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_flue_gasses_potential_residual_heat_parent_share: Residual heat from flue gasses
+        industry_chemicals_fertilizers_production_industry_chemicals_fertilizers_used_heat_parent_share: No residual heat
+        industry_chemicals_fertilizers_ht_residual_heat: HT heat
+        industry_chemicals_fertilizers_mt_residual_heat: MT heat
+
+        industry_useful_demand_for_other_ict_electricity_industry_other_ict_potential_residual_heat_from_servers_electricity_parent_share: Residual heat from servers
+        industry_useful_demand_for_other_ict_electricity_industry_other_ict_other_systems_electricity_parent_share: No residual heat
+        industry_ict_mt_residual_heat: MT heat (incl. booster)
+        industry_ict_lt_residual_heat: LT heat (excl. booster)
+
+        energy_heat_import_ht_steam_hot_water_demand: (Residual) heat imported from outside your region (HT)
+        energy_heat_import_mt_steam_hot_water_demand: (Residual) heat imported from outside your region (MT)
+        energy_heat_import_lt_steam_hot_water_demand: (Residual) heat imported from outside your region (LT)
+
+        input_energy_heat_distribution_ht_loss_share: Heat distribution loss (HT)
+        input_energy_heat_distribution_mt_loss_share: Heat distribution loss (MT)
+        input_energy_heat_distribution_lt_loss_share: Heat distribution loss (LT)
 
         energy_power_wind_turbine_inland_full_load_hours: Wind (inland)
         energy_power_wind_turbine_coastal_full_load_hours: Wind (coastal)
         energy_power_wind_turbine_offshore_full_load_hours: Wind (offshore)
         input_solar_panels_roofs_and_parks_full_load_hours: Solar panels (roofs and ground-mount)
         energy_power_hydro_river_full_load_hours: Hydro (river)
-        energy_chp_local_engine_biogas_full_load_hours: Biogas CHP
-        energy_chp_local_wood_pellets_full_load_hours: Biomass CHP
-        energy_chp_supercritical_waste_mix_full_load_hours: Waste mix CHP
+        input_energy_chp_local_engine_biogas_full_load_hours: Biogas CHP
+        input_energy_chp_local_wood_pellets_full_load_hours: Biomass CHP
+        input_energy_chp_supercritical_waste_mix_full_load_hours: Waste mix CHP
         industry_chp_turbine_hydrogen_full_load_hours: Hydrogen turbine CHP - industry
         energy_power_supercritical_waste_mix_full_load_hours: Waste mix incinerator
         energy_power_combined_cycle_network_gas_full_load_hours: Gas CCGT
         energy_power_ultra_supercritical_network_gas_full_load_hours: Gas conventional
         energy_power_turbine_network_gas_full_load_hours: Gas turbine
-        energy_chp_local_engine_network_gas_full_load_hours: Gas motor CHP (small-scale)
-        energy_chp_combined_cycle_network_gas_full_load_hours: Gas CCGT CHP (large-scale)
+        input_energy_chp_local_engine_network_gas_full_load_hours: Gas motor CHP (small-scale)
+        input_energy_chp_combined_cycle_network_gas_full_load_hours: Gas CCGT CHP (large-scale)
         energy_power_supercritical_coal_full_load_hours: Coal conventional
         energy_power_engine_diesel_full_load_hours: Diesel generator
         energy_power_engine_network_gas_full_load_hours: Gas combustion engine
@@ -652,17 +714,17 @@ en:
         energy_power_ultra_supercritical_crude_oil_full_load_hours: Oil-fired
         energy_power_ultra_supercritical_lignite_full_load_hours: Coal Lignite
         energy_power_ultra_supercritical_oxyfuel_ccs_lignite_full_load_hours: Coal Lignite 'oxyfuel' CCS
-        energy_heat_burner_wood_pellets_full_load_hours: Biomass heater
-        energy_heat_burner_coal_full_load_hours: Coal heater
-        energy_heat_burner_crude_oil_full_load_hours: Oil heater
-        energy_heat_burner_network_gas_full_load_hours: Gas heater (network gas)
-        energy_heat_solar_thermal_full_load_hours: Solar thermal
-        energy_heat_burner_waste_mix_full_load_hours: Waste heater
+        input_energy_heat_burner_wood_pellets_full_load_hours: Biomass heater
+        input_energy_heat_burner_coal_full_load_hours: Coal heater
+        input_energy_heat_burner_crude_oil_full_load_hours: Oil heater
+        input_energy_heat_burner_network_gas_full_load_hours: Gas heater (network gas)
+        input_energy_heat_solar_solar_thermal_full_load_hours: Solar thermal
+        input_energy_heat_burner_waste_mix_full_load_hours: Waste heater
         industry_heat_burner_hydrogen_full_load_hours: Hydrogen heater - industry
-        energy_heat_heatpump_water_water_electricity_full_load_hours: Collective heat pump
-        energy_chp_ultra_supercritical_cofiring_coal_full_load_hours: Co-firing coal CHP
-        energy_chp_ultra_supercritical_coal_full_load_hours: Coal CHP
-        energy_chp_ultra_supercritical_lignite_full_load_hours: Lignite plant with district heat (CHP)
+        input_energy_heat_heatpump_water_water_electricity_full_load_hours: Collective heat pump
+        input_energy_chp_ultra_supercritical_cofiring_coal_full_load_hours: Co-firing coal CHP
+        input_energy_chp_ultra_supercritical_coal_full_load_hours: Coal CHP
+        input_energy_chp_ultra_supercritical_lignite_full_load_hours: Lignite plant with district heat (CHP)
         industry_chp_turbine_gas_power_fuelmix_full_load_hours: Gas turbine CHP - industry
         industry_chp_engine_gas_power_fuelmix_full_load_hours: Gas motor CHP - industry
         industry_chp_combined_cycle_gas_power_fuelmix_full_load_hours: Gas CHP (CCGT) - industry
@@ -714,6 +776,7 @@ en:
         input_industry_heat_burner_coal_steam_hot_water_output_conversion: Coal-fired heater (industry)
         input_industry_heat_burner_crude_oil_steam_hot_water_output_conversion: Oil-fired heater (industry)
         input_industry_heat_burner_hydrogen_steam_hot_water_output_conversion: Hydrogen heater (industry)
+        input_energy_heat_boiler_electricity_steam_hot_water_output_conversion: Electric boiler
 
         input_energy_chp_local_engine_network_gas_electricity_output_conversion: Gas motor CHP (small-scale) - electrical efficiency
         input_energy_chp_local_engine_biogas_electricity_output_conversion: Biogas CHP - electrical efficiency
@@ -754,7 +817,7 @@ en:
         #Other
         other_final_demand_electricity_demand: Electricity
         other_final_demand_network_gas_demand: Gas
-        other_final_demand_steam_hot_water_demand: Heat
+        input_other_final_demand_steam_hot_water_demand: Heat
         other_final_demand_wood_pellets_demand: Solid biomass
         other_final_demand_coal_demand: Coal
         other_final_demand_crude_oil_demand: Oil

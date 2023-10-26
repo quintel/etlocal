@@ -11,7 +11,7 @@ groups:
         unit: 'TJ'
         entso: |
           EB("Final consumption - other sectors - agriculture and forestry - energy use", "Network gas")
-      - key: agriculture_final_demand_steam_hot_water_demand
+      - key: input_agriculture_final_demand_steam_hot_water_demand
         unit: 'TJ'
         entso: |
           EB("Final consumption - other sectors - agriculture and forestry - energy use", "Heat")
@@ -27,6 +27,21 @@ groups:
           EB("Final consumption - other sectors - agriculture and forestry - energy use", "Oil")
       - key: agriculture_final_demand_hydrogen_demand
         unit: 'TJ'
+
+  - header: agriculture_final_demand_steam_hot_water_input
+    type: slider
+    combination_method:
+      weighted_average:
+        - input_agriculture_final_demand_steam_hot_water_demand
+    items:
+      - key: input_percentage_of_central_mt_steam_hot_water_agriculture_final_demand_steam_hot_water
+        unit: '%'
+      - key: input_percentage_of_central_ht_steam_hot_water_agriculture_final_demand_steam_hot_water
+        unit: '%'
+        flexible: true
+        skip_validation: true
+      - key: input_percentage_of_local_steam_hot_water_agriculture_final_demand_steam_hot_water
+        unit: '%'
 
   - header: agriculture_final_demand_crude_oil_input
     type: slider

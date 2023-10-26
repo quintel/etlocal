@@ -17,7 +17,7 @@ en:
       attribute_not_found: "Attribute not found '%{attribute}'"
 
     groups:
-      #area
+      # area
       area_co2_emission_1990: "CO<sub>2</sub> emissions 1990"
       area_ghg: "Greenhouse gas emissions"
       energetic_other_ghg: "Energetic emissions of greenhouse gases (ex. CO<sub>2</sub>)"
@@ -34,7 +34,7 @@ en:
       area_heat_infrastructure_lengths: District heating pipelines
       area_interconnector_capacity: Present interconnector capacity
 
-      #households
+      # households
       households_housing_stock_distribution: Housing stock
       households_apartments_block_heating: Block heating
       households_final_demand: Final demand
@@ -45,6 +45,7 @@ en:
       households_steam_hot_water_distribution: Heat distribution
       households_wood_pellets_distribution: Biomass distribution
       households_crude_oil_distribution: Oil distribution
+      households_final_demand_steam_hot_water_input: Temperature levels district heating networks
       households_final_demand_crude_oil_input: Mix of oil types
       households_coal_distribution: Coal distribution
       households_network_gas_space_heating_hot_water_distribution: Space heating and hot water technologies - gas
@@ -54,7 +55,7 @@ en:
       households_electricity_appliances_distribution: Appliances - electricity
       households_electricity_cooling_distribution: Cooling technologies - electricity
 
-      #buildings
+      # buildings
       buildings_final_demand: Final demand
       buildings_insulation: Insulation
       buildings_local_production: Local energy production
@@ -63,6 +64,7 @@ en:
       buildings_wood_pellets_distribution: Biomass distribution
       buildings_crude_oil_distribution: Oil distribution
       buildings_coal_distribution: Coal distribution
+      buildings_final_demand_steam_hot_water_input: Temperature levels district heating networks
       buildings_final_demand_crude_oil_input: Fuel for oil-fired heaters
       buildings_network_gas_space_heating_distribution: Space heating technologies - gas
       buildings_electricity_space_heating_distribution: Space heating technologies - electricity
@@ -89,6 +91,7 @@ en:
 
       # agriculture
       agriculture_final_demand: Final demand
+      agriculture_final_demand_steam_hot_water_input: Heat distribution
       agriculture_final_demand_crude_oil_input: Fuel for oil-fired heaters
       agriculture_heat_local_central: Origin final demand heat
       agriculture_heat: Fuel input for local CHPs
@@ -133,10 +136,6 @@ en:
       industry_ict: Central ICT services
       industry_other_energetic: Energetic demand
       industry_other_non_energetic: Non-energetic demand / feedstock
-      industry_chemical_residual_heat: "Available residual heat chemical industry"
-      industry_refineries_residual_heat: "Available residual heat refineries"
-      industry_fertilizers_residual_heat: "Available residual heat fertilizer industry"
-      industry_ict_residual_heat: "Available residual heat ICT"
       industry_fertilizer_demand_energetic: Energetic demand
       industry_fertilizer_demand_non_energetic: Non-energetic demand
       industry_aluminium_demand: Demand
@@ -157,7 +156,7 @@ en:
       energy_greengas_production: Green gas production
       energy_waste_mix: Waste mix
       energy_extraction: Fuel production and natural resource extraction
-      energy_potentials: Natural resource potentials
+      energy_biomass_potentials: Biomass potentials
       energy_electricity_wind: Wind electricity production
       energy_electricity_solar: Solar electricity production
       energy_electricity_other_renewable: Other renewable electricity production
@@ -165,10 +164,27 @@ en:
       energy_electricity_gas: Electricity production of gas plants
       energy_electricity_waste: Waste electricity production
       energy_electricity_other_fossil: Other fossil electricity production
+      energy_heat_geothermal: Geothermal heat production
+      energy_heat_wood_pellets: Biomass-fired heat production
+      energy_heat_waste_mix: Waste-fired heat production
+      energy_heat_hydrogen: Hydrogen-fired heat production
+      energy_heat_solar_thermal: Solar thermal heat production
+      energy_heat_aquathermal: Aquathermal heat production
+      energy_aquathermal_potentials: Aquathermal heat potentials
+      energy_heat_electricity: Electric heat production
+      energy_heat_network_gas: Gas-fired heat production
+      energy_heat_coal: Coal-fired heat production
+      energy_heat_crude_oil: Oil-fired heat production
+      industry_chemical_residual_heat_potential: Available residual heat chemical industry
+      industry_refineries_residual_heat_potential: Available residual heat refineries
+      industry_fertilizers_residual_heat_potential: Available residual heat fertilizer industry
+      industry_ict_residual_heat_potential: Available residual heat ICT
+      industry_chemical_residual_heat_distribution: Distribution residual heat chemical industry by temperature level
+      industry_refineries_residual_heat_distribution: Distribution residual heat refineries by temperature level
+      industry_fertilizers_residual_heat_distribution: Distribution residual heat fertilizer industry by temperature level
+      industry_ict_residual_heat_distribution: Distribution residual heat ICT by temperature level
       energy_heat_import: Imported heat
-      energy_heat_renewable: Renewable heat sources
-      energy_heat_fossil: Fossil heat sources
-      energy_heat_distribution_loss: Heat network losses
+      energy_heat_distribution_loss: Heat network - distribution losses
       fuel_production: Fuel production
       energy_efficiency_coal: Efficiencies of coal plants
       energy_efficiency_gas: Efficiencies of gas plants

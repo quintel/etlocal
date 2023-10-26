@@ -686,9 +686,9 @@ nl:
         energy_heat_import_mt_steam_hot_water_demand: (Rest)warmte geïmporteerd van buiten de regio (MT)
         energy_heat_import_lt_steam_hot_water_demand: (Rest)warmte geïmporteerd van buiten de regio (LT)
 
-        energy_heat_distribution_ht_loss_share: Transportverliezen in warmtenetten (HT)
-        energy_heat_distribution_mt_loss_share: Transportverliezen in warmtenetten (MT)
-        energy_heat_distribution_lt_loss_share: Transportverliezen in warmtenetten (LT)
+        input_energy_heat_distribution_ht_loss_share: Transportverliezen in warmtenetten (HT)
+        input_energy_heat_distribution_mt_loss_share: Transportverliezen in warmtenetten (MT)
+        input_energy_heat_distribution_lt_loss_share: Transportverliezen in warmtenetten (LT)
 
         energy_power_wind_turbine_inland_full_load_hours: Wind (op land)
         energy_power_wind_turbine_coastal_full_load_hours: Wind (aan de kust)
@@ -781,6 +781,7 @@ nl:
         input_industry_heat_burner_crude_oil_steam_hot_water_output_conversion: Olieketel (industrie)
         input_energy_power_supercritical_ccs_waste_mix_electricity_output_conversion: Afvalverbranding CCS
         input_industry_heat_burner_hydrogen_steam_hot_water_output_conversion: Waterstofketel (industrie)
+        input_energy_heat_boiler_electricity_steam_hot_water_output_conversion: Elektrische boiler
 
         input_energy_chp_local_engine_network_gas_electricity_output_conversion: Kleinschalige gasmotor WKK - efficiëntie elektriciteit
         input_energy_chp_local_engine_biogas_electricity_output_conversion: Biogas WKK - efficiëntie elektriciteit

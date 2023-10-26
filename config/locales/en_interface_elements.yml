@@ -681,9 +681,9 @@ en:
         energy_heat_import_mt_steam_hot_water_demand: (Residual) heat imported from outside your region (MT)
         energy_heat_import_lt_steam_hot_water_demand: (Residual) heat imported from outside your region (LT)
 
-        energy_heat_distribution_ht_loss_share: Heat distribution loss (HT)
-        energy_heat_distribution_mt_loss_share: Heat distribution loss (MT)
-        energy_heat_distribution_lt_loss_share: Heat distribution loss (LT)
+        input_energy_heat_distribution_ht_loss_share: Heat distribution loss (HT)
+        input_energy_heat_distribution_mt_loss_share: Heat distribution loss (MT)
+        input_energy_heat_distribution_lt_loss_share: Heat distribution loss (LT)
 
         energy_power_wind_turbine_inland_full_load_hours: Wind (inland)
         energy_power_wind_turbine_coastal_full_load_hours: Wind (coastal)
@@ -776,6 +776,7 @@ en:
         input_industry_heat_burner_coal_steam_hot_water_output_conversion: Coal-fired heater (industry)
         input_industry_heat_burner_crude_oil_steam_hot_water_output_conversion: Oil-fired heater (industry)
         input_industry_heat_burner_hydrogen_steam_hot_water_output_conversion: Hydrogen heater (industry)
+        input_energy_heat_boiler_electricity_steam_hot_water_output_conversion: Electric boiler
 
         input_energy_chp_local_engine_network_gas_electricity_output_conversion: Gas motor CHP (small-scale) - electrical efficiency
         input_energy_chp_local_engine_biogas_electricity_output_conversion: Biogas CHP - electrical efficiency

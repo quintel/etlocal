@@ -34,7 +34,7 @@ groups:
       weighted_average:
         - households_final_demand_steam_hot_water_demand # this should actually be the sum of the steam hot water demand of agriculture, buildings and households
     items:
-      - key: energy_heat_distribution_ht_loss_share
+      - key: input_energy_heat_distribution_ht_loss_share
         unit: '%'
         entso: |
           IF(EB("Distribution losses", "Heat") > 0.0,
@@ -49,7 +49,7 @@ groups:
                  EB("Distribution losses", "Heat")
                ) * 100 },
           -> { 0.0 })
-      - key: energy_heat_distribution_mt_loss_share
+      - key: input_energy_heat_distribution_mt_loss_share
         unit: '%'
         entso: |
           IF(EB("Distribution losses", "Heat") > 0.0,
@@ -64,7 +64,7 @@ groups:
                  EB("Distribution losses", "Heat")
                ) * 100 },
           -> { 0.0 })
-      - key: energy_heat_distribution_lt_loss_share
+      - key: input_energy_heat_distribution_lt_loss_share
         unit: '%'
         entso: |
           IF(EB("Distribution losses", "Heat") > 0.0,

@@ -175,14 +175,6 @@ en:
       energy_heat_network_gas: Gas-fired heat production
       energy_heat_coal: Coal-fired heat production
       energy_heat_crude_oil: Oil-fired heat production
-      industry_chemical_residual_heat_potential: Available residual heat chemical industry
-      industry_refineries_residual_heat_potential: Available residual heat refineries
-      industry_fertilizers_residual_heat_potential: Available residual heat fertilizer industry
-      industry_ict_residual_heat_potential: Available residual heat ICT
-      industry_chemical_residual_heat_distribution: Distribution residual heat chemical industry by temperature level
-      industry_refineries_residual_heat_distribution: Distribution residual heat refineries by temperature level
-      industry_fertilizers_residual_heat_distribution: Distribution residual heat fertilizer industry by temperature level
-      industry_ict_residual_heat_distribution: Distribution residual heat ICT by temperature level
       energy_heat_import: Imported heat
       energy_heat_distribution_loss: Heat network - distribution losses
       fuel_production: Fuel production

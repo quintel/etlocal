@@ -208,7 +208,7 @@ en:
         Describes the mix of different oil types used in heating for households.
       households_housing_stock_distribution: |
         Below you can see the breakdown of housing types in your region.
-      households_insulation: |
+      households_insulation_level: |
         These percentages indicate the heat demand reduction compared to a poorly insulated house (label G).
         Have a look at our <a target="_blank" href="https://docs.energytransitionmodel.com/main/insulation">documentation</a>
         for more information on insulation.

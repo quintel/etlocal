@@ -81,6 +81,7 @@ en:
         households_energy_supply: Energy supply
         households_housing_stock: Housing stock
         households_applications: Applications
+        households_insulation_level: Insulation
 
       industry:
         industry_steel: Steel

@@ -1,0 +1,173 @@
+key: households_insulation_level
+groups:
+  - header: apartments_insulation
+    type: slider
+    items:
+      - key: input_insulation_level_households_apartments_2005
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_2005
+      - key: input_insulation_level_households_apartments_1985_2004
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1985_2004
+      - key: input_insulation_level_households_apartments_1965_1984
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1965_1984
+      - key: input_insulation_level_households_apartments_1945_1964
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1945_1964
+      - key: input_insulation_level_households_apartments_1945
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1945
+
+  - header: terraced_insulation
+    type: slider
+    items:
+      - key: input_insulation_level_households_terraced_2005
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_2005
+      - key: input_insulation_level_households_terraced_1985_2004
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1985_2004
+      - key: input_insulation_level_households_terraced_1965_1984
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1965_1984
+      - key: input_insulation_level_households_terraced_1945_1964
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1945_1964
+      - key: input_insulation_level_households_terraced_1945
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1945
+
+  - header: semi_detached_insulation
+    type: slider
+    items:
+      - key: input_insulation_level_households_semi_detached_2005
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_2005
+      - key: input_insulation_level_households_semi_detached_1985_2004
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1985_2004
+      - key: input_insulation_level_households_semi_detached_1965_1984
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1965_1984
+      - key: input_insulation_level_households_semi_detached_1945_1964
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1945_1964
+      - key: input_insulation_level_households_semi_detached_1945
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1945
+
+  - header: detached_insulation
+    type: slider
+    items:
+      - key: input_insulation_level_households_detached_2005
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_2005
+      - key: input_insulation_level_households_detached_1985_2004
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1985_2004
+      - key: input_insulation_level_households_detached_1965_1984
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1965_1984
+      - key: input_insulation_level_households_detached_1945_1964
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1945_1964
+      - key: input_insulation_level_households_detached_1945
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1945
+
+  - header: apartments_final_demand_space_heating
+    type: slider
+    items:
+      - key: input_households_final_demand_for_space_heating_apartments_2005
+        unit: 'TJ'
+      - key: input_households_final_demand_for_space_heating_apartments_1985_2004
+        unit: 'TJ'
+      - key: input_households_final_demand_for_space_heating_apartments_1965_1984
+        unit: 'TJ'
+      - key: input_households_final_demand_for_space_heating_apartments_1945_1964
+        unit: 'TJ'
+      - key: input_households_final_demand_for_space_heating_apartments_1945
+        unit: 'TJ'
+
+  - header: terraced_final_demand_space_heating
+    type: slider
+    items:
+      - key: input_households_final_demand_for_space_heating_terraced_2005
+        unit: 'TJ'
+      - key: input_households_final_demand_for_space_heating_terraced_1985_2004
+        unit: 'TJ'
+      - key: input_households_final_demand_for_space_heating_terraced_1965_1984
+        unit: 'TJ'
+      - key: input_households_final_demand_for_space_heating_terraced_1945_1964
+        unit: 'TJ'
+      - key: input_households_final_demand_for_space_heating_terraced_1945
+        unit: 'TJ'
+
+  - header: semi_detached_final_demand_space_heating
+    type: slider
+    items:
+      - key: input_households_final_demand_for_space_heating_semi_detached_2005
+        unit: 'TJ'
+      - key: input_households_final_demand_for_space_heating_semi_detached_1985_2004
+        unit: 'TJ'
+      - key: input_households_final_demand_for_space_heating_semi_detached_1965_1984
+        unit: 'TJ'
+      - key: input_households_final_demand_for_space_heating_semi_detached_1945_1964
+        unit: 'TJ'
+      - key: input_households_final_demand_for_space_heating_semi_detached_1945
+        unit: 'TJ'
+
+  - header: detached_final_demand_space_heating
+    type: slider
+    items:
+      - key: input_households_final_demand_for_space_heating_detached_2005
+        unit: 'TJ'
+      - key: input_households_final_demand_for_space_heating_detached_1985_2004
+        unit: 'TJ'
+      - key: input_households_final_demand_for_space_heating_detached_1965_1984
+        unit: 'TJ'
+      - key: input_households_final_demand_for_space_heating_detached_1945_1964
+        unit: 'TJ'
+      - key: input_households_final_demand_for_space_heating_detached_1945
+        unit: 'TJ'

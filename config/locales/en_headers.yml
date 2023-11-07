@@ -35,10 +35,7 @@ en:
       area_interconnector_capacity: Present interconnector capacity
 
       # households
-      households_housing_stock_distribution: Housing stock
-      households_apartments_block_heating: Block heating
       households_final_demand: Final demand
-      households_insulation: Insulation
       households_local_production: Local energy production
       households_electricity_distribution: Electricity distribution
       households_network_gas_distribution: Gas distribution
@@ -54,6 +51,18 @@ en:
       households_electricity_lighting_distribution: Lighting technologies - electricity
       households_electricity_appliances_distribution: Appliances - electricity
       households_electricity_cooling_distribution: Cooling technologies - electricity
+      households_housing_stock_apartments: Number of appartments per year of construction
+      households_housing_stock_terraced: Number of terraced homes per year of construction
+      households_housing_stock_semi_detached: Number of semi-detached homes per year of construction
+      households_housing_stock_detached: Number of detached homes per year of construction
+      apartments_insulation: Average insulation level apartments per year of construction 
+      terraced_insulation: Average insulation level terraced homes per year of construction
+      semi_detached_insulation: Average insulation level semi-detached homes per year of construction
+      detached_insulation: Average insulation level detached homes per year of construction
+      apartments_final_demand_space_heating: Total final energy demand for space heating in apartments per year of construction
+      terraced_final_demand_space_heating: Total final energy demand for space heating in terraced homes per year of construction
+      semi_detached_final_demand_space_heating: Total final energy demand for space heating in semi-detached homes per year of construction
+      detached_final_demand_space_heating: Total final energy demand for space heating in detached homes per year of construction
 
       # buildings
       buildings_final_demand: Final demand

@@ -91,12 +91,6 @@ nl:
         heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket: Lengte aansluitleiding per huis (100% aangesloten)
 
         # households
-        number_of_residences: Aantal woningen
-        input_percentage_of_apartments: Appartement
-        input_percentage_of_terraced_houses: Rijtjeshuis
-        input_percentage_of_corner_houses: Hoekhuis
-        input_percentage_of_semi_detached_houses: Twee-onder-één-kapwoning
-        input_percentage_of_detached_houses: Vrijstaand huis
         heat_share_of_apartments_with_block_heating: Appartementen met blokverwarming
         residences_roof_surface_available_for_pv: Geschikt dakoppervlak voor zon-PV
 
@@ -106,12 +100,6 @@ nl:
         households_final_demand_wood_pellets_demand: Vaste biomassa
         input_households_final_demand_crude_oil_demand: Olie
         households_final_demand_coal_demand: Kolen
-
-        input_households_apartments_heat_demand_reduction: Appartement
-        input_households_terraced_houses_heat_demand_reduction: Rijtjeshuis
-        input_households_corner_houses_heat_demand_reduction: Hoekhuis
-        input_households_semi_detached_houses_heat_demand_reduction: Twee-onder-één-kapwoning
-        input_households_detached_houses_heat_demand_reduction: Vrijstaand huis
 
         input_households_solar_pv_demand: Zon-PV-productie
         households_final_demand_solar_thermal_demand: Zonthermieproductie
@@ -192,6 +180,78 @@ nl:
         input_percentage_of_bio_oil_households_final_demand_crude_oil: Andere bio-olie
         input_percentage_of_crude_oil_households_final_demand_crude_oil: Andere olie
 
+        input_insulation_level_households_apartments_2005: ">2005"
+        input_insulation_level_households_apartments_1985_2004: "1985 - 2004"
+        input_insulation_level_households_apartments_1965_1984: "1965 - 1984"       
+        input_insulation_level_households_apartments_1945_1964: "1945 - 1964"
+        input_insulation_level_households_apartments_1945: "< 1945"
+
+        input_insulation_level_households_terraced_2005: ">2005"
+        input_insulation_level_households_terraced_1985_2004: "1985 - 2004"
+        input_insulation_level_households_terraced_1965_1984: "1965 - 1984"
+        input_insulation_level_households_terraced_1945_1964: "1945 - 1964"
+        input_insulation_level_households_terraced_1945: "< 1945"
+
+        input_insulation_level_households_semi_detached_2005: ">2005"
+        input_insulation_level_households_semi_detached_1985_2004: "1985 - 2004"
+        input_insulation_level_households_semi_detached_1965_1984: "1965 - 1984"
+        input_insulation_level_households_semi_detached_1945_1964: "1945 - 1964"
+        input_insulation_level_households_semi_detached_1945: "< 1945"
+
+        input_insulation_level_households_detached_2005: ">2005"
+        input_insulation_level_households_detached_1985_2004: "1985 - 2004"
+        input_insulation_level_households_detached_1965_1984: "1965 - 1984"
+        input_insulation_level_households_detached_1945_1964: "1945 - 1964"
+        input_insulation_level_households_detached_1945: "< 1945"
+
+        input_households_final_demand_for_space_heating_apartments_2005: ">2005"
+        input_households_final_demand_for_space_heating_apartments_1985_2004: "1985 - 2004"
+        input_households_final_demand_for_space_heating_apartments_1965_1984: "1965 - 1984"
+        input_households_final_demand_for_space_heating_apartments_1945_1964: "1945 - 1964"
+        input_households_final_demand_for_space_heating_apartments_1945: "< 1945"
+
+        input_households_final_demand_for_space_heating_terraced_2005: ">2005"
+        input_households_final_demand_for_space_heating_terraced_1985_2004: "1985 - 2004"
+        input_households_final_demand_for_space_heating_terraced_1965_1984: "1965 - 1984"
+        input_households_final_demand_for_space_heating_terraced_1945_1964: "1945 - 1964"
+        input_households_final_demand_for_space_heating_terraced_1945: "< 1945"
+
+        input_households_final_demand_for_space_heating_semi_detached_2005: ">2005"
+        input_households_final_demand_for_space_heating_semi_detached_1985_2004: "1985 - 2004"
+        input_households_final_demand_for_space_heating_semi_detached_1965_1984: "1965 - 1984"
+        input_households_final_demand_for_space_heating_semi_detached_1945_1964: "1945 - 1964"
+        input_households_final_demand_for_space_heating_semi_detached_1945: "< 1945"
+
+        input_households_final_demand_for_space_heating_detached_2005: ">2005"
+        input_households_final_demand_for_space_heating_detached_1985_2004: "1985 - 2004"
+        input_households_final_demand_for_space_heating_detached_1965_1984: "1965 - 1984"
+        input_households_final_demand_for_space_heating_detached_1945_1964: "1945 - 1964"
+        input_households_final_demand_for_space_heating_detached_1945: "< 1945"
+
+        households_number_of_apartments_2005: ">2005"
+        households_number_of_apartments_1985_2004: "1985 - 2004"
+        households_number_of_apartments_1965_1984: "1965 - 1984"
+        households_number_of_apartments_1945_1964: "1945 - 1964"
+        households_number_of_apartments_1945: "< 1945"
+
+        households_number_of_terraced_2005: ">2005"
+        households_number_of_terraced_1985_2004: "1985 - 2004"
+        households_number_of_terraced_1965_1984: "1965 - 1984"
+        households_number_of_terraced_1945_1964: "1945 - 1964"
+        households_number_of_terraced_1945: "< 1945"
+
+        households_number_of_semi_detached_2005: ">2005"
+        households_number_of_semi_detached_1985_2004: "1985 - 2004"
+        households_number_of_semi_detached_1965_1984: "1965 - 1984"
+        households_number_of_semi_detached_1945_1964: "1945 - 1964"
+        households_number_of_semi_detached_1945: "< 1945"
+
+        households_number_of_detached_2005: ">2005"
+        households_number_of_detached_1985_2004: "1985 - 2004"
+        households_number_of_detached_1965_1984: "1965 - 1984"
+        households_number_of_detached_1945_1964: "1945 - 1964"
+        households_number_of_detached_1945: "< 1945"
+        
         # buildings
         number_of_buildings: Aantal gebouwen
         buildings_roof_surface_available_for_pv: Geschikt dakoppervlak voor zon-PV

@@ -81,6 +81,7 @@ nl:
         households_energy_supply: Energieaanbod
         households_housing_stock: Huizenvoorraad
         households_applications: Toepassingen en apparaten
+        households_insulation_level: Isolatie
 
       industry:
         industry_steel: Staal

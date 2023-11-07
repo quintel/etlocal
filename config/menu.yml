@@ -6,8 +6,9 @@ area:
 households:
   - households_energy_demand
   - households_energy_supply
-  - households_housing_stock
   - households_applications
+  - households_housing_stock
+  - households_insulation_level
 buildings:
   - buildings_energy_demand
   - buildings_energy_supply

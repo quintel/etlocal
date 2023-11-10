@@ -17,7 +17,7 @@ groups:
       - key: input_energy_heat_heatpump_drink_water_ts_mt_electricity_production
         unit: 'TJ'
 
-  # Potentials (to be moved?)
+  # Potentials
   - header: energy_aquathermal_potentials
     items:
         - key: energy_heat_heatpump_surface_water_ts_electricity_production_max_demand

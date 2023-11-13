@@ -20,11 +20,11 @@ groups:
   # Potentials
   - header: energy_aquathermal_potentials
     items:
-        - key: energy_heat_heatpump_surface_water_ts_electricity_production_max_demand
+        - key: aquathermal_potential_for_surface_water
           unit: 'TJ'
-        - key: energy_heat_heatpump_waste_water_ts_electricity_production_max_demand
+        - key: aquathermal_potential_for_waste_water
           unit: 'TJ'
-        - key: energy_heat_heatpump_drink_water_ts_electricity_production_max_demand
+        - key: aquathermal_potential_for_drink_water
           unit: 'TJ'
 
   # Biomass

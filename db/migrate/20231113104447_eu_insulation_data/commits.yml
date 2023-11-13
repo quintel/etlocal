@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."

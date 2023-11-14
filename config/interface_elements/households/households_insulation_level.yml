@@ -3,27 +3,27 @@ groups:
   - header: apartments_insulation
     type: slider
     items:
-      - key: input_insulation_level_households_apartments_2005
+      - key: input_households_insulation_level_apartments_2005
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
           - households_number_of_apartments_2005
-      - key: input_insulation_level_households_apartments_1985_2004
+      - key: input_households_insulation_level_apartments_1985_2004
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
           - households_number_of_apartments_1985_2004
-      - key: input_insulation_level_households_apartments_1965_1984
+      - key: input_households_insulation_level_apartments_1965_1984
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
           - households_number_of_apartments_1965_1984
-      - key: input_insulation_level_households_apartments_1945_1964
+      - key: input_households_insulation_level_apartments_1945_1964
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
           - households_number_of_apartments_1945_1964
-      - key: input_insulation_level_households_apartments_1945
+      - key: input_households_insulation_level_apartments_1945
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
@@ -32,27 +32,27 @@ groups:
   - header: terraced_insulation
     type: slider
     items:
-      - key: input_insulation_level_households_terraced_2005
+      - key: input_households_insulation_level_terraced_2005
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
           - households_number_of_apartments_2005
-      - key: input_insulation_level_households_terraced_1985_2004
+      - key: input_households_insulation_level_terraced_1985_2004
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
           - households_number_of_apartments_1985_2004
-      - key: input_insulation_level_households_terraced_1965_1984
+      - key: input_households_insulation_level_terraced_1965_1984
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
           - households_number_of_apartments_1965_1984
-      - key: input_insulation_level_households_terraced_1945_1964
+      - key: input_households_insulation_level_terraced_1945_1964
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
           - households_number_of_apartments_1945_1964
-      - key: input_insulation_level_households_terraced_1945
+      - key: input_households_insulation_level_terraced_1945
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
@@ -61,27 +61,27 @@ groups:
   - header: semi_detached_insulation
     type: slider
     items:
-      - key: input_insulation_level_households_semi_detached_2005
+      - key: input_households_insulation_level_semi_detached_2005
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
           - households_number_of_apartments_2005
-      - key: input_insulation_level_households_semi_detached_1985_2004
+      - key: input_households_insulation_level_semi_detached_1985_2004
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
           - households_number_of_apartments_1985_2004
-      - key: input_insulation_level_households_semi_detached_1965_1984
+      - key: input_households_insulation_level_semi_detached_1965_1984
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
           - households_number_of_apartments_1965_1984
-      - key: input_insulation_level_households_semi_detached_1945_1964
+      - key: input_households_insulation_level_semi_detached_1945_1964
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
           - households_number_of_apartments_1945_1964
-      - key: input_insulation_level_households_semi_detached_1945
+      - key: input_households_insulation_level_semi_detached_1945
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
@@ -90,27 +90,27 @@ groups:
   - header: detached_insulation
     type: slider
     items:
-      - key: input_insulation_level_households_detached_2005
+      - key: input_households_insulation_level_detached_2005
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
           - households_number_of_apartments_2005
-      - key: input_insulation_level_households_detached_1985_2004
+      - key: input_households_insulation_level_detached_1985_2004
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
           - households_number_of_apartments_1985_2004
-      - key: input_insulation_level_households_detached_1965_1984
+      - key: input_households_insulation_level_detached_1965_1984
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
           - households_number_of_apartments_1965_1984
-      - key: input_insulation_level_households_detached_1945_1964
+      - key: input_households_insulation_level_detached_1945_1964
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:
           - households_number_of_apartments_1945_1964
-      - key: input_insulation_level_households_detached_1945
+      - key: input_households_insulation_level_detached_1945
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
         weighted_average:

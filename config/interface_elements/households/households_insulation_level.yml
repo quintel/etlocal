@@ -116,58 +116,58 @@ groups:
         weighted_average:
           - households_number_of_apartments_1945
 
-  - header: apartments_final_demand_space_heating
+  - header: apartments_useful_demand_space_heating
     type: slider
     items:
-      - key: input_households_share_of_final_demand_for_space_heating_apartments_2005
+      - key: input_households_share_of_useful_demand_for_space_heating_apartments_2005
         unit: '%'
-      - key: input_households_share_of_final_demand_for_space_heating_apartments_1985_2004
+      - key: input_households_share_of_useful_demand_for_space_heating_apartments_1985_2004
         unit: '%'
-      - key: input_households_share_of_final_demand_for_space_heating_apartments_1965_1984
+      - key: input_households_share_of_useful_demand_for_space_heating_apartments_1965_1984
         unit: '%'
-      - key: input_households_share_of_final_demand_for_space_heating_apartments_1945_1964
+      - key: input_households_share_of_useful_demand_for_space_heating_apartments_1945_1964
         unit: '%'
-      - key: input_households_share_of_final_demand_for_space_heating_apartments_1945
+      - key: input_households_share_of_useful_demand_for_space_heating_apartments_1945
         unit: '%'
 
-  - header: terraced_final_demand_space_heating
+  - header: terraced_useful_demand_space_heating
     type: slider
     items:
-      - key: input_households_share_of_final_demand_for_space_heating_terraced_2005
+      - key: input_households_share_of_useful_demand_for_space_heating_terraced_2005
         unit: '%'
-      - key: input_households_share_of_final_demand_for_space_heating_terraced_1985_2004
+      - key: input_households_share_of_useful_demand_for_space_heating_terraced_1985_2004
         unit: '%'
-      - key: input_households_share_of_final_demand_for_space_heating_terraced_1965_1984
+      - key: input_households_share_of_useful_demand_for_space_heating_terraced_1965_1984
         unit: '%'
-      - key: input_households_share_of_final_demand_for_space_heating_terraced_1945_1964
+      - key: input_households_share_of_useful_demand_for_space_heating_terraced_1945_1964
         unit: '%'
-      - key: input_households_share_of_final_demand_for_space_heating_terraced_1945
+      - key: input_households_share_of_useful_demand_for_space_heating_terraced_1945
         unit: '%'
 
-  - header: semi_detached_final_demand_space_heating
+  - header: semi_detached_useful_demand_space_heating
     type: slider
     items:
-      - key: input_households_share_of_final_demand_for_space_heating_semi_detached_2005
+      - key: input_households_share_of_useful_demand_for_space_heating_semi_detached_2005
         unit: '%'
-      - key: input_households_share_of_final_demand_for_space_heating_semi_detached_1985_2004
+      - key: input_households_share_of_useful_demand_for_space_heating_semi_detached_1985_2004
         unit: '%'
-      - key: input_households_share_of_final_demand_for_space_heating_semi_detached_1965_1984
+      - key: input_households_share_of_useful_demand_for_space_heating_semi_detached_1965_1984
         unit: '%'
-      - key: input_households_share_of_final_demand_for_space_heating_semi_detached_1945_1964
+      - key: input_households_share_of_useful_demand_for_space_heating_semi_detached_1945_1964
         unit: '%'
-      - key: input_households_share_of_final_demand_for_space_heating_semi_detached_1945
+      - key: input_households_share_of_useful_demand_for_space_heating_semi_detached_1945
         unit: '%'
 
-  - header: detached_final_demand_space_heating
+  - header: detached_useful_demand_space_heating
     type: slider
     items:
-      - key: input_households_share_of_final_demand_for_space_heating_detached_2005
+      - key: input_households_share_of_useful_demand_for_space_heating_detached_2005
         unit: '%'
-      - key: input_households_share_of_final_demand_for_space_heating_detached_1985_2004
+      - key: input_households_share_of_useful_demand_for_space_heating_detached_1985_2004
         unit: '%'
-      - key: input_households_share_of_final_demand_for_space_heating_detached_1965_1984
+      - key: input_households_share_of_useful_demand_for_space_heating_detached_1965_1984
         unit: '%'
-      - key: input_households_share_of_final_demand_for_space_heating_detached_1945_1964
+      - key: input_households_share_of_useful_demand_for_space_heating_detached_1945_1964
         unit: '%'
-      - key: input_households_share_of_final_demand_for_space_heating_detached_1945
+      - key: input_households_share_of_useful_demand_for_space_heating_detached_1945
         unit: '%'

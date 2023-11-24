@@ -3,7 +3,7 @@ groups:
   - header:
     items:
     - key: number_of_buildings
-      unit: '#'
+      unit: 'EDU'
     - key: buildings_roof_surface_available_for_pv
       unit: "km<sup>2</sup>"
 
@@ -13,5 +13,5 @@ groups:
       weighted_average:
         - number_of_buildings
     items:
-    - key: input_buildings_heat_demand_reduction
-      unit: '%'
+    - key: input_buildings_insulation_level
+      unit: 'kWh/m<sup>2</sup>'

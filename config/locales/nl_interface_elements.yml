@@ -262,7 +262,7 @@ nl:
         buildings_final_demand_wood_pellets_demand: Vaste biomassa
         buildings_final_demand_coal_demand: Kolen
         input_buildings_final_demand_crude_oil_demand: Olie
-        input_buildings_heat_demand_reduction: Warmtevraagreductie
+        input_buildings_insulation_level: Isolatie niveau
 
         input_percentage_of_diesel_buildings_final_demand_crude_oil: Diesel
         input_percentage_of_biodiesel_buildings_final_demand_crude_oil: Biodiesel

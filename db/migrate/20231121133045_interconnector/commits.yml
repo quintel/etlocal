@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Interconnector capaciteit is voor alle gemeentelijke datasets ingesteld op 60000"

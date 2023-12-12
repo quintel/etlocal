@@ -1,0 +1,8 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - energy_power_wind_turbine_inland_full_load_hours  
+  - energy_power_wind_turbine_coastal_full_load_hours 
+  - energy_power_wind_turbine_offshore_full_load_hours  
+  message:
+    "Gebaseerd op gemiddelde Nederlandse vollasturen (2019)"

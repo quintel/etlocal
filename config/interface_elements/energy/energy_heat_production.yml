@@ -1,23 +1,7 @@
 key: energy_heat_production
 
 groups:
-  # Aquathermal
-  - header: energy_heat_aquathermal
-    items:
-      - key: input_energy_heat_heatpump_surface_water_ts_lt_electricity_production 
-        unit: 'TJ'
-      - key: input_energy_heat_heatpump_surface_water_ts_mt_electricity_production
-        unit: 'TJ'
-      - key: input_energy_heat_heatpump_waste_water_ts_lt_electricity_production
-        unit: 'TJ'
-      - key: input_energy_heat_heatpump_waste_water_ts_mt_electricity_production
-        unit: 'TJ'
-      - key: input_energy_heat_heatpump_drink_water_ts_lt_electricity_production
-        unit: 'TJ'
-      - key: input_energy_heat_heatpump_drink_water_ts_mt_electricity_production
-        unit: 'TJ'
-
-  # Potentials
+  # Aquathermal potentials
   - header: energy_aquathermal_potentials
     items:
         - key: aquathermal_potential_for_surface_water

@@ -1,12 +1,6 @@
 class Aquathermal < ActiveRecord::Migration[7.0]
   
   KEYS = %w[
-    input_energy_heat_heatpump_surface_water_ts_lt_electricity_production
-    input_energy_heat_heatpump_surface_water_ts_mt_electricity_production
-    input_energy_heat_heatpump_waste_water_ts_lt_electricity_production
-    input_energy_heat_heatpump_waste_water_ts_mt_electricity_production
-    input_energy_heat_heatpump_drink_water_ts_lt_electricity_production
-    input_energy_heat_heatpump_drink_water_ts_mt_electricity_production
     aquathermal_potential_for_surface_water
     aquathermal_potential_for_waste_water
     aquathermal_potential_for_drink_water

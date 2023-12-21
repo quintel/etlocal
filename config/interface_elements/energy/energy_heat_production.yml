@@ -1,6 +1,16 @@
 key: energy_heat_production
 
 groups:
+  # Aquathermal potentials
+  - header: energy_aquathermal_potentials
+    items:
+        - key: aquathermal_potential_for_surface_water
+          unit: 'TJ'
+        - key: aquathermal_potential_for_waste_water
+          unit: 'TJ'
+        - key: aquathermal_potential_for_drink_water
+          unit: 'TJ'
+
   # Biomass
   - header: energy_heat_wood_pellets
     items:

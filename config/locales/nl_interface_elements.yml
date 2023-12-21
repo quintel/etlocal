@@ -636,12 +636,6 @@ nl:
         input_energy_heat_solar_ht_solar_thermal_production: Zonthermiepark (HT)
         input_energy_heat_solar_mt_solar_thermal_production: Zonthermiepark (MT)
         input_energy_heat_solar_lt_solar_thermal_production: Zonthermiepark (LT)
-        input_energy_heat_surface_water_heatpump_lt_aquathermal_production: Thermische energie uit pppervlaktewater met booster (LT)
-        input_energy_heat_surface_water_heatpump_mt_aquathermal_production: Thermische energie uit pppervlaktewater met booster (MT)
-        input_energy_heat_waste_water_heatpump_lt_aquathermal_production: Thermische energie uit afvalwater met booster (LT)
-        input_energy_heat_waste_water_heatpump_mt_aquathermal_production: Thermische energie uit afvalwater met booster (MT)
-        input_energy_heat_drink_water_heatpump_lt_aquathermal_production: Thermische energie uit drinkwater met booster (LT)
-        input_energy_heat_drink_water_heatpump_mt_aquathermal_production: Thermische energie uit drinkwater met booster (MT)
         input_energy_heat_heatpump_water_water_ht_electricity_production: Elektrische warmtepompen (HT)
         input_energy_heat_heatpump_water_water_mt_electricity_production: Elektrische warmtepompen (MT)
         input_energy_heat_heatpump_water_water_lt_electricity_production: Elektrische warmtepompen (LT)
@@ -655,9 +649,21 @@ nl:
         input_energy_heat_burner_ht_crude_oil_production: Olieketels (HT)
         input_energy_heat_burner_mt_crude_oil_production: Olieketels (MT)
 
-        energy_heat_surface_water_production_aquathermal_max_demand: Potentie thermische energie uit oppervlaktewater (TEO)
-        energy_heat_waste_water_production_aquathermal_max_demand: Potentie thermische energie uit afvalwater (TEA)
-        energy_heat_drink_water_production_aquathermal_max_demand: Potentie thermische energie uit drinkwater (TED)
+        energy_heat_heatpump_surface_water_ts_electricity_production_max_demand: Potentie thermische energie uit oppervlaktewater (TEO)
+        energy_heat_heatpump_waste_water_ts_electricity_production_max_demand: Potentie thermische energie uit afvalwater (TEA)
+        energy_heat_heatpump_drink_water_ts_electricity_production_max_demand: Potentie thermische energie uit drinkwater (TED)
+
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_processes_potential_residual_heat_parent_share: Restwarmte uit processen
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_flue_gasses_potential_residual_heat_parent_share: Restwarmte uit rookgassen
+        industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share: Geen restwarmte
+        industry_chemicals_other_ht_residual_heat: HT warmte
+        industry_chemicals_other_mt_residual_heat: MT warmte
+        
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share: Restwarmte uit processen
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share: Restwarmte uit rookgassen
+        industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share: Geen restwarmte
+        industry_chemicals_refineries_ht_residual_heat: HT warmte
+        industry_chemicals_refineries_mt_residual_heat: MT warmte
 
         energy_heat_import_ht_steam_hot_water_demand: (Rest)warmte geïmporteerd van buiten de regio (HT)
         energy_heat_import_mt_steam_hot_water_demand: (Rest)warmte geïmporteerd van buiten de regio (MT)

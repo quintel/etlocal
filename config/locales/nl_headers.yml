@@ -54,9 +54,9 @@ nl:
       households_electricity_cooling_distribution: Koelsysteem - elektriciteit
       households_solar_thermal_distribution: Verdeling zonthermie
       households_housing_stock_apartments: Aantal appartementen per bouwjaar
-      households_housing_stock_terraced: Aantal rijtjeswoningen per bouwjaar
-      households_housing_stock_semi_detached: Aantal hoekwoningen per bouwjaar
-      households_housing_stock_detached: Aantal vrijstaande woningen per bouwjaar
+      households_housing_stock_terraced_houses: Aantal rijtjeswoningen per bouwjaar
+      households_housing_stock_semi_detached_houses: Aantal hoekwoningen per bouwjaar
+      households_housing_stock_detached_houses: Aantal vrijstaande woningen per bouwjaar
       apartments_insulation: Gemiddelde isolatiegraad appartementen per bouwjaar
       terraced_insulation: Gemiddelde isolatiegraad rijtjeswoningen per bouwjaar
       semi_detached_insulation: Gemiddelde isolatiegraad hoekwoningen per bouwjaar

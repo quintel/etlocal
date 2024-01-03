@@ -52,9 +52,9 @@ en:
       households_electricity_appliances_distribution: Appliances - electricity
       households_electricity_cooling_distribution: Cooling technologies - electricity
       households_housing_stock_apartments: Number of appartments per year of construction
-      households_housing_stock_terraced: Number of terraced homes per year of construction
-      households_housing_stock_semi_detached: Number of semi-detached homes per year of construction
-      households_housing_stock_detached: Number of detached homes per year of construction
+      households_housing_stock_terraced_houses: Number of terraced homes per year of construction
+      households_housing_stock_semi_detached_houses: Number of semi-detached homes per year of construction
+      households_housing_stock_detached_houses: Number of detached homes per year of construction
       apartments_insulation: Average insulation level apartments per year of construction 
       terraced_insulation: Average insulation level terraced homes per year of construction
       semi_detached_insulation: Average insulation level semi-detached homes per year of construction

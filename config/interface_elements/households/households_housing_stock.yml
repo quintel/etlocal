@@ -62,3 +62,195 @@ groups:
         unit: '#'
       - key: present_number_of_terraced_houses_2005_present
         unit: '#'
+
+  - header: typical_useful_demand_apartments
+    type: slider
+    items:
+      - key: typical_useful_demand_for_space_heating_apartments_before_1945
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_before_1945
+      - key: typical_useful_demand_for_space_heating_apartments_1945_1964
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1945_1964
+      - key: typical_useful_demand_for_space_heating_apartments_1965_1984
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1965_1984
+      - key: typical_useful_demand_for_space_heating_apartments_1985_2004
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1985_2004
+      - key: typical_useful_demand_for_space_heating_apartments_2005_present
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_2005_present
+      - key: typical_useful_demand_for_space_heating_apartments_future
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_future
+
+  - header: typical_useful_demand_detached_houses
+    type: slider
+    items:
+      - key: typical_useful_demand_for_space_heating_detached_houses_before_1945
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_before_1945
+      - key: typical_useful_demand_for_space_heating_detached_houses_1945_1964
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1945_1964
+      - key: typical_useful_demand_for_space_heating_detached_houses_1965_1984
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1965_1984
+      - key: typical_useful_demand_for_space_heating_detached_houses_1985_2004
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1985_2004
+      - key: typical_useful_demand_for_space_heating_detached_houses_2005_present
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_2005_present
+      - key: typical_useful_demand_for_space_heating_detached_houses_future
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_future
+
+  - header: typical_useful_demand_semi_detached_houses
+    type: slider
+    items:
+      - key: typical_useful_demand_for_space_heating_semi_detached_houses_before_1945
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_before_1945
+      - key: typical_useful_demand_for_space_heating_semi_detached_houses_1945_1964
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1945_1964
+      - key: typical_useful_demand_for_space_heating_semi_detached_houses_1965_1984
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1965_1984
+      - key: typical_useful_demand_for_space_heating_semi_detached_houses_1985_2004
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1985_2004
+      - key: typical_useful_demand_for_space_heating_semi_detached_houses_2005_present
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_2005_present
+      - key: typical_useful_demand_for_space_heating_semi_detached_houses_future
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_future
+
+  - header: typical_useful_demand_terraced_houses
+    type: slider
+    items:
+      - key: typical_useful_demand_for_space_heating_terraced_houses_before_1945
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_before_1945
+      - key: typical_useful_demand_for_space_heating_terraced_houses_1945_1964
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1945_1964
+      - key: typical_useful_demand_for_space_heating_terraced_houses_1965_1984
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1965_1984
+      - key: typical_useful_demand_for_space_heating_terraced_houses_1985_2004
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_1985_2004
+      - key: typical_useful_demand_for_space_heating_terraced_houses_2005_present
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_2005_present
+      - key: typical_useful_demand_for_space_heating_terraced_houses_future
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_future
+
+  - header: share_useful_demand_apartments
+    type: slider
+    items:
+      - key: present_share_of_apartments_before_1945_in_useful_demand_for_space_heating
+        unit: '%'
+      - key: present_share_of_apartments_1945_1964_in_useful_demand_for_space_heating
+        unit: '%'
+      - key: present_share_of_apartments_1965_1984_in_useful_demand_for_space_heating
+        unit: '%'
+      - key: present_share_of_apartments_1985_2004_in_useful_demand_for_space_heating
+        unit: '%'
+      - key: present_share_of_apartments_2005_present_in_useful_demand_for_space_heating
+        unit: '%'
+
+  - header: share_useful_demand_detached_houses
+    type: slider
+    items:
+      - key: present_share_of_detached_houses_before_1945_in_useful_demand_for_space_heating
+        unit: '%'
+      - key: present_share_of_detached_houses_1945_1964_in_useful_demand_for_space_heating
+        unit: '%'
+      - key: present_share_of_detached_houses_1965_1984_in_useful_demand_for_space_heating
+        unit: '%'
+      - key: present_share_of_detached_houses_1985_2004_in_useful_demand_for_space_heating
+        unit: '%'
+      - key: present_share_of_detached_houses_2005_present_in_useful_demand_for_space_heating
+        unit: '%'
+
+  - header: share_useful_demand_semi_detached_houses
+    type: slider
+    items:
+      - key: present_share_of_semi_detached_houses_before_1945_in_useful_demand_for_space_heating
+        unit: '%'
+      - key: present_share_of_semi_detached_houses_1945_1964_in_useful_demand_for_space_heating
+        unit: '%'
+      - key: present_share_of_semi_detached_houses_1965_1984_in_useful_demand_for_space_heating
+        unit: '%'
+      - key: present_share_of_semi_detached_houses_1985_2004_in_useful_demand_for_space_heating
+        unit: '%'
+      - key: present_share_of_semi_detached_houses_2005_present_in_useful_demand_for_space_heating
+        unit: '%'
+
+  - header: share_useful_demand_terraced_houses
+    type: slider
+    items:
+      - key: present_share_of_terraced_houses_before_1945_in_useful_demand_for_space_heating
+        unit: '%'
+      - key: present_share_of_terraced_houses_1945_1964_in_useful_demand_for_space_heating
+        unit: '%'
+      - key: present_share_of_terraced_houses_1965_1984_in_useful_demand_for_space_heating
+        unit: '%'
+      - key: present_share_of_terraced_houses_1985_2004_in_useful_demand_for_space_heating
+        unit: '%'
+      - key: present_share_of_terraced_houses_2005_present_in_useful_demand_for_space_heating
+        unit: '%'

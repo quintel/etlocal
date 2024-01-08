@@ -2,16 +2,21 @@ key: buildings_building_stock
 groups:
   - header:
     items:
-    - key: number_of_buildings
-      unit: 'EDU'
+    - key: present_number_of_buildings
+      unit: '#'
     - key: buildings_roof_surface_available_for_pv
       unit: "km<sup>2</sup>"
 
-  - header: buildings_insulation
+  - header: typical_useful_demand_buildings
     type: slider
-    combination_method:
-      weighted_average:
-        - number_of_buildings
     items:
-    - key: input_buildings_insulation_level
-      unit: 'kWh/m<sup>2</sup>'
+      - key: typical_useful_demand_for_space_heating_buildings_present
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - buildings_number_of_buildings_present
+      - key: typical_useful_demand_for_space_heating_buildings_future
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - buildings_number_of_buildings_future

@@ -180,54 +180,6 @@ nl:
         input_percentage_of_bio_oil_households_final_demand_crude_oil: Andere bio-olie
         input_percentage_of_crude_oil_households_final_demand_crude_oil: Andere olie
 
-        input_insulation_level_households_apartments_2005: ">2005"
-        input_insulation_level_households_apartments_1985_2004: "1985 - 2004"
-        input_insulation_level_households_apartments_1965_1984: "1965 - 1984"       
-        input_insulation_level_households_apartments_1945_1964: "1945 - 1964"
-        input_insulation_level_households_apartments_1945: "< 1945"
-
-        input_insulation_level_households_terraced_2005: ">2005"
-        input_insulation_level_households_terraced_1985_2004: "1985 - 2004"
-        input_insulation_level_households_terraced_1965_1984: "1965 - 1984"
-        input_insulation_level_households_terraced_1945_1964: "1945 - 1964"
-        input_insulation_level_households_terraced_1945: "< 1945"
-
-        input_insulation_level_households_semi_detached_2005: ">2005"
-        input_insulation_level_households_semi_detached_1985_2004: "1985 - 2004"
-        input_insulation_level_households_semi_detached_1965_1984: "1965 - 1984"
-        input_insulation_level_households_semi_detached_1945_1964: "1945 - 1964"
-        input_insulation_level_households_semi_detached_1945: "< 1945"
-
-        input_insulation_level_households_detached_2005: ">2005"
-        input_insulation_level_households_detached_1985_2004: "1985 - 2004"
-        input_insulation_level_households_detached_1965_1984: "1965 - 1984"
-        input_insulation_level_households_detached_1945_1964: "1945 - 1964"
-        input_insulation_level_households_detached_1945: "< 1945"
-
-        input_households_final_demand_for_space_heating_apartments_2005: ">2005"
-        input_households_final_demand_for_space_heating_apartments_1985_2004: "1985 - 2004"
-        input_households_final_demand_for_space_heating_apartments_1965_1984: "1965 - 1984"
-        input_households_final_demand_for_space_heating_apartments_1945_1964: "1945 - 1964"
-        input_households_final_demand_for_space_heating_apartments_1945: "< 1945"
-
-        input_households_final_demand_for_space_heating_terraced_2005: ">2005"
-        input_households_final_demand_for_space_heating_terraced_1985_2004: "1985 - 2004"
-        input_households_final_demand_for_space_heating_terraced_1965_1984: "1965 - 1984"
-        input_households_final_demand_for_space_heating_terraced_1945_1964: "1945 - 1964"
-        input_households_final_demand_for_space_heating_terraced_1945: "< 1945"
-
-        input_households_final_demand_for_space_heating_semi_detached_2005: ">2005"
-        input_households_final_demand_for_space_heating_semi_detached_1985_2004: "1985 - 2004"
-        input_households_final_demand_for_space_heating_semi_detached_1965_1984: "1965 - 1984"
-        input_households_final_demand_for_space_heating_semi_detached_1945_1964: "1945 - 1964"
-        input_households_final_demand_for_space_heating_semi_detached_1945: "< 1945"
-
-        input_households_final_demand_for_space_heating_detached_2005: ">2005"
-        input_households_final_demand_for_space_heating_detached_1985_2004: "1985 - 2004"
-        input_households_final_demand_for_space_heating_detached_1965_1984: "1965 - 1984"
-        input_households_final_demand_for_space_heating_detached_1945_1964: "1945 - 1964"
-        input_households_final_demand_for_space_heating_detached_1945: "< 1945"
-
         present_number_of_apartments_before_1945: "< 1945"
         present_number_of_apartments_1945_1964: "1945 - 1964"
         present_number_of_apartments_1965_1984: "1965 - 1984"
@@ -251,10 +203,64 @@ nl:
         present_number_of_terraced_houses_1965_1984: "1965 - 1984"
         present_number_of_terraced_houses_1985_2004: "1985 - 2004"
         present_number_of_terraced_houses_2005_present: "> 2005"
+
+        typical_useful_demand_for_space_heating_apartments_before_1945: "< 1945"
+        typical_useful_demand_for_space_heating_apartments_1945_1964: "1945 - 1964"
+        typical_useful_demand_for_space_heating_apartments_1965_1984: "1965 - 1984"
+        typical_useful_demand_for_space_heating_apartments_1985_2004: "1985 - 2004"
+        typical_useful_demand_for_space_heating_apartments_2005_present: "> 2005"
+        typical_useful_demand_for_space_heating_apartments_future: "Nieuwbouw"
+
+        typical_useful_demand_for_space_heating_detached_houses_before_1945: "< 1945"
+        typical_useful_demand_for_space_heating_detached_houses_1945_1964: "1945 - 1964"
+        typical_useful_demand_for_space_heating_detached_houses_1965_1984: "1965 - 1984"
+        typical_useful_demand_for_space_heating_detached_houses_1985_2004: "1985 - 2004"
+        typical_useful_demand_for_space_heating_detached_houses_2005_present: "> 2005"
+        typical_useful_demand_for_space_heating_detached_houses_future: "Nieuwbouw"
+
+        typical_useful_demand_for_space_heating_semi_detached_houses_before_1945: "< 1945"
+        typical_useful_demand_for_space_heating_semi_detached_houses_1945_1964: "1945 - 1964"
+        typical_useful_demand_for_space_heating_semi_detached_houses_1965_1984: "1965 - 1984"
+        typical_useful_demand_for_space_heating_semi_detached_houses_1985_2004: "1985 - 2004"
+        typical_useful_demand_for_space_heating_semi_detached_houses_2005_present: "> 2005"
+        typical_useful_demand_for_space_heating_semi_detached_houses_future: "New residences"
+
+        typical_useful_demand_for_space_heating_terraced_houses_before_1945: "< 1945"
+        typical_useful_demand_for_space_heating_terraced_houses_1945_1964: "1945 - 1964"
+        typical_useful_demand_for_space_heating_terraced_houses_1965_1984: "1965 - 1984"
+        typical_useful_demand_for_space_heating_terraced_houses_1985_2004: "1985 - 2004"
+        typical_useful_demand_for_space_heating_terraced_houses_2005_present: "> 2005"
+        typical_useful_demand_for_space_heating_terraced_houses_future: "Nieuwbouw"
+
+        present_share_of_apartments_before_1945_in_useful_demand_for_space_heating: "< 1945"
+        present_share_of_apartments_1945_1964_in_useful_demand_for_space_heating: "1945 - 1964"
+        present_share_of_apartments_1965_1984_in_useful_demand_for_space_heating: "1965 - 1984"
+        present_share_of_apartments_1985_2004_in_useful_demand_for_space_heating: "1985 - 2004"
+        present_share_of_apartments_2005_present_in_useful_demand_for_space_heating: "> 2005"
+
+        present_share_of_detached_houses_before_1945_in_useful_demand_for_space_heating: "< 1945"
+        present_share_of_detached_houses_1945_1964_in_useful_demand_for_space_heating: "1945 - 1964"
+        present_share_of_detached_houses_1965_1984_in_useful_demand_for_space_heating: "1965 - 1984"
+        present_share_of_detached_houses_1985_2004_in_useful_demand_for_space_heating: "1985 - 2004"
+        present_share_of_detached_houses_2005_present_in_useful_demand_for_space_heating: "> 2005"
+
+        present_share_of_semi_detached_houses_before_1945_in_useful_demand_for_space_heating: "< 1945"
+        present_share_of_semi_detached_houses_1945_1964_in_useful_demand_for_space_heating: "1945 - 1964"
+        present_share_of_semi_detached_houses_1965_1984_in_useful_demand_for_space_heating: "1965 - 1984"
+        present_share_of_semi_detached_houses_1985_2004_in_useful_demand_for_space_heating: "1985 - 2004"
+        present_share_of_semi_detached_houses_2005_present_in_useful_demand_for_space_heating: "> 2005"
+
+        present_share_of_terraced_houses_before_1945_in_useful_demand_for_space_heating: "< 1945"
+        present_share_of_terraced_houses_1945_1964_in_useful_demand_for_space_heating: "1945 - 1964"
+        present_share_of_terraced_houses_1965_1984_in_useful_demand_for_space_heating: "1965 - 1984"
+        present_share_of_terraced_houses_1985_2004_in_useful_demand_for_space_heating: "1985 - 2004"
+        present_share_of_terraced_houses_2005_present_in_useful_demand_for_space_heating: "> 2005"
         
         # buildings
-        number_of_buildings: Aantal gebouwen
+        present_number_of_buildings: Aantal gebouwen
         buildings_roof_surface_available_for_pv: Geschikt dakoppervlak voor zon-PV
+        typical_useful_demand_for_space_heating_buildings_present: "Gebouwen heden"
+        typical_useful_demand_for_space_heating_buildings_future: "Gebouwen toekomst"
 
         input_buildings_electricity_demand: Elektriciteit
         buildings_final_demand_network_gas_demand: Gas
@@ -262,7 +268,6 @@ nl:
         buildings_final_demand_wood_pellets_demand: Vaste biomassa
         buildings_final_demand_coal_demand: Kolen
         input_buildings_final_demand_crude_oil_demand: Olie
-        input_buildings_insulation_level: Isolatie niveau
 
         input_percentage_of_diesel_buildings_final_demand_crude_oil: Diesel
         input_percentage_of_biodiesel_buildings_final_demand_crude_oil: Biodiesel

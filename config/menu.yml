@@ -8,12 +8,11 @@ households:
   - households_energy_supply
   - households_applications
   - households_housing_stock
-  - households_insulation_level
 buildings:
   - buildings_energy_demand
   - buildings_energy_supply
-  - buildings_building_stock
   - buildings_applications
+  - buildings_building_stock
 transport:
   - transport_road_transport
   - transport_rail_transport

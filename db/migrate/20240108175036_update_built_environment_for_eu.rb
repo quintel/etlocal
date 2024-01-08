@@ -1,6 +1,6 @@
-class EuInsulationData < ActiveRecord::Migration[5.0]
+class UpdateBuiltEnvironmentForEu < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20231113104447_eu_insulation_data')
+    directory    = Rails.root.join('db/migrate/20240108175036_update_built_environment_for_eu')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

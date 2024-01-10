@@ -162,10 +162,10 @@ class DatasetCombiner
               if key.is_a?(Hash)
                 aggregate_weighing_function(key, dataset)
               else
-                dataset.editable_attributes.find(key.to_s).value
+                dataset.editable_attributes.find(key.to_s).try(:value)
               end
 
-            next if value.zero? || value.blank?
+            next if value.blank? || value.zero?
 
             weight *= value
           end

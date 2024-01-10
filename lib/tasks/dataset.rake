@@ -36,28 +36,12 @@ namespace :dataset do
     puts '✅ Dataset combiner initialized!'
     puts 'Combining datasets... '
 
-    begin
-      combiner.combine_datasets
-    rescue StandardError => e
-      puts '❌ Something went wrong while attempting to combine the datasets:'
-      puts e.message
-      puts "\n"
-
-      exit
-    end
+    combiner.combine_datasets
 
     puts '✅ Datasets combined!'
     puts 'Exporting data...'
 
-    begin
-      migration_filename = combiner.export_data
-    rescue StandardError => e
-      puts '❌ Something went wrong while attempting to export the newly combined dataset:'
-      puts e.message
-      puts "\n"
-
-      exit
-    end
+    migration_filename = combiner.export_data
 
     puts '✅ Datasets exported!'
     puts "Migration file can be found at: #{migration_filename}\n\n"

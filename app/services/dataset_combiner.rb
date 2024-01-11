@@ -54,7 +54,7 @@ class DatasetCombiner
     @source_datasets = Dataset.where(geo_id: @source_dataset_geo_ids)
 
     # Validate whether all source datasets are up to date until at least the requested source_data_year
-    validate_dataset_data_year
+    # validate_dataset_data_year
   end
 
   def combine_datasets

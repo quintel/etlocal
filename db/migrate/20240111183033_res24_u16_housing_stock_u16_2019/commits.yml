@@ -1,0 +1,6 @@
+---
+- fields:
+  - :all
+  message: 'Optelling van de volgende gebieden: Bunnik, De Bilt, De Ronde Venen, Houten,
+    IJsselstein, Lopik, Montfoort, Nieuwegein, Oudewater, Stichtse Vecht, Utrecht,
+    Utrechtse Heuvelrug, Wijk bij Duurstede, Woerden, Zeist, Vijfheerenlanden'

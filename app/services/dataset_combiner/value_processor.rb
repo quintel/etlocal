@@ -34,6 +34,7 @@ class DatasetCombiner
       # The method uses the combination method set in the InterfaceItem to determine how values should be combined.
       def combine_item_values(datasets)
         InterfaceElement.items.to_h do |item|
+          # puts item.key.to_s
           plucked_item_values = datasets.filter_map do |set|
             value = set.editable_attributes.find(item.key.to_s).value
 

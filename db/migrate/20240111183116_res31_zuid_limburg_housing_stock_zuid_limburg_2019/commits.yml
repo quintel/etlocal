@@ -1,0 +1,6 @@
+---
+- fields:
+  - :all
+  message: 'Optelling van de volgende gebieden: Beek, Brunssum, Eijsden-Margraten,
+    Gulpen-Wittem, Heerlen, Kerkrade, Landgraaf, Maastricht, Meerssen, Simpelveld,
+    Sittard-Geleen, Stein, Vaals, Valkenburg aan de Geul, Voerendaal, Beekdaelen'

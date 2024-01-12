@@ -51,18 +51,9 @@ en:
       households_electricity_lighting_distribution: Lighting technologies - electricity
       households_electricity_appliances_distribution: Appliances - electricity
       households_electricity_cooling_distribution: Cooling technologies - electricity
-      households_housing_stock_apartments: Number of appartments per year of construction
-      households_housing_stock_terraced_houses: Number of terraced homes per year of construction
-      households_housing_stock_semi_detached_houses: Number of semi-detached homes per year of construction
-      households_housing_stock_detached_houses: Number of detached homes per year of construction
-      apartments_insulation: Average insulation level apartments per year of construction 
-      terraced_insulation: Average insulation level terraced homes per year of construction
-      semi_detached_insulation: Average insulation level semi-detached homes per year of construction
-      detached_insulation: Average insulation level detached homes per year of construction
-      apartments_final_demand_space_heating: Total final energy demand for space heating in apartments per year of construction
-      terraced_final_demand_space_heating: Total final energy demand for space heating in terraced homes per year of construction
-      semi_detached_final_demand_space_heating: Total final energy demand for space heating in semi-detached homes per year of construction
-      detached_final_demand_space_heating: Total final energy demand for space heating in detached homes per year of construction
+      households_housing_stock: Number of residences per construction period
+      typical_useful_demand_houses: Typical heat demand per residence type and construction period
+      share_useful_demand_houses: Share in useful heat demand per residence type and construction period
 
       # buildings
       buildings_final_demand: Final demand
@@ -79,6 +70,7 @@ en:
       buildings_electricity_space_heating_distribution: Space heating technologies - electricity
       buildings_electricity_lighting_distribution: Lighting technologies - electricity
       buildings_electricity_cooling_distribution: Cooling technologies - electricity
+      typical_useful_demand_buildings: Typical heat demand per construction period
 
       # transport
       transport_road_fuels: Road fuels

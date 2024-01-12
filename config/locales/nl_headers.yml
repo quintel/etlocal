@@ -53,18 +53,9 @@ nl:
       households_electricity_appliances_distribution: Apparaten - elektriciteit
       households_electricity_cooling_distribution: Koelsysteem - elektriciteit
       households_solar_thermal_distribution: Verdeling zonthermie
-      households_housing_stock_apartments: Aantal appartementen per bouwjaar
-      households_housing_stock_terraced_houses: Aantal rijtjeswoningen per bouwjaar
-      households_housing_stock_semi_detached_houses: Aantal hoekwoningen per bouwjaar
-      households_housing_stock_detached_houses: Aantal vrijstaande woningen per bouwjaar
-      apartments_insulation: Gemiddelde isolatiegraad appartementen per bouwjaar
-      terraced_insulation: Gemiddelde isolatiegraad rijtjeswoningen per bouwjaar
-      semi_detached_insulation: Gemiddelde isolatiegraad hoekwoningen per bouwjaar
-      detached_insulation: Gemiddelde isolatiegraad vrijstaande woningen per bouwjaar
-      apartments_final_demand_space_heating: Totale finale energievraag voor verwarming appartementen per bouwjaar
-      terraced_final_demand_space_heating: Totale finale energievraag voor verwarming rijtjeswoningen per bouwjaar
-      semi_detached_final_demand_space_heating: Totale finale energievraag voor verwarming hoekwoningen per bouwjaar
-      detached_final_demand_space_heating: Totale finale energievraag voor verwarming vrijstaande woningen per bouwjaar
+      households_housing_stock: Aantal woningen per bouwjaarklasse
+      typical_useful_demand_houses: Typische warmtevraag per woningtype en bouwjaarklasse
+      share_useful_demand_houses: Aandeel in nuttige warmtevraag per woningtype en bouwjaarklasse 
 
       # buildings
       buildings_final_demand: Eindgebruik
@@ -81,6 +72,7 @@ nl:
       buildings_electricity_space_heating_distribution: Ruimteverwarming - elektriciteit
       buildings_electricity_lighting_distribution: Verlichting - elektriciteit
       buildings_electricity_cooling_distribution: Koeling - elektriciteit
+      typical_useful_demand_buildings: Typische warmtevraag per bouwjaarklasse
 
       # transport
       transport_road_fuels: Brandstoffen wegverkeer

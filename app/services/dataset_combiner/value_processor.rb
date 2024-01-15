@@ -13,13 +13,15 @@ class DatasetCombiner
 
     class << self
 
-      # The values for the given datasets are processed in 3 steps:
-      # 1. Combine the values according to the combination_method of set in the InterfaceItem
-      # 2. Round all combined values to 8 decimals
-      # 3. If flexible is true for an InterfaceItem, make it fill out the share of the group it belongs to
       def perform(datasets)
+        # The values for the given datasets are processed in 3 steps:
+        # 1. Combine the values according to the combination_method of set in the InterfaceItem
         combined_item_values = combine_item_values(datasets)
+
+        # 2. Round all combined values to 8 decimals
         combined_item_values.transform_values! { |value| value.present? ? value.round(8) : 0.0 }
+
+        # 3. If flexible is true for an InterfaceItem, make it fill out the share of the group it belongs to
         combined_item_values = calculate_flexible_shares(combined_item_values)
 
         combined_item_values
@@ -32,6 +34,8 @@ class DatasetCombiner
       #   interconnector_capacity: 100
       # }
       # The method uses the combination method set in the InterfaceItem to determine how values should be combined.
+      #
+      # It expects a ActiveRecord result collection of Datasets.
       def combine_item_values(datasets)
         InterfaceElement.items.to_h do |item|
           plucked_item_values = datasets.filter_map do |set|
@@ -79,12 +83,12 @@ class DatasetCombiner
         end.compact
       end
 
-      # Goes through the combined values created above and then determines if flexible items exist
+      # Iterate over the combined values created above and then determine if flexible items exist
       # that need to fill up the share left in the group it belongs to, to 100% (represented as '1' here)
       def calculate_flexible_shares(combined_item_values)
         InterfaceElement.items.to_h do |item|
           # Only attempt to calculate the flexible value for this item
-          # if it is 'flexible' and the item is part of a group of multiple items
+          # if it is 'flexible' and the item is part of a group containing multiple items
           unless item.flexible && item.group.try(:present?) && item.group.items.length > 1
             next [item.key, combined_item_values[item.key]]
           end
@@ -155,11 +159,22 @@ class DatasetCombiner
           )
         end
 
+        # Calculate the weighted values
         weighted_values = datasets.map do |dataset|
           weight = 1.0
           weighing_keys.each do |key|
+            if dataset.editable_attributes.find(key.to_s).blank?
+              puts <<~MSG
+                💩 A value for the following interface item was expected to be present in dataset '#{dataset.geo_id}' (id #{dataset.id})
+                to calculate the weighted average, but was missing:
+                #{item.key}
+                (parent element: #{item.try(:group).try(:element).try(:key)}, parent group: #{item.try(:group).try(:header)})
+              MSG
+            end
+
             value = \
               if key.is_a?(Hash)
+                # Calculate the weighted value according to the method set in the YAML file
                 aggregate_weighing_function(key, dataset)
               else
                 dataset.editable_attributes.find(key.to_s).try(:value)
@@ -189,6 +204,8 @@ class DatasetCombiner
         end
       end
 
+      # Weighted values can be calculated according to different functions.
+      # This method calculates the values properly according to the given function.
       def aggregate_weighing_function(fn_hash, dataset)
         function = fn_hash.keys.first
         attributes = fn_hash.values.first

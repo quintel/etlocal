@@ -8,7 +8,6 @@ groups:
         unit: 'km<sup>2</sup>'
 
   - header: households_housing_stock
-    type: slider
     items:
       - key: present_number_of_apartments_before_1945
         unit: '#'
@@ -52,7 +51,6 @@ groups:
         unit: '#'
 
   - header: typical_useful_demand_houses
-    type: slider
     items:
       - key: typical_useful_demand_for_space_heating_apartments_before_1945
         unit: 'kWh/m<sup>2</sup>'

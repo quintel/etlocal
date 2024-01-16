@@ -8,7 +8,6 @@ groups:
       unit: "km<sup>2</sup>"
 
   - header: typical_useful_demand_buildings
-    type: slider
     items:
       - key: typical_useful_demand_for_space_heating_buildings_present
         unit: 'kWh/m<sup>2</sup>'

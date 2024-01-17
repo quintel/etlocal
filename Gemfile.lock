@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/quintel/atlas.git
-  revision: e8da92725b252fe1396d56ddf6d58d51c29d4775
-  ref: e8da927
+  revision: 39105a2039228906b87b0dc6173d32926a6220c1
+  ref: 39105a2
   specs:
     atlas (1.0.0)
       activemodel (>= 7)
@@ -30,8 +30,8 @@ GIT
 
 GIT
   remote: https://github.com/quintel/transformer.git
-  revision: b1364cd087cb115daf1a26fd8eca70e95e63ee7d
-  ref: b1364cd
+  revision: 5f84d956aed0f636e22a54aa8ffd0550d9f00ddd
+  ref: 5f84d95
   specs:
     transformer (1.0.0)
       atlas (~> 1.0)
@@ -127,7 +127,7 @@ GEM
     crack (0.4.5)
       rexml
     crass (1.0.6)
-    csv (3.2.6)
+    csv (3.2.8)
     database_cleaner (2.0.1)
       database_cleaner-active_record (~> 2.0.0)
     database_cleaner-active_record (2.0.1)
@@ -171,7 +171,7 @@ GEM
       rchardet (~> 1.8)
     globalid (1.0.1)
       activesupport (>= 5.0)
-    gpgme (2.0.22)
+    gpgme (2.0.23)
       mini_portile2 (~> 2.7)
     gradients (0.0.2)
     hashdiff (1.0.1)
@@ -212,7 +212,7 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2022.0105)
     mini_mime (1.1.2)
-    mini_portile2 (2.8.1)
+    mini_portile2 (2.8.5)
     mini_racer (0.6.3)
       libv8-node (~> 16.10.0.0)
     minitest (5.17.0)

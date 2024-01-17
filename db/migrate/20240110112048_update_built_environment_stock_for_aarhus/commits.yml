@@ -119,64 +119,64 @@
   - typical_useful_demand_for_space_heating_detached_houses_before_1945
   message: No data available. Hence, a typical useful demand corresponding to a poorly insulation building has been set.
 - fields:
-  - present_share_of_apartments_2005_present_in_useful_demand_for_space_heating
+  - input_present_share_of_apartments_2005_present_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_apartments_1985_2004_in_useful_demand_for_space_heating
+  - input_present_share_of_apartments_1985_2004_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_apartments_1965_1984_in_useful_demand_for_space_heating
+  - input_present_share_of_apartments_1965_1984_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_apartments_1945_1964_in_useful_demand_for_space_heating
+  - input_present_share_of_apartments_1945_1964_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_apartments_before_1945_in_useful_demand_for_space_heating
+  - input_present_share_of_apartments_before_1945_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_terraced_houses_2005_present_in_useful_demand_for_space_heating
+  - input_present_share_of_terraced_houses_2005_present_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_terraced_houses_1985_2004_in_useful_demand_for_space_heating
+  - input_present_share_of_terraced_houses_1985_2004_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_terraced_houses_1965_1984_in_useful_demand_for_space_heating
+  - input_present_share_of_terraced_houses_1965_1984_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_terraced_houses_1945_1964_in_useful_demand_for_space_heating
+  - input_present_share_of_terraced_houses_1945_1964_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_terraced_houses_before_1945_in_useful_demand_for_space_heating
+  - input_present_share_of_terraced_houses_before_1945_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_semi_detached_houses_2005_present_in_useful_demand_for_space_heating
+  - input_present_share_of_semi_detached_houses_2005_present_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_semi_detached_houses_1985_2004_in_useful_demand_for_space_heating
+  - input_present_share_of_semi_detached_houses_1985_2004_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_semi_detached_houses_1965_1984_in_useful_demand_for_space_heating
+  - input_present_share_of_semi_detached_houses_1965_1984_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_semi_detached_houses_1945_1964_in_useful_demand_for_space_heating
+  - input_present_share_of_semi_detached_houses_1945_1964_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_semi_detached_houses_before_1945_in_useful_demand_for_space_heating
+  - input_present_share_of_semi_detached_houses_before_1945_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_detached_houses_2005_present_in_useful_demand_for_space_heating
+  - input_present_share_of_detached_houses_2005_present_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_detached_houses_1985_2004_in_useful_demand_for_space_heating
+  - input_present_share_of_detached_houses_1985_2004_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_detached_houses_1965_1984_in_useful_demand_for_space_heating
+  - input_present_share_of_detached_houses_1965_1984_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_detached_houses_1945_1964_in_useful_demand_for_space_heating
+  - input_present_share_of_detached_houses_1945_1964_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
-  - present_share_of_detached_houses_before_1945_in_useful_demand_for_space_heating
+  - input_present_share_of_detached_houses_before_1945_in_useful_demand_for_space_heating
   message: No data available. Hence, the useful demand has been evenly divided over all housing categories.
 - fields:
   - typical_useful_demand_for_space_heating_buildings_present

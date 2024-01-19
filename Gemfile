@@ -36,10 +36,10 @@ gem 'str_enum'
 
 gem 'git'
 
-gem 'transformer', ref: '5f84d95', github: 'quintel/transformer'
-gem 'atlas',       ref: '39105a2', github: 'quintel/atlas'
+gem 'transformer', ref: 'cb766b1', github: 'quintel/transformer'
+gem 'atlas',       ref: 'd5c84b5', github: 'quintel/atlas'
 gem 'rubel',       ref: 'ad3d44e', github: 'quintel/rubel'
-gem 'refinery',    ref: '72eacf8', github: 'quintel/refinery'
+gem 'refinery',    ref: '5439199', github: 'quintel/refinery'
 
 group :development, :test do
   gem 'byebug', platform: :mri

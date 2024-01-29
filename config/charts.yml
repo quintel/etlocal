@@ -49,19 +49,6 @@ number_of_cars:
     - districts
     - neighborhoods
 
-number_of_residences:
-  legend_type: dynamic
-  unit: '#'
-  scale: log10
-  color_stops:
-    - "#009cff"
-    - "#000000"
-  layers:
-    - provinces
-    - municipalities
-    - districts
-    - neighborhoods
-
 roof_surface_available_for_pv:
   legend_type: dynamic
   unit: '#'

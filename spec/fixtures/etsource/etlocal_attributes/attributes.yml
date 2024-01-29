@@ -29,12 +29,12 @@ number_of_cars:
   group: transport
   mandatory: true
 
-number_of_residences:
+present_number_of_apartments_before_1945:
   unit: ''
   group: households
   mandatory: true
 
-number_of_residences_with_solar_pv:
+present_number_of_apartments_before_1945_with_solar_pv:
   unit: ''
   group: households
   mandatory: true

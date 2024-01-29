@@ -16,7 +16,7 @@ describe CommitsController do
         dataset_id: dataset.id,
         dataset_edit_form: {
           dataset_id: dataset.id,
-          number_of_residences: 15,
+          number_of_cars: 15,
           number_of_inhabitants: 50
         }
       }, format: :js, xhr: true
@@ -57,8 +57,8 @@ describe CommitsController do
         {
           dataset_edits_attributes: [
             {
-              "key"=>"number_of_buildings",
-              "value"=>"0.25"
+              "key"=>"number_of_cars",
+              "value"=>"25.0"
             }
           ]
         }
@@ -86,8 +86,8 @@ describe CommitsController do
         {
           dataset_edits_attributes: {
             "0"=>{
-              "key"=>"number_of_buildings",
-              "value"=>"0.25"
+              "key"=>"number_of_cars",
+              "value"=>"25.0"
             },
             "1"=>{
               "key"=>"electricity_consumption",

@@ -10,8 +10,8 @@ class DatasetEditForm
   # in the form (see CalculableValidator)
   attribute :country, String
 
-  validates_presence_of :number_of_residences, :country
-  validates :number_of_residences, numericality: { greater_than: 0 }
+  validates_presence_of :number_of_inhabitants, :country
+  validates :number_of_inhabitants, numericality: { greater_than: 0 }
   validates_with CalculableValidator
 
   def submit(dataset)

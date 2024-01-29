@@ -1,6 +1,6 @@
 electricity_consumption: 400 # kWh
 roof_surface_available_for_pv: 50 # m2
 number_of_cars: 30
-number_of_residences: 50
-number_of_residences_with_solar_pv: 5
+present_number_of_apartments_before_1945: 50
+present_number_of_apartments_before_1945_with_solar_pv: 5
 number_of_inhabitants: 100

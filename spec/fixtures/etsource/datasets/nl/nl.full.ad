@@ -57,6 +57,7 @@
 - new_houses_insulation_cost_constant = 7071.0
 - new_houses_insulation_employment_constant = 0.014
 - present_number_of_buildings = 912497
+- present_number_of_residences = 7936906
 - present_number_of_apartments_before_1945 = 540698
 - present_number_of_apartments_1945_1964 = 389344
 - present_number_of_apartments_1965_1984 = 764434

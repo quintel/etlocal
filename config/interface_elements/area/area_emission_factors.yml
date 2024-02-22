@@ -19,6 +19,9 @@ groups:
     - key: file_carriers_non_biogenic_waste_co2_conversion_per_mj
       unit: 'kg/MJ'
       precision: 4
+    - key: file_carriers_propane_co2_conversion_per_mj
+      unit: 'kg/MJ'
+      precision: 4
   - header: area_emission_factors_transport_fuels
     combination_method: average
     items:

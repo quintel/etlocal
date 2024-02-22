@@ -54,6 +54,7 @@ nl:
         file_carriers_lpg_co2_conversion_per_mj: LPG
         file_carriers_natural_gas_co2_conversion_per_mj: Aardgas
         file_carriers_non_biogenic_waste_co2_conversion_per_mj: Niet-biogeen afval
+        file_carriers_propane_co2_conversion_per_mj: Propaan
 
         lv_net_total_costs_present: Laagspanningsnet
         lv_mv_trafo_total_costs_present: LS-MS-transformatoren

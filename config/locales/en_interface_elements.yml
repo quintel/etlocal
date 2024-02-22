@@ -49,6 +49,7 @@ en:
         file_carriers_lpg_co2_conversion_per_mj: LPG
         file_carriers_natural_gas_co2_conversion_per_mj: Natural gas
         file_carriers_non_biogenic_waste_co2_conversion_per_mj: Non-biogenic waste
+        file_carriers_propane_co2_conversion_per_mj: Propane
 
         lv_net_total_costs_present: Low voltage grid
         lv_mv_trafo_total_costs_present: LV-MV transformers

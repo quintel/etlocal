@@ -31,8 +31,8 @@ describe EditableAttributesCollection do
     expect(editable_attributes.find('number_of_cars').value).to eq(2.0)
   end
 
-  it 'has a default value for number_of_residences' do
-    expect(editable_attributes.find('number_of_residences').value).to eq(10.0)
+  it 'has a default value for present_number_of_apartments_before_1945' do
+    expect(editable_attributes.find('present_number_of_apartments_before_1945').value).to eq(84.0)
   end
 
   it 'does not have a default value for electricity_consumption' do

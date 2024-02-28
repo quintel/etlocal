@@ -34,6 +34,7 @@ class DatasetCombiner
       # The method uses the combination method set in the InterfaceItem to determine how values should be combined.
       def combine_item_values(datasets)
         InterfaceElement.items.to_h do |item|
+          # puts item.key.to_s
           plucked_item_values = datasets.filter_map do |set|
             value = set.editable_attributes.find(item.key.to_s).value
 
@@ -162,10 +163,10 @@ class DatasetCombiner
               if key.is_a?(Hash)
                 aggregate_weighing_function(key, dataset)
               else
-                dataset.editable_attributes.find(key.to_s).value
+                dataset.editable_attributes.find(key.to_s).try(:value)
               end
 
-            next if value.zero? || value.blank?
+            next if value.blank? || value.zero?
 
             weight *= value
           end

@@ -2,88 +2,276 @@ key: households_housing_stock
 groups:
   - header:
     items:
-    - key: number_of_inhabitants
-      unit: '#'
-    - key: number_of_residences
-      unit: '#'
-    - key: residences_roof_surface_available_for_pv
-      unit: 'km<sup>2</sup>'
+      - key: number_of_inhabitants
+        unit: '#'
+      - key: residences_roof_surface_available_for_pv
+        unit: 'km<sup>2</sup>'
 
-  - header: households_housing_stock_distribution
-    type: slider
-    combination_method:
-      weighted_average:
-        - number_of_residences
+  - header: households_housing_stock
     items:
-    - key: input_percentage_of_apartments
-      unit: '%'
-    - key: input_percentage_of_terraced_houses
-      unit: '%'
-    - key: input_percentage_of_corner_houses
-      unit: '%'
-    - key: input_percentage_of_semi_detached_houses
-      unit: '%'
-    - key: input_percentage_of_detached_houses
-      unit: '%'
-      flexible: true
-      skip_validation: true
+      - key: present_number_of_apartments_before_1945
+        unit: '#'
+      - key: present_number_of_apartments_1945_1964
+        unit: '#'
+      - key: present_number_of_apartments_1965_1984
+        unit: '#'
+      - key: present_number_of_apartments_1985_2004
+        unit: '#'
+      - key: present_number_of_apartments_2005_present
+        unit: '#'
+      - key: present_number_of_detached_houses_before_1945
+        unit: '#'
+      - key: present_number_of_detached_houses_1945_1964
+        unit: '#'
+      - key: present_number_of_detached_houses_1965_1984
+        unit: '#'
+      - key: present_number_of_detached_houses_1985_2004
+        unit: '#'
+      - key: present_number_of_detached_houses_2005_present
+        unit: '#'
+      - key: present_number_of_semi_detached_houses_before_1945
+        unit: '#'
+      - key: present_number_of_semi_detached_houses_1945_1964
+        unit: '#'
+      - key: present_number_of_semi_detached_houses_1965_1984
+        unit: '#'
+      - key: present_number_of_semi_detached_houses_1985_2004
+        unit: '#'
+      - key: present_number_of_semi_detached_houses_2005_present
+        unit: '#'
+      - key: present_number_of_terraced_houses_before_1945
+        unit: '#'
+      - key: present_number_of_terraced_houses_1945_1964
+        unit: '#'
+      - key: present_number_of_terraced_houses_1965_1984
+        unit: '#'
+      - key: present_number_of_terraced_houses_1985_2004
+        unit: '#'
+      - key: present_number_of_terraced_houses_2005_present
+        unit: '#'
 
-  - header: households_insulation
-    type: slider
-    combination_method:
-      weighted_average:
-        - number_of_residences
-        - input_percentage_of_apartments
+  - header: typical_useful_demand_houses
     items:
-    - key: input_households_apartments_heat_demand_reduction
-      unit: '%'
+      - key: typical_useful_demand_for_space_heating_apartments_before_1945
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_apartments_before_1945
+      - key: typical_useful_demand_for_space_heating_apartments_1945_1964
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_apartments_1945_1964
+      - key: typical_useful_demand_for_space_heating_apartments_1965_1984
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_apartments_1965_1984
+      - key: typical_useful_demand_for_space_heating_apartments_1985_2004
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_apartments_1985_2004
+      - key: typical_useful_demand_for_space_heating_apartments_2005_present
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_apartments_2005_present
+      - key: typical_useful_demand_for_space_heating_apartments_future
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_future
+      - key: typical_useful_demand_for_space_heating_detached_houses_before_1945
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_detached_houses_before_1945
+      - key: typical_useful_demand_for_space_heating_detached_houses_1945_1964
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_detached_houses_1945_1964
+      - key: typical_useful_demand_for_space_heating_detached_houses_1965_1984
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_detached_houses_1965_1984
+      - key: typical_useful_demand_for_space_heating_detached_houses_1985_2004
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_detached_houses_1985_2004
+      - key: typical_useful_demand_for_space_heating_detached_houses_2005_present
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_detached_houses_2005_present
+      - key: typical_useful_demand_for_space_heating_detached_houses_future
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_future
+      - key: typical_useful_demand_for_space_heating_semi_detached_houses_before_1945
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_semi_detached_houses_before_1945
+      - key: typical_useful_demand_for_space_heating_semi_detached_houses_1945_1964
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_semi_detached_houses_1945_1964
+      - key: typical_useful_demand_for_space_heating_semi_detached_houses_1965_1984
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_semi_detached_houses_1965_1984
+      - key: typical_useful_demand_for_space_heating_semi_detached_houses_1985_2004
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_semi_detached_houses_1985_2004
+      - key: typical_useful_demand_for_space_heating_semi_detached_houses_2005_present
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_semi_detached_houses_2005_present
+      - key: typical_useful_demand_for_space_heating_semi_detached_houses_future
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+        weighted_average:
+          - households_number_of_apartments_future
+      - key: typical_useful_demand_for_space_heating_terraced_houses_before_1945
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_terraced_houses_before_1945
+      - key: typical_useful_demand_for_space_heating_terraced_houses_1945_1964
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_terraced_houses_1945_1964
+      - key: typical_useful_demand_for_space_heating_terraced_houses_1965_1984
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_terraced_houses_1965_1984
+      - key: typical_useful_demand_for_space_heating_terraced_houses_1985_2004
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_terraced_houses_1985_2004
+      - key: typical_useful_demand_for_space_heating_terraced_houses_2005_present
+        unit: 'kWh/m<sup>2</sup>'
+        combination_method:
+          weighted_average:
+            - present_number_of_terraced_houses_2005_present
+      - key: typical_useful_demand_for_space_heating_terraced_houses_future
+        unit: 'kWh/m<sup>2</sup>'
 
-  - header:
+  - header: share_useful_demand_houses
     type: slider
-    combination_method:
-      weighted_average:
-        - number_of_residences
-        - input_percentage_of_terraced_houses
     items:
-    - key: input_households_terraced_houses_heat_demand_reduction
-      unit: '%'
-
-  - header:
-    type: slider
-    combination_method:
-      weighted_average:
-        - number_of_residences
-        - input_percentage_of_corner_houses
-    items:
-    - key: input_households_corner_houses_heat_demand_reduction
-      unit: '%'
-
-  - header:
-    type: slider
-    combination_method:
-      weighted_average:
-        - number_of_residences
-        - input_percentage_of_semi_detached_houses
-    items:
-    - key: input_households_semi_detached_houses_heat_demand_reduction
-      unit: '%'
-
-  - header:
-    type: slider
-    combination_method:
-      weighted_average:
-        - number_of_residences
-        - input_percentage_of_detached_houses
-    items:
-    - key: input_households_detached_houses_heat_demand_reduction
-      unit: '%'
-
-  - header: households_apartments_block_heating
-    type: slider
-    combination_method:
-      weighted_average:
-        - number_of_residences
-        - input_percentage_of_apartments
-    items:
-    - key: heat_share_of_apartments_with_block_heating
-      unit: '%'
+      - key: input_present_share_of_apartments_before_1945_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_apartments_before_1945
+      - key: input_present_share_of_apartments_1945_1964_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_apartments_1945_1964
+      - key: input_present_share_of_apartments_1965_1984_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_apartments_1965_1984
+      - key: input_present_share_of_apartments_1985_2004_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_apartments_1985_2004
+      - key: input_present_share_of_apartments_2005_present_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_apartments_2005_present
+      - key: input_present_share_of_detached_houses_before_1945_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_detached_houses_before_1945
+      - key: input_present_share_of_detached_houses_1945_1964_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_detached_houses_1945_1964
+      - key: input_present_share_of_detached_houses_1965_1984_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_detached_houses_1965_1984
+      - key: input_present_share_of_detached_houses_1985_2004_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_detached_houses_1985_2004
+      - key: input_present_share_of_detached_houses_2005_present_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_detached_houses_2005_present
+      - key: input_present_share_of_semi_detached_houses_before_1945_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_semi_detached_houses_before_1945
+      - key: input_present_share_of_semi_detached_houses_1945_1964_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_semi_detached_houses_1945_1964
+      - key: input_present_share_of_semi_detached_houses_1965_1984_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_semi_detached_houses_1965_1984
+      - key: input_present_share_of_semi_detached_houses_1985_2004_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_semi_detached_houses_1985_2004
+      - key: input_present_share_of_semi_detached_houses_2005_present_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_semi_detached_houses_2005_present
+      - key: input_present_share_of_terraced_houses_before_1945_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_terraced_houses_before_1945
+      - key: input_present_share_of_terraced_houses_1945_1964_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_terraced_houses_1945_1964
+      - key: input_present_share_of_terraced_houses_1965_1984_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_terraced_houses_1965_1984
+      - key: input_present_share_of_terraced_houses_1985_2004_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_terraced_houses_1985_2004
+      - key: input_present_share_of_terraced_houses_2005_present_in_useful_demand_for_space_heating
+        unit: '%'
+        combination_method:
+          weighted_average:
+            - present_number_of_terraced_houses_2005_present
+        flexible: true
+        skip_validation: true

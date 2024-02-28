@@ -40,7 +40,7 @@ RSpec.describe CSVImporter do
       <<~YAML
         ---
         - fields:
-          - number_of_residences
+          - present_number_of_apartments_before_1945
           message:
             Because 5 is a magic number
       YAML
@@ -48,7 +48,7 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,number_of_residences
+        geo_id,present_number_of_apartments_before_1945
         GM0340,5
       CSV
     end
@@ -72,7 +72,7 @@ RSpec.describe CSVImporter do
 
     it 'assigns the dataset edit key' do
       importer.run
-      expect(DatasetEdit.last.key).to eq('number_of_residences')
+      expect(DatasetEdit.last.key).to eq('present_number_of_apartments_before_1945')
     end
 
     it 'assigns the dataset edit value' do
@@ -85,7 +85,7 @@ RSpec.describe CSVImporter do
         <<~YAML
           ---
           - fields:
-            - number_of_residences
+            - present_number_of_apartments_before_1945
             message:
               Because 5 is a magic number
         YAML
@@ -93,7 +93,7 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,name,country,number_of_residences
+          geo_id,name,country,present_number_of_apartments_before_1945
           GM0340,My First Area,nl,5
         CSV
       end
@@ -111,7 +111,7 @@ RSpec.describe CSVImporter do
         <<~YAML
           ---
           - fields:
-            - number_of_residences
+            - present_number_of_apartments_before_1945
             message:
               Because 5 is a magic number
         YAML
@@ -119,7 +119,7 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,name,country,number_of_residences
+          geo_id,name,country,present_number_of_apartments_before_1945
           GM0340,,nl,5
         CSV
       end
@@ -143,7 +143,7 @@ RSpec.describe CSVImporter do
         <<~YAML
           ---
           - fields:
-            - number_of_residences
+            - present_number_of_apartments_before_1945
             message:
               Because 5 is a magic number
         YAML
@@ -151,7 +151,7 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,name,country,number_of_residences
+          geo_id,name,country,present_number_of_apartments_before_1945
           GM0340,My First Area,nl,5
         CSV
       end
@@ -177,7 +177,7 @@ RSpec.describe CSVImporter do
       <<~YAML
         ---
         - fields:
-          - number_of_residences
+          - present_number_of_apartments_before_1945
           - number_of_inhabitants
           message:
             Because 5 is a magic number
@@ -186,7 +186,7 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,number_of_residences,number_of_inhabitants
+        geo_id,present_number_of_apartments_before_1945,number_of_inhabitants
         GM0340,5,10
       CSV
     end
@@ -205,7 +205,7 @@ RSpec.describe CSVImporter do
 
     it 'assigns the first dataset edit key' do
       commit = importer.run.first
-      expect(commit.dataset_edits.first.key).to eq('number_of_residences')
+      expect(commit.dataset_edits.first.key).to eq('present_number_of_apartments_before_1945')
     end
 
     it 'assigns the first dataset edit value' do
@@ -229,7 +229,7 @@ RSpec.describe CSVImporter do
       <<~YAML
         ---
         - fields:
-          - number_of_residences
+          - present_number_of_apartments_before_1945
           message:
             Because 5 is a magic number
         - fields:
@@ -241,7 +241,7 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,number_of_residences,number_of_inhabitants
+        geo_id,present_number_of_apartments_before_1945,number_of_inhabitants
         GM0340,5,10
       CSV
     end
@@ -260,7 +260,7 @@ RSpec.describe CSVImporter do
 
     it 'assigns the first dataset edit key' do
       commit = importer.run.first
-      expect(commit.dataset_edits.first.key).to eq('number_of_residences')
+      expect(commit.dataset_edits.first.key).to eq('present_number_of_apartments_before_1945')
     end
 
     it 'assigns the first dataset edit value' do
@@ -284,7 +284,7 @@ RSpec.describe CSVImporter do
       <<~YAML
         ---
         - fields:
-          - number_of_residences
+          - present_number_of_apartments_before_1945
           message:
             Because 5 is a magic number
       YAML
@@ -292,7 +292,7 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,number_of_residences
+        geo_id,present_number_of_apartments_before_1945
         GM0340,5
         GM0341,10
       CSV
@@ -334,7 +334,7 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,number_of_residences,number_of_inhabitants
+        geo_id,present_number_of_apartments_before_1945,number_of_inhabitants
         GM0340,5,10
       CSV
     end
@@ -349,7 +349,7 @@ RSpec.describe CSVImporter do
 
     it 'assigns the first dataset edit key' do
       commit = importer.run.first
-      expect(commit.dataset_edits.first.key).to eq('number_of_residences')
+      expect(commit.dataset_edits.first.key).to eq('present_number_of_apartments_before_1945')
     end
 
     it 'assigns the second dataset edit key' do
@@ -367,7 +367,7 @@ RSpec.describe CSVImporter do
           message:
             Because 5 is a magic number
         - fields:
-          - number_of_residences
+          - present_number_of_apartments_before_1945
           message:
             Because 5 is a magic number
       YAML
@@ -375,7 +375,7 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,number_of_residences,number_of_inhabitants
+        geo_id,present_number_of_apartments_before_1945,number_of_inhabitants
         GM0340,5,10
       CSV
     end
@@ -517,7 +517,7 @@ RSpec.describe CSVImporter do
       <<~YAML
         ---
         - fields:
-          - number_of_residences
+          - present_number_of_apartments_before_1945
           message:
             My commit
       YAML
@@ -525,7 +525,7 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,number_of_residences
+        geo_id,present_number_of_apartments_before_1945
         GM0340,1.0
       CSV
     end
@@ -544,7 +544,7 @@ RSpec.describe CSVImporter do
       <<~YAML
         ---
         - fields:
-          - number_of_residences
+          - present_number_of_apartments_before_1945
           message:
             My commit
       YAML
@@ -552,7 +552,7 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,number_of_residences,number_of_inhabitants
+        geo_id,present_number_of_apartments_before_1945,number_of_inhabitants
         GM0340,1.3,2.0
       CSV
     end
@@ -568,7 +568,7 @@ RSpec.describe CSVImporter do
       <<~YAML
         ---
         - fields:
-          - number_of_residences
+          - present_number_of_apartments_before_1945
           message:
             My commit
       YAML
@@ -588,7 +588,7 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,number_of_residences
+        geo_id,present_number_of_apartments_before_1945
         GM0340,5
       CSV
     end
@@ -772,7 +772,7 @@ RSpec.describe CSVImporter do
       <<~YAML
         ---
         - fields:
-          - number_of_residences
+          - present_number_of_apartments_before_1945
           message:
             Because 5 is a magic number
       YAML
@@ -780,7 +780,7 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,number_of_residences
+        geo_id,present_number_of_apartments_before_1945
         GM0340,5
       CSV
     end
@@ -796,7 +796,7 @@ RSpec.describe CSVImporter do
       <<~YAML
         ---
         - fields:
-          - number_of_residences
+          - present_number_of_apartments_before_1945
           message:
             Because 5 is a magic number
       YAML
@@ -804,7 +804,7 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,number_of_residences
+        geo_id,present_number_of_apartments_before_1945
         GM0340,5
       CSV
     end
@@ -821,7 +821,7 @@ RSpec.describe CSVImporter do
       <<~YAML
         ---
         - fields:
-          - number_of_residences
+          - present_number_of_apartments_before_1945
           message:
             Because 5 is a magic number
       YAML
@@ -829,7 +829,7 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,country,name,number_of_residences
+        geo_id,country,name,present_number_of_apartments_before_1945
         GM0340,nl,ABC,5
       CSV
     end
@@ -858,7 +858,7 @@ RSpec.describe CSVImporter do
       <<~YAML
         ---
         - fields:
-          - number_of_residences
+          - present_number_of_apartments_before_1945
           message:
             Because 5 is a magic number
       YAML
@@ -866,7 +866,7 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,country,name,data_source,number_of_residences
+        geo_id,country,name,data_source,present_number_of_apartments_before_1945
         GM0340,nl,ABC,entso,5
       CSV
     end

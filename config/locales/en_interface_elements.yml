@@ -86,12 +86,6 @@ en:
         heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket: Length connection pipes per house (100% connected)
 
         # households
-        number_of_residences: Number of residences
-        input_percentage_of_apartments: Apartement
-        input_percentage_of_terraced_houses: Terraced house
-        input_percentage_of_corner_houses: Corner house
-        input_percentage_of_semi_detached_houses: Semi-detached house
-        input_percentage_of_detached_houses: Detached house
         residences_roof_surface_available_for_pv: Roof surface suitable for solar PV
         heat_share_of_apartments_with_block_heating: Apartments with block heating
 
@@ -101,12 +95,6 @@ en:
         households_final_demand_wood_pellets_demand: Solid biomass
         input_households_final_demand_crude_oil_demand: Oil
         households_final_demand_coal_demand: Coal
-
-        input_households_apartments_heat_demand_reduction: Apartement
-        input_households_terraced_houses_heat_demand_reduction: Terraced house
-        input_households_corner_houses_heat_demand_reduction: Corner house
-        input_households_semi_detached_houses_heat_demand_reduction: Semi-detached house
-        input_households_detached_houses_heat_demand_reduction: Detached house
 
         input_households_solar_pv_demand: Solar PV production
         households_final_demand_solar_thermal_demand: Solar thermal production
@@ -187,9 +175,78 @@ en:
         input_percentage_of_bio_oil_households_final_demand_crude_oil: Other bio oil
         input_percentage_of_crude_oil_households_final_demand_crude_oil: Other oil
 
+        present_number_of_apartments_before_1945: "Apartments < 1945"
+        present_number_of_apartments_1945_1964: "Apartments 1945 - 1964"
+        present_number_of_apartments_1965_1984: "Apartments 1965 - 1984"
+        present_number_of_apartments_1985_2004: "Apartments 1985 - 2004"
+        present_number_of_apartments_2005_present: "Apartments > 2005"
+        present_number_of_detached_houses_before_1945: "Detached houses < 1945"
+        present_number_of_detached_houses_1945_1964: "Detached houses 1945 - 1964"
+        present_number_of_detached_houses_1965_1984: "Detached houses 1965 - 1984"
+        present_number_of_detached_houses_1985_2004: "Detached houses 1985 - 2004"
+        present_number_of_detached_houses_2005_present: "Detached houses > 2005"
+        present_number_of_semi_detached_houses_before_1945: "Semi-detached houses < 1945"
+        present_number_of_semi_detached_houses_1945_1964: "Semi-detached houses 1945 - 1964"
+        present_number_of_semi_detached_houses_1965_1984: "Semi-detached houses 1965 - 1984"
+        present_number_of_semi_detached_houses_1985_2004: "Semi-detached houses 1985 - 2004"
+        present_number_of_semi_detached_houses_2005_present: "Semi-detached houses > 2005"
+        present_number_of_terraced_houses_before_1945: "Terraced houses < 1945"
+        present_number_of_terraced_houses_1945_1964: "Terraced houses 1945 - 1964"
+        present_number_of_terraced_houses_1965_1984: "Terraced houses 1965 - 1984"
+        present_number_of_terraced_houses_1985_2004: "Terraced houses 1985 - 2004"
+        present_number_of_terraced_houses_2005_present: "Terraced houses > 2005"
+
+        typical_useful_demand_for_space_heating_apartments_before_1945: "Apartments < 1945"
+        typical_useful_demand_for_space_heating_apartments_1945_1964: "Apartments 1945 - 1964"
+        typical_useful_demand_for_space_heating_apartments_1965_1984: "Apartments 1965 - 1984"
+        typical_useful_demand_for_space_heating_apartments_1985_2004: "Apartments 1985 - 2004"
+        typical_useful_demand_for_space_heating_apartments_2005_present: "Apartments > 2005"
+        typical_useful_demand_for_space_heating_apartments_future: "New apartments"
+        typical_useful_demand_for_space_heating_detached_houses_before_1945: "Detached houses < 1945"
+        typical_useful_demand_for_space_heating_detached_houses_1945_1964: "Detached houses 1945 - 1964"
+        typical_useful_demand_for_space_heating_detached_houses_1965_1984: "Detached houses 1965 - 1984"
+        typical_useful_demand_for_space_heating_detached_houses_1985_2004: "Detached houses 1985 - 2004"
+        typical_useful_demand_for_space_heating_detached_houses_2005_present: "Detached houses > 2005"
+        typical_useful_demand_for_space_heating_detached_houses_future: "New detached houses "
+        typical_useful_demand_for_space_heating_semi_detached_houses_before_1945: "Semi-detached houses < 1945"
+        typical_useful_demand_for_space_heating_semi_detached_houses_1945_1964: "Semi-detached houses 1945 - 1964"
+        typical_useful_demand_for_space_heating_semi_detached_houses_1965_1984: "Semi-detached houses 1965 - 1984"
+        typical_useful_demand_for_space_heating_semi_detached_houses_1985_2004: "Semi-detached houses 1985 - 2004"
+        typical_useful_demand_for_space_heating_semi_detached_houses_2005_present: "Semi-detached houses > 2005"
+        typical_useful_demand_for_space_heating_semi_detached_houses_future: "New semi-detached houses "
+        typical_useful_demand_for_space_heating_terraced_houses_before_1945: "Terraced houses < 1945"
+        typical_useful_demand_for_space_heating_terraced_houses_1945_1964: "Terraced houses 1945 - 1964"
+        typical_useful_demand_for_space_heating_terraced_houses_1965_1984: "Terraced houses 1965 - 1984"
+        typical_useful_demand_for_space_heating_terraced_houses_1985_2004: "Terraced houses 1985 - 2004"
+        typical_useful_demand_for_space_heating_terraced_houses_2005_present: "Terraced houses > 2005"
+        typical_useful_demand_for_space_heating_terraced_houses_future: "New terraced houses"
+
+        input_present_share_of_apartments_before_1945_in_useful_demand_for_space_heating: "Apartments < 1945"
+        input_present_share_of_apartments_1945_1964_in_useful_demand_for_space_heating: "Apartments 1945 - 1964"
+        input_present_share_of_apartments_1965_1984_in_useful_demand_for_space_heating: "Apartments 1965 - 1984"
+        input_present_share_of_apartments_1985_2004_in_useful_demand_for_space_heating: "Apartments 1985 - 2004"
+        input_present_share_of_apartments_2005_present_in_useful_demand_for_space_heating: "Apartments > 2005"
+        input_present_share_of_detached_houses_before_1945_in_useful_demand_for_space_heating: "Detached houses < 1945"
+        input_present_share_of_detached_houses_1945_1964_in_useful_demand_for_space_heating: "Detached houses 1945 - 1964"
+        input_present_share_of_detached_houses_1965_1984_in_useful_demand_for_space_heating: "Detached houses 1965 - 1984"
+        input_present_share_of_detached_houses_1985_2004_in_useful_demand_for_space_heating: "Detached houses 1985 - 2004"
+        input_present_share_of_detached_houses_2005_present_in_useful_demand_for_space_heating: "Detached houses > 2005"
+        input_present_share_of_semi_detached_houses_before_1945_in_useful_demand_for_space_heating: "Semi-detached houses < 1945"
+        input_present_share_of_semi_detached_houses_1945_1964_in_useful_demand_for_space_heating: "Semi-detached houses 1945 - 1964"
+        input_present_share_of_semi_detached_houses_1965_1984_in_useful_demand_for_space_heating: "Semi-detached houses 1965 - 1984"
+        input_present_share_of_semi_detached_houses_1985_2004_in_useful_demand_for_space_heating: "Semi-detached houses 1985 - 2004"
+        input_present_share_of_semi_detached_houses_2005_present_in_useful_demand_for_space_heating: "Semi-detached houses > 2005"
+        input_present_share_of_terraced_houses_before_1945_in_useful_demand_for_space_heating: "Terraced houses < 1945"
+        input_present_share_of_terraced_houses_1945_1964_in_useful_demand_for_space_heating: "Terraced houses 1945 - 1964"
+        input_present_share_of_terraced_houses_1965_1984_in_useful_demand_for_space_heating: "Terraced houses 1965 - 1984"
+        input_present_share_of_terraced_houses_1985_2004_in_useful_demand_for_space_heating: "Terraced houses 1985 - 2004"
+        input_present_share_of_terraced_houses_2005_present_in_useful_demand_for_space_heating: "Terraced houses > 2005"
+
         # buildings
-        number_of_buildings: Number of buildings
+        present_number_of_buildings: Number of buildings
         buildings_roof_surface_available_for_pv: Roof surface suitable for solar PV
+        typical_useful_demand_for_space_heating_buildings_present: "Existing buildings"
+        typical_useful_demand_for_space_heating_buildings_future: "New buildings"
 
         input_buildings_electricity_demand: Electricity
         buildings_final_demand_network_gas_demand: Gas
@@ -197,7 +254,6 @@ en:
         buildings_final_demand_wood_pellets_demand: Solid biomass
         buildings_final_demand_coal_demand: Coal
         input_buildings_final_demand_crude_oil_demand: Oil
-        input_buildings_heat_demand_reduction: Heat demand reduction
 
         input_percentage_of_diesel_buildings_final_demand_crude_oil: Diesel
         input_percentage_of_biodiesel_buildings_final_demand_crude_oil: Biodiesel

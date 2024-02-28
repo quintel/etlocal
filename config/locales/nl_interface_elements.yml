@@ -91,12 +91,6 @@ nl:
         heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket: Lengte aansluitleiding per huis (100% aangesloten)
 
         # households
-        number_of_residences: Aantal woningen
-        input_percentage_of_apartments: Appartement
-        input_percentage_of_terraced_houses: Rijtjeshuis
-        input_percentage_of_corner_houses: Hoekhuis
-        input_percentage_of_semi_detached_houses: Twee-onder-één-kapwoning
-        input_percentage_of_detached_houses: Vrijstaand huis
         heat_share_of_apartments_with_block_heating: Appartementen met blokverwarming
         residences_roof_surface_available_for_pv: Geschikt dakoppervlak voor zon-PV
 
@@ -106,12 +100,6 @@ nl:
         households_final_demand_wood_pellets_demand: Vaste biomassa
         input_households_final_demand_crude_oil_demand: Olie
         households_final_demand_coal_demand: Kolen
-
-        input_households_apartments_heat_demand_reduction: Appartement
-        input_households_terraced_houses_heat_demand_reduction: Rijtjeshuis
-        input_households_corner_houses_heat_demand_reduction: Hoekhuis
-        input_households_semi_detached_houses_heat_demand_reduction: Twee-onder-één-kapwoning
-        input_households_detached_houses_heat_demand_reduction: Vrijstaand huis
 
         input_households_solar_pv_demand: Zon-PV-productie
         households_final_demand_solar_thermal_demand: Zonthermieproductie
@@ -192,9 +180,78 @@ nl:
         input_percentage_of_bio_oil_households_final_demand_crude_oil: Andere bio-olie
         input_percentage_of_crude_oil_households_final_demand_crude_oil: Andere olie
 
+        present_number_of_apartments_before_1945: "Appartementen < 1945"
+        present_number_of_apartments_1945_1964: "Appartementen 1945 - 1964"
+        present_number_of_apartments_1965_1984: "Appartementen 1965 - 1984"
+        present_number_of_apartments_1985_2004: "Appartementen 1985 - 2004"
+        present_number_of_apartments_2005_present: "Appartementen > 2005"
+        present_number_of_detached_houses_before_1945: "Vrijstaande huizen < 1945"
+        present_number_of_detached_houses_1945_1964: "Vrijstaande huizen 1945 - 1964"
+        present_number_of_detached_houses_1965_1984: "Vrijstaande huizen 1965 - 1984"
+        present_number_of_detached_houses_1985_2004: "Vrijstaande huizen 1985 - 2004"
+        present_number_of_detached_houses_2005_present: "Vrijstaande huizen > 2005"
+        present_number_of_semi_detached_houses_before_1945: "Hoekhuizen < 1945"
+        present_number_of_semi_detached_houses_1945_1964: "Hoekhuizen 1945 - 1964"
+        present_number_of_semi_detached_houses_1965_1984: "Hoekhuizen 1965 - 1984"
+        present_number_of_semi_detached_houses_1985_2004: "Hoekhuizen 1985 - 2004"
+        present_number_of_semi_detached_houses_2005_present: "Hoekhuizen > 2005"
+        present_number_of_terraced_houses_before_1945: "Rijtjeshuizen < 1945"
+        present_number_of_terraced_houses_1945_1964: "Rijtjeshuizen 1945 - 1964"
+        present_number_of_terraced_houses_1965_1984: "Rijtjeshuizen 1965 - 1984"
+        present_number_of_terraced_houses_1985_2004: "Rijtjeshuizen 1985 - 2004"
+        present_number_of_terraced_houses_2005_present: "Rijtjeshuizen > 2005"
+
+        typical_useful_demand_for_space_heating_apartments_before_1945: "Appartementen < 1945"
+        typical_useful_demand_for_space_heating_apartments_1945_1964: "Appartementen 1945 - 1964"
+        typical_useful_demand_for_space_heating_apartments_1965_1984: "Appartementen 1965 - 1984"
+        typical_useful_demand_for_space_heating_apartments_1985_2004: "Appartementen 1985 - 2004"
+        typical_useful_demand_for_space_heating_apartments_2005_present: "Appartementen > 2005"
+        typical_useful_demand_for_space_heating_apartments_future: "Appartementen nieuwbouw"
+        typical_useful_demand_for_space_heating_detached_houses_before_1945: "Vrijstaande huizen < 1945"
+        typical_useful_demand_for_space_heating_detached_houses_1945_1964: "Vrijstaande huizen 1945 - 1964"
+        typical_useful_demand_for_space_heating_detached_houses_1965_1984: "Vrijstaande huizen 1965 - 1984"
+        typical_useful_demand_for_space_heating_detached_houses_1985_2004: "Vrijstaande huizen 1985 - 2004"
+        typical_useful_demand_for_space_heating_detached_houses_2005_present: "Vrijstaande huizen > 2005"
+        typical_useful_demand_for_space_heating_detached_houses_future: "Vrijstaande huizen nieuwbouw"
+        typical_useful_demand_for_space_heating_semi_detached_houses_before_1945: "Hoekhuizen < 1945"
+        typical_useful_demand_for_space_heating_semi_detached_houses_1945_1964: "Hoekhuizen 1945 - 1964"
+        typical_useful_demand_for_space_heating_semi_detached_houses_1965_1984: "Hoekhuizen 1965 - 1984"
+        typical_useful_demand_for_space_heating_semi_detached_houses_1985_2004: "Hoekhuizen 1985 - 2004"
+        typical_useful_demand_for_space_heating_semi_detached_houses_2005_present: "Hoekhuizen > 2005"
+        typical_useful_demand_for_space_heating_semi_detached_houses_future: "Hoekhuizen nieuwbouw"
+        typical_useful_demand_for_space_heating_terraced_houses_before_1945: "Rijtjeshuizen < 1945"
+        typical_useful_demand_for_space_heating_terraced_houses_1945_1964: "Rijtjeshuizen 1945 - 1964"
+        typical_useful_demand_for_space_heating_terraced_houses_1965_1984: "Rijtjeshuizen 1965 - 1984"
+        typical_useful_demand_for_space_heating_terraced_houses_1985_2004: "Rijtjeshuizen 1985 - 2004"
+        typical_useful_demand_for_space_heating_terraced_houses_2005_present: "Rijtjeshuizen > 2005"
+        typical_useful_demand_for_space_heating_terraced_houses_future: "Rijtjeshuizen nieuwbouw"
+
+        input_present_share_of_apartments_before_1945_in_useful_demand_for_space_heating: "Appartementen < 1945"
+        input_present_share_of_apartments_1945_1964_in_useful_demand_for_space_heating: "Appartementen 1945 - 1964"
+        input_present_share_of_apartments_1965_1984_in_useful_demand_for_space_heating: "Appartementen 1965 - 1984"
+        input_present_share_of_apartments_1985_2004_in_useful_demand_for_space_heating: "Appartementen 1985 - 2004"
+        input_present_share_of_apartments_2005_present_in_useful_demand_for_space_heating: "Appartementen > 2005"
+        input_present_share_of_detached_houses_before_1945_in_useful_demand_for_space_heating: "Vrijstaande huizen < 1945"
+        input_present_share_of_detached_houses_1945_1964_in_useful_demand_for_space_heating: "Vrijstaande huizen 1945 - 1964"
+        input_present_share_of_detached_houses_1965_1984_in_useful_demand_for_space_heating: "Vrijstaande huizen 1965 - 1984"
+        input_present_share_of_detached_houses_1985_2004_in_useful_demand_for_space_heating: "Vrijstaande huizen 1985 - 2004"
+        input_present_share_of_detached_houses_2005_present_in_useful_demand_for_space_heating: "Vrijstaande huizen > 2005"
+        input_present_share_of_semi_detached_houses_before_1945_in_useful_demand_for_space_heating: "Hoekhuizen < 1945"
+        input_present_share_of_semi_detached_houses_1945_1964_in_useful_demand_for_space_heating: "Hoekhuizen 1945 - 1964"
+        input_present_share_of_semi_detached_houses_1965_1984_in_useful_demand_for_space_heating: "Hoekhuizen 1965 - 1984"
+        input_present_share_of_semi_detached_houses_1985_2004_in_useful_demand_for_space_heating: "Hoekhuizen 1985 - 2004"
+        input_present_share_of_semi_detached_houses_2005_present_in_useful_demand_for_space_heating: "Hoekhuizen > 2005"
+        input_present_share_of_terraced_houses_before_1945_in_useful_demand_for_space_heating: "Rijtjeshuizen < 1945"
+        input_present_share_of_terraced_houses_1945_1964_in_useful_demand_for_space_heating: "Rijtjeshuizen 1945 - 1964"
+        input_present_share_of_terraced_houses_1965_1984_in_useful_demand_for_space_heating: "Rijtjeshuizen 1965 - 1984"
+        input_present_share_of_terraced_houses_1985_2004_in_useful_demand_for_space_heating: "Rijtjeshuizen 1985 - 2004"
+        input_present_share_of_terraced_houses_2005_present_in_useful_demand_for_space_heating: "Rijtjeshuizen > 2005"
+        
         # buildings
-        number_of_buildings: Aantal gebouwen
+        present_number_of_buildings: Aantal gebouwen
         buildings_roof_surface_available_for_pv: Geschikt dakoppervlak voor zon-PV
+        typical_useful_demand_for_space_heating_buildings_present: "Bestaande gebouwen"
+        typical_useful_demand_for_space_heating_buildings_future: "Nieuwe gebouwen"
 
         input_buildings_electricity_demand: Elektriciteit
         buildings_final_demand_network_gas_demand: Gas
@@ -202,7 +259,6 @@ nl:
         buildings_final_demand_wood_pellets_demand: Vaste biomassa
         buildings_final_demand_coal_demand: Kolen
         input_buildings_final_demand_crude_oil_demand: Olie
-        input_buildings_heat_demand_reduction: Warmtevraagreductie
 
         input_percentage_of_diesel_buildings_final_demand_crude_oil: Diesel
         input_percentage_of_biodiesel_buildings_final_demand_crude_oil: Biodiesel

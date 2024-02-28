@@ -4,6 +4,8 @@ class CalculableValidator < ActiveModel::Validator
       *InterfaceElement.items.map(&:key)
     )
 
+    puts record.attributes.reject{ |a,v| v.nil?}
+
     begin
       dataset = Dataset.new(
         name: 'calculation_shell',

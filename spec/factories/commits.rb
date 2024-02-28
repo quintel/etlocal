@@ -10,7 +10,7 @@ FactoryBot.define do
       after(:create) do |commit|
         FactoryBot.create(
           :dataset_edit,
-          key: 'number_of_residences',
+          key: 'present_number_of_apartments_before_1945',
           value: 1.0,
           commit: commit
         )

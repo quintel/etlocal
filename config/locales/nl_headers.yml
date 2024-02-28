@@ -36,10 +36,7 @@ nl:
       area_interconnector_capacity: Beschikbare capaciteit huidige interconnectors
 
       # households
-      households_housing_stock_distribution: Huizenvoorraad
-      households_apartments_block_heating: Blokverwarming
       households_final_demand: Eindgebruik
-      households_insulation: Isolatie
       households_local_production: Lokale energieproductie
       households_electricity_distribution: Verdeling elektriciteit
       households_network_gas_distribution: Verdeling gas
@@ -56,6 +53,9 @@ nl:
       households_electricity_appliances_distribution: Apparaten - elektriciteit
       households_electricity_cooling_distribution: Koelsysteem - elektriciteit
       households_solar_thermal_distribution: Verdeling zonthermie
+      households_housing_stock: Aantal woningen per bouwjaarklasse
+      typical_useful_demand_houses: Typische warmtevraag per woningtype en bouwjaarklasse
+      share_useful_demand_houses: Aandeel in nuttige warmtevraag per woningtype en bouwjaarklasse 
 
       # buildings
       buildings_final_demand: Eindgebruik
@@ -72,6 +72,7 @@ nl:
       buildings_electricity_space_heating_distribution: Ruimteverwarming - elektriciteit
       buildings_electricity_lighting_distribution: Verlichting - elektriciteit
       buildings_electricity_cooling_distribution: Koeling - elektriciteit
+      typical_useful_demand_buildings: Typische warmtevraag per bouwjaarklasse
 
       # transport
       transport_road_fuels: Brandstoffen wegverkeer

@@ -35,10 +35,7 @@ en:
       area_interconnector_capacity: Present interconnector capacity
 
       # households
-      households_housing_stock_distribution: Housing stock
-      households_apartments_block_heating: Block heating
       households_final_demand: Final demand
-      households_insulation: Insulation
       households_local_production: Local energy production
       households_electricity_distribution: Electricity distribution
       households_network_gas_distribution: Gas distribution
@@ -54,6 +51,9 @@ en:
       households_electricity_lighting_distribution: Lighting technologies - electricity
       households_electricity_appliances_distribution: Appliances - electricity
       households_electricity_cooling_distribution: Cooling technologies - electricity
+      households_housing_stock: Number of residences per construction period
+      typical_useful_demand_houses: Typical heat demand per residence type and construction period
+      share_useful_demand_houses: Share in useful heat demand per residence type and construction period
 
       # buildings
       buildings_final_demand: Final demand
@@ -70,6 +70,7 @@ en:
       buildings_electricity_space_heating_distribution: Space heating technologies - electricity
       buildings_electricity_lighting_distribution: Lighting technologies - electricity
       buildings_electricity_cooling_distribution: Cooling technologies - electricity
+      typical_useful_demand_buildings: Typical heat demand per construction period
 
       # transport
       transport_road_fuels: Road fuels

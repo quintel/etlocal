@@ -1,7 +1,7 @@
 ---
 - fields:
   - number_of_inhabitants
-  - number_of_residences
+  - present_number_of_apartments_before_1945
   - number_of_cars
   - households_final_demand_electricity_demand
   - households_final_demand_network_gas_demand

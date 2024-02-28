@@ -12,7 +12,7 @@ RSpec.describe CalculateContainer do
     let(:dataset_params) {
       { 'area' => 'test123',
         'base_dataset' => 'nl',
-        'number_of_residences' => 10 }
+        'number_of_inhabitants' => 200.0 }
     }
 
     describe "refinery succeeds" do

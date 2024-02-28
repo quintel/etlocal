@@ -6,6 +6,5 @@ en:
     heat_networks: "Heat networks"
     number_of_inhabitants: "Number of inhabitants"
     number_of_cars: "Number of cars"
-    number_of_residences: "Number of residences"
     potential_heat_wko_neighborhood: "Potential heat storage WKO system per neighborhood"
     roof_surface_available_for_pv: "Roof available for PV per household"

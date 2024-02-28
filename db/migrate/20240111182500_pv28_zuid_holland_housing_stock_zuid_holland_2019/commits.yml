@@ -1,0 +1,12 @@
+---
+- fields:
+  - :all
+  message: 'Optelling van de volgende gebieden: Alblasserdam, Albrandswaard, Alphen
+    aan den Rijn, Barendrecht, Bodegraven-Reeuwijk, Capelle aan den IJssel, Delft,
+    ''s-Gravenhage, Dordrecht, Goeree-Overflakkee, Gorinchem, Gouda, Hardinxveld-Giessendam,
+    Hendrik-Ido-Ambacht, Hillegom, Kaag en Braassem, Katwijk, Krimpen aan den IJssel,
+    Krimpenerwaard, Lansingerland, Leiden, Leiderdorp, Leidschendam-Voorburg, Lisse,
+    Maassluis, Midden-Delfland, Nieuwkoop, Nissewaard, Noordwijk, Oegstgeest, Papendrecht,
+    Pijnacker-Nootdorp, Ridderkerk, Rijswijk, Rotterdam, Schiedam, Sliedrecht, Teylingen,
+    Vlaardingen, Voorschoten, Waddinxveen, Wassenaar, Westland, Zoetermeer, Zoeterwoude,
+    Zuidplas, Zwijndrecht, Hoeksche_Waard, Molenlanden'

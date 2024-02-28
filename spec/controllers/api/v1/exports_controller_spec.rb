@@ -8,7 +8,7 @@ describe Api::V1::ExportsController do
   it 'fetches a collection of dataset edits as json' do
     get :show, params: { id: dataset.geo_id }, format: :json
 
-    expect(body.fetch('number_of_residences')).to eq(10.0)
+    expect(body.fetch('present_number_of_apartments_before_1945')).to eq(84.0)
   end
 
   describe 'with edits' do
@@ -29,7 +29,7 @@ describe Api::V1::ExportsController do
     it 'should render all the editable attributes of a dataset' do
       get :show, params: { id: dataset.geo_id }, format: :json
 
-      expect(body.fetch('number_of_residences')).to eq(10.0)
+      expect(body.fetch('present_number_of_apartments_before_1945')).to eq(84.0)
     end
 
     it 'should render all the editable attributes of a dataset' do

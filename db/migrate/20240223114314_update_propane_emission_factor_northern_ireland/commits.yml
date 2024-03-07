@@ -1,0 +1,6 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - file_carriers_propane_co2_conversion_per_mj
+  message:
+    "Update propane emission factor according to the UK Government GHG Conversion Factors for Company Reporting (2023)."

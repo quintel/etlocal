@@ -1,0 +1,768 @@
+agriculture_final_demand_electricity_demand,20.3453607,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+agriculture_final_demand_network_gas_demand,23.37684825,Klimaatmonitor (2016). Wij splitsen gasverbruik uit naar finaal verbruik en verbruik door WKK's. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_agriculture_final_demand_steam_hot_water_demand,14.34370088,Geen data beschikbaar
+agriculture_final_demand_wood_pellets_demand,0.0,Geen data beschikbaar
+input_agriculture_final_demand_crude_oil_demand,0.0,Geen data beschikbaar
+agriculture_final_demand_hydrogen_demand,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+input_percentage_of_central_mt_steam_hot_water_agriculture_final_demand_steam_hot_water,0.0,No data available. Fallback value set to 0.0 to ensure share totals sum to 1.
+input_percentage_of_central_ht_steam_hot_water_agriculture_final_demand_steam_hot_water,1.0,New attribute (added to ETM in Dec 2022). Assumed that all agricultural heat is produced by district heating.
+input_percentage_of_local_steam_hot_water_agriculture_final_demand_steam_hot_water,0.0,New attribute (added to ETM in Dec 2022). Assumed that all agricultural heat is produced by district heating.
+input_percentage_of_diesel_agriculture_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_biodiesel_agriculture_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_kerosene_agriculture_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_lpg_agriculture_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_bio_oil_agriculture_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_crude_oil_agriculture_final_demand_crude_oil,1.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+agriculture_chp_engine_network_gas_dispatchable_demand,28.68740175,"New attribute (added to ETM in Dec 2022), set to zero."
+agriculture_chp_engine_biogas_demand,0.0,"New attribute (added to ETM in Dec 2022), set to zero."
+agriculture_chp_wood_pellets_demand,0.0,"New attribute (added to ETM in Dec 2022), set to zero."
+analysis_year,2019.0,Het meest recente jaar waarvan het grootste deel van de benodigde informatie beschikbaar is.
+file_carriers_natural_gas_co2_conversion_per_mj,0.0565,Add emissions and costs for energy carriers using data for the Netherlands in 2018.
+file_carriers_crude_oil_co2_conversion_per_mj,0.0733,Add emissions and costs for energy carriers using data for the Netherlands in 2018.
+file_carriers_coal_co2_conversion_per_mj,0.0945,Add emissions and costs for energy carriers using data for the Netherlands in 2018.
+file_carriers_lignite_co2_conversion_per_mj,0.1012,Add emissions and costs for energy carriers using data for the Netherlands in 2018.
+file_carriers_non_biogenic_waste_co2_conversion_per_mj,0.1052,Add emissions and costs for energy carriers using data for the Netherlands in 2018.
+file_carriers_propane_co2_conversion_per_mj,0.06448,Set to 0.06448 based on the update of the Netherlands list of fuels in 2021 by TNO
+file_carriers_diesel_co2_conversion_per_mj,0.0743,Add emissions and costs for energy carriers using data for the Netherlands in 2018.
+file_carriers_gasoline_co2_conversion_per_mj,0.072,Add emissions and costs for energy carriers using data for the Netherlands in 2018.
+file_carriers_heavy_fuel_oil_co2_conversion_per_mj,0.0774,Add emissions and costs for energy carriers using data for the Netherlands in 2018.
+file_carriers_kerosene_co2_conversion_per_mj,0.0715,Add emissions and costs for energy carriers using data for the Netherlands in 2018.
+file_carriers_lng_co2_conversion_per_mj,0.0565,Add emissions and costs for energy carriers using data for the Netherlands in 2018.
+file_carriers_lpg_co2_conversion_per_mj,0.0667,Add emissions and costs for energy carriers using data for the Netherlands in 2018.
+file_carriers_imported_electricity_co2_conversion_per_mj,0.102777778,Add emissions and costs for energy carriers using data for the Netherlands in 2018.
+file_carriers_imported_heat_co2_conversion_per_mj,0.036,Add emissions and costs for energy carriers using data for the Netherlands in 2018.
+file_carriers_imported_hydrogen_co2_conversion_per_mj,0.078,Add emissions and costs for energy carriers using data for the Netherlands in 2018.
+file_carriers_imported_ammonia_co2_conversion_per_mj,0.096774194,For sources see general documentation Excel on GitHub: https://github.com/quintel/etdataset/blob/master/carriers_source_analyses/imported_ammonia.carrier.xlsx
+co2_emission_1990,0.252157106,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+co2_emission_1990_aviation_bunkers,4.6046,
+co2_emission_1990_marine_bunkers,34.95619,
+energetic_emissions_other_ghg_households,0.001119114,New attribute (added to ETM in April 2021). Set to zero.
+energetic_emissions_other_ghg_buildings,0.000158856,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+energetic_emissions_other_ghg_transport,0.000796755,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+energetic_emissions_other_ghg_agriculture,0.000604995,New attribute (added to ETM in April 2021). Set to zero.
+energetic_emissions_other_ghg_industry,0.000567887,New attribute (added to ETM in April 2021). Set to zero.
+energetic_emissions_other_ghg_energy,0.001871184,New attribute (added to ETM in April 2021). Set to zero.
+non_energetic_emissions_co2_chemical_industry,0.0,New attribute (added to ETM in April 2021). Set to zero.
+non_energetic_emissions_co2_waste_management,0.0,New attribute (added to ETM in April 2021). Set to zero.
+non_energetic_emissions_co2_other_industry,0.001884126,New attribute (added to ETM in April 2021). Set to zero.
+non_energetic_emissions_co2_agriculture_manure,4.74e-05,New attribute (added to ETM in April 2021). Set to zero.
+non_energetic_emissions_co2_agriculture_soil_cultivation,3.12e-05,New attribute (added to ETM in April 2021). Set to zero.
+indirect_emissions_co2,0.001195092,New attribute (added to ETM in April 2021). Set to zero.
+non_energetic_emissions_other_ghg_chemical_industry,0.0,New attribute (added to ETM in April 2021). Set to zero.
+non_energetic_emissions_other_ghg_waste_management,0.001940874,New attribute (added to ETM in April 2021). Set to zero.
+non_energetic_emissions_other_ghg_other_industry,0.001764184,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+non_energetic_emissions_other_ghg_agriculture_manure,0.003539774,New attribute (added to ETM in April 2021). Set to zero.
+non_energetic_emissions_other_ghg_agriculture_soil_cultivation,0.003202221,New attribute (added to ETM in April 2021). Set to zero.
+non_energetic_emissions_other_ghg_agriculture_fermentation,0.009075763,New attribute (added to ETM in April 2021). Set to zero.
+non_energetic_emissions_other_ghg_agriculture_other,0.0,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+total_land_area,40.96,Toevoeging totale oppervlakte op basis van CBS data.
+areable_land,19.33,CBS (2016)
+offshore_suitable_for_wind,30060.0,Schatting Quintel op basis van landelijke data
+coast_line,0.0,Schatting Quintel. Zie refman.energytransitionmodel.com/publications/2098 voor een overzicht van onze schattingsmethoden.
+lv_net_total_costs_present,1898130.565,"Schatting Quintel. Gebaseerd op het totaal elektriciteitsgebruik in dit gebied (Klimaatmonitor) en de kosten van het elektriciteitsnet volgens 'Net voor de Toekomst' (2017, CE Delft). URL: https://www.ce.nl/publicaties/2030/net-voor-de-toekomst"
+mv_net_total_costs_present,1631205.954,"Schatting Quintel. Gebaseerd op het totaal elektriciteitsgebruik in dit gebied (Klimaatmonitor) en de kosten van het elektriciteitsnet volgens 'Net voor de Toekomst' (2017, CE Delft). URL: https://www.ce.nl/publicaties/2030/net-voor-de-toekomst"
+hv_net_total_costs_present,958555.9354,"Schatting Quintel. Gebaseerd op het totaal elektriciteitsgebruik in dit gebied (Klimaatmonitor) en de kosten van het elektriciteitsnet volgens 'Net voor de Toekomst' (2017, CE Delft). URL: https://www.ce.nl/publicaties/2030/net-voor-de-toekomst"
+lv_mv_trafo_total_costs_present,676209.0138,"Schatting Quintel. Gebaseerd op het totaal elektriciteitsgebruik in dit gebied (Klimaatmonitor) en de kosten van het elektriciteitsnet volgens 'Net voor de Toekomst' (2017, CE Delft). URL: https://www.ce.nl/publicaties/2030/net-voor-de-toekomst"
+mv_hv_trafo_total_costs_present,569439.1695,"Schatting Quintel. Gebaseerd op het totaal elektriciteitsgebruik in dit gebied (Klimaatmonitor) en de kosten van het elektriciteitsnet volgens 'Net voor de Toekomst' (2017, CE Delft). URL: https://www.ce.nl/publicaties/2030/net-voor-de-toekomst"
+offshore_net_costs_present,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+interconnection_net_costs_present,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+annual_infrastructure_cost_gas,2502810.889,
+lv_net_spare_capacity,0.25,Standaardwaarden op basis van Nederlandse gemiddelden
+mv_net_spare_capacity,0.25,Standaardwaarden op basis van Nederlandse gemiddelden
+hv_net_spare_capacity,0.25,Standaardwaarden op basis van Nederlandse gemiddelden
+lv_mv_trafo_spare_capacity,0.25,Standaardwaarden op basis van Nederlandse gemiddelden
+mv_hv_trafo_spare_capacity,0.25,Standaardwaarden op basis van Nederlandse gemiddelden
+interconnector_capacity,60000.0,
+lv_net_capacity_per_step,0.02,Standaardwaarden op basis van Nederlandse gemiddelden
+lv_net_costs_per_capacity_step,18320.0,Standaardwaarden op basis van Nederlandse gemiddelden
+mv_net_capacity_per_step,0.2,Standaardwaarden op basis van Nederlandse gemiddelden
+mv_net_costs_per_capacity_step,138000.0,Standaardwaarden op basis van Nederlandse gemiddelden
+hv_net_capacity_per_step,0.2,Standaardwaarden op basis van Nederlandse gemiddelden
+hv_net_costs_per_capacity_step,72800.0,Standaardwaarden op basis van Nederlandse gemiddelden
+lv_mv_trafo_capacity_per_step,0.02,Standaardwaarden op basis van Nederlandse gemiddelden
+lv_mv_trafo_costs_per_capacity_step,4000.0,Standaardwaarden op basis van Nederlandse gemiddelden
+mv_hv_trafo_capacity_per_step,0.2,Standaardwaarden op basis van Nederlandse gemiddelden
+mv_hv_trafo_costs_per_capacity_step,50000.0,Standaardwaarden op basis van Nederlandse gemiddelden
+heat_length_of_distribution_pipelines_in_meter_per_residence_object_first_bracket,5.0,"Analyse op basis van data van Greenvis en Vesta MAIS. In deze analyse is voor elke buurt in Nederland een schatting gemaakt van de benodigde leidinglengtes indien er een warmtenet wordt aangelegd in die buurt. Voor gemeenten, RESsen en provincies in het ETM hebben we de (gewogen) gemiddelde leidinglengte uitgerekend voor vijf 'aansluitklassen': Wat is de gemiddelde benodigde leidinglengte als we de 20% buurten/huizen met de laagste gemiddelde leidinglengte aansluiten? Wat is het gemiddelde als we 40% aansluiten? Etc. Hierdoor kan het ETM met hogere kosten per aansluiting rekenen als er meer afgelegen gebieden worden aangesloten op het warmtenet."
+heat_length_of_distribution_pipelines_in_meter_per_residence_object_second_bracket,5.7,"Analyse op basis van data van Greenvis en Vesta MAIS. In deze analyse is voor elke buurt in Nederland een schatting gemaakt van de benodigde leidinglengtes indien er een warmtenet wordt aangelegd in die buurt. Voor gemeenten, RESsen en provincies in het ETM hebben we de (gewogen) gemiddelde leidinglengte uitgerekend voor vijf 'aansluitklassen': Wat is de gemiddelde benodigde leidinglengte als we de 20% buurten/huizen met de laagste gemiddelde leidinglengte aansluiten? Wat is het gemiddelde als we 40% aansluiten? Etc. Hierdoor kan het ETM met hogere kosten per aansluiting rekenen als er meer afgelegen gebieden worden aangesloten op het warmtenet."
+heat_length_of_distribution_pipelines_in_meter_per_residence_object_third_bracket,6.3,"Analyse op basis van data van Greenvis en Vesta MAIS. In deze analyse is voor elke buurt in Nederland een schatting gemaakt van de benodigde leidinglengtes indien er een warmtenet wordt aangelegd in die buurt. Voor gemeenten, RESsen en provincies in het ETM hebben we de (gewogen) gemiddelde leidinglengte uitgerekend voor vijf 'aansluitklassen': Wat is de gemiddelde benodigde leidinglengte als we de 20% buurten/huizen met de laagste gemiddelde leidinglengte aansluiten? Wat is het gemiddelde als we 40% aansluiten? Etc. Hierdoor kan het ETM met hogere kosten per aansluiting rekenen als er meer afgelegen gebieden worden aangesloten op het warmtenet."
+heat_length_of_distribution_pipelines_in_meter_per_residence_object_fourth_bracket,7.0,"Analyse op basis van data van Greenvis en Vesta MAIS. In deze analyse is voor elke buurt in Nederland een schatting gemaakt van de benodigde leidinglengtes indien er een warmtenet wordt aangelegd in die buurt. Voor gemeenten, RESsen en provincies in het ETM hebben we de (gewogen) gemiddelde leidinglengte uitgerekend voor vijf 'aansluitklassen': Wat is de gemiddelde benodigde leidinglengte als we de 20% buurten/huizen met de laagste gemiddelde leidinglengte aansluiten? Wat is het gemiddelde als we 40% aansluiten? Etc. Hierdoor kan het ETM met hogere kosten per aansluiting rekenen als er meer afgelegen gebieden worden aangesloten op het warmtenet."
+heat_length_of_distribution_pipelines_in_meter_per_residence_object_fifth_bracket,8.8,"Analyse op basis van data van Greenvis en Vesta MAIS. In deze analyse is voor elke buurt in Nederland een schatting gemaakt van de benodigde leidinglengtes indien er een warmtenet wordt aangelegd in die buurt. Voor gemeenten, RESsen en provincies in het ETM hebben we de (gewogen) gemiddelde leidinglengte uitgerekend voor vijf 'aansluitklassen': Wat is de gemiddelde benodigde leidinglengte als we de 20% buurten/huizen met de laagste gemiddelde leidinglengte aansluiten? Wat is het gemiddelde als we 40% aansluiten? Etc. Hierdoor kan het ETM met hogere kosten per aansluiting rekenen als er meer afgelegen gebieden worden aangesloten op het warmtenet."
+heat_length_of_connection_pipelines_in_meter_per_residence_first_bracket,3.2,"Analyse op basis van data van Greenvis en Vesta MAIS. In deze analyse is voor elke buurt in Nederland een schatting gemaakt van de benodigde leidinglengtes indien er een warmtenet wordt aangelegd in die buurt. Voor gemeenten, RESsen en provincies in het ETM hebben we de (gewogen) gemiddelde leidinglengte uitgerekend voor vijf 'aansluitklassen': Wat is de gemiddelde benodigde leidinglengte als we de 20% buurten/huizen met de laagste gemiddelde leidinglengte aansluiten? Wat is het gemiddelde als we 40% aansluiten? Etc. Hierdoor kan het ETM met hogere kosten per aansluiting rekenen als er meer afgelegen gebieden worden aangesloten op het warmtenet."
+heat_length_of_connection_pipelines_in_meter_per_residence_second_bracket,4.3,"Analyse op basis van data van Greenvis en Vesta MAIS. In deze analyse is voor elke buurt in Nederland een schatting gemaakt van de benodigde leidinglengtes indien er een warmtenet wordt aangelegd in die buurt. Voor gemeenten, RESsen en provincies in het ETM hebben we de (gewogen) gemiddelde leidinglengte uitgerekend voor vijf 'aansluitklassen': Wat is de gemiddelde benodigde leidinglengte als we de 20% buurten/huizen met de laagste gemiddelde leidinglengte aansluiten? Wat is het gemiddelde als we 40% aansluiten? Etc. Hierdoor kan het ETM met hogere kosten per aansluiting rekenen als er meer afgelegen gebieden worden aangesloten op het warmtenet."
+heat_length_of_connection_pipelines_in_meter_per_residence_third_bracket,5.2,"Analyse op basis van data van Greenvis en Vesta MAIS. In deze analyse is voor elke buurt in Nederland een schatting gemaakt van de benodigde leidinglengtes indien er een warmtenet wordt aangelegd in die buurt. Voor gemeenten, RESsen en provincies in het ETM hebben we de (gewogen) gemiddelde leidinglengte uitgerekend voor vijf 'aansluitklassen': Wat is de gemiddelde benodigde leidinglengte als we de 20% buurten/huizen met de laagste gemiddelde leidinglengte aansluiten? Wat is het gemiddelde als we 40% aansluiten? Etc. Hierdoor kan het ETM met hogere kosten per aansluiting rekenen als er meer afgelegen gebieden worden aangesloten op het warmtenet."
+heat_length_of_connection_pipelines_in_meter_per_residence_fourth_bracket,6.0,"Analyse op basis van data van Greenvis en Vesta MAIS. In deze analyse is voor elke buurt in Nederland een schatting gemaakt van de benodigde leidinglengtes indien er een warmtenet wordt aangelegd in die buurt. Voor gemeenten, RESsen en provincies in het ETM hebben we de (gewogen) gemiddelde leidinglengte uitgerekend voor vijf 'aansluitklassen': Wat is de gemiddelde benodigde leidinglengte als we de 20% buurten/huizen met de laagste gemiddelde leidinglengte aansluiten? Wat is het gemiddelde als we 40% aansluiten? Etc. Hierdoor kan het ETM met hogere kosten per aansluiting rekenen als er meer afgelegen gebieden worden aangesloten op het warmtenet."
+heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket,7.2,"Analyse op basis van data van Greenvis en Vesta MAIS. In deze analyse is voor elke buurt in Nederland een schatting gemaakt van de benodigde leidinglengtes indien er een warmtenet wordt aangelegd in die buurt. Voor gemeenten, RESsen en provincies in het ETM hebben we de (gewogen) gemiddelde leidinglengte uitgerekend voor vijf 'aansluitklassen': Wat is de gemiddelde benodigde leidinglengte als we de 20% buurten/huizen met de laagste gemiddelde leidinglengte aansluiten? Wat is het gemiddelde als we 40% aansluiten? Etc. Hierdoor kan het ETM met hogere kosten per aansluiting rekenen als er meer afgelegen gebieden worden aangesloten op het warmtenet."
+buildings_final_demand_electricity_buildings_final_demand_for_lighting_electricity_parent_share,0.356446796,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_electricity_buildings_final_demand_for_space_heating_electricity_parent_share,0.032287454,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_electricity_buildings_final_demand_for_appliances_electricity_parent_share,0.486211623,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_electricity_buildings_final_demand_for_cooling_electricity_parent_share,0.125054127,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_network_gas_buildings_final_demand_for_appliances_network_gas_parent_share,0.001659312,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_network_gas_buildings_final_demand_for_space_heating_network_gas_parent_share,0.998340688,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_network_gas_buildings_final_demand_for_cooling_network_gas_parent_share,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_wood_pellets_buildings_final_demand_for_space_heating_wood_pellets_parent_share,1.0,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_wood_pellets_buildings_final_demand_for_appliances_wood_pellets_parent_share,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_coal_buildings_final_demand_for_space_heating_coal_parent_share,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_coal_buildings_final_demand_for_appliances_coal_parent_share,1.0,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_crude_oil_buildings_final_demand_for_space_heating_crude_oil_parent_share,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_crude_oil_buildings_final_demand_for_appliances_crude_oil_parent_share,1.0,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_heatpump_air_water_network_gas_parent_share,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_hybrid_heatpump_air_water_electricity_parent_share,0.0,No data available. Set to 0.0.
+buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_network_gas_parent_share,1.0,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_for_space_heating_electricity_buildings_space_heater_collective_heatpump_water_water_ts_electricity_parent_share,1.0,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_for_space_heating_electricity_buildings_space_heater_heatpump_air_water_electricity_parent_share,0.0,Heatpump (air) for space heating and cooling has been added for buildings. No data available.
+buildings_final_demand_for_space_heating_electricity_buildings_space_heater_hybrid_heatpump_air_water_electricity_parent_share,0.0,No data available. Set to 0.0.
+buildings_final_demand_for_space_heating_electricity_buildings_space_heater_electricity_parent_share,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_for_lighting_electricity_buildings_lighting_efficient_fluorescent_electricity_parent_share,0.012888523,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_for_lighting_electricity_buildings_lighting_standard_fluorescent_electricity_parent_share,0.955205839,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_for_lighting_electricity_buildings_lighting_led_electricity_parent_share,0.031905638,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_for_cooling_electricity_buildings_cooling_airconditioning_electricity_parent_share,0.978823114,Standaardwaarden op basis van Nederlandse gemiddelden
+buildings_final_demand_for_cooling_electricity_buildings_cooling_heatpump_air_water_electricity_parent_share,0.0,Heatpump (air) for space heating and cooling has been added for buildings. No data available.
+buildings_final_demand_for_cooling_electricity_buildings_cooling_collective_heatpump_water_water_ts_electricity_parent_share,0.021176886,Standaardwaarden op basis van Nederlandse gemiddelden
+present_number_of_buildings,2565.0,CBS (2016)
+buildings_roof_surface_available_for_pv,0.699533048,Schatting Quintel. Zie refman.energytransitionmodel.com/publications/2098 voor een overzicht van onze schattingsmethoden.
+typical_useful_demand_for_space_heating_buildings_present,260.4581177,
+typical_useful_demand_for_space_heating_buildings_future,190.0,No data available. Set to nl2019 values.
+input_buildings_electricity_demand,225.0902231,"Klimaatmonitor (2016), inclusief verbruik achter de meter. Wij rekenen het verbruik van ICT, treinen en elektrisch wegverkeer niet bij de dienstensector maar bij respectievelijk industrie en transport. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5"
+buildings_final_demand_network_gas_demand,371.53935,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_buildings_final_demand_steam_hot_water_demand,2.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+buildings_final_demand_wood_pellets_demand,0.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+buildings_final_demand_coal_demand,0.0,Geen data beschikbaar
+input_buildings_final_demand_crude_oil_demand,0.0,Geen data beschikbaar
+buildings_final_demand_solar_thermal_demand,0.0,Schatting Quintel op basis van landelijke data
+input_percentage_of_lt_steam_hot_water_buildings_final_demand_steam_hot_water,0.0,No data available. Fallback value set to 0.0 to ensure share totals sum to 1.
+input_percentage_of_mt_steam_hot_water_buildings_final_demand_steam_hot_water,0.0,No data available. Fallback value set to 0.0 to ensure share totals sum to 1.
+input_percentage_of_ht_steam_hot_water_buildings_final_demand_steam_hot_water,1.0,No data available. Fallback value set to 1.0 to ensure share totals sum to 1.
+input_percentage_of_diesel_buildings_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_biodiesel_buildings_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_kerosene_buildings_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_bio_kerosene_buildings_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_lpg_buildings_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_bio_oil_buildings_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_crude_oil_buildings_final_demand_crude_oil,1.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_buildings_solar_pv_demand,15.51,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share,0.0,Gemiddelde Nederlandse productiemix voor groengas
+energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share,0.0,Gemiddelde Nederlandse productiemix voor groengas
+energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share,1.0,Gemiddelde Nederlandse productiemix voor groengas
+energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share,0.58,Data gebaseerd op landelijk gemiddelde.
+energy_distribution_non_biogenic_waste_energy_distribution_waste_mix_child_share,0.42,Data gebaseerd op landelijk gemiddelde.
+energy_production_dry_biomass_max_demand,139.1288281,Productie en potenties voor biogrondstoffen zijn ingeschat op basis van onderzoek van TNO. Hierin is de totale productie en potentie voor Nederland onderverdeeld naar gemeentes en provincies op basis van verschillende verdeelsleutels. Zie https://github.com/quintel/documentation/blob/master/general/biomass.md voor meer informatie.
+energy_production_wet_biomass_max_demand,132.7249366,Productie en potenties voor biogrondstoffen zijn ingeschat op basis van onderzoek van TNO. Hierin is de totale productie en potentie voor Nederland onderverdeeld naar gemeentes en provincies op basis van verschillende verdeelsleutels. Zie https://github.com/quintel/documentation/blob/master/general/biomass.md voor meer informatie.
+energy_production_oily_biomass_max_demand,28.92545916,Productie en potenties voor biogrondstoffen zijn ingeschat op basis van onderzoek van TNO. Hierin is de totale productie en potentie voor Nederland onderverdeeld naar gemeentes en provincies op basis van verschillende verdeelsleutels. Zie https://github.com/quintel/documentation/blob/master/general/biomass.md voor meer informatie.
+input_energy_power_supercritical_coal_electricity_output_conversion,36.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_power_ultra_supercritical_coal_electricity_output_conversion,46.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_power_ultra_supercritical_ccs_coal_electricity_output_conversion,36.1,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_power_ultra_supercritical_cofiring_coal_electricity_output_conversion,42.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_power_combined_cycle_coal_electricity_output_conversion,45.3,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_power_combined_cycle_ccs_coal_electricity_output_conversion,37.3,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_power_ultra_supercritical_lignite_electricity_output_conversion,40.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_electricity_output_conversion,30.5,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_chp_ultra_supercritical_cofiring_coal_electricity_output_conversion,40.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_chp_ultra_supercritical_cofiring_coal_steam_hot_water_output_conversion,15.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_chp_ultra_supercritical_coal_electricity_output_conversion,43.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_chp_ultra_supercritical_coal_steam_hot_water_output_conversion,14.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_industry_chp_ultra_supercritical_coal_electricity_output_conversion,40.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_industry_chp_ultra_supercritical_coal_steam_hot_water_output_conversion,15.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_chp_ultra_supercritical_lignite_electricity_output_conversion,35.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_chp_ultra_supercritical_lignite_steam_hot_water_output_conversion,15.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_power_turbine_network_gas_electricity_output_conversion,34.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_power_combined_cycle_network_gas_electricity_output_conversion,60.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_power_combined_cycle_ccs_network_gas_electricity_output_conversion,49.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_power_ultra_supercritical_network_gas_electricity_output_conversion,40.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_power_engine_network_gas_electricity_output_conversion,48.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_chp_combined_cycle_network_gas_electricity_output_conversion,43.3,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_chp_combined_cycle_network_gas_steam_hot_water_output_conversion,30.5,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_chp_local_engine_network_gas_electricity_output_conversion,40.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_chp_local_engine_network_gas_steam_hot_water_output_conversion,50.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_industry_chp_engine_gas_power_fuelmix_electricity_output_conversion,43.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_industry_chp_engine_gas_power_fuelmix_steam_hot_water_output_conversion,47.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_agriculture_chp_engine_network_gas_dispatchable_electricity_output_conversion,42.0,"New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+input_agriculture_chp_engine_network_gas_dispatchable_steam_hot_water_output_conversion,53.5,"New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+input_industry_chp_turbine_gas_power_fuelmix_electricity_output_conversion,24.75,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_industry_chp_turbine_gas_power_fuelmix_steam_hot_water_output_conversion,35.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_industry_chp_combined_cycle_gas_power_fuelmix_electricity_output_conversion,43.3,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_industry_chp_combined_cycle_gas_power_fuelmix_steam_hot_water_output_conversion,30.5,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_power_ultra_supercritical_crude_oil_electricity_output_conversion,45.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_power_engine_diesel_electricity_output_conversion,38.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_power_supercritical_waste_mix_electricity_output_conversion,25.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_power_supercritical_ccs_waste_mix_electricity_output_conversion,,
+input_energy_power_nuclear_gen2_uranium_oxide_electricity_output_conversion,36.93,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_power_nuclear_gen3_uranium_oxide_electricity_output_conversion,36.93,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_chp_local_wood_pellets_electricity_output_conversion,18.3,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_chp_local_wood_pellets_steam_hot_water_output_conversion,47.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_industry_chp_wood_pellets_electricity_output_conversion,18.3,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_industry_chp_wood_pellets_steam_hot_water_output_conversion,47.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_agriculture_chp_wood_pellets_electricity_output_conversion,65.0,"New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+input_agriculture_chp_wood_pellets_steam_hot_water_output_conversion,44.0,"New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+input_energy_chp_local_engine_biogas_electricity_output_conversion,41.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_chp_local_engine_biogas_steam_hot_water_output_conversion,40.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_agriculture_chp_engine_biogas_electricity_output_conversion,42.0,"New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+input_agriculture_chp_engine_biogas_steam_hot_water_output_conversion,39.0,"New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+input_energy_chp_supercritical_waste_mix_electricity_output_conversion,20.45,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_chp_supercritical_waste_mix_steam_hot_water_output_conversion,19.95,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_industry_chp_turbine_hydrogen_electricity_output_conversion,33.445,"No data available, set to default values"
+input_industry_chp_turbine_hydrogen_steam_hot_water_output_conversion,41.472,"No data available, set to default values"
+input_energy_heat_burner_wood_pellets_steam_hot_water_output_conversion,80.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_heat_burner_coal_steam_hot_water_output_conversion,72.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_heat_burner_hydrogen_steam_hot_water_output_conversion,109.593,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_heat_burner_crude_oil_steam_hot_water_output_conversion,92.4,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_heat_burner_network_gas_steam_hot_water_output_conversion,91.5,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_heat_burner_waste_mix_steam_hot_water_output_conversion,72.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_energy_heat_boiler_electricity_steam_hot_water_output_conversion,99.5,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_industry_heat_burner_lignite_steam_hot_water_output_conversion,72.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_industry_heat_burner_coal_steam_hot_water_output_conversion,72.0,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_industry_heat_burner_crude_oil_steam_hot_water_output_conversion,92.4,Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+input_industry_heat_burner_hydrogen_steam_hot_water_output_conversion,100.0,"No data available, set to default values"
+energy_power_sector_own_use_electricity_demand,1.458,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+energy_power_hv_network_loss_demand,51.3539816,Schatting Quintel op basis van landelijke data
+energy_distribution_greengas_demand,8.95686357,"Geen data beschikbaar voor 2016. Bijschatting Quintel op basis van het totale energie-, elektriciteits- en gasgebruik in de regio (volgens Klimaatmonitor) en/of data van de afgelopen vijf jaar. Zie klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5 en klimaatmonitor.databank.nl/Jive?workspace_guid=daddc06a-6d9e-4748-b1be-c66ca6aa973c"
+energy_regasification_lng_energy_national_gas_network_natural_gas_demand,0.0,"Geen goede lokale data beschikbaar, waarde op 0 gezet."
+energy_distribution_network_gas_loss_demand,,
+input_energy_heat_distribution_ht_loss_share,24.28114278,No data available. We assume the share of loss is equal to the parent dataset (nl).
+input_energy_heat_distribution_mt_loss_share,24.28114278,No data available. We assume the share of loss is equal to the parent dataset (nl).
+input_energy_heat_distribution_lt_loss_share,24.28114278,No data available. We assume the share of loss is equal to the parent dataset (nl).
+input_energy_power_ultra_supercritical_coal_production,0.0,Geen data beschikbaar
+input_energy_power_supercritical_coal_production,0.0,Geen data beschikbaar
+input_energy_power_combined_cycle_coal_production,0.0,Geen data beschikbaar
+input_energy_power_ultra_supercritical_cofiring_coal_production,0.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_energy_power_combined_cycle_ccs_coal_production,0.0,Geen data beschikbaar
+input_energy_power_ultra_supercritical_ccs_coal_production,0.0,Geen data beschikbaar
+input_energy_chp_ultra_supercritical_ht_coal_production,0.0,Geen data beschikbaar
+input_energy_chp_ultra_supercritical_mt_coal_production,0.0,No data available. All CHPs are assumed to produce only HT heat and zero MT heat.
+input_energy_chp_ultra_supercritical_cofiring_ht_coal_production,0.0,Geen data beschikbaar
+input_energy_chp_ultra_supercritical_cofiring_mt_coal_production,0.0,No data available. All CHPs are assumed to produce only HT heat and zero MT heat.
+input_energy_power_ultra_supercritical_lignite_production,0.0,No production in start year
+input_energy_chp_ultra_supercritical_ht_lignite_production,0.0,Set to 0.0 as there is no energy production using lignite present in this area.
+input_energy_chp_ultra_supercritical_mt_lignite_production,0.0,No data available. All CHPs are assumed to produce only HT heat and zero MT heat.
+input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production,0.0,No production in start year
+input_energy_power_ultra_supercritical_network_gas_production,0.0,Geen data beschikbaar
+input_energy_power_turbine_network_gas_production,0.0,Geen data beschikbaar
+input_energy_power_engine_network_gas_production,0.0,Geen data beschikbaar
+input_energy_power_combined_cycle_network_gas_production,0.0,Geen data beschikbaar
+input_energy_power_combined_cycle_ccs_network_gas_production,0.0,Geen data beschikbaar
+input_energy_chp_combined_cycle_ht_network_gas_production,0.0,Geen data beschikbaar
+input_energy_chp_combined_cycle_mt_network_gas_production,0.0,No data available. All CHPs are assumed to produce only HT heat and zero MT heat.
+input_energy_chp_local_engine_ht_network_gas_production,11.4749607,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_energy_chp_local_engine_mt_network_gas_production,0.0,No data available. All CHPs are assumed to produce only HT heat and zero MT heat.
+input_energy_power_nuclear_gen2_uranium_oxide_production,0.0,Geen data beschikbaar
+input_energy_power_nuclear_gen3_uranium_oxide_production,0.0,Geen data beschikbaar
+input_energy_power_ultra_supercritical_crude_oil_production,0.0,Geen data beschikbaar
+input_energy_power_engine_diesel_production,0.0,Geen data beschikbaar
+energy_extraction_coal_demand,0.0,Geen data beschikbaar
+energy_extraction_lignite_demand,0.0,No data available
+energy_extraction_crude_oil_demand,0.0,Geen data beschikbaar
+energy_extraction_natural_gas_demand,0.0,Geen data beschikbaar
+energy_extraction_uranium_oxide_demand,0.0,Geen data beschikbaar
+energy_power_combined_cycle_network_gas_full_load_hours,3925.0,Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
+energy_power_ultra_supercritical_network_gas_full_load_hours,1590.0,Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
+energy_power_turbine_network_gas_full_load_hours,750.0,Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
+energy_power_engine_network_gas_full_load_hours,1.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+energy_power_supercritical_coal_full_load_hours,5000.0,Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
+energy_power_combined_cycle_coal_gas_full_load_hours,2188.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+energy_power_ultra_supercritical_ccs_coal_full_load_hours,7500.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+energy_power_ultra_supercritical_coal_full_load_hours,7100.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+energy_power_ultra_supercritical_cofiring_coal_full_load_hours,7100.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+energy_power_ultra_supercritical_lignite_full_load_hours,6329.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+energy_power_ultra_supercritical_oxyfuel_ccs_lignite_full_load_hours,5972.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+energy_power_engine_diesel_full_load_hours,4000.0,Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
+energy_power_ultra_supercritical_crude_oil_full_load_hours,4000.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+energy_power_nuclear_gen2_uranium_oxide_full_load_hours,8000.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+energy_power_nuclear_gen3_uranium_oxide_full_load_hours,7800.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+energy_power_wind_turbine_inland_full_load_hours,2069.333333,Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
+energy_power_wind_turbine_coastal_full_load_hours,2644.0,Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
+energy_power_wind_turbine_offshore_full_load_hours,3733.54232,Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
+input_solar_panels_roofs_and_parks_full_load_hours,867.0,Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
+energy_power_geothermal_full_load_hours,8000.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+energy_power_hydro_mountain_full_load_hours,4024.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+energy_power_hydro_river_full_load_hours,2005.0,Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
+energy_power_supercritical_waste_mix_full_load_hours,4100.0,Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
+energy_power_supercritical_ccs_waste_mix_full_load_hours,4100.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+flh_solar_pv_solar_radiation_max,1361.3,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+energy_chp_coal_gas_full_load_hours,6354.3,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+industry_chp_turbine_gas_power_fuelmix_full_load_hours,3200.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+industry_chp_combined_cycle_gas_power_fuelmix_full_load_hours,2959.9,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+industry_chp_engine_gas_power_fuelmix_full_load_hours,1300.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+agriculture_chp_engine_network_gas_dispatchable_full_load_hours,3942.0,"New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+input_energy_chp_local_engine_network_gas_full_load_hours,4530.0,Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
+input_energy_chp_combined_cycle_network_gas_full_load_hours,4975.0,Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
+input_energy_chp_ultra_supercritical_cofiring_coal_full_load_hours,8000.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+input_energy_chp_ultra_supercritical_coal_full_load_hours,8000.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+input_energy_chp_ultra_supercritical_lignite_full_load_hours,4500.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+industry_chp_ultra_supercritical_coal_full_load_hours,4500.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+input_energy_chp_local_wood_pellets_full_load_hours,8500.0,Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
+industry_chp_wood_pellets_full_load_hours,6000.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+agriculture_chp_wood_pellets_full_load_hours,3650.0,"New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+input_energy_chp_local_engine_biogas_full_load_hours,8500.0,Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
+agriculture_chp_engine_biogas_full_load_hours,8500.0,"New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+input_energy_chp_supercritical_waste_mix_full_load_hours,4390.0,Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
+industry_chp_turbine_hydrogen_full_load_hours,8300.0,"No data available, set to default values"
+input_energy_heat_burner_coal_full_load_hours,2190.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+industry_heat_burner_coal_full_load_hours,2190.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+industry_heat_burner_crude_oil_full_load_hours,2190.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+input_energy_heat_burner_crude_oil_full_load_hours,2190.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+input_energy_heat_burner_network_gas_full_load_hours,2190.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+industry_heat_burner_lignite_full_load_hours,2190.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+input_energy_heat_burner_wood_pellets_full_load_hours,2190.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+input_energy_heat_solar_solar_thermal_full_load_hours,684.0,Based on average full load hours of the Netherlands (2019)
+input_energy_heat_burner_waste_mix_full_load_hours,2190.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+input_energy_heat_heatpump_water_water_electricity_full_load_hours,6500.0,Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+industry_heat_burner_hydrogen_full_load_hours,7900.0,"No data available, set to default values"
+aquathermal_potential_for_surface_water,0.0,No data available. Set to 0.0.
+aquathermal_potential_for_waste_water,0.0,No data available. Set to 0.0.
+aquathermal_potential_for_drink_water,0.0,No data available. Set to 0.0.
+input_energy_heat_burner_ht_wood_pellets_production,0.0,Geen data beschikbaar
+input_energy_heat_burner_mt_wood_pellets_production,0.0,No data available. All heat producers are assumed to produce only HT heat and zero MT or LT heat.
+input_energy_heat_burner_ht_coal_production,0.0,Geen data beschikbaar
+input_energy_heat_burner_mt_coal_production,0.0,No data available. All heat producers are assumed to produce only HT heat and zero MT or LT heat.
+input_energy_heat_burner_ht_crude_oil_production,0.0,Geen data beschikbaar
+input_energy_heat_burner_mt_crude_oil_production,0.0,No data available. All heat producers are assumed to produce only HT heat and zero MT or LT heat.
+input_energy_heat_heatpump_water_water_ht_electricity_production,2.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_energy_heat_heatpump_water_water_mt_electricity_production,0.0,No data available. All heat producers are assumed to produce only HT heat and zero MT or LT heat.
+input_energy_heat_heatpump_water_water_lt_electricity_production,0.0,No data available. Production of LT heat is set to zero.
+input_energy_heat_boiler_ht_electricity_production,0.0,No data available. Production of HT heat is set to zero.
+input_energy_heat_boiler_mt_electricity_production,0.0,No data available. All heat producers are assumed to produce only HT heat and zero MT or LT heat.
+input_energy_heat_boiler_lt_electricity_production,0.0,No data available. All heat producers are assumed to produce only HT heat and zero MT or LT heat.
+input_energy_heat_well_deep_ht_geothermal_production,0.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_energy_heat_well_deep_mt_geothermal_production,0.0,No data available. All heat producers are assumed to produce only HT heat and zero MT or LT heat.
+input_energy_heat_well_shallow_heatpump_mt_geothermal_production,0.0,No data available. Production of MT heat is set to zero.
+input_energy_heat_well_shallow_lt_geothermal_production,0.0,No data available. Production of LT heat is set to zero.
+input_energy_heat_burner_ht_hydrogen_production,0.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_energy_heat_burner_mt_hydrogen_production,0.0,No data available. All heat producers are assumed to produce only HT heat and zero MT or LT heat.
+input_energy_heat_burner_lt_hydrogen_production,0.0,No data available. All heat producers are assumed to produce only HT heat and zero MT or LT heat.
+input_energy_heat_burner_ht_network_gas_production,0.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_energy_heat_burner_mt_network_gas_production,0.0,No data available. All heat producers are assumed to produce only HT heat and zero MT or LT heat.
+input_energy_heat_solar_ht_solar_thermal_production,0.0,No data available. Production of HT heat is set to zero.
+input_energy_heat_solar_mt_solar_thermal_production,0.0,Apparaat recent toegevoegd aan model. Waarde op 0 gezet.
+input_energy_heat_solar_lt_solar_thermal_production,0.0,No data available. Production of LT heat is set to zero.
+input_energy_heat_burner_ht_waste_mix_production,0.0,Geen data beschikbaar
+input_energy_heat_burner_mt_waste_mix_production,0.0,No data available. All heat producers are assumed to produce only HT heat and zero MT or LT heat.
+energy_heat_import_ht_steam_hot_water_demand,0.0,"No data available. By default, the import of heat is set to zero."
+energy_heat_import_mt_steam_hot_water_demand,0.0,"No data available. By default, the import of heat is set to zero."
+energy_heat_import_lt_steam_hot_water_demand,0.0,"No data available. By default, the import of heat is set to zero."
+input_energy_power_wind_turbine_inland_production,32.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_energy_power_wind_turbine_coastal_production,0.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_energy_power_wind_turbine_offshore_production,0.0,Geen data beschikbaar
+input_energy_power_solar_pv_solar_radiation_production,5.13,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_energy_power_solar_csp_solar_radiation_production,0.0,No production in start year
+input_energy_power_supercritical_waste_mix_production,0.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_energy_chp_supercritical_ht_waste_mix_production,0.0,Geen data beschikbaar
+input_energy_chp_supercritical_mt_waste_mix_production,0.0,No data available. All CHPs are assumed to produce only HT heat and zero MT heat.
+input_energy_power_supercritical_ccs_waste_mix_production,0.0,No production in start year
+input_energy_chp_local_ht_wood_pellets_production,0.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_energy_chp_local_mt_wood_pellets_production,0.0,No data available. All CHPs are assumed to produce only HT heat and zero MT heat.
+input_energy_chp_local_engine_ht_biogas_production,0.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_energy_chp_local_engine_mt_biogas_production,0.0,No data available. All CHPs are assumed to produce only HT heat and zero MT heat.
+input_energy_power_hydro_river_production,0.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_energy_power_hydro_mountain_production,0.0,"Geen bergen in deze regio, dus ook geen waterkracht (bergen) beschikbaar"
+input_energy_power_geothermal_production,0.0,Geen data beschikbaar
+households_final_demand_electricity_households_final_demand_for_cooking_electricity_parent_share,0.034247382,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_electricity_households_final_demand_for_cooling_electricity_parent_share,0.011492672,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_electricity_households_final_demand_for_hot_water_electricity_parent_share,0.032963105,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_electricity_households_final_demand_for_lighting_electricity_parent_share,0.104644779,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_electricity_households_final_demand_for_space_heating_electricity_parent_share,0.072882275,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_electricity_households_final_demand_for_appliances_electricity_parent_share,0.743769786,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_network_gas_households_final_demand_for_cooking_network_gas_parent_share,0.02049842,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_network_gas_households_final_demand_for_hot_water_network_gas_parent_share,0.151879838,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_network_gas_households_final_demand_for_space_heating_network_gas_parent_share,0.827621742,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_network_gas_households_final_demand_for_cooling_network_gas_parent_share,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+input_households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share,0.155058264,Standaardwaarden op basis van Nederlandse gemiddelden
+input_households_final_demand_steam_hot_water_households_final_demand_for_space_heating_steam_hot_water_parent_share,0.844941736,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_wood_pellets_households_final_demand_for_hot_water_wood_pellets_parent_share,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_wood_pellets_households_final_demand_for_space_heating_wood_pellets_parent_share,0.97826087,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_wood_pellets_households_final_demand_for_cooking_wood_pellets_parent_share,0.02173913,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_crude_oil_households_final_demand_for_space_heating_crude_oil_parent_share,1.0,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_crude_oil_households_final_demand_for_hot_water_crude_oil_parent_share,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_coal_households_final_demand_for_space_heating_coal_parent_share,1.0,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_coal_households_final_demand_for_hot_water_coal_parent_share,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share,0.963885599,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_space_heating_network_gas_households_space_heater_network_gas_parent_share,0.035792628,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_space_heating_network_gas_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share,0.000321773,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_space_heating_electricity_households_space_heater_electricity_parent_share,0.675787227,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_air_water_electricity_parent_share,0.238595983,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_space_heating_electricity_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share,0.01130998,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_ground_water_electricity_parent_share,0.074306809,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_cooking_electricity_households_cooker_halogen_electricity_parent_share,0.713740458,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_cooking_electricity_households_cooker_induction_electricity_parent_share,0.188931298,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_cooking_electricity_households_cooker_resistive_electricity_parent_share,0.097328244,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_lighting_electricity_households_lighting_incandescent_electricity_parent_share,0.791873964,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_lighting_electricity_households_lighting_efficient_fluorescent_electricity_parent_share,0.187672747,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_lighting_electricity_households_lighting_led_electricity_parent_share,0.020453289,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_appliances_electricity_households_appliances_clothes_dryer_electricity_parent_share,0.098360656,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_appliances_electricity_households_appliances_computer_media_electricity_parent_share,0.131147541,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_appliances_electricity_households_appliances_dishwasher_electricity_parent_share,0.081967213,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_appliances_electricity_households_appliances_fridge_freezer_electricity_parent_share,0.295081967,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_appliances_electricity_households_appliances_other_electricity_parent_share,0.114754098,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_appliances_electricity_households_appliances_television_electricity_parent_share,0.131147541,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_appliances_electricity_households_appliances_vacuum_cleaner_electricity_parent_share,0.06557377,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_appliances_electricity_households_appliances_washing_machine_electricity_parent_share,0.081967213,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_cooling_electricity_households_cooling_airconditioning_electricity_parent_share,0.722722307,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_cooling_electricity_households_cooling_heatpump_ground_water_electricity_parent_share,0.020224268,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_for_cooling_electricity_households_cooling_heatpump_air_water_electricity_parent_share,0.257053425,Standaardwaarden op basis van Nederlandse gemiddelden
+households_final_demand_electricity_demand,194.4949895,"Klimaatmonitor (2016), inclusief verbruik achter de meter. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5"
+households_final_demand_network_gas_demand,775.425,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_households_final_demand_steam_hot_water_demand,0.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+households_final_demand_wood_pellets_demand,46.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+households_final_demand_coal_demand,0.0,Geen data beschikbaar
+input_households_final_demand_crude_oil_demand,0.0,Geen data beschikbaar
+households_final_demand_solar_thermal_demand,0.0,Schatting Quintel op basis van landelijke data
+input_percentage_of_lt_steam_hot_water_households_final_demand_steam_hot_water,0.0,No data available. Fallback value set to 0.0 to ensure share totals sum to 1.
+input_percentage_of_mt_steam_hot_water_households_final_demand_steam_hot_water,0.0,No data available. Fallback value set to 0.0 to ensure share totals sum to 1.
+input_percentage_of_ht_steam_hot_water_households_final_demand_steam_hot_water,1.0,No data available. Fallback value set to 1.0 to ensure share totals sum to 1.
+input_percentage_of_diesel_households_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_biodiesel_households_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_kerosene_households_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_bio_kerosene_households_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_lpg_households_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_bio_oil_households_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_crude_oil_households_final_demand_crude_oil,1.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_households_solar_pv_demand,0.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+number_of_inhabitants,47609.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+residences_roof_surface_available_for_pv,0.883728,Schatting Quintel. Zie refman.energytransitionmodel.com/publications/2098 voor een overzicht van onze schattingsmethoden.
+present_number_of_apartments_before_1945,991.0,
+present_number_of_apartments_1945_1964,875.0,
+present_number_of_apartments_1965_1984,2570.0,
+present_number_of_apartments_1985_2004,1190.0,
+present_number_of_apartments_2005_present,1229.0,
+present_number_of_detached_houses_before_1945,394.0,
+present_number_of_detached_houses_1945_1964,252.0,
+present_number_of_detached_houses_1965_1984,215.0,
+present_number_of_detached_houses_1985_2004,461.0,
+present_number_of_detached_houses_2005_present,137.0,
+present_number_of_semi_detached_houses_before_1945,1361.0,
+present_number_of_semi_detached_houses_1945_1964,940.0,
+present_number_of_semi_detached_houses_1965_1984,1492.0,
+present_number_of_semi_detached_houses_1985_2004,1217.0,
+present_number_of_semi_detached_houses_2005_present,418.0,
+present_number_of_terraced_houses_before_1945,2098.0,
+present_number_of_terraced_houses_1945_1964,980.0,
+present_number_of_terraced_houses_1965_1984,2741.0,
+present_number_of_terraced_houses_1985_2004,2071.0,
+present_number_of_terraced_houses_2005_present,620.0,
+typical_useful_demand_for_space_heating_apartments_before_1945,265.2835551,
+typical_useful_demand_for_space_heating_apartments_1945_1964,214.6337842,
+typical_useful_demand_for_space_heating_apartments_1965_1984,161.3992385,
+typical_useful_demand_for_space_heating_apartments_1985_2004,153.6233559,
+typical_useful_demand_for_space_heating_apartments_2005_present,125.5096848,
+typical_useful_demand_for_space_heating_apartments_future,65.0,No data available. Set to nl2019 values.
+typical_useful_demand_for_space_heating_detached_houses_before_1945,319.3469285,
+typical_useful_demand_for_space_heating_detached_houses_1945_1964,272.4634437,
+typical_useful_demand_for_space_heating_detached_houses_1965_1984,221.7143176,
+typical_useful_demand_for_space_heating_detached_houses_1985_2004,148.9057613,
+typical_useful_demand_for_space_heating_detached_houses_2005_present,119.5310113,
+typical_useful_demand_for_space_heating_detached_houses_future,55.0,No data available. Set to nl2019 values.
+typical_useful_demand_for_space_heating_semi_detached_houses_before_1945,284.4728504,
+typical_useful_demand_for_space_heating_semi_detached_houses_1945_1964,206.2098265,
+typical_useful_demand_for_space_heating_semi_detached_houses_1965_1984,194.4211696,
+typical_useful_demand_for_space_heating_semi_detached_houses_1985_2004,152.5549371,
+typical_useful_demand_for_space_heating_semi_detached_houses_2005_present,117.2975439,
+typical_useful_demand_for_space_heating_semi_detached_houses_future,55.0,No data available. Set to nl2019 values.
+typical_useful_demand_for_space_heating_terraced_houses_before_1945,258.3172562,
+typical_useful_demand_for_space_heating_terraced_houses_1945_1964,161.2552935,
+typical_useful_demand_for_space_heating_terraced_houses_1965_1984,188.2175811,
+typical_useful_demand_for_space_heating_terraced_houses_1985_2004,146.4070638,
+typical_useful_demand_for_space_heating_terraced_houses_2005_present,114.3907544,
+typical_useful_demand_for_space_heating_terraced_houses_future,55.0,No data available. Set to nl2019 values.
+present_share_of_apartments_before_1945_in_useful_demand_for_space_heating,0.04447908,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_apartments_1945_1964_in_useful_demand_for_space_heating,0.03651617,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_apartments_1965_1984_in_useful_demand_for_space_heating,0.11173605,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_apartments_1985_2004_in_useful_demand_for_space_heating,0.0569468,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_apartments_2005_present_in_useful_demand_for_space_heating,0.05902217,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_detached_houses_before_1945_in_useful_demand_for_space_heating,0.01708486,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_detached_houses_1945_1964_in_useful_demand_for_space_heating,0.01014341,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_detached_houses_1965_1984_in_useful_demand_for_space_heating,0.00937629,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_detached_houses_1985_2004_in_useful_demand_for_space_heating,0.02219638,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_detached_houses_2005_present_in_useful_demand_for_space_heating,0.00601814,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_semi_detached_houses_before_1945_in_useful_demand_for_space_heating,0.05969027,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_semi_detached_houses_1945_1964_in_useful_demand_for_space_heating,0.03567067,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_semi_detached_houses_1965_1984_in_useful_demand_for_space_heating,0.06543316,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_semi_detached_houses_1985_2004_in_useful_demand_for_space_heating,0.05960258,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_semi_detached_houses_2005_present_in_useful_demand_for_space_heating,0.01812518,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_terraced_houses_before_1945_in_useful_demand_for_space_heating,0.09308026,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_terraced_houses_1945_1964_in_useful_demand_for_space_heating,0.03781504,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_terraced_houses_1965_1984_in_useful_demand_for_space_heating,0.12183413,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_terraced_houses_1985_2004_in_useful_demand_for_space_heating,0.10691386,Based on both the EP-online dataset and the PBL referentieverbruiken
+present_share_of_terraced_houses_2005_present_in_useful_demand_for_space_heating,0.0283155,Based on both the EP-online dataset and the PBL referentieverbruiken
+input_industry_ict_electricity_demand,12.4848,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_industry_metal_aluminium_production,7.50000000000001e-05,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_aluminium_electrolysis_current_electricity_share,0.8000000000000003,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_aluminium_smeltoven_electricity_share,0.19999999999999982,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_metal_aluminium_electricity_demand,3.527400000000009,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_metal_aluminium_network_gas_demand,0.3050000000000007,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_electrolysis_current_electricity_parent_share,0.9814594318761695,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_smeltoven_electricity_parent_share,0.018540568123830488,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+industry_aluminium_burner_network_gas_industry_aluminium_electrolysis_current_electricity_parent_share,0.800000000000001,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+industry_aluminium_burner_network_gas_industry_aluminium_smeltoven_electricity_parent_share,0.199999999999999,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_other_electricity_demand,13.9633308,Klimaatmonitor (2016). Onderverdeling van verbruik van de industrie naar subsectoren op basis van emissiegegevens. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5 & http://www.emissieregistratie.nl.
+input_industry_chemical_other_network_gas_demand,5.88034845,Klimaatmonitor (2016). Onderverdeling van verbruik van de industrie naar subsectoren op basis van emissiegegevens. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5 & http://www.emissieregistratie.nl.
+input_industry_chemical_other_steam_hot_water_demand,0.0,Geen data beschikbaar
+input_industry_chemical_other_wood_pellets_demand,0.0,Geen data beschikbaar
+input_industry_chemical_other_crude_oil_demand,0.0,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+input_industry_chemical_other_coal_demand,0.0,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+input_industry_chemical_other_network_gas_non_energetic_demand,0.0,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+input_industry_chemical_other_wood_pellets_non_energetic_demand,0.0,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+input_industry_chemical_other_crude_oil_non_energetic_demand,0.0,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+input_industry_chemical_other_coal_non_energetic_demand,0.0,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+input_industry_chemical_fertilizers_electricity_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_fertilizers_network_gas_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_fertilizers_steam_hot_water_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_fertilizers_wood_pellets_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_fertilizers_crude_oil_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_fertilizers_coal_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_fertilizers_network_gas_non_energetic_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_fertilizers_wood_pellets_non_energetic_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_fertilizers_crude_oil_non_energetic_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_fertilizers_coal_non_energetic_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_fertilizers_hydrogen_non_energetic_demand,0.0,No hydrogen demand in start year
+input_industry_food_electricity_demand,65.9835828,Klimaatmonitor (2016). Onderverdeling van verbruik van de industrie naar subsectoren op basis van emissiegegevens. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5 & http://www.emissieregistratie.nl.
+input_industry_food_network_gas_demand,27.78752895,Klimaatmonitor (2016). Onderverdeling van verbruik van de industrie naar subsectoren op basis van emissiegegevens. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5 & http://www.emissieregistratie.nl.
+input_industry_food_steam_hot_water_demand,0.0,Geen data beschikbaar
+input_industry_food_wood_pellets_demand,0.0,Geen data beschikbaar
+input_industry_food_crude_oil_demand,0.0,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+input_industry_food_coal_demand,0.0,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+industry_final_demand_for_other_food_electricity_industry_useful_demand_for_other_food_electricity_parent_share,1.0,Gebaseerd op Nederlands gemiddelde
+industry_final_demand_for_other_food_electricity_industry_other_food_heater_electricity_parent_share,0.0,Gebaseerd op Nederlands gemiddelde
+industry_chp_combined_cycle_gas_power_fuelmix_demand,0.0,Geen data beschikbaar
+industry_chp_engine_gas_power_fuelmix_demand,0.0,Geen data beschikbaar
+industry_chp_turbine_gas_power_fuelmix_demand,0.0,Geen data beschikbaar
+industry_chp_ultra_supercritical_coal_demand,0.0,Geen data beschikbaar
+industry_chp_wood_pellets_demand,0.0,Apparaat recent toegevoegd aan model. Waarde op 0 gezet.
+industry_chp_turbine_hydrogen_demand,0.0,"No data available, set to default values"
+industry_heat_burner_lignite_demand,0.0,Apparaat recent toegevoegd aan model. Waarde op 0 gezet.
+industry_heat_burner_coal_demand,0.0,Apparaat recent toegevoegd aan model. Waarde op 0 gezet.
+industry_heat_well_geothermal_demand,0.0,Apparaat recent toegevoegd aan model. Waarde op 0 gezet.
+industry_heat_burner_crude_oil_demand,0.0,Apparaat recent toegevoegd aan model. Waarde op 0 gezet.
+industry_heat_burner_hydrogen_demand,0.0,"No data available, set to default values"
+input_share_mixer_gas_fuel_bio_oil,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+input_share_mixer_gas_fuel_oil,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+input_share_mixer_gas_fuel_network_gas,1.0,Standaardwaarden op basis van Nederlandse gemiddelden
+input_percentage_of_diesel_industry_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_biodiesel_industry_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_kerosene_industry_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_bio_kerosene_industry_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_lpg_industry_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_bio_oil_industry_final_demand_crude_oil,0.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_percentage_of_crude_oil_industry_final_demand_crude_oil,1.0,Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+input_industry_metal_other_electricity_demand,103.2191316,Klimaatmonitor (2016). Onderverdeling van verbruik van de industrie naar subsectoren op basis van emissiegegevens. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5 & http://www.emissieregistratie.nl.
+input_industry_metal_other_network_gas_demand,43.46845815,Klimaatmonitor (2016). Onderverdeling van verbruik van de industrie naar subsectoren op basis van emissiegegevens. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5 & http://www.emissieregistratie.nl.
+input_industry_metal_other_steam_hot_water_demand,0.0,Geen data beschikbaar
+input_industry_metal_other_crude_oil_demand,0.0,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+input_industry_metal_other_coal_demand,0.0,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+input_industry_other_electricity_demand,158.4934056,Klimaatmonitor (2016). Onderverdeling van verbruik van de industrie naar subsectoren op basis van emissiegegevens. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5 & http://www.emissieregistratie.nl.
+input_industry_other_network_gas_demand,45.6103179,Klimaatmonitor (2016). Onderverdeling van verbruik van de industrie naar subsectoren op basis van emissiegegevens. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5 & http://www.emissieregistratie.nl.
+input_industry_other_steam_hot_water_demand,0.0,Geen data beschikbaar
+input_industry_other_wood_pellets_demand,0.0,Geen data beschikbaar
+input_industry_other_crude_oil_demand,0.0,Geen data beschikbaar
+input_industry_other_coal_demand,0.0,Geen data beschikbaar
+input_industry_other_cokes_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_industry_other_network_gas_non_energetic_demand,0.0,Geen data beschikbaar
+input_industry_other_wood_pellets_non_energetic_demand,0.0,Geen data beschikbaar
+input_industry_other_crude_oil_non_energetic_demand,0.0,Geen data beschikbaar
+input_industry_other_coal_non_energetic_demand,0.0,Geen data beschikbaar
+input_industry_other_cokes_non_energetic_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_industry_paper_electricity_demand,13.4157492,Klimaatmonitor (2016). Onderverdeling van verbruik van de industrie naar subsectoren op basis van emissiegegevens. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5 & http://www.emissieregistratie.nl.
+input_industry_paper_network_gas_demand,5.64974655,Klimaatmonitor (2016). Onderverdeling van verbruik van de industrie naar subsectoren op basis van emissiegegevens. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5 & http://www.emissieregistratie.nl.
+input_industry_paper_steam_hot_water_demand,0.0,Geen data beschikbaar
+input_industry_paper_wood_pellets_demand,0.0,Geen data beschikbaar
+input_industry_paper_crude_oil_demand,0.0,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+input_industry_paper_coal_demand,0.0,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+industry_final_demand_for_other_paper_electricity_industry_useful_demand_for_other_paper_electricity_parent_share,1.0,Gebaseerd op Nederlands gemiddelde
+industry_final_demand_for_other_paper_electricity_industry_other_paper_heater_electricity_parent_share,0.0,Gebaseerd op Nederlands gemiddelde
+industry_useful_demand_for_chemical_refineries_crude_oil_non_energetic_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_refineries_wood_pellets_non_energetic_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_refineries_network_gas_non_energetic_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_refineries_coal_non_energetic_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_refineries_electricity_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_refineries_network_gas_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_refineries_steam_hot_water_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_refineries_wood_pellets_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_refineries_coal_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_chemical_refineries_crude_oil_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_refinery_transformation_crude_oil_other_oil_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_refinery_transformation_crude_oil_gasoline_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_refinery_transformation_crude_oil_heavy_fuel_oil_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_refinery_transformation_crude_oil_kerosene_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_refinery_transformation_crude_oil_lpg_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_refinery_transformation_crude_oil_refinery_gas_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_refinery_transformation_crude_oil_diesel_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+energy_distribution_crude_oil_loss_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019.
+            URL: http://www.emissieregistratie.nl"
+input_industry_metal_steel_production,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_industry_steel_blastfurnace_bof_share,0.9847033595425303,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_industry_steel_scrap_hbi_eaf_share,,
+input_industry_metal_steel_coal_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_industry_metal_steel_cokes_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_industry_metal_steel_coal_gas_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_industry_metal_steel_electricity_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_industry_metal_steel_network_gas_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_industry_metal_steel_steam_hot_water_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_industry_metal_steel_crude_oil_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_industry_metal_steel_wood_pellets_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_energy_cokesoven_transformation_coal_input_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_energy_cokesoven_transformation_cokes_output_conversion,0.710233550857932,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_energy_cokesoven_transformation_coal_gas_output_conversion,0.201181414633627,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_energy_cokesoven_transformation_loss_output_conversion,,
+input_energy_blastfurnace_transformation_coal_input_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_energy_blastfurnace_transformation_cokes_input_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_energy_blastfurnace_transformation_coal_gas_output_conversion,0.400028846858287,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_energy_blastfurnace_transformation_loss_output_conversion,,
+input_energy_power_combined_cycle_coal_gas_coal_gas_input_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_energy_chp_coal_gas_coal_gas_input_demand,0.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_energy_power_combined_cycle_coal_gas_electricity_output_conversion,0.379281273174552,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_energy_power_combined_cycle_coal_gas_loss_output_conversion,,
+input_energy_chp_coal_gas_electricity_output_conversion,0.423469024025095,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_energy_chp_coal_gas_steam_hot_water_output_conversion,0.0279415045177848,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+input_energy_chp_coal_gas_loss_output_conversion,,
+industry_final_demand_for_metal_steel_coal_industry_steel_blastfurnace_bof_parent_share,0.963,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+industry_final_demand_for_metal_steel_coal_industry_steel_scrap_hbi_eaf_parent_share,,
+industry_final_demand_for_metal_steel_cokes_industry_steel_blastfurnace_bof_parent_share,1.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+industry_final_demand_for_metal_steel_cokes_industry_steel_scrap_hbi_eaf_parent_share,,
+industry_final_demand_for_metal_steel_crude_oil_industry_steel_blastfurnace_bof_parent_share,1.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+industry_final_demand_for_metal_steel_crude_oil_industry_steel_scrap_hbi_eaf_parent_share,,
+industry_final_demand_for_metal_steel_electricity_industry_steel_blastfurnace_bof_parent_share,0.987,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+industry_final_demand_for_metal_steel_electricity_industry_steel_scrap_hbi_eaf_parent_share,,
+industry_final_demand_for_metal_steel_network_gas_industry_steel_blastfurnace_bof_parent_share,0.971,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+industry_final_demand_for_metal_steel_network_gas_industry_steel_scrap_hbi_eaf_parent_share,,
+industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_blastfurnace_bof_parent_share,1.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_scrap_hbi_eaf_parent_share,,
+industry_final_demand_for_metal_steel_wood_pellets_industry_steel_blastfurnace_bof_parent_share,1.0,"Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans.
+            URL: http://www.emissieregistratie.nl"
+industry_final_demand_for_metal_steel_wood_pellets_industry_steel_scrap_hbi_eaf_parent_share,,
+other_final_demand_electricity_demand,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+other_final_demand_network_gas_demand,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+input_other_final_demand_steam_hot_water_demand,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+other_final_demand_wood_pellets_demand,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+other_final_demand_coal_demand,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+other_final_demand_crude_oil_demand,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+other_final_demand_crude_oil_non_energetic_demand,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+transport_final_demand_kerosene_demand,0.0,Schatting Quintel. Zie refman.energytransitionmodel.com/publications/2098 voor een overzicht van onze schattingsmethoden.
+input_transport_plane_gasoline_demand,0.0,Schatting Quintel. Zie refman.energytransitionmodel.com/publications/2098 voor een overzicht van onze schattingsmethoden.
+input_transport_plane_bio_ethanol_demand,0.0,Geen data beschikbaar
+input_transport_plane_electricity_demand,0.0,No data available. Set to 0.0.
+bunkers_total_useful_demand_planes_demand,166290.19,Set to 0.0
+input_transport_rail_electricity_demand,26.00969719,Schatting Quintel op basis van aantal treinreizigers.
+input_transport_rail_diesel_demand,7.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_transport_rail_biodiesel_demand,0.0,Geen data beschikbaar
+transport_final_demand_coal_demand,0.0,Geen data beschikbaar
+transport_final_demand_for_rail_electricity_transport_freight_train_using_electricity_parent_share,0.137103915,Schatting Quintel op basis van landelijke data
+transport_final_demand_for_rail_electricity_transport_tram_using_electricity_parent_share,0.0,Schatting Quintel op basis van landelijke data
+transport_final_demand_for_rail_electricity_transport_passenger_train_using_electricity_parent_share,0.862896085,Schatting Quintel op basis van landelijke data
+transport_rail_mixer_diesel_transport_freight_train_using_diesel_mix_parent_share,0.106572736,Standaardwaarden op basis van Nederlandse gemiddelden
+transport_rail_mixer_diesel_transport_passenger_train_using_diesel_mix_parent_share,0.893427264,Standaardwaarden op basis van Nederlandse gemiddelden
+number_of_cars,21180.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+number_of_vans,1477.0,CBS 2019
+number_of_busses,4.0,CBS 2019
+number_of_trucks,150.0,CBS 2019
+input_transport_road_human_powered_bicycle_demand,33553532.62,Schatting Quintel op basis van landelijke data
+input_transport_road_gasoline_demand,370.8533638,"Klimaatmonitor (2016), inclusief verbruik mobiele werktuigen. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5"
+input_transport_road_diesel_demand,346.8271279,"Klimaatmonitor (2016), inclusief verbruik mobiele werktuigen. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5"
+transport_final_demand_lpg_demand,8.090885885,"Klimaatmonitor (2016), inclusief verbruik mobiele werktuigen. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5"
+input_transport_road_electricity_demand,2.185075374,Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_transport_road_bio_ethanol_demand,23.52574721,"Klimaatmonitor (2016), inclusief verbruik mobiele werktuigen. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5"
+input_transport_road_biodiesel_demand,22.47425279,"Klimaatmonitor (2016), inclusief verbruik mobiele werktuigen. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5"
+transport_final_demand_for_road_compressed_network_gas_demand,0.056528277,Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+transport_final_demand_hydrogen_demand,0.0,Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+transport_final_demand_for_road_lng_demand,0.0,Geen data beschikbaar
+transport_final_demand_for_road_bio_lng_demand,0.0,Geen data beschikbaar
+transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share,0.954494774,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+transport_road_mixer_gasoline_transport_van_using_gasoline_mix_parent_share,0.007353351,Schatting Quintel op basis van emissiegegevens. Emissieregistratie rapporteert per voertuigtype en brandstof hoeveel CO2 er wordt uitgestoten per gemeente. Op basis hiervan is in te schatten hoeveel brandstof er door elk voertuigtype verbruikt is. URL: http://www.emissieregistratie.nl
+transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share,0.0,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+transport_road_mixer_gasoline_transport_truck_using_gasoline_mix_parent_share,0.0,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+transport_road_mixer_gasoline_transport_motorcycle_using_gasoline_mix_parent_share,0.038151875,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+transport_road_mixer_diesel_transport_car_using_diesel_mix_parent_share,0.210974782,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+transport_road_mixer_diesel_transport_van_using_diesel_mix_parent_share,0.105030819,Schatting Quintel op basis van emissiegegevens. Emissieregistratie rapporteert per voertuigtype en brandstof hoeveel CO2 er wordt uitgestoten per gemeente. Op basis hiervan is in te schatten hoeveel brandstof er door elk voertuigtype verbruikt is. URL: http://www.emissieregistratie.nl
+transport_road_mixer_diesel_transport_bus_using_diesel_mix_parent_share,0.039500952,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+transport_road_mixer_diesel_transport_truck_using_diesel_mix_parent_share,0.644493447,Schatting Quintel op basis van emissiegegevens. URL: http://www.emissieregistratie.nl
+transport_final_demand_for_road_electricity_transport_car_using_electricity_parent_share,0.692461239,Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+transport_final_demand_for_road_electricity_transport_van_using_electricity_parent_share,0.087862029,Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor) en typisch verbruik per voertuig. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=167c3997-e723-48a4-99f9-f32118aba43a
+transport_final_demand_for_road_electricity_transport_bus_using_electricity_parent_share,0.0,Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+transport_final_demand_for_road_electricity_transport_motorcycle_using_electricity_parent_share,0.117304878,Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+transport_final_demand_for_road_electricity_transport_bicycle_using_electricity_parent_share,0.102371854,Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+transport_final_demand_for_road_electricity_transport_truck_using_electricity_parent_share,0.0,Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+transport_road_mixer_compressed_network_gas_transport_bus_using_compressed_natural_gas_parent_share,1.0,Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+transport_road_mixer_compressed_network_gas_transport_car_using_compressed_natural_gas_parent_share,0.0,Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+transport_road_mixer_compressed_network_gas_transport_van_using_compressed_natural_gas_parent_share,0.0,Schatting Quintel op basis van emissiegegevens. Emissieregistratie rapporteert per voertuigtype en brandstof hoeveel CO2 er wordt uitgestoten per gemeente. Op basis hiervan is in te schatten hoeveel brandstof er door elk voertuigtype verbruikt is. URL: http://www.emissieregistratie.nl
+transport_road_mixer_compressed_network_gas_transport_truck_using_compressed_natural_gas_parent_share,0.0,Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_transport_road_car_hydrogen_share,0.0,Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+transport_final_demand_for_road_hydrogen_transport_van_using_hydrogen_parent_share,1.0,Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor) en typisch verbruik per voertuig. URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=167c3997-e723-48a4-99f9-f32118aba43a
+transport_final_demand_for_road_hydrogen_transport_bus_using_hydrogen_parent_share,0.0,Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+transport_final_demand_for_road_hydrogen_transport_truck_using_hydrogen_parent_share,0.0,Schatting Quintel gebaseerd op aantal voertuigen (Klimaatmonitor). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+transport_road_mixer_lng_transport_bus_using_lng_mix_parent_share,1.0,Standaardwaarden op basis van Nederlandse gemiddelden
+transport_road_mixer_lng_transport_truck_using_lng_mix_parent_share,0.0,Standaardwaarden op basis van Nederlandse gemiddelden
+transport_final_demand_for_road_lpg_transport_car_using_lpg_parent_share,0.781014655,Schatting Quintel op basis van emissiegegevens. Emissieregistratie rapporteert per voertuigtype en brandstof hoeveel CO2 er wordt uitgestoten per gemeente. Op basis hiervan is in te schatten hoeveel brandstof er door elk voertuigtype verbruikt is. URL: http://www.emissieregistratie.nl
+transport_final_demand_for_road_lpg_transport_van_using_lpg_parent_share,0.218985345,Schatting Quintel op basis van emissiegegevens. Emissieregistratie rapporteert per voertuigtype en brandstof hoeveel CO2 er wordt uitgestoten per gemeente. Op basis hiervan is in te schatten hoeveel brandstof er door elk voertuigtype verbruikt is. URL: http://www.emissieregistratie.nl
+input_transport_ship_diesel_demand,45.0,Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5
+input_transport_ship_biodiesel_demand,0.0,Geen data beschikbaar
+transport_final_demand_for_shipping_lng_demand,0.0,Geen data beschikbaar
+transport_final_demand_for_shipping_bio_lng_demand,0.0,Geen data beschikbaar
+input_transport_ship_bio_ethanol_demand,0.0,Based on country-level energy balance data bio-ethanol demand for domestic navigation is 0.0
+transport_final_demand_heavy_fuel_oil_demand,0.0,Geen data beschikbaar
+input_transport_ship_electricity_demand,0.0,No data available. Set to 0.0.
+bunkers_total_useful_demand_ships_demand,491955.99,Set to 0.0

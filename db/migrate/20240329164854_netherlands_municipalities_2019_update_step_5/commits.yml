@@ -1,0 +1,7 @@
+---
+# These values are based on the Dutch values (from ETDataset) and similar for all municipalities. 
+
+- fields:
+  - :all
+  message:
+    Derived from the Dutch dataset (2019), similar for all municipalities.

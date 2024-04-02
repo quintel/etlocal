@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    "Assumed the value of the most recent construction period."

@@ -23,6 +23,7 @@
   - input_energy_power_wind_turbine_inland_production
   - input_energy_power_solar_pv_solar_radiation_production
   - input_energy_power_hydro_river_production
+  - input_households_final_demand_steam_hot_water_demand
   message:
    "Klimaatmonitor (2019). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=0cd61e23-94d0-4edf-ac96-67241c64d133"
 

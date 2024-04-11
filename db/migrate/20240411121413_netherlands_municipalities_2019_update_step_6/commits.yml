@@ -1,8 +1,9 @@
 ---
+# These values are based on additional data research separate from steps 1 to 5
 - fields:
   - input_industry_chemical_fertilizers_hydrogen_non_energetic_demand
   message:
-    Er is geen waterstof vraag aanwezig in de kunstmest industrie in 2019 volgens de Nederlandse energiebalans. 
+    "Er is geen waterstof vraag aanwezig in de kunstmest industrie in 2019 volgens de Nederlandse energiebalans."
 - fields:
   - areable_land
   message:

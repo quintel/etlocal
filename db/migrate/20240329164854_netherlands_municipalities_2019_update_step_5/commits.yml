@@ -1,6 +1,5 @@
 ---
 # These values are based on the Dutch values (from ETDataset) and similar for all municipalities. 
-
 - fields:
   - file_carriers_imported_hydrogen_co2_conversion_per_mj
   message: Add emissions and costs for energy carriers using data for the Netherlands in 2018.
@@ -79,6 +78,9 @@
   message: Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
 - fields: 
   - industry_final_demand_for_other_food_electricity_industry_other_food_heater_electricity_parent_share
+  - industry_final_demand_for_other_food_electricity_industry_useful_demand_for_other_food_electricity_parent_share
+  - industry_final_demand_for_other_paper_electricity_industry_other_paper_heater_electricity_parent_share
+  - industry_final_demand_for_other_paper_electricity_industry_useful_demand_for_other_paper_electricity_parent_share
   message: Gebaseerd op Nederlands gemiddelde
 - fields:
   - energy_extraction_coal_demand

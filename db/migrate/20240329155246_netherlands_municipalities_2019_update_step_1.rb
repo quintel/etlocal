@@ -13,7 +13,7 @@ class NetherlandsMunicipalities2019UpdateStep1 < ActiveRecord::Migration[5.0]
     #     # ...
     #   end
     #
-    CSVImporter.run(data_path, commits_path) do |row, runner|
+    CSVImporter.run(data_path, commits_path, create_missing_datasets: true) do |row, runner|
       print "Updating #{row['geo_id']}... "
       commits = runner.call
 

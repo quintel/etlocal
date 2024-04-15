@@ -1,6 +1,18 @@
 ---
 # These values are based on additional data research separate from steps 1 to 5
 - fields:
+  - heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket
+  - heat_length_of_connection_pipelines_in_meter_per_residence_first_bracket
+  - heat_length_of_connection_pipelines_in_meter_per_residence_fourth_bracket
+  - heat_length_of_connection_pipelines_in_meter_per_residence_second_bracket
+  - heat_length_of_connection_pipelines_in_meter_per_residence_third_bracket
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_fifth_bracket
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_first_bracket
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_fourth_bracket
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_second_bracket
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_third_bracket
+  message: "Analyse op basis van data van Greenvis en Vesta MAIS. In deze analyse is voor elke buurt in Nederland een schatting gemaakt van de benodigde leidinglengtes indien er een warmtenet wordt aangelegd in die buurt. Voor gemeenten, RESsen en provincies in het ETM hebben we de (gewogen) gemiddelde leidinglengte uitgerekend voor vijf 'aansluitklassen': Wat is de gemiddelde benodigde leidinglengte als we de 20% buurten/huizen met de laagste gemiddelde leidinglengte aansluiten? Wat is het gemiddelde als we 40% aansluiten? Etc. Hierdoor kan het ETM met hogere kosten per aansluiting rekenen als er meer afgelegen gebieden worden aangesloten op het warmtenet."
+- fields:
   - input_industry_chemical_fertilizers_hydrogen_non_energetic_demand
   message:
     "Er is geen waterstof vraag aanwezig in de kunstmest industrie in 2019 volgens de Nederlandse energiebalans."

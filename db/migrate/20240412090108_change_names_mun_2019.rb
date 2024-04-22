@@ -84,6 +84,7 @@ class ChangeNamesMun2019 < ActiveRecord::Migration[7.0]
       GM0385: 'Edam-Volendam',
       GM0228: 'Ede',
       GM0317: 'Eemnes',
+      GM1979: 'Eemsdelta', 
       GM0770: 'Eersel',
       GM1903: 'Eijsden-Margraten',
       GM0772: 'Eindhoven',

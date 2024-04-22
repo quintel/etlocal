@@ -98,6 +98,13 @@
   - input_percentage_of_lpg_agriculture_final_demand_crude_oil
   - input_percentage_of_lpg_buildings_final_demand_crude_oil
   - input_percentage_of_lpg_industry_final_demand_crude_oil
+  - input_percentage_of_diesel_households_final_demand_crude_oil
+  - input_percentage_of_biodiesel_households_final_demand_crude_oil
+  - input_percentage_of_kerosene_households_final_demand_crude_oil
+  - input_percentage_of_bio_kerosene_households_final_demand_crude_oil
+  - input_percentage_of_lpg_households_final_demand_crude_oil
+  - input_percentage_of_bio_oil_households_final_demand_crude_oil
+  - input_percentage_of_crude_oil_households_final_demand_crude_oil
   message: Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
 - fields:
   - energy_regasification_lng_energy_national_gas_network_natural_gas_demand
@@ -162,6 +169,7 @@
   - energy_power_combined_cycle_coal_gas_full_load_hours
   - input_industry_other_cokes_demand
   - input_industry_other_cokes_non_energetic_demand
+  - input_energy_blastfurnace_transformation_coal_gas_output_conversion
   message: "Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans. URL: http://www.emissieregistratie.nl"
 - fields:
   - input_energy_chp_ultra_supercritical_ht_lignite_production
@@ -185,3 +193,15 @@
   - mv_net_costs_per_capacity_step
   - mv_net_spare_capacity
   message: Standaardwaarden op basis van Nederlandse gemiddelden
+- fields:
+  - input_percentage_of_central_ht_steam_hot_water_agriculture_final_demand_steam_hot_water
+  - input_percentage_of_local_steam_hot_water_agriculture_final_demand_steam_hot_water
+  message: New attribute (added to ETM in Dec 2022). Assumed that all agricultural heat is produced by district heating.
+- fields:
+  - file_carriers_propane_co2_conversion_per_mj
+  message: Set to 0.06448 based on the update of the Netherlands list of fuels in 2021 by TNO.
+- fields:
+  - input_energy_power_supercritical_ccs_waste_mix_electricity_output_conversion
+  message:
+    "Gebaseerd op de gemiddelde Nederlandse waarde, hetzelfde voor alle regio's."
+    

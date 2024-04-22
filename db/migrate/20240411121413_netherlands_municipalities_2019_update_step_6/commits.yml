@@ -71,9 +71,11 @@
   - input_industry_refinery_transformation_crude_oil_lpg_demand
   - input_industry_refinery_transformation_crude_oil_other_oil_demand
   - input_industry_refinery_transformation_crude_oil_refinery_gas_demand
+  - industry_useful_demand_for_chemical_refineries_crude_oil_non_energetic_demand
   message:
     "Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019. URL: http://www.emissieregistratie.nl"
 - fields:
+  - input_industry_metal_steel_production
   - input_industry_metal_steel_coal_demand
   - input_industry_metal_steel_cokes_demand
   - input_industry_metal_steel_coal_gas_demand

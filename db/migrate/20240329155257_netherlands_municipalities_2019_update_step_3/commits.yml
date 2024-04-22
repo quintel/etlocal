@@ -1,8 +1,5 @@
 ---
 - fields:
-  - file_carriers_imported_heat_co2_conversion_per_mj
-  message: Based on https://www.co2emissiefactoren.nl/lijst-emissiefactoren/
-- fields:
   - file_carriers_propane_co2_conversion_per_mj
   message: Adopted from the parent dataset (the Netherlands)
 - fields:
@@ -39,9 +36,6 @@
   - input_percentage_of_crude_oil_households_final_demand_crude_oil
   message: No data available on Klimaatmonitor. Fallback value set to 1.0 to ensure
     share totals sum to 1.0.
-- fields:
-  - input_households_solar_pv_demand
-  message: No data available on Klimaatmonitor. Set to 0.0.
 - fields:
   - input_percentage_of_lt_steam_hot_water_buildings_final_demand_steam_hot_water
   message: No data available. Fallback value set to 0.0 to ensure share totals sum

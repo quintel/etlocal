@@ -38,7 +38,7 @@
 - fields:
   - coast_line
   message: 
-    "Schatting op basis van meest recenta data bodemgebruik (CBS: 2017). Bevat de categorieen 'Binnenwater' en 'Buitenwater', aanname is dat 1 vierkante kilometer water zich vertaald tot 1 kilometer kustlijn."
+    "Schatting op basis van meest recenta data bodemgebruik (CBS: 2017). Bevat de categorie 'Buitenwater', aanname is dat 1 vierkante kilometer water zich vertaald tot 1 kilometer kustlijn."
 - fields:
   - input_industry_metal_aluminium_production
   - input_industry_aluminium_electrolysis_current_electricity_share

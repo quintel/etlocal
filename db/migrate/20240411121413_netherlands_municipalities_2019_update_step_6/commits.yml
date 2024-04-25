@@ -23,7 +23,7 @@
 - fields:
   - total_land_area
   message:
-    "Meest recenta data bodemgebruik (CBS: 2017). Bevat de categorie 'Totale oppervlakte'."
+    "Meest recenta data bodemgebruik (CBS: 2017). Bevat de categorie 'Totale oppervlakte' minus de categorieen 'Binnenwater' en 'Buitenwater'."
 - fields:
   - buildings_roof_surface_available_for_pv
   - residences_roof_surface_available_for_pv

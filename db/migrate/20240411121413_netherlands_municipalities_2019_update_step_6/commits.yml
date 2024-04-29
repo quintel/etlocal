@@ -1,0 +1,106 @@
+---
+# These values are based on additional data research separate from steps 1 to 5
+- fields:
+  - heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket
+  - heat_length_of_connection_pipelines_in_meter_per_residence_first_bracket
+  - heat_length_of_connection_pipelines_in_meter_per_residence_fourth_bracket
+  - heat_length_of_connection_pipelines_in_meter_per_residence_second_bracket
+  - heat_length_of_connection_pipelines_in_meter_per_residence_third_bracket
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_fifth_bracket
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_first_bracket
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_fourth_bracket
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_second_bracket
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_third_bracket
+  message: "Analyse op basis van data van Greenvis en Vesta MAIS. In deze analyse is voor elke buurt in Nederland een schatting gemaakt van de benodigde leidinglengtes indien er een warmtenet wordt aangelegd in die buurt. Voor gemeenten, RESsen en provincies in het ETM hebben we de (gewogen) gemiddelde leidinglengte uitgerekend voor vijf 'aansluitklassen': Wat is de gemiddelde benodigde leidinglengte als we de 20% buurten/huizen met de laagste gemiddelde leidinglengte aansluiten? Wat is het gemiddelde als we 40% aansluiten? Etc. Hierdoor kan het ETM met hogere kosten per aansluiting rekenen als er meer afgelegen gebieden worden aangesloten op het warmtenet."
+- fields:
+  - input_industry_chemical_fertilizers_hydrogen_non_energetic_demand
+  message:
+    "Er is geen waterstof vraag aanwezig in de kunstmest industrie in 2019 volgens de Nederlandse energiebalans."
+- fields:
+  - areable_land
+  message:
+    "Meest recenta data bodemgebruik (CBS: 2017). Bevat de categorie 'Agrarisch terrein - Overig terrein' (bodemgebruik door kassen is niet meegenomen)."
+- fields:
+  - total_land_area
+  message:
+    "Meest recenta data bodemgebruik (CBS: 2017). Bevat de categorie 'Totale oppervlakte' minus de categorieen 'Binnenwater' en 'Buitenwater'."
+- fields:
+  - buildings_roof_surface_available_for_pv
+  - residences_roof_surface_available_for_pv
+  message:
+    "Op basis van totale dakoppervlak (platte en schuine daken) volgens de BAG."
+- fields:
+  - energy_production_wet_biomass_max_demand
+  - energy_production_dry_biomass_max_demand
+  - energy_production_oily_biomass_max_demand
+  message:
+    "Productie en potenties voor biogrondstoffen zijn ingeschat op basis van onderzoek van TNO (2020). Hierin is de totale productie en potentie voor Nederland onderverdeeld naar gemeentes en provincies op basis van verschillende verdeelsleutels. Zie https://refman.energytransitionmodel.com/publications/2100 voor meer informatie."
+- fields:
+  - coast_line
+  message: 
+    "Schatting op basis van meest recenta data bodemgebruik (CBS: 2017). Bevat de categorie 'Buitenwater', aanname is dat 1 vierkante kilometer water zich vertaald tot 1 kilometer kustlijn."
+- fields:
+  - input_industry_metal_aluminium_production
+  - input_industry_aluminium_electrolysis_current_electricity_share
+  - input_industry_aluminium_smeltoven_electricity_share
+  - input_industry_metal_aluminium_electricity_demand
+  - input_industry_metal_aluminium_network_gas_demand
+  - input_industry_chemical_fertilizers_coal_demand
+  - input_industry_chemical_fertilizers_network_gas_demand
+  - input_industry_chemical_fertilizers_crude_oil_demand
+  - input_industry_chemical_fertilizers_wood_pellets_demand
+  - input_industry_chemical_fertilizers_steam_hot_water_demand
+  - input_industry_chemical_fertilizers_electricity_demand
+  - input_industry_chemical_fertilizers_coal_non_energetic_demand
+  - input_industry_chemical_fertilizers_network_gas_non_energetic_demand
+  - input_industry_chemical_fertilizers_crude_oil_non_energetic_demand
+  - input_industry_chemical_fertilizers_wood_pellets_non_energetic_demand
+  - input_industry_chemical_refineries_coal_demand
+  - input_industry_chemical_refineries_network_gas_demand
+  - input_industry_chemical_refineries_crude_oil_demand
+  - input_industry_chemical_refineries_wood_pellets_demand
+  - input_industry_chemical_refineries_steam_hot_water_demand
+  - input_industry_chemical_refineries_electricity_demand
+  - input_industry_chemical_refineries_coal_non_energetic_demand
+  - input_industry_chemical_refineries_network_gas_non_energetic_demand
+  - input_industry_chemical_refineries_wood_pellets_non_energetic_demand
+  - input_industry_refinery_transformation_crude_oil_diesel_demand
+  - input_industry_refinery_transformation_crude_oil_gasoline_demand
+  - input_industry_refinery_transformation_crude_oil_heavy_fuel_oil_demand
+  - input_industry_refinery_transformation_crude_oil_kerosene_demand
+  - input_industry_refinery_transformation_crude_oil_lpg_demand
+  - input_industry_refinery_transformation_crude_oil_other_oil_demand
+  - input_industry_refinery_transformation_crude_oil_refinery_gas_demand
+  - industry_useful_demand_for_chemical_refineries_crude_oil_non_energetic_demand
+  message:
+    "Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019. URL: http://www.emissieregistratie.nl"
+- fields:
+  - input_industry_metal_steel_production
+  - input_industry_metal_steel_coal_demand
+  - input_industry_metal_steel_cokes_demand
+  - input_industry_metal_steel_coal_gas_demand
+  - input_industry_metal_steel_electricity_demand
+  - input_industry_metal_steel_network_gas_demand
+  - input_industry_metal_steel_steam_hot_water_demand
+  - input_industry_metal_steel_crude_oil_demand
+  - input_industry_metal_steel_wood_pellets_demand
+  - input_energy_cokesoven_transformation_coal_input_demand
+  - input_energy_blastfurnace_transformation_coal_input_demand
+  - input_energy_blastfurnace_transformation_cokes_input_demand
+  - input_energy_power_combined_cycle_coal_gas_coal_gas_input_demand
+  - input_energy_chp_coal_gas_coal_gas_input_demand
+  - input_industry_metal_steel_coal_demand
+  - input_industry_metal_steel_cokes_demand
+  - input_industry_metal_steel_coal_gas_demand
+  - input_industry_metal_steel_electricity_demand
+  - input_industry_metal_steel_network_gas_demand
+  - input_industry_metal_steel_steam_hot_water_demand
+  - input_industry_metal_steel_crude_oil_demand
+  - input_industry_metal_steel_wood_pellets_demand
+  - input_energy_cokesoven_transformation_coal_input_demand
+  - input_energy_blastfurnace_transformation_coal_input_demand
+  - input_energy_blastfurnace_transformation_cokes_input_demand
+  - input_energy_power_combined_cycle_coal_gas_coal_gas_input_demand
+  - input_energy_chp_coal_gas_coal_gas_input_demand
+  message:
+    "Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans. URL: http://www.emissieregistratie.nl"

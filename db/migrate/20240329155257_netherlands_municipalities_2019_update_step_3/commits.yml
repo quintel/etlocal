@@ -1,0 +1,174 @@
+---
+- fields:
+  - file_carriers_propane_co2_conversion_per_mj
+  message: Adopted from the parent dataset (the Netherlands)
+- fields:
+  - input_percentage_of_lt_steam_hot_water_households_final_demand_steam_hot_water
+  message: No data available. Fallback value set to 0.0 to ensure share totals sum
+    to 1.
+- fields:
+  - input_percentage_of_mt_steam_hot_water_households_final_demand_steam_hot_water
+  message: No data available. Fallback value set to 0.0 to ensure share totals sum
+    to 1.
+- fields:
+  - input_percentage_of_ht_steam_hot_water_households_final_demand_steam_hot_water
+  message: No data available. Fallback value set to 1.0 to ensure share totals sum
+    to 1.
+- fields:
+  - input_percentage_of_diesel_households_final_demand_crude_oil
+  message: No data available on Klimaatmonitor. Set to 0.0.
+- fields:
+  - input_percentage_of_biodiesel_households_final_demand_crude_oil
+  message: No data available on Klimaatmonitor. Set to 0.0.
+- fields:
+  - input_percentage_of_kerosene_households_final_demand_crude_oil
+  message: No data available on Klimaatmonitor. Set to 0.0.
+- fields:
+  - input_percentage_of_bio_kerosene_households_final_demand_crude_oil
+  message: No data available on Klimaatmonitor. Set to 0.0.
+- fields:
+  - input_percentage_of_lpg_households_final_demand_crude_oil
+  message: No data available on Klimaatmonitor. Set to 0.0.
+- fields:
+  - input_percentage_of_bio_oil_households_final_demand_crude_oil
+  message: No data available on Klimaatmonitor. Set to 0.0.
+- fields:
+  - input_percentage_of_crude_oil_households_final_demand_crude_oil
+  message: No data available on Klimaatmonitor. Fallback value set to 1.0 to ensure
+    share totals sum to 1.0.
+- fields:
+  - input_percentage_of_lt_steam_hot_water_buildings_final_demand_steam_hot_water
+  message: No data available. Fallback value set to 0.0 to ensure share totals sum
+    to 1.
+- fields:
+  - input_percentage_of_mt_steam_hot_water_buildings_final_demand_steam_hot_water
+  message: No data available. Fallback value set to 0.0 to ensure share totals sum
+    to 1.
+- fields:
+  - input_percentage_of_ht_steam_hot_water_buildings_final_demand_steam_hot_water
+  message: No data available. Fallback value set to 1.0 to ensure share totals sum
+    to 1.
+- fields:
+  - input_percentage_of_central_mt_steam_hot_water_agriculture_final_demand_steam_hot_water
+  message: No data available. Fallback value set to 0.0 to ensure share totals sum
+    to 1.
+- fields:
+  - input_percentage_of_central_ht_steam_hot_water_agriculture_final_demand_steam_hot_water
+  message: No data available. Fallback value set to 1.0 to ensure share totals sum
+    to 1.
+- fields:
+  - input_percentage_of_local_steam_hot_water_agriculture_final_demand_steam_hot_water
+  message: No data available. Fallback value set to 0.0 to ensure share totals sum
+    to 1.
+- fields:
+  - input_energy_chp_ultra_supercritical_mt_coal_production
+  message: No data available. All CHPs are assumed to produce only HT heat and zero
+    MT heat.
+- fields:
+  - input_energy_chp_ultra_supercritical_cofiring_mt_coal_production
+  message: No data available. All CHPs are assumed to produce only HT heat and zero
+    MT heat.
+- fields:
+  - input_energy_chp_ultra_supercritical_mt_lignite_production
+  message: No data available. All CHPs are assumed to produce only HT heat and zero
+    MT heat.
+- fields:
+  - input_energy_chp_combined_cycle_mt_network_gas_production
+  message: No data available. All CHPs are assumed to produce only HT heat and zero
+    MT heat.
+- fields:
+  - input_energy_chp_local_engine_mt_network_gas_production
+  message: No data available. All CHPs are assumed to produce only HT heat and zero
+    MT heat.
+- fields:
+  - input_energy_chp_supercritical_mt_waste_mix_production
+  message: No data available. All CHPs are assumed to produce only HT heat and zero
+    MT heat.
+- fields:
+  - input_energy_chp_local_mt_wood_pellets_production
+  message: No data available. All CHPs are assumed to produce only HT heat and zero
+    MT heat.
+- fields:
+  - input_energy_chp_local_engine_mt_biogas_production
+  message: No data available. All CHPs are assumed to produce only HT heat and zero
+    MT heat.
+- fields:
+  - input_energy_heat_well_deep_mt_geothermal_production
+  message: No data available. All heat producers are assumed to produce only HT heat
+    and zero MT or LT heat.
+- fields:
+  - input_energy_heat_well_shallow_heatpump_mt_geothermal_production
+  message: No data available. Production of MT heat is set to zero.
+- fields:
+  - input_energy_heat_well_shallow_lt_geothermal_production
+  message: No data available. Production of LT heat is set to zero.
+- fields:
+  - input_energy_heat_burner_mt_wood_pellets_production
+  message: No data available. All heat producers are assumed to produce only HT heat
+    and zero MT or LT heat.
+- fields:
+  - input_energy_heat_burner_mt_waste_mix_production
+  message: No data available. All heat producers are assumed to produce only HT heat
+    and zero MT or LT heat.
+- fields:
+  - input_energy_heat_burner_mt_hydrogen_production
+  message: No data available. All heat producers are assumed to produce only HT heat
+    and zero MT or LT heat.
+- fields:
+  - input_energy_heat_burner_lt_hydrogen_production
+  message: No data available. All heat producers are assumed to produce only HT heat
+    and zero MT or LT heat.
+- fields:
+  - input_energy_heat_solar_lt_solar_thermal_production
+  message: No data available. Production of LT heat is set to zero.
+- fields:
+  - input_energy_heat_solar_mt_solar_thermal_production
+  message: No data available. Production of MT heat is set to zero.
+- fields:
+  - input_energy_heat_heatpump_water_water_mt_electricity_production
+  message: No data available. All heat producers are assumed to produce only HT heat
+    and zero MT or LT heat.
+- fields:
+  - input_energy_heat_heatpump_water_water_lt_electricity_production
+  message: No data available. Production of LT heat is set to zero.
+- fields:
+  - input_energy_heat_boiler_mt_electricity_production
+  message: No data available. All heat producers are assumed to produce only HT heat
+    and zero MT or LT heat.
+- fields:
+  - input_energy_heat_boiler_lt_electricity_production
+  message: No data available. All heat producers are assumed to produce only HT heat
+    and zero MT or LT heat.
+- fields:
+  - input_energy_heat_burner_mt_network_gas_production
+  message: No data available. All heat producers are assumed to produce only HT heat
+    and zero MT or LT heat.
+- fields:
+  - input_energy_heat_burner_mt_coal_production
+  message: No data available. All heat producers are assumed to produce only HT heat
+    and zero MT or LT heat.
+- fields:
+  - input_energy_heat_burner_mt_crude_oil_production
+  message: No data available. All heat producers are assumed to produce only HT heat
+    and zero MT or LT heat.
+- fields:
+  - energy_heat_import_ht_steam_hot_water_demand
+  message: No data available. By default, the import of heat is set to zero.
+- fields:
+  - energy_heat_import_mt_steam_hot_water_demand
+  message: No data available. By default, the import of heat is set to zero.
+- fields:
+  - energy_heat_import_lt_steam_hot_water_demand
+  message: No data available. By default, the import of heat is set to zero.
+- fields:
+  - input_energy_heat_distribution_ht_loss_share
+  message: No data available. We assume the share of loss is equal to the parent dataset
+    (nl).
+- fields:
+  - input_energy_heat_distribution_mt_loss_share
+  message: No data available. We assume the share of loss is equal to the parent dataset
+    (nl).
+- fields:
+  - input_energy_heat_distribution_lt_loss_share
+  message: No data available. We assume the share of loss is equal to the parent dataset
+    (nl).

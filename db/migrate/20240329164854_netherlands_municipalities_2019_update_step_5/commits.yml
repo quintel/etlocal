@@ -1,0 +1,207 @@
+---
+# These values are based on the Dutch values (from ETDataset) and similar for all municipalities. 
+- fields:
+  - file_carriers_imported_hydrogen_co2_conversion_per_mj
+  message: Add emissions and costs for energy carriers using data for the Netherlands in 2018.
+- fields:
+  - industry_chp_wood_pellets_demand
+  - industry_heat_burner_coal_demand
+  - industry_heat_burner_crude_oil_demand
+  - industry_heat_burner_lignite_demand
+  - industry_heat_well_geothermal_demand
+  message: Apparaat recent toegevoegd aan model. Waarde op 0 gezet.
+- fields:
+  - input_energy_heat_solar_solar_thermal_full_load_hours
+  message: Based on average full load hours of the Netherlands (2019)
+- fields:
+  - energy_power_engine_network_gas_full_load_hours
+  - energy_power_geothermal_full_load_hours
+  - energy_power_hydro_mountain_full_load_hours
+  - energy_power_nuclear_gen2_uranium_oxide_full_load_hours
+  - energy_power_nuclear_gen3_uranium_oxide_full_load_hours
+  - energy_power_supercritical_ccs_waste_mix_full_load_hours
+  - energy_power_ultra_supercritical_ccs_coal_full_load_hours
+  - energy_power_ultra_supercritical_coal_full_load_hours
+  - energy_power_ultra_supercritical_cofiring_coal_full_load_hours
+  - energy_power_ultra_supercritical_crude_oil_full_load_hours
+  - energy_power_ultra_supercritical_lignite_full_load_hours
+  - energy_power_ultra_supercritical_oxyfuel_ccs_lignite_full_load_hours
+  - flh_solar_pv_solar_radiation_max
+  - industry_chp_combined_cycle_gas_power_fuelmix_full_load_hours
+  - industry_chp_engine_gas_power_fuelmix_full_load_hours
+  - industry_chp_turbine_gas_power_fuelmix_full_load_hours
+  - industry_chp_ultra_supercritical_coal_full_load_hours
+  - industry_chp_wood_pellets_full_load_hours
+  - industry_heat_burner_coal_full_load_hours
+  - industry_heat_burner_crude_oil_full_load_hours
+  - industry_heat_burner_lignite_full_load_hours
+  - input_energy_chp_ultra_supercritical_coal_full_load_hours
+  - input_energy_chp_ultra_supercritical_cofiring_coal_full_load_hours
+  - input_energy_chp_ultra_supercritical_lignite_full_load_hours
+  - input_energy_heat_burner_coal_full_load_hours
+  - input_energy_heat_burner_crude_oil_full_load_hours
+  - input_energy_heat_burner_network_gas_full_load_hours
+  - input_energy_heat_burner_waste_mix_full_load_hours
+  - input_energy_heat_burner_wood_pellets_full_load_hours
+  - input_energy_heat_heatpump_water_water_electricity_full_load_hours
+  message: Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order.
+- fields:
+  - input_transport_ship_bio_ethanol_demand
+  message: Based on country-level energy balance data bio-ethanol demand for domestic navigation is 0.0
+- fields:
+  - input_energy_heat_boiler_electricity_steam_hot_water_output_conversion
+  message: Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end
+- fields: 
+  - file_carriers_imported_ammonia_co2_conversion_per_mj
+  message: "For sources see general documentation Excel on GitHub: https://github.com/quintel/etdataset/blob/master/carriers_source_analyses/imported_ammonia.carrier.xlsx"
+- fields:
+  - co2_emission_1990_aviation_bunkers
+  - co2_emission_1990_marine_bunkers
+  message: Gebaseerd op de totale Nederlandse waarden (gelijk voor elke gemeente). Nederlandse waarde is gebaseerd op 1990 CO2 emissies volgens het IPCC versie 20. Zie https://github.com/quintel/etdataset-public/blob/master/source_analyses/eu/2011/11_area_data/201711_EEA_all_countries%20GHG%20emissions%20IPCC%20format%201990%20UNFCCC_v20.xlsx voor meer informatie. 
+- fields:
+  - input_energy_chp_combined_cycle_network_gas_full_load_hours
+  - input_energy_chp_local_engine_biogas_full_load_hours
+  - input_energy_chp_local_wood_pellets_full_load_hours
+  - input_energy_chp_supercritical_waste_mix_full_load_hours
+  message: Gebaseerd op gemiddelde Nederlandse vollasturen (2015)
+- fields: 
+  - industry_final_demand_for_other_food_electricity_industry_other_food_heater_electricity_parent_share
+  - industry_final_demand_for_other_food_electricity_industry_useful_demand_for_other_food_electricity_parent_share
+  - industry_final_demand_for_other_paper_electricity_industry_other_paper_heater_electricity_parent_share
+  - industry_final_demand_for_other_paper_electricity_industry_useful_demand_for_other_paper_electricity_parent_share
+  message: Gebaseerd op Nederlands gemiddelde
+- fields:
+  - energy_extraction_coal_demand
+  - energy_extraction_crude_oil_demand
+  - energy_extraction_natural_gas_demand
+  - energy_extraction_uranium_oxide_demand
+  message: Geen data beschikbaar
+- fields:
+  - input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil
+  - input_percentage_of_bio_kerosene_buildings_final_demand_crude_oil
+  - input_percentage_of_bio_kerosene_industry_final_demand_crude_oil
+  - input_percentage_of_bio_oil_agriculture_final_demand_crude_oil
+  - input_percentage_of_bio_oil_buildings_final_demand_crude_oil
+  - input_percentage_of_bio_oil_industry_final_demand_crude_oil
+  - input_percentage_of_biodiesel_agriculture_final_demand_crude_oil
+  - input_percentage_of_biodiesel_buildings_final_demand_crude_oil
+  - input_percentage_of_biodiesel_industry_final_demand_crude_oil
+  - input_percentage_of_crude_oil_agriculture_final_demand_crude_oil
+  - input_percentage_of_crude_oil_buildings_final_demand_crude_oil
+  - input_percentage_of_crude_oil_industry_final_demand_crude_oil
+  - input_percentage_of_diesel_agriculture_final_demand_crude_oil
+  - input_percentage_of_diesel_buildings_final_demand_crude_oil
+  - input_percentage_of_diesel_industry_final_demand_crude_oil
+  - input_percentage_of_kerosene_agriculture_final_demand_crude_oil
+  - input_percentage_of_kerosene_buildings_final_demand_crude_oil
+  - input_percentage_of_kerosene_industry_final_demand_crude_oil
+  - input_percentage_of_lpg_agriculture_final_demand_crude_oil
+  - input_percentage_of_lpg_buildings_final_demand_crude_oil
+  - input_percentage_of_lpg_industry_final_demand_crude_oil
+  - input_percentage_of_diesel_households_final_demand_crude_oil
+  - input_percentage_of_biodiesel_households_final_demand_crude_oil
+  - input_percentage_of_kerosene_households_final_demand_crude_oil
+  - input_percentage_of_bio_kerosene_households_final_demand_crude_oil
+  - input_percentage_of_lpg_households_final_demand_crude_oil
+  - input_percentage_of_bio_oil_households_final_demand_crude_oil
+  - input_percentage_of_crude_oil_households_final_demand_crude_oil
+  message: Geen data beschikbaar. Nieuwe sliders in het ETM (augustus 2021).
+- fields:
+  - energy_regasification_lng_energy_national_gas_network_natural_gas_demand
+  message: Geen goede lokale data beschikbaar, waarde op 0 gezet.
+- fields:
+  - energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share
+  - energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share
+  - energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share
+  message: Gemiddelde Nederlandse productiemix voor groengas
+- fields:
+  - energy_extraction_lignite_demand
+  message: No data available
+- fields:
+  - input_energy_heat_boiler_ht_electricity_production
+  - input_energy_heat_solar_ht_solar_thermal_production
+  message: No data available. Production of HT heat is set to zero.
+- fields:
+  - aquathermal_potential_for_drink_water
+  - aquathermal_potential_for_surface_water
+  - aquathermal_potential_for_waste_water
+  - buildings_final_demand_for_space_heating_electricity_buildings_space_heater_hybrid_heatpump_air_water_electricity_parent_share
+  - buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_hybrid_heatpump_air_water_electricity_parent_share
+  - energy_distribution_network_gas_loss_demand
+  message: No data available. Set to 0.0.
+- fields:
+  - typical_useful_demand_for_space_heating_apartments_future
+  - typical_useful_demand_for_space_heating_buildings_future
+  - typical_useful_demand_for_space_heating_detached_houses_future
+  - typical_useful_demand_for_space_heating_semi_detached_houses_future
+  - typical_useful_demand_for_space_heating_terraced_houses_future
+  message: No data available. Set to nl2019 values.
+- fields:
+  - input_energy_power_solar_csp_solar_radiation_production
+  - input_energy_power_supercritical_ccs_waste_mix_production
+  - input_energy_power_ultra_supercritical_lignite_production
+  - input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production
+  message: No production in start year
+- fields:
+  - energy_distribution_crude_oil_loss_demand
+  - industry_aluminium_burner_network_gas_industry_aluminium_electrolysis_current_electricity_parent_share
+  - industry_aluminium_burner_network_gas_industry_aluminium_smeltoven_electricity_parent_share
+  - industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_electrolysis_current_electricity_parent_share
+  - industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_smeltoven_electricity_parent_share
+  - input_industry_aluminium_electrolysis_current_electricity_share
+  - input_industry_aluminium_smeltoven_electricity_share
+  message: "Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans 2019. URL: http://www.emissieregistratie.nl"
+- fields: 
+  - industry_final_demand_for_metal_steel_coal_industry_steel_blastfurnace_bof_parent_share
+  - industry_final_demand_for_metal_steel_cokes_industry_steel_blastfurnace_bof_parent_share
+  - industry_final_demand_for_metal_steel_crude_oil_industry_steel_blastfurnace_bof_parent_share
+  - industry_final_demand_for_metal_steel_electricity_industry_steel_blastfurnace_bof_parent_share
+  - industry_final_demand_for_metal_steel_network_gas_industry_steel_blastfurnace_bof_parent_share
+  - industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_blastfurnace_bof_parent_share
+  - industry_final_demand_for_metal_steel_wood_pellets_industry_steel_blastfurnace_bof_parent_share
+  - input_energy_chp_coal_gas_electricity_output_conversion
+  - input_energy_chp_coal_gas_steam_hot_water_output_conversion
+  - input_energy_cokesoven_transformation_coal_gas_output_conversion
+  - input_energy_cokesoven_transformation_cokes_output_conversion
+  - input_energy_power_combined_cycle_coal_gas_electricity_output_conversion
+  - input_industry_steel_blastfurnace_bof_share
+  - energy_chp_coal_gas_full_load_hours
+  - energy_power_combined_cycle_coal_gas_full_load_hours
+  - input_industry_other_cokes_demand
+  - input_industry_other_cokes_non_energetic_demand
+  - input_energy_blastfurnace_transformation_coal_gas_output_conversion
+  message: "Schatting Quintel op basis van emissiegegevens en Nederlandse energiebalans. URL: http://www.emissieregistratie.nl"
+- fields:
+  - input_energy_chp_ultra_supercritical_ht_lignite_production
+  message: Set to 0.0 as there is no energy production using lignite present in this area.
+- fields:
+  - hv_net_capacity_per_step
+  - hv_net_costs_per_capacity_step
+  - hv_net_spare_capacity
+  - input_households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share
+  - input_other_final_demand_steam_hot_water_demand
+  - lv_mv_trafo_capacity_per_step
+  - lv_mv_trafo_costs_per_capacity_step
+  - lv_mv_trafo_spare_capacity
+  - lv_net_capacity_per_step
+  - lv_net_costs_per_capacity_step
+  - lv_net_spare_capacity
+  - mv_hv_trafo_capacity_per_step
+  - mv_hv_trafo_costs_per_capacity_step
+  - mv_hv_trafo_spare_capacity
+  - mv_net_capacity_per_step
+  - mv_net_costs_per_capacity_step
+  - mv_net_spare_capacity
+  message: Standaardwaarden op basis van Nederlandse gemiddelden
+- fields:
+  - input_percentage_of_central_ht_steam_hot_water_agriculture_final_demand_steam_hot_water
+  - input_percentage_of_local_steam_hot_water_agriculture_final_demand_steam_hot_water
+  message: New attribute (added to ETM in Dec 2022). Assumed that all agricultural heat is produced by district heating.
+- fields:
+  - file_carriers_propane_co2_conversion_per_mj
+  message: Set to 0.06448 based on the update of the Netherlands list of fuels in 2021 by TNO.
+- fields:
+  - input_energy_power_supercritical_ccs_waste_mix_electricity_output_conversion
+  message:
+    "Gebaseerd op de gemiddelde Nederlandse waarde, hetzelfde voor alle regio's."
+    

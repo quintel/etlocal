@@ -1,5 +1,5 @@
 ---
-# These values are based on additional data research separate from steps 1 to 5
+# These values are based on additional data research separate from steps 1 to 5. The biomass potentials in this migration are incorrect with a factor 100. These are resolved in a seperate data-migration as well as in the excel. 
 - fields:
   - heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket
   - heat_length_of_connection_pipelines_in_meter_per_residence_first_bracket

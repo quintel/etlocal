@@ -1,0 +1,9 @@
+---
+- fields:
+  - residences_roof_surface_available_for_pv
+  message:
+    Aangeleverd door RES-team Holland Rijnland. Gebaseerd op een maximumcapaciteit van 2500 MW.
+- fields:
+  - buildings_roof_surface_available_for_pv
+  message:
+    Aangeleverd door RES-team Holland Rijnland. Gebaseerd op een maximumcapaciteit van 1100 MW.

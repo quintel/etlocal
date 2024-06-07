@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    Test run

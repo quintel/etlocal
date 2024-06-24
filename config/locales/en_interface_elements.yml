@@ -721,7 +721,7 @@ en:
 
         energy_power_wind_turbine_inland_full_load_hours: Wind (inland)
         energy_power_wind_turbine_coastal_full_load_hours: Wind (coastal)
-        energy_power_wind_turbine_offshore_full_load_hours: Wind (offshore)
+        input_energy_power_wind_turbine_offshore_full_load_hours: Wind (offshore)
         input_solar_panels_roofs_and_parks_full_load_hours: Solar panels (roofs and ground-mount)
         energy_power_hydro_river_full_load_hours: Hydro (river)
         input_energy_chp_local_engine_biogas_full_load_hours: Biogas CHP

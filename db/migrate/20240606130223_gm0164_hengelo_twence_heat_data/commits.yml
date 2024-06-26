@@ -1,0 +1,14 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - input_buildings_final_demand_steam_hot_water_demand
+  message:
+    Heat demand from the Twence wasteplant was wrongly attributed to the heat demand of buildings. This figure has been changed based on data from the municipality of Hengelo.
+- fields:
+  - input_energy_heat_burner_wood_pellets_full_load_hours
+  message:
+    This figure has been changed to match the respective 110 MW and 80 MW heat output capacity from the Twence waste plant as specified by the municipality. 
+- fields:
+  - input_energy_heat_burner_waste_mix_full_load_hours
+  message:
+    This figure has been changed to match the respective 110 MW and 80 MW heat output capacity from the Twence waste plant as specified by the municipality. 

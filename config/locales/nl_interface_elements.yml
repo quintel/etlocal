@@ -732,7 +732,7 @@ nl:
 
         energy_power_wind_turbine_inland_full_load_hours: Wind (op land)
         energy_power_wind_turbine_coastal_full_load_hours: Wind (aan de kust)
-        energy_power_wind_turbine_offshore_full_load_hours: Wind (offshore)
+        input_energy_power_wind_turbine_offshore_full_load_hours: Wind (offshore)
         input_solar_panels_roofs_and_parks_full_load_hours: Zonnepanelen (op dak en op land)
         energy_power_hydro_river_full_load_hours: Waterkracht (rivier)
         input_energy_chp_local_engine_biogas_full_load_hours: Biogas WKK

@@ -90,7 +90,7 @@ groups:
         combination_method:
           weighted_average:
             - input_energy_power_wind_turbine_coastal_production
-      - key: energy_power_wind_turbine_offshore_full_load_hours
+      - key: input_energy_power_wind_turbine_offshore_full_load_hours
         unit: 'flh'
         combination_method:
           weighted_average:

@@ -9,13 +9,13 @@ nl:
       energy_distribution_greengas_demand: |
         De hoeveelheid groen gas die is bijgemengd in het gasnet. Direct gebruik van biogas (bijvoorbeeld lokale
         productie die wordt verbrand in een WKK) valt hier niet onder.
-      energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share: |
+      energy_greengas_gasification_dry_biomass_energy_greengas_production_child_share: |
         Hoeveel procent van de huidige groengasproductie in deze regio gebeurt door middel van
         vergassing van droge biomassa?
-      energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share: |
+      energy_greengas_gasification_wet_biomass_energy_greengas_production_child_share: |
         Hoeveel procent van de huidige groengasproductie in deze regio gebeurt door middel van
         vergassing van natte biomassa?
-      energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share: |
+      energy_greengas_upgrade_biogas_energy_greengas_production_child_share: |
         Hoeveel procent van de huidige groengasproductie in deze regio gebeurt door middel van
         vergisting van biomassa?
       energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: |

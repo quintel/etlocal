@@ -7,11 +7,11 @@ en:
         Grid losses due to transmission and distribution of electricity in this region. On average, this is around 5-8% of total electricity demand.
       energy_distribution_greengas_demand: |
         The amount of green gas blended into the gas network. This excludes direct use of biogas (for example local production used as CHP fuel).
-      energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share: |
+      energy_greengas_gasification_dry_biomass_energy_greengas_production_child_share: |
         What share of the current green gas demand in this area is produced by gasification of dry biomass?
-      energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share: |
+      energy_greengas_gasification_wet_biomass_energy_greengas_production_child_share: |
         What share of the current green gas demand in this area is produced by gasification of wet biomass?
-      energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share: |
+      energy_greengas_upgrade_biogas_energy_greengas_production_child_share: |
         What share of the current green gas demand in this area is produced by fermentation of biomass?
       energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: |
         This setting is only relevant if a waste-to-energy plant is present in this area. This

@@ -614,9 +614,9 @@ nl:
         energy_distribution_network_gas_loss_demand: Netverliezen
         energy_distribution_crude_oil_loss_demand: Netverliezen
 
-        energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share: Droge vergassing
-        energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share: Natte vergassing
-        energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share: Vergisting
+        energy_greengas_gasification_dry_biomass_energy_greengas_production_child_share: Droge vergassing
+        energy_greengas_gasification_wet_biomass_energy_greengas_production_child_share: Natte vergassing
+        energy_greengas_upgrade_biogas_energy_greengas_production_child_share: Vergisting
 
         energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: Biogeen
         energy_distribution_non_biogenic_waste_energy_distribution_waste_mix_child_share: Niet-biogeen

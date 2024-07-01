@@ -6,11 +6,11 @@ groups:
       weighted_average:
         - energy_distribution_greengas_demand
     items:
-      - key: energy_greengas_gasification_dry_biomass_energy_distribution_greengas_child_share
+      - key: energy_greengas_gasification_dry_biomass_energy_greengas_production_child_share
         unit: '%'
-      - key: energy_greengas_gasification_wet_biomass_energy_distribution_greengas_child_share
+      - key: energy_greengas_gasification_wet_biomass_energy_greengas_production_child_share
         unit: '%'
-      - key: energy_greengas_upgrade_biogas_energy_distribution_greengas_child_share
+      - key: energy_greengas_upgrade_biogas_energy_greengas_production_child_share
         unit: '%'
         flexible: true
 

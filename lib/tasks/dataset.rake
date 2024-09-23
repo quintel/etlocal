@@ -24,7 +24,7 @@ namespace :dataset do
   task combine: :environment do
     puts "\nInitializing DatasetCombiner with given datasets..."
 
-    combiner = DatasetCombiner.new(
+    combiner = Amalgamator::Combiner.new(
       target_dataset_geo_id: ENV.fetch('target_dataset_geo_id', nil),
       source_data_year: ENV.fetch('source_data_year', nil),
       source_dataset_geo_ids: ENV.fetch('source_dataset_geo_ids', nil).try(:split, ','),
@@ -36,7 +36,7 @@ namespace :dataset do
     puts '✅ Dataset combiner initialized!'
     puts 'Combining datasets... '
 
-    combiner.combine_datasets
+    combiner.result
 
     puts '✅ Datasets combined!'
     puts 'Exporting data...'

@@ -40,7 +40,7 @@ RSpec.describe Amalgamator::Processor::Separate do
 
       allow(InterfaceElement).to receive(:items).and_return(items)
 
-      result = described_class.perform(dataset_a: dataset_a, dataset_b: dataset_b)
+      result = described_class.perform(dataset_b, dataset_a)
 
       expect(result).to eq({
         areable_land: 20.0,        # B - A --> 30.0 - 10.0
@@ -57,7 +57,7 @@ RSpec.describe Amalgamator::Processor::Separate do
 
       allow(InterfaceElement).to receive(:items).and_return(items)
 
-      result = described_class.perform(dataset_a: dataset_a, dataset_b: dataset_b)
+      result = described_class.perform(dataset_b, dataset_a)
 
       expect(result).to eq({
         areable_land: 20.0 # 30.0 - 10.0
@@ -71,7 +71,7 @@ RSpec.describe Amalgamator::Processor::Separate do
 
       allow(InterfaceElement).to receive(:items).and_return(items)
 
-      expect { described_class.perform(dataset_a: dataset_a, dataset_b: dataset_b) }.to raise_error(
+      expect { described_class.perform(dataset_b, dataset_a) }.to raise_error(
         ArgumentError,
         /Unknown combination method 'apples' for InterfaceItem: areable_land/
       )
@@ -144,7 +144,7 @@ RSpec.describe Amalgamator::Processor::Separate do
       allow(InterfaceElement).to receive(:items).and_return(interface_items)
       allow(EditableAttributesCollection).to receive(:items).and_return(all_items)
 
-      result = described_class.perform(dataset_a: dataset_a, dataset_b: dataset_b)
+      result = described_class.perform(dataset_b, dataset_a)
 
       # Formula for reversed weighted average:
       # C = (B * B_weight - A * A_weight) / B_weight - A_weight

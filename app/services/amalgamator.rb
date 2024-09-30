@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-# The DatasetCombiner parent class acts as the interface through which smaller areas can be
-# combined into a bigger one. It validates user input, sets defaults and then delegates the work
-# to the ValueProcessor and DataExporter that do the actual combining.
+# The Amalgamator parent class acts as the interface through which smaller areas can be
+# combined into a bigger one, or a dataset can be subtracted from another one. It validates user input, sets defaults
+# and then delegates the work to the ValueProcessor and DataExporter that do the actual combining/separating.
 # See the 'initialize' method for (expected) arguments.
 #
 # Example usage:
@@ -29,11 +29,11 @@
 module Amalgamator
   class Base
     # Arguments:
-    #   target_dataset_geo_id: Identifier of dataset to combine into, e.g.: 'PV20'
+    #   target_dataset_geo_id: Identifier of dataset to combine into or subtract from, e.g.: 'PV20'
     #   source_data_year: The year over which new data should be calculated
-    #   source_dataset_geo_ids: Identifiers for areas to be combined, e.g.: ['GM306','GM307']
-    #   target_area_name (optional): Name of combined area, e.g.: 'Groningen'
-    #   target_country_name (optional): Name of country of the target dataset, e.g. 'nl2019'
+    #   source_dataset_geo_ids: Identifiers for areas to be combined (Array) or a single identifier (String) to be subtracted
+    #   target_area_name (optional): Name of the target area, e.g.: 'Groningen'
+    #   target_country_name (optional): Name of the country of the target dataset, e.g. 'nl2019'
     #   migration_slug (optional): Short description of migration in lowercase and underscores, e.g.: 'update_2023'
     def initialize(
       target_dataset_geo_id:, source_data_year:, source_dataset_geo_ids:,
@@ -46,20 +46,29 @@ module Amalgamator
       @target_country_name = target_country_name
       @migration_slug = migration_slug
 
+      # Infer operation type
+      @operation_type = infer_operation_type
+
       # Validate whether all required arguments are present
       validate_input
 
       # Set defaults for any non-mandatory arguments that were omitted
       set_defaults
 
-      @source_datasets = Dataset.where(geo_id: @source_dataset_geo_ids)
-
-      # Validate whether all source datasets are up to date until at least the requested source_data_year
-      # validate_dataset_data_year
+      # Handle both cases where source_dataset_geo_ids is an array or a single ID
+      @source_datasets = if @source_dataset_geo_ids.is_a?(Array)
+                           Dataset.where(geo_id: @source_dataset_geo_ids)
+                         else
+                           Dataset.where(geo_id: [@source_dataset_geo_ids])
+                         end
     end
 
     def result
-      @result ||= processor.perform(@source_datasets)
+      if @operation_type == :combine
+        @result ||= processor.perform(@source_datasets)
+      elsif @operation_type == :separate
+        @result ||= processor.perform(@target_dataset, @source_datasets.first)
+      end
     end
 
     def export_data
@@ -75,11 +84,12 @@ module Amalgamator
 
     private
 
-    def migration_slug
-      @migration_slug ||= @source_data_year.to_s
+    def infer_operation_type
+      # Infer operation type based on the type of source_dataset_geo_ids
+      @source_dataset_geo_ids.is_a?(Array) ? :combine : :separate
     end
 
-    # TODO: this is horrible, could be refactored nicely
+    # Updated validation to handle single or multiple source geo-IDs
     def validate_input
       # Check for missing mandatory arguments
       empty_args = {
@@ -105,14 +115,15 @@ module Amalgamator
         argument_error('No target_area_name was provided, and it cannot be derived through the target_dataset_geo_id')
       end
 
-       # Check if the source_data_year lies between 1900 and the current year.
+      # Check if the source_data_year lies between 1900 and the current year.
       unless @source_data_year.to_i.between?(1900, Time.zone.today.year)
         argument_error("The source_data_year provided is not a valid year. A valid year is between 1900 and #{Time.zone.today.year}")
       end
 
-      # Check source_dataset_geo_ids
-      unless @source_dataset_geo_ids.is_a?(Array) && @source_dataset_geo_ids.all? { |id| id.is_a?(String) }
-        argument_error('The source_dataset_geo_ids should be a set of ids')
+      # Updated source_dataset_geo_ids validation for combiner vs separator
+      unless (@source_dataset_geo_ids.is_a?(Array) && @source_dataset_geo_ids.all? { |id| id.is_a?(String) }) ||
+             (@source_dataset_geo_ids.is_a?(String) && !@source_dataset_geo_ids.blank?)
+        argument_error('The source_dataset_geo_ids should be a set of ids or a single id')
       end
     end
 
@@ -127,13 +138,13 @@ module Amalgamator
 
       if outdated_datasets.present?
         argument_error(
-          "The following datasets are not up to date to the requested source_data_year (#{@source_data_year}):\n
-          #{outdated_datasets.pluck(:name).join(', ')}\n"
+          "The following datasets are not up to date to the requested source_data_year (#{@source_data_year}):\n" \
+          "#{outdated_datasets.pluck(:name).join(', ')}\n"
         )
       end
     end
 
-    # TODO: recheck and refactor these!!
+    # Updated default setting logic
     def set_defaults
       # No target_area_name was provided. Derive it from the target dataset.
       if @target_area_name.blank?

@@ -29,4 +29,3 @@ The x's should be replaced by the mapbox api key.
 ### Useful reading
 
 * [Creating data migrations](https://docs.energytransitionmodel.com/contrib/dataset-manager/data-migrations)
-

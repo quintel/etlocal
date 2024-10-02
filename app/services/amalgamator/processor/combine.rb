@@ -99,7 +99,7 @@ module Amalgamator
           weighing_keys.each do |key|
             value = \
               if key.is_a?(Hash)
-                aggregate_weighing_function(key, dataset)
+                aggregate_weighing_function(key, dataset, item)
               else
                 dataset.editable_attributes.find(key.to_s).try(:value)
               end

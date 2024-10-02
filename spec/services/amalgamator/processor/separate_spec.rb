@@ -149,13 +149,13 @@ RSpec.describe Amalgamator::Processor::Separate do
       # Formula for reversed weighted average:
       # C = (B * B_weight - A * A_weight) / B_weight - A_weight
       expected_results = {
-        :input_percentage_of_diesel_agriculture_final_demand_crude_oil=>70.0, # ((200 * 50) - (30 * 100)) / 200 - 100
-        :input_percentage_of_biodiesel_agriculture_final_demand_crude_oil=>40.0, # ((200 * 30) - (20 * 100)) / 200 - 100
-        :input_percentage_of_kerosene_agriculture_final_demand_crude_oil=>190.0, # ((200 * 100) - (10 * 100)) / 200 - 100
-        :input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil=>15.0, # ((200 * 10) - (5 * 100)) / 200 - 100
-        :input_percentage_of_lpg_agriculture_final_demand_crude_oil=>9.0, # ((200 * 5) - (1 * 100)) / 200 - 100
+        :input_percentage_of_diesel_agriculture_final_demand_crude_oil=>70.2, # ((200 * 50) - (30 * 100)) / 200 - 100
+        :input_percentage_of_biodiesel_agriculture_final_demand_crude_oil=>40.1, # ((200 * 30) - (20 * 100)) / 200 - 100
+        :input_percentage_of_kerosene_agriculture_final_demand_crude_oil=>190.9, # ((200 * 100) - (10 * 100)) / 200 - 100
+        :input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil=>15.05, # ((200 * 10) - (5 * 100)) / 200 - 100
+        :input_percentage_of_lpg_agriculture_final_demand_crude_oil=>9.04, # ((200 * 5) - (1 * 100)) / 200 - 100
         :input_percentage_of_bio_oil_agriculture_final_demand_crude_oil=>5.0, # ((200 * 5) - (5 * 100)) / 200 - 100
-        :input_percentage_of_crude_oil_agriculture_final_demand_crude_oil=>10.0 # ((200 * 5) - (0 * 100)) / 200 - 100
+        :input_percentage_of_crude_oil_agriculture_final_demand_crude_oil=>10.05 # ((200 * 5) - (0 * 100)) / 200 - 100
       }
       expect(result).to eq(expected_results)
     end

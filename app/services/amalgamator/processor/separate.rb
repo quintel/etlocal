@@ -36,7 +36,8 @@ module Amalgamator
             when ->(cm) { cm.is_a?(Hash) && cm.key?('weighted_average') }
               calculate_weighted_average(item, target_dataset, subtracted_dataset, dataset_b_value, dataset_a_value)
             when 'sum', '', nil # Default to 'difference' (C = B - A)
-              dataset_b_value - dataset_a_value
+              result = dataset_b_value - dataset_a_value
+              result < 0 ? 0 : result
             else
               raise ArgumentError, "Unknown combination method '#{item.nested_combination_method}' for InterfaceItem: #{item.key}"
             end
@@ -47,11 +48,6 @@ module Amalgamator
 
       # Helper method to fetch and validate values from datasets
       def fetch_valid_value(dataset, item)
-        if dataset.nil?
-          log_error(item, "Dataset is missing for item #{item.key}")
-
-        end
-
         value = dataset.editable_attributes.find(item.key.to_s).value
         if value.nil?
           log_error(item, "Value not found for item #{item.key} in dataset #{dataset.geo_id}")
@@ -80,37 +76,63 @@ module Amalgamator
       def calculate_weighted_average(item, target_dataset, subtracted_dataset, dataset_b_value, dataset_a_value)
         # Extract the weight keys from the nested_combination_method
         weight_keys = item.nested_combination_method['weighted_average']
-
-        weight_a = weight_keys.sum(0) { |key| fetch_weight(subtracted_dataset, key) }
-        weight_b = weight_keys.sum(0) { |key| fetch_weight(target_dataset, key) }
-
-        # Ensure weights are numeric and handle potential zero division
-        denominator = weight_b - weight_a
-        if denominator.zero?
-          log_error(item, "Division by zero encountered for item #{item.key}. Setting numerator value to 0.")
+        if dataset_b_value ==0 and dataset_a_value ==0
           return 0
+        end
+
+        # Fetch weights for both datasets
+        weight_a = weight_keys.sum(1) { |key| fetch_weight(subtracted_dataset, key, item) }
+        weight_b = weight_keys.sum(1) { |key| fetch_weight(target_dataset, key, item) }
+
+
+        # Ensure weights are numeric and handle potential zero division - if weights are equal, revert to average
+        if weight_a == weight_b
+          log_error(item, "Same weights - Reverting to average")
+          return calculate_average(dataset_b_value, dataset_a_value)
+        end
+
+        denominator = weight_b - weight_a
+
+        if denominator.zero?
+          log_error(item, "Division by zero encountered - Reverting to average")
+          return calculate_average(dataset_b_value, dataset_a_value)
         end
 
         # Perform the reverse weighted average calculation
         numerator = (dataset_b_value * weight_b) - (dataset_a_value * weight_a)
-        denominator = weight_b - weight_a
         value_c = numerator / denominator
 
         value_c
       end
 
       # Helper method to fetch weights from datasets
-      def fetch_weight(dataset, weight_key)
-        attribute = dataset.editable_attributes.find(weight_key.to_s)
-
-        # If the attribute is nil, return a default value of 0
-        return 0 if attribute.nil?
-
-        # Convert the value to float and ensure it's not nil
-        weight = attribute.value.to_f
-
-        # If the weight value is invalid (e.g., zero or negative), return a default value of 0
+      def fetch_weight(dataset, weight_key, item)
+        if weight_key.is_a?(Hash)
+          value = aggregate_weighing_function(weight_key, dataset, item)
+        else
+          attribute = dataset.editable_attributes.find(weight_key.to_s)
+          return 0 if attribute.nil?
+          value = attribute.value
+        end
+        # Convert the value to float
+        weight = value.to_f
         weight > 0 ? weight : 0
+      end
+
+      def aggregate_weighing_function(fn_hash, dataset, item)
+        function = fn_hash.keys.first
+        attributes = fn_hash.values.first
+
+        if function == 'sum'
+          sum = attributes.sum do |a|
+            attr = dataset.editable_attributes.find(a.to_s)
+            attr ? attr.value.to_f : 0.0
+          end
+          sum
+        else
+          log_error(item, "Unsupported function '#{function}' used in aggregation. Only 'sum' is allowed.")
+          nil
+        end
       end
     end
   end

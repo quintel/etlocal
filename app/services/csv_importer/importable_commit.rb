@@ -21,8 +21,18 @@ class CSVImporter
       @keys.each do |key|
         value = row[key]
 
-        if value && value != current.find(key).value
-          commit.dataset_edits.build(key: key, value: value)
+        # Use the custom `find` method which expects a key
+        current_attr = current.find(key)
+
+        if value
+          if current_attr
+            if value != current_attr.value
+              commit.dataset_edits.build(key: key, value: value)
+            end
+          else
+            # Log a warning if the key is not found in editable_attributes
+            warn "Warning: Key '#{key}' not found in editable_attributes for dataset '#{dataset.geo_id}'. Skipping this key."
+          end
         end
       end
 

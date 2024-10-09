@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_07_01_091330) do
+ActiveRecord::Schema[7.0].define(version: 2024_10_08_145926) do
   create_table "commits", id: :integer, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "source_id"
     t.integer "user_id"

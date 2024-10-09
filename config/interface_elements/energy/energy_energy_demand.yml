@@ -4,21 +4,13 @@ groups:
     items:
       - key: energy_power_sector_own_use_electricity_demand
         unit: 'TJ'
-        entso: |
-          EB("Energy sector - electricity and heat generation - energy use", "Electricity")
       - key: energy_power_hv_network_loss_demand
         unit: 'TJ'
-        entso: |
-          EB("Distribution losses", "Electricity")
 
   - header: energy_mix_gas_network
     items:
       - key: energy_distribution_greengas_demand
         unit: 'TJ'
-        entso: |
-          0.995 * (EB("Total energy supply", "Biogases") -
-          EB("Transformation input - electricity and heat generation - autoproducer combined heat and power - energy use", "Biogases") -
-          EB("Transformation input - electricity and heat generation - main activity producer combined heat and power - energy use", "Biogases"))
       - key: energy_regasification_lng_energy_national_gas_network_natural_gas_demand
         unit: 'TJ'
 
@@ -26,8 +18,6 @@ groups:
     items:
       - key: energy_distribution_network_gas_loss_demand
         unit: 'TJ'
-        entso: |
-          EB("Distribution losses", "Network gas")
 
   - header: energy_heat_distribution_loss
     combination_method:
@@ -36,47 +26,7 @@ groups:
     items:
       - key: input_energy_heat_distribution_ht_loss_share
         unit: '%'
-        entso: |
-          IF(EB("Distribution losses", "Heat") > 0.0,
-          -> { EB("Distribution losses", "Heat") /
-               (
-                 EB("Final consumption - other sectors - agriculture and forestry - energy use", "Heat") +
-                 EB("Final consumption - other sectors - commercial and public services - energy use", "Heat") +
-                 EB("Final consumption - other sectors - commercial and public services - energy use", "Geothermal") +
-                 EB("Final consumption - other sectors - households - energy use", "Heat") +
-                 EB("Final consumption - other sectors - households - energy use", "Geothermal") +
-                 EB("Final consumption - other sectors - not elsewhere specified - energy use", "Heat") +
-                 EB("Distribution losses", "Heat")
-               ) * 100 },
-          -> { 0.0 })
       - key: input_energy_heat_distribution_mt_loss_share
         unit: '%'
-        entso: |
-          IF(EB("Distribution losses", "Heat") > 0.0,
-          -> { EB("Distribution losses", "Heat") /
-               (
-                 EB("Final consumption - other sectors - agriculture and forestry - energy use", "Heat") +
-                 EB("Final consumption - other sectors - commercial and public services - energy use", "Heat") +
-                 EB("Final consumption - other sectors - commercial and public services - energy use", "Geothermal") +
-                 EB("Final consumption - other sectors - households - energy use", "Heat") +
-                 EB("Final consumption - other sectors - households - energy use", "Geothermal") +
-                 EB("Final consumption - other sectors - not elsewhere specified - energy use", "Heat") +
-                 EB("Distribution losses", "Heat")
-               ) * 100 },
-          -> { 0.0 })
       - key: input_energy_heat_distribution_lt_loss_share
         unit: '%'
-        entso: |
-          IF(EB("Distribution losses", "Heat") > 0.0,
-          -> { EB("Distribution losses", "Heat") /
-               (
-                 EB("Final consumption - other sectors - agriculture and forestry - energy use", "Heat") +
-                 EB("Final consumption - other sectors - commercial and public services - energy use", "Heat") +
-                 EB("Final consumption - other sectors - commercial and public services - energy use", "Geothermal") +
-                 EB("Final consumption - other sectors - households - energy use", "Heat") +
-                 EB("Final consumption - other sectors - households - energy use", "Geothermal") +
-                 EB("Final consumption - other sectors - not elsewhere specified - energy use", "Heat") +
-                 EB("Distribution losses", "Heat")
-               ) * 100 },
-          -> { 0.0 })
-

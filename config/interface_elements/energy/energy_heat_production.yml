@@ -16,8 +16,6 @@ groups:
     items:
       - key: input_energy_heat_burner_ht_wood_pellets_production
         unit: 'TJ'
-        entso: |
-          EB("Biomass heater", "Heat")
       - key: input_energy_heat_burner_mt_wood_pellets_production
         unit: 'TJ'
 
@@ -26,8 +24,6 @@ groups:
     items:
       - key: input_energy_heat_burner_ht_coal_production
         unit: 'TJ'
-        entso: |
-          EB("Coal heater - industrial", "Heat")
       - key: input_energy_heat_burner_mt_coal_production
         unit: 'TJ'
 
@@ -36,8 +32,6 @@ groups:
     items:
       - key: input_energy_heat_burner_ht_crude_oil_production
         unit: 'TJ'
-        entso: |
-          EB("Oil heater - industrial", "Heat")
       - key: input_energy_heat_burner_mt_crude_oil_production
         unit: 'TJ'
 
@@ -62,8 +56,6 @@ groups:
     items:
       - key: input_energy_heat_well_deep_ht_geothermal_production
         unit: 'TJ' 
-        entso: |
-          EB("Geothermal - residential", "Heat")
       - key: input_energy_heat_well_deep_mt_geothermal_production
         unit: 'TJ'
       - key: input_energy_heat_well_shallow_heatpump_mt_geothermal_production
@@ -86,8 +78,6 @@ groups:
     items:
       - key: input_energy_heat_burner_ht_network_gas_production
         unit: 'TJ'
-        entso: |
-          EB("Gas heater", "Heat")
       - key: input_energy_heat_burner_mt_network_gas_production
         unit: 'TJ'
 
@@ -96,8 +86,6 @@ groups:
     items:
       - key: input_energy_heat_solar_ht_solar_thermal_production
         unit: 'TJ'
-        entso: |
-          EB("Solar thermal", "Heat")
       - key: input_energy_heat_solar_mt_solar_thermal_production
         unit: 'TJ'
       - key: input_energy_heat_solar_lt_solar_thermal_production
@@ -108,8 +96,6 @@ groups:
     items:
       - key: input_energy_heat_burner_ht_waste_mix_production
         unit: 'TJ'
-        entso: |
-          EB("Waste heater", "Heat")
       - key: input_energy_heat_burner_mt_waste_mix_production
         unit: 'TJ'
   

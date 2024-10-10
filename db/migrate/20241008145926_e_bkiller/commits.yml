@@ -7,4 +7,5 @@
 - fields:
   - :all
   message:
-    Updating Data extraction method
+    Data extraction method update - Data values for energy production keys are now migrated instead of extracted. 
+    Data values are not changed by this update. 

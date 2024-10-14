@@ -28,7 +28,7 @@ module DatasetSource
       end
 
       def self.from_dataset(dataset)
-        new(dataset.geo_id, Rails.root.join('data', 'datasets', "#{dataset.geo_id}_energy_balance_enriched.csv"))
+        new(dataset.geo_id, Rails.root.join('data', 'datasets', 'energy_balance', "#{dataset.geo_id}_energy_balance_enriched.csv"))
       end
 
       def initialize(geo_id, path)

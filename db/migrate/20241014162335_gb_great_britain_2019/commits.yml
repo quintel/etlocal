@@ -1,0 +1,4 @@
+---
+- fields:
+  - :all
+  message: Derived from UK and Northern Island dataset; values based on subtractions where applicable; shares, conversion efficiencies and full load hours based on UK dataset values.

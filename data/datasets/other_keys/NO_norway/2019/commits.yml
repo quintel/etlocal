@@ -1,0 +1,2495 @@
+---
+- fields:
+  - agriculture_chp_engine_biogas_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - agriculture_chp_engine_network_gas_dispatchable_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - agriculture_chp_wood_pellets_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - agriculture_final_demand_hydrogen_demand
+  message:
+   "Assumption no hydrogen"
+
+- fields:
+  - analysis_year
+  message:
+   "nan"
+
+- fields:
+  - annual_infrastructure_cost_gas
+  message:
+   "Assumed values of NL dataset, corrected for population"
+
+- fields:
+  - aquathermal_potential_for_drink_water
+  message:
+   "Assumed EU27 dataset value scaled with population"
+
+- fields:
+  - aquathermal_potential_for_surface_water
+  message:
+   "Assumed EU27 dataset value scaled with population"
+
+- fields:
+  - aquathermal_potential_for_waste_water
+  message:
+   "Assumed EU27 dataset value scaled with population"
+
+- fields:
+  - areable_land
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - buildings_final_demand_coal_buildings_final_demand_for_appliances_coal_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_coal_buildings_final_demand_for_space_heating_coal_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_crude_oil_buildings_final_demand_for_appliances_crude_oil_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_crude_oil_buildings_final_demand_for_space_heating_crude_oil_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_electricity_buildings_final_demand_for_appliances_electricity_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_electricity_buildings_final_demand_for_cooling_electricity_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_electricity_buildings_final_demand_for_lighting_electricity_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_electricity_buildings_final_demand_for_space_heating_electricity_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_cooling_electricity_buildings_cooling_airconditioning_electricity_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_cooling_electricity_buildings_cooling_collective_heatpump_water_water_ts_electricity_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_cooling_electricity_buildings_cooling_heatpump_air_water_electricity_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_lighting_electricity_buildings_lighting_efficient_fluorescent_electricity_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_lighting_electricity_buildings_lighting_led_electricity_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_lighting_electricity_buildings_lighting_standard_fluorescent_electricity_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_space_heating_electricity_buildings_space_heater_collective_heatpump_water_water_ts_electricity_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_space_heating_electricity_buildings_space_heater_electricity_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_space_heating_electricity_buildings_space_heater_heatpump_air_water_electricity_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_space_heating_electricity_buildings_space_heater_hybrid_heatpump_air_water_electricity_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_heatpump_air_water_network_gas_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_hybrid_heatpump_air_water_electricity_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_network_gas_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_network_gas_buildings_final_demand_for_appliances_network_gas_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_network_gas_buildings_final_demand_for_cooling_network_gas_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_network_gas_buildings_final_demand_for_space_heating_network_gas_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_wood_pellets_buildings_final_demand_for_appliances_wood_pellets_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_wood_pellets_buildings_final_demand_for_space_heating_wood_pellets_parent_share
+  message:
+   "Based on EU dataset derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_roof_surface_available_for_pv
+  message:
+   "Based on EU27 dataset value, scaled with population"
+
+- fields:
+  - co2_emission_1990
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 1990"
+
+- fields:
+  - co2_emission_1990_aviation_bunkers
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 1990"
+
+- fields:
+  - co2_emission_1990_marine_bunkers
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 1990"
+
+- fields:
+  - coast_line
+  message:
+   " Assumed values of NL dataset"
+
+- fields:
+  - country
+  message:
+   "nan"
+
+- fields:
+  - data_source
+  message:
+   "nan"
+
+- fields:
+  - energetic_emissions_other_ghg_agriculture
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - energetic_emissions_other_ghg_buildings
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - energetic_emissions_other_ghg_energy
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - energetic_emissions_other_ghg_households
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - energetic_emissions_other_ghg_industry
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - energetic_emissions_other_ghg_transport
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - energy_chp_coal_gas_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_greengas_gasification_dry_biomass_energy_greengas_production_child_share
+  message:
+   "Assumed EU27 dataset value"
+
+- fields:
+  - energy_greengas_gasification_wet_biomass_energy_greengas_production_child_share
+  message:
+   "Assumed EU27 dataset value"
+
+- fields:
+  - energy_greengas_upgrade_biogas_energy_greengas_production_child_share
+  message:
+   "Assumed EU27 dataset value"
+
+- fields:
+  - energy_heat_import_ht_steam_hot_water_demand
+  message:
+   "Assumed EU27 dataset value scaled with population"
+
+- fields:
+  - energy_heat_import_lt_steam_hot_water_demand
+  message:
+   "Assumed EU27 dataset value scaled with population"
+
+- fields:
+  - energy_heat_import_mt_steam_hot_water_demand
+  message:
+   "Assumed EU27 dataset value scaled with population"
+
+- fields:
+  - energy_power_combined_cycle_coal_gas_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_combined_cycle_network_gas_full_load_hours
+  message:
+   "Derived from energy balance and installed capacity from ENTSO-E: https://transparency.entsoe.eu/generation/r2/installedGenerationCapacityAggregation/show; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_engine_diesel_full_load_hours
+  message:
+   "Installed capacity calculated from assumption flh; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_engine_network_gas_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_geothermal_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_hydro_mountain_full_load_hours
+  message:
+   "Derived from energy balance and installed capacity from Eurostat: https://doi.org/10.2908/NRG_INF_EPCRW; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_hydro_river_full_load_hours
+  message:
+   "Full load hours assumed similar as hydro mountain; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_nuclear_gen2_uranium_oxide_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_nuclear_gen3_uranium_oxide_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_supercritical_ccs_waste_mix_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_supercritical_coal_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_supercritical_waste_mix_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_turbine_network_gas_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_ultra_supercritical_ccs_coal_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_ultra_supercritical_coal_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_ultra_supercritical_cofiring_coal_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_ultra_supercritical_crude_oil_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_ultra_supercritical_lignite_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_ultra_supercritical_network_gas_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_ultra_supercritical_oxyfuel_ccs_lignite_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_wind_turbine_coastal_full_load_hours
+  message:
+   "Full load hours assumed similar as flh of wind inland; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_power_wind_turbine_inland_full_load_hours
+  message:
+   "Derived from energy balance and installed capacity from Eurostat: https://doi.org/10.2908/NRG_INF_EPCRW; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - energy_production_dry_biomass_max_demand
+  message:
+   "Assumed EU27 dataset value scaled with population"
+
+- fields:
+  - energy_production_oily_biomass_max_demand
+  message:
+   "Assumed EU27 dataset value scaled with population"
+
+- fields:
+  - energy_production_wet_biomass_max_demand
+  message:
+   "Assumed EU27 dataset value scaled with population"
+
+- fields:
+  - energy_regasification_lng_energy_national_gas_network_natural_gas_demand
+  message:
+   "Assumed EU27 dataset value scaled with population"
+
+- fields:
+  - file_carriers_coal_co2_conversion_per_mj
+  message:
+   "Based on EU data abstracted from the report 'Covenant of Mayors for Climate and Energy: - Default emission actors for local - emission in entories'; year: 2017; author: RC"
+
+- fields:
+  - file_carriers_crude_oil_co2_conversion_per_mj
+  message:
+   "Based on EU data abstracted from the report 'Covenant of Mayors for Climate and Energy: - Default emission actors for local - emission in entories'; year: 2017; author: RC"
+
+- fields:
+  - file_carriers_diesel_co2_conversion_per_mj
+  message:
+   "Based on EU data abstracted from the report 'Covenant of Mayors for Climate and Energy: - Default emission actors for local - emission in entories'; year: 2017; author: RC"
+
+- fields:
+  - file_carriers_gasoline_co2_conversion_per_mj
+  message:
+   "Based on EU data abstracted from the report 'Covenant of Mayors for Climate and Energy: - Default emission actors for local - emission in entories'; year: 2017; author: RC"
+
+- fields:
+  - file_carriers_heavy_fuel_oil_co2_conversion_per_mj
+  message:
+   "Based on EU data abstracted from the report 'Covenant of Mayors for Climate and Energy: - Default emission actors for local - emission in entories'; year: 2017; author: RC"
+
+- fields:
+  - file_carriers_imported_ammonia_co2_conversion_per_mj
+  message:
+   "Based on EU data abstracted from the report 'Covenant of Mayors for Climate and Energy: - Default emission actors for local - emission in entories'; year: 2017; author: RC"
+
+- fields:
+  - file_carriers_imported_electricity_co2_conversion_per_mj
+  message:
+   "Based on EU data abstracted from the report 'Covenant of Mayors for Climate and Energy: - Default emission actors for local - emission in entories'; year: 2017; author: RC"
+
+- fields:
+  - file_carriers_imported_heat_co2_conversion_per_mj
+  message:
+   "Based on EU data abstracted from the report 'Covenant of Mayors for Climate and Energy: - Default emission actors for local - emission in entories'; year: 2017; author: RC"
+
+- fields:
+  - file_carriers_imported_hydrogen_co2_conversion_per_mj
+  message:
+   "Based on EU data abstracted from the report 'Covenant of Mayors for Climate and Energy: - Default emission actors for local - emission in entories'; year: 2017; author: RC"
+
+- fields:
+  - file_carriers_kerosene_co2_conversion_per_mj
+  message:
+   "Based on EU data abstracted from the report 'Covenant of Mayors for Climate and Energy: - Default emission actors for local - emission in entories'; year: 2017; author: RC"
+
+- fields:
+  - file_carriers_lignite_co2_conversion_per_mj
+  message:
+   "Based on EU data abstracted from the report 'Covenant of Mayors for Climate and Energy: - Default emission actors for local - emission in entories'; year: 2017; author: RC"
+
+- fields:
+  - file_carriers_lng_co2_conversion_per_mj
+  message:
+   "Based on EU data abstracted from the report 'Covenant of Mayors for Climate and Energy: - Default emission actors for local - emission in entories'; year: 2017; author: RC"
+
+- fields:
+  - file_carriers_lpg_co2_conversion_per_mj
+  message:
+   "Based on EU data abstracted from the report 'Covenant of Mayors for Climate and Energy: - Default emission actors for local - emission in entories'; year: 2017; author: RC"
+
+- fields:
+  - file_carriers_natural_gas_co2_conversion_per_mj
+  message:
+   "Based on EU data abstracted from the report 'Covenant of Mayors for Climate and Energy: - Default emission actors for local - emission in entories'; year: 2017; author: RC"
+
+- fields:
+  - file_carriers_non_biogenic_waste_co2_conversion_per_mj
+  message:
+   "Based on EU data abstracted from the report 'Covenant of Mayors for Climate and Energy: - Default emission actors for local - emission in entories'; year: 2017; author: RC"
+
+- fields:
+  - file_carriers_propane_co2_conversion_per_mj
+  message:
+   "Based on EU data abstracted from the report 'Covenant of Mayors for Climate and Energy: - Default emission actors for local - emission in entories'; year: 2017; author: RC"
+
+- fields:
+  - flh_solar_pv_solar_radiation_max
+  message:
+   "Derived from energy balance and installed capacity from Eurostat: https://doi.org/10.2908/NRG_INF_EPCRW; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - geo_id
+  message:
+   "nan"
+
+- fields:
+  - heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - heat_length_of_connection_pipelines_in_meter_per_residence_first_bracket
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - heat_length_of_connection_pipelines_in_meter_per_residence_fourth_bracket
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - heat_length_of_connection_pipelines_in_meter_per_residence_second_bracket
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - heat_length_of_connection_pipelines_in_meter_per_residence_third_bracket
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_fifth_bracket
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_first_bracket
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_fourth_bracket
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_second_bracket
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_third_bracket
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - households_final_demand_coal_households_final_demand_for_hot_water_coal_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption` based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_coal_households_final_demand_for_space_heating_coal_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption` based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_crude_oil_households_final_demand_for_hot_water_crude_oil_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption` based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_crude_oil_households_final_demand_for_space_heating_crude_oil_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption` based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_electricity_households_final_demand_for_appliances_electricity_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption` based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_electricity_households_final_demand_for_cooking_electricity_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption` based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_electricity_households_final_demand_for_cooling_electricity_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption` based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_electricity_households_final_demand_for_hot_water_electricity_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption` based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_electricity_households_final_demand_for_lighting_electricity_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption` based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_electricity_households_final_demand_for_space_heating_electricity_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption` based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_for_appliances_electricity_households_appliances_clothes_dryer_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_appliances_electricity_households_appliances_computer_media_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_appliances_electricity_households_appliances_dishwasher_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_appliances_electricity_households_appliances_fridge_freezer_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_appliances_electricity_households_appliances_other_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_appliances_electricity_households_appliances_television_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_appliances_electricity_households_appliances_vacuum_cleaner_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_appliances_electricity_households_appliances_washing_machine_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_cooking_electricity_households_cooker_halogen_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_cooking_electricity_households_cooker_induction_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_cooking_electricity_households_cooker_resistive_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_cooling_electricity_households_cooling_airconditioning_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_cooling_electricity_households_cooling_heatpump_air_water_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_cooling_electricity_households_cooling_heatpump_ground_water_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_lighting_electricity_households_lighting_efficient_fluorescent_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_lighting_electricity_households_lighting_incandescent_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_lighting_electricity_households_lighting_led_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_space_heating_electricity_households_space_heater_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_air_water_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_ground_water_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_space_heating_electricity_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_space_heating_network_gas_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_for_space_heating_network_gas_households_space_heater_network_gas_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - households_final_demand_network_gas_households_final_demand_for_cooking_network_gas_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_network_gas_households_final_demand_for_cooling_network_gas_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_network_gas_households_final_demand_for_hot_water_network_gas_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_network_gas_households_final_demand_for_space_heating_network_gas_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_wood_pellets_households_final_demand_for_cooking_wood_pellets_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_wood_pellets_households_final_demand_for_hot_water_wood_pellets_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_wood_pellets_households_final_demand_for_space_heating_wood_pellets_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - hv_net_capacity_per_step
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - hv_net_costs_per_capacity_step
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - hv_net_spare_capacity
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - hv_net_total_costs_present
+  message:
+   "Assumed values of NL dataset corrected for population"
+
+- fields:
+  - indirect_emissions_co2
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - industry_aluminium_burner_network_gas_industry_aluminium_electrolysis_current_electricity_parent_share
+  message:
+   "All processes asusmed to be current electrolysis"
+
+- fields:
+  - industry_aluminium_burner_network_gas_industry_aluminium_smeltoven_electricity_parent_share
+  message:
+   "All processes asusmed to be current electrolysis"
+
+- fields:
+  - industry_chp_combined_cycle_gas_power_fuelmix_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - industry_chp_engine_gas_power_fuelmix_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - industry_chp_turbine_gas_power_fuelmix_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - industry_chp_turbine_hydrogen_demand
+  message:
+   "Assumption no hydrogen"
+
+- fields:
+  - industry_chp_turbine_hydrogen_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - industry_chp_ultra_supercritical_coal_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - industry_chp_wood_pellets_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_electrolysis_current_electricity_parent_share
+  message:
+   "All processes asusmed to be current electrolysis"
+
+- fields:
+  - industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_smeltoven_electricity_parent_share
+  message:
+   "All processes asusmed to be current electrolysis"
+
+- fields:
+  - industry_final_demand_for_metal_steel_coal_industry_steel_blastfurnace_bof_parent_share
+  message:
+   "Derived from Eurostat"
+
+- fields:
+  - industry_final_demand_for_metal_steel_cokes_industry_steel_blastfurnace_bof_parent_share
+  message:
+   "Derived from Eurostat"
+
+- fields:
+  - industry_final_demand_for_metal_steel_crude_oil_industry_steel_blastfurnace_bof_parent_share
+  message:
+   "Derived from Eurostat"
+
+- fields:
+  - industry_final_demand_for_metal_steel_electricity_industry_steel_blastfurnace_bof_parent_share
+  message:
+   "Derived from Eurostat"
+
+- fields:
+  - industry_final_demand_for_metal_steel_network_gas_industry_steel_blastfurnace_bof_parent_share
+  message:
+   "Derived from Eurostat"
+
+- fields:
+  - industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_blastfurnace_bof_parent_share
+  message:
+   "Derived from Eurostat"
+
+- fields:
+  - industry_final_demand_for_metal_steel_wood_pellets_industry_steel_blastfurnace_bof_parent_share
+  message:
+   "Derived from Eurostat"
+
+- fields:
+  - industry_final_demand_for_other_food_electricity_industry_other_food_heater_electricity_parent_share
+  message:
+   "Assumption all to useful demand"
+
+- fields:
+  - industry_final_demand_for_other_food_electricity_industry_useful_demand_for_other_food_electricity_parent_share
+  message:
+   "Assumption all to useful demand"
+
+- fields:
+  - industry_final_demand_for_other_paper_electricity_industry_other_paper_heater_electricity_parent_share
+  message:
+   "Assumption all to useful demand"
+
+- fields:
+  - industry_final_demand_for_other_paper_electricity_industry_useful_demand_for_other_paper_electricity_parent_share
+  message:
+   "Assumption all to useful demand"
+
+- fields:
+  - industry_heat_burner_coal_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - industry_heat_burner_crude_oil_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - industry_heat_burner_hydrogen_demand
+  message:
+   "Assumption no hydrogen"
+
+- fields:
+  - industry_heat_burner_hydrogen_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - industry_heat_burner_lignite_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_agriculture_chp_engine_biogas_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_agriculture_chp_engine_biogas_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_agriculture_chp_engine_network_gas_dispatchable_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_agriculture_chp_engine_network_gas_dispatchable_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_agriculture_chp_wood_pellets_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_agriculture_chp_wood_pellets_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_combined_cycle_ht_network_gas_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_combined_cycle_mt_network_gas_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_combined_cycle_network_gas_electricity_output_conversion
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_combined_cycle_network_gas_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_combined_cycle_network_gas_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_local_engine_biogas_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_local_engine_biogas_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_local_engine_biogas_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_local_engine_ht_biogas_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_local_engine_ht_network_gas_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_local_engine_mt_biogas_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_local_engine_mt_network_gas_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_local_engine_network_gas_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_local_engine_network_gas_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_local_engine_network_gas_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_local_ht_wood_pellets_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_local_mt_wood_pellets_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_local_wood_pellets_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_local_wood_pellets_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_local_wood_pellets_steam_hot_water_output_conversion
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_supercritical_ht_waste_mix_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_supercritical_mt_waste_mix_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_supercritical_waste_mix_electricity_output_conversion
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_supercritical_waste_mix_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_supercritical_waste_mix_steam_hot_water_output_conversion
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_coal_electricity_output_conversion
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_coal_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_coal_steam_hot_water_output_conversion
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_cofiring_coal_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_cofiring_coal_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_cofiring_coal_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_cofiring_ht_coal_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_cofiring_mt_coal_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_ht_coal_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_ht_lignite_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_lignite_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_lignite_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_lignite_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_mt_coal_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_mt_lignite_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_boiler_electricity_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_boiler_ht_electricity_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_boiler_lt_electricity_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_boiler_mt_electricity_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_coal_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_coal_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_crude_oil_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_crude_oil_steam_hot_water_output_conversion
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_ht_coal_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_ht_crude_oil_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_ht_hydrogen_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_ht_network_gas_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_ht_waste_mix_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_ht_wood_pellets_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_hydrogen_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_lt_hydrogen_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_mt_coal_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_mt_crude_oil_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_mt_hydrogen_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_mt_network_gas_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_mt_waste_mix_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_mt_wood_pellets_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_network_gas_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_network_gas_steam_hot_water_output_conversion
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_waste_mix_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_waste_mix_steam_hot_water_output_conversion
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_wood_pellets_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_burner_wood_pellets_steam_hot_water_output_conversion
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_heatpump_water_water_electricity_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_heatpump_water_water_ht_electricity_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_heatpump_water_water_lt_electricity_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_heatpump_water_water_mt_electricity_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_solar_ht_solar_thermal_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_solar_lt_solar_thermal_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_solar_mt_solar_thermal_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_solar_solar_thermal_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_well_deep_ht_geothermal_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_well_deep_mt_geothermal_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_well_shallow_heatpump_mt_geothermal_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_heat_well_shallow_lt_geothermal_production
+  message:
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_combined_cycle_ccs_coal_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_combined_cycle_ccs_coal_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_combined_cycle_ccs_network_gas_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_combined_cycle_ccs_network_gas_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_combined_cycle_coal_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_combined_cycle_coal_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_combined_cycle_network_gas_electricity_output_conversion
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_combined_cycle_network_gas_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_engine_diesel_electricity_output_conversion
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_engine_diesel_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_engine_network_gas_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_engine_network_gas_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_geothermal_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_hydro_mountain_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_hydro_river_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_nuclear_gen2_uranium_oxide_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_nuclear_gen2_uranium_oxide_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_nuclear_gen3_uranium_oxide_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_nuclear_gen3_uranium_oxide_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_solar_csp_solar_radiation_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_solar_pv_solar_radiation_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_supercritical_ccs_waste_mix_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_supercritical_ccs_waste_mix_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_supercritical_coal_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_supercritical_coal_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_supercritical_waste_mix_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_supercritical_waste_mix_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_turbine_network_gas_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_turbine_network_gas_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_ultra_supercritical_ccs_coal_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_ultra_supercritical_ccs_coal_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_ultra_supercritical_coal_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_ultra_supercritical_coal_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_ultra_supercritical_cofiring_coal_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_ultra_supercritical_cofiring_coal_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_ultra_supercritical_crude_oil_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_ultra_supercritical_crude_oil_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_ultra_supercritical_lignite_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_ultra_supercritical_lignite_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_ultra_supercritical_network_gas_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_ultra_supercritical_network_gas_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_wind_turbine_coastal_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_wind_turbine_inland_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_wind_turbine_offshore_full_load_hours
+  message:
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_energy_power_wind_turbine_offshore_production
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - input_households_final_demand_steam_hot_water_households_final_demand_for_space_heating_steam_hot_water_parent_share
+  message:
+   "Derived from the annual POTEnCIA reports on country energy consumption based on EU27 dataset; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - input_industry_aluminium_electrolysis_current_electricity_share
+  message:
+   "All processes asusmed to be current electrolysis"
+
+- fields:
+  - input_industry_aluminium_smeltoven_electricity_share
+  message:
+   "All processes asusmed to be current electrolysis"
+
+- fields:
+  - input_industry_chemical_fertilizers_hydrogen_non_energetic_demand
+  message:
+   "See etdataset-public/source_analyses/NO_norway/2019/industry/input_industry_chemical_fertilizers.xlsx"
+
+- fields:
+  - input_industry_chemical_refineries_coal_non_energetic_demand
+  message:
+   "No non-energetic demand assumed"
+
+- fields:
+  - input_industry_chemical_refineries_network_gas_non_energetic_demand
+  message:
+   "No non-energetic demand assumed"
+
+- fields:
+  - input_industry_chemical_refineries_wood_pellets_non_energetic_demand
+  message:
+   "No non-energetic demand assumed"
+
+- fields:
+  - input_industry_chp_combined_cycle_gas_power_fuelmix_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_industry_chp_combined_cycle_gas_power_fuelmix_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_industry_chp_engine_gas_power_fuelmix_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_industry_chp_engine_gas_power_fuelmix_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_industry_chp_turbine_gas_power_fuelmix_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_industry_chp_turbine_gas_power_fuelmix_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_industry_chp_turbine_hydrogen_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_industry_chp_turbine_hydrogen_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_industry_chp_ultra_supercritical_coal_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_industry_chp_ultra_supercritical_coal_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_industry_chp_wood_pellets_electricity_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_industry_chp_wood_pellets_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_industry_heat_burner_coal_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_industry_heat_burner_crude_oil_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_industry_heat_burner_hydrogen_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_industry_heat_burner_lignite_steam_hot_water_output_conversion
+  message:
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_industry_metal_aluminium_production
+  message:
+   "See etdataset-public/source_analyses/NO_norway/2019/industry/input_industry_metal_aluminium.xlsx"
+
+- fields:
+  - input_industry_metal_steel_production
+  message:
+   "See etdataset-public/source_analyses/NO_norway/2019/industry/input_industry_metal_steel.xlsx"
+
+- fields:
+  - input_industry_steel_blastfurnace_bof_share
+  message:
+   "See etdataset-public/source_analyses/NO_norway/2019/industry/input_industry_metal_steel.xlsx"
+
+- fields:
+  - input_percentage_of_central_ht_steam_hot_water_agriculture_final_demand_steam_hot_water
+  message:
+   "All heat to HT"
+
+- fields:
+  - input_percentage_of_central_mt_steam_hot_water_agriculture_final_demand_steam_hot_water
+  message:
+   "All heat to HT"
+
+- fields:
+  - input_percentage_of_ht_steam_hot_water_buildings_final_demand_steam_hot_water
+  message:
+   "All heat to HT"
+
+- fields:
+  - input_percentage_of_ht_steam_hot_water_households_final_demand_steam_hot_water
+  message:
+   "All heat to HT"
+
+- fields:
+  - input_percentage_of_local_steam_hot_water_agriculture_final_demand_steam_hot_water
+  message:
+   "All heat to HT"
+
+- fields:
+  - input_percentage_of_lt_steam_hot_water_buildings_final_demand_steam_hot_water
+  message:
+   "All heat to HT"
+
+- fields:
+  - input_percentage_of_lt_steam_hot_water_households_final_demand_steam_hot_water
+  message:
+   "All heat to HT"
+
+- fields:
+  - input_percentage_of_mt_steam_hot_water_buildings_final_demand_steam_hot_water
+  message:
+   "All heat to HT"
+
+- fields:
+  - input_percentage_of_mt_steam_hot_water_households_final_demand_steam_hot_water
+  message:
+   "All heat to HT"
+
+- fields:
+  - input_share_mixer_gas_fuel_bio_oil
+  message:
+   "Assumption"
+
+- fields:
+  - input_share_mixer_gas_fuel_network_gas
+  message:
+   "Assumption"
+
+- fields:
+  - input_share_mixer_gas_fuel_oil
+  message:
+   "Assumption"
+
+- fields:
+  - input_solar_panels_roofs_and_parks_full_load_hours
+  message:
+   "Full load hours assumed similar as flh of solar PV plant; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_transport_road_car_hydrogen_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - input_transport_road_human_powered_bicycle_demand
+  message:
+   "Based on EU data corrected for population"
+
+- fields:
+  - interconnection_net_costs_present
+  message:
+   "Assumed values of NL dataset, corrected for interconnector capacity"
+
+- fields:
+  - interconnector_capacity
+  message:
+   "No sufficient EU data found, the interconnection costs are therefore calculated using the average interconnection costs from the NL dataset derived from the NvdT study (2017) by CE Delft and multiplied with the interconnection capcity derived from the TYNDP 2025 Scenario's by entso-e and entso-g; year: 2019; author: Quintel"
+
+- fields:
+  - lv_mv_trafo_capacity_per_step
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - lv_mv_trafo_costs_per_capacity_step
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - lv_mv_trafo_spare_capacity
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - lv_mv_trafo_total_costs_present
+  message:
+   "Assumed values of NL dataset scaled with population"
+
+- fields:
+  - lv_net_capacity_per_step
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - lv_net_costs_per_capacity_step
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - lv_net_spare_capacity
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - lv_net_total_costs_present
+  message:
+   "Assumed values of NL dataset corrected for population"
+
+- fields:
+  - mv_hv_trafo_capacity_per_step
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - mv_hv_trafo_costs_per_capacity_step
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - mv_hv_trafo_spare_capacity
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - mv_hv_trafo_total_costs_present
+  message:
+   "Assumed values of NL dataset scaled with population"
+
+- fields:
+  - mv_net_capacity_per_step
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - mv_net_costs_per_capacity_step
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - mv_net_spare_capacity
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - mv_net_total_costs_present
+  message:
+   "Assumed values of NL dataset corrected for population"
+
+- fields:
+  - name
+  message:
+   "nan"
+
+- fields:
+  - non_energetic_emissions_co2_agriculture_manure
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - non_energetic_emissions_co2_agriculture_soil_cultivation
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - non_energetic_emissions_co2_chemical_industry
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - non_energetic_emissions_co2_other_industry
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - non_energetic_emissions_co2_waste_management
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - non_energetic_emissions_other_ghg_agriculture_fermentation
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - non_energetic_emissions_other_ghg_agriculture_manure
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - non_energetic_emissions_other_ghg_agriculture_other
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - non_energetic_emissions_other_ghg_agriculture_soil_cultivation
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - non_energetic_emissions_other_ghg_chemical_industry
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - non_energetic_emissions_other_ghg_other_industry
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - non_energetic_emissions_other_ghg_waste_management
+  message:
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
+
+- fields:
+  - number_of_busses
+  message:
+   "Eurostat table Motor coaches, buses and trolley buses, by type of vehicle https://doi.org/10.2908/ROAD_EQS_BUSVEH; see etdataset-public/source_analyses/NO_norway/2019/4_transport/Eurostat number of buses.xlsx."
+
+- fields:
+  - number_of_cars
+  message:
+   "Eurostat data, source https://doi.org/10.2908/ROAD_EQS_CARAGE"
+
+- fields:
+  - number_of_inhabitants
+  message:
+   "Eurostat table Population on 1 January https://doi.org/10.2908/TPS00001; see etdataset-public/source_analyses/NO_norway/2019/2_households/Eurostat number of inhabitants.xlsx."
+
+- fields:
+  - number_of_trucks
+  message:
+   "Eurostat data, source https://doi.org/10.2908/ROAD_EQS_LORMOT"
+
+- fields:
+  - number_of_vans
+  message:
+   "Eurostat data, source https://doi.org/10.2908/ROAD_EQS_LORMOT"
+
+- fields:
+  - offshore_net_costs_present
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - offshore_suitable_for_wind
+  message:
+   "  Assumed values of NL dataset"
+
+- fields:
+  - present_number_of_apartments_1945_1964
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_apartments_1965_1984
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_apartments_1985_2004
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_apartments_2005_present
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_apartments_before_1945
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_buildings
+  message:
+   "Derived from nr of buildings in Sweden dataset from Hotmaps, scaled with number of inhabitants from Eurostat: https://doi.org/10.2908/TPS00001"
+
+- fields:
+  - present_number_of_detached_houses_1945_1964
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_detached_houses_1965_1984
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_detached_houses_1985_2004
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_detached_houses_2005_present
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_detached_houses_before_1945
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_semi_detached_houses_1945_1964
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_semi_detached_houses_1965_1984
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_semi_detached_houses_1985_2004
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_semi_detached_houses_2005_present
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_semi_detached_houses_before_1945
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_terraced_houses_1945_1964
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_terraced_houses_1965_1984
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_terraced_houses_1985_2004
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_terraced_houses_2005_present
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_number_of_terraced_houses_before_1945
+  message:
+   "Derived from Hotmaps project housing types per construction period for Sweden, scaled with number of households in NO in  2021 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+
+- fields:
+  - present_share_of_apartments_1945_1964_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_apartments_1965_1984_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_apartments_1985_2004_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_apartments_2005_present_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_apartments_before_1945_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_detached_houses_1945_1964_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_detached_houses_1965_1984_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_detached_houses_1985_2004_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_detached_houses_2005_present_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_detached_houses_before_1945_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_semi_detached_houses_1945_1964_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_semi_detached_houses_1965_1984_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_semi_detached_houses_1985_2004_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_semi_detached_houses_2005_present_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_semi_detached_houses_before_1945_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_terraced_houses_1945_1964_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_terraced_houses_1965_1984_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_terraced_houses_1985_2004_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_terraced_houses_2005_present_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - present_share_of_terraced_houses_before_1945_in_useful_demand_for_space_heating
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - residences_roof_surface_available_for_pv
+  message:
+   "Based on Eu data, corrected for Population"
+
+- fields:
+  - total_land_area
+  message:
+   "Assumed values of NL dataset"
+
+- fields:
+  - transport_final_demand_for_rail_electricity_transport_freight_train_using_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_final_demand_for_rail_electricity_transport_passenger_train_using_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_final_demand_for_rail_electricity_transport_tram_using_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_final_demand_for_road_bio_lng_demand
+  message:
+   "All gas assumed to be CNG"
+
+- fields:
+  - transport_final_demand_for_road_electricity_transport_bicycle_using_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_final_demand_for_road_electricity_transport_bus_using_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_final_demand_for_road_electricity_transport_car_using_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_final_demand_for_road_electricity_transport_motorcycle_using_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_final_demand_for_road_electricity_transport_truck_using_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_final_demand_for_road_electricity_transport_van_using_electricity_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_final_demand_for_road_hydrogen_transport_bus_using_hydrogen_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_final_demand_for_road_hydrogen_transport_truck_using_hydrogen_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_final_demand_for_road_hydrogen_transport_van_using_hydrogen_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_final_demand_for_road_lng_demand
+  message:
+   "All gas assumed to be CNG"
+
+- fields:
+  - transport_final_demand_for_road_lpg_transport_car_using_lpg_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_final_demand_for_road_lpg_transport_van_using_lpg_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_final_demand_hydrogen_demand
+  message:
+   "All gas assumed to be CNG"
+
+- fields:
+  - transport_rail_mixer_diesel_transport_freight_train_using_diesel_mix_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_rail_mixer_diesel_transport_passenger_train_using_diesel_mix_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_road_mixer_compressed_network_gas_transport_bus_using_compressed_natural_gas_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_road_mixer_compressed_network_gas_transport_car_using_compressed_natural_gas_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_road_mixer_compressed_network_gas_transport_truck_using_compressed_natural_gas_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_road_mixer_compressed_network_gas_transport_van_using_compressed_natural_gas_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_road_mixer_diesel_transport_bus_using_diesel_mix_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_road_mixer_diesel_transport_car_using_diesel_mix_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_road_mixer_diesel_transport_truck_using_diesel_mix_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_road_mixer_diesel_transport_van_using_diesel_mix_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_road_mixer_gasoline_transport_motorcycle_using_gasoline_mix_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_road_mixer_gasoline_transport_truck_using_gasoline_mix_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_road_mixer_gasoline_transport_van_using_gasoline_mix_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_road_mixer_lng_transport_bus_using_lng_mix_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - transport_road_mixer_lng_transport_truck_using_lng_mix_parent_share
+  message:
+   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+
+- fields:
+  - typical_useful_demand_for_space_heating_apartments_1945_1964
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_apartments_1965_1984
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_apartments_1985_2004
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_apartments_2005_present
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_apartments_before_1945
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_apartments_future
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_buildings_future
+  message:
+   "Assumed EU27 dataset value"
+
+- fields:
+  - typical_useful_demand_for_space_heating_buildings_present
+  message:
+   " Assumed EU27 dataset value"
+
+- fields:
+  - typical_useful_demand_for_space_heating_detached_houses_1945_1964
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_detached_houses_1965_1984
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_detached_houses_1985_2004
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_detached_houses_2005_present
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_detached_houses_before_1945
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_detached_houses_future
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_semi_detached_houses_1945_1964
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_semi_detached_houses_1965_1984
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_semi_detached_houses_1985_2004
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_semi_detached_houses_2005_present
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_semi_detached_houses_before_1945
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_semi_detached_houses_future
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_terraced_houses_1945_1964
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_terraced_houses_1965_1984
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_terraced_houses_1985_2004
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_terraced_houses_2005_present
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_terraced_houses_before_1945
+  message:
+   "Based on EU dataset"
+
+- fields:
+  - typical_useful_demand_for_space_heating_terraced_houses_future
+  message:
+   "Based on EU dataset"

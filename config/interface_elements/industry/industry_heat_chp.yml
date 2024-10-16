@@ -5,42 +5,24 @@ groups:
     items:
       - key: industry_chp_combined_cycle_gas_power_fuelmix_demand
         unit: 'TJ'
-        entso: |
-          EB("Gas CHP (CCGT)", "Fuelmix")
       - key: industry_chp_engine_gas_power_fuelmix_demand
         unit: 'TJ'
-        entso: |
-          EB("Gas motor CHP", "Fuelmix")
       - key: industry_chp_turbine_gas_power_fuelmix_demand
         unit: 'TJ'
-        entso: |
-          EB("Gas Turbine CHP", "Fuelmix")
       - key: industry_chp_ultra_supercritical_coal_demand
         unit: 'TJ'
-        entso: |
-          EB("Coal CHP", "Coal")
       - key: industry_chp_wood_pellets_demand
         unit: 'TJ'
-        entso: |
-          EB("Biomass CHP - industrial", "Primary solid biofuels")
       - key: industry_chp_turbine_hydrogen_demand
         unit: 'TJ'
       - key: industry_heat_burner_lignite_demand
         unit: 'TJ'
-        entso: |
-          EB("Lignite heater", "Lignite and peat")
       - key: industry_heat_burner_coal_demand
         unit: 'TJ'
-        entso: |
-          EB("Coal heater - industrial", "Coal")
       - key: industry_heat_well_geothermal_demand
         unit: 'TJ'
-        entso: |
-          EB("Geothermal - industrial", "Geothermal")
       - key: industry_heat_burner_crude_oil_demand
         unit: 'TJ'
-        entso: |
-          EB("Oil heater - industrial", "Oil")
       - key: industry_heat_burner_hydrogen_demand
         unit: 'TJ'
 
@@ -50,22 +32,10 @@ groups:
     items:
       - key: input_share_mixer_gas_fuel_bio_oil
         unit: '%'
-        entso: |
-          IF((EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) > 0.0,
-          -> { (EB("Gas CHP (CCGT)", "Renewable oil") + EB("Gas motor CHP", "Renewable oil") + EB("Gas Turbine CHP", "Renewable oil")) / (EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) },
-          -> { 0.0 })
       - key: input_share_mixer_gas_fuel_oil
         unit: '%'
-        entso: |
-          IF((EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) > 0.0,
-          -> { (EB("Gas CHP (CCGT)", "Fossil oil") + EB("Gas motor CHP", "Fossil oil") + EB("Gas Turbine CHP", "Fossil oil")) / (EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) },
-          -> { 0.0 })
       - key: input_share_mixer_gas_fuel_network_gas
         unit: '%'
-        entso: |
-          IF((EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) > 0.0,
-          -> { (EB("Gas CHP (CCGT)", "Network gas") + EB("Gas motor CHP", "Network gas") + EB("Gas Turbine CHP", "Network gas")) / (EB("Gas CHP (CCGT)", "Fuelmix") + EB("Gas motor CHP", "Fuelmix") + EB("Gas Turbine CHP", "Fuelmix")) },
-          -> { 1.0 })
         flexible: true
         skip_validation: true
 

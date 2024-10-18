@@ -22,7 +22,7 @@
 - fields:
   - analysis_year
   message:
-   "nan"
+   "Base year"
 
 - fields:
   - annual_infrastructure_cost_gas
@@ -203,16 +203,6 @@
   - coast_line
   message:
    " Assumed values of NL dataset"
-
-- fields:
-  - country
-  message:
-   "nan"
-
-- fields:
-  - data_source
-  message:
-   "nan"
 
 - fields:
   - energetic_emissions_other_ghg_agriculture
@@ -493,11 +483,6 @@
   - flh_solar_pv_solar_radiation_max
   message:
    "Derived from energy balance and installed capacity from Eurostat: https://doi.org/10.2908/NRG_INF_EPCRW; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
-
-- fields:
-  - geo_id
-  message:
-   "nan"
 
 - fields:
   - heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket
@@ -1878,11 +1863,6 @@
   - mv_net_total_costs_present
   message:
    "Assumed values of NL dataset corrected for population"
-
-- fields:
-  - name
-  message:
-   "nan"
 
 - fields:
   - non_energetic_emissions_co2_agriculture_manure

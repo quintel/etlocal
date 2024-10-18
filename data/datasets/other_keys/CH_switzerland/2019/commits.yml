@@ -1,18 +1,33 @@
 ---
 - fields:
+  - agriculture_chp_engine_biogas_demand
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+
+- fields:
   - agriculture_chp_engine_biogas_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - agriculture_chp_engine_network_gas_dispatchable_demand
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - agriculture_chp_engine_network_gas_dispatchable_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - agriculture_chp_wood_pellets_demand
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - agriculture_chp_wood_pellets_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - agriculture_final_demand_hydrogen_demand
@@ -22,7 +37,7 @@
 - fields:
   - analysis_year
   message:
-   "nan"
+   "Base year"
 
 - fields:
   - annual_infrastructure_cost_gas
@@ -247,7 +262,7 @@
 - fields:
   - energy_chp_coal_gas_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_greengas_gasification_dry_biomass_energy_greengas_production_child_share
@@ -282,112 +297,112 @@
 - fields:
   - energy_power_combined_cycle_coal_gas_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_combined_cycle_network_gas_full_load_hours
   message:
-   "Electricity input calculated from energy production and assumption electrical efficiency, full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Electricity input calculated from energy production and assumption electrical efficiency, full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_engine_diesel_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_engine_network_gas_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_geothermal_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_hydro_mountain_full_load_hours
   message:
-   "Derived from energy balance and installed capacity from ENTSO-E: https://transparency.entsoe.eu/generation/r2/installedGenerationCapacityAggregation/show; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance and installed capacity from ENTSO-E: https://transparency.entsoe.eu/generation/r2/installedGenerationCapacityAggregation/show; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_hydro_river_full_load_hours
   message:
-   "Full load hours assumed similar as hydro mountain; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed similar as hydro mountain; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_nuclear_gen2_uranium_oxide_full_load_hours
   message:
-   "Electricity production calculated from energy input and assumption electrical efficiency, full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Electricity production calculated from energy input and assumption electrical efficiency, full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_nuclear_gen3_uranium_oxide_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_supercritical_ccs_waste_mix_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_supercritical_coal_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_supercritical_waste_mix_full_load_hours
   message:
-   "Energy input calculated from electricity output and assumption efficiency, full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Energy input calculated from electricity output and assumption efficiency, full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_turbine_network_gas_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_ultra_supercritical_ccs_coal_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_ultra_supercritical_coal_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_ultra_supercritical_cofiring_coal_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_ultra_supercritical_crude_oil_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_ultra_supercritical_lignite_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_ultra_supercritical_network_gas_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_ultra_supercritical_oxyfuel_ccs_lignite_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_wind_turbine_coastal_full_load_hours
   message:
-   "Full load hours assumed similar as flh of wind inland; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed similar as flh of wind inland; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_wind_turbine_inland_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_production_dry_biomass_max_demand
@@ -492,7 +507,7 @@
 - fields:
   - flh_solar_pv_solar_radiation_max
   message:
-   "Derived from energy balance and installed capacity from ENTSO-E: https://transparency.entsoe.eu/generation/r2/installedGenerationCapacityAggregation/show; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance and installed capacity from ENTSO-E: https://transparency.entsoe.eu/generation/r2/installedGenerationCapacityAggregation/show; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - geo_id
@@ -790,19 +805,34 @@
    "All processes asusmed to be current electrolysis"
 
 - fields:
+  - industry_chp_combined_cycle_gas_power_fuelmix_demand
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+
+- fields:
   - industry_chp_combined_cycle_gas_power_fuelmix_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - industry_chp_engine_gas_power_fuelmix_demand
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - industry_chp_engine_gas_power_fuelmix_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - industry_chp_turbine_gas_power_fuelmix_demand
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - industry_chp_turbine_gas_power_fuelmix_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - industry_chp_turbine_hydrogen_demand
@@ -812,17 +842,27 @@
 - fields:
   - industry_chp_turbine_hydrogen_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - industry_chp_ultra_supercritical_coal_demand
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - industry_chp_ultra_supercritical_coal_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - industry_chp_wood_pellets_demand
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - industry_chp_wood_pellets_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_electrolysis_current_electricity_parent_share
@@ -890,14 +930,24 @@
    "Assumption all to useful demand"
 
 - fields:
+  - industry_heat_burner_coal_demand
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+
+- fields:
   - industry_heat_burner_coal_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - industry_heat_burner_crude_oil_demand
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - industry_heat_burner_crude_oil_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - industry_heat_burner_hydrogen_demand
@@ -907,677 +957,692 @@
 - fields:
   - industry_heat_burner_hydrogen_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - industry_heat_burner_lignite_demand
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - industry_heat_burner_lignite_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - industry_heat_well_geothermal_demand
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_agriculture_chp_engine_biogas_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_agriculture_chp_engine_biogas_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_agriculture_chp_engine_network_gas_dispatchable_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_agriculture_chp_engine_network_gas_dispatchable_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_agriculture_chp_wood_pellets_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_agriculture_chp_wood_pellets_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+
+- fields:
+  - input_buildings_solar_pv_demand
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_combined_cycle_ht_network_gas_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_combined_cycle_mt_network_gas_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_combined_cycle_network_gas_electricity_output_conversion
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_combined_cycle_network_gas_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_combined_cycle_network_gas_steam_hot_water_output_conversion
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_local_engine_biogas_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_local_engine_biogas_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_local_engine_biogas_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_local_engine_ht_biogas_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_local_engine_ht_network_gas_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_local_engine_mt_biogas_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_local_engine_mt_network_gas_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_local_engine_network_gas_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_local_engine_network_gas_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_local_engine_network_gas_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_local_ht_wood_pellets_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_local_mt_wood_pellets_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_local_wood_pellets_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_local_wood_pellets_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_local_wood_pellets_steam_hot_water_output_conversion
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_supercritical_ht_waste_mix_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_supercritical_mt_waste_mix_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_supercritical_waste_mix_electricity_output_conversion
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_supercritical_waste_mix_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_supercritical_waste_mix_steam_hot_water_output_conversion
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_coal_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_coal_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_coal_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_cofiring_coal_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_cofiring_coal_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_cofiring_coal_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_cofiring_ht_coal_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_cofiring_mt_coal_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_ht_coal_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_ht_lignite_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_lignite_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_lignite_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_lignite_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_mt_coal_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_mt_lignite_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_boiler_electricity_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_boiler_ht_electricity_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_boiler_lt_electricity_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_boiler_mt_electricity_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_coal_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_coal_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_crude_oil_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_crude_oil_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_ht_coal_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_ht_crude_oil_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_ht_hydrogen_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_ht_network_gas_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_ht_waste_mix_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_ht_wood_pellets_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_hydrogen_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_lt_hydrogen_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_mt_coal_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_mt_crude_oil_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_mt_hydrogen_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_mt_network_gas_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_mt_waste_mix_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_mt_wood_pellets_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_network_gas_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_network_gas_steam_hot_water_output_conversion
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_waste_mix_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_waste_mix_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_wood_pellets_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_wood_pellets_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_heatpump_water_water_electricity_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_heatpump_water_water_ht_electricity_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_heatpump_water_water_lt_electricity_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_heatpump_water_water_mt_electricity_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_solar_ht_solar_thermal_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_solar_lt_solar_thermal_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_solar_mt_solar_thermal_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_solar_solar_thermal_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_well_deep_ht_geothermal_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_well_deep_mt_geothermal_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_well_shallow_heatpump_mt_geothermal_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_well_shallow_lt_geothermal_production
   message:
-   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance, assumption all to HT; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_combined_cycle_ccs_coal_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_combined_cycle_ccs_coal_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_combined_cycle_ccs_network_gas_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_combined_cycle_ccs_network_gas_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_combined_cycle_coal_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_combined_cycle_coal_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_combined_cycle_network_gas_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_combined_cycle_network_gas_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_engine_diesel_electricity_output_conversion
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_engine_diesel_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_engine_network_gas_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_engine_network_gas_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_geothermal_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_hydro_mountain_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_hydro_river_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_nuclear_gen2_uranium_oxide_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_nuclear_gen2_uranium_oxide_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_nuclear_gen3_uranium_oxide_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_nuclear_gen3_uranium_oxide_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_solar_csp_solar_radiation_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_solar_pv_solar_radiation_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_supercritical_ccs_waste_mix_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_supercritical_ccs_waste_mix_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_supercritical_coal_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_supercritical_coal_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_supercritical_waste_mix_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_supercritical_waste_mix_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_turbine_network_gas_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_turbine_network_gas_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_ultra_supercritical_ccs_coal_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_ultra_supercritical_ccs_coal_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_ultra_supercritical_coal_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_ultra_supercritical_coal_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_ultra_supercritical_cofiring_coal_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_ultra_supercritical_cofiring_coal_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_ultra_supercritical_crude_oil_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_ultra_supercritical_crude_oil_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_ultra_supercritical_lignite_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_ultra_supercritical_lignite_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_ultra_supercritical_network_gas_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_ultra_supercritical_network_gas_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_wind_turbine_coastal_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_wind_turbine_inland_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_wind_turbine_offshore_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_wind_turbine_offshore_production
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share
@@ -1588,6 +1653,11 @@
   - input_households_final_demand_steam_hot_water_households_final_demand_for_space_heating_steam_hot_water_parent_share
   message:
    "Calculated from final energy consumption in households per application per carrier of EU27 dataset: https://doi.org/10.2908/NRG_D_HHQ"
+
+- fields:
+  - input_households_solar_pv_demand
+  message:
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_industry_aluminium_electrolysis_current_electricity_share
@@ -1622,82 +1692,82 @@
 - fields:
   - input_industry_chp_combined_cycle_gas_power_fuelmix_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_industry_chp_combined_cycle_gas_power_fuelmix_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_industry_chp_engine_gas_power_fuelmix_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_industry_chp_engine_gas_power_fuelmix_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_industry_chp_turbine_gas_power_fuelmix_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_industry_chp_turbine_gas_power_fuelmix_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_industry_chp_turbine_hydrogen_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_industry_chp_turbine_hydrogen_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_industry_chp_ultra_supercritical_coal_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_industry_chp_ultra_supercritical_coal_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_industry_chp_wood_pellets_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_industry_chp_wood_pellets_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_industry_heat_burner_coal_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_industry_heat_burner_crude_oil_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_industry_heat_burner_hydrogen_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_industry_heat_burner_lignite_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_industry_metal_aluminium_production
@@ -1777,7 +1847,7 @@
 - fields:
   - input_solar_panels_roofs_and_parks_full_load_hours
   message:
-   "Full load hours assumed similar as flh of solar PV plant; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed similar as flh of solar PV plant; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_transport_road_car_hydrogen_share
@@ -1962,7 +2032,7 @@
 - fields:
   - number_of_trucks
   message:
-   " "Source : Eurostat data"
+   "Source : Eurostat data"
 
 - fields:
   - number_of_vans

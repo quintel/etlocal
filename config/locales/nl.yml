@@ -50,7 +50,13 @@ nl:
     se: Zweden
     si: Slovenië
     sg: Singapore
+<<<<<<< HEAD
     gb: Groot-Brittannië
+=======
+    no: Noorwegen
+    rs: Servië
+    ch: Zwitserland
+>>>>>>> 7b5c843f (Update dataset keys, values, files for CH,NO,RS datasets)
     any: Alle landen
 
   groups:

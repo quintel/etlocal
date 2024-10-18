@@ -31,13 +31,13 @@ module DatasetSource
         base_path = Rails.root.join('data', 'datasets', "#{dataset.geo_id}_energy_balance_enriched")
         paths = ["#{base_path}.csv", "#{base_path}.encrypted.csv"]
 
-        path = paths.find { |p| File.exist?(p) }
+        path = paths.find { |p| ::File.exist?(p) }
 
-        if path
-          new(dataset.geo_id, path)
-        else
+        unless path
           raise "Neither the CSV nor the encrypted file exists for dataset with geo_id: #{dataset.geo_id}"
         end
+
+        new(dataset.geo_id, path)
       end
 
       def initialize(geo_id, path)

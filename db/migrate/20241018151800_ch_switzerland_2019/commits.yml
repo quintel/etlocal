@@ -220,44 +220,34 @@
    "No coastline"
 
 - fields:
-  - country
-  message:
-   "nan"
-
-- fields:
-  - data_source
-  message:
-   "nan"
-
-- fields:
   - energetic_emissions_other_ghg_agriculture
   message:
-   "Air emissions account, Serbian Environmental Protection Agency, assumed 2021 data:  https://publikacije.stat.gov.rs/G2024/HtmlE/G20241257.html"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - energetic_emissions_other_ghg_buildings
   message:
-   "Air emissions account, Serbian Environmental Protection Agency, assumed 2021 data:  https://publikacije.stat.gov.rs/G2024/HtmlE/G20241257.html"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - energetic_emissions_other_ghg_energy
   message:
-   "Air emissions account, Serbian Environmental Protection Agency, assumed 2021 data:  https://publikacije.stat.gov.rs/G2024/HtmlE/G20241257.html"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - energetic_emissions_other_ghg_households
   message:
-   "Air emissions account, Serbian Environmental Protection Agency, assumed 2021 data:  https://publikacije.stat.gov.rs/G2024/HtmlE/G20241257.html"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - energetic_emissions_other_ghg_industry
   message:
-   "Air emissions account, Serbian Environmental Protection Agency, assumed 2021 data:  https://publikacije.stat.gov.rs/G2024/HtmlE/G20241257.html"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - energetic_emissions_other_ghg_transport
   message:
-   "Air emissions account, Serbian Environmental Protection Agency, assumed 2021 data:  https://publikacije.stat.gov.rs/G2024/HtmlE/G20241257.html"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - energy_chp_coal_gas_full_load_hours
@@ -302,7 +292,7 @@
 - fields:
   - energy_power_combined_cycle_network_gas_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Electricity input calculated from energy production and assumption electrical efficiency, full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_engine_diesel_full_load_hours
@@ -322,7 +312,7 @@
 - fields:
   - energy_power_hydro_mountain_full_load_hours
   message:
-   "Derived from energy balance and installed capacity from Eurostat: https://doi.org/10.2908/NRG_INF_EPCRW; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance and installed capacity from ENTSO-E: https://transparency.entsoe.eu/generation/r2/installedGenerationCapacityAggregation/show; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_hydro_river_full_load_hours
@@ -332,7 +322,7 @@
 - fields:
   - energy_power_nuclear_gen2_uranium_oxide_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Electricity production calculated from energy input and assumption electrical efficiency, full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_nuclear_gen3_uranium_oxide_full_load_hours
@@ -352,7 +342,7 @@
 - fields:
   - energy_power_supercritical_waste_mix_full_load_hours
   message:
-   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Energy input calculated from electricity output and assumption efficiency, full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_turbine_network_gas_full_load_hours
@@ -382,7 +372,7 @@
 - fields:
   - energy_power_ultra_supercritical_lignite_full_load_hours
   message:
-   "Derived from energy balance and installed capacity from PEMMDB 2019 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_ultra_supercritical_network_gas_full_load_hours
@@ -402,7 +392,7 @@
 - fields:
   - energy_power_wind_turbine_inland_full_load_hours
   message:
-   "Derived from energy balance and installed capacity from Eurostat: https://doi.org/10.2908/NRG_INF_EPCRW; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_production_dry_biomass_max_demand
@@ -507,12 +497,7 @@
 - fields:
   - flh_solar_pv_solar_radiation_max
   message:
-   "Derived from energy balance and installed capacity from Eurostat: https://doi.org/10.2908/NRG_INF_EPCRW; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
-
-- fields:
-  - geo_id
-  message:
-   "nan"
+   "Derived from energy balance and installed capacity from ENTSO-E: https://transparency.entsoe.eu/generation/r2/installedGenerationCapacityAggregation/show; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket
@@ -587,72 +572,72 @@
 - fields:
   - households_final_demand_electricity_households_final_demand_for_appliances_electricity_parent_share
   message:
-   "Calculated from final energy consumption in households per application per carrier of EU27 dataset: https://doi.org/10.2908/NRG_D_HHQ"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 16 "
 
 - fields:
   - households_final_demand_electricity_households_final_demand_for_cooking_electricity_parent_share
   message:
-   "Calculated from final energy consumption in households per application per carrier of EU27 dataset: https://doi.org/10.2908/NRG_D_HHQ"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 16 "
 
 - fields:
   - households_final_demand_electricity_households_final_demand_for_cooling_electricity_parent_share
   message:
-   "Calculated from final energy consumption in households per application per carrier of EU27 dataset: https://doi.org/10.2908/NRG_D_HHQ"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 16 "
 
 - fields:
   - households_final_demand_electricity_households_final_demand_for_hot_water_electricity_parent_share
   message:
-   "Calculated from final energy consumption in households per application per carrier of EU27 dataset: https://doi.org/10.2908/NRG_D_HHQ"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 16 "
 
 - fields:
   - households_final_demand_electricity_households_final_demand_for_lighting_electricity_parent_share
   message:
-   "Calculated from final energy consumption in households per application per carrier of EU27 dataset: https://doi.org/10.2908/NRG_D_HHQ"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 16 "
 
 - fields:
   - households_final_demand_electricity_households_final_demand_for_space_heating_electricity_parent_share
   message:
-   "Calculated from final energy consumption in households per application per carrier of EU27 dataset: https://doi.org/10.2908/NRG_D_HHQ"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 16 "
 
 - fields:
   - households_final_demand_for_appliances_electricity_households_appliances_clothes_dryer_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Derived from Suisse �nergie: https://www.suisseenergie.ch/stories/appareils-electriques-a-haute-efficacite-energetique/"
 
 - fields:
   - households_final_demand_for_appliances_electricity_households_appliances_computer_media_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Derived from Suisse �nergie: https://www.suisseenergie.ch/stories/appareils-electriques-a-haute-efficacite-energetique/"
 
 - fields:
   - households_final_demand_for_appliances_electricity_households_appliances_dishwasher_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Derived from Suisse �nergie: https://www.suisseenergie.ch/stories/appareils-electriques-a-haute-efficacite-energetique/"
 
 - fields:
   - households_final_demand_for_appliances_electricity_households_appliances_fridge_freezer_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Derived from Suisse �nergie: https://www.suisseenergie.ch/stories/appareils-electriques-a-haute-efficacite-energetique/"
 
 - fields:
   - households_final_demand_for_appliances_electricity_households_appliances_other_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Derived from Suisse �nergie: https://www.suisseenergie.ch/stories/appareils-electriques-a-haute-efficacite-energetique/"
 
 - fields:
   - households_final_demand_for_appliances_electricity_households_appliances_television_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Derived from Suisse �nergie: https://www.suisseenergie.ch/stories/appareils-electriques-a-haute-efficacite-energetique/"
 
 - fields:
   - households_final_demand_for_appliances_electricity_households_appliances_vacuum_cleaner_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Derived from Suisse �nergie: https://www.suisseenergie.ch/stories/appareils-electriques-a-haute-efficacite-energetique/"
 
 - fields:
   - households_final_demand_for_appliances_electricity_households_appliances_washing_machine_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Derived from Suisse �nergie: https://www.suisseenergie.ch/stories/appareils-electriques-a-haute-efficacite-energetique/"
 
 - fields:
   - households_final_demand_for_cooking_electricity_households_cooker_halogen_electricity_parent_share
@@ -687,37 +672,37 @@
 - fields:
   - households_final_demand_for_lighting_electricity_households_lighting_efficient_fluorescent_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "From EnergieSchweiz, Bundesamt fur Energie (BFE): https://www.newsd.admin.ch/newsd/message/attachments/74433.pdf"
 
 - fields:
   - households_final_demand_for_lighting_electricity_households_lighting_incandescent_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "From EnergieSchweiz, Bundesamt fur Energie (BFE): https://www.newsd.admin.ch/newsd/message/attachments/74433.pdf"
 
 - fields:
   - households_final_demand_for_lighting_electricity_households_lighting_led_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "From EnergieSchweiz, Bundesamt fur Energie (BFE): https://www.newsd.admin.ch/newsd/message/attachments/74433.pdf"
 
 - fields:
   - households_final_demand_for_space_heating_electricity_households_space_heater_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 18 "
 
 - fields:
   - households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_air_water_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 18 "
 
 - fields:
   - households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_ground_water_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 18 "
 
 - fields:
   - households_final_demand_for_space_heating_electricity_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 18 "
 
 - fields:
   - households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share
@@ -787,12 +772,12 @@
 - fields:
   - hv_net_total_costs_present
   message:
-   "Assumed values of NL dataset corrected for population"
+   "Assumed values of NL dataset scaled with population"
 
 - fields:
   - indirect_emissions_co2
   message:
-   "No data available"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - industry_aluminium_burner_network_gas_industry_aluminium_electrolysis_current_electricity_parent_share
@@ -877,37 +862,37 @@
 - fields:
   - industry_final_demand_for_metal_steel_coal_industry_steel_blastfurnace_bof_parent_share
   message:
-   "Derived from Eurostat"
+   "Derived from energy balance"
 
 - fields:
   - industry_final_demand_for_metal_steel_cokes_industry_steel_blastfurnace_bof_parent_share
   message:
-   "Derived from Eurostat"
+   "Derived from energy balance"
 
 - fields:
   - industry_final_demand_for_metal_steel_crude_oil_industry_steel_blastfurnace_bof_parent_share
   message:
-   "Derived from Eurostat"
+   "Derived from energy balance"
 
 - fields:
   - industry_final_demand_for_metal_steel_electricity_industry_steel_blastfurnace_bof_parent_share
   message:
-   "Derived from Eurostat"
+   "Derived from energy balance"
 
 - fields:
   - industry_final_demand_for_metal_steel_network_gas_industry_steel_blastfurnace_bof_parent_share
   message:
-   "Derived from Eurostat"
+   "Derived from energy balance"
 
 - fields:
   - industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_blastfurnace_bof_parent_share
   message:
-   "Derived from Eurostat"
+   "Derived from energy balance"
 
 - fields:
   - industry_final_demand_for_metal_steel_wood_pellets_industry_steel_blastfurnace_bof_parent_share
   message:
-   "Derived from Eurostat"
+   "Derived from energy balance"
 
 - fields:
   - industry_final_demand_for_other_food_electricity_industry_other_food_heater_electricity_parent_share
@@ -1097,7 +1082,7 @@
 - fields:
   - input_energy_chp_local_wood_pellets_electricity_output_conversion
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_local_wood_pellets_full_load_hours
@@ -1132,7 +1117,7 @@
 - fields:
   - input_energy_chp_supercritical_waste_mix_steam_hot_water_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_coal_electricity_output_conversion
@@ -1147,7 +1132,7 @@
 - fields:
   - input_energy_chp_ultra_supercritical_coal_steam_hot_water_output_conversion
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_cofiring_coal_electricity_output_conversion
@@ -1187,7 +1172,7 @@
 - fields:
   - input_energy_chp_ultra_supercritical_lignite_electricity_output_conversion
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_lignite_full_load_hours
@@ -1197,7 +1182,7 @@
 - fields:
   - input_energy_chp_ultra_supercritical_lignite_steam_hot_water_output_conversion
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_chp_ultra_supercritical_mt_coal_production
@@ -1247,7 +1232,7 @@
 - fields:
   - input_energy_heat_burner_crude_oil_steam_hot_water_output_conversion
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_burner_ht_coal_production
@@ -1347,7 +1332,7 @@
 - fields:
   - input_energy_heat_burner_wood_pellets_steam_hot_water_output_conversion
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_heat_heatpump_water_water_electricity_full_load_hours
@@ -1452,7 +1437,7 @@
 - fields:
   - input_energy_power_engine_diesel_electricity_output_conversion
   message:
-   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_engine_diesel_production
@@ -1597,7 +1582,7 @@
 - fields:
   - input_energy_power_ultra_supercritical_lignite_electricity_output_conversion
   message:
-   "Derived from energy balance; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Assumption; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_energy_power_ultra_supercritical_lignite_production
@@ -1672,7 +1657,7 @@
 - fields:
   - input_industry_chemical_fertilizers_hydrogen_non_energetic_demand
   message:
-   "See etdataset-public/source_analyses/RS_serbia/2019/6_industry/input_industry_chemical_fertilizers.xlsx"
+   "See etdataset-public/source_analyses/CH_switzerland/2019/6_industry/input_industry_chemical_fertilizers.xlsx"
 
 - fields:
   - input_industry_chemical_refineries_coal_non_energetic_demand
@@ -1772,17 +1757,17 @@
 - fields:
   - input_industry_metal_aluminium_production
   message:
-   "See etdataset-public/source_analyses/RS_serbia/2019/6_industry/input_industry_metal_aluminium.xlsx"
+   "See etdataset-public/source_analyses/CH_switzerland/2019/6_industry/input_industry_metal_aluminium.xlsx"
 
 - fields:
   - input_industry_metal_steel_production
   message:
-   "See etdataset-public/source_analyses/RS_serbia/2019/6_industry/input_industry_metal_steel.xlsx"
+   "See etdataset-public/source_analyses/CH_switzerland/2019/6_industry/input_industry_metal_steel.xlsx"
 
 - fields:
   - input_industry_steel_blastfurnace_bof_share
   message:
-   "See etdataset-public/source_analyses/RS_serbia/2019/6_industry/input_industry_metal_steel.xlsx"
+   "See etdataset-public/source_analyses/CH_switzerland/2019/6_industry/input_industry_metal_steel.xlsx"
 
 - fields:
   - input_percentage_of_central_ht_steam_hot_water_agriculture_final_demand_steam_hot_water
@@ -1857,7 +1842,7 @@
 - fields:
   - input_transport_road_human_powered_bicycle_demand
   message:
-   " Based on EU data  corrected for population"
+   "Based on EU data corrected for population"
 
 - fields:
   - interconnection_net_costs_present
@@ -1907,7 +1892,7 @@
 - fields:
   - lv_net_total_costs_present
   message:
-   "Assumed values of NL dataset corrected for population"
+   "Assumed values of NL dataset scaled with population"
 
 - fields:
   - mv_hv_trafo_capacity_per_step
@@ -1947,82 +1932,77 @@
 - fields:
   - mv_net_total_costs_present
   message:
-   "Assumed values of NL dataset corrected for population"
-
-- fields:
-  - name
-  message:
-   "nan"
+   "Assumed values of NL dataset scaled with population"
 
 - fields:
   - non_energetic_emissions_co2_agriculture_manure
   message:
-   "No data available"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - non_energetic_emissions_co2_agriculture_soil_cultivation
   message:
-   "No data available"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - non_energetic_emissions_co2_chemical_industry
   message:
-   "No data available"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - non_energetic_emissions_co2_other_industry
   message:
-   "No data available"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - non_energetic_emissions_co2_waste_management
   message:
-   "No data available"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - non_energetic_emissions_other_ghg_agriculture_fermentation
   message:
-   "No data available"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - non_energetic_emissions_other_ghg_agriculture_manure
   message:
-   "No data available"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - non_energetic_emissions_other_ghg_agriculture_other
   message:
-   "No data available"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - non_energetic_emissions_other_ghg_agriculture_soil_cultivation
   message:
-   "No data available"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - non_energetic_emissions_other_ghg_chemical_industry
   message:
-   "No data available"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - non_energetic_emissions_other_ghg_other_industry
   message:
-   "No data available"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - non_energetic_emissions_other_ghg_waste_management
   message:
-   "No data available"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 2019"
 
 - fields:
   - number_of_busses
   message:
-   "Eurostat table Motor coaches, buses and trolley buses, by type of vehicle https://doi.org/10.2908/ROAD_EQS_BUSVEH; see etdataset-public/source_analyses/RS_serbia/2019/4_transport/Eurostat number of buses.xlsx."
+   "Eurostat table Motor coaches, buses and trolley buses, by type of vehicle https://doi.org/10.2908/ROAD_EQS_BUSVEH; see etdataset-public/source_analyses/CH_switzerland/2019/4_transport/Eurostat number of buses.xlsx."
 
 - fields:
   - number_of_cars
   message:
-   "Based on EU data  corrected for population"
+   "Source : Eurostat data, https://doi.org/10.2908/ROAD_EQS_CARAGE"
 
 - fields:
   - number_of_inhabitants
@@ -2032,12 +2012,12 @@
 - fields:
   - number_of_trucks
   message:
-   "Derived from number of trucks in EU27 dataset, scaled with number of inhabitants from Eurostat"
+   "Source : Eurostat data"
 
 - fields:
   - number_of_vans
   message:
-   "Number of vans 2022 value taken (VG_LE3PH, goods road motor vehicles <= 3.5 tonnes) from Eurostat https://doi.org/10.2908/TRAN_R_VEHST"
+   "Source : Eurostat data, https://doi.org/10.2908/ROAD_EQS_CARAGE"
 
 - fields:
   - offshore_net_costs_present
@@ -2052,27 +2032,27 @@
 - fields:
   - present_number_of_apartments_1945_1964
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_apartments_1965_1984
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_apartments_1985_2004
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_apartments_2005_present
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_apartments_before_1945
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_buildings
@@ -2082,77 +2062,77 @@
 - fields:
   - present_number_of_detached_houses_1945_1964
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_detached_houses_1965_1984
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_detached_houses_1985_2004
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_detached_houses_2005_present
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_detached_houses_before_1945
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_semi_detached_houses_1945_1964
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_semi_detached_houses_1965_1984
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_semi_detached_houses_1985_2004
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_semi_detached_houses_2005_present
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_semi_detached_houses_before_1945
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_terraced_houses_1945_1964
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_terraced_houses_1965_1984
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_terraced_houses_1985_2004
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_terraced_houses_2005_present
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_number_of_terraced_houses_before_1945
   message:
-   "Derived from Hotmaps project housing types per construction period for EU27, scaled with number of households in 2019 from Eurostat https://doi.org/10.2908/LFST_HHNHTYCH"
+   "Derived from Gebaude nach Gebaudekategorie sowie Bauperiode und Geschosszahl, Bundesamt fur Statistik (BFS): https://www.bfs.admin.ch/bfs/de/home/statistiken/bau-wohnungswesen/gebaeude.assetdetail.32329494.html "
 
 - fields:
   - present_share_of_apartments_1945_1964_in_useful_demand_for_space_heating
@@ -2287,32 +2267,32 @@
 - fields:
   - transport_final_demand_for_road_electricity_transport_bicycle_using_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_final_demand_for_road_electricity_transport_bus_using_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_final_demand_for_road_electricity_transport_car_using_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_final_demand_for_road_electricity_transport_motorcycle_using_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_final_demand_for_road_electricity_transport_truck_using_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_final_demand_for_road_electricity_transport_van_using_electricity_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_final_demand_for_road_hydrogen_transport_bus_using_hydrogen_parent_share
@@ -2362,67 +2342,67 @@
 - fields:
   - transport_road_mixer_compressed_network_gas_transport_bus_using_compressed_natural_gas_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_road_mixer_compressed_network_gas_transport_car_using_compressed_natural_gas_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_road_mixer_compressed_network_gas_transport_truck_using_compressed_natural_gas_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_road_mixer_compressed_network_gas_transport_van_using_compressed_natural_gas_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_road_mixer_diesel_transport_bus_using_diesel_mix_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_road_mixer_diesel_transport_car_using_diesel_mix_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_road_mixer_diesel_transport_truck_using_diesel_mix_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_road_mixer_diesel_transport_van_using_diesel_mix_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_road_mixer_gasoline_transport_motorcycle_using_gasoline_mix_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_road_mixer_gasoline_transport_truck_using_gasoline_mix_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_road_mixer_gasoline_transport_van_using_gasoline_mix_parent_share
   message:
-   "Derived from EU dataset from annual POTEnCIA report on country energy consumption (2019) https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/POTEnCIA/Central_2018/"
+   "Data from Bundesamt fur Energie (BFE) publications from 2017: https://pubdb.bfe.admin.ch/de/suche?keywords=387, Tabelle 36-39"
 
 - fields:
   - transport_road_mixer_lng_transport_bus_using_lng_mix_parent_share

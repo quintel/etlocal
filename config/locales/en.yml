@@ -125,6 +125,9 @@ en:
     se: Sweden
     sg: Singapore
     si: Slovenia
+    no: Norway
+    rs: Republic of Serbia
+    ch: Switzerland
     any: All countries
 
   groups:

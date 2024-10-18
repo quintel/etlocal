@@ -28,7 +28,8 @@ module DatasetSource
       end
 
       def self.from_dataset(dataset)
-        base_path = Rails.root.join('data', 'datasets', "#{dataset.geo_id}_energy_balance_enriched")
+        base_path = Rails.root.join('data', 'datasets', 'energy_balance',
+          "#{dataset.geo_id}_energy_balance_enriched")
         paths = ["#{base_path}.csv", "#{base_path}.encrypted.csv"]
 
         path = paths.find { |p| ::File.exist?(p) }

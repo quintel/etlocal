@@ -1657,7 +1657,7 @@
 - fields:
   - input_industry_chemical_fertilizers_hydrogen_non_energetic_demand
   message:
-   "See etdataset-public/source_analyses/CH_switzerland/2019/6_industry/input_industry_chemical_fertilizers.xlsx"
+   "See etdataset-public/source_analyses/CH_switzerland/2019/industry/input_industry_chemical_fertilizers.xlsx"
 
 - fields:
   - input_industry_chemical_refineries_coal_non_energetic_demand
@@ -1757,17 +1757,17 @@
 - fields:
   - input_industry_metal_aluminium_production
   message:
-   "See etdataset-public/source_analyses/CH_switzerland/2019/6_industry/input_industry_metal_aluminium.xlsx"
+   "See etdataset-public/source_analyses/CH_switzerland/2019/industry/input_industry_metal_aluminium.xlsx"
 
 - fields:
   - input_industry_metal_steel_production
   message:
-   "See etdataset-public/source_analyses/CH_switzerland/2019/6_industry/input_industry_metal_steel.xlsx"
+   "See etdataset-public/source_analyses/CH_switzerland/2019/industry/input_industry_metal_steel.xlsx"
 
 - fields:
   - input_industry_steel_blastfurnace_bof_share
   message:
-   "See etdataset-public/source_analyses/CH_switzerland/2019/6_industry/input_industry_metal_steel.xlsx"
+   "See etdataset-public/source_analyses/CH_switzerland/2019/industry/input_industry_metal_steel.xlsx"
 
 - fields:
   - input_percentage_of_central_ht_steam_hot_water_agriculture_final_demand_steam_hot_water

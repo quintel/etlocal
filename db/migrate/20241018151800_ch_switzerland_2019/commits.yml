@@ -312,12 +312,12 @@
 - fields:
   - energy_power_hydro_mountain_full_load_hours
   message:
-   "Derived from energy balance and installed capacity from ENTSO-E: https://transparency.entsoe.eu/generation/r2/installedGenerationCapacityAggregation/show; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance and installed capacity from ENTSO-E (hydro water reservoir and hydro pumped storage): https://transparency.entsoe.eu/generation/r2/installedGenerationCapacityAggregation/show; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_hydro_river_full_load_hours
   message:
-   "Full load hours assumed similar as hydro mountain; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance and installed capacity from ENTSO-E (hydro water reservoir and hydro pumped storage): https://transparency.entsoe.eu/generation/r2/installedGenerationCapacityAggregation/show; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - energy_power_nuclear_gen2_uranium_oxide_full_load_hours

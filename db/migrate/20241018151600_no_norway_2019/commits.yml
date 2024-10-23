@@ -1832,7 +1832,7 @@
 - fields:
   - input_solar_panels_roofs_and_parks_full_load_hours
   message:
-   "Full load hours assumed similar as flh of solar PV plant; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
+   "Derived from energy balance and installed capacity from Eurostat: https://doi.org/10.2908/NRG_INF_EPCRW; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
   - input_transport_road_car_hydrogen_share

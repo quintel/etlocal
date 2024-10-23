@@ -1,6 +1,6 @@
-class RsRepublicOfSerbia2019 < ActiveRecord::Migration[5.0]
+class RsSerbia2019 < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20241018151700_rs_republic_of_serbia_2019')
+    directory    = Rails.root.join('db/migrate/20241018151700_rs_serbia_2019')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

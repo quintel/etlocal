@@ -56,7 +56,7 @@ class Dataset < ApplicationRecord
       'region'
     elsif geo_id.start_with?('RES')
       'res'
-    elsif entso_data_source? || geo_id.start_with?('UKNI')
+    elsif entso_data_source? || geo_id.start_with?('UKNI', 'GB')
       'country'
     else
       'province'
@@ -78,7 +78,7 @@ class Dataset < ApplicationRecord
       Atlas::Dataset::Derived.new(
         key: atlas_key,
         base_dataset: country,
-        geo_id: geo_id
+        geo_id:
       )
   end
 
@@ -86,7 +86,7 @@ class Dataset < ApplicationRecord
     return country unless editable_attributes.exists?('analysis_year')
 
     base_dataset = "#{country}#{editable_attributes.find('analysis_year').value.to_i}"
-    return country unless Etsource.available_countries.include? base_dataset
+    return country unless Etsource.available_countries.include?(base_dataset)
 
     base_dataset
   end
@@ -109,7 +109,7 @@ class Dataset < ApplicationRecord
   # Returns a string.
   def normalized_name
     I18n.transliterate(name.strip, locale: :en)
-      .downcase.gsub(/[^0-9a-z_\s\-]/, '').gsub(/[\s_-]+/, '_')
+      .downcase.gsub(/[^0-9a-z_\s-]/, '').gsub(/[\s_-]+/, '_')
   end
 
   def temp_name
@@ -117,12 +117,10 @@ class Dataset < ApplicationRecord
   end
 
   def creator
-    @creator ||= begin
-      if user.group
-        user.group.key.humanize
-      else
-        user.name
-      end
+    @creator ||= if user.group
+      user.group.key.humanize
+    else
+      user.name
     end
   end
 

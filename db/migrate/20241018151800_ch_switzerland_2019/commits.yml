@@ -255,6 +255,11 @@
    "Full load hours assumed from EU27 dataset; value derived from energy balance with aggregation of categories and carriers to ETM plant types and carriers; see etdataset-public/eu_datasets/power_plants/20241018_power_plants_NO_RS_CH.xlsx"
 
 - fields:
+  - energy_extraction_uranium_oxide_demand
+  message:
+   "No data available in the energy balance; set to 0"
+
+- fields:
   - energy_greengas_gasification_dry_biomass_energy_greengas_production_child_share
   message:
    "Assumed EU27 dataset value"

@@ -1672,7 +1672,7 @@
 - fields:
   - input_industry_chemical_fertilizers_hydrogen_non_energetic_demand
   message:
-   "See etdataset-public/source_analyses/CH_switzerland/2019/industry/input_industry_chemical_fertilizers.xlsx"
+   "No non-energetic final consumption of natural gas in the Chemical and petrochemical sector. Fertilizer production assumed to be 0 TJ."
 
 - fields:
   - input_industry_chemical_refineries_coal_non_energetic_demand
@@ -2017,7 +2017,7 @@
 - fields:
   - number_of_busses
   message:
-   "Eurostat table Motor coaches, buses and trolley buses, by type of vehicle https://doi.org/10.2908/ROAD_EQS_BUSVEH; see etdataset-public/source_analyses/CH_switzerland/2019/4_transport/Eurostat number of buses.xlsx."
+   "Eurostat table Motor coaches, buses and trolley buses, by type of vehicle https://doi.org/10.2908/ROAD_EQS_BUSVEH; see etdataset-public/source_analyses/CH_switzerland/2019/transport/Eurostat number of buses.xlsx."
 
 - fields:
   - number_of_cars
@@ -2027,7 +2027,7 @@
 - fields:
   - number_of_inhabitants
   message:
-   "Eurostat table Population on 1 January https://doi.org/10.2908/TPS00001; see etdataset-public/source_analyses/NO_norway/2019/2_households/Eurostat number of inhabitants.xlsx."
+   "Eurostat table Population on 1 January https://doi.org/10.2908/TPS00001; see etdataset-public/source_analyses/NO_norway/2019/households/Eurostat number of inhabitants.xlsx."
 
 - fields:
   - number_of_trucks

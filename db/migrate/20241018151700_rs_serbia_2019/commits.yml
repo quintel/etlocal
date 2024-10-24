@@ -202,17 +202,17 @@
 - fields:
   - co2_emission_1990
   message:
-   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 1990"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 1990; for specifics see etdataset-public/source_analyses/RS_serbia/2019/area/Emissions.xlsx"
 
 - fields:
   - co2_emission_1990_aviation_bunkers
   message:
-   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 1990"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 1990; for specifics see etdataset-public/source_analyses/RS_serbia/2019/area/Emissions.xlsx"
 
 - fields:
   - co2_emission_1990_marine_bunkers
   message:
-   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 1990"
+   "Derived from the UNFCCC data on country emissions (IPCC common reporting format); author: UNFCC; year: 1990; for specifics see etdataset-public/source_analyses/RS_serbia/2019/area/Emissions.xlsx"
 
 - fields:
   - coast_line

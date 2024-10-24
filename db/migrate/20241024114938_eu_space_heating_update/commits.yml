@@ -1,0 +1,8 @@
+---
+- fields:
+  - :all
+  message:
+    The data orginates from the Eurostat table "Disaggregated final energy consumption in households - quantities" you can view this dataset via 
+    <a href="https://doi.org/10.2908/NRG_D_HHQ"> this link </a> 
+    The data transformation process used to process the source data to the final data can be found at
+    <a href="https://github.com/quintel/etdataset-public/tree/master/source-analyses/EU_27/2019/households/Input_Eurostat_final_energy_consumption_households.xlsx"> here </a> 

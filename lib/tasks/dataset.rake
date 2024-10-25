@@ -24,7 +24,7 @@ namespace :dataset do
   task combine: :environment do
     puts "\nInitializing DatasetCombiner with given datasets..."
 
-    combiner = DatasetCombiner.new(
+    combiner = Amalgamator::Combiner.new(
       target_dataset_geo_id: ENV.fetch('target_dataset_geo_id', nil),
       source_data_year: ENV.fetch('source_data_year', nil),
       source_dataset_geo_ids: ENV.fetch('source_dataset_geo_ids', nil).try(:split, ','),
@@ -36,7 +36,7 @@ namespace :dataset do
     puts '✅ Dataset combiner initialized!'
     puts 'Combining datasets... '
 
-    combiner.combine_datasets
+    combiner.result
 
     puts '✅ Datasets combined!'
     puts 'Exporting data...'
@@ -48,4 +48,40 @@ namespace :dataset do
     puts 'All done! Have a nice day :)'
   end
 
+  desc <<-DESC
+    Separate datasets by subtracting one dataset from another.
+
+    Accepts the following arguments:
+    - target_dataset_geo_id: Geo-id of the dataset to separate data from, e.g.: 'PV20'.
+    - source_dataset_geo_ids: Geo-id of the dataset to subtract, e.g.: 'GM306'.
+    - source_data_year: The year to which all source datasets should at least be updated.
+    - migration_slug (optional): Name of migration to generate, e.g.: 'update_2019'
+        If omitted the source_data_year will be used.
+
+    Example:
+      rails dataset:separate target_dataset_geo_id=PV20 source_dataset_geo_id=GM306 source_data_year=2019
+  DESC
+  task separate: :environment do
+    puts "\nInitializing DatasetSeparator with given datasets..."
+
+    separator = Amalgamator::Separator.new(
+      target_dataset_geo_id: ENV.fetch('target_dataset_geo_id', nil),
+      source_dataset_geo_ids: ENV.fetch('source_dataset_geo_ids', nil),
+      source_data_year: ENV.fetch('source_data_year', nil)
+    )
+
+    puts '✅ Dataset separator initialized!'
+    puts 'Separating datasets... '
+
+    separator.result
+
+    puts '✅ Datasets separated!'
+    puts 'Exporting data...'
+
+    migration_filename = separator.export_data
+
+    puts '✅ Datasets exported!'
+    puts "Migration file can be found at: #{migration_filename}\n\n"
+    puts 'All done! Have a nice day :)'
+  end
 end

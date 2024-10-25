@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe DatasetCombiner::ValueProcessor do
+RSpec.describe Amalgamator::Processor::Combine do
 
   let(:dataset1) { create(:dataset) }
   let(:dataset2) { create(:dataset) }
@@ -67,7 +67,7 @@ RSpec.describe DatasetCombiner::ValueProcessor do
 
     it "raises an error for an item with a combination_method we're unfamiliar with" do
       items = [
-        instance_double(InterfaceItem, item_attrs.merge(nested_combination_method: 'apples')),
+        instance_double(InterfaceItem, item_attrs.merge(nested_combination_method: 'apples', key: 'areable_land')),
       ]
 
       prepare_datasets(items)
@@ -76,10 +76,9 @@ RSpec.describe DatasetCombiner::ValueProcessor do
 
       expect { described_class.perform([dataset1]) }.to raise_error(
         ArgumentError,
-        /Don't know how to deal with combination_method '#{items[0].nested_combination_method}' in interface item:\n#{items[0].key}/
+        /Unknown combination_method 'apples' for interface item: areable_land. Aborting./
       )
     end
-
 
   end # / when combining values for the given datasets
 
@@ -118,7 +117,7 @@ RSpec.describe DatasetCombiner::ValueProcessor do
 
     it 'raises an error when no items have been set as weights (e.g. weighted_average is empty)' do
       items = [
-        instance_double(InterfaceItem, item_attrs.merge(nested_combination_method: { 'weighted_average' => [] }))
+        instance_double(InterfaceItem, item_attrs.merge(nested_combination_method: { 'weighted_average' => [] }, key: 'areable_land'))
       ]
 
       prepare_datasets(items)
@@ -127,7 +126,7 @@ RSpec.describe DatasetCombiner::ValueProcessor do
 
       expect { described_class.perform([dataset1]) }.to raise_error(
         ArgumentError,
-        /No weighing keys defined for combination method 'weighted_average' in interface item:\n#{items[0].key}/
+        /No weighing keys defined for combination method 'weighted_average' in interface item: areable_land. Aborting./
       )
     end
 
@@ -165,7 +164,7 @@ RSpec.describe DatasetCombiner::ValueProcessor do
       })
     end
 
-    it 'raises an error if more than one item per group is defined as flexible' do
+    it 'logs an error if more than one item per group is defined as flexible' do
       items = [
         InterfaceItem.find(:input_energy_cokesoven_transformation_loss_output_conversion), # This one is flexible
         InterfaceItem.find(:input_energy_cokesoven_transformation_cokes_output_conversion),
@@ -177,10 +176,10 @@ RSpec.describe DatasetCombiner::ValueProcessor do
       allow(InterfaceElement).to receive(:items).and_return(items)
       allow_any_instance_of(InterfaceItem).to receive(:flexible).and_return(true)
 
-      expect { described_class.perform([dataset1, dataset2, dataset3]) }.to raise_error(
-        ArgumentError,
-        /More than one flexible InterfaceItems found in InterfaceGroup #{items[0].group.header}/
-      )
+      # Capture the log output
+      expect {
+        described_class.perform([dataset1, dataset2, dataset3])
+      }.to output(/Multiple flexible shares found in group '#{items[0].group.header}'/).to_stdout
     end
 
   end

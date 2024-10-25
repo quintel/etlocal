@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe DatasetCombiner::DataExporter do
+RSpec.describe Amalgamator::DatasetExporter do
 
   let(:target_geo_id) { 'PV20' }
   let(:target_area_name) { 'Groningen' }

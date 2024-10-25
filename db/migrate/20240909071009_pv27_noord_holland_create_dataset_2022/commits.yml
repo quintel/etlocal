@@ -1,12 +1,5 @@
 ---
 - fields: 
-  - geo_id
-  - name
-  - country
-  message:
-   "2022 dataset creation"
-
-- fields: 
   - agriculture_final_demand_electricity_demand
   message:
    "Elektriciteit geleverd aan Landbouw, bosbouw en visserij (SBI A) + Elektriciteit geproduceerd in wkk's (berekend o.b.v. emissieregistratie). Link naar Klimaatmonitor: https://klimaatmonitor.databank.nl/Jive?workspace_guid=bc1a0b72-44e3-47db-9994-e3b198f8665c"

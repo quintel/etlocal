@@ -1,15 +1,13 @@
 # frozen_string_literal: true
 
-class DatasetCombiner
-
+module Amalgamator
   # The DataExporter creates the migration file and exports the data of the combined dataset
   # to a CSV file so it can be processed by the migration anywhere. It also adds a commits
   # file containing the names of the source areas that were combined.
   #
   # All of the DataExporter's arguments are mandatory, expect for the target_country_name.
   # For a description of the arguments see the DatasetCombiner parent class.
-  class DataExporter
-
+  class DatasetExporter
     DATA_FILENAME = 'data.csv'
     COMMITS_FILENAME = 'commits.yml'
 
@@ -127,7 +125,5 @@ class DatasetCombiner
         }].to_yaml
       )
     end
-
   end
-
 end

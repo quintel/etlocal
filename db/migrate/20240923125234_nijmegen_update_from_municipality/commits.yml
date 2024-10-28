@@ -1,0 +1,11 @@
+---
+- fields:
+  - input_households_final_demand_steam_hot_water_demand
+  message: "Taken from Klimaatmonitor 2019 ('Verbruik stadswarmte woningen (temperatuurgecorrigeerd) [TJ]'). See etdataset-public/source_analyses/GM0268_nijmegen/2019/households/households_source_analysis.xlsx."
+- fields:
+  - input_agriculture_final_demand_steam_hot_water_demand
+  - agriculture_chp_engine_network_gas_dispatchable_demand
+  message: "Expert judgment from municipality of Nijmegen, dated Aug 2024. See etdataset-public/source_analyses/GM0268_nijmegen/2019/agriculture/agriculture_source_analysis.xlsx."
+- fields:
+  - co2_emission_1990
+  message: "Taken from CE Delft, CO2-effecten klimaatbeleid Nijmegen (achtergrondrapport) (2024). Available via the municipality of Nijmegen. See etdataset-public/source_analyses/GM0268_nijmegen/2019/area/area_source_analysis.xlsx."

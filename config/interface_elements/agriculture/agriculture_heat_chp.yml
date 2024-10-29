@@ -5,13 +5,7 @@ groups:
     items:
       - key: agriculture_chp_engine_network_gas_dispatchable_demand
         unit: 'TJ'
-        entso: |
-          EB("Gas motor CHP - agricultural", "Network gas")
       - key: agriculture_chp_engine_biogas_demand
         unit: 'TJ'
-        entso: |
-          EB("Biogas CHP - agricultural", "Biogases")
       - key: agriculture_chp_wood_pellets_demand
         unit: 'TJ'
-        entso: |
-          EB("Biomass CHP - agricultural", "Biogases")

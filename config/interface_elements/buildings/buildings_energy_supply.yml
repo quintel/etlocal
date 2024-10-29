@@ -4,8 +4,6 @@ groups:
     items:
       - key: input_buildings_solar_pv_demand
         unit: 'TJ'
-        entso: |
-          EB("Solar on roof buildings", "Electricity")
       - key: buildings_final_demand_solar_thermal_demand
         unit: 'TJ'
         entso: |

@@ -1,0 +1,11 @@
+---
+
+
+# If you are creating only a single commit, you may instead use a single :all
+# field to have all of the CSV columns be included. This cannot be used when
+# creating multiple commits.
+- fields:
+  - :all
+  message:
+    Data extraction method update - Data values for energy production keys are now migrated instead of extracted. 
+    Data values are not changed by this update. 

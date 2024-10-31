@@ -24,7 +24,8 @@ RSpec.describe DatasetSource::ENTSO::File do
   end
 
   describe '.energy_balance' do
-    let(:balance) { described_class.energy_balance(CSV.table(source_file.path, converters: [:numeric])) }
+    let(:file) { described_class.new('TEST', source_file.path) }
+    let(:balance) { described_class.energy_balance(file.map_for(CSV.table(source_file.path, converters: [:numeric]))) }
 
     it 'converts :anthracite values into a column' do
       expect(balance.column?('Anthracite')).to be(true)

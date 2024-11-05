@@ -1,7 +1,7 @@
 # import and encrypt eb from etdataset
 namespace :energy_balance do
   desc <<-DESC
-    Imports and encypts an IEA energy balance from etdataset
+    Imports and encrypts a world energy balance from ETDataset
 
     Requires a DATASET and YEAR argument. Example:
 

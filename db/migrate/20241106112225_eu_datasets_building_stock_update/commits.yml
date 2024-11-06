@@ -1,0 +1,8 @@
+---
+- fields:
+  - :all
+  message:
+    Orginates from the EU Building Stock Observatory, BSO database obtained from
+    <a href="https://energy.ec.europa.eu/topics/energy-efficiency/energy-efficient-buildings/eu-building-stock-observatory_en"> this link </a>.</br></br>
+    For details on transformation of this source data to the final input values, see
+    <a href="https://github.com/quintel/etdataset-public/tree/master/source_analyses/EU27_european_union/2019/eu_datasets/additional_data/Sources/Input_EU_building_stock_observatory.xlsx">this file</a>.

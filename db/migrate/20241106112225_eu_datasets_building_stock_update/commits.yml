@@ -1,8 +1,65 @@
 ---
 - fields:
-  - :all
+  - present_number_of_apartments_before_1945
+  - present_number_of_apartments_1945_1964
+  - present_number_of_apartments_1965_1984
+  - present_number_of_apartments_1985_2004
+  - present_number_of_apartments_2005_present
+  - present_number_of_detached_houses_before_1945
+  - present_number_of_detached_houses_1945_1964
+  - present_number_of_detached_houses_1965_1984
+  - present_number_of_detached_houses_1985_2004
+  - present_number_of_detached_houses_2005_present
+  - present_number_of_semi_detached_houses_before_1945
+  - present_number_of_semi_detached_houses_1945_1964
+  - present_number_of_semi_detached_houses_1965_1984
+  - present_number_of_semi_detached_houses_1985_2004
+  - present_number_of_semi_detached_houses_2005_present
+  - present_number_of_terraced_houses_before_1945
+  - present_number_of_terraced_houses_1945_1964
+  - present_number_of_terraced_houses_1965_1984
+  - present_number_of_terraced_houses_1985_2004
+  - present_number_of_terraced_houses_2005_present
   message:
     Orginates from the EU Building Stock Observatory, BSO database obtained from
-    <a href="https://energy.ec.europa.eu/topics/energy-efficiency/energy-efficient-buildings/eu-building-stock-observatory_en"> this link </a>.</br></br>
+    <a href="https://energy.ec.europa.eu/topics/energy-efficiency/energy-efficient-buildings/eu-building-stock-observatory_en"> this link</a>.</br></br>
     For details on transformation of this source data to the final input values, see
     <a href="https://github.com/quintel/etdataset-public/tree/master/source_analyses/EU27_european_union/2019/eu_datasets/additional_data/Sources/Input_EU_building_stock_observatory.xlsx">this file</a>.
+- fields:
+  - typical_useful_demand_for_space_heating_semi_detached_houses_future
+  - typical_useful_demand_for_space_heating_semi_detached_houses_2005_present
+  - typical_useful_demand_for_space_heating_semi_detached_houses_1985_2004
+  - typical_useful_demand_for_space_heating_semi_detached_houses_1965_1984
+  - typical_useful_demand_for_space_heating_semi_detached_houses_1945_1964
+  - typical_useful_demand_for_space_heating_semi_detached_houses_before_1945
+  message:
+    Derived from the Hotmaps project (2018), overview of building age and energy demand of all EU countries,
+    see <a href="https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads"> this link</a>. </br></br>
+    Values for semi-detached houses assumed similar as for detached houses. For details on transformation of
+    the source data to the final input values, see
+    <a href="https://github.com/quintel/etdataset-public/tree/master/source_analyses/EU27_european_union/2019/eu_datasets/additional_data/Sources/Input_building_stock_incl_semi_detached.xlsx">this file</a>.
+- fields:
+  - present_share_of_apartments_2005_present_in_useful_demand_for_space_heating
+  - present_share_of_apartments_1985_2004_in_useful_demand_for_space_heating
+  - present_share_of_apartments_1965_1984_in_useful_demand_for_space_heating
+  - present_share_of_apartments_1945_1964_in_useful_demand_for_space_heating
+  - present_share_of_apartments_before_1945_in_useful_demand_for_space_heating
+  - present_share_of_detached_houses_2005_present_in_useful_demand_for_space_heating
+  - present_share_of_detached_houses_1985_2004_in_useful_demand_for_space_heating
+  - present_share_of_detached_houses_1965_1984_in_useful_demand_for_space_heating
+  - present_share_of_detached_houses_1945_1964_in_useful_demand_for_space_heating
+  - present_share_of_detached_houses_before_1945_in_useful_demand_for_space_heating
+  - present_share_of_semi_detached_houses_2005_present_in_useful_demand_for_space_heating
+  - present_share_of_semi_detached_houses_1985_2004_in_useful_demand_for_space_heating
+  - present_share_of_semi_detached_houses_1965_1984_in_useful_demand_for_space_heating
+  - present_share_of_semi_detached_houses_1945_1964_in_useful_demand_for_space_heating
+  - present_share_of_semi_detached_houses_before_1945_in_useful_demand_for_space_heating
+  - present_share_of_terraced_houses_2005_present_in_useful_demand_for_space_heating
+  - present_share_of_terraced_houses_1985_2004_in_useful_demand_for_space_heating
+  - present_share_of_terraced_houses_1965_1984_in_useful_demand_for_space_heating
+  - present_share_of_terraced_houses_1945_1964_in_useful_demand_for_space_heating
+  - present_share_of_terraced_houses_before_1945_in_useful_demand_for_space_heating
+  message:
+    Derived from number of residences and typical heat demand per residence type and construction period.For details on transformation of
+    the source data to the final input values, see
+    <a href="https://github.com/quintel/etdataset-public/tree/master/source_analyses/EU27_european_union/2019/eu_datasets/additional_data/Sources/Input_building_stock_incl_semi_detached.xlsx">this file</a>.

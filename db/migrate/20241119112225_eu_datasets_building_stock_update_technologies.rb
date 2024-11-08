@@ -1,6 +1,6 @@
-class EuDatasetsBuildingStockUpdate < ActiveRecord::Migration[7.0]
+class EuDatasetsBuildingStockUpdateTechnologies < ActiveRecord::Migration[7.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20241106112225_eu_datasets_building_stock_update')
+    directory    = Rails.root.join('db/migrate/20241119112225_eu_datasets_building_stock_update_technologies')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

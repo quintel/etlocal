@@ -125,11 +125,12 @@ en:
     se: Sweden
     sg: Singapore
     si: Slovenia
-    no: Norway
+    "no": Norway          # Quotation marks required, otherwise no is read as a boolean False
     rs: Serbia
     ch: Switzerland
     gb: Great Britain
     any: All countries
+    eu: Other areas       # Represents non-countries with eu as parent dataet
 
   groups:
     country: Countries

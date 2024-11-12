@@ -32,7 +32,7 @@ nl:
     dk: Denemarken
     es: Spanje
     ee: Estland
-    eu: Europese Unie (27 landen)
+    eu27: Europese Unie (27 landen)
     fi: Finland
     fr: Frankrijk
     el: Griekenland
@@ -50,11 +50,12 @@ nl:
     se: Zweden
     si: Slovenië
     sg: Singapore
-    no: Noorwegen
+    "no": Noorwegen           # Quotation marks required, otherwise no is read as a boolean False
     rs: Servië
     ch: Zwitserland
     gb: Groot-Brittannië
     any: Alle landen
+    eu: Overige gebieden      # Represents non-countries with eu as parent dataet
 
   groups:
     country: Landen

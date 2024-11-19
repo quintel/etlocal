@@ -1,0 +1,8 @@
+---
+- fields:
+  - :all
+  message:
+    Correction of share of heat pumps in electricity use for space heating application.
+    Shares are derived from the final demand for ambient heat in households. The calculation
+    of these shares can be found in
+    <a href="https://github.com/quintel/etdataset-public/tree/master/source_analyses/EU27_european_union/2019/eu_datasets/additional_data/Sources/Input_Eurostat_technology_splits_heat_pumps.xlsx">this file</a>.

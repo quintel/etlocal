@@ -13,10 +13,7 @@ nl:
   inherited_file: This file is inherited from the %{parent} dataset.
   data_source_messages:
     entso:
-      default: Value sourced from the Eurostat energy balance.
-      view_file: Bekijk de energiebalans
-      # households_energy_demand: 'Deze waarde is een test'
-
+      default: Value sourced from the country's energy balance.
 
   countries:
     be: België

@@ -376,33 +376,34 @@ class DatasetsRetirement < ActiveRecord::Migration[7.0]
   ].freeze
 
   def up
+    # Counting and printing total number of datasets to be destroyed
     total_keys = GEO_IDS_COUNTRIES.size + GEO_IDS_MUNICIPALITIES.size + GEO_IDS_REGIONS.size + GEO_IDS_NEIGHBOURHOODS.size
-
+    puts "Number of datasets to be destroyed: #{total_keys}. Start destroying datasets, may take a while."
 
     @deleted_datasets = []
 
     destroyed_count = 0
-    not_found_count = 0
 
     # Process each category of GEO_IDS
-    destroyed_count += process_geo_ids(GEO_IDS_COUNTRIES, 'Countries')
-    destroyed_count += process_geo_ids(GEO_IDS_MUNICIPALITIES, 'Municipalities')
-    destroyed_count += process_geo_ids(GEO_IDS_REGIONS, 'Regions')
-    destroyed_count += process_geo_ids(GEO_IDS_NEIGHBOURHOODS, 'Neighbourhoods')
+    destroyed_count += process_geo_ids(GEO_IDS_COUNTRIES)
+    destroyed_count += process_geo_ids(GEO_IDS_MUNICIPALITIES)
+    destroyed_count += process_geo_ids(GEO_IDS_REGIONS)
+    destroyed_count += process_geo_ids(GEO_IDS_NEIGHBOURHOODS)
 
     # Store the deleted records for rollback purposes
     save_deleted_datasets
 
+    # Print number of actually destroyed datasets
+    puts "Destroyed #{destroyed_count} datasets in total."
   end
 
   # Functionality for rollback purposes where removed data is restored to the
   # deleted datasets
   def down
-    if deleted_datasets.any?
-      deleted_datasets.each do |dataset_attrs|
-        Dataset.create!(dataset_attrs)
-      end
-    else
+    return unless deleted_datasets.any?
+
+    deleted_datasets.each do |dataset_attrs|
+      Dataset.create!(dataset_attrs)
     end
   end
 
@@ -410,9 +411,8 @@ class DatasetsRetirement < ActiveRecord::Migration[7.0]
 
   # Datasets are deleted in this function. First, attributes are stored in deleted_datasets for
   # migration rollback purposes. Then, the dataset is destroyed.
-  def process_geo_ids(geo_ids, category_name)
+  def process_geo_ids(geo_ids)
     destroyed_count = 0
-    not_found_count = 0
 
     geo_ids.each do |key|
       datasets = Dataset.where(geo_id: key)
@@ -423,7 +423,7 @@ class DatasetsRetirement < ActiveRecord::Migration[7.0]
           dataset.destroy
         end
       else
-        not_found_count += 1
+        puts "No dataset found for geo_id: #{key}"
       end
     end
     destroyed_count

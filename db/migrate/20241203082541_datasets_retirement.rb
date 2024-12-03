@@ -6,7 +6,7 @@ class DatasetsRetirement < ActiveRecord::Migration[7.0]
 
   GEO_IDS_MUNICIPALITIES = %w[
     GM0003 GM0005 GM0009 GM0010 GM0015 GM0017 GM0022 GM0024 GM0025 GM0053 GM0056 GM0058 GM0079 GM0236 GM0304 GM0393 GM0545 GM0576 GM0584 GM0585
-    GM0588 GM0611 GM0617 GM0620 GM0689 GM0707 GM0733 GM0738 GM0788 GM0870 GM0874 GM0881 GM0893 GM0951 GM0962 GM1651 GM1663 GM1722 GM1927 DKGM751
+    GM0588 GM0611 GM0617 GM0620 GM0689 GM0707 GM0733 GM0738 GM0788 GM0870 GM0874 GM0881 GM0951 GM0962 GM1651 GM1663 GM1722 GM1927 DKGM751
   ].freeze
 
   GEO_IDS_REGIONS = %w[
@@ -377,7 +377,7 @@ class DatasetsRetirement < ActiveRecord::Migration[7.0]
 
   def up
     total_keys = GEO_IDS_COUNTRIES.size + GEO_IDS_MUNICIPALITIES.size + GEO_IDS_REGIONS.size + GEO_IDS_NEIGHBOURHOODS.size
-    puts "Total number of datasets that should be destroyed: #{total_keys}"
+
 
     @deleted_datasets = []
 
@@ -388,14 +388,11 @@ class DatasetsRetirement < ActiveRecord::Migration[7.0]
     destroyed_count += process_geo_ids(GEO_IDS_COUNTRIES, 'Countries')
     destroyed_count += process_geo_ids(GEO_IDS_MUNICIPALITIES, 'Municipalities')
     destroyed_count += process_geo_ids(GEO_IDS_REGIONS, 'Regions')
-    puts 'Starting Neighbourhoods, this may take some time'
     destroyed_count += process_geo_ids(GEO_IDS_NEIGHBOURHOODS, 'Neighbourhoods')
 
     # Store the deleted records for rollback purposes
     save_deleted_datasets
 
-    puts "Destroyed #{destroyed_count} datasets in total."
-    puts "Not found datasets: #{not_found_count}."
   end
 
   # Functionality for rollback purposes where removed data is restored to the
@@ -406,7 +403,6 @@ class DatasetsRetirement < ActiveRecord::Migration[7.0]
         Dataset.create!(dataset_attrs)
       end
     else
-      puts 'No datasets to recreate during rollback.'
     end
   end
 
@@ -427,14 +423,9 @@ class DatasetsRetirement < ActiveRecord::Migration[7.0]
           dataset.destroy
         end
       else
-        puts "No datasets found for geo_id: #{key}"
         not_found_count += 1
       end
     end
-
-    puts "Destroyed #{destroyed_count} datasets in #{category_name}."
-    puts "Not found geo_ids in #{category_name}: #{not_found_count}."
-
     destroyed_count
   end
 

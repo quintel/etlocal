@@ -94,7 +94,6 @@ en:
         - <a href="https://github.com/quintel/etdataset-public/tree/master/tools/energy_balance_generator" target="_blank">This GitHub-link</a> brings you to the python scripts that were used to add the power plants to the "complemented energy balance" including their fuel input and production
   countries:
     be: Belgium
-    nl2018: Netherlands
     nl: Netherlands
     uk: United Kingdom
     sk: Slovakia

@@ -380,21 +380,11 @@ class DatasetsRetirement < ActiveRecord::Migration[7.0]
     total_keys = GEO_IDS_COUNTRIES.size + GEO_IDS_MUNICIPALITIES.size + GEO_IDS_REGIONS.size + GEO_IDS_NEIGHBOURHOODS.size
     puts "Number of datasets to be destroyed: #{total_keys}. Start destroying datasets, may take a while."
 
-    @deleted_datasets = []
+    all_ids = GEO_IDS_COUNTRIES + GEO_IDS_MUNICIPALITIES + GEO_IDS_REGIONS + GEO_IDS_NEIGHBOURHOODS
+    deleted = Dataset.where(geo_id: all_ids).destroy_all
+    save_deleted_datasets(deleted.to_json)
 
-    destroyed_count = 0
-
-    # Process each category of GEO_IDS
-    destroyed_count += process_geo_ids(GEO_IDS_COUNTRIES)
-    destroyed_count += process_geo_ids(GEO_IDS_MUNICIPALITIES)
-    destroyed_count += process_geo_ids(GEO_IDS_REGIONS)
-    destroyed_count += process_geo_ids(GEO_IDS_NEIGHBOURHOODS)
-
-    # Store the deleted records for rollback purposes
-    save_deleted_datasets
-
-    # Print number of actually destroyed datasets
-    puts "Destroyed #{destroyed_count} datasets in total."
+    puts "Destroyed #{deleted.count} datasets in total."
   end
 
   # Functionality for rollback purposes where removed data is restored to the
@@ -409,31 +399,11 @@ class DatasetsRetirement < ActiveRecord::Migration[7.0]
 
   private
 
-  # Datasets are deleted in this function. First, attributes are stored in deleted_datasets for
-  # migration rollback purposes. Then, the dataset is destroyed.
-  def process_geo_ids(geo_ids)
-    destroyed_count = 0
-
-    geo_ids.each do |key|
-      datasets = Dataset.where(geo_id: key)
-      if datasets.any?
-        destroyed_count += datasets.size
-        datasets.each do |dataset|
-          @deleted_datasets << dataset.attributes.except('id', 'created_at', 'updated_at')
-          dataset.destroy
-        end
-      else
-        puts "No dataset found for geo_id: #{key}"
-      end
-    end
-    destroyed_count
-  end
-
-  def save_deleted_datasets
-    File.write(Rails.root.join('tmp', 'deleted_datasets.json'), @deleted_datasets.to_json)
+  def save_deleted_datasets(deleted_datasets)
+    File.write(Rails.root.join('tmp', 'deleted_datasets.json'), deleted_datasets)
   end
 
   def deleted_datasets
-    JSON.parse(File.read(Rails.root.join('tmp', 'deleted_datasets.json')))
+    @deleted_datasets ||= JSON.parse(File.read(Rails.root.join('tmp', 'deleted_datasets.json')))
   end
 end

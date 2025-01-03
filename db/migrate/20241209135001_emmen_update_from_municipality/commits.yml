@@ -1,0 +1,9 @@
+---
+- fields:
+  # List each field from the data CSV to be included in this commit.
+  - input_industry_chemical_other_network_gas_demand
+  - input_industry_chemical_other_electricity_demand
+  - input_industry_other_network_gas_demand
+  - input_industry_other_electricity_demand
+  message:
+    Provided by the municipality of Emmen (November 2024), based on expert judgement and the Energienota 2023-2026. See etdataset-public/source_analyses/gm0114_emmen/2019/source_analysis_industry.xlsx.

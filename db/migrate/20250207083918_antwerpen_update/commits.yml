@@ -1,0 +1,15 @@
+---
+- fields:
+  - input_energy_power_wind_turbine_offshore_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_engine_network_gas_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_engine_network_gas_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "

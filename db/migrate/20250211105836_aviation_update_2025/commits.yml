@@ -1,0 +1,5 @@
+---
+- fields:
+  - energetic_emissions_other_ghg_transport
+  message:
+    "Verbeteringen aangebracht in de berekening van luchtvaart emissies op basis van emissiegegevens. URL:http://www.emissieregristratie.nl"

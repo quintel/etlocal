@@ -1,10 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
   const selectedVersionSpan = document.getElementById("selected-version");
-  const versionToggle = document.querySelector(".version-select");
-  const versionDropdown = versionToggle.closest(".dropdown");
-  const dropdownMenu = versionDropdown.querySelector(".dropdown-menu");
+  const versionToggle       = document.querySelector(".version-select");
+  const versionDropdown     = versionToggle.closest(".dropdown");
+  const dropdownMenu        = versionDropdown.querySelector(".dropdown-menu");
 
-  // Function to update the selected version
+  function hideSelectedVersion() {
+    const current = selectedVersionSpan.textContent.replace(/^#/, ""); // remove leading #
+    dropdownMenu.querySelectorAll("li").forEach((li) => {
+      const linkVersion = li.querySelector(".version-link")?.dataset.version_name;
+      li.style.display = (linkVersion === current) ? "none" : "block";
+    });
+  }
+
   function updateVersion(versionName) {
     fetch("/select_version", {
       method: "PATCH",
@@ -20,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
           selectedVersionSpan.textContent = `#${versionName}`;
           localStorage.setItem("selectedVersion", versionName);
           alert(`Dataset updated to version: ${versionName}`);
+          hideSelectedVersion();
         } else {
           alert(`Error: ${data.error}`);
         }
@@ -27,33 +35,30 @@ document.addEventListener("DOMContentLoaded", function () {
       .catch(console.error);
   }
 
-  // Event delegation for version selection (click on dropdown links)
   document.addEventListener("click", function (event) {
     const link = event.target.closest(".version-link");
-
     if (link) {
       event.preventDefault();
       updateVersion(link.getAttribute("data-version_name"));
-      dropdownMenu.style.display = "none"; // Hide dropdown after selection
+      dropdownMenu.style.display = "none";
     }
   });
 
-  // Dropdown toggle functionality
   versionToggle.addEventListener("click", function (event) {
     event.preventDefault();
-    dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+    dropdownMenu.style.display = (dropdownMenu.style.display === "block") ? "none" : "block";
   });
 
-  // Close dropdown when clicking outside
   document.addEventListener("click", function (event) {
     if (!event.target.closest(".dropdown")) {
       dropdownMenu.style.display = "none";
     }
   });
 
-  // Load the selected version from localStorage on page load
   const savedVersion = localStorage.getItem("selectedVersion");
   if (savedVersion) {
     selectedVersionSpan.textContent = `#${savedVersion}`;
   }
+
+  hideSelectedVersion();
 });

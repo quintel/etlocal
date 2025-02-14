@@ -3,6 +3,7 @@ class DatasetsController < ApplicationController
   format 'js', only: %i(edit :clone)
 
   before_action :authenticate_user!, only: %i[download clone]
+  before_action :set_freeze_date
   before_action :find_dataset, only: %i(validate edit download clone)
 
   # GET index
@@ -97,5 +98,9 @@ class DatasetsController < ApplicationController
     respond_to do |format|
       format.html { render layout: nil }
     end
+  end
+
+  def set_freeze_date
+    Thread.current[:global_freeze_date] = session[:freeze_date]
   end
 end

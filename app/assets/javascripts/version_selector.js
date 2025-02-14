@@ -1,10 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
   const selectedVersionSpan = document.getElementById("selected-version");
-  const versionToggle = document.querySelector(".version-select");
-  const versionDropdown = versionToggle.closest(".dropdown");
-  const dropdownMenu = versionDropdown.querySelector(".dropdown-menu");
+  const versionToggle       = document.querySelector(".version-select");
+  const versionDropdown     = versionToggle.closest(".dropdown");
+  const dropdownMenu        = versionDropdown.querySelector(".dropdown-menu");
 
-  // Function to update the selected version
+  function hideSelectedVersion() {
+    const current = selectedVersionSpan.textContent.replace(/^#/, "");
+    dropdownMenu.querySelectorAll("li").forEach((li) => {
+      const linkVersion = li.querySelector(".version-link")?.dataset.version_name;
+      li.style.display = (linkVersion === current) ? "none" : "block";
+    });
+  }
+
   function updateVersion(versionName) {
     fetch("/select_version", {
       method: "PATCH",
@@ -14,46 +21,51 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       body: JSON.stringify({ version_name: versionName })
     })
-      .then(response => response.json())
-      .then(data => {
-        if (!data.error) {
-          selectedVersionSpan.textContent = `#${versionName}`;
-          localStorage.setItem("selectedVersion", versionName);
-          alert(`Dataset updated to version: ${versionName}`);
-        } else {
-          alert(`Error: ${data.error}`);
+      .then(async (response) => {
+        if (!response.ok) {
+          const text = await response.text();
+          throw new Error(`Server error: ${response.status}, Response: ${text}`);
         }
       })
-      .catch(console.error);
+      .then(() => {
+        localStorage.setItem("selectedVersion", versionName);
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.error("Fetch error:", error);
+        alert("Failed to update dataset. Check console for details.");
+      });
   }
 
-  // Event delegation for version selection (click on dropdown links)
+  // Handle dropdown version link clicks
   document.addEventListener("click", function (event) {
     const link = event.target.closest(".version-link");
-
     if (link) {
       event.preventDefault();
       updateVersion(link.getAttribute("data-version_name"));
-      dropdownMenu.style.display = "none"; // Hide dropdown after selection
+      dropdownMenu.style.display = "none";
     }
   });
 
-  // Dropdown toggle functionality
+  // Show/hide dropdown on click
   versionToggle.addEventListener("click", function (event) {
     event.preventDefault();
-    dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+    dropdownMenu.style.display =
+      (dropdownMenu.style.display === "block") ? "none" : "block";
   });
 
-  // Close dropdown when clicking outside
+  // Close dropdown if user clicks elsewhere
   document.addEventListener("click", function (event) {
     if (!event.target.closest(".dropdown")) {
       dropdownMenu.style.display = "none";
     }
   });
 
-  // Load the selected version from localStorage on page load
+  // Restore previously selected version from localStorage
   const savedVersion = localStorage.getItem("selectedVersion");
   if (savedVersion) {
     selectedVersionSpan.textContent = `#${savedVersion}`;
   }
+
+  hideSelectedVersion();
 });

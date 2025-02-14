@@ -15,6 +15,8 @@ class Dataset < ApplicationRecord
     end
   end
 
+  attr_accessor :freeze_date
+
   ORDER = %w[
     country
     province
@@ -63,6 +65,10 @@ class Dataset < ApplicationRecord
     end
   end
 
+  def set_freeze_date(freeze_date)
+    @freeze_date = freeze_date
+  end
+
   def as_json(*)
     super
       .except('created_at', 'updated_at')
@@ -100,7 +106,7 @@ class Dataset < ApplicationRecord
   end
 
   def editable_attributes
-    @editable_attributes ||= EditableAttributesCollection.new(self)
+    @editable_attributes ||= EditableAttributesCollection.new(self, @freeze_date)
   end
 
   # Public: A version of the dataset name with normalize unicode characters, and

@@ -13,19 +13,18 @@ class EditableAttributesCollection
 
   private_class_method :items_by_key
 
-  def initialize(dataset)
+  def initialize(dataset, freeze_date = nil)
     @dataset    = dataset
-    @attributes = setup_attributes(dataset)
+    @freeze_date = freeze_date
+    @attributes = setup_attributes
   end
 
   def find(key)
-    @attributes.detect do |attribute|
-      attribute.key == key
-    end
+    @attributes.detect { |attribute| attribute.key == key }
   end
 
   def exists?(method)
-    @attributes.map(&:key).include?(method)
+    @attributes.any? { |attribute| attribute.key == method }
   end
 
   def edits_for(key)
@@ -34,7 +33,7 @@ class EditableAttributesCollection
 
   def as_json(*)
     @attributes.each_with_object({}) do |edit, object|
-      object[edit.key] = edit.value
+      object[edit.key] = edit.value(@freeze_date)
     end
   end
 
@@ -47,9 +46,16 @@ class EditableAttributesCollection
       .group_by(&:key)
   end
 
-  def setup_attributes(dataset)
+  def setup_attributes
     self.class.items.flatten.map do |item|
-      EditableAttribute.new(dataset, item.key.to_s, edits, item.default, entso_query: item.entso)
+      EditableAttribute.new(
+        @dataset,
+        item.key.to_s,
+        edits_for(item.key.to_s),
+        item.default,
+        entso_query: item.entso,
+        freeze_date: @freeze_date
+      )
     end
   end
 end

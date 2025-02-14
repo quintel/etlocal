@@ -1,40 +1,56 @@
 class VersionsController < ApplicationController
+  before_action :assign_freeze_date_to_thread
 
   def update
     version_name = params[:version_name]
-    freeze_date = fetch_version_freeze_date(version_name)
+    freeze_date  = fetch_version_freeze_date(version_name)
 
     if freeze_date.nil?
-      render json: { error: "Invalid version selected" }, status: :unprocessable_entity
-      return
+      return render json: { error: "Version not found." }, status: :not_found
     end
 
-    # Reapply commits up to the freeze date to "remigrate" datasets
-    remigrate_datasets(freeze_date)
+    session[:freeze_date] = freeze_date
 
-    render json: { message: "Datasets updated to version #{version_name}" }
+    datasets = Dataset.all
+    results = []
+
+    datasets.each do |dataset|
+      dataset.set_freeze_date(freeze_date)
+
+      dataset_info = {
+        id: dataset.id,
+        name: dataset.name,
+        attributes: dataset.editable_attributes.as_json
+      }
+
+      results << dataset_info
+    end
+
+    render json: {
+      version: version_name,
+      freeze_date: freeze_date,
+      updated_datasets: results
+    }
   end
 
   private
 
-  # Reads versions from the config file
-  def fetch_version_freeze_date(version_name)
-    versions = YAML.load_file(Rails.root.join('config/versions.yml'))['versions']
-    version = versions.find { |v| v['name'] == version_name }
-    return version ? (version['freeze_date'] ? Time.zone.parse(version['freeze_date']) : nil) : nil
-  rescue Errno::ENOENT
-    nil
+  def versions_config
+    @versions_config ||= YAML.load_file(Rails.root.join('config', 'versions.yml'))['versions']
   end
 
-  # Applies dataset commits up to the freeze date
-  def remigrate_datasets(freeze_date)
-    Dataset.find_each do |dataset|
-      commits = dataset.commits.where("created_at <= ?", freeze_date).order(:created_at)
-      dataset_edits = commits.flat_map(&:dataset_edits)
+  def fetch_version_freeze_date(version_name)
+    version = versions_config.find { |v| v['name'] == version_name }
+    return unless version
 
-      dataset_edits.each do |edit|
-        dataset.update_column(edit.key, edit.value)
-      end
+    if version['freeze_date'].present?
+      Time.parse(version['freeze_date'])
+    else
+      Time.now
     end
+  end
+
+  def assign_freeze_date_to_thread
+    Thread.current[:global_freeze_date] = session[:freeze_date]
   end
 end

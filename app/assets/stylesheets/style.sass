@@ -38,6 +38,7 @@ body
   padding: 0
   color: $bg-color
   min-width: 960px
+  align-items: center
 
   div
     display: inline-block
@@ -80,13 +81,17 @@ body
           position: absolute
           z-index: 3
           top: 50px
-          background-color: $selected-color
+          background-color: darken($selected-color, 5)
           li
             padding: 0 15px 0 13px
             a
               color: white
               &:hover
                 color: #e0e0e0
+
+          &.active .dropdown-menu
+            display: block !important
+
       .info, .dropdown
         margin-right: 25px
       .info:hover, .lang-select:hover

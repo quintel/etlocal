@@ -24,6 +24,8 @@ Rails.application.routes.draw do
     end
   end
 
+  patch "/select_version", to: "versions#update"
+
   post :charts, to: "charts#data"
 
   namespace :api do

@@ -17,7 +17,20 @@
         li
           = link_to 'English', set_locale_path(locale: 'en'), method: :put, class: 'dropdown-item'
         li
-           = link_to 'Nederlands', set_locale_path(locale: 'nl'), method: :put, class: 'dropdown-item'
+          = link_to 'Nederlands', set_locale_path(locale: 'nl'), method: :put, class: 'dropdown-item'
+
+    - versions = YAML.load_file(Rails.root.join('config/versions.yml'))['versions']
+    - latest_version = versions.first['name'] rescue 'latest'
+
+    .dropdown
+      .version-select
+        span#selected-version = "##{latest_version}"
+        span.fa.fa-caret-down
+      ul.dropdown-menu
+        - versions.each do |version|
+          - unless version['name'] == latest_version
+            li
+              a.version-link href="#" data-version_name=version['name'] = "##{version['name']}"
 
     - if current_user
       .current-user

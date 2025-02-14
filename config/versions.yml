@@ -1,0 +1,5 @@
+versions:
+  - name: "latest"
+    freeze_date: null
+  - name: "stable.01"
+    freeze_date: "2025-02-19 23:00:00 UTC"  #TODO: Update. Currently set to Midnight Feb 20th in Amsterdam time

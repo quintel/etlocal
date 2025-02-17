@@ -4,34 +4,51 @@ class VersionsController < ApplicationController
     version_name = params[:version_name]
     freeze_date = fetch_version_freeze_date(version_name)
 
-    return render json: { error: "Version not found or has no freeze date." }, status: :not_found unless freeze_date
+    if freeze_date.nil?
+      return render json: { error: "Version not found." }, status: :not_found
+    end
 
-    datasets = Dataset.all
+    datasets = Dataset.find(18562) #Dataset.all TODO: Change back, just testing one dataset for now
+    datasets = [datasets]
+    results = []
 
     datasets.each do |dataset|
-      previous_values = dataset.editable_attributes.as_json
+      dataset_info = {
+        id: dataset.id,
+        name: dataset.name,
+        attributes: {}
+      }
 
       EditableAttributesCollection.items.each do |item|
         key = item.key.to_s
         next unless item.editable?(dataset)
 
-        editable_attribute = dataset.editable_attributes.find(key)
-        next unless editable_attribute
+        edits_array = dataset
+          .editable_attributes
+          .instance_variable_get(:@edits)[key]
 
-        closest_edit = find_closest_edit(editable_attribute, freeze_date)
-        next unless closest_edit
+        next unless edits_array
 
-        if previous_values[key] != closest_edit.value
-          apply_edit(editable_attribute, closest_edit.value)
+        Rails.logger.debug "Edits for #{key}: #{edits_array.class} - #{edits_array.inspect}"
+
+        begin
+          attribute_obj = EditableAttribute.new(dataset, key, edits_array)
+          new_value = attribute_obj.value(freeze_date)
+          dataset_info[:attributes][key] = new_value
+        rescue StandardError => e
+          Rails.logger.error "⚠️ Error processing key #{key}: #{e.message}"
+          next
         end
       end
 
-      unless dataset.save
-        return render json: { error: "Failed to update dataset #{dataset.id}.", details: dataset.errors.full_messages }, status: :unprocessable_entity
-      end
+      results << dataset_info
     end
 
-    render json: { message: "All datasets updated to match freeze date." }
+    render json: { version: version_name, freeze_date:, updated_datasets: results }
+  rescue StandardError => e
+    Rails.logger.error "🚨 Fatal error in update: #{e.message}"
+    Rails.logger.error e.backtrace.join("\n")
+    render json: { error: "Internal Server Error", details: e.message }, status: :internal_server_error
   end
 
   private
@@ -45,15 +62,8 @@ class VersionsController < ApplicationController
     version ? (version['freeze_date'] ? Time.parse(version['freeze_date']) : Time.now) : nil
   end
 
-  def find_closest_edit(editable_attribute, freeze_date)
-    editable_attribute.previous
-      .select { |edit| edit.updated_at <= freeze_date }
-      .min_by { |edit| (freeze_date - edit.updated_at).abs }
-  end
-
-  def apply_edit(editable_attribute, value)
-    edit = editable_attribute.latest || EditableAttribute.new(@dataset, editable_attribute.key, [])
-    edit.value = value
-    editable_attribute.previous.unshift(edit)
+  def value_at_version(version_name)
+    freeze_date = fetch_version_freeze_date(version_name)
+    value(freeze_date)
   end
 end

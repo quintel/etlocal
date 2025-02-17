@@ -15,7 +15,7 @@ class EditableAttribute
   end
 
   def previous
-    @edits[@key] || []
+    @dataset.editable_attributes.edits_for(@key) || []
   end
 
   def latest
@@ -32,9 +32,15 @@ class EditableAttribute
     @default || atlas_default
   end
 
-  # If a dataset has an edit - give that value. If it doesn't have an edit,
+  # If a dataset has an edit - give that value, unless a freeze_date is
+  # passed, then find the closest edit for that date. If it doesn't have an edit,
   # fall back to the default value.
-  def value
+  def value(freeze_date = nil)
+    if freeze_date.present?
+      closest = find_closest_edit(@edits, freeze_date)
+      return closest&.value || default
+    end
+
     if @dataset.queryable_source? && @entso_query.present?
       return @dataset.execute_query(@entso_query)
     end
@@ -62,5 +68,19 @@ class EditableAttribute
     Atlas::Dataset.attribute_set
       .map(&:name)
       .include?(@key.to_sym)
+  end
+
+  def find_closest_edit(edits, freeze_date)
+    return nil unless edits.is_a?(Array) && edits.any?
+
+    possible = edits.select { |e| e.updated_at <= freeze_date }
+
+    if possible.empty?
+      possible = edits # fallback to using all edits
+    end
+
+    closest_edit = possible.min_by { |e| (freeze_date - e.updated_at).abs }
+
+    closest_edit
   end
 end

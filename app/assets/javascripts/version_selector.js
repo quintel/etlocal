@@ -21,18 +21,30 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       body: JSON.stringify({ version_name: versionName })
     })
-      .then(response => response.json())
-      .then(data => {
-        if (!data.error) {
-          selectedVersionSpan.textContent = `#${versionName}`;
-          localStorage.setItem("selectedVersion", versionName);
-          alert(`Dataset updated to version: ${versionName}`);
-          hideSelectedVersion();
-        } else {
-          alert(`Error: ${data.error}`);
+      .then(response => {
+        if (!response.ok) {
+          return response.text().then(text => { throw new Error(`Server error: ${response.status}, Response: ${text}`); });
         }
+        return response.json();
       })
-      .catch(console.error);
+      .then(data => {
+        console.log("✅ Server Response:", data); // Debugging log
+
+        if (data.error) {
+          alert(`❌ Error: ${data.error}`);
+          return;
+        }
+
+        selectedVersionSpan.textContent = `#${versionName}`;
+        localStorage.setItem("selectedVersion", versionName);
+        alert(`✅ Dataset updated to version: ${versionName}`);
+
+        hideSelectedVersion();
+      })
+      .catch(error => {
+        console.error("🚨 Fetch error:", error);
+        alert(`⚠️ Failed to update dataset. Check console for details.`);
+      });
   }
 
   document.addEventListener("click", function (event) {

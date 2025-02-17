@@ -4,11 +4,6 @@ class VersionsController < ApplicationController
   def update
     version_name = params[:version_name]
     freeze_date  = fetch_version_freeze_date(version_name)
-
-    if freeze_date.nil?
-      return render json: { error: "Version not found." }, status: :not_found
-    end
-
     session[:freeze_date] = freeze_date
 
     datasets = Dataset.all

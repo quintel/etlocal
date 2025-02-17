@@ -37,7 +37,10 @@ class EditableAttribute
   # passed, then find the closest edit for that date. If it doesn't have an edit,
   # fall back to the default value.
   def value(freeze_date = nil)
-    # 1. If freeze_date is missing, try the session.
+    if @dataset.queryable_source? && @entso_query.present?
+      return @dataset.execute_query(@entso_query)
+    end
+
     freeze_date = (freeze_date || @freeze_date || Thread.current[:global_freeze_date])
     freeze_date = Time.parse(freeze_date) if freeze_date.is_a?(String)
 

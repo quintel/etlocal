@@ -28,10 +28,6 @@ groups:
         unit: 'TJ'
         entso: |
           EB("Final consumption - other sectors - households - energy use", "Oil")
-      - key: households_final_demand_solar_thermal_demand
-        unit: 'TJ'
-        entso: |
-          EB("Final consumption - other sectors - households - energy use", "Solar thermal")
 
   - header: households_final_demand_steam_hot_water_input
     type: slider

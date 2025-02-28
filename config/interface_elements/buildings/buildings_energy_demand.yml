@@ -28,10 +28,6 @@ groups:
         unit: 'TJ'
         entso: |
           EB("Final consumption - other sectors - commercial and public services - energy use", "Oil")
-      - key: buildings_final_demand_solar_thermal_demand
-        unit: 'TJ'
-        entso: |
-          EB("Final consumption - other sectors - commercial and public services - energy use", "Solar thermal")
 
   - header: buildings_final_demand_steam_hot_water_input
     type: slider

@@ -165,7 +165,7 @@ en:
       curves_weather_years: |
         By default, weather conditions are used that correspond to the start year. However, weather conditions can vary considerably.
         To explore the impact of weather conditions, it is possible to select a different weather year in the ETM.
-        This is possible on this ETM page: <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/extreme-weather-conditions">Flexibility -> Weather conditions</a>.
+        This is possible on this ETM page: <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/weather-conditions">Flexibility -> Weather conditions</a>.
         There is a choice of three weather years and you can find a description of these years in the ETM.
       energy_efficiency: |
         Below you can find the efficiencies for all electricity and heat plants. The same efficiencies are used for many of the regions, but it is also possible to use region-specific efficiencies.

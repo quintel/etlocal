@@ -169,7 +169,7 @@ nl:
       curves_weather_years: |
         Standaard worden weersomstandigheden gebruikt die passen bij het startjaar. Echter, weersomstandigheden kunnen flink variëren.
         Om de impact van weersomstandigheden te verkennen is het mogelijk om in het ETM een ander weerjaar te selecteren.
-        Dit kan je in het ETM doen op de pagina <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/extreme-weather-conditions">Flexibiliteit -> Weersomstandigheden</a>.
+        Dit kan je in het ETM doen op de pagina <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/weather-conditions">Flexibiliteit -> Weersomstandigheden</a>.
         Er is de keuze uit drie weerjaren en in het ETM kan je een omschrijving van deze jaren vinden.
       energy_efficiency: |
         Op deze pagina vind je de efficiënties van alle electriciteitscentrales en warmteketels. Voor veel van de regio's worden dezelfde efficiënties gebruikt, maar het is ook mogelijk regio-specifieke efficiënties te gebruiken.

@@ -15,9 +15,8 @@ module Amalgamator
       # 2. Round all combined values to 8 decimals
       # 3. If flexible is true for an InterfaceItem, make it fill out the share of the group it belongs to
       def perform(datasets)
-        sleep(1)
         combined_item_values = combine_item_values(datasets)
-        # round_item_values(combined_item_values)
+        round_item_values(combined_item_values)
         adjust_flexible_shares(combined_item_values)
       end
 

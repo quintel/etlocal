@@ -13,6 +13,7 @@ class EditableAttributesCollection
 
   private_class_method :items_by_key
 
+  # IN INIT we should supply a date
   def initialize(dataset)
     @dataset    = dataset
     @attributes = setup_attributes(dataset)
@@ -40,6 +41,7 @@ class EditableAttributesCollection
 
   private
 
+  # THIS one has to get the date, and add it as a where
   def edits
     @edits ||= @dataset.edits
       .includes(commit: :user)

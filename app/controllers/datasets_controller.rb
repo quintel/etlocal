@@ -14,12 +14,19 @@ class DatasetsController < ApplicationController
 
   # GET edit.js
   def edit
+    # attributes = freeze_date ? @dataset.editable_attributes_before(freeze_date) : @dataset.editable_attributes
     @dataset_edit_form = DatasetEditForm.new(
+      # attributes.as_json
       @dataset.editable_attributes.as_json
     )
 
     @dataset_clones = policy_scope(Dataset).clones(@dataset, current_user)
   end
+
+  # Create a little helper?
+  # def freeze_date
+  #  session[:freeze_date]
+  # end
 
   # GET show.json
   def show

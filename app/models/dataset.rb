@@ -103,6 +103,11 @@ class Dataset < ApplicationRecord
     @editable_attributes ||= EditableAttributesCollection.new(self)
   end
 
+  # New method
+  # def editable_attributes_before(date)
+  #   EditableAttributesCollection.new(self, date)
+  # end
+
   # Public: A version of the dataset name with normalize unicode characters, and
   # any non-alphanumeric characters removed.
   #

@@ -87,18 +87,18 @@ en:
         In this section you will find information about the energy use of the agricultural
         sector in this area.
       agriculture_heat_chp: |
-        In this tab you can find where the heat demand is produced and how much energy is used for Combined Heat and Power (CHP) in agriculture. 
+        In this tab you can find where the heat demand is produced and how much energy is used for Combined Heat and Power (CHP) in agriculture.
         The demand for heat can be found in the tab "Energy demand".
       industry: |
         In this section you will find information about the industry sector in this area.
       industry_steel: |
-        In this tab you can see how much energy is used for the production of steel through different technologies. 
+        In this tab you can see how much energy is used for the production of steel through different technologies.
       industry_aluminium: |
         In this tab you can see how much energy is used for the production of aluminium and the type of installed technologies.
       industry_metal: |
         In this tab you can see how much energy is consumed by the metal sector in this area.
       industry_refinery: |
-        In this tab you can see the crude oil, non-energetic and energetic demand for the refinery of crude oil as well as the amount of produced refinery products. 
+        In this tab you can see the crude oil, non-energetic and energetic demand for the refinery of crude oil as well as the amount of produced refinery products.
       industry_fertilizer: |
         In this tab you can see the energetic and non-energetic demand for the fertilizer industry.
       industry_chemical: |
@@ -165,7 +165,7 @@ en:
       curves_weather_years: |
         By default, weather conditions are used that correspond to the start year. However, weather conditions can vary considerably.
         To explore the impact of weather conditions, it is possible to select a different weather year in the ETM.
-        This is possible on this ETM page: <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/extreme-weather-conditions">Flexibility -> Weather conditions</a>.
+        This is possible on this ETM page: <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/temperature-and-full-load-hours">Flexibility -> Weather conditions</a>.
         There is a choice of three weather years and you can find a description of these years in the ETM.
       energy_efficiency: |
         Below you can find the efficiencies for all electricity and heat plants. The same efficiencies are used for many of the regions, but it is also possible to use region-specific efficiencies.

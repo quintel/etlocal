@@ -92,18 +92,18 @@ nl:
       industry_steel: |
         In dit tabblad kun je zien hoeveel energie wordt gebruikt voor de productie van staal door middel van verschillende technologieën.
       industry_aluminium: |
-        In dit tabblad kun je zien hoeveel energie wordt gebruikt voor de productie van aluminium en de type technologieën die zijn geinstalleerd. 
+        In dit tabblad kun je zien hoeveel energie wordt gebruikt voor de productie van aluminium en de type technologieën die zijn geinstalleerd.
       industry_metal: |
         In dit tabblad vind je informatie over de hoeveelheid energie die er gebruikt wordt door de metaalindustrie in
-        deze regio. 
+        deze regio.
       industry_refinery: |
-        In dit tabblad kun je zien hoeveel ruwe olie wordt gebruikt in raffinaderijen en wat de energetische en niet-energetische vraag is. 
+        In dit tabblad kun je zien hoeveel ruwe olie wordt gebruikt in raffinaderijen en wat de energetische en niet-energetische vraag is.
         Daarnaast wordt de hoeveelheid raffinage producten getoond.
       industry_fertilizer: |
         In dit tabblad kun je zien wat de energetische en non-energetisch vraag is voor de kunstmest industrie.
       industry_chemical: |
         In dit tabblad vind je informatie over de hoeveelheid energie die er gebruikt wordt door de chemische industrie
-        in deze regio. 
+        in deze regio.
       industry_food: |
         In dit tabblad vind je informatie over de hoeveelheid energie die er gebruikt wordt door de
         voedselindustrie.
@@ -169,7 +169,7 @@ nl:
       curves_weather_years: |
         Standaard worden weersomstandigheden gebruikt die passen bij het startjaar. Echter, weersomstandigheden kunnen flink variëren.
         Om de impact van weersomstandigheden te verkennen is het mogelijk om in het ETM een ander weerjaar te selecteren.
-        Dit kan je in het ETM doen op de pagina <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/extreme-weather-conditions">Flexibiliteit -> Weersomstandigheden</a>.
+        Dit kan je in het ETM doen op de pagina <a target="_blank" href="https://pro.energytransitionmodel.com/scenario/flexibility/flexibility_weather/temperature-and-full-load-hours">Flexibiliteit -> Weersomstandigheden</a>.
         Er is de keuze uit drie weerjaren en in het ETM kan je een omschrijving van deze jaren vinden.
       energy_efficiency: |
         Op deze pagina vind je de efficiënties van alle electriciteitscentrales en warmteketels. Voor veel van de regio's worden dezelfde efficiënties gebruikt, maar het is ook mogelijk regio-specifieke efficiënties te gebruiken.

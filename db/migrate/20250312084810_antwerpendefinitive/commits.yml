@@ -1,0 +1,3496 @@
+---
+- fields:
+  - households_final_demand_electricity_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - households_final_demand_network_gas_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - households_final_demand_wood_pellets_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - households_final_demand_coal_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_households_final_demand_crude_oil_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_households_solar_pv_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - households_final_demand_solar_thermal_demand
+  message:
+    "Data sourced from the City's emission inventory (2020). In later versions this remains non-estimated because of data validation issues. "
+
+- fields:
+  - buildings_final_demand_network_gas_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_buildings_electricity_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - buildings_final_demand_wood_pellets_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_buildings_final_demand_crude_oil_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - buildings_final_demand_coal_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_buildings_solar_pv_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - buildings_final_demand_solar_thermal_demand
+  message:
+    "Data sourced from the City's emission inventory (2020). In later versions this remains non-estimated because of data validation issues. "
+
+- fields:
+  - input_transport_road_gasoline_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_transport_road_diesel_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - transport_final_demand_lpg_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_transport_road_electricity_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_transport_road_bio_ethanol_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_transport_road_biodiesel_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - transport_final_demand_for_road_compressed_network_gas_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - transport_final_demand_hydrogen_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - transport_final_demand_for_road_lng_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - transport_final_demand_for_road_bio_lng_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_transport_rail_diesel_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_transport_rail_electricity_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_transport_rail_biodiesel_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - transport_final_demand_coal_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_transport_ship_diesel_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_transport_ship_biodiesel_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - transport_final_demand_for_shipping_lng_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - transport_final_demand_for_shipping_bio_lng_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - transport_final_demand_heavy_fuel_oil_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - transport_final_demand_kerosene_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_transport_plane_gasoline_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_transport_plane_bio_ethanol_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_transport_plane_electricity_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - bunkers_total_useful_demand_planes_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - bunkers_total_useful_demand_ships_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_transport_ship_bio_ethanol_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_transport_ship_electricity_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_metal_steel_coal_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_metal_steel_cokes_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_metal_steel_coal_gas_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_metal_steel_electricity_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_metal_steel_network_gas_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_metal_steel_steam_hot_water_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_metal_steel_crude_oil_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_metal_steel_wood_pellets_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_metal_aluminium_electricity_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_metal_aluminium_network_gas_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_metal_other_electricity_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_metal_other_network_gas_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_metal_other_steam_hot_water_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_metal_other_crude_oil_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_metal_other_coal_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - industry_useful_demand_for_chemical_refineries_crude_oil_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_refineries_wood_pellets_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_refineries_network_gas_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_refineries_coal_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_refineries_electricity_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_refineries_network_gas_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_refineries_steam_hot_water_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_refineries_crude_oil_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_refineries_coal_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_refineries_wood_pellets_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_fertilizers_electricity_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_fertilizers_network_gas_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_fertilizers_steam_hot_water_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_fertilizers_crude_oil_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_fertilizers_coal_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_fertilizers_wood_pellets_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_fertilizers_network_gas_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_fertilizers_hydrogen_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_fertilizers_crude_oil_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_fertilizers_coal_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_fertilizers_wood_pellets_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_other_electricity_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_chemical_other_network_gas_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_chemical_other_steam_hot_water_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_other_crude_oil_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_chemical_other_coal_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_chemical_other_wood_pellets_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_other_network_gas_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_other_crude_oil_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_other_coal_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_chemical_other_wood_pellets_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_food_electricity_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_food_network_gas_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_food_steam_hot_water_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_food_crude_oil_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_food_coal_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_food_wood_pellets_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_paper_electricity_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_paper_network_gas_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_paper_steam_hot_water_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_paper_crude_oil_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_paper_coal_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_paper_wood_pellets_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_other_electricity_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_other_network_gas_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_other_steam_hot_water_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_other_crude_oil_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_other_coal_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_other_cokes_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_industry_other_wood_pellets_demand
+  message:
+    "0"
+
+- fields:
+  - input_industry_ict_electricity_demand
+  message:
+    "Data sourced from Statbel and citymaps project"
+
+- fields:
+  - agriculture_final_demand_network_gas_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - agriculture_final_demand_electricity_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - agriculture_final_demand_wood_pellets_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_agriculture_final_demand_crude_oil_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - agriculture_final_demand_hydrogen_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - other_final_demand_network_gas_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - other_final_demand_electricity_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - other_final_demand_wood_pellets_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - other_final_demand_crude_oil_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - other_final_demand_coal_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_other_network_gas_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_other_wood_pellets_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_other_crude_oil_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_other_coal_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_industry_other_cokes_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - energy_power_sector_own_use_electricity_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_agriculture_final_demand_steam_hot_water_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_percentage_of_central_mt_steam_hot_water_agriculture_final_demand_steam_hot_water
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_percentage_of_central_ht_steam_hot_water_agriculture_final_demand_steam_hot_water
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_percentage_of_local_steam_hot_water_agriculture_final_demand_steam_hot_water
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_buildings_final_demand_steam_hot_water_demand
+  message:
+    "Data sourced from emission inventory of VITO (2022)"
+
+- fields:
+  - input_households_final_demand_steam_hot_water_demand
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - input_other_final_demand_steam_hot_water_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - other_final_demand_crude_oil_non_energetic_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - households_final_demand_electricity_households_final_demand_for_cooking_electricity_parent_share
+  message:
+    "copy ratio source: https://www.vlaanderen.be/energieverbruik-en-kosten-verminderen/besparen-op-uw-energieverbruik"
+
+- fields:
+  - households_final_demand_electricity_households_final_demand_for_cooling_electricity_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_electricity_households_final_demand_for_hot_water_electricity_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_electricity_households_final_demand_for_lighting_electricity_parent_share
+  message:
+    "copy ratio source: https://www.vlaanderen.be/energieverbruik-en-kosten-verminderen/besparen-op-uw-energieverbruik"
+
+- fields:
+  - households_final_demand_electricity_households_final_demand_for_space_heating_electricity_parent_share
+  message:
+    "values dataset emission inventory 2022"
+
+- fields:
+  - households_final_demand_electricity_households_final_demand_for_appliances_electricity_parent_share
+  message:
+    "copy ratio source: https://www.vlaanderen.be/energieverbruik-en-kosten-verminderen/besparen-op-uw-energieverbruik"
+
+- fields:
+  - households_final_demand_network_gas_households_final_demand_for_cooking_network_gas_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_network_gas_households_final_demand_for_hot_water_network_gas_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_network_gas_households_final_demand_for_space_heating_network_gas_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_network_gas_households_final_demand_for_cooling_network_gas_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - input_households_final_demand_steam_hot_water_households_final_demand_for_hot_water_steam_hot_water_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - input_households_final_demand_steam_hot_water_households_final_demand_for_space_heating_steam_hot_water_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_wood_pellets_households_final_demand_for_hot_water_wood_pellets_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_wood_pellets_households_final_demand_for_space_heating_wood_pellets_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_wood_pellets_households_final_demand_for_cooking_wood_pellets_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_crude_oil_households_final_demand_for_hot_water_crude_oil_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_crude_oil_households_final_demand_for_space_heating_crude_oil_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_coal_households_final_demand_for_hot_water_coal_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_coal_households_final_demand_for_space_heating_coal_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share
+  message:
+    "Derived from the results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2036"
+
+- fields:
+  - households_final_demand_for_space_heating_network_gas_households_space_heater_network_gas_parent_share
+  message:
+    "No data was found, therefore split was set to 0."
+
+- fields:
+  - households_final_demand_for_space_heating_network_gas_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share
+  message:
+    "Derived from the results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2033"
+
+- fields:
+  - households_final_demand_for_space_heating_electricity_households_space_heater_electricity_parent_share
+  message:
+    "Derived from the results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2029"
+
+- fields:
+  - households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_air_water_electricity_parent_share
+  message:
+    "R"
+
+- fields:
+  - households_final_demand_for_space_heating_electricity_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share
+  message:
+    "Derived from the results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2032"
+
+- fields:
+  - households_final_demand_for_space_heating_electricity_households_space_heater_heatpump_ground_water_electricity_parent_share
+  message:
+    "Derived from the results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2031"
+
+- fields:
+  - households_final_demand_for_cooking_electricity_households_cooker_halogen_electricity_parent_share
+  message:
+    "Data on type of electric cooking is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_for_cooking_electricity_households_cooker_induction_electricity_parent_share
+  message:
+    "Data on type of electric cooking is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_for_cooking_electricity_households_cooker_resistive_electricity_parent_share
+  message:
+    "Data on type of electric cooking is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_for_lighting_electricity_households_lighting_incandescent_electricity_parent_share
+  message:
+    "Data on type of lighting is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_for_lighting_electricity_households_lighting_efficient_fluorescent_electricity_parent_share
+  message:
+    "Data on type of lighting is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_for_lighting_electricity_households_lighting_led_electricity_parent_share
+  message:
+    "Data on type of lighting is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_for_appliances_electricity_households_appliances_clothes_dryer_electricity_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_for_appliances_electricity_households_appliances_computer_media_electricity_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_for_appliances_electricity_households_appliances_dishwasher_electricity_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_for_appliances_electricity_households_appliances_fridge_freezer_electricity_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_for_appliances_electricity_households_appliances_television_electricity_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_for_appliances_electricity_households_appliances_vacuum_cleaner_electricity_parent_share
+  message:
+    "Seperate data on energy use vacuum cleaners is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split and subtracted from the category 'other' containing energy use of vacuum cleaners among other appliances; author: Joint Research Center (JRC); year: 2022"
+
+- fields:
+  - households_final_demand_for_appliances_electricity_households_appliances_washing_machine_electricity_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_for_appliances_electricity_households_appliances_other_electricity_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption, energy consumption from vacuum cleaners issubtracted from the category 'other'; author: Joint Research Center (JRC); year: 2091"
+
+- fields:
+  - households_final_demand_for_cooling_electricity_households_cooling_airconditioning_electricity_parent_share
+  message:
+    "Data on type of electric cooling is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_for_cooling_electricity_households_cooling_heatpump_ground_water_electricity_parent_share
+  message:
+    "Data on type of electric cooling is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - households_final_demand_for_cooling_electricity_households_cooling_heatpump_air_water_electricity_parent_share
+  message:
+    "Data on type of electric cooling is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - input_percentage_of_ht_steam_hot_water_households_final_demand_steam_hot_water
+  message:
+    "No data available. Fallback value set to 1.0 to ensure share totals sum to 1."
+
+- fields:
+  - input_percentage_of_lt_steam_hot_water_households_final_demand_steam_hot_water
+  message:
+    "No data available. Fallback value set to 0.0 to ensure share totals sum to 1."
+
+- fields:
+  - input_percentage_of_mt_steam_hot_water_households_final_demand_steam_hot_water
+  message:
+    "No data available. Fallback value set to 0.0 to ensure share totals sum to 1."
+
+- fields:
+  - present_number_of_apartments_2005_present
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_apartments_1985_2004
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_apartments_1965_1984
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_apartments_1945_1964
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_apartments_before_1945
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_terraced_houses_2005_present
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_terraced_houses_1985_2004
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_terraced_houses_1965_1984
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_terraced_houses_1945_1964
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_terraced_houses_before_1945
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_semi_detached_houses_2005_present
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_semi_detached_houses_1985_2004
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_semi_detached_houses_1965_1984
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_semi_detached_houses_1945_1964
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_semi_detached_houses_before_1945
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_detached_houses_2005_present
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_detached_houses_1985_2004
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_detached_houses_1965_1984
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_detached_houses_1945_1964
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - present_number_of_detached_houses_before_1945
+  message:
+    "Data sourced from the Belgian Land Registry (2025). Number of dwellings, not buildings."
+
+- fields:
+  - typical_useful_demand_for_space_heating_apartments_future
+  message:
+    "Based on future Flemish EPB Building standards, theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_apartments_2005_present
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_apartments_1985_2004
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_apartments_1965_1984
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_apartments_1945_1964
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_apartments_before_1945
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_terraced_houses_future
+  message:
+    "Based on future Flemish EPB Building standards, theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_terraced_houses_2005_present
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_terraced_houses_1985_2004
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_terraced_houses_1965_1984
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_terraced_houses_1945_1964
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_terraced_houses_before_1945
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_semi_detached_houses_future
+  message:
+    "Based on future Flemish EPB Building standards, theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_semi_detached_houses_2005_present
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_semi_detached_houses_1985_2004
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_semi_detached_houses_1965_1984
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_semi_detached_houses_1945_1964
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_semi_detached_houses_before_1945
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_detached_houses_future
+  message:
+    "Based on future Flemish EPB Building standards, theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_detached_houses_2005_present
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_detached_houses_1985_2004
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_detached_houses_1965_1984
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_detached_houses_1945_1964
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - typical_useful_demand_for_space_heating_detached_houses_before_1945
+  message:
+    "Based on combined 2022 Flemish EPC statistics for Antwerp (Provincie-in-cijfers + Energiekaart Vlaanderen), theoretical Energy Score corrected according to real consumption profiles, based on Ugent research 'Analyse naar de haalbaarheid van statistische modellen die energiegebruik in woningen kunnen voorspellen op basis van gebouwparameters', Matthias Van Hove, Marc Delghust, Arnold Janssens"
+
+- fields:
+  - present_share_of_apartments_2005_present_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_apartments_1985_2004_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_apartments_1965_1984_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_apartments_1945_1964_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_apartments_before_1945_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_terraced_houses_2005_present_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_terraced_houses_1985_2004_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_terraced_houses_1965_1984_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_terraced_houses_1945_1964_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_terraced_houses_before_1945_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_semi_detached_houses_2005_present_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_semi_detached_houses_1985_2004_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_semi_detached_houses_1965_1984_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_semi_detached_houses_1945_1964_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_semi_detached_houses_before_1945_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_detached_houses_2005_present_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_detached_houses_1985_2004_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_detached_houses_1965_1984_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_detached_houses_1945_1964_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - present_share_of_detached_houses_before_1945_in_useful_demand_for_space_heating
+  message:
+    "Derived from the hotmaps project (2018), overview of building age and energy demand of all EU countries, see https://gitlab.com/hotmaps/building-stock/-/blob/master/README.md?ref_type=heads."
+
+- fields:
+  - buildings_final_demand_electricity_buildings_final_demand_for_space_heating_electricity_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_electricity_buildings_final_demand_for_cooling_electricity_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_electricity_buildings_final_demand_for_lighting_electricity_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_electricity_buildings_final_demand_for_appliances_electricity_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_network_gas_buildings_final_demand_for_space_heating_network_gas_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_network_gas_buildings_final_demand_for_appliances_network_gas_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_network_gas_buildings_final_demand_for_cooling_network_gas_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_wood_pellets_buildings_final_demand_for_space_heating_wood_pellets_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_wood_pellets_buildings_final_demand_for_appliances_wood_pellets_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_crude_oil_buildings_final_demand_for_space_heating_crude_oil_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_crude_oil_buildings_final_demand_for_appliances_crude_oil_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_coal_buildings_final_demand_for_space_heating_coal_parent_share
+  message:
+    "No known coal consumption based on the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_coal_buildings_final_demand_for_appliances_coal_parent_share
+  message:
+    "No known coal consumption based on the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_network_gas_parent_share
+  message:
+    "Derived from the results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2027"
+
+- fields:
+  - buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_heatpump_air_water_network_gas_parent_share
+  message:
+    "Derived from the results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2026"
+
+- fields:
+  - buildings_final_demand_for_space_heating_network_gas_buildings_space_heater_hybrid_heatpump_air_water_electricity_parent_share
+  message:
+    "No data available. Set to 0.0."
+
+- fields:
+  - buildings_final_demand_for_space_heating_electricity_buildings_space_heater_electricity_parent_share
+  message:
+    "Derived from the results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2023"
+
+- fields:
+  - buildings_final_demand_for_space_heating_electricity_buildings_space_heater_collective_heatpump_water_water_ts_electricity_parent_share
+  message:
+    "Derived from the results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2022"
+
+- fields:
+  - buildings_final_demand_for_space_heating_electricity_buildings_space_heater_heatpump_air_water_electricity_parent_share
+  message:
+    "Derived from the results of the TYNDP (draft) scenario's into 2015 country final demands as there was no data found for 2019, therefore outcomes may differ; author: entso-e & entso-g; year:2024"
+
+- fields:
+  - buildings_final_demand_for_space_heating_electricity_buildings_space_heater_hybrid_heatpump_air_water_electricity_parent_share
+  message:
+    "No data available. Set to 0.0."
+
+- fields:
+  - buildings_final_demand_for_lighting_electricity_buildings_lighting_efficient_fluorescent_electricity_parent_share
+  message:
+    "Data on type of lighting is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_lighting_electricity_buildings_lighting_standard_fluorescent_electricity_parent_share
+  message:
+    "Data on type of lighting is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_lighting_electricity_buildings_lighting_led_electricity_parent_share
+  message:
+    "Data on type of lighting is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_cooling_electricity_buildings_cooling_airconditioning_electricity_parent_share
+  message:
+    "Data on type of electric cooling is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_cooling_electricity_buildings_cooling_heatpump_air_water_electricity_parent_share
+  message:
+    "Data on type of electric cooling is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - buildings_final_demand_for_cooling_electricity_buildings_cooling_collective_heatpump_water_water_ts_electricity_parent_share
+  message:
+    "Data on type of electric cooling is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - present_number_of_buildings
+  message:
+    "Based on the valid EPC certifications and assumption that 1/3th of small residential buildings "
+
+- fields:
+  - input_percentage_of_ht_steam_hot_water_buildings_final_demand_steam_hot_water
+  message:
+    "No data available. Fallback value set to 1.0 to ensure share totals sum to 1."
+
+- fields:
+  - input_percentage_of_mt_steam_hot_water_buildings_final_demand_steam_hot_water
+  message:
+    "No data available. Fallback value set to 0.0 to ensure share totals sum to 1."
+
+- fields:
+  - input_percentage_of_lt_steam_hot_water_buildings_final_demand_steam_hot_water
+  message:
+    "No data available. Fallback value set to 0.0 to ensure share totals sum to 1."
+
+- fields:
+  - typical_useful_demand_for_space_heating_buildings_present
+  message:
+    "Data sourced from Flemish Energy and Climate agency. -> EnergiekaartVlaanderen --> EPC Niet-residentieel Grote gebouwen --> Weighted average (data 2023-2025)"
+
+- fields:
+  - typical_useful_demand_for_space_heating_buildings_future
+  message:
+    "Data sourced from Flemish Energy and Climate agency. --> EPB legislation -> average number (E-peil) non residential buildings"
+
+- fields:
+  - transport_road_mixer_gasoline_transport_car_using_gasoline_mix_parent_share
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie) and national registry of vehicles (https://statbel.fgov.be/nl/themas/mobiliteit/verkeer/voertuigenpark)"
+
+- fields:
+  - transport_road_mixer_gasoline_transport_bus_using_gasoline_mix_parent_share
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie) and national registry of vehicles (https://statbel.fgov.be/nl/themas/mobiliteit/verkeer/voertuigenpark)"
+
+- fields:
+  - transport_road_mixer_gasoline_transport_truck_using_gasoline_mix_parent_share
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie) and national registry of vehicles (https://statbel.fgov.be/nl/themas/mobiliteit/verkeer/voertuigenpark)"
+
+- fields:
+  - transport_road_mixer_gasoline_transport_motorcycle_using_gasoline_mix_parent_share
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie) and national registry of vehicles (https://statbel.fgov.be/nl/themas/mobiliteit/verkeer/voertuigenpark)"
+
+- fields:
+  - transport_road_mixer_gasoline_transport_van_using_gasoline_mix_parent_share
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie) and national registry of vehicles (https://statbel.fgov.be/nl/themas/mobiliteit/verkeer/voertuigenpark)"
+
+- fields:
+  - transport_road_mixer_diesel_transport_car_using_diesel_mix_parent_share
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - transport_road_mixer_diesel_transport_bus_using_diesel_mix_parent_share
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - transport_road_mixer_diesel_transport_van_using_diesel_mix_parent_share
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - transport_road_mixer_diesel_transport_truck_using_diesel_mix_parent_share
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - transport_final_demand_for_road_electricity_transport_car_using_electricity_parent_share
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie) and national registry of vehicles (https://statbel.fgov.be/nl/themas/mobiliteit/verkeer/voertuigenpark)"
+
+- fields:
+  - transport_final_demand_for_road_electricity_transport_bus_using_electricity_parent_share
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie) and national registry of vehicles (https://statbel.fgov.be/nl/themas/mobiliteit/verkeer/voertuigenpark)"
+
+- fields:
+  - transport_final_demand_for_road_electricity_transport_truck_using_electricity_parent_share
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie) and national registry of vehicles (https://statbel.fgov.be/nl/themas/mobiliteit/verkeer/voertuigenpark)"
+
+- fields:
+  - transport_final_demand_for_road_electricity_transport_motorcycle_using_electricity_parent_share
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie) and national registry of vehicles (https://statbel.fgov.be/nl/themas/mobiliteit/verkeer/voertuigenpark)"
+
+- fields:
+  - transport_final_demand_for_road_electricity_transport_bicycle_using_electricity_parent_share
+  message:
+    "No reliable data source exists on the electricity demand for electric bikes, assumption is made that electric bikes are charged at home and therefore demand is included in 'appliances'"
+
+- fields:
+  - transport_final_demand_for_road_electricity_transport_van_using_electricity_parent_share
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie) and national registry of vehicles (https://statbel.fgov.be/nl/themas/mobiliteit/verkeer/voertuigenpark)"
+
+- fields:
+  - transport_road_mixer_compressed_network_gas_transport_car_using_compressed_natural_gas_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - transport_road_mixer_compressed_network_gas_transport_bus_using_compressed_natural_gas_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - transport_road_mixer_compressed_network_gas_transport_truck_using_compressed_natural_gas_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - transport_road_mixer_compressed_network_gas_transport_van_using_compressed_natural_gas_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - input_transport_road_car_hydrogen_share
+  message:
+    "Based on data from the European Hydrogen Observatory (https://observatory.clean-hydrogen.europa.eu/hydrogen-landscape/end-use/hydrogen-fuel-cell-electric-vehicles)"
+
+- fields:
+  - transport_final_demand_for_road_hydrogen_transport_bus_using_hydrogen_parent_share
+  message:
+    "Based on data from the European Hydrogen Observatory (https://observatory.clean-hydrogen.europa.eu/hydrogen-landscape/end-use/hydrogen-fuel-cell-electric-vehicles)"
+
+- fields:
+  - transport_final_demand_for_road_hydrogen_transport_truck_using_hydrogen_parent_share
+  message:
+    "Based on data from the European Hydrogen Observatory (https://observatory.clean-hydrogen.europa.eu/hydrogen-landscape/end-use/hydrogen-fuel-cell-electric-vehicles)"
+
+- fields:
+  - transport_final_demand_for_road_hydrogen_transport_van_using_hydrogen_parent_share
+  message:
+    "Based on data from the European Hydrogen Observatory (https://observatory.clean-hydrogen.europa.eu/hydrogen-landscape/end-use/hydrogen-fuel-cell-electric-vehicles)"
+
+- fields:
+  - transport_road_mixer_lng_transport_truck_using_lng_mix_parent_share
+  message:
+    "Data on LNG use in trucks is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2021"
+
+- fields:
+  - transport_road_mixer_lng_transport_bus_using_lng_mix_parent_share
+  message:
+    "Data on LNG use in busses is not available in the annual POTEnCIA reports on country energy consumption, dummy data based on the NL dataset was used to fill in the split; author: Joint Research Center (JRC); year: 2020"
+
+- fields:
+  - transport_final_demand_for_road_lpg_transport_car_using_lpg_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - transport_final_demand_for_road_lpg_transport_van_using_lpg_parent_share
+  message:
+    "Derived from the annual POTEnCIA reports on country energy consumption; author: Joint Research Center (JRC); year: 2019"
+
+- fields:
+  - transport_final_demand_for_rail_electricity_transport_freight_train_using_electricity_parent_share
+  message:
+    "Gebaseerd op de dataset die door Quintel in samenwerking met DNV GL is opgesteld. De meeste waardes zijn afkomstig van DNV GL en/of de Emissieinventaris (https://www.antwerpenmorgen.be/projecten/emissie-inventaris/over). In het geval waardes niet beschikbaar waren, zijn deze pro rata geschaald naar de landelijke waardes voor Belgie."
+
+- fields:
+  - transport_final_demand_for_rail_electricity_transport_tram_using_electricity_parent_share
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - transport_final_demand_for_rail_electricity_transport_passenger_train_using_electricity_parent_share
+  message:
+    "Gebaseerd op de dataset die door Quintel in samenwerking met DNV GL is opgesteld. De meeste waardes zijn afkomstig van DNV GL en/of de Emissieinventaris (https://www.antwerpenmorgen.be/projecten/emissie-inventaris/over). In het geval waardes niet beschikbaar waren, zijn deze pro rata geschaald naar de landelijke waardes voor Belgie."
+
+- fields:
+  - transport_rail_mixer_diesel_transport_freight_train_using_diesel_mix_parent_share
+  message:
+    "Gebaseerd op de dataset die door Quintel in samenwerking met DNV GL is opgesteld. De meeste waardes zijn afkomstig van DNV GL en/of de Emissieinventaris (https://www.antwerpenmorgen.be/projecten/emissie-inventaris/over). In het geval waardes niet beschikbaar waren, zijn deze pro rata geschaald naar de landelijke waardes voor Belgie."
+
+- fields:
+  - transport_rail_mixer_diesel_transport_passenger_train_using_diesel_mix_parent_share
+  message:
+    "Gebaseerd op de dataset die door Quintel in samenwerking met DNV GL is opgesteld. De meeste waardes zijn afkomstig van DNV GL en/of de Emissieinventaris (https://www.antwerpenmorgen.be/projecten/emissie-inventaris/over). In het geval waardes niet beschikbaar waren, zijn deze pro rata geschaald naar de landelijke waardes voor Belgie."
+
+- fields:
+  - number_of_cars
+  message:
+    "Data sourced from the SPF Mobility (https://mobilit.belgium.be/nl/documenten/open-data/wegverkeer/wagenpark)"
+
+- fields:
+  - input_transport_road_human_powered_bicycle_demand
+  message:
+    "Data sourced from the Flemish Mobility Research (OGV)"
+
+- fields:
+  - number_of_trucks
+  message:
+    "Data sourced from the SPF Mobility (https://mobilit.belgium.be/nl/documenten/open-data/wegverkeer/wagenpark)"
+
+- fields:
+  - number_of_busses
+  message:
+    "Data sourced from the SPF Mobility (https://mobilit.belgium.be/nl/documenten/open-data/wegverkeer/wagenpark)"
+
+- fields:
+  - number_of_vans
+  message:
+    "Data sourced from the SPF Mobility (https://mobilit.belgium.be/nl/documenten/open-data/wegverkeer/wagenpark)"
+
+- fields:
+  - input_industry_metal_steel_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_industry_steel_blastfurnace_bof_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_industry_steel_scrap_hbi_eaf_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_cokesoven_transformation_coal_input_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_cokesoven_transformation_coal_gas_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_cokesoven_transformation_cokes_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_cokesoven_transformation_loss_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_blastfurnace_transformation_coal_input_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_blastfurnace_transformation_cokes_input_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_blastfurnace_transformation_coal_gas_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_blastfurnace_transformation_loss_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_combined_cycle_coal_gas_coal_gas_input_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_chp_coal_gas_coal_gas_input_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_combined_cycle_coal_gas_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_combined_cycle_coal_gas_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_combined_cycle_coal_gas_loss_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_chp_coal_gas_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_chp_coal_gas_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_chp_coal_gas_steam_hot_water_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_chp_coal_gas_loss_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_metal_steel_coal_industry_steel_blastfurnace_bof_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_metal_steel_coal_industry_steel_scrap_hbi_eaf_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_metal_steel_cokes_industry_steel_blastfurnace_bof_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_metal_steel_cokes_industry_steel_scrap_hbi_eaf_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_metal_steel_crude_oil_industry_steel_blastfurnace_bof_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_metal_steel_crude_oil_industry_steel_scrap_hbi_eaf_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_metal_steel_electricity_industry_steel_blastfurnace_bof_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_metal_steel_electricity_industry_steel_scrap_hbi_eaf_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_metal_steel_network_gas_industry_steel_blastfurnace_bof_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_metal_steel_network_gas_industry_steel_scrap_hbi_eaf_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_blastfurnace_bof_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_metal_steel_steam_hot_water_industry_steel_scrap_hbi_eaf_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_metal_steel_wood_pellets_industry_steel_blastfurnace_bof_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_metal_steel_wood_pellets_industry_steel_scrap_hbi_eaf_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_industry_metal_aluminium_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_industry_aluminium_electrolysis_current_electricity_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_industry_aluminium_smeltoven_electricity_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_electrolysis_current_electricity_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_metal_aluminium_electricity_industry_aluminium_smeltoven_electricity_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_aluminium_burner_network_gas_industry_aluminium_electrolysis_current_electricity_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_aluminium_burner_network_gas_industry_aluminium_smeltoven_electricity_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_industry_refinery_transformation_crude_oil_other_oil_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_industry_refinery_transformation_crude_oil_gasoline_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_industry_refinery_transformation_crude_oil_heavy_fuel_oil_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_industry_refinery_transformation_crude_oil_kerosene_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_industry_refinery_transformation_crude_oil_lpg_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_industry_refinery_transformation_crude_oil_refinery_gas_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_industry_refinery_transformation_crude_oil_diesel_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_other_food_electricity_industry_useful_demand_for_other_food_electricity_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_other_food_electricity_industry_other_food_heater_electricity_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_other_paper_electricity_industry_useful_demand_for_other_paper_electricity_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_final_demand_for_other_paper_electricity_industry_other_paper_heater_electricity_parent_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_ultra_supercritical_coal_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_ultra_supercritical_coal_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_ultra_supercritical_coal_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_supercritical_coal_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_supercritical_coal_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_supercritical_coal_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_combined_cycle_coal_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_combined_cycle_coal_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_ultra_supercritical_cofiring_coal_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_ultra_supercritical_cofiring_coal_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_ultra_supercritical_cofiring_coal_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_combined_cycle_ccs_coal_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_combined_cycle_ccs_coal_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_ultra_supercritical_ccs_coal_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_ultra_supercritical_ccs_coal_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_ultra_supercritical_ccs_coal_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_ultra_supercritical_lignite_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_ultra_supercritical_lignite_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_ultra_supercritical_lignite_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_ultra_supercritical_oxyfuel_ccs_lignite_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_ultra_supercritical_oxyfuel_ccs_lignite_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_ultra_supercritical_network_gas_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_ultra_supercritical_network_gas_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_ultra_supercritical_network_gas_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_turbine_network_gas_production
+  message:
+    "Data sourced from the City's emission inventory (2022)"
+
+- fields:
+  - energy_power_turbine_network_gas_full_load_hours
+  message:
+    "Gebaseerd op gemiddelde Belgische vollasturen (2013)"
+
+- fields:
+  - input_energy_power_turbine_network_gas_electricity_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_energy_power_engine_network_gas_production
+  message:
+    "No data available in the Energy Balance, set to 0.0"
+
+- fields:
+  - energy_power_engine_network_gas_full_load_hours
+  message:
+    "No sufficient European source found, full load hours are estimated; year: 2019; author: Quintel"
+
+- fields:
+  - input_energy_power_engine_network_gas_electricity_output_conversion
+  message:
+    "No data available in the Energy Balance, number is based on NL2015."
+
+- fields:
+  - input_energy_power_combined_cycle_network_gas_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_combined_cycle_network_gas_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_combined_cycle_network_gas_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_combined_cycle_ccs_network_gas_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_combined_cycle_ccs_network_gas_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_nuclear_gen2_uranium_oxide_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_nuclear_gen2_uranium_oxide_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_nuclear_gen2_uranium_oxide_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_nuclear_gen3_uranium_oxide_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_nuclear_gen3_uranium_oxide_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_nuclear_gen3_uranium_oxide_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_ultra_supercritical_crude_oil_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_ultra_supercritical_crude_oil_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_ultra_supercritical_crude_oil_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_engine_diesel_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_engine_diesel_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_engine_diesel_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_wind_turbine_offshore_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_wind_turbine_offshore_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_wind_turbine_coastal_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_wind_turbine_coastal_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_wind_turbine_inland_production
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - energy_power_wind_turbine_inland_full_load_hours
+  message:
+    "Gebaseerd op productie-opbrengst uit de emissie-inventaris 2022 en geïnstalleerd vermogen uit Provincie in Cijfers. "
+
+- fields:
+  - input_energy_power_solar_pv_solar_radiation_production
+  message:
+    "In the solar panel data, there is no separate category for large-scale installations."
+
+- fields:
+  - input_solar_panels_roofs_and_parks_full_load_hours
+  message:
+    "Gebaseerd op gemiddelde Belgische vollasturen (2013)"
+
+- fields:
+  - flh_solar_pv_solar_radiation_max
+  message:
+    "Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order."
+
+- fields:
+  - input_energy_power_solar_csp_solar_radiation_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_hydro_river_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_hydro_river_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_hydro_mountain_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_hydro_mountain_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_geothermal_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_geothermal_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_supercritical_ccs_waste_mix_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_supercritical_waste_mix_production
+  message:
+    "The current waste incinerators are CHP's, there are no waste incinerators that are purely supplying electricity in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_supercritical_waste_mix_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_supercritical_ccs_waste_mix_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_power_supercritical_ccs_waste_mix_full_load_hours
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_power_supercritical_waste_mix_electricity_output_conversion
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_chp_turbine_gas_power_fuelmix_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_chp_turbine_gas_power_fuelmix_full_load_hours
+  message:
+    "Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order."
+
+- fields:
+  - input_industry_chp_turbine_gas_power_fuelmix_electricity_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_industry_chp_turbine_gas_power_fuelmix_steam_hot_water_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - industry_chp_engine_gas_power_fuelmix_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_chp_engine_gas_power_fuelmix_full_load_hours
+  message:
+    "Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order."
+
+- fields:
+  - input_industry_chp_engine_gas_power_fuelmix_electricity_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_industry_chp_engine_gas_power_fuelmix_steam_hot_water_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - industry_chp_combined_cycle_gas_power_fuelmix_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_chp_combined_cycle_gas_power_fuelmix_full_load_hours
+  message:
+    "Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order."
+
+- fields:
+  - input_industry_chp_combined_cycle_gas_power_fuelmix_electricity_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_industry_chp_combined_cycle_gas_power_fuelmix_steam_hot_water_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - industry_chp_ultra_supercritical_coal_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_chp_ultra_supercritical_coal_full_load_hours
+  message:
+    "Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order."
+
+- fields:
+  - input_industry_chp_ultra_supercritical_coal_electricity_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_industry_chp_ultra_supercritical_coal_steam_hot_water_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - industry_chp_wood_pellets_demand
+  message:
+    "Apparaat recent toegevoegd aan model. Waarde op 0 gezet."
+
+- fields:
+  - industry_chp_wood_pellets_full_load_hours
+  message:
+    "Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order."
+
+- fields:
+  - input_industry_chp_wood_pellets_electricity_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_industry_chp_wood_pellets_steam_hot_water_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - agriculture_chp_engine_biogas_demand
+  message:
+    "New attribute (added to ETM in Dec 2022), set to zero."
+
+- fields:
+  - agriculture_chp_engine_biogas_full_load_hours
+  message:
+    "New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+
+- fields:
+  - agriculture_chp_engine_network_gas_dispatchable_demand
+  message:
+    "New attribute (added to ETM in Dec 2022), set to zero."
+
+- fields:
+  - agriculture_chp_engine_network_gas_dispatchable_full_load_hours
+  message:
+    "New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+
+- fields:
+  - agriculture_chp_wood_pellets_demand
+  message:
+    "New attribute (added to ETM in Dec 2022), set to zero."
+
+- fields:
+  - agriculture_chp_wood_pellets_full_load_hours
+  message:
+    "New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+
+- fields:
+  - input_agriculture_chp_engine_biogas_electricity_output_conversion
+  message:
+    "New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+
+- fields:
+  - input_agriculture_chp_engine_biogas_steam_hot_water_output_conversion
+  message:
+    "New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+
+- fields:
+  - input_agriculture_chp_engine_network_gas_dispatchable_electricity_output_conversion
+  message:
+    "New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+
+- fields:
+  - input_agriculture_chp_engine_network_gas_dispatchable_steam_hot_water_output_conversion
+  message:
+    "New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+
+- fields:
+  - input_agriculture_chp_wood_pellets_electricity_output_conversion
+  message:
+    "New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+
+- fields:
+  - input_agriculture_chp_wood_pellets_steam_hot_water_output_conversion
+  message:
+    "New attribute (added to ETM in Dec 2022), set to a default value based on Netherlands 2019."
+
+- fields:
+  - input_energy_chp_supercritical_waste_mix_full_load_hours
+  message:
+    "Gebaseerd op gemiddelde Belgische vollasturen (2013)"
+
+- fields:
+  - input_industry_chp_turbine_hydrogen_electricity_output_conversion
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_industry_chp_turbine_hydrogen_steam_hot_water_output_conversion
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_energy_chp_combined_cycle_ht_network_gas_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_chp_combined_cycle_mt_network_gas_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_chp_local_engine_ht_biogas_production
+  message:
+    "Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5"
+
+- fields:
+  - input_energy_chp_local_engine_ht_network_gas_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_chp_local_engine_mt_biogas_production
+  message:
+    "No data available. All CHPs are assumed to produce only HT heat and zero MT heat."
+
+- fields:
+  - input_energy_chp_local_engine_mt_network_gas_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_chp_local_ht_wood_pellets_production
+  message:
+    "Klimaatmonitor (2016). URL: https://klimaatmonitor.databank.nl/Jive?workspace_guid=7d85d44f-1169-4d6e-bec3-b0307f9296f5"
+
+- fields:
+  - input_energy_chp_local_mt_wood_pellets_production
+  message:
+    "No data available. All CHPs are assumed to produce only HT heat and zero MT heat."
+
+- fields:
+  - input_energy_chp_supercritical_ht_waste_mix_production
+  message:
+    "Gebaseerd op de dataset die door Quintel in samenwerking met DNV GL is opgesteld. De meeste waardes zijn afkomstig van DNV GL en/of de Emissieinventaris (https://www.antwerpenmorgen.be/projecten/emissie-inventaris/over). In het geval waardes niet beschikbaar waren, zijn deze pro rata geschaald naar de landelijke waardes voor Belgie."
+
+- fields:
+  - input_energy_chp_supercritical_mt_waste_mix_production
+  message:
+    "No data available. All CHPs are assumed to produce only HT heat and zero MT heat."
+
+- fields:
+  - input_energy_chp_ultra_supercritical_cofiring_ht_coal_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_chp_ultra_supercritical_cofiring_mt_coal_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_chp_ultra_supercritical_ht_coal_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_chp_ultra_supercritical_ht_lignite_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_chp_ultra_supercritical_mt_coal_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_chp_ultra_supercritical_mt_lignite_production
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - industry_chp_turbine_hydrogen_demand
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - industry_chp_turbine_hydrogen_full_load_hours
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_energy_chp_local_wood_pellets_full_load_hours
+  message:
+    "Gebaseerd op gemiddelde Belgische vollasturen (2013)"
+
+- fields:
+  - input_energy_chp_local_wood_pellets_electricity_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_energy_chp_local_wood_pellets_steam_hot_water_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_energy_chp_local_engine_biogas_full_load_hours
+  message:
+    "Gebaseerd op gemiddelde Belgische vollasturen (2013)"
+
+- fields:
+  - input_energy_chp_local_engine_biogas_electricity_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_energy_chp_local_engine_biogas_steam_hot_water_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_coal_full_load_hours
+  message:
+    "Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order."
+
+- fields:
+  - input_energy_chp_ultra_supercritical_coal_electricity_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_coal_steam_hot_water_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_cofiring_coal_full_load_hours
+  message:
+    "Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order."
+
+- fields:
+  - input_energy_chp_ultra_supercritical_cofiring_coal_electricity_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_cofiring_coal_steam_hot_water_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_lignite_full_load_hours
+  message:
+    "Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order."
+
+- fields:
+  - input_energy_chp_ultra_supercritical_lignite_electricity_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_energy_chp_ultra_supercritical_lignite_steam_hot_water_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_energy_chp_combined_cycle_network_gas_full_load_hours
+  message:
+    "Gebaseerd op gemiddelde Belgische vollasturen (2013)"
+
+- fields:
+  - input_energy_chp_combined_cycle_network_gas_electricity_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_energy_chp_combined_cycle_network_gas_steam_hot_water_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_energy_chp_local_engine_network_gas_full_load_hours
+  message:
+    "Gebaseerd op gemiddelde Belgische vollasturen (2013)"
+
+- fields:
+  - input_energy_chp_local_engine_network_gas_electricity_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_energy_chp_local_engine_network_gas_steam_hot_water_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_energy_chp_supercritical_waste_mix_electricity_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - input_energy_chp_supercritical_waste_mix_steam_hot_water_output_conversion
+  message:
+    "Efficiency researched by Quintel. Source data can be found below the slider of this plant in the ETM front-end"
+
+- fields:
+  - energy_heat_import_ht_steam_hot_water_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - energy_heat_import_lt_steam_hot_water_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - energy_heat_import_mt_steam_hot_water_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - industry_heat_burner_hydrogen_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - industry_heat_burner_hydrogen_full_load_hours
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - industry_heat_burner_lignite_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - industry_heat_burner_lignite_full_load_hours
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_industry_heat_burner_lignite_steam_hot_water_output_conversion
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - industry_heat_burner_coal_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - industry_heat_burner_coal_full_load_hours
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_industry_heat_burner_coal_steam_hot_water_output_conversion
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - industry_heat_well_geothermal_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - industry_heat_burner_crude_oil_demand
+  message:
+    "No relevant data available"
+
+- fields:
+  - industry_heat_burner_crude_oil_full_load_hours
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_industry_heat_burner_hydrogen_steam_hot_water_output_conversion
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_industry_heat_burner_crude_oil_steam_hot_water_output_conversion
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_energy_heat_boiler_electricity_steam_hot_water_output_conversion
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_energy_heat_boiler_ht_electricity_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_boiler_lt_electricity_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_boiler_mt_electricity_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_burner_coal_full_load_hours
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_energy_heat_burner_coal_steam_hot_water_output_conversion
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_energy_heat_burner_crude_oil_full_load_hours
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_energy_heat_burner_crude_oil_steam_hot_water_output_conversion
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_energy_heat_burner_ht_coal_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_burner_ht_crude_oil_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_burner_ht_hydrogen_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_burner_ht_network_gas_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_burner_ht_waste_mix_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_burner_ht_wood_pellets_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_burner_hydrogen_steam_hot_water_output_conversion
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_energy_heat_burner_lt_hydrogen_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_burner_mt_coal_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_burner_mt_crude_oil_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_burner_mt_hydrogen_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_burner_mt_network_gas_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_burner_mt_waste_mix_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_burner_mt_wood_pellets_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_burner_network_gas_full_load_hours
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_energy_heat_burner_network_gas_steam_hot_water_output_conversion
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_energy_heat_burner_waste_mix_full_load_hours
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_energy_heat_burner_waste_mix_steam_hot_water_output_conversion
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_energy_heat_burner_wood_pellets_full_load_hours
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_energy_heat_burner_wood_pellets_steam_hot_water_output_conversion
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_energy_heat_heatpump_water_water_electricity_full_load_hours
+  message:
+    "No data available, set to default values"
+
+- fields:
+  - input_energy_heat_heatpump_water_water_ht_electricity_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_heatpump_water_water_lt_electricity_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_heatpump_water_water_mt_electricity_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_solar_ht_solar_thermal_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_solar_lt_solar_thermal_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_solar_mt_solar_thermal_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_solar_solar_thermal_full_load_hours
+  message:
+    "Full load hours based on global horizontal irradiation (GHI) data from renewables.ninja. This GHI data is converted to solar thermal production. For more information see: https://github.com/quintel/etdataset-public/blob/master/curves/supply/solar_thermal/script/README.md"
+
+- fields:
+  - input_energy_heat_well_deep_ht_geothermal_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_well_deep_mt_geothermal_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_well_shallow_heatpump_mt_geothermal_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - input_energy_heat_well_shallow_lt_geothermal_production
+  message:
+    "No relevant data available"
+
+- fields:
+  - energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share
+  message:
+    "Approximation of the sector representation (2016) and the emission inventory 2022"
+
+- fields:
+  - energy_distribution_non_biogenic_waste_energy_distribution_waste_mix_child_share
+  message:
+    "Approximation of the sector representation (2016) and the emission inventory 2022"
+
+- fields:
+  - input_percentage_of_diesel_households_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_biodiesel_households_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_kerosene_households_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_bio_kerosene_households_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_lpg_households_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_bio_oil_households_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_crude_oil_households_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_diesel_buildings_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_biodiesel_buildings_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_kerosene_buildings_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_bio_kerosene_buildings_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_lpg_buildings_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_bio_oil_buildings_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_crude_oil_buildings_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_diesel_agriculture_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_biodiesel_agriculture_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_kerosene_agriculture_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_lpg_agriculture_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_bio_oil_agriculture_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_crude_oil_agriculture_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_share_mixer_gas_fuel_bio_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_share_mixer_gas_fuel_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_share_mixer_gas_fuel_network_gas
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_diesel_industry_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_biodiesel_industry_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_kerosene_industry_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_bio_kerosene_industry_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_lpg_industry_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_bio_oil_industry_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_percentage_of_crude_oil_industry_final_demand_crude_oil
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - analysis_year
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - number_of_inhabitants
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - total_land_area
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - areable_land
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - coast_line
+  message:
+    "Data is not relevant for Antwerp. "
+
+- fields:
+  - offshore_suitable_for_wind
+  message:
+    "Based on the assumption that Bregilab prognosis (2019) was based on turbines of Enercon type 2,3 MW (pg 12 in the Bregilab report) while in reality most installed wind turbines in Antwerp are 4 MW"
+
+- fields:
+  - residences_roof_surface_available_for_pv
+  message:
+    "Gebaseerd op totale potentiële capaciteit volgens Bregilab (2019), gecorrigeerd voor gemiddelde capaciteit en grootte zonnepanelen 2024 (Jinko 440Wp All Black Tiger Neo N-Type)"
+
+- fields:
+  - buildings_roof_surface_available_for_pv
+  message:
+    "Gebaseerd op totale potentiële capaciteit volgens Bregilab (2019), gecorrigeerd voor gemiddelde capaciteit en grootte zonnepanelen 2024 (Jinko 440Wp All Black Tiger Neo N-Type)"
+
+- fields:
+  - co2_emission_1990
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - co2_emission_1990_aviation_bunkers
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - co2_emission_1990_marine_bunkers
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - energetic_emissions_other_ghg_households
+  message:
+    "Emissions included in non-energetic CO2-emissions"
+
+- fields:
+  - energetic_emissions_other_ghg_buildings
+  message:
+    "Emissions included in non-energetic CO2-emissions"
+
+- fields:
+  - energetic_emissions_other_ghg_industry
+  message:
+    "Emissions included in non-energetic CO2-emissions"
+
+- fields:
+  - energetic_emissions_other_ghg_energy
+  message:
+    "Emissions included in non-energetic CO2-emissions"
+
+- fields:
+  - energetic_emissions_other_ghg_transport
+  message:
+    "Emissions included in non-energetic CO2-emissions"
+
+- fields:
+  - energetic_emissions_other_ghg_agriculture
+  message:
+    "Emissions included in non-energetic CO2-emissions"
+
+- fields:
+  - non_energetic_emissions_co2_chemical_industry
+  message:
+    "This data is not relevant nor available for Antwerp on industry-level"
+
+- fields:
+  - non_energetic_emissions_co2_waste_management
+  message:
+    "This data is not relevant nor available for Antwerp on industry-level"
+
+- fields:
+  - non_energetic_emissions_co2_other_industry
+  message:
+    "This data is not relevant nor available for Antwerp on industry-level"
+
+- fields:
+  - non_energetic_emissions_co2_agriculture_manure
+  message:
+    "This data is not relevant nor available for Antwerp on industry-level"
+
+- fields:
+  - non_energetic_emissions_co2_agriculture_soil_cultivation
+  message:
+    "This data is not relevant nor available for Antwerp on industry-level"
+
+- fields:
+  - indirect_emissions_co2
+  message:
+    "This data is not relevant nor available for Antwerp on industry-level"
+
+- fields:
+  - non_energetic_emissions_other_ghg_chemical_industry
+  message:
+    "This data is not relevant nor available for Antwerp on industry-level"
+
+- fields:
+  - non_energetic_emissions_other_ghg_waste_management
+  message:
+    "This data is not relevant nor available for Antwerp on industry-level"
+
+- fields:
+  - non_energetic_emissions_other_ghg_other_industry
+  message:
+    "This data is not relevant nor available for Antwerp on industry-level"
+
+- fields:
+  - non_energetic_emissions_other_ghg_agriculture_manure
+  message:
+    "This data is not relevant nor available for Antwerp on industry-level"
+
+- fields:
+  - non_energetic_emissions_other_ghg_agriculture_soil_cultivation
+  message:
+    "This data is not relevant nor available for Antwerp on industry-level"
+
+- fields:
+  - non_energetic_emissions_other_ghg_agriculture_fermentation
+  message:
+    "This data is not relevant nor available for Antwerp on industry-level"
+
+- fields:
+  - non_energetic_emissions_other_ghg_agriculture_other
+  message:
+    "This data is not relevant nor available for Antwerp on industry-level"
+
+- fields:
+  - file_carriers_natural_gas_co2_conversion_per_mj
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - file_carriers_crude_oil_co2_conversion_per_mj
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - file_carriers_coal_co2_conversion_per_mj
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - file_carriers_lignite_co2_conversion_per_mj
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - file_carriers_non_biogenic_waste_co2_conversion_per_mj
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - file_carriers_diesel_co2_conversion_per_mj
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - file_carriers_gasoline_co2_conversion_per_mj
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - file_carriers_heavy_fuel_oil_co2_conversion_per_mj
+  message:
+    "Abstracted from the report 'Covenant of Mayors for Climate and Energy: Default emission factors for local emission inventories'; year: 2017; author: JRC"
+
+- fields:
+  - file_carriers_kerosene_co2_conversion_per_mj
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - file_carriers_lng_co2_conversion_per_mj
+  message:
+    "Abstracted from the report 'Covenant of Mayors for Climate and Energy: Default emission factors for local emission inventories'; year: 2017; author: JRC"
+
+- fields:
+  - file_carriers_lpg_co2_conversion_per_mj
+  message:
+    "Data sourced from Antwerp's emission inventory (2022 - https://stadincijfers.antwerpen.be/mosaic/dashboard-klimaat/klimaatmitigatie)"
+
+- fields:
+  - file_carriers_imported_electricity_co2_conversion_per_mj
+  message:
+    "Data sourced from Electricity maps (https://app.electricitymaps.com/zone/BE)"
+
+- fields:
+  - file_carriers_imported_heat_co2_conversion_per_mj
+  message:
+    "No validated data source available"
+
+- fields:
+  - file_carriers_imported_hydrogen_co2_conversion_per_mj
+  message:
+    "No validated data source available"
+
+- fields:
+  - file_carriers_propane_co2_conversion_per_mj
+  message:
+    "Abstracted from the report 'Covenant of Mayors for Climate and Energy: Default emission factors for local emission inventories'; year: 2017; author: JRC"
+
+- fields:
+  - file_carriers_imported_ammonia_co2_conversion_per_mj
+  message:
+    "No validated data source available"
+
+- fields:
+  - lv_net_total_costs_present
+  message:
+    "Based on the previous dataset of 2016, corrected with the ABEX-index for 2022"
+
+- fields:
+  - mv_net_total_costs_present
+  message:
+    "Based on the previous dataset of 2016, corrected with the ABEX-index for 2022"
+
+- fields:
+  - hv_net_total_costs_present
+  message:
+    "Based on the previous dataset of 2016, corrected with the ABEX-index for 2022"
+
+- fields:
+  - lv_mv_trafo_total_costs_present
+  message:
+    "Based on the previous dataset of 2016, corrected with the ABEX-index for 2022"
+
+- fields:
+  - mv_hv_trafo_total_costs_present
+  message:
+    "Based on the previous dataset of 2016, corrected with the ABEX-index for 2022"
+
+- fields:
+  - interconnection_net_costs_present
+  message:
+    "Based on the previous dataset of 2016, corrected with the ABEX-index for 2022"
+
+- fields:
+  - offshore_net_costs_present
+  message:
+    "Based on the previous dataset of 2016, corrected with the ABEX-index for 2022"
+
+- fields:
+  - lv_net_spare_capacity
+  message:
+    "Gebaseerd op de dataset die door Quintel in samenwerking met DNV GL is opgesteld. De meeste waardes zijn afkomstig van DNV GL en/of de Emissieinventaris (https://www.antwerpenmorgen.be/projecten/emissie-inventaris/over). In het geval waardes niet beschikbaar waren, zijn deze pro rata geschaald naar de landelijke waardes voor Belgie."
+
+- fields:
+  - mv_net_spare_capacity
+  message:
+    "Gebaseerd op de dataset die door Quintel in samenwerking met DNV GL is opgesteld. De meeste waardes zijn afkomstig van DNV GL en/of de Emissieinventaris (https://www.antwerpenmorgen.be/projecten/emissie-inventaris/over). In het geval waardes niet beschikbaar waren, zijn deze pro rata geschaald naar de landelijke waardes voor Belgie."
+
+- fields:
+  - hv_net_spare_capacity
+  message:
+    "Gebaseerd op de dataset die door Quintel in samenwerking met DNV GL is opgesteld. De meeste waardes zijn afkomstig van DNV GL en/of de Emissieinventaris (https://www.antwerpenmorgen.be/projecten/emissie-inventaris/over). In het geval waardes niet beschikbaar waren, zijn deze pro rata geschaald naar de landelijke waardes voor Belgie."
+
+- fields:
+  - lv_mv_trafo_spare_capacity
+  message:
+    "Gebaseerd op de dataset die door Quintel in samenwerking met DNV GL is opgesteld. De meeste waardes zijn afkomstig van DNV GL en/of de Emissieinventaris (https://www.antwerpenmorgen.be/projecten/emissie-inventaris/over). In het geval waardes niet beschikbaar waren, zijn deze pro rata geschaald naar de landelijke waardes voor Belgie."
+
+- fields:
+  - mv_hv_trafo_spare_capacity
+  message:
+    "Gebaseerd op de dataset die door Quintel in samenwerking met DNV GL is opgesteld. De meeste waardes zijn afkomstig van DNV GL en/of de Emissieinventaris (https://www.antwerpenmorgen.be/projecten/emissie-inventaris/over). In het geval waardes niet beschikbaar waren, zijn deze pro rata geschaald naar de landelijke waardes voor Belgie."
+
+- fields:
+  - lv_net_costs_per_capacity_step
+  message:
+    "Based on the previous dataset of 2016, corrected with the ABEX-index for 2022"
+
+- fields:
+  - mv_net_costs_per_capacity_step
+  message:
+    "Based on the previous dataset of 2016, corrected with the ABEX-index for 2022"
+
+- fields:
+  - hv_net_costs_per_capacity_step
+  message:
+    "Based on the previous dataset of 2016, corrected with the ABEX-index for 2022"
+
+- fields:
+  - lv_mv_trafo_costs_per_capacity_step
+  message:
+    "Based on the previous dataset of 2016, corrected with the ABEX-index for 2022"
+
+- fields:
+  - mv_hv_trafo_costs_per_capacity_step
+  message:
+    "Based on the previous dataset of 2016, corrected with the ABEX-index for 2022"
+
+- fields:
+  - energy_power_hv_network_loss_demand
+  message:
+    "Gebaseerd op de dataset die door Quintel in samenwerking met DNV GL is opgesteld. De meeste waardes zijn afkomstig van DNV GL en/of de Emissieinventaris (https://www.antwerpenmorgen.be/projecten/emissie-inventaris/over). In het geval waardes niet beschikbaar waren, zijn deze pro rata geschaald naar de landelijke waardes voor Belgie."
+
+- fields:
+  - interconnector_capacity
+  message:
+    "Derived from the TYNDP 2025 Scenario's, as this study projects grid capacity for the year 2025 the data will slightly differ from the 2019 grid capacities; author: entso-e & entso-g; year: 2021"
+
+- fields:
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_first_bracket
+  message:
+    "Geen lokale informatie beschikbaar. Aanname: Gelijk aan gemiddelde voor Amsterdam. Bron: Vesta MAIS 4.0"
+
+- fields:
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_second_bracket
+  message:
+    "Geen lokale informatie beschikbaar. Aanname: Gelijk aan gemiddelde voor Amsterdam. Bron: Vesta MAIS 4.0"
+
+- fields:
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_third_bracket
+  message:
+    "Geen lokale informatie beschikbaar. Aanname: Gelijk aan gemiddelde voor Amsterdam. Bron: Vesta MAIS 4.0"
+
+- fields:
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_fourth_bracket
+  message:
+    "Geen lokale informatie beschikbaar. Aanname: Gelijk aan gemiddelde voor Amsterdam. Bron: Vesta MAIS 4.0"
+
+- fields:
+  - heat_length_of_distribution_pipelines_in_meter_per_residence_object_fifth_bracket
+  message:
+    "Geen lokale informatie beschikbaar. Aanname: Gelijk aan gemiddelde voor Amsterdam. Bron: Vesta MAIS 4.0"
+
+- fields:
+  - heat_length_of_connection_pipelines_in_meter_per_residence_first_bracket
+  message:
+    "Geen lokale informatie beschikbaar. Aanname: Gelijk aan gemiddelde voor Amsterdam. Bron: Vesta MAIS 4.0"
+
+- fields:
+  - heat_length_of_connection_pipelines_in_meter_per_residence_second_bracket
+  message:
+    "Geen lokale informatie beschikbaar. Aanname: Gelijk aan gemiddelde voor Amsterdam. Bron: Vesta MAIS 4.0"
+
+- fields:
+  - heat_length_of_connection_pipelines_in_meter_per_residence_third_bracket
+  message:
+    "Geen lokale informatie beschikbaar. Aanname: Gelijk aan gemiddelde voor Amsterdam. Bron: Vesta MAIS 4.0"
+
+- fields:
+  - heat_length_of_connection_pipelines_in_meter_per_residence_fourth_bracket
+  message:
+    "Geen lokale informatie beschikbaar. Aanname: Gelijk aan gemiddelde voor Amsterdam. Bron: Vesta MAIS 4.0"
+
+- fields:
+  - heat_length_of_connection_pipelines_in_meter_per_residence_fifth_bracket
+  message:
+    "Geen lokale informatie beschikbaar. Aanname: Gelijk aan gemiddelde voor Amsterdam. Bron: Vesta MAIS 4.0"
+
+- fields:
+  - annual_infrastructure_cost_gas
+  message:
+    "No relevant data available"
+
+- fields:
+  - energy_distribution_network_gas_loss_demand
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - energy_distribution_greengas_demand
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - energy_regasification_lng_energy_national_gas_network_natural_gas_demand
+  message:
+    "No sufficient European source found."
+
+- fields:
+  - energy_distribution_crude_oil_loss_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - input_energy_heat_distribution_ht_loss_share
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_energy_heat_distribution_mt_loss_share
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - input_energy_heat_distribution_lt_loss_share
+  message:
+    "Eurostat Energy Balance"
+
+- fields:
+  - energy_greengas_gasification_dry_biomass_energy_greengas_production_child_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_greengas_gasification_wet_biomass_energy_greengas_production_child_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_greengas_upgrade_biogas_energy_greengas_production_child_share
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_production_dry_biomass_max_demand
+  message:
+    "Data sourced from Antwerp's biomass inventory (2019)"
+
+- fields:
+  - energy_production_wet_biomass_max_demand
+  message:
+    "Data sourced from Antwerp's biomass inventory (2019)"
+
+- fields:
+  - energy_production_oily_biomass_max_demand
+  message:
+    "Data sourced from Antwerp's biomass inventory (2019)"
+
+- fields:
+  - energy_extraction_coal_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_extraction_lignite_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_extraction_crude_oil_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_extraction_natural_gas_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - energy_extraction_uranium_oxide_demand
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - aquathermal_potential_for_drink_water
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - aquathermal_potential_for_surface_water
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - aquathermal_potential_for_waste_water
+  message:
+    "This data is not relevant for Antwerp as there is no production facilities in the area covered by the emission inventory. "
+
+- fields:
+  - hv_net_capacity_per_step
+  message:
+    "Set to 1 MW"
+
+- fields:
+  - lv_mv_trafo_capacity_per_step
+  message:
+    "Set to 1 MW"
+
+- fields:
+  - lv_net_capacity_per_step
+  message:
+    "Set to 1 MW"
+
+- fields:
+  - mv_hv_trafo_capacity_per_step
+  message:
+    "Set to 1 MW"
+
+- fields:
+  - mv_net_capacity_per_step
+  message:
+    "Set to 1 MW"
+

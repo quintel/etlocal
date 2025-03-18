@@ -45,7 +45,9 @@ module Amalgamator
         end
       end
 
-      # Rounds values to 8 decimals and replaces nil with 0.0
+      # This function rounds down dataset values at 8 decimals so that the sum of shares will not exceed 1.0.
+      # If the result is lower than 1.0, the flexible share will be adjusted to the difference.
+      # This function also replaces nil values with 0.0.
       def round_item_values(item_values)
         item_values.transform_values! { |value| value.present? ? value.floor(8) : 0.0 }
       end

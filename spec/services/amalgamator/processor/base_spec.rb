@@ -37,7 +37,7 @@ RSpec.describe Amalgamator::Processor::Base do
   describe '#round_item_values' do
     let(:item_values) { { item1: 0.123456789, item2: 0.987654321, item3: nil } }
 
-    it 'rounds values to 8 decimals and replaces nil with 0.0' do
+    it 'rounds values down at 8 decimals and replaces nil with 0.0' do
       result = described_class.send(:round_item_values, item_values)
       expect(result).to eq({ item1: 0.12345678, item2: 0.98765432, item3: 0.0 })
     end

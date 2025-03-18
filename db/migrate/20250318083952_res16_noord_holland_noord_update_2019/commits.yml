@@ -1,0 +1,6 @@
+---
+- fields:
+  - :all
+  message: 'Optelling van de volgende gebieden: Alkmaar, Bergen, Castricum, Den Helder,
+    Drechterland, Enkhuizen, Heerhugowaard, Heiloo, Hollands Kroon, Hoorn, Koggenland,
+    Langedijk, Medemblik, Opmeer, Schagen, Stede Broec, Texel, Uitgeest'

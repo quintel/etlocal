@@ -1,8 +1,0 @@
----
-- fields:
-  # List each field from the data CSV to be included in this commit.
-  - present_number_of_buildings
-  message:
-    Based on the valid EPC certifications and assumption that approximately 1/3th of small residential buildings have an EPC certification. The approximated value is multiplied by 4 to align with heat technology settings of ETM (fixed value).
-
-

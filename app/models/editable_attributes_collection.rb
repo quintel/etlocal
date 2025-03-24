@@ -15,16 +15,18 @@ class EditableAttributesCollection
 
   def initialize(dataset, freeze_date = nil)
     @dataset    = dataset
-    @freeze_date = freeze_date
-    @attributes = setup_attributes
+    @attributes = setup_attributes(dataset)
+    @freeze_date = freeze_date || @freeze_date || nil
   end
 
   def find(key)
-    @attributes.detect { |attribute| attribute.key == key }
+    @attributes.detect do |attribute|
+      attribute.key == key
+    end
   end
 
   def exists?(method)
-    @attributes.any? { |attribute| attribute.key == method }
+    @attributes.map(&:key).include?(method)
   end
 
   def edits_for(key)
@@ -33,7 +35,7 @@ class EditableAttributesCollection
 
   def as_json(*)
     @attributes.each_with_object({}) do |edit, object|
-      object[edit.key] = edit.value(@freeze_date)
+      object[edit.key] = edit.value
     end
   end
 
@@ -42,20 +44,14 @@ class EditableAttributesCollection
   def edits
     @edits ||= @dataset.edits
       .includes(commit: :user)
+      .before(@freeze_date)
       .order(created_at: :desc)
       .group_by(&:key)
   end
 
-  def setup_attributes
+  def setup_attributes(dataset)
     self.class.items.flatten.map do |item|
-      EditableAttribute.new(
-        @dataset,
-        item.key.to_s,
-        edits_for(item.key.to_s),
-        item.default,
-        entso_query: item.entso,
-        freeze_date: @freeze_date
-      )
+      EditableAttribute.new(dataset, item.key.to_s, edits, item.default, entso_query: item.entso)
     end
   end
 end

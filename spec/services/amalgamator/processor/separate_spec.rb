@@ -1,131 +1,213 @@
 require 'rails_helper'
 
 RSpec.describe Amalgamator::Processor::Separate do
-  let(:target_dataset) { instance_double(Dataset, geo_id: 'NL1', editable_attributes: target_attrs) }
-  let(:subtracted_dataset) { instance_double(Dataset, geo_id: 'NL2', editable_attributes: subtracted_attrs) }
-
-  let(:target_attrs) { instance_double(EditableAttributesCollection) }
-  let(:subtracted_attrs) { instance_double(EditableAttributesCollection) }
-
-  let(:items) do
-    [
-      instance_double(InterfaceItem, key: :number_of_cars, nested_combination_method: 'sum', flexible: false, group: nil),
-      instance_double(InterfaceItem, key: :co2_emission_1990, nested_combination_method: 'average', flexible: false, group: nil),
-      instance_double(InterfaceItem, key: :interconnector_capacity, nested_combination_method: 'min', flexible: false, group: nil)
-    ]
-  end
-
-  before do
-    allow(InterfaceElement).to receive(:items).and_return(items)
-    prepare_datasets
-  end
-
-  let(:values) do
+  let(:dataset_a) { create(:dataset) }
+  let(:dataset_b) { create(:dataset) }
+  let(:item_keys) { %i[areable_land analysis_year co2_emission_1990 number_of_buildings] }
+  let(:item_attrs) do
     {
-      number_of_cars: [10.0, 3.0],
-      co2_emission_1990: [500.0, 200.0],
-      interconnector_capacity: [50.0, 30.0]
+      key: item_keys[0],
+      nested_combination_method: 'sum',
+      flexible: false,
+      default: nil,
+      entso: nil
     }
   end
 
-  describe 'when subtracting datasets' do
-    it 'correctly subtracts dataset values based on combination_method' do
-      expect(described_class.perform(target_dataset, subtracted_dataset)).to eq({
-        number_of_cars: 7.0,  # 10 - 3 = 7
-        co2_emission_1990: 800.0,  # 500 + (500 - 200) = 800 (average calculation)
-        interconnector_capacity: 50.0 # min takes B’s value
-      })
-    end
-  end
-
-  describe 'handling unknown combination_method' do
-    it 'raises an error for unknown combination_method' do
-      allow(items.first).to receive(:nested_combination_method).and_return('unknown_method')
-      expect { described_class.perform(target_dataset, subtracted_dataset) }.to raise_error(
-        ArgumentError,
-        /Unknown combination method 'unknown_method' for InterfaceItem: number_of_cars/
-      )
-    end
-  end
-
-  describe 'handling weighted average' do
-    it 'calculates weighted averages correctly' do
-      allow(items.first).to receive(:nested_combination_method).and_return({ 'weighted_average' => [:number_of_cars, :co2_emission_1990] })
-      result = described_class.perform(target_dataset, subtracted_dataset)
-      expect(result[:number_of_cars]).to be_within(0.01).of(14.65)
-    end
-  end
-
-  describe 'handling flexible shares' do
-    let(:flexible_item) do
-      instance_double(InterfaceItem,
-        key: :number_of_cars,
-        nested_combination_method: 'sum',
-        flexible: true,
-        group: nil
-      )
-    end
-
-    let(:other_item) do
-      instance_double(InterfaceItem,
-        key: :interconnector_capacity,
-        nested_combination_method: 'sum',
-        flexible: false,
-        group: nil
-      )
-    end
-
-    let(:group) do
-      instance_double(InterfaceGroup,
-        header: 'Test Group',
-        items: [flexible_item, other_item],
-        present?: true
-      )
+  describe 'when separating values for the given datasets' do
+    let(:values) do
+      [
+        # dataset_a,  dataset_b
+        [10.0, 30.0],   # values for item 0
+        [25.0, 75.0],   # values for item 1
+        [20.0, 70.0],  # values for item 2
+        [3.5, 10.5],    # values for item 3
+      ]
     end
 
     before do
-      allow(flexible_item).to receive(:group).and_return(group)
-      allow(other_item).to receive(:group).and_return(group)
+      allow(dataset_a).to receive(:editable_attributes).and_return(mock_editable_attributes(values, 0))
+      allow(dataset_b).to receive(:editable_attributes).and_return(mock_editable_attributes(values, 1))
     end
 
-    let(:items) { [flexible_item, other_item] }
+    it 'separates values according to the combination_method set in each item' do
+      items = [
+        instance_double(InterfaceItem, item_attrs), # item key 0, combination_method: 'sum' (default)
+        instance_double(InterfaceItem, item_attrs.merge(key: item_keys[1], nested_combination_method: 'average')),
+        instance_double(InterfaceItem, item_attrs.merge(key: item_keys[2], nested_combination_method: 'min')),
+        instance_double(InterfaceItem, item_attrs.merge(key: item_keys[3], nested_combination_method: 'max'))
+      ]
 
-    let(:values) do
+      allow(InterfaceElement).to receive(:items).and_return(items)
+
+      result = described_class.perform(dataset_b, dataset_a)
+
+      expect(result).to eq({
+        areable_land: 20.0,        # B - A --> 30.0 - 10.0
+        analysis_year: 125.0,      # average: B + B - A --> 75.0 + 75.0 - 25.0 = 125.0
+        co2_emission_1990: 70.0,   # min of [200, 70] is B --> 70.0
+        number_of_buildings: 10.5  # max of [3.5, 10.5] is B --> 10.5
+      })
+    end
+
+    it 'defaults the combination_method to sum if it is not set on an item' do
+      items = [
+        instance_double(InterfaceItem, item_attrs.merge(nested_combination_method: nil)),
+      ]
+
+      allow(InterfaceElement).to receive(:items).and_return(items)
+
+      result = described_class.perform(dataset_b, dataset_a)
+
+      expect(result).to eq({
+        areable_land: 20.0 # 30.0 - 10.0
+      })
+    end
+
+    it "raises an error for an item with a combination_method we're unfamiliar with" do
+      items = [
+        instance_double(InterfaceItem, item_attrs.merge(nested_combination_method: 'apples', key: 'areable_land')),
+      ]
+
+      allow(InterfaceElement).to receive(:items).and_return(items)
+
+      expect { described_class.perform(dataset_b, dataset_a) }.to raise_error(
+        ArgumentError,
+        /Unknown combination method 'apples' for InterfaceItem: areable_land/
+      )
+    end
+  end # / when separating values for the given datasets
+
+  describe 'when the method is weighted average' do
+    let(:item_attrs) do
       {
-        number_of_cars: [0.3, 0.2],
-        interconnector_capacity: [0.3, 0.1]
+        unit: '%',
+        flexible: false,
+        skip_validation: false,
+        nested_combination_method: { 'weighted_average' => ['input_agriculture_final_demand_crude_oil_demand'] },
+        default: nil,
+        entso: nil
       }
     end
 
-    it "adjusts flexible shares correctly" do
-      puts "\nBefore processing:"
-      puts "Target dataset values: #{values.transform_values { |v| v[0] }}"
-      puts "Subtracted dataset values: #{values.transform_values { |v| v[1] }}"
+    let(:item_keys) do
+      [
+        'input_percentage_of_diesel_agriculture_final_demand_crude_oil',
+        'input_percentage_of_biodiesel_agriculture_final_demand_crude_oil',
+        'input_percentage_of_kerosene_agriculture_final_demand_crude_oil',
+        'input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil',
+        'input_percentage_of_lpg_agriculture_final_demand_crude_oil',
+        'input_percentage_of_bio_oil_agriculture_final_demand_crude_oil',
+        'input_percentage_of_crude_oil_agriculture_final_demand_crude_oil'
+      ]
+    end
 
-      result = described_class.perform(target_dataset, subtracted_dataset)
+    let(:interface_items) do
+      item_keys.map do |key|
+        InterfaceItem.new(item_attrs.merge(key: key))
+      end
+    end
 
-      puts "\nAfter processing:"
-      puts "Result: #{result}"
-      puts "Flexible item (#{flexible_item.key}): #{result[flexible_item.key]}"
-      puts "Other item (#{other_item.key}): #{result[other_item.key]}"
-      puts "Group total: #{result.values.sum}"
+    it 'correctly calculates the reversed weighted average' do
+      # Prepare the dataset values
+      dataset_values = [
+        # Values for dataset_a (index 0)
+        {
+          'input_agriculture_final_demand_crude_oil_demand' => 100.0,
+          'input_percentage_of_diesel_agriculture_final_demand_crude_oil' => 30.0,
+          'input_percentage_of_biodiesel_agriculture_final_demand_crude_oil' => 20.0,
+          'input_percentage_of_kerosene_agriculture_final_demand_crude_oil' => 10.0,
+          'input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil' => 5.0,
+          'input_percentage_of_lpg_agriculture_final_demand_crude_oil' => 1.0,
+          'input_percentage_of_bio_oil_agriculture_final_demand_crude_oil' => 5.0,
+          'input_percentage_of_crude_oil_agriculture_final_demand_crude_oil' => 0.0
+        },
+        # Values for dataset_b (index 1)
+        {
+          'input_agriculture_final_demand_crude_oil_demand' => 200.0,
+          'input_percentage_of_diesel_agriculture_final_demand_crude_oil' => 50.0,
+          'input_percentage_of_biodiesel_agriculture_final_demand_crude_oil' => 30.0,
+          'input_percentage_of_kerosene_agriculture_final_demand_crude_oil' => 100.0,
+          'input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil' => 10.0,
+          'input_percentage_of_lpg_agriculture_final_demand_crude_oil' => 5.0,
+          'input_percentage_of_bio_oil_agriculture_final_demand_crude_oil' => 5.0,
+          'input_percentage_of_crude_oil_agriculture_final_demand_crude_oil' => 5.0
+        }
+      ]
 
-      expect(result).to eq({
-        number_of_cars: 0.8,
-        interconnector_capacity: 0.2
-      })
+      # Include the weight key in items
+      all_items = interface_items + [InterfaceItem.new(key: 'input_agriculture_final_demand_crude_oil_demand', default: nil, entso: nil)]
+
+      # Prepare datasets
+      prepare_datasets(all_items, dataset_values)
+
+      allow(InterfaceElement).to receive(:items).and_return(interface_items)
+      allow(EditableAttributesCollection).to receive(:items).and_return(all_items)
+
+      result = described_class.perform(dataset_b, dataset_a)
+
+      # Formula for reversed weighted average:
+      # C = (B * B_weight - A * A_weight) / B_weight - A_weight
+      expected_results = {
+        :input_percentage_of_diesel_agriculture_final_demand_crude_oil=>70.2, # ((200 * 50) - (30 * 100)) / 200 - 100
+        :input_percentage_of_biodiesel_agriculture_final_demand_crude_oil=>40.1, # ((200 * 30) - (20 * 100)) / 200 - 100
+        :input_percentage_of_kerosene_agriculture_final_demand_crude_oil=>190.9, # ((200 * 100) - (10 * 100)) / 200 - 100
+        :input_percentage_of_bio_kerosene_agriculture_final_demand_crude_oil=>15.05, # ((200 * 10) - (5 * 100)) / 200 - 100
+        :input_percentage_of_lpg_agriculture_final_demand_crude_oil=>9.04, # ((200 * 5) - (1 * 100)) / 200 - 100
+        :input_percentage_of_bio_oil_agriculture_final_demand_crude_oil=>5.0, # ((200 * 5) - (5 * 100)) / 200 - 100
+        :input_percentage_of_crude_oil_agriculture_final_demand_crude_oil=>10.05 # ((200 * 5) - (0 * 100)) / 200 - 100
+      }
+      expect(result).to eq(expected_results)
     end
   end
 
   private
 
-  def prepare_datasets
-    [target_dataset, subtracted_dataset].each_with_index do |dataset, di|
-      editable_attrs = [target_attrs, subtracted_attrs][di]
+  def mock_editable_attributes(values, dataset_index, weights = nil)
+    attributes = item_keys.each_with_index.map do |key, i|
+      instance_double(EditableAttribute, key: key.to_s, value: values[i][dataset_index])
+    end
 
-      values.each do |key, value_array|
-        allow(editable_attrs).to receive(:find).with(key.to_s).and_return(double(value: value_array[di]))
+    collection = instance_double(EditableAttributesCollection)
+
+    # Add weights to the attributes if provided
+    if weights
+      weight_attributes = item_keys.each_with_index.map do |key, i|
+        instance_double(EditableAttribute, key: "weight_#{key}", value: weights[i])
       end
+      attributes.concat(weight_attributes)
+    end
+
+    # Simulate the behavior of `find` method to return the correct attribute for each key
+    allow(collection).to receive(:find) do |key|
+      attributes.detect { |attr| attr.key == key }
+    end
+
+    collection
+  end
+
+  def prepare_datasets(items, dataset_values)
+    [dataset_a, dataset_b].each_with_index do |dataset, di|
+      collection = EditableAttributesCollection.new(dataset)
+
+      # Mock the @attributes instance variable
+      attributes = items.map do |item|
+        value = dataset_values[di][item.key.to_s]
+        EditableAttribute.new(
+          dataset,
+          item.key.to_s,
+          { item.key.to_s => [OpenStruct.new(value: value)] },
+          item.default,
+          entso_query: item.entso
+        )
+      end
+
+      # Set the @attributes instance variable
+      collection.instance_variable_set(:@attributes, attributes)
+
+      # Assign the mocked collection to the dataset
+      dataset.instance_variable_set(:@editable_attributes, collection)
     end
   end
+
 end

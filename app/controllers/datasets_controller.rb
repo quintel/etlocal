@@ -3,7 +3,6 @@ class DatasetsController < ApplicationController
   format 'js', only: %i(edit :clone)
 
   before_action :authenticate_user!, only: %i[download clone]
-  before_action :set_freeze_date
   before_action :find_dataset, only: %i(validate edit download clone)
 
   # GET index
@@ -15,12 +14,15 @@ class DatasetsController < ApplicationController
 
   # GET edit.js
   def edit
-    @dataset_edit_form = DatasetEditForm.new(
-      @dataset.editable_attributes.as_json
-    )
-
-    @dataset_clones = policy_scope(Dataset).clones(@dataset, current_user)
+    freeze_date =
+      if session[:freeze_date].present?
+        Time.zone.parse(session[:freeze_date]) rescue nil
+      end
+    attributes = freeze_date ? @dataset.editable_attributes_before(freeze_date) : @dataset.editable_attributes
+    @dataset_edit_form = DatasetEditForm.new(attributes.as_json)
+    @dataset_clones    = policy_scope(Dataset).clones(@dataset, current_user)
   end
+
 
   # GET show.json
   def show
@@ -100,7 +102,9 @@ class DatasetsController < ApplicationController
     end
   end
 
-  def set_freeze_date
-    Thread.current[:global_freeze_date] = session[:freeze_date]
+  # Returns the current freeze_date as set in the session.
+  def freeze_date
+   session[:freeze_date]
   end
+
 end

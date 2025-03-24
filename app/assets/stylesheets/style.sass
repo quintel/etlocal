@@ -38,7 +38,6 @@ body
   padding: 0
   color: $bg-color
   min-width: 960px
-  align-items: center
 
   div
     display: inline-block
@@ -75,45 +74,22 @@ body
       float: right
       padding-top: 2px
       .dropdown
-        position: relative
-        display: inline-block
         ul.dropdown-menu
           display: none
           list-style: none
           position: absolute
           z-index: 3
           top: 50px
-          left: 0
-          min-width: 150px
-          background-color: darken($selected-color, 5)
-          border-radius: 6px
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
-          padding: 8px 0
-
+          background-color: $selected-color
           li
-            padding: 10px 15px
-
-            &:first-child
-              padding-top: 12px
-
-            &:last-child
-              padding-bottom: 0px
-
-            a, .dropdown-item
-              display: block
-              text-decoration: none
+            padding: 0 15px 0 13px
+            a
               color: white
               &:hover
                 color: #e0e0e0
-                background-color: lighten($selected-color, 5)
-
-          &.active .dropdown-menu
-            display: block !important
-
       .info, .dropdown
         margin-right: 25px
-
-      .info:hover, .lang-select:hover, .version-select:hover
+      .info:hover, .lang-select:hover
         color: #e0e0e0
         cursor: pointer
 

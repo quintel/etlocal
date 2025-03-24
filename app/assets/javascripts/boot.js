@@ -4,6 +4,7 @@ $(document).on('turbolinks:load', function () {
     FileUpload.setFields();
     Areas.init();
     LanguageChanger.init();
+    VersionSelector.init();
     Header.init();
     Introduction.init();
 

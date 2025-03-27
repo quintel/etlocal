@@ -67,4 +67,26 @@ describe Dataset do
       it { is_expected.to include(eland) }
     end
   end
+
+  describe '#editable_attributes_before' do
+    let(:dataset) {
+      Dataset.create!(name: 'Ameland', country: 'nl', geo_id: 'AM31049', user: User.robot)
+    }
+
+    it 'returns an EditableAttributesCollection' do
+      freeze_time = 2.days.ago
+
+      result = dataset.editable_attributes_before(freeze_time)
+
+      expect(result).to be_a(EditableAttributesCollection)
+    end
+
+    it 'passes self and the freeze date to EditableAttributesCollection' do
+      freeze_time = 3.days.ago
+
+      expect(EditableAttributesCollection).to receive(:new).with(dataset, freeze_time).and_call_original
+
+      dataset.editable_attributes_before(freeze_time)
+    end
+  end
 end

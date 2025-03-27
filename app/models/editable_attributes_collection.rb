@@ -15,8 +15,8 @@ class EditableAttributesCollection
 
   def initialize(dataset, freeze_date = nil)
     @dataset    = dataset
-    @attributes = setup_attributes(dataset)
     @freeze_date = freeze_date || @freeze_date || nil
+    @attributes = setup_attributes(dataset)
   end
 
   def find(key)

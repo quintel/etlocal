@@ -17,10 +17,72 @@ describe DatasetsController do
     describe "#edit" do
       let(:dataset) { FactoryBot.create(:dataset, geo_id: 'test_1', name: "Test") }
 
-      it "visits edit" do
+      before do
+        allow(Dataset).to receive(:find).and_return(dataset)
+        allow(controller).to receive(:policy_scope).with(Dataset).and_return(Dataset)
+        allow(Dataset).to receive(:clones).with(dataset, user).and_return([])
+      end
+
+      context "with no freeze_date in session" do
+        it "uses editable_attributes" do
+          attrs = { "name" => "Test" }
+
+          expect(dataset).to receive(:editable_attributes).and_return(attrs)
+          expect(DatasetEditForm).to receive(:new).with(attrs).and_call_original
+
+          get :edit, params: { id: dataset.id }, format: :js, xhr: true
+
+          form = controller.instance_variable_get(:@dataset_edit_form)
+          expect(form).to be_a(DatasetEditForm)
+        end
+      end
+
+      context "with valid freeze_date in session" do
+        before do
+          session[:freeze_date] = 1.week.ago.iso8601
+        end
+
+        it "uses editable_attributes_before with parsed date" do
+          freeze_time = session[:freeze_date]
+          parsed_time = Time.zone.parse(freeze_time)
+          attrs = { "name" => "Frozen" }
+
+          expect(dataset).to receive(:editable_attributes_before).with(parsed_time).and_return(attrs)
+          expect(DatasetEditForm).to receive(:new).with(attrs).and_call_original
+
+          get :edit, params: { id: dataset.id }, format: :js, xhr: true
+
+          form = controller.instance_variable_get(:@dataset_edit_form)
+          expect(form).to be_a(DatasetEditForm)
+        end
+      end
+
+      context "with invalid freeze_date in session" do
+        before do
+          session[:freeze_date] = 'not-a-date'
+        end
+
+        it "falls back to editable_attributes" do
+          attrs = { "name" => "Fallback" }
+
+          expect(dataset).to receive(:editable_attributes).and_return(attrs)
+          expect(DatasetEditForm).to receive(:new).with(attrs).and_call_original
+
+          get :edit, params: { id: dataset.id }, format: :js, xhr: true
+
+          form = controller.instance_variable_get(:@dataset_edit_form)
+          expect(form).to be_a(DatasetEditForm)
+        end
+      end
+
+      it "assigns @dataset_clones using policy_scope" do
+        expect(controller).to receive(:policy_scope).with(Dataset).and_return(Dataset)
+        expect(Dataset).to receive(:clones).with(dataset, user).and_return(["clone_1"])
+
         get :edit, params: { id: dataset.id }, format: :js, xhr: true
 
-        expect(response).to be_successful
+        clones = controller.instance_variable_get(:@dataset_clones)
+        expect(clones).to eq(["clone_1"])
       end
     end
 

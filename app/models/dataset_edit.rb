@@ -5,7 +5,7 @@ class DatasetEdit < ApplicationRecord
   validates_presence_of :value
   validate :validate_attribute_allowed
 
-  scope :before, ->(date) { where("created_at <= ?", date) if date.present? }
+  scope :before, ->(date) { joins(:commit).where("commits.created_at <= ?", date) if date.present? }
 
   def self.sorted
     order('`created_at` DESC')

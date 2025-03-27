@@ -1,0 +1,16 @@
+---
+- fields:
+  - agriculture_final_demand_electricity_demand
+  message:
+    Based on numbers provided by the client.
+
+- fields:
+  - agriculture_final_demand_network_gas_demand
+  message:
+    Based on numbers provided by the client.
+
+- fields:
+  - input_agriculture_final_demand_steam_hot_water_demand
+  message:
+    Based on numbers provided by the client.
+

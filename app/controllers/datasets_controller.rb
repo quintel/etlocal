@@ -18,11 +18,20 @@ class DatasetsController < ApplicationController
       if session[:freeze_date].present?
         Time.zone.parse(session[:freeze_date]) rescue nil
       end
+
     attributes = freeze_date ? @dataset.editable_attributes_before(freeze_date) : @dataset.editable_attributes
+
+    if freeze_date && @dataset.edits
+      .joins(:commit)
+      .where('commits.created_at <= ?', freeze_date)
+      .none?
+      Rails.logger.debug "👻 Dataset is blank before freeze_date: #{freeze_date}"
+      flash.now[:warning] = t('datasets.freeze_date_warning')
+    end
+
     @dataset_edit_form = DatasetEditForm.new(attributes.as_json)
     @dataset_clones    = policy_scope(Dataset).clones(@dataset, current_user)
   end
-
 
   # GET show.json
   def show

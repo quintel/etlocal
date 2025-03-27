@@ -5,6 +5,11 @@
   .dataset-attribution
     = I18n.t("user.created_by", group: dataset.creator)
 
+- if flash[:warning]
+  .banner.warning
+    i.fa.fa-warning
+    = t('datasets.freeze_date_warning')
+
 - if @dataset_edit_form.errors.any?
   .errors
     - @dataset_edit_form.errors.full_messages.each do |message|

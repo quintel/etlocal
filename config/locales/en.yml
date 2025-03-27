@@ -11,6 +11,9 @@ en:
   loading: Loading
   view_on_github: View on GitHub
   inherited_file: This file is inherited from the %{parent} dataset.
+  datasets:
+    freeze_date_warning: This dataset didn't exist before the specified version's freeze date.
+    missing_value: No data
   data_source_messages:
     entso:
       default: Value sourced from the country's energy balance.

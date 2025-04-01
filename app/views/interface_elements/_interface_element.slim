@@ -14,7 +14,7 @@
         = render('interface_elements/files_element', dataset: dataset, form: form, interface_element: interface_element, interface_group: interface_group)
       - else
         - interface_group.items.each do |interface_item|
-          - if interface_group.type == :slider
+          - if interface_group.type == :slider && in_version
             .editable.slider
               .slider-wrapper.input
                 = form.label interface_item.key, DatasetEditForm.human_attribute_name(interface_item.key).html_safe

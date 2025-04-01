@@ -1,6 +1,6 @@
 | $('#dataset-overlay .content').html("
 - if @dataset_edit_form.errors.any?
-  = j render("commits/form", dataset: @dataset, commit: @commit)
+  = j render("commits/form", dataset: @dataset, commit: @commit, in_version: true)
 - else
   = j render("dataset_edits/form", dataset: @dataset)
 | ");

@@ -5,7 +5,7 @@
   .dataset-attribution
     = I18n.t("user.created_by", group: dataset.creator)
 
-- if flash[:warning]
+- if !in_version
   .banner.warning
     i.fa.fa-warning
     = t('datasets.freeze_date_warning')
@@ -47,7 +47,7 @@
 
       .attributes data-tab-key='input'
         .edits
-          = render InterfaceElement.all, dataset: dataset, form: form
+          = render InterfaceElement.all, dataset: dataset, form: form, in_version: in_version
 
       .clear
 

@@ -19,14 +19,12 @@
         li
           = link_to 'Nederlands', set_locale_path(locale: 'nl'), method: :put, class: 'dropdown-item'
 
-    - versions = YAML.load_file(Rails.root.join('config/versions.yml'))['versions']
-
     .dropdown
       .version-select
         span#selected-version = "##{current_version}"
         span.fa.fa-caret-down
       ul.dropdown-menu
-        - versions.each do |version|
+        - Versions.versions.each do |version|
           li
             = link_to "##{version['name']}", set_version_path(version: version['name']), method: :put, class: 'dropdown-item'
 

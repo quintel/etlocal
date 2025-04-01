@@ -38,10 +38,4 @@ RSpec.configure do |config|
   config.before(:each) do
     I18n.locale = :en
   end
-
-  config.around(:each) do |example|
-    DatabaseCleaner.cleaning do
-      example.run
-    end
-  end
 end

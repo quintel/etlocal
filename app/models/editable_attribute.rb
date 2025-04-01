@@ -1,12 +1,13 @@
 class EditableAttribute
   attr_reader :key
 
-  def initialize(dataset, key, edits, default = nil, entso_query: nil)
+  def initialize(dataset, key, edits, default = nil, entso_query: nil, freeze_date: nil)
     @dataset     = dataset
     @key         = key
     @edits       = edits
     @default     = default
     @entso_query = entso_query
+    @freeze_date = freeze_date
   end
 
   def inspect
@@ -35,6 +36,12 @@ class EditableAttribute
   # If a dataset has an edit - give that value. If it doesn't have an edit,
   # fall back to the default value.
   def value
+    # Return nil if there’s no edit befre the freeze date
+    if @freeze_date.present? && latest.nil?
+      return nil
+    end
+
+    # If we can query the source (e.g., ENTSO-E), use that value
     if @dataset.queryable_source? && @entso_query.present?
       return @dataset.execute_query(@entso_query)
     end

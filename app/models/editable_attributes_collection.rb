@@ -13,8 +13,9 @@ class EditableAttributesCollection
 
   private_class_method :items_by_key
 
-  def initialize(dataset)
+  def initialize(dataset, freeze_date = nil)
     @dataset    = dataset
+    @freeze_date = freeze_date || @freeze_date || nil
     @attributes = setup_attributes(dataset)
   end
 
@@ -43,13 +44,14 @@ class EditableAttributesCollection
   def edits
     @edits ||= @dataset.edits
       .includes(commit: :user)
+      .before(@freeze_date)
       .order(created_at: :desc)
       .group_by(&:key)
   end
 
   def setup_attributes(dataset)
     self.class.items.flatten.map do |item|
-      EditableAttribute.new(dataset, item.key.to_s, edits, item.default, entso_query: item.entso)
+      EditableAttribute.new(dataset, item.key.to_s, edits, item.default, entso_query: item.entso, freeze_date: @freeze_date)
     end
   end
 end

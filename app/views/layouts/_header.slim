@@ -17,7 +17,16 @@
         li
           = link_to 'English', set_locale_path(locale: 'en'), method: :put, class: 'dropdown-item'
         li
-           = link_to 'Nederlands', set_locale_path(locale: 'nl'), method: :put, class: 'dropdown-item'
+          = link_to 'Nederlands', set_locale_path(locale: 'nl'), method: :put, class: 'dropdown-item'
+
+    .dropdown
+      .version-select
+        span#selected-version = "##{current_version}"
+        span.fa.fa-caret-down
+      ul.dropdown-menu
+        - Versions.versions.each do |version|
+          li
+            = link_to "##{version['name']}", set_version_path(version: version['name']), method: :put, class: 'dropdown-item'
 
     - if current_user
       .current-user

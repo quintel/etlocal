@@ -5,6 +5,18 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_locale
 
+  helper_method :current_version
+
+  def current_version
+    version = if session[:freeze_date].present?
+                Versions.find_by_freeze_date(session[:freeze_date])
+              else
+                Versions.default_version
+              end
+
+    version&.dig('name') || 'latest'
+  end
+
   private
 
   def set_locale

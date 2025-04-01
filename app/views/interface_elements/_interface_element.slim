@@ -14,7 +14,7 @@
         = render('interface_elements/files_element', dataset: dataset, form: form, interface_element: interface_element, interface_group: interface_group)
       - else
         - interface_group.items.each do |interface_item|
-          - if interface_group.type == :slider
+          - if interface_group.type == :slider && in_version
             .editable.slider
               .slider-wrapper.input
                 = form.label interface_item.key, DatasetEditForm.human_attribute_name(interface_item.key).html_safe
@@ -55,7 +55,10 @@
 
                     - else
                       span.read-only
-                        - if value = form.object.public_send(interface_item.key)
+                        - value = form.object.public_send(interface_item.key)
+                        - if value.nil?
+                          span.missing-message = t('datasets.missing_value')
+                        - else
                           - if interface_item.key == :analysis_year
                             = value.round
                           - elsif interface_item.unit == '€'
@@ -99,4 +102,3 @@
                     p
                       = link_to "https://github.com/quintel/etlocal/blob/production/data/datasets/#{@dataset.geo_id}.csv", target: '_blank' do
                         = "#{I18n.t("data_source_messages.#{@dataset.data_source}.view_file")} →"
-

@@ -12,7 +12,7 @@ en:
   view_on_github: View on GitHub
   inherited_file: This file is inherited from the %{parent} dataset.
   datasets:
-    freeze_date_warning: This dataset didn't exist before the specified version's freeze date.
+    freeze_date_warning: This dataset does not exist in the specified version of the Energy Transition Model.
     missing_value: No data
   data_source_messages:
     entso:

@@ -12,7 +12,7 @@ nl:
   view_on_github: Zicht op GitHub
   inherited_file: This file is inherited from the %{parent} dataset.
   datasets:
-    freeze_date_warning: Deze dataset bestond niet vóór de bevriezingsdatum van de opgegeven versie.
+    freeze_date_warning: Deze dataset bestaat niet in de geselecteerde versie van het Energietransitiemodel.
     missing_value: Geen data
   data_source_messages:
     entso:

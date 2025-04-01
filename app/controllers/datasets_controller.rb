@@ -110,10 +110,4 @@ class DatasetsController < ApplicationController
       format.html { render layout: nil }
     end
   end
-
-  # Returns the current freeze_date as set in the session.
-  def freeze_date
-   session[:freeze_date]
-  end
-
 end

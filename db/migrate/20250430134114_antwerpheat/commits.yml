@@ -22,4 +22,4 @@
 - fields:
   - interconnector_capacity
   message:
-    "Derived from the TYNDP 2025 Scenario's, as this study projects grid capacity for the year 2025 the data will slightly differ from the 2019 grid capacities; author: entso-e & entso-g; year: 2021"
+    "Maximum value so that it does not limit the import and export of electricity within the municipality."

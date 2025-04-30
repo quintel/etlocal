@@ -134,7 +134,7 @@ GEM
       activerecord (>= 5.a)
       database_cleaner-core (~> 2.0.0)
     database_cleaner-core (2.0.1)
-    date (3.3.4)
+    date (3.4.1)
     deep_cloneable (3.2.0)
       activerecord (>= 3.1.0, < 8)
     descendants_tracker (0.0.4)
@@ -218,7 +218,7 @@ GEM
     minitest (5.22.2)
     msgpack (1.6.0)
     mysql2 (0.5.6)
-    net-imap (0.4.10)
+    net-imap (0.4.20)
       date
       net-protocol
     net-pop (0.1.2)
@@ -392,7 +392,7 @@ GEM
     thread_safe (0.3.6)
     tilt (2.0.11)
     timecop (0.9.6)
-    timeout (0.4.1)
+    timeout (0.4.3)
     tty-cursor (0.7.1)
     tty-progressbar (0.18.2)
       strings-ansi (~> 0.2)

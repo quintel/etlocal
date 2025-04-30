@@ -1,0 +1,25 @@
+---
+- fields:
+  - buildings_final_demand_electricity_buildings_final_demand_for_space_heating_electricity_parent_share
+  message:
+    "Based on the annual POTenCIA report but corrected for the split between heating and cooling based on expert evaluation"
+
+- fields:
+  - buildings_final_demand_electricity_buildings_final_demand_for_cooling_electricity_parent_share
+  message:
+    "Based on the annual POTenCIA report but corrected for the split between heating and cooling based on expert evaluation"
+
+- fields:
+  - buildings_final_demand_electricity_buildings_final_demand_for_lighting_electricity_parent_share
+  message:
+    "Based on the annual POTenCIA report but corrected for the split between heating and cooling based on expert evaluation"
+
+- fields:
+  - buildings_final_demand_electricity_buildings_final_demand_for_appliances_electricity_parent_share
+  message:
+    "Based on the annual POTenCIA report but corrected for the split between heating and cooling based on expert evaluation"
+
+- fields:
+  - interconnector_capacity
+  message:
+    "Derived from the TYNDP 2025 Scenario's, as this study projects grid capacity for the year 2025 the data will slightly differ from the 2019 grid capacities; author: entso-e & entso-g; year: 2021"

@@ -34,8 +34,6 @@ module Amalgamator
           # Skip items where all values are zero
           next [item.key, 0] if all_values_zero?(plucked_item_values)
 
-          # plucked_item_values.map! { |value| value.round(8) }
-
           # Combine values based on the item's combination method
           combined_value = combine_values(item, plucked_item_values, datasets)
 

@@ -1,9 +1,10 @@
 require 'rails_helper'
+require Rails.root.join('db', 'seeds', 'dataset_importer.rb').to_s
 
 describe DatasetImporter do
-  let(:csv_fixture_dir) { "#{fixture_path}/seeds" }
+  let(:csv_fixture_dir) { Rails.root.join("spec", "fixtures", "seeds") }
   let(:dataset_importer) do
-    described_class.new("#{fixture_path}/seeds", show_progress: false)
+    described_class.new(Rails.root.join("spec", "fixtures", "seeds"), show_progress: false)
   end
 
   describe 'import new datasets' do

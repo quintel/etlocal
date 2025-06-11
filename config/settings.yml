@@ -1,0 +1,4 @@
+
+devise_secret_key: <%= ENV["DEVISE_SECRET_KEY"] %>
+mapbox_api_key: <%= ENV["MAPBOX_API_KEY"] %>
+sentry_dsn: <%= ENV["SENTRY_DSN"] %>

@@ -22,7 +22,7 @@ module Etlocal
     config.encoding             = "utf-8"
     config.assumptions_path     = Rails.root.join("config", "assumptions.yml")
     config.etsource_path        = Rails.root.dirname.join("etsource").to_s
-    config.google_maps_api_key  = Rails.application.credentials.google_maps_api_key
+    config.google_maps_api_key  = Rails.configuration.x.mapbox.api_key
 
     config.i18n.default_locale    = :en
     config.i18n.fallbacks         = [:en]

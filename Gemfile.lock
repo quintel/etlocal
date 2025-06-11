@@ -129,6 +129,15 @@ GEM
       msgpack (~> 1.2)
     builder (3.3.0)
     byebug (12.0.0)
+    capybara (3.40.0)
+      addressable
+      matrix
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.11)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (>= 1.5, < 3.0)
+      xpath (~> 3.2)
     coderay (1.1.3)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
@@ -266,6 +275,7 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.4)
+    matrix (0.4.2)
     method_source (1.1.0)
     mime-types (3.7.0)
       logger
@@ -357,6 +367,10 @@ GEM
       activesupport (= 7.2.2.1)
       bundler (>= 1.15.0)
       railties (= 7.2.2.1)
+    rails-controller-testing (1.0.5)
+      actionpack (>= 5.0.1.rc1)
+      actionview (>= 5.0.1.rc1)
+      activesupport (>= 5.0.1.rc1)
     rails-dom-testing (2.3.0)
       activesupport (>= 5.0.0)
       minitest
@@ -411,14 +425,14 @@ GEM
     rspec-mocks (3.13.5)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-rails (5.1.2)
-      actionpack (>= 5.2)
-      activesupport (>= 5.2)
-      railties (>= 5.2)
-      rspec-core (~> 3.10)
-      rspec-expectations (~> 3.10)
-      rspec-mocks (~> 3.10)
-      rspec-support (~> 3.10)
+    rspec-rails (6.1.1)
+      actionpack (>= 6.1)
+      activesupport (>= 6.1)
+      railties (>= 6.1)
+      rspec-core (~> 3.12)
+      rspec-expectations (~> 3.12)
+      rspec-mocks (~> 3.12)
+      rspec-support (~> 3.12)
     rspec-support (3.13.4)
     rspec_junit_formatter (0.6.0)
       rspec-core (>= 2, < 4, != 2.12.0)
@@ -452,6 +466,7 @@ GEM
     ruby-graphviz (1.2.5)
       rexml
     ruby-progressbar (1.13.0)
+    rubyzip (2.4.1)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -463,6 +478,10 @@ GEM
       sprockets-rails
       tilt
     securerandom (0.4.1)
+    selenium-webdriver (4.10.0)
+      rexml (~> 3.2, >= 3.2.5)
+      rubyzip (>= 1.2.2, < 3.0)
+      websocket (~> 1.0)
     sentry-raven (3.1.2)
       faraday (>= 1.0)
     simplecov (0.22.0)
@@ -533,10 +552,13 @@ GEM
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
+    websocket (1.2.11)
     websocket-driver (0.8.0)
       base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    xpath (3.2.0)
+      nokogiri (~> 1.8)
     zeitwerk (2.7.3)
 
 PLATFORMS
@@ -559,6 +581,7 @@ DEPENDENCIES
   atlas!
   bootsnap
   byebug
+  capybara (= 3.40.0)
   database_cleaner
   deep_cloneable
   devise
@@ -579,13 +602,14 @@ DEPENDENCIES
   puma
   pundit
   rails (~> 7.0)
+  rails-controller-testing
   rails-i18n
   refinery!
   remotipart (~> 1.2)
   rest-client
   rspec
   rspec-collection_matchers
-  rspec-rails
+  rspec-rails (= 6.1.1)
   rspec_junit_formatter
   rubel!
   rubocop
@@ -593,6 +617,7 @@ DEPENDENCIES
   rubocop-rails
   rubocop-rspec
   sass-rails
+  selenium-webdriver (= 4.10)
   sentry-raven
   simplecov
   slim

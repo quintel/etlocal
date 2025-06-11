@@ -63,3 +63,13 @@ yarn-debug.log*
 
 # Ignore pycache
 __pycache__
+
+/config/master.key
+
+/config/credentials/production.key
+
+/config/credentials/staging.key
+
+/config/credentials/testing.key
+
+/config/credentials/development.key

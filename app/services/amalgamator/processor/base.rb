@@ -108,6 +108,10 @@ module Amalgamator
       def unscale_values(floored_scaled, multiplier)
         floored_scaled.map { |int| int.to_f / multiplier }
       end
+
+      def simple_round(item_values)
+        item_values.transform_values! { |value| value.present? ? value.round(8) : 0.0 }
+      end
     end
   end
 end

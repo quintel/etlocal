@@ -17,6 +17,7 @@ module Amalgamator
       def perform(datasets)
         combined_item_values = combine_item_values(datasets)
         adjust_flexible_shares(combined_item_values)
+        simple_round(combined_item_values)
       end
 
 

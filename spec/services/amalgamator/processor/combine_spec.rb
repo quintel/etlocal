@@ -108,10 +108,10 @@ RSpec.describe Amalgamator::Processor::Combine do
       expect(
         described_class.perform([dataset1, dataset2, dataset3])
       ).to eq({
-        "#{item_keys[0]}": 25.71428571,  # weighted avg of [10.0,  20.0,  30.0]
-        "#{item_keys[1]}": 64.28571428,  # weighted avg of [25.0,  50.0,  75.0]
-        "#{item_keys[2]}": 192.85714286, # weighted avg of [75.0, 150.0, 225.0]
-        "#{item_keys[3]}": 9.0           # weighted avg of [ 3.5,   7.0,  10.5]
+        "#{item_keys[0]}": 25.714285714285715,  # weighted avg of [10.0,  20.0,  30.0]
+        "#{item_keys[1]}": 64.28571428571429,   # weighted avg of [25.0,  50.0,  75.0]
+        "#{item_keys[2]}": 192.85714285714286,  # weighted avg of [75.0, 150.0, 225.0]
+        "#{item_keys[3]}": 9.0                  # weighted avg of [ 3.5,   7.0,  10.5]
       })
     end
 
@@ -166,7 +166,7 @@ RSpec.describe Amalgamator::Processor::Combine do
 
     it 'logs an error if more than one item per group is defined as flexible' do
       items = [
-        InterfaceItem.find(:input_energy_cokesoven_transformation_loss_output_conversion), # This one is flexible
+        InterfaceItem.find(:input_energy_cokesoven_transformation_loss_output_conversion),
         InterfaceItem.find(:input_energy_cokesoven_transformation_cokes_output_conversion),
         InterfaceItem.find(:input_energy_cokesoven_transformation_coal_gas_output_conversion)
       ]
@@ -179,7 +179,9 @@ RSpec.describe Amalgamator::Processor::Combine do
       # Capture the log output
       expect {
         described_class.perform([dataset1, dataset2, dataset3])
-      }.to output(/Multiple flexible shares found in group '#{items[0].group.header}'/).to_stdout
+      }.to output(
+        /Error for InterfaceItem '.*':\nMultiple flexible shares in #{items[0].group.header}/
+      ).to_stdout
     end
 
   end

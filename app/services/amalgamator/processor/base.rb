@@ -20,29 +20,39 @@ module Amalgamator
       end
 
       # Adjusts the flexible shares in the group if applicable
-      def adjust_flexible_shares(dataset_c_values)
-        InterfaceElement.items.to_h do |item|
-          unless item.flexible && item.group.try(:present?) && item.group.items.length > 1
-            next [item.key, dataset_c_values[item.key]]
+      def adjust_flexible_shares(dataset_c_values, precision: 8)
+        InterfaceElement.items.each do |item|
+          next unless item.flexible && item.group&.items&.length.to_i > 1
+
+          group_items   = item.group.items
+          flexible_item = group_items.find(&:flexible)
+
+          if group_items.select(&:flexible).length > 1
+            log_error(item, "Multiple flexible shares in #{item.group.header}")
+            next
           end
 
-          # Check for multiple flexible shares in the group
-          flexible_items = item.group.items.select(&:flexible)
-          if flexible_items.length > 1
-            log_error(item, "Multiple flexible shares found in group '#{item.group.try(:header)}'.")
-            next [item.key, dataset_c_values[item.key]]
+          # compute other members’ sum
+          other_keys   = group_items.reject { |gi| gi == flexible_item }.map(&:key)
+          other_values = other_keys.map { |k| dataset_c_values[k].to_f }
+          flex_value = 1.0 - other_values.sum
+
+          # assemble raw_group in group_items order
+          raw_group = group_items.map do |gi|
+            gi == flexible_item ? flex_value : dataset_c_values[gi.key].to_f
           end
 
-          group_total = item.group.items.reject { |group_item| group_item.key == item.key }
-                                .sum { |group_item| dataset_c_values[group_item.key] }
+          # floor & redistribute inside group
+          rounded_group = smart_floor(raw_group, precision: precision)
 
-          if group_total > 1.0
-            puts "The summed value of group shares exceeded 1.0 for item: #{item.key}. Skipping flexible share adjustment."
-            next [item.key, dataset_c_values[item.key]]
+          # write back into dataset_c_values
+          group_items.each_with_index do |gi, idx|
+            dataset_c_values[gi.key] = rounded_group[idx]
           end
 
-          [item.key, (1 - group_total)]
         end
+
+        dataset_c_values
       end
 
       # Rounds down each dataset value to `precision` decimals (default 8),

@@ -1,6 +1,6 @@
 .hidden
   .mapbox-api-key
-    = Rails.configuration.x.mapbox.api_key
+    = Settings.mapbox_api_key
 
   .layers
     = LAYERS.to_json

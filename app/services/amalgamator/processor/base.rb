@@ -55,20 +55,6 @@ module Amalgamator
         dataset_c_values
       end
 
-      # Rounds down each dataset value to `precision` decimals (default 8),
-      # replacing nil with 0.0, and ensures that the sum of all rounded values
-      # matches the floored total of the original values. Any leftover units
-      # from flooring are distributed to the items with the largest fractional parts.
-      def round_item_values(item_values, precision: 8)
-        keys       = item_values.keys
-        raw_values = keys.map { |k| item_values[k].present? ? item_values[k] : 0.0 }
-        rounded_array = smart_floor(raw_values, precision: precision)
-        keys.each_with_index do |k, idx|
-          item_values[k] = rounded_array[idx]
-        end
-        item_values
-      end
-
       # Floors each value in `shares` to `precision` decimals while preserving
       # the overall floored sum.
       def smart_floor(shares, precision: 8)
@@ -109,7 +95,8 @@ module Amalgamator
         floored_scaled.map { |int| int.to_f / multiplier }
       end
 
-      def simple_round(item_values)
+      # Rounds values to 8 decimals and replaces nil with 0.0
+      def round_item_values(item_values)
         item_values.transform_values! { |value| value.present? ? value.round(8) : 0.0 }
       end
     end

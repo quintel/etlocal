@@ -35,6 +35,7 @@ gem 'archive-zip', '~> 0.9.0'
 gem 'sentry-raven'
 gem 'deep_cloneable'
 gem 'str_enum'
+gem 'config'
 
 gem 'git'
 

@@ -73,3 +73,5 @@ __pycache__
 /config/credentials/testing.key
 
 /config/credentials/development.key
+
+/config/credentials/test.key

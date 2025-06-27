@@ -48,9 +48,9 @@ RSpec.describe Amalgamator::Processor::Base do
   # Ensures flooring retains total sum and distributes leftovers properly
   describe '#smart_floor' do
     it 'floors values to given precision and distributes remainder based on fractional parts' do
-      # Given shares that sum to .335+.333+.332 = 1.0, with precision 2 the raw sum*100 = 100
-      # Floored individually: [33,33,33] sum to 99, so one unit is distributed to largest fraction (.335 -> .34)
-      shares = [0.335, 0.333, 0.332]
+      # Given shares that sum to .334+.333+.333 = 1.0, with precision 2 the raw sum*100 = 100
+      # Floored individually: [33,33,33] sum to 99, so one unit is distributed to largest fraction (.334 -> .34)
+      shares = [0.334, 0.333, 0.333]
       result = described_class.send(:smart_floor, shares, precision: 2)
       expect(result).to eq([0.34, 0.33, 0.33])
     end
@@ -60,6 +60,13 @@ RSpec.describe Amalgamator::Processor::Base do
       shares = [0.333, 0.333, 0.333]
       result = described_class.send(:smart_floor, shares, precision: 2)
       expect(result).to eq([0.33, 0.33, 0.33])
+    end
+
+    it 'rounds based on index when two shares could be adjusted' do
+      # In this case, the 'first' share is picked to get the excess
+      shares = [0.335, 0.335, 0.330]
+      result = described_class.send(:smart_floor, shares, precision: 2)
+      expect(result).to eq([0.34, 0.33, 0.33])
     end
   end
 

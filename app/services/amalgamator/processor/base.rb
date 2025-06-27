@@ -19,7 +19,8 @@ module Amalgamator
         MSG
       end
 
-      # Adjusts the flexible shares in the group if applicable
+      # Adjusts the flexible shares in the group if applicable. This method applies the Hare-Niemeyer method to redistribute
+      # the 'remainder' of a share group's total based on the 'entitlement' weights of member shares.
       def adjust_flexible_shares(dataset_c_values, precision: 8)
         InterfaceElement.items.each do |item|
           next unless item.flexible && item.group&.items&.length.to_i > 1

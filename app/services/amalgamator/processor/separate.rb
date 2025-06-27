@@ -10,10 +10,8 @@ module Amalgamator
       # 3. Adjust flexible shares if necessary
       def perform(target_dataset, subtracted_dataset)
         dataset_c_values = calculate_item_values(target_dataset, subtracted_dataset) # dataset C is the result of subtracting A from B
+        adjust_flexible_shares(dataset_c_values)
         round_item_values(dataset_c_values)
-        dataset_c_values = adjust_flexible_shares(dataset_c_values)
-
-        dataset_c_values
       end
 
       # Creates a hash with the item's keys as keys and the values for dataset C as values, e.g.:

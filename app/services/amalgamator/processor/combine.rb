@@ -10,18 +10,16 @@ module Amalgamator
   # the items' combined value as values.
   class Processor::Combine < Processor::Base
     class << self
-
       # The values for the given datasets are processed in 3 steps:
       # 1. Combine the values according to the combination_method of set in the InterfaceItem
       # 2. Round all combined values to 8 decimals
       # 3. If flexible is true for an InterfaceItem, make it fill out the share of the group it belongs to
       def perform(datasets)
         combined_item_values = combine_item_values(datasets)
+        adjust_flexible_shares(combined_item_values)
         round_item_values(combined_item_values)
-        combined_item_values = adjust_flexible_shares(combined_item_values)
-
-        combined_item_values
       end
+
 
       # Creates a hash with the item's keys as keys and the combined values of all datasets as values, e.g.:
       # {
@@ -113,9 +111,7 @@ module Amalgamator
         end
 
         # If the value of all weighted averages is 0 we return the 'normal' average.
-        if weighted_values.all? { |wa| wa[0].zero? }
-          return avg(plucked_item_values)
-        end
+        return avg(plucked_item_values) if weighted_values.all? { |wa| wa[0].zero? }
 
         numerator = weighted_values.sum { |wa| wa[0] * wa[1] }
         denominator = weighted_values.sum(&:last)

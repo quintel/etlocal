@@ -31,6 +31,11 @@ RUN bundle install --jobs=4 --retry=3
 
 COPY . /app/
 
+# SECRET_KEY_BASE or RAILS_MASTER_KEY is required in production, but we don't
+# want real secrets in the image or image history. The real secret is passed in
+# at run time
+ARG SECRET_KEY_BASE=fakekeyforassets
+
 RUN git clone --depth=1 https://github.com/quintel/etsource.git /etsource
 RUN RAILS_ENV=production bundle exec rails assets:precompile
 

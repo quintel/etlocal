@@ -1,0 +1,6 @@
+---
+
+- fields:
+  - :all
+  message:
+    Deze drager is recent toegevoegd aan het model, hierdoor is deze op 0 gezet.

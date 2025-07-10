@@ -281,6 +281,9 @@ en:
       industry_final_demand_crude_oil_input: |
         The composition below describes the different types of oil that fuel oil-fired heaters. Each percentage describes
         the share of this oil type in the total oil demand.
+      industry_final_demand_crude_oil_non_energetic_input: |
+        The composition below describes the different types of oil that are used for non-energetic purposes in the industry sector.
+        Each percentage describes the share of this oil type in the total non-energetic oil demand.
       industry_heat: |
         Below you can see how much fuel has been used per CHP type and central heating boiler. The heat produced is supplied
         to industrial sectors with a demand for (central) heat. More information about the various plant types can be found in the

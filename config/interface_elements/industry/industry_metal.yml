@@ -18,7 +18,11 @@ groups:
       - key: input_industry_metal_other_crude_oil_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - metal other - energy use", "Oil")
+          EB("Final consumption - industry sector - metal other - energy use", "Oil excluding naphtha")
+      - key: input_industry_metal_other_naphtha_demand
+        unit: 'TJ'
+        entso: |
+          EB("Final consumption - industry sector - metal other - energy use", "Naphtha")
       - key: input_industry_metal_other_coal_demand
         unit: 'TJ'
         entso: |

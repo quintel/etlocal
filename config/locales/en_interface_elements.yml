@@ -437,6 +437,14 @@ en:
         input_percentage_of_bio_oil_industry_final_demand_crude_oil: Other bio oil
         input_percentage_of_crude_oil_industry_final_demand_crude_oil: Other oil
 
+        input_percentage_of_diesel_industry_final_demand_crude_oil_non_energetic: Diesel (non-energetic)
+        input_percentage_of_biodiesel_industry_final_demand_crude_oil_non_energetic: Biodiesel (non-energetic)
+        input_percentage_of_kerosene_industry_final_demand_crude_oil_non_energetic: Kerosene (non-energetic)
+        input_percentage_of_lpg_industry_final_demand_crude_oil_non_energetic: LPG (non-energetic)
+        input_percentage_of_bio_kerosene_industry_final_demand_crude_oil_non_energetic: Bio kerosene (non-energetic)
+        input_percentage_of_bio_oil_industry_final_demand_crude_oil_non_energetic: Other bio oil (non-energetic)
+        input_percentage_of_crude_oil_industry_final_demand_crude_oil_non_energetic: Other oil (non-energetic)
+
         input_industry_metal_steel_production: Crude steel production
         input_industry_steel_blastfurnace_bof_share: Blastfurnace BOF
         input_industry_steel_scrap_hbi_eaf_share: Electric Arc Furnace
@@ -509,6 +517,7 @@ en:
         input_industry_metal_other_network_gas_demand: Gas
         input_industry_metal_other_steam_hot_water_demand: Heat
         input_industry_metal_other_crude_oil_demand: Oil
+        input_industry_metal_other_naphtha_demand: Naphtha
         input_industry_metal_other_coal_demand: Coal
 
         industry_useful_demand_for_chemical_refineries_crude_oil_non_energetic_demand: Crude oil
@@ -528,6 +537,7 @@ en:
         input_industry_refinery_transformation_crude_oil_lpg_demand: LPG
         input_industry_refinery_transformation_crude_oil_refinery_gas_demand: Refinery gas
         input_industry_refinery_transformation_crude_oil_diesel_demand: Diesel
+        input_industry_refinery_transformation_crude_oil_naphtha_demand: Naphtha
         input_industry_refinery_transformation_crude_oil_loss_demand: Loss
 
         input_industry_chemical_fertilizers_scaling_factor: "% national fertilizer industry"
@@ -536,18 +546,22 @@ en:
         input_industry_chemical_other_steam_hot_water_demand: Heat
         input_industry_chemical_other_wood_pellets_demand: Solid biomass
         input_industry_chemical_other_crude_oil_demand: Oil
+        input_industry_chemical_other_naphtha_demand: Naphtha
         input_industry_chemical_other_hydrogen_demand: Hydrogen
         input_industry_chemical_other_coal_demand: Coal
+
         input_industry_chemical_other_network_gas_non_energetic_demand: Gas (non-energetic)
         input_industry_chemical_other_wood_pellets_non_energetic_demand: Biomass (non-energetic)
         input_industry_chemical_other_crude_oil_non_energetic_demand: Oil (non-energetic)
         input_industry_chemical_other_coal_non_energetic_demand: Coal (non-energetic)
+        input_industry_chemical_other_naphtha_non_energetic_demand: Naphtha (non-energetic)
 
         input_industry_food_electricity_demand: Electricity
         input_industry_food_network_gas_demand: Gas
         input_industry_food_steam_hot_water_demand: Heat
         input_industry_food_wood_pellets_demand: Solid biomass
         input_industry_food_crude_oil_demand: Oil
+        input_industry_food_naphtha_demand: Naphtha
         input_industry_food_hydrogen_demand: Hydrogen
         input_industry_food_coal_demand: Coal
 
@@ -559,6 +573,7 @@ en:
         input_industry_paper_steam_hot_water_demand: Heat
         input_industry_paper_wood_pellets_demand: Solid biomass
         input_industry_paper_crude_oil_demand: Oil
+        input_industry_paper_naphtha_demand: Naphtha
         input_industry_paper_hydrogen_demand: Hydrogen
         input_industry_paper_coal_demand: Coal
 
@@ -572,11 +587,13 @@ en:
         input_industry_other_steam_hot_water_demand: Heat
         input_industry_other_wood_pellets_demand: Solid biomass
         input_industry_other_crude_oil_demand: Oil
+        input_industry_other_naphtha_demand: Naphtha
         input_industry_other_coal_demand: Coal
         input_industry_other_cokes_demand: Cokes
         input_industry_other_network_gas_non_energetic_demand: Gas (non-energetic)
         input_industry_other_wood_pellets_non_energetic_demand: Biomass (non-energetic)
         input_industry_other_crude_oil_non_energetic_demand: Oil (non-energetic)
+        input_industry_other_naphtha_non_energetic_demand: Naphtha (non-energetic)
         input_industry_other_coal_non_energetic_demand: Coal (non-energetic)
         input_industry_other_cokes_non_energetic_demand: Cokes (non-energetic)
 
@@ -593,13 +610,15 @@ en:
         input_industry_chemical_fertilizers_steam_hot_water_demand: Heat
         input_industry_chemical_fertilizers_wood_pellets_demand: Biomass
         input_industry_chemical_fertilizers_crude_oil_demand: Oil
+        input_industry_chemical_fertilizers_naphtha_demand: Naphtha
         input_industry_chemical_fertilizers_coal_demand: Coal
 
-        input_industry_chemical_fertilizers_network_gas_non_energetic_demand: Network gas
-        input_industry_chemical_fertilizers_wood_pellets_non_energetic_demand: Biomass
-        input_industry_chemical_fertilizers_crude_oil_non_energetic_demand: Oil
-        input_industry_chemical_fertilizers_coal_non_energetic_demand: Coal
-        input_industry_chemical_fertilizers_hydrogen_non_energetic_demand: Hydrogen
+        input_industry_chemical_fertilizers_network_gas_non_energetic_demand: Network gas (non-energetic)
+        input_industry_chemical_fertilizers_wood_pellets_non_energetic_demand: Biomass (non-energetic)
+        input_industry_chemical_fertilizers_crude_oil_non_energetic_demand: Oil (non-energetic)
+        input_industry_chemical_fertilizers_naphtha_non_energetic_demand: Naphtha (non-energetic)
+        input_industry_chemical_fertilizers_coal_non_energetic_demand: Coal (non-energetic)
+        input_industry_chemical_fertilizers_hydrogen_non_energetic_demand: Hydrogen (non-energetic)
 
         # Energy
         energy_power_sector_own_use_electricity_demand: Own use of electricity

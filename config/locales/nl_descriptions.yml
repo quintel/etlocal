@@ -277,6 +277,9 @@ nl:
       industry_final_demand_crude_oil_input: |
         De samenstelling hieronder beschrijft de aandelen van verschillende olietypes die gebruikt worden in olieketels.
         Ieder percentage staat voor het aandeel van dit type olie in het totale olieverbruik.
+      industry_final_demand_crude_oil_non_energetic_input: |
+        De samenstelling hieronder beschrijft de aandelen van verschillende olietypes die gebruikt worden voor niet-energetische doeleinden in de industriesector.
+        Ieder percentage staat voor het aandeel van dit type olie in het totale niet-energetische olieverbruik.
       industry_heat: |
         Hieronder staat per WKK-type en centrale verwarmingsketel aangegeven hoeveel brandstof er is gebruikt. De geproduceerde warmte
         wordt geleverd aan industriële sectoren met een vraag naar (centrale) warmte. Meer informatie over de verschillende type ketels kun je vinden in het

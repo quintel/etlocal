@@ -101,6 +101,7 @@ en:
       industry_heat: Fuel input for CHP
       industry_gas_fuelmix: Fuel for gas-fired CHPs
       industry_final_demand_crude_oil_input: Fuel for oil-fired heaters in all industry sectors
+      industry_final_demand_crude_oil_non_energetic_input: Non-energetic oil use in all industry sectors
       industry_metal_steel_production: Steel production
       industry_metal_steel_production_route: Steel production technology
       industry_metal_steel_final_demand: Final demand

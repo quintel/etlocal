@@ -22,7 +22,11 @@ groups:
       - key: input_industry_paper_crude_oil_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Oil")
+          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Oil excluding naphtha")
+      - key: input_industry_paper_naphtha_demand
+        unit: 'TJ'
+        entso: |
+          EB("Final consumption - industry sector - paper, pulp and printing - energy use", "Naphtha")
       - key: input_industry_paper_coal_demand
         unit: 'TJ'
         entso: |

@@ -22,11 +22,7 @@ groups:
     - key: input_industry_chemical_fertilizers_crude_oil_demand
       unit: 'TJ'
       entso: |
-        EB("Final consumption - industry sector - chemical fertilizers - energy use", "Oil excluding naphtha")
-    - key: input_industry_chemical_fertilizers_naphtha_demand
-      unit: 'TJ'
-      entso: |
-        EB("Final consumption - industry sector - chemical fertilizers - energy use", "Naphtha")
+        EB("Final consumption - industry sector - chemical fertilizers - energy use", "Oil")
     - key: input_industry_chemical_fertilizers_coal_demand
       unit: 'TJ'
       entso: |
@@ -46,11 +42,7 @@ groups:
     - key: input_industry_chemical_fertilizers_crude_oil_non_energetic_demand
       unit: 'TJ'
       entso: |
-        EB("Final consumption - industry sector - chemical fertilizers - non-energy use", "Oil excluding naphtha") 
-    - key: input_industry_chemical_fertilizers_naphtha_non_energetic_demand
-      unit: 'TJ'
-      entso: |
-        EB("Final consumption - industry sector - chemical fertilizers - non-energy use", "Naphtha")       
+        EB("Final consumption - industry sector - chemical fertilizers - non-energy use", "Oil") 
     - key: input_industry_chemical_fertilizers_coal_non_energetic_demand
       unit: 'TJ'
       entso: |

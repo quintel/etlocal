@@ -517,7 +517,6 @@ en:
         input_industry_metal_other_network_gas_demand: Gas
         input_industry_metal_other_steam_hot_water_demand: Heat
         input_industry_metal_other_crude_oil_demand: Oil
-        input_industry_metal_other_naphtha_demand: Naphtha
         input_industry_metal_other_coal_demand: Coal
 
         industry_useful_demand_for_chemical_refineries_crude_oil_non_energetic_demand: Crude oil
@@ -561,7 +560,6 @@ en:
         input_industry_food_steam_hot_water_demand: Heat
         input_industry_food_wood_pellets_demand: Solid biomass
         input_industry_food_crude_oil_demand: Oil
-        input_industry_food_naphtha_demand: Naphtha
         input_industry_food_hydrogen_demand: Hydrogen
         input_industry_food_coal_demand: Coal
 
@@ -573,7 +571,6 @@ en:
         input_industry_paper_steam_hot_water_demand: Heat
         input_industry_paper_wood_pellets_demand: Solid biomass
         input_industry_paper_crude_oil_demand: Oil
-        input_industry_paper_naphtha_demand: Naphtha
         input_industry_paper_hydrogen_demand: Hydrogen
         input_industry_paper_coal_demand: Coal
 
@@ -587,13 +584,11 @@ en:
         input_industry_other_steam_hot_water_demand: Heat
         input_industry_other_wood_pellets_demand: Solid biomass
         input_industry_other_crude_oil_demand: Oil
-        input_industry_other_naphtha_demand: Naphtha
         input_industry_other_coal_demand: Coal
         input_industry_other_cokes_demand: Cokes
         input_industry_other_network_gas_non_energetic_demand: Gas (non-energetic)
         input_industry_other_wood_pellets_non_energetic_demand: Biomass (non-energetic)
         input_industry_other_crude_oil_non_energetic_demand: Oil (non-energetic)
-        input_industry_other_naphtha_non_energetic_demand: Naphtha (non-energetic)
         input_industry_other_coal_non_energetic_demand: Coal (non-energetic)
         input_industry_other_cokes_non_energetic_demand: Cokes (non-energetic)
 
@@ -610,13 +605,11 @@ en:
         input_industry_chemical_fertilizers_steam_hot_water_demand: Heat
         input_industry_chemical_fertilizers_wood_pellets_demand: Biomass
         input_industry_chemical_fertilizers_crude_oil_demand: Oil
-        input_industry_chemical_fertilizers_naphtha_demand: Naphtha
         input_industry_chemical_fertilizers_coal_demand: Coal
 
         input_industry_chemical_fertilizers_network_gas_non_energetic_demand: Network gas (non-energetic)
         input_industry_chemical_fertilizers_wood_pellets_non_energetic_demand: Biomass (non-energetic)
         input_industry_chemical_fertilizers_crude_oil_non_energetic_demand: Oil (non-energetic)
-        input_industry_chemical_fertilizers_naphtha_non_energetic_demand: Naphtha (non-energetic)
         input_industry_chemical_fertilizers_coal_non_energetic_demand: Coal (non-energetic)
         input_industry_chemical_fertilizers_hydrogen_non_energetic_demand: Hydrogen (non-energetic)
 

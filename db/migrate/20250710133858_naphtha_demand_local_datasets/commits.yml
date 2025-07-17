@@ -3,4 +3,4 @@
 - fields:
   - :all
   message:
-    Deze drager is recent toegevoegd aan het model, hierdoor is deze op 0 gezet.
+    This carrier has been recently added to the model, value is set to zero.

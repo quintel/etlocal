@@ -64,7 +64,7 @@ column_groups:
     - Pure biogasoline
     - Blended biogasoline
     - Other liquid biofuels
-  Oil excluding naphtha: 
+  Oil excluding naphtha:
     - Oil shale and oil sands
     - Crude oil
     - Natural gas liquids
@@ -93,7 +93,7 @@ column_groups:
     - Blended bio jet kerosene
     - Pure biogasoline
     - Blended biogasoline
-    - Other liquid biofuels   
+    - Other liquid biofuels
   Fossil oil:
     - Oil shale and oil sands
     - Crude oil
@@ -111,6 +111,7 @@ column_groups:
     - Other kerosene
     - Gas oil and diesel oil (excluding biofuel portion)
     - Fuel oil
+    - Naphtha
     - White spirit and special boiling point industrial spirits
     - Lubricants
     - Bitumen

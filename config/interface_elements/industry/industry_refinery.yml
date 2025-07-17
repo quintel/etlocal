@@ -44,12 +44,7 @@ groups:
     - key: input_industry_chemical_refineries_crude_oil_demand
       unit: 'TJ'
       entso: |
-        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Fossil oil") -
-        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Crude oil") -
-        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Natural gas liquids") -
-        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Refinery feedstocks") -
-        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Additives and oxygenates (excluding biofuel portion)") -
-        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Other hydrocarbons")
+        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Oil")
 
   - header: industry_refinery_output
     items:

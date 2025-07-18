@@ -1,6 +1,6 @@
-class NaphthaDemandOtherDatasets < ActiveRecord::Migration[7.0]
+class NaphthaDemandGreatBritain < ActiveRecord::Migration[7.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20250718070152_naphtha_demand_other_datasets')
+    directory    = Rails.root.join('db/migrate/20250718070152_naphtha_demand_great_britain')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

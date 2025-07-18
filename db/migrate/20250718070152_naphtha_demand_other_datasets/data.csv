@@ -1,0 +1,7 @@
+geo_id,input_industry_chemical_other_naphtha_demand,input_industry_chemical_other_naphtha_non_energetic_demand,input_industry_refinery_transformation_crude_oil_naphtha_demand,input_percentage_of_diesel_industry_final_demand_crude_oil_non_energetic,input_percentage_of_biodiesel_industry_final_demand_crude_oil_non_energetic,input_percentage_of_kerosene_industry_final_demand_crude_oil_non_energetic,input_percentage_of_bio_kerosene_industry_final_demand_crude_oil_non_energetic,input_percentage_of_lpg_industry_final_demand_crude_oil_non_energetic,input_percentage_of_bio_oil_industry_final_demand_crude_oil_non_energetic,input_percentage_of_crude_oil_industry_final_demand_crude_oil_non_energetic
+BEGM35013,0,0,0,0,0,0,0,0,0,1
+BEGM13040,0,0,0,0,0,0,0,0,0,1
+BEGM11002,0,0,0,0,0,0,0,0,0,1
+UKNI01,0,0,0,0,0,0,0,0,0,1
+VUNH5,0,0,0,0,0,0,0,0,0,1
+GB,0,53947.589,94161.047,0,0,0,0,0.396620783,0,0.603379217

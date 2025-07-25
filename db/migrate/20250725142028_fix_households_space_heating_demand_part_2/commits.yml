@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    Fix in decimals to align dataset values with ETSource.

@@ -275,10 +275,10 @@ nl:
         Onderstaande percentages geven de samenstelling van de gebruikte brandstof van gasgestookte WKK's weer. In sommige gevallen
         wordt aardolie of bio-olie bijgemengd met aardgas.
       industry_final_demand_crude_oil_input: |
-        De samenstelling hieronder beschrijft de aandelen van verschillende olietypes die gebruikt worden in olieketels.
-        Ieder percentage staat voor het aandeel van dit type olie in het totale olieverbruik.
+        De samenstelling hieronder beschrijft het aandeel van verschillende olietypes die gebruikt worden voor energetische doeleinden in de industriesector.
+        Ieder percentage staat voor het aandeel van dit type olie in het totale energetische olieverbruik.
       industry_final_demand_crude_oil_non_energetic_input: |
-        De samenstelling hieronder beschrijft de aandelen van verschillende olietypes die gebruikt worden voor niet-energetische doeleinden in de industriesector.
+        De samenstelling hieronder beschrijft het aandeel van verschillende olietypes die gebruikt worden voor niet-energetische doeleinden in de industriesector.
         Ieder percentage staat voor het aandeel van dit type olie in het totale niet-energetische olieverbruik.
       industry_heat: |
         Hieronder staat per WKK-type en centrale verwarmingsketel aangegeven hoeveel brandstof er is gebruikt. De geproduceerde warmte

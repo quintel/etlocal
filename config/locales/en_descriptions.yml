@@ -279,8 +279,8 @@ en:
         The percentages below indicate the composition of the fuel used in gas-fired CHPs. In some cases
         oil or bio-oil is blended with natural gas.
       industry_final_demand_crude_oil_input: |
-        The composition below describes the different types of oil that fuel oil-fired heaters. Each percentage describes
-        the share of this oil type in the total oil demand.
+        The composition below describes the different types of oil that are used for energetic purposes in the industry sector.
+        Each percentage describes the share of this oil type in the total energetic oil demand.
       industry_final_demand_crude_oil_non_energetic_input: |
         The composition below describes the different types of oil that are used for non-energetic purposes in the industry sector.
         Each percentage describes the share of this oil type in the total non-energetic oil demand.

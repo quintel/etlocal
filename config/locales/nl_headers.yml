@@ -102,7 +102,8 @@ nl:
       # industry
       industry_heat: Gebruikte brandstof voor WKK en ketels
       industry_gas_fuelmix: Brandstofmix gasgestookte WKK
-      industry_final_demand_crude_oil_input: Brandstoffen voor olieketels in alle industriesectoren
+      industry_final_demand_crude_oil_input: Energetisch oliegebruik in alle industriesectoren
+      industry_final_demand_crude_oil_non_energetic_input: Niet-energetisch oliegebruik in alle industriesectoren
       industry_metal_steel_production: Steel productie
       industry_metal_steel_production_route: Steel productietechnologie
       industry_metal_steel_final_demand: Eindgebruik

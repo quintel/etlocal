@@ -22,7 +22,11 @@ groups:
       - key: input_industry_chemical_other_crude_oil_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - chemical other - energy use", "Oil")
+          EB("Final consumption - industry sector - chemical other - energy use", "Oil excluding naphtha")
+      - key: input_industry_chemical_other_naphtha_demand
+        unit: 'TJ'
+        entso: |
+          EB("Final consumption - industry sector - chemical other - energy use", "Naphtha")    
       - key: input_industry_chemical_other_coal_demand
         unit: 'TJ'
         entso: |
@@ -42,7 +46,11 @@ groups:
       - key: input_industry_chemical_other_crude_oil_non_energetic_demand
         unit: 'TJ'
         entso: |
-          EB("Final consumption - industry sector - chemical other - non-energy use", "Oil")
+          EB("Final consumption - industry sector - chemical other - non-energy use", "Oil excluding naphtha") 
+      - key: input_industry_chemical_other_naphtha_non_energetic_demand
+        unit: 'TJ'
+        entso: |
+          EB("Final consumption - industry sector - chemical other - non-energy use", "Naphtha")             
       - key: input_industry_chemical_other_coal_non_energetic_demand
         unit: 'TJ'
         entso: |

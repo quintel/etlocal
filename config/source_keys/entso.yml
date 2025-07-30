@@ -64,6 +64,36 @@ column_groups:
     - Pure biogasoline
     - Blended biogasoline
     - Other liquid biofuels
+  Oil excluding naphtha:
+    - Oil shale and oil sands
+    - Crude oil
+    - Natural gas liquids
+    - Refinery feedstocks
+    - Additives and oxygenates (excluding biofuel portion)
+    - Other hydrocarbons
+    - Refinery gas
+    - Ethane
+    - Liquefied petroleum gases
+    - Motor gasoline (excluding biofuel portion)
+    - Aviation gasoline
+    - Gasoline-type jet fuel
+    - Kerosene-type jet fuel (excluding biofuel portion)
+    - Other kerosene
+    - Gas oil and diesel oil (excluding biofuel portion)
+    - Fuel oil
+    - White spirit and special boiling point industrial spirits
+    - Lubricants
+    - Bitumen
+    - Paraffin waxes
+    - Petroleum coke
+    - Other oil products
+    - Pure biodiesels
+    - Blended biodiesels
+    - Pure bio jet kerosene
+    - Blended bio jet kerosene
+    - Pure biogasoline
+    - Blended biogasoline
+    - Other liquid biofuels
   Fossil oil:
     - Oil shale and oil sands
     - Crude oil
@@ -125,7 +155,6 @@ column_groups:
     - Aviation gasoline
     - Gasoline-type jet fuel
     - Fuel oil
-    - Naphtha
     - White spirit and special boiling point industrial spirits
     - Lubricants
     - Bitumen

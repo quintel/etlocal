@@ -172,7 +172,7 @@ nl:
         input_percentage_of_lt_steam_hot_water_households_final_demand_steam_hot_water: LT warmte
         input_percentage_of_mt_steam_hot_water_households_final_demand_steam_hot_water: MT warmte
         input_percentage_of_ht_steam_hot_water_households_final_demand_steam_hot_water: HT warmte
-        
+
         input_percentage_of_diesel_households_final_demand_crude_oil: Diesel
         input_percentage_of_biodiesel_households_final_demand_crude_oil: Biodiesel
         input_percentage_of_kerosene_households_final_demand_crude_oil: Kerosine
@@ -247,7 +247,7 @@ nl:
         input_present_share_of_terraced_houses_1965_1984_in_useful_demand_for_space_heating: "Rijtjeshuizen 1965 - 1984"
         input_present_share_of_terraced_houses_1985_2004_in_useful_demand_for_space_heating: "Rijtjeshuizen 1985 - 2004"
         input_present_share_of_terraced_houses_2005_present_in_useful_demand_for_space_heating: "Rijtjeshuizen > 2005"
-        
+
         # buildings
         present_number_of_buildings: Aantal gebouwen
         buildings_roof_surface_available_for_pv: Geschikt dakoppervlak voor zon-PV
@@ -442,6 +442,14 @@ nl:
         input_percentage_of_bio_oil_industry_final_demand_crude_oil: Andere bio-olie
         input_percentage_of_crude_oil_industry_final_demand_crude_oil: Andere olie
 
+        input_percentage_of_biodiesel_industry_final_demand_crude_oil_non_energetic: Diesel (niet-energetisch)
+        input_percentage_of_biodiesel_industry_final_demand_crude_oil_non_energetic: Biodiesel (niet-energetisch)
+        input_percentage_of_kerosene_industry_final_demand_crude_oil_non_energetic: Kerosene (niet-energetisch)
+        input_percentage_of_lpg_industry_final_demand_crude_oil_non_energetic: LPG (niet-energetisch)
+        input_percentage_of_bio_kerosene_industry_final_demand_crude_oil_non_energetic: Bio kerosene (niet-energetisch)
+        input_percentage_of_bio_oil_industry_final_demand_crude_oil_non_energetic: Other bio oil (niet-energetisch)
+        input_percentage_of_crude_oil_industry_final_demand_crude_oil_non_energetic: Other oil (niet-energetisch)
+
         input_industry_metal_steel_production: Staalproductie
         input_industry_steel_blastfurnace_bof_share: Hoogoven
         input_industry_steel_scrap_hbi_eaf_share: Elektrische oven
@@ -533,6 +541,7 @@ nl:
         input_industry_refinery_transformation_crude_oil_lpg_demand: LPG
         input_industry_refinery_transformation_crude_oil_refinery_gas_demand: Raffinagegas
         input_industry_refinery_transformation_crude_oil_diesel_demand: Diesel
+        input_industry_refinery_transformation_crude_oil_naphtha_demand: Nafta
         input_industry_refinery_transformation_crude_oil_loss_demand: Verliezen
 
         input_industry_chemical_fertilizers_scaling_factor: "% nationale kunstmestsector"
@@ -541,12 +550,15 @@ nl:
         input_industry_chemical_other_steam_hot_water_demand: Warmte
         input_industry_chemical_other_wood_pellets_demand: Vaste biomassa
         input_industry_chemical_other_crude_oil_demand: Olie
+        input_industry_chemical_other_naphtha_demand: Nafta
         input_industry_chemical_other_hydrogen_demand: Waterstof
         input_industry_chemical_other_coal_demand: Kolen
+        input_percentage_of_diesel_industry_final_demand_crude_oil_non_energetic: Diesel (niet-energetisch)
         input_industry_chemical_other_network_gas_non_energetic_demand: Gas (niet-energetisch)
         input_industry_chemical_other_wood_pellets_non_energetic_demand: Biomassa (niet-energetisch)
         input_industry_chemical_other_crude_oil_non_energetic_demand: Olie (niet-energetisch)
         input_industry_chemical_other_coal_non_energetic_demand: Kolen (niet-energetisch)
+        input_industry_chemical_other_naphtha_non_energetic_demand: Nafta (niet-energetisch)
 
         input_industry_food_electricity_demand: Elektriciteit
         input_industry_food_network_gas_demand: Gas
@@ -600,11 +612,11 @@ nl:
         input_industry_chemical_fertilizers_crude_oil_demand: Olie
         input_industry_chemical_fertilizers_coal_demand: Kolen
 
-        input_industry_chemical_fertilizers_network_gas_non_energetic_demand: Gas
-        input_industry_chemical_fertilizers_wood_pellets_non_energetic_demand: Biomassa
-        input_industry_chemical_fertilizers_crude_oil_non_energetic_demand: Olie
-        input_industry_chemical_fertilizers_coal_non_energetic_demand: Kolen
-        input_industry_chemical_fertilizers_hydrogen_non_energetic_demand: Waterstof
+        input_industry_chemical_fertilizers_network_gas_non_energetic_demand: Gas (niet-energetisch)
+        input_industry_chemical_fertilizers_wood_pellets_non_energetic_demand: Biomassa (niet-energetisch)
+        input_industry_chemical_fertilizers_crude_oil_non_energetic_demand: Olie (niet-energetisch)
+        input_industry_chemical_fertilizers_coal_non_energetic_demand: Kolen (niet-energetisch)
+        input_industry_chemical_fertilizers_hydrogen_non_energetic_demand: Waterstof (niet-energetisch)
 
         # Energy
         energy_power_sector_own_use_electricity_demand: Eigen gebruik elektriciteit
@@ -715,7 +727,7 @@ nl:
         industry_useful_demand_for_chemical_other_useable_heat_industry_chemicals_other_used_heat_parent_share: Geen restwarmte
         industry_chemicals_other_ht_residual_heat: HT warmte
         industry_chemicals_other_mt_residual_heat: MT warmte
-        
+
         industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_processes_potential_residual_heat_parent_share: Restwarmte uit processen
         industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_flue_gasses_potential_residual_heat_parent_share: Restwarmte uit rookgassen
         industry_useful_demand_for_chemical_refineries_useable_heat_industry_chemicals_refineries_used_heat_parent_share: Geen restwarmte

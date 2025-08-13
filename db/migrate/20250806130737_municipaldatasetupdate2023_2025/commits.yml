@@ -494,9 +494,23 @@
     - transport_final_demand_for_shipping_lng_demand
     - transport_final_demand_heavy_fuel_oil_demand
     - transport_final_demand_kerosene_demand
+    - input_industry_chemical_other_naphtha_demand
+    - input_industry_chemical_other_naphtha_non_energetic_demand
+    - input_percentage_of_bio_kerosene_industry_final_demand_crude_oil_non_energetic
+    - input_percentage_of_bio_oil_industry_final_demand_crude_oil_non_energetic
+    - input_percentage_of_biodiesel_industry_final_demand_crude_oil_non_energetic
+    - input_percentage_of_diesel_industry_final_demand_crude_oil_non_energetic
+    - input_percentage_of_kerosene_industry_final_demand_crude_oil_non_energetic
+    - input_percentage_of_lpg_industry_final_demand_crude_oil_non_energetic
+
     message:
      "No data available. Set to 0 for all municipalities."
   
+  - fields: 
+    - input_percentage_of_crude_oil_industry_final_demand_crude_oil_non_energetic
+    message:
+     "No data available. Set to 1 for all municipalities."
+
   - fields: 
     - households_final_demand_electricity_demand
     message:

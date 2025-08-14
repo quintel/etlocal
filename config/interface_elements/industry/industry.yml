@@ -3,6 +3,17 @@ key: industry
 groups:
   - header: industry_final_demand_crude_oil_input
     type: slider
+    combination_method:
+      weighted_average:
+        - sum:
+          - input_industry_chemical_other_crude_oil_demand
+          - input_industry_chemical_fertilizers_crude_oil_demand
+          - input_industry_food_crude_oil_demand
+          - input_industry_metal_other_crude_oil_demand
+          - input_industry_other_crude_oil_demand
+          - input_industry_paper_crude_oil_demand
+          - input_industry_chemical_refineries_crude_oil_demand
+          - input_industry_metal_steel_crude_oil_demand
     items:
     - key: input_percentage_of_diesel_industry_final_demand_crude_oil
       unit: '%'
@@ -45,6 +56,12 @@ groups:
 
   - header: industry_final_demand_crude_oil_non_energetic_input
     type: slider
+    combination_method:
+      weighted_average:
+        - sum:
+          - input_industry_chemical_other_crude_oil_non_energetic_demand
+          - input_industry_chemical_fertilizers_crude_oil_non_energetic_demand
+          - input_industry_other_crude_oil_non_energetic_demand
     items:
     - key: input_percentage_of_diesel_industry_final_demand_crude_oil_non_energetic
       unit: '%'

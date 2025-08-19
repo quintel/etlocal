@@ -491,6 +491,7 @@
   - transport_final_demand_for_shipping_lng_demand
   - transport_final_demand_heavy_fuel_oil_demand
   - transport_final_demand_kerosene_demand
+  - input_industry_refinery_transformation_crude_oil_naphtha_demand
   message:
    "No data available. Set to 0 for all municipalities."
 

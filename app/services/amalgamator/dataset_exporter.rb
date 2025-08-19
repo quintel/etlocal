@@ -49,7 +49,7 @@ module Amalgamator
     end
 
     def migration_version
-      @migration_version ||= DateTime.now.strftime('%Y%m%d%H%M%S')
+      @migration_version ||= DateTime.now.strftime('%Y%m%d%H%M%S') + rand(1..9).to_s # Add random factor so that original number is guaranteed when multiple datasets are loaded in at the same time. 
     end
 
     def migration_filename

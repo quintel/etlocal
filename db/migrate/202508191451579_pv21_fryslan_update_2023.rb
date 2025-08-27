@@ -1,6 +1,6 @@
-class Pv21FryslNUpdate2023 < ActiveRecord::Migration[5.0]
+class Pv21FryslanUpdate2023 < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/202508191451579_pv21_frysl_n_update_2023')
+    directory    = Rails.root.join('db/migrate/202508191451579_pv21_fryslan_update_2023')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

@@ -1,6 +1,6 @@
-class Es16NoordHollandzuidUpdate2023Es16 < ActiveRecord::Migration[5.0]
+class Es16NoordHollandZuidUpdate2023Es16 < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/202508191453424_es16_noord_hollandzuid_update_2023_es16')
+    directory    = Rails.root.join('db/migrate/202508191453424_es16_noord_holland_zuid_update_2023_es16')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []
@@ -14,7 +14,7 @@ class Es16NoordHollandzuidUpdate2023Es16 < ActiveRecord::Migration[5.0]
     #   end
     #
     CSVImporter.run(data_path, commits_path, create_missing_datasets: true) do |row, runner|
-      print "Updating #{row['geo_id']}... "
+      print("Updating #{row['geo_id']}... ")
       commits = runner.call
 
       if commits.any?

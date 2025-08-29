@@ -12,8 +12,7 @@ module Amalgamator
     COMMITS_FILENAME = 'commits.yml'
 
     def initialize(
-      target_dataset_geo_id:, target_area_name:, target_country_name: nil,
-      migration_slug:, combined_item_values:, source_area_names:
+      target_dataset_geo_id:, target_area_name:, migration_slug:, combined_item_values:, source_area_names:, target_country_name: nil
     )
       @target_dataset_geo_id = target_dataset_geo_id
       @target_area_name = target_area_name
@@ -37,7 +36,7 @@ module Amalgamator
     private
 
     def migrate_directory
-      @migrate_directory ||= Rails.root.join('db', 'migrate')
+      @migrate_directory ||= Rails.root.join('db/migrate')
     end
 
     def migration_name
@@ -49,7 +48,7 @@ module Amalgamator
     end
 
     def migration_version
-      @migration_version ||= DateTime.now.strftime('%Y%m%d%H%M%S') + rand(1..9).to_s # Add random factor so that original number is guaranteed when multiple datasets are loaded in at the same time. 
+      @migration_version ||= DateTime.now.strftime('%Y%m%d%H%M%S') + rand(1..9).to_s # Add random factor so that original number is guaranteed when multiple datasets are loaded in at the same time.
     end
 
     def migration_filename
@@ -64,7 +63,7 @@ module Amalgamator
     def create_migration
       # Load our custom data migration template
       template = Rails.root.join(
-        'lib', 'generators', 'data_migration', 'templates', 'migration.rb.erb'
+        'lib/generators/data_migration/templates/migration.rb.erb'
       ).read
 
       # Check if a migration with the name of the generated migration_name already exists.
@@ -100,7 +99,7 @@ module Amalgamator
     # Create CSV that contains the data that was combined and returned by the Dataset::ValueProcessor
     # The CSV will contain two lines: the first contains the header, the second contains the data
     def export_data_file
-      if @target_dataset_geo_id.start_with?('PV', 'RES')
+      if @target_dataset_geo_id.start_with?('PV', 'RES') || @target_dataset_geo_id.match?(/^ES\d{2}$/)
         mandatory_headers = %w[name geo_id country]
         mandatory_values = [@target_area_name, @target_dataset_geo_id, @target_country_name]
       else

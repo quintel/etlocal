@@ -1,5 +1,10 @@
 ---
 - fields: 
+  - analysis_year
+  message:
+   "Update to 2023"
+
+- fields: 
   - agriculture_chp_engine_biogas_demand
   message:
    "The biogas demand for heat includes both agricultural and commercial sector demand (Klimaatmonitor, 2023). Using emissions data from gas use in these sectors (Emissieregistratie, 2023), the ratio of gas demand between agriculture and commercial is calculated. This ratio helps determine agriculture’s share of total biogas heat demand. The final biogas demand for CHP installations is then calculated by applying the efficiency of a biogas CHP (ETM) to the agricultural biogas heat demand."

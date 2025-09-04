@@ -307,7 +307,7 @@ en:
       energy_biomass_potentials: |
         How much biomass can potentially be extracted in this region? Click on the 'i' for more information on each category.
       fuel_production: |
-        How much primary fuels are produced within the borders of your region? These values determine how much of the fuels are imported and exported.
+        Below, the amount of extracted primary fuels in this region are provided.
       area_emission_factors: |
         Below you can see for all energy carriers how much CO<sub>2</sub> is emitted per MJ.
         These 'emission factors' can differ per country because they depend on the origin of the carrier.

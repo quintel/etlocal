@@ -74,7 +74,7 @@ nl:
         energy_efficiency: Efficiënties
         energy_biomass: Biomassa
         energy_full_load_hours: Vollasturen
-        energy_fuel_production: Brandstofproductie
+        energy_fuel_production: Brandstofextractie
 
       households:
         households_energy_demand: Energievraag

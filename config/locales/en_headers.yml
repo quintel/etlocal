@@ -180,7 +180,7 @@ en:
       energy_heat_crude_oil: Oil-fired heat production
       energy_heat_import: Imported heat
       energy_heat_distribution_loss: Heat network - distribution losses
-      fuel_production: Fuel production
+      fuel_production: Fuel extraction
       energy_efficiency_coal: Efficiencies of coal plants
       energy_efficiency_gas: Efficiencies of gas plants
       energy_efficiency_other_fossil: Efficiencies of other fossil plants

@@ -107,7 +107,8 @@ groups:
       - key: input_energy_blastfurnace_transformation_coal_input_demand
         unit: 'TJ'
         entso: |
-          EB("Transformation input - blast furnaces - energy use", "Coal incl lignite and peat")
+          (EB("Transformation input - blast furnaces - energy use", "Coal incl lignite and peat") - 
+          EB("Transformation input - blast furnaces - energy use", "Coke oven coke"))
       - key: input_energy_blastfurnace_transformation_cokes_input_demand
         unit: 'TJ'
         entso: |

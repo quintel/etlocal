@@ -20,12 +20,12 @@ class CSVImporter
 
     # Public: Headers which are required to be present in the data file.
     def mandatory_headers
-      @name_required ? %w[geo_id country name] : %w[geo_id]
+      @name_required ? %w[geo_id parent name] : %w[geo_id]
     end
 
     # Public: Headers which may be omitted.
     def optional_headers
-      @name_required ? %w[data_source] : %w[name country]
+      @name_required ? %w[data_source] : %w[name parent]
     end
 
     # Public: Headers which a CSV may optionally include.

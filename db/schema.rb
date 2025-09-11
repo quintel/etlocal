@@ -37,7 +37,7 @@ ActiveRecord::Schema[7.2].define(version: 202509261210523) do
     t.string "name", default: "", null: false
     t.string "geo_id", default: "", null: false
     t.string "data_source", default: "db", null: false
-    t.string "country"
+    t.string "parent"
     t.boolean "has_industry", default: false
     t.boolean "has_agriculture", default: false
     t.boolean "public", default: true

@@ -9,7 +9,7 @@ class CommitsController < ApplicationController
   # GET new
   def new
     @dataset_edit_form = DatasetEditForm.new(
-      @dataset.editable_attributes.as_json.merge(country: @dataset.country)
+      @dataset.editable_attributes.as_json.merge(parent: @dataset.parent)
     )
   end
 
@@ -18,7 +18,7 @@ class CommitsController < ApplicationController
     authorize @dataset, :update?
 
     @dataset_edit_form = DatasetEditForm.new(
-      dataset_edit_params.to_h.merge(country: @dataset.country)
+      dataset_edit_params.to_h.merge(parent: @dataset.parent)
     )
     @commit = @dataset_edit_form.submit(@dataset)
   end
@@ -29,7 +29,7 @@ class CommitsController < ApplicationController
 
     if @commit.save
       @dataset_edit_form = DatasetEditForm.new(
-        @dataset.editable_attributes.as_json.merge(country: @dataset.country)
+        @dataset.editable_attributes.as_json.merge(parent: @dataset.parent)
       )
 
       flash.now[:success] = I18n.t(

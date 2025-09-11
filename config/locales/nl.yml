@@ -58,6 +58,7 @@ nl:
 
   groups:
     country: Landen
+    parent: Landen
     province: Provincies
     region: Regio's
     res: RES regio's

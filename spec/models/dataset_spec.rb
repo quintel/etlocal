@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Dataset do
   let(:dataset) {
-    Dataset.create!(name: 'Ameland', country: 'nl', geo_id: 'AM31049', user: User.robot)
+    Dataset.create!(name: 'Ameland', parent: 'nl', geo_id: 'AM31049', user: User.robot)
   }
 
   it "it initializes a dataset from an Atlas dataset" do
@@ -17,10 +17,10 @@ describe Dataset do
     expect(dataset.base_dataset).to eq 'nl'
   end
 
-  context 'with a country not in ETsource' do
+  context 'with a parent not in ETsource' do
     let(:mars_dataset) do
       Dataset.new(
-        name: 'Tharsis', country: 'mars', user: User.robot, geo_id: 'GM666'
+        name: 'Tharsis', parent: 'mars', user: User.robot, geo_id: 'GM666'
       )
     end
 
@@ -29,10 +29,10 @@ describe Dataset do
     end
   end
 
-  context 'with a country in ETsource' do
+  context 'with a parent in ETsource' do
     let(:ameland_dataset) do
       Dataset.new(
-        name: 'Ameland', country: 'nl', user: User.robot, geo_id: 'GM3040'
+        name: 'Ameland', parent: 'nl', user: User.robot, geo_id: 'GM3040'
       )
     end
 
@@ -50,7 +50,7 @@ describe Dataset do
     end
 
     let(:eland) do
-      Dataset.create!(name: 'Eland', country: 'nl', geo_id: 'AM3568', user: User.robot)
+      Dataset.create!(name: 'Eland', parent: 'nl', geo_id: 'AM3568', user: User.robot)
     end
 
     context 'with an exactly matching geo_id query' do
@@ -70,7 +70,7 @@ describe Dataset do
 
   describe '#editable_attributes_before' do
     let(:dataset) {
-      Dataset.create!(name: 'Ameland', country: 'nl', geo_id: 'AM31049', user: User.robot)
+      Dataset.create!(name: 'Ameland', parent: 'nl', geo_id: 'AM31049', user: User.robot)
     }
 
     it 'returns an EditableAttributesCollection' do

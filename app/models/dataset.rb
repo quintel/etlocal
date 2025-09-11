@@ -8,15 +8,10 @@ class Dataset < ApplicationRecord
 
   validates :geo_id,  presence: true
   validates :name,    presence: true
-  validates :country, presence: true # This references the country in etsource.
-  validates_each :country, allow_nil: true do |record, _attr, value|
-    unless Etsource.available_countries.include?(value.downcase)
-      record.errors.add(value.downcase, 'must be in ETsource')
-    end
-  end
+  validates :parent, presence: true, inclusion: {in: Etsource.available_datasets}
 
   ORDER = %w[
-    country
+    parent
     province
     res
     region
@@ -30,14 +25,14 @@ class Dataset < ApplicationRecord
       .order(Arel.sql("FIELD(`id`, #{dataset.id}) DESC, `created_at` DESC"))
   end
 
-  # Search for query in geo_id and name, if a country is specified, filters to that country
+  # Search for query in geo_id and name, if a parent is specified, filters to that parent
   # Sorts the results by group, and puts the most relevant results first in each group
-  def self.fuzzy_search(query, in_country)
+  def self.fuzzy_search(query, in_parent)
     pattern = "%#{query}%"
     results = where(arel_table[:geo_id].matches(pattern))
       .or(where(arel_table[:name].matches(pattern)))
 
-    results = results.select { |d| d.actual_country == in_country } if in_country != 'any'
+    results = results.select { |d| d.actual_parent == in_parent } if in_parent != 'any'
 
     results.sort_by do |d|
       (ORDER.index(d.group) || (ORDER.length + 1)) -
@@ -55,7 +50,7 @@ class Dataset < ApplicationRecord
     elsif geo_id.start_with?('RG')
       'region'
     elsif entso_data_source? || geo_id.start_with?('UKNI') || geo_id.start_with?('GB')
-      'country'
+      'parent'
     elsif geo_id.start_with?('RES', 'ES')
       'res'
     else
@@ -77,16 +72,16 @@ class Dataset < ApplicationRecord
     Etsource.datasets[atlas_key] ||
       Atlas::Dataset::Derived.new(
         key: atlas_key,
-        base_dataset: country,
+        base_dataset: parent,
         geo_id:
       )
   end
 
   def base_dataset
-    return country unless editable_attributes.exists?('analysis_year')
+    return parent unless editable_attributes.exists?('analysis_year')
 
-    base_dataset = "#{country}#{editable_attributes.find('analysis_year').value.to_i}"
-    return country unless Etsource.available_countries.include?(base_dataset)
+    base_dataset = "#{parent}#{editable_attributes.find('analysis_year').value.to_i}"
+    return parent unless Etsource.available_datasets.include?(base_dataset)
 
     base_dataset
   end
@@ -128,12 +123,12 @@ class Dataset < ApplicationRecord
     end
   end
 
-  # This is not the parent dataset as defined in country, but the 'real world'country
-  def actual_country
+  # This is not the parent dataset as defined in parent, but the 'real world'parent
+  def actual_parent
     return geo_id.downcase if entso_data_source?
     return geo_id[..1].downcase if %w[UK BE GB].include?(geo_id[..1])
 
-    country[..1]
+    parent[..1]
   end
 
   # Public: Returns if this dataset retrieves some values from a CSV using queries.

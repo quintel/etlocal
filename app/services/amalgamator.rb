@@ -13,7 +13,7 @@
 #     source_data_year: '2019',
 #     source_dataset_geo_ids: %w[GM306 GM307 GM308],
 #     target_area_name: 'Groningen',                  # Optional
-#     target_country_name: 'nl2019',                  # Optional
+#     target_parent_name: 'nl2019',                  # Optional
 #     migration_slug: 'update_2019'                   # Optional
 #   )
 #
@@ -33,17 +33,17 @@ module Amalgamator
     #   source_data_year: The year over which new data should be calculated
     #   source_dataset_geo_ids: Identifiers for areas to be combined (Array) or a single identifier (String) to be subtracted
     #   target_area_name (optional): Name of the target area, e.g.: 'Groningen'
-    #   target_country_name (optional): Name of the country of the target dataset, e.g. 'nl2019'
+    #   target_parent_name (optional): Name of the parent of the target dataset, e.g. 'nl2019'
     #   migration_slug (optional): Short description of migration in lowercase and underscores, e.g.: 'update_2023'
     def initialize(
       target_dataset_geo_id:, source_data_year:, source_dataset_geo_ids:,
-      target_area_name: nil, target_country_name: nil, migration_slug: nil
+      target_area_name: nil, target_parent_name: nil, migration_slug: nil
     )
       @target_dataset_geo_id = target_dataset_geo_id
       @source_data_year = source_data_year
       @source_dataset_geo_ids = source_dataset_geo_ids
       @target_area_name = target_area_name
-      @target_country_name = target_country_name
+      @target_parent_name = target_parent_name
       @migration_slug = migration_slug
 
       # Infer operation type
@@ -75,7 +75,7 @@ module Amalgamator
       Amalgamator::DatasetExporter.new(
         target_dataset_geo_id: @target_dataset_geo_id,
         target_area_name: @target_area_name,
-        target_country_name: @target_country_name,
+        target_parent_name: @target_parent_name,
         migration_slug: @migration_slug,
         combined_item_values: result,
         source_area_names: @source_datasets.pluck(:name)
@@ -151,9 +151,9 @@ module Amalgamator
         @target_area_name = @target_dataset.name
       end
 
-      # No target_country_name was provided, but it is required. Derive it from the target dataset.
-      if @target_country_name.blank? && @target_dataset_geo_id.start_with?('PV', 'RES')
-        @target_country_name = @target_dataset.country
+      # No target_parent_name was provided, but it is required. Derive it from the target dataset.
+      if @target_parent_name.blank? && @target_dataset_geo_id.start_with?('PV', 'RES')
+        @target_parent_name = @target_dataset.parent
       end
     end
 

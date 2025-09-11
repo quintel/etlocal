@@ -7,8 +7,8 @@ module Etsource
     end]
   end
 
-  def available_countries
-    @available_countries ||= Atlas::Dataset::Full.all.map{ |d| d.area }
+  def available_datasets
+    @available_datasets||= Atlas::Dataset.all.map{ |d| d.area }
   end
 
   # Returns all dataset input keys from sparse graph queries

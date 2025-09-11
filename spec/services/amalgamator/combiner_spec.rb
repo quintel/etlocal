@@ -33,7 +33,7 @@
 #             source_data_year: 1,
 #             source_dataset_geo_ids: [dataset_1.geo_id],
 #             target_area_name: 'Groningen',
-#             target_country_name: 'nl'
+#             target_parent_name: 'nl'
 #           )
 #         end.to raise_error(
 #           ArgumentError,
@@ -46,7 +46,7 @@
 #             source_data_year: 2000,
 #             source_dataset_geo_ids: [dataset_1.geo_id],
 #             target_area_name: 'Groningen',
-#             target_country_name: 'nl'
+#             target_parent_name: 'nl'
 #           )
 #         end.not_to raise_error(ArgumentError)
 #       end
@@ -58,7 +58,7 @@
 #             source_data_year: 2000,
 #             source_dataset_geo_ids: { a: 1, b: 2 },
 #             target_area_name: 'Groningen',
-#             target_country_name: 'nl'
+#             target_parent_name: 'nl'
 #           )
 #         end.to raise_error(
 #           ArgumentError,
@@ -71,7 +71,7 @@
 #             source_data_year: 2000,
 #             source_dataset_geo_ids: [1, 2],
 #             target_area_name: 'Groningen',
-#             target_country_name: 'nl'
+#             target_parent_name: 'nl'
 #           )
 #         end.to raise_error(
 #           ArgumentError,
@@ -84,14 +84,14 @@
 #             source_data_year: 2000,
 #             source_dataset_geo_ids: [dataset_1.geo_id, dataset_2.geo_id],
 #             target_area_name: 'Groningen',
-#             target_country_name: 'nl'
+#             target_parent_name: 'nl'
 #           )
 #         end.not_to raise_error(ArgumentError)
 #       end
 
-#       # target_country_name is required if the target dataset is a province or RES-region
+#       # target_parent_name is required if the target dataset is a province or RES-region
 #       # and a target dataset with the given geo-id does not already exist
-#       it 'validates target_country_name is present if required' do
+#       it 'validates target_parent_name is present if required' do
 #         expect do
 #           described_class.new(
 #             target_dataset_geo_id: 'PV20',
@@ -101,7 +101,7 @@
 #           )
 #         end.to raise_error(
 #           ArgumentError,
-#           /You are attempting to create a combined dataset for a province or RES-region which required a country name/
+#           /You are attempting to create a combined dataset for a province or RES-region which required a parent name/
 #         )
 
 #         expect do
@@ -110,7 +110,7 @@
 #             source_data_year: 2000,
 #             source_dataset_geo_ids: [dataset_1.geo_id, dataset_2.geo_id],
 #             target_area_name: 'Groningen',
-#             target_country_name: 'nl'
+#             target_parent_name: 'nl'
 #           )
 #         end.not_to raise_error(ArgumentError)
 #       end
@@ -144,13 +144,13 @@
 #         combiner.export_data
 #       end
 
-#       it 'derives target_country_name from existing target dataset if not passed as an argument' do
+#       it 'derives target_parent_name from existing target dataset if not passed as an argument' do
 #         expect(
 #           Amalgamator::DatasetExporter
 #         ).to receive(
 #           :new
 #         ).with(
-#           hash_including(target_country_name: 'nl')
+#           hash_including(target_parent_name: 'nl')
 #         ).and_call_original
 
 #         combiner.export_data
@@ -180,7 +180,7 @@
 #         source_data_year: 2000,
 #         source_dataset_geo_ids: [dataset_1.geo_id, dataset_2.geo_id],
 #         target_area_name: 'Groningen',
-#         target_country_name: 'nl'
+#         target_parent_name: 'nl'
 #       )
 #     end
 
@@ -213,7 +213,7 @@
 #           hash_including(
 #           target_dataset_geo_id: 'PV20',
 #           target_area_name: 'Groningen',
-#           target_country_name: 'nl',
+#           target_parent_name: 'nl',
 #           source_area_names: [dataset_1.name, dataset_2.name],
 #           combined_item_values: nil,
 #           migration_slug: '2000'

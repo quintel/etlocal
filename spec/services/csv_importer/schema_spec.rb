@@ -15,12 +15,12 @@ RSpec.describe CSVImporter::Schema do
         expect(schema.mandatory_headers).to include('geo_id')
       end
 
-      it 'does not have "country" as a mandatory header' do
-        expect(schema.mandatory_headers).not_to include('country')
+      it 'does not have "parent" as a mandatory header' do
+        expect(schema.mandatory_headers).not_to include('parent')
       end
 
-      it 'has "country" as a optional header' do
-        expect(schema.optional_headers).to include('country')
+      it 'has "parent" as a optional header' do
+        expect(schema.optional_headers).to include('parent')
       end
 
       it 'does not have "name" as an mandatory header' do
@@ -44,15 +44,15 @@ RSpec.describe CSVImporter::Schema do
         expect(schema.mandatory_headers).to include('geo_id')
       end
 
-      it 'has "country" as a mandatory header' do
-        expect(schema.mandatory_headers).to include('country')
+      it 'has "parent" as a mandatory header' do
+        expect(schema.mandatory_headers).to include('parent')
       end
 
-      it 'does not have "country" as an optional header' do
-        expect(schema.optional_headers).not_to include('country')
+      it 'does not have "parent" as an optional header' do
+        expect(schema.optional_headers).not_to include('parent')
       end
 
-      it 'has "country" as n mandatory header' do
+      it 'has "parent" as n mandatory header' do
         expect(schema.mandatory_headers).to include('name')
       end
 

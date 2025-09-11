@@ -20,7 +20,7 @@ describe DatasetImporter do
       FactoryBot.create(
         :dataset,
         geo_id: 'BU22168000',
-        country:'nl',
+        parent:'nl',
         user: user
       )
     end

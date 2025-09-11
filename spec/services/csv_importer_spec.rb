@@ -93,7 +93,7 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,name,country,present_number_of_apartments_before_1945
+          geo_id,name,parent,present_number_of_apartments_before_1945
           GM0340,My First Area,nl,5
         CSV
       end
@@ -119,7 +119,7 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,name,country,present_number_of_apartments_before_1945
+          geo_id,name,parent,present_number_of_apartments_before_1945
           GM0340,,nl,5
         CSV
       end
@@ -151,7 +151,7 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,name,country,present_number_of_apartments_before_1945
+          geo_id,name,parent,present_number_of_apartments_before_1945
           GM0340,My First Area,nl,5
         CSV
       end
@@ -648,7 +648,7 @@ RSpec.describe CSVImporter do
     end
 
     context 'with create_missing_datasets: true
-      and no name or country in the CSV' do
+      and no name or parent in the CSV' do
       let(:importer) do
         described_class.new(
           data_csv.path,
@@ -659,7 +659,7 @@ RSpec.describe CSVImporter do
 
       it 'raises an error' do
         expect { importer.run }
-          .to raise_error(/is missing mandatory headers: "country", "name"/i)
+          .to raise_error(/is missing mandatory headers: "parent", "name"/i)
       end
     end
 
@@ -675,7 +675,7 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,country,name,number_of_inhabitants
+          geo_id,parent,name,number_of_inhabitants
           GM0340,nl,,5
         CSV
       end
@@ -686,7 +686,7 @@ RSpec.describe CSVImporter do
     end
 
     context 'with create_missing_datasets: true
-      and a blank "country" in the CSV' do
+      and a blank "parent" in the CSV' do
       let(:importer) do
         described_class.new(
           data_csv.path,
@@ -697,18 +697,18 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,country,name,number_of_inhabitants
+          geo_id,parent,name,number_of_inhabitants
           GM0340,,My First Area,5
         CSV
       end
 
       it 'raises an error' do
-        expect { importer.run }.to raise_error(/Country can't be blank/i)
+        expect { importer.run }.to raise_error(/parent can't be blank/i)
       end
     end
 
     context 'with create_missing_datasets: true
-      and name and country in the CSV' do
+      and name and parent in the CSV' do
 
       let(:importer) do
         described_class.new(
@@ -720,7 +720,7 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,country,name,number_of_inhabitants
+          geo_id,parent,name,number_of_inhabitants
           GM0340,nl,My First Area,5
         CSV
       end
@@ -829,7 +829,7 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,country,name,present_number_of_apartments_before_1945
+        geo_id,parent,name,present_number_of_apartments_before_1945
         GM0340,nl,ABC,5
       CSV
     end
@@ -866,7 +866,7 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,country,name,data_source,present_number_of_apartments_before_1945
+        geo_id,parent,name,data_source,present_number_of_apartments_before_1945
         GM0340,nl,ABC,entso,5
       CSV
     end

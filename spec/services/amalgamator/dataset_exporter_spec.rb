@@ -4,7 +4,7 @@ RSpec.describe Amalgamator::DatasetExporter do
 
   let(:target_geo_id) { 'PV20' }
   let(:target_area_name) { 'Groningen' }
-  let(:target_country_name) { 'nl_2019' }
+  let(:target_parent_name) { 'nl_2019' }
   let(:migration_slug) { 'update_2020' }
   let(:combined_item_values) { { electricity: 1, water: 2, coal: 3, gas: 4 } }
   let(:source_area_names) { ['Groningen', 'Haren', 'Hoogkerk', 'Ten Boer'] }
@@ -12,7 +12,7 @@ RSpec.describe Amalgamator::DatasetExporter do
     described_class.new(
       target_dataset_geo_id: target_geo_id,
       target_area_name: target_area_name,
-      target_country_name: target_country_name,
+      target_parent_name: target_parent_name,
       migration_slug: migration_slug,
       combined_item_values: combined_item_values,
       source_area_names: source_area_names
@@ -96,12 +96,12 @@ RSpec.describe Amalgamator::DatasetExporter do
 
       # Check header contents on first line
       expect(csv_contents[0].strip).to eq(
-        "name,geo_id,country,#{combined_item_values.keys.join(',')}"
+        "name,geo_id,parent,#{combined_item_values.keys.join(',')}"
       )
 
       # Check data contents on second line
       expect(csv_contents[1].strip).to eq(
-        "#{target_area_name},#{target_geo_id},#{target_country_name},#{combined_item_values.values.join(',')}"
+        "#{target_area_name},#{target_geo_id},#{target_parent_name},#{combined_item_values.values.join(',')}"
       )
     end
   end

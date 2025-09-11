@@ -3,6 +3,6 @@ FactoryBot.define do
     user
     geo_id { 'test1' }
     name { 'ameland' }
-    country { 'nl' }
+    parent { 'nl' }
   end
 end

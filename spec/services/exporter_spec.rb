@@ -8,7 +8,7 @@ describe Exporter do
     stub_request(:get, "https://beta-local.energytransitionmodel.com/api/v1/exports/#{dataset.id}")
       .to_return(body: JSON.dump([{
         'area' => 'test1_ameland',
-        'country' => 'nl',
+        'parent' => 'nl',
         'electricity_consumption' => 500,
         'gas_consumption' => 500,
         'roof_surface_available_for_pv' => 500,

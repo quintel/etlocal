@@ -26,7 +26,6 @@ class DatasetsController < ApplicationController
       .joins(:commit)
       .where('commits.created_at <= ?', freeze_date)
       .none?
-      Rails.logger.debug "👻 Dataset is blank before freeze_date: #{freeze_date}"
       @in_version = false
       flash.now[:warning] = t('datasets.freeze_date_warning')
     end

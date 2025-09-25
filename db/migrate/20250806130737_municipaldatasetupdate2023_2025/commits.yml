@@ -1015,12 +1015,12 @@
   - present_number_of_terraced_houses_2005_present
   - present_number_of_terraced_houses_before_1945
   message:
-   "The housing stock is calculated using the PBL Referentieverbruiken and EP-Online datasets from 2023."
+   "The housing stock is calculated using the PBL Referentieverbruiken dataset (2023)."
 
 - fields: 
   - present_number_of_buildings
   message:
-   "The present number of buildings is expressed in woningequivalent (weq) and derives from the 'verrijkte BAG' by TNO (source: https://energy.nl/publications/verrijkte-bag-energetische-vraagstukken/). The total floor surface area in a municipality is divided by 130 m2/weq (Handreiking Warmteprogramma, NPLW, 2024, pg. 89)."
+   "The present number of buildings is expressed in woningequivalent (weq) and derives from the 'verrijkte BAG' by TNO (source: https://energy.nl/publications/verrijkte-bag-energetische-vraagstukken/). The total floor surface area in a municipality is divided by 130 m2/weq (Handreiking Warmteprogramma, NPLW, 2024, p. 89)."
 
 - fields: 
   - present_share_of_apartments_1945_1964_in_useful_demand_for_space_heating
@@ -1044,7 +1044,7 @@
   - present_share_of_terraced_houses_2005_present_in_useful_demand_for_space_heating
   - present_share_of_terraced_houses_before_1945_in_useful_demand_for_space_heating
   message:
-   "The useful heat demand per housing type and construction year is calculated based on the 'Functionele vraag/ruimteverwarming' data from the PBL Referentieverbruiken 2023 dataset."
+   "The useful heat demand per housing type and construction year is calculated based on the 'Functionele vraag/ruimteverwarming' data from the PBL Referentieverbruiken dataset (2023)."
 
 - fields: 
   - residences_roof_surface_available_for_pv
@@ -1093,7 +1093,7 @@
   - typical_useful_demand_for_space_heating_terraced_houses_2005_present
   - typical_useful_demand_for_space_heating_terraced_houses_before_1945
   message:
-   "The typical useful demand for space heating is calculated using the PBL Referentieverbruiken and EP-Online datasets from 2023. The energy labels from the EP-Online dataset are mapped to a typical demand in kWh/m2 and then combined with the floor surface area from the PBL Referentieverbruiken dataset to give an average typical demand for each housing type and construction year."
+   "The typical useful demand for space heating is calculated using the PBL Referentieverbruiken dataset (2023). For each ETM housing type - construction period combination the total Functionele vraag/ruimteverwarming is divided by the total Woningkenmerken/oppervlakte."
 
 - fields: 
   - typical_useful_demand_for_space_heating_buildings_present

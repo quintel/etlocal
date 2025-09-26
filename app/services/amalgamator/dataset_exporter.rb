@@ -48,7 +48,7 @@ module Amalgamator
     end
 
     def migration_version
-      @migration_version ||= DateTime.now.strftime('%Y%m%d%H%M%S') + rand(1..9).to_s # Add random factor so that original number is guaranteed when multiple datasets are loaded in at the same time.
+      @migration_version ||= DateTime.now.strftime('%Y%m%d%H%M%S')
     end
 
     def migration_filename
@@ -99,7 +99,7 @@ module Amalgamator
     # Create CSV that contains the data that was combined and returned by the Dataset::ValueProcessor
     # The CSV will contain two lines: the first contains the header, the second contains the data
     def export_data_file
-      if @target_dataset_geo_id.start_with?('PV', 'RES') || @target_dataset_geo_id.match?(/^ES\d{2}$/)
+      if @target_dataset_geo_id.start_with?('PV', 'RES', 'ES')
         mandatory_headers = %w[name geo_id country]
         mandatory_values = [@target_area_name, @target_dataset_geo_id, @target_country_name]
       else

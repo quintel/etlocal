@@ -2,13 +2,8 @@
 # frozen_string_literal: true
 
 require 'shellwords'
-require 'bundler/inline'
-
-gemfile do
-  source 'https://rubygems.org'
-  gem 'tty-prompt'
-  gem 'tty-spinner'
-end
+require 'tty-prompt'
+require 'tty-spinner'
 
 # Setup
 # -----

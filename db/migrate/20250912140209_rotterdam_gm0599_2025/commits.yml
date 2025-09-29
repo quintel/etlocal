@@ -2,24 +2,24 @@
 - fields:
   - input_transport_rail_electricity_demand
   message: |
-    In consultation with the municipality of Rotterdam this value has been increased to match the electricity demand of trams and metros.
+    This value has been increased to match the electricity demand of trams and metros.
 
 - fields:
   - transport_final_demand_for_rail_electricity_transport_freight_train_using_electricity_parent_share
   message: |
-    In consultation with the municipality of Rotterdam, this value was adjusted to match the electricity demand of trams and metros, without altering the final electricity demand of freight trains.
+    This value was adjusted to match the electricity demand of trams and metros, without altering the final electricity demand of freight trains.
 
 - fields:
   - transport_final_demand_for_rail_electricity_transport_passenger_train_using_electricity_parent_share
   message: |
-    In consultation with the municipality of Rotterdam, this value was adjusted to match the electricity demand of trams and metros, without altering the final electricity demand of passenger trains.
+    This value was adjusted to match the electricity demand of trams and metros, without altering the final electricity demand of passenger trains.
 
 - fields:
   - transport_final_demand_for_rail_electricity_transport_tram_using_electricity_parent_share
   message: |
-    In consultation with the municipality of Rotterdam this value has been increased to match the electricity demand of trams and metros.
+    This value has been increased to match the electricity demand of trams and metros.
 
 - fields:
   - input_buildings_electricity_demand
   message: |
-    In consultation with the municipality of Rotterdam, this value was adjusted to exclude the electricity demand of trams and metros from the buildings sector and to reallocate it to transport.
+    This value was adjusted to exclude the electricity demand of trams and metros from the buildings sector and to reallocate it to transport.

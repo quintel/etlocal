@@ -79,9 +79,7 @@ groups:
             - present_number_of_apartments_2005_present
       - key: typical_useful_demand_for_space_heating_apartments_future
         unit: 'kWh/m<sup>2</sup>'
-        combination_method:
-        weighted_average:
-          - households_number_of_apartments_future
+        combination_method: average
       - key: typical_useful_demand_for_space_heating_detached_houses_before_1945
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
@@ -109,9 +107,7 @@ groups:
             - present_number_of_detached_houses_2005_present
       - key: typical_useful_demand_for_space_heating_detached_houses_future
         unit: 'kWh/m<sup>2</sup>'
-        combination_method:
-        weighted_average:
-          - households_number_of_apartments_future
+        combination_method: average
       - key: typical_useful_demand_for_space_heating_semi_detached_houses_before_1945
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
@@ -139,9 +135,7 @@ groups:
             - present_number_of_semi_detached_houses_2005_present
       - key: typical_useful_demand_for_space_heating_semi_detached_houses_future
         unit: 'kWh/m<sup>2</sup>'
-        combination_method:
-        weighted_average:
-          - households_number_of_apartments_future
+        combination_method: average
       - key: typical_useful_demand_for_space_heating_terraced_houses_before_1945
         unit: 'kWh/m<sup>2</sup>'
         combination_method:
@@ -169,6 +163,7 @@ groups:
             - present_number_of_terraced_houses_2005_present
       - key: typical_useful_demand_for_space_heating_terraced_houses_future
         unit: 'kWh/m<sup>2</sup>'
+        combination_method: average
 
   - header: share_useful_demand_houses
     type: slider

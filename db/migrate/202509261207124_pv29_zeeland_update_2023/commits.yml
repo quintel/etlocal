@@ -1,0 +1,6 @@
+---
+- fields:
+  - :all
+  message: 'Optelling van de volgende gebieden: Borsele, Goes, Hulst, Kapelle, Middelburg,
+    Noord-Beveland, Reimerswaal, Schouwen-Duiveland, Sluis, Terneuzen, Tholen, Veere,
+    Vlissingen'

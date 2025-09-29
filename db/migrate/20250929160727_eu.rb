@@ -1,6 +1,6 @@
-class BaseDatasetEu < ActiveRecord::Migration[5.0]
+class Eu < ActiveRecord::Migration[7.2]
   def self.up
-    directory    = Rails.root.join('db/migrate/20250925153920_base_dataset_eu')
+    directory    = Rails.root.join('db/migrate/20250929160727_eu')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/quintel/atlas.git
-  revision: 267acc89ff2c6faf441d017e63a97f657a89b26c
-  ref: 267acc8
+  revision: b3ef5c84e71dcf0343530c3bc25b0ba336dfaf01
+  ref: b3ef5c8
   specs:
     atlas (1.0.0)
       activemodel (>= 7)
@@ -30,8 +30,8 @@ GIT
 
 GIT
   remote: https://github.com/quintel/transformer.git
-  revision: cb766b18ba5564a3c894d848d9a1530c4bbdd588
-  ref: cb766b1
+  revision: 8669dd17e70e672424ca69b8a56084993cec1ff0
+  ref: 8669dd1
   specs:
     transformer (1.0.0)
       atlas (~> 1.0)
@@ -123,7 +123,7 @@ GEM
     base64 (0.3.0)
     bcrypt (3.1.20)
     benchmark (0.4.1)
-    bigdecimal (3.2.2)
+    bigdecimal (3.2.3)
     bindex (0.8.1)
     bootsnap (1.18.6)
       msgpack (~> 1.2)
@@ -145,7 +145,7 @@ GEM
     config (5.5.2)
       deep_merge (~> 1.2, >= 1.2.1)
       ostruct
-    connection_pool (2.5.3)
+    connection_pool (2.5.4)
     crack (1.0.0)
       bigdecimal
       rexml
@@ -200,7 +200,7 @@ GEM
       dry-logic (~> 1.4)
       zeitwerk (~> 2.6)
     equalizer (0.0.11)
-    erb (5.0.1)
+    erb (5.0.2)
     erubi (1.13.1)
     execjs (2.10.0)
     factory_bot (6.5.3)
@@ -230,7 +230,7 @@ GEM
       addressable (~> 2.8)
       process_executer (~> 1.3)
       rchardet (~> 1.9)
-    globalid (1.2.1)
+    globalid (1.3.0)
       activesupport (>= 6.1)
     gpgme (2.0.24)
       mini_portile2 (~> 2.7)
@@ -243,7 +243,7 @@ GEM
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
-    io-console (0.8.0)
+    io-console (0.8.1)
     io-like (0.3.1)
     irb (1.15.2)
       pp (>= 0.6.0)
@@ -278,7 +278,7 @@ GEM
       net-imap
       net-pop
       net-smtp
-    marcel (1.0.4)
+    marcel (1.1.0)
     matrix (0.4.2)
     method_source (1.1.0)
     mime-types (3.7.0)
@@ -294,7 +294,7 @@ GEM
     mysql2 (0.5.6)
     net-http (0.6.0)
       uri
-    net-imap (0.5.8)
+    net-imap (0.5.10)
       date
       net-protocol
     net-pop (0.1.2)
@@ -305,24 +305,24 @@ GEM
       net-protocol
     netrc (0.11.0)
     nio4r (2.7.4)
-    nokogiri (1.18.9)
+    nokogiri (1.18.10)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.18.9-aarch64-linux-gnu)
+    nokogiri (1.18.10-aarch64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.9-aarch64-linux-musl)
+    nokogiri (1.18.10-aarch64-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.9-arm-linux-gnu)
+    nokogiri (1.18.10-arm-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.9-arm-linux-musl)
+    nokogiri (1.18.10-arm-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.9-arm64-darwin)
+    nokogiri (1.18.10-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.9-x86_64-darwin)
+    nokogiri (1.18.10-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.9-x86_64-linux-gnu)
+    nokogiri (1.18.10-x86_64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.9-x86_64-linux-musl)
+    nokogiri (1.18.10-x86_64-linux-musl)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     ostruct (0.6.1)
@@ -399,11 +399,11 @@ GEM
     rb-inotify (0.11.1)
       ffi (~> 1.0)
     rchardet (1.9.0)
-    rdoc (6.14.0)
+    rdoc (6.14.2)
       erb
       psych (>= 4.0.0)
     regexp_parser (2.10.0)
-    reline (0.6.1)
+    reline (0.6.2)
       io-console (~> 0.5)
     remotipart (1.4.4)
     responders (3.1.1)

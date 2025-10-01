@@ -10,6 +10,7 @@ en:
         coast_line: Coast line
         areable_land: Arable land
         number_of_inhabitants: Number of inhabitants
+        parent: Parent
 
         co2_emission_1990: 'CO<sub>2</sub> emissions in 1990'
         co2_emission_1990_aviation_bunkers: 'CO<sub>2</sub> emissions international aviation in 1990'

@@ -6,6 +6,4 @@ groups:
       - key: analysis_year
         unit: '#'
       - key: parent
-        unit: ''
-      - key: base_dataset
-        unit: ''
+        unit: 'string'

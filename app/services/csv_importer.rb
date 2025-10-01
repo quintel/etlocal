@@ -152,18 +152,23 @@ class CSVImporter
   def run_row(row)
     dataset = dataset_from_row(row)
 
-    if row['name'].present? && dataset.name != row['name'].strip
-      dataset.name = row['name'].strip
-      dataset.save!
-    end
+    update_if_changed(dataset, :name, row['name'])
+    update_if_changed(dataset, :parent, row['parent'])
 
-    commits.map do |c|
+    commits.filter_map do |c|
       commit = c.build_commit(dataset, row)
+      commit.save! if commit.dataset_edits.any?
+      commit if commit.persisted?
+    end
+  end
 
-      next if commit.dataset_edits.none?
+  def update_if_changed(dataset, attribute, value)
+    return unless value.present?
 
-      commit.save!
-      commit
+    stripped = value.strip
+    if dataset.public_send(attribute) != stripped
+      dataset.public_send("#{attribute}=", stripped)
+      dataset.save!
     end
   end
 end

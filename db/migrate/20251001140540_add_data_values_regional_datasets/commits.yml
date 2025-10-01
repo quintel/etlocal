@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    Add dataset attributes to etlocal datasets.

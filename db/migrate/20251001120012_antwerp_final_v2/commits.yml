@@ -1,5 +1,0 @@
----
-- fields:
-  - :all
-  message:
-    Every CSV column will be used in this commit.

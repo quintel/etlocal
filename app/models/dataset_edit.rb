@@ -1,32 +1,40 @@
 class DatasetEdit < ApplicationRecord
   belongs_to :commit
 
-  validates_presence_of :key
-  validates_presence_of :value
-  validate :validate_attribute_allowed
+  validates :key, presence: true
+  validate :attribute_allowed
+  validate :value_presence
 
-  scope :before, ->(date) { joins(:commit).where("commits.created_at <= ?", date) if date.present? }
+  scope :before, ->(date) { joins(:commit).where(commits: { created_at: ..date }) if date }
+  scope :sorted, -> { order(created_at: :desc) }
 
-  def self.sorted
-    order('`created_at` DESC')
-  end
-
-  def user
-    commit.user
-  end
+  delegate :user, to: :commit
 
   def creator
     user.group ? user.group.key.humanize : user.name
   end
 
   def as_json(*)
-    super.slice('key', 'value')
+    { key: key, value: cast_value }
+  end
+
+  def cast_value
+    is_a?(BooleanDatasetEdit) ? boolean_value : value
   end
 
   private
 
-  def validate_attribute_allowed
-    return if key.blank? || value.blank? || commit.nil? || commit.dataset.nil?
+  def value_presence
+    return if is_a?(BooleanDatasetEdit) || value.present?
+
+    errors.add(:value, "can't be blank")
+  end
+
+  def attribute_allowed
+    return if key.blank? || commit&.dataset.nil?
+
+    val = cast_value
+    return if val.blank?
 
     item = EditableAttributesCollection.item(key)
 
@@ -35,9 +43,8 @@ class DatasetEdit < ApplicationRecord
       return
     end
 
-    # Verifies that the dataset allows this field to be edited.
-    unless item.editable?(commit.dataset)
-      errors.add(:value, 'is not allowed to be changed (update the energy balance CSV instead)')
-    end
+    return if item.editable?(commit.dataset)
+
+    errors.add(:value, 'is not allowed to be changed (update the energy balance CSV instead)')
   end
 end

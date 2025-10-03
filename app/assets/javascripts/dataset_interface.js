@@ -12,6 +12,9 @@ var DatasetInterface = (function () {
                     .find('.toggle-group')
                     .toggleClass('active', $(e.target).is(':checked'));
 
+                if ($(e.target).hasClass('boolean')) {
+                    $(e.target).siblings('.value_input').val($(e.target).is(':checked') ? 1 : 0);
+                }
                 DatasetInterface.ChangeTrigger.trigger(e.target);
             });
     }

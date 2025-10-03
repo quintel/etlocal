@@ -47,19 +47,48 @@
                   span.val data= conversions_for(interface_item.key)
                     - if policy(@dataset).edit?
                       - if interface_item.editable?(@dataset)
-                        = text_field_tag interface_item.key, nil, class: 'display_input', placeholder: interface_item.default, data: { precision: interface_item.precision }
-                        = form.hidden_field interface_item.key, class: 'value_input'
+                        - if interface_item.unit == 'string'
+                          - value = form.object.public_send(interface_item.key) rescue nil
+                          - if value.nil? && defined?(dataset) && dataset.respond_to?(interface_item.key)
+                            - value = dataset.public_send(interface_item.key)
+                          / Parent (and other string) attributes are not versioned via dataset_edits; show read-only to avoid misleading edits
+                          = text_field_tag interface_item.key, value, class: 'display_input string', disabled: true
+                        - elsif interface_item.unit == 'boolean'
+                          - value = form.object.public_send(interface_item.key) rescue nil
+                          - if value.nil? && defined?(dataset) && dataset.respond_to?(interface_item.key)
+                            - value = dataset.public_send(interface_item.key)
+                          - checked = value == true || value == 1
+                          = check_box_tag interface_item.key, 1, checked, class: 'display_input boolean'
+                          = form.hidden_field interface_item.key, class: 'value_input'
+                        - else
+                          = text_field_tag interface_item.key, nil, class: 'display_input', placeholder: interface_item.default, data: { precision: interface_item.precision }
+                          = form.hidden_field interface_item.key, class: 'value_input'
                       - else
-                        = text_field_tag interface_item.key, number_with_precision(form.object.public_send(interface_item.key), precision: interface_item.precision, strip_insignificant_zeros: true), disabled: true
+                        - value = form.object.public_send(interface_item.key)
+                        - if value.nil? && defined?(dataset) && dataset.respond_to?(interface_item.key)
+                          - value = dataset.public_send(interface_item.key)
+                        - if interface_item.unit == 'string'
+                          = text_field_tag interface_item.key, value, disabled: true, class: 'display_input string'
+                        - elsif interface_item.unit == 'boolean'
+                          - checked = value == true || value == 1
+                          = check_box_tag interface_item.key, 1, checked, disabled: true, class: 'display_input boolean'
+                        - else
+                          = text_field_tag interface_item.key, number_with_precision(value, precision: interface_item.precision, strip_insignificant_zeros: true), disabled: true
                         = form.hidden_field interface_item.key, class: 'value_input'
 
                     - else
                       span.read-only
                         - value = form.object.public_send(interface_item.key)
+                        - if value.nil? && defined?(dataset) && dataset.respond_to?(interface_item.key)
+                          - value = dataset.public_send(interface_item.key)
                         - if value.nil?
                           span.missing-message = t('datasets.missing_value')
                         - else
-                          - if interface_item.key == :analysis_year
+                          - if interface_item.unit == 'string'
+                            = value
+                          - elsif interface_item.unit == 'boolean'
+                            = value == true || value == 1 ? 'True' : 'False'
+                          - elsif interface_item.key == :analysis_year
                             = value.round
                           - elsif interface_item.unit == '€'
                             = number_to_currency(value, precision: 0, unit: '')
@@ -68,7 +97,8 @@
                         | &nbsp;
 
                   span.unit data-to= interface_item.unit
-                    = I18n.t("units.#{ interface_item.key }.from", default: interface_item.unit)&.html_safe
+                    - unless interface_item.unit == 'string' || interface_item.unit == 'boolean'
+                      = I18n.t("units.#{ interface_item.key }.from", default: interface_item.unit)&.html_safe
                 .clear
 
           .history.hidden class= interface_item.key
@@ -81,7 +111,7 @@
               strong= I18n.t("dataset_edits.history")
               - @dataset.editable_attributes.edits_for(interface_item.key).each do |dataset_edit|
                 .change
-                  .created_by
+                  .created-by
                     .to
                       => I18n.t("dataset_edits.changed_to", value: number_to_currency(dataset_edit.value, precision: 2, unit: ''))
                     .by

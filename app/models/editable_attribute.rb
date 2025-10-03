@@ -46,7 +46,7 @@ class EditableAttribute
       return @dataset.execute_query(@entso_query)
     end
 
-    latest ? latest.value : default
+    latest ? latest.cast_value : default
   end
 
   def editable?(dataset)

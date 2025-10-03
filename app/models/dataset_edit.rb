@@ -9,7 +9,7 @@ class DatasetEdit < ApplicationRecord
 
   BOOLEAN_TYPE = ActiveRecord::Type::Boolean.new
 
-  scope :before, ->(date) { joins(:commit).where(commits: { created_at: ..date }) if date }
+  scope :before, ->(date) { joins(:commit).where("commits.created_at <= ?", date) if date.present? }
   scope :sorted, -> { order(created_at: :desc) }
 
   delegate :user, :dataset, to: :commit
@@ -26,25 +26,29 @@ class DatasetEdit < ApplicationRecord
     end
 
     def build_for(commit, key, value)
-      edit_type = boolean_attribute?(key) ? BooleanDatasetEdit : DatasetEdit
-      attributes = { key: key }
-
-      if edit_type == BooleanDatasetEdit
-        attributes.merge!(type: BooleanDatasetEdit.name, boolean_value: value)
+      if boolean_attribute?(key)
+        commit.dataset_edits.build(
+          key: key,
+          type: BooleanDatasetEdit.name,
+          boolean_value: value
+        )
       else
-        attributes[:value] = value
+        commit.dataset_edits.build(key: key, value: value)
       end
-
-      commit.dataset_edits.build(attributes)
     end
 
     def current_value_for(attribute)
-      attribute&.latest&.cast_value || attribute&.value
+      return unless attribute
+
+      latest = attribute.latest
+      return latest.cast_value if latest
+
+      attribute.value
     end
   end
 
   def creator
-    user.group? ? user.group.key.humanize : user.name
+    user.group ? user.group.key.humanize : user.name
   end
 
   def as_json(*)
@@ -52,17 +56,19 @@ class DatasetEdit < ApplicationRecord
   end
 
   def cast_value
-    boolean_type? ? boolean_value : value
+    is_a?(BooleanDatasetEdit) ? boolean_value : value
   end
 
   private
 
   def value_presence
-    errors.add(:value, "can't be blank") unless boolean_type? || value.present?
+    return if boolean_type? || value.present?
+
+    errors.add(:value, "can't be blank")
   end
 
   def attribute_allowed
-    return if key.blank? || dataset.nil?
+    return if key.blank? || commit&.dataset.nil?
 
     val = cast_value
     return if val.blank?
@@ -74,12 +80,12 @@ class DatasetEdit < ApplicationRecord
       return
     end
 
-    return if item.editable?(dataset)
+    return if item.editable?(commit.dataset)
 
     errors.add(:value, 'is not allowed to be changed (update the energy balance CSV instead)')
   end
 
   def boolean_type?
-    is_a?(BooleanDatasetEdit)
+    is_a?(BooleanDatasetEdit) || type == 'BooleanDatasetEdit'
   end
 end

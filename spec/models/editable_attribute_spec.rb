@@ -61,4 +61,15 @@ describe EditableAttribute do
       end
     end
   end
+
+  describe 'when the latest edit is a BooleanDatasetEdit' do
+    let(:dataset) { FactoryBot.create(:dataset) }
+    let(:commit) { FactoryBot.create(:commit, dataset: dataset) }
+    let!(:edit) { FactoryBot.create(:boolean_dataset_edit, commit: commit, key: 'has_mountains', boolean_value: true) }
+
+    it 'returns the boolean_value from the edit' do
+      attribute = described_class.new(dataset, 'has_mountains', { 'has_mountains' => [edit] })
+      expect(attribute.value).to eq(true)
+    end
+  end
 end

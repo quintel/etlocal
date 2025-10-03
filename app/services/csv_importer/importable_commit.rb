@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CSVImporter
+  # Internal: Describes a collection of attributes which will be imported and
+  # a message to be assigned to the resulting commit.
   class ImportableCommit
     attr_reader :keys, :message
 
@@ -10,30 +12,37 @@ class CSVImporter
     end
 
     def build_commit(dataset, row)
+      commit = Commit.new(dataset: dataset, message: @message, user: User.robot)
+
       raise 'Commit is missing a message' unless @message.present?
 
-      Commit.new(dataset: dataset, message: @message, user: User.robot).tap do |commit|
-        build_edits_for(commit, dataset, row)
-      end
-    end
-
-    private
-
-    def build_edits_for(commit, dataset, row)
       current = dataset.editable_attributes
 
       @keys.each do |key|
-        value = DatasetEdit.cast_from_csv(key, row[key.to_s])
-        next if value.nil?
-
+        raw_value = row[key.to_s]
         attribute = current.find(key)
+        latest_edit = attribute&.latest
+        has_existing_edit = latest_edit.present?
+        value = DatasetEdit.cast_from_csv(key, raw_value)
+        if value.nil?
+          next
+        end
+
         current_value = DatasetEdit.current_value_for(attribute)
 
-        # Only skip if value matches and there's an existing edit
-        next if value == current_value && attribute&.latest.present?
+        if value == current_value
+          if has_existing_edit
+            next
+          end
+
+          DatasetEdit.build_for(commit, key, value)
+          next
+        end
 
         DatasetEdit.build_for(commit, key, value)
       end
+
+      commit
     end
   end
 end

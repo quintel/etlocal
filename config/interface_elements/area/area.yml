@@ -18,12 +18,6 @@ groups:
         unit: 'boolean'
       - key: has_solar_csp
         unit: 'boolean'
-      - key: has_mountains
-        unit: 'boolean'
-      - key: has_offshore_solar
-        unit: 'boolean'
-      - key: has_solar_csp
-        unit: 'boolean'
       - key: has_merit_order
         unit: 'boolean'
       - key: has_weather_curves

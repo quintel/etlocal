@@ -12,37 +12,33 @@ class CSVImporter
     end
 
     def build_commit(dataset, row)
-      commit = Commit.new(dataset: dataset, message: @message, user: User.robot)
-
       raise 'Commit is missing a message' unless @message.present?
 
+      commit = Commit.new(dataset: dataset, message: @message, user: User.robot)
       current = dataset.editable_attributes
 
       @keys.each do |key|
-        raw_value = row[key.to_s]
+        value = DatasetEdit.cast_from_csv(key, row[key.to_s])
+        next if value.nil?
+
         attribute = current.find(key)
-        latest_edit = attribute&.latest
-        has_existing_edit = latest_edit.present?
-        value = DatasetEdit.cast_from_csv(key, raw_value)
-        if value.nil?
-          next
-        end
 
-        current_value = DatasetEdit.current_value_for(attribute)
+        # Skip if value unchanged and already has an edit
+        next if value_unchanged_with_existing_edit?(value, attribute)
 
-        if value == current_value
-          if has_existing_edit
-            next
-          end
-
-          DatasetEdit.build_for(commit, key, value)
-          next
-        end
-
-        DatasetEdit.build_for(commit, key, value)
+        commit.add_dataset_edit(key, value)
       end
 
       commit
+    end
+
+    private
+
+    def value_unchanged_with_existing_edit?(value, attribute)
+      return false unless attribute&.latest
+
+      current_value = attribute.latest.cast_value
+      value == current_value
     end
   end
 end

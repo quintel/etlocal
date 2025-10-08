@@ -17,33 +17,11 @@ class DatasetEdit < ApplicationRecord
   class << self
     def cast_from_csv(key, raw_value)
       return if raw_value.nil?
-
       boolean_attribute?(key) ? BOOLEAN_TYPE.cast(raw_value) : raw_value
     end
 
     def boolean_attribute?(key)
       InterfaceItem.find(key.to_sym)&.unit == 'boolean'
-    end
-
-    def build_for(commit, key, value)
-      if boolean_attribute?(key)
-        commit.dataset_edits.build(
-          key: key,
-          type: BooleanDatasetEdit.name,
-          boolean_value: value
-        )
-      else
-        commit.dataset_edits.build(key: key, value: value)
-      end
-    end
-
-    def current_value_for(attribute)
-      return unless attribute
-
-      latest = attribute.latest
-      return latest.cast_value if latest
-
-      attribute.value
     end
   end
 
@@ -63,7 +41,6 @@ class DatasetEdit < ApplicationRecord
 
   def value_presence
     return if boolean_type? || value.present?
-
     errors.add(:value, "can't be blank")
   end
 

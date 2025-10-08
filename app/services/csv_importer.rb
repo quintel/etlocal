@@ -27,14 +27,14 @@ class CSVImporter
     @errors         = []
   end
 
-  # Public: Reads the CSV and commits file, creating a new commits for each
+  # Public: Reads the CSV and commits file, creating new commits for each
   # dataset as appropriate.
   #
   # If `run` is provided a block, it will yield the CSV row and a callable which
   # will trigger importing the row data. For example:
   #
   #   csv_importer.run do |row, runner|
-  #     print "Importing #{row['geo_id']... "
+  #     print "Importing #{row['geo_id']}... "
   #     runner.call
   #     puts 'done!'
   #   end
@@ -152,23 +152,26 @@ class CSVImporter
   def run_row(row)
     dataset = dataset_from_row(row)
 
-    update_if_changed(dataset, :name, row['name'])
-    update_if_changed(dataset, :parent, row['parent'])
+    update_dataset_attribute(dataset, :name, row['name'])
+    update_dataset_attribute(dataset, :parent, row['parent'])
 
-    commits.filter_map do |c|
-      commit = c.build_commit(dataset, row)
+    commits.filter_map do |importable_commit|
+      commit = importable_commit.build_commit(dataset, row)
       commit.save! if commit.dataset_edits.any?
       commit if commit.persisted?
     end
   end
 
-  def update_if_changed(dataset, attribute, value)
-    return unless value.present?
+  # Internal: Updates a dataset attribute if the value has changed.
+  def update_dataset_attribute(dataset, attribute, new_value)
+    return unless new_value.present?
 
-    stripped = value.strip
-    if dataset.public_send(attribute) != stripped
-      dataset.public_send("#{attribute}=", stripped)
-      dataset.save!
-    end
+    normalized_value = new_value.strip
+    current_value = dataset.public_send(attribute)
+
+    return if current_value == normalized_value
+
+    dataset.public_send("#{attribute}=", normalized_value)
+    dataset.save!
   end
 end

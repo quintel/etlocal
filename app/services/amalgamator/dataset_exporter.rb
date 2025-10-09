@@ -102,7 +102,7 @@ module Amalgamator
     def export_data_file
       if @target_dataset_geo_id.start_with?('PV', 'RES', 'ES')
         mandatory_headers = %w[name geo_id parent]
-        mandatory_values = [@target_area_name, @target_dataset_geo_id, @target_country_name]
+        mandatory_values = [@target_area_name, @target_dataset_geo_id, @target_parent_name]
       else
         mandatory_headers = %w[geo_id]
         mandatory_values = [@target_dataset_geo_id]

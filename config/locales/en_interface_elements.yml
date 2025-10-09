@@ -626,8 +626,8 @@ en:
         energy_greengas_gasification_wet_biomass_energy_greengas_production_child_share: Wet gasification
         energy_greengas_upgrade_biogas_energy_greengas_production_child_share: Fermentation
 
-        energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: Biogenic
-        energy_distribution_non_biogenic_waste_energy_distribution_waste_mix_child_share: Non-biogenic
+        input_percentage_of_biogenic_waste_energy_distribution_waste_mix: Biogenic
+        input_percentage_of_non_biogenic_waste_energy_distribution_waste_mix: Non-biogenic
 
         energy_extraction_natural_gas_demand: Natural gas extraction
         energy_extraction_coal_demand: Coal extraction

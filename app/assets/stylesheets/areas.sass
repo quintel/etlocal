@@ -129,7 +129,7 @@ $map-height: 100%
             background-color: $bg-color
             color: #000
 
-        select#country-select
+        select#parent-select
           border: 1px solid rgba(0, 0, 0, 0.3)
           border-right-width: 0px
           border-radius: 4px 0 0 4px
@@ -207,7 +207,7 @@ $map-height: 100%
       display: none
       margin-bottom: 75px
       position: relative
-      width: 960px
+      width: 100%
       z-index: 2
 
       .intro
@@ -262,7 +262,10 @@ $map-height: 100%
 
           .field
             span.unit
+              min-width: 5em
+              display: inline-block
               margin-left: 5px
+              white-space: nowrap
 
       .button-close
         position: absolute

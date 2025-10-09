@@ -6,11 +6,11 @@ class DatasetEditForm
     attribute item.key, Float, default: item.default
   end
 
-  # Attribute country is needed to validate the user inputs
+  # Attribute parent is needed to validate the user inputs
   # in the form (see CalculableValidator)
-  attribute :country, String
+  attribute :parent, String
 
-  validates_presence_of :number_of_inhabitants, :country
+  validates_presence_of :number_of_inhabitants, :parent
   validates :number_of_inhabitants, numericality: { greater_than: 0 }
   validates_with CalculableValidator
 
@@ -19,7 +19,7 @@ class DatasetEditForm
       previous = dataset.editable_attributes.as_json
       commit = dataset.commits.build
 
-      attributes.except(:country).each_pair do |key, val|
+      attributes.except(:parent).each_pair do |key, val|
         item = EditableAttributesCollection.item(key)
         next unless val.present? && previous[key.to_s] != val && item.editable?(dataset)
 

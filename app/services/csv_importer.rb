@@ -27,14 +27,14 @@ class CSVImporter
     @errors         = []
   end
 
-  # Public: Reads the CSV and commits file, creating a new commits for each
+  # Public: Reads the CSV and commits file, creating new commits for each
   # dataset as appropriate.
   #
   # If `run` is provided a block, it will yield the CSV row and a callable which
   # will trigger importing the row data. For example:
   #
   #   csv_importer.run do |row, runner|
-  #     print "Importing #{row['geo_id']... "
+  #     print "Importing #{row['geo_id']}... "
   #     runner.call
   #     puts 'done!'
   #   end
@@ -137,7 +137,7 @@ class CSVImporter
 
     if @create_missing && datasets.none?
       Dataset.create!(
-        row.to_h.slice('geo_id', 'name', 'country', 'data_source').merge(user: User.robot)
+        row.to_h.slice('geo_id', 'name', 'parent', 'data_source').merge(user: User.robot)
       )
     else
       datasets.first!
@@ -152,18 +152,26 @@ class CSVImporter
   def run_row(row)
     dataset = dataset_from_row(row)
 
-    if row['name'].present? && dataset.name != row['name'].strip
-      dataset.name = row['name'].strip
-      dataset.save!
+    update_dataset_attribute(dataset, :name, row['name'])
+    update_dataset_attribute(dataset, :parent, row['parent'])
+
+    commits.filter_map do |importable_commit|
+      commit = importable_commit.build_commit(dataset, row)
+      commit.save! if commit.dataset_edits.any?
+      commit if commit.persisted?
     end
+  end
 
-    commits.map do |c|
-      commit = c.build_commit(dataset, row)
+  # Internal: Updates a dataset attribute if the value has changed.
+  def update_dataset_attribute(dataset, attribute, new_value)
+    return unless new_value.present?
 
-      next if commit.dataset_edits.none?
+    normalized_value = new_value.strip
+    current_value = dataset.public_send(attribute)
 
-      commit.save!
-      commit
-    end
+    return if current_value == normalized_value
+
+    dataset.public_send("#{attribute}=", normalized_value)
+    dataset.save!
   end
 end

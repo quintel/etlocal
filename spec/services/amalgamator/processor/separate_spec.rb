@@ -165,22 +165,28 @@ RSpec.describe Amalgamator::Processor::Separate do
 
   def mock_editable_attributes(values, dataset_index, weights = nil)
     attributes = item_keys.each_with_index.map do |key, i|
-      instance_double(EditableAttribute, key: key.to_s, value: values[i][dataset_index])
+      val = values[i][dataset_index]
+      edit_double = instance_double(DatasetEdit, cast_value: val, value: val)
+      EditableAttribute.new(
+        dataset_a, # dataset reference not used for value retrieval in tests
+        key.to_s,
+        { key.to_s => [edit_double] }
+      )
     end
 
     collection = instance_double(EditableAttributesCollection)
 
-    # Add weights to the attributes if provided
     if weights
       weight_attributes = item_keys.each_with_index.map do |key, i|
-        instance_double(EditableAttribute, key: "weight_#{key}", value: weights[i])
+        val = weights[i]
+        edit_double = instance_double(DatasetEdit, cast_value: val, value: val)
+        EditableAttribute.new(dataset_a, "weight_#{key}", { "weight_#{key}" => [edit_double] })
       end
       attributes.concat(weight_attributes)
     end
 
-    # Simulate the behavior of `find` method to return the correct attribute for each key
-    allow(collection).to receive(:find) do |key|
-      attributes.detect { |attr| attr.key == key }
+    allow(collection).to receive(:find) do |k|
+      attributes.detect { |attr| attr.key == k }
     end
 
     collection
@@ -193,10 +199,11 @@ RSpec.describe Amalgamator::Processor::Separate do
       # Mock the @attributes instance variable
       attributes = items.map do |item|
         value = dataset_values[di][item.key.to_s]
+        edit_double = instance_double(DatasetEdit, cast_value: value, value: value)
         EditableAttribute.new(
           dataset,
           item.key.to_s,
-          { item.key.to_s => [OpenStruct.new(value: value)] },
+          { item.key.to_s => [edit_double] },
           item.default,
           entso_query: item.entso
         )

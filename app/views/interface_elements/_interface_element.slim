@@ -19,7 +19,7 @@
               .slider-wrapper.input
                 = form.label interface_item.key, DatasetEditForm.human_attribute_name(interface_item.key).html_safe
 
-                .slider data-key= interface_item.key data-flexible= ('flex' if interface_item.flexible) data-editable= (policy(@dataset).edit? && interface_item.editable?(@dataset) ? '1' : '0')
+                .slider data= slider_data_attributes(interface_item, @dataset)
                 span.history data-key= interface_item.key
                   .fa.fa-info
 
@@ -46,29 +46,36 @@
 
                   span.val data= conversions_for(interface_item.key)
                     - if policy(@dataset).edit?
+                      - value = interface_item_value(form, interface_item, dataset)
                       - if interface_item.editable?(@dataset)
-                        = text_field_tag interface_item.key, nil, class: 'display_input', placeholder: interface_item.default, data: { precision: interface_item.precision }
-                        = form.hidden_field interface_item.key, class: 'value_input'
+                        - if interface_item.unit == 'string'
+                          = text_field_tag interface_item.key, value, class: 'display_input string', disabled: true
+                        - elsif interface_item.unit == 'boolean'
+                          = check_box_tag interface_item.key, 1, boolean_checked?(value), class: 'display_input boolean'
+                          = form.hidden_field interface_item.key, class: 'value_input'
+                        - else
+                          = text_field_tag interface_item.key, nil, class: 'display_input', placeholder: interface_item.default, data: { precision: interface_item.precision }
+                          = form.hidden_field interface_item.key, class: 'value_input'
                       - else
-                        = text_field_tag interface_item.key, number_with_precision(form.object.public_send(interface_item.key), precision: interface_item.precision, strip_insignificant_zeros: true), disabled: true
+                        - if interface_item.unit == 'string'
+                          = text_field_tag interface_item.key, value, disabled: true, class: 'display_input string'
+                        - elsif interface_item.unit == 'boolean'
+                          = check_box_tag interface_item.key, 1, boolean_checked?(value), disabled: true, class: 'display_input boolean'
+                        - else
+                          = text_field_tag interface_item.key, number_with_precision(value, precision: interface_item.precision, strip_insignificant_zeros: true), disabled: true
                         = form.hidden_field interface_item.key, class: 'value_input'
 
                     - else
                       span.read-only
-                        - value = form.object.public_send(interface_item.key)
+                        - value = interface_item_value(form, interface_item, dataset)
                         - if value.nil?
                           span.missing-message = t('datasets.missing_value')
                         - else
-                          - if interface_item.key == :analysis_year
-                            = value.round
-                          - elsif interface_item.unit == '€'
-                            = number_to_currency(value, precision: 0, unit: '')
-                          - else
-                            = number_with_precision(value, precision: interface_item.precision, strip_insignificant_zeros: true)
+                          = format_display_value(value, interface_item)
                         | &nbsp;
 
                   span.unit data-to= interface_item.unit
-                    = I18n.t("units.#{ interface_item.key }.from", default: interface_item.unit)&.html_safe
+                    = display_unit_for(interface_item)
                 .clear
 
           .history.hidden class= interface_item.key
@@ -81,7 +88,7 @@
               strong= I18n.t("dataset_edits.history")
               - @dataset.editable_attributes.edits_for(interface_item.key).each do |dataset_edit|
                 .change
-                  .created_by
+                  .created-by
                     .to
                       => I18n.t("dataset_edits.changed_to", value: number_to_currency(dataset_edit.value, precision: 2, unit: ''))
                     .by
@@ -93,12 +100,9 @@
               strong= I18n.t("dataset_edits.history")
               .change
                 .reason
-                  - if I18n.exists?("data_source_messages.#{@dataset.data_source}.#{interface_element.key}")
-                    = simple_format I18n.t("data_source_messages.#{@dataset.data_source}.#{interface_element.key}")
-                  - else
-                    = I18n.t("data_source_messages.#{@dataset.data_source}.default", default: '')
+                  = simple_format I18n.t(data_source_message_key(@dataset, interface_element), default: '')
 
-                  - if I18n.exists?("data_source_messages.#{@dataset.data_source}.view_file")
+                  - if show_github_link?(@dataset)
                     p
-                      = link_to "https://github.com/quintel/etlocal/blob/production/data/datasets/#{@dataset.geo_id}.csv", target: '_blank' do
+                      = link_to github_dataset_url(@dataset), target: '_blank' do
                         = "#{I18n.t("data_source_messages.#{@dataset.data_source}.view_file")} →"

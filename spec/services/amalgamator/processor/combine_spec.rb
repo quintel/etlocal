@@ -198,10 +198,16 @@ RSpec.describe Amalgamator::Processor::Combine do
       collection.instance_variable_set(
         :@attributes,
         items.map.with_index do |item, ii|
+          edit_double = instance_double(
+            DatasetEdit,
+            cast_value: edit_values[ii][di],
+            value: edit_values[ii][di]
+          )
+
           EditableAttribute.new(
             dataset,
             item.key.to_s,
-            { item.key.to_s => [OpenStruct.new(value: edit_values[ii][di])] } # Ugly :(
+            { item.key.to_s => [edit_double] }
           )
         end
       )

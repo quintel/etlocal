@@ -135,10 +135,11 @@ en:
 
   groups:
     country: Countries
+    parent: Countries
     province: Provinces
     region: Regions
     res: RES regions
-    municipality: Municipality
+    municipality: Municipalites
     district: Districts
     neighbourhood: Neighbourhoods
 

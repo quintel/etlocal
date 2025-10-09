@@ -9,7 +9,7 @@ class CalculableValidator < ActiveModel::Validator
     begin
       dataset = Dataset.new(
         name: 'calculation_shell',
-        country: record.attributes[:country]
+        parent: record.attributes[:parent]
       )
 
       CalculateContainer.new(

@@ -13,7 +13,7 @@ describe DatasetEditForm do
     it "has a negative number of inhabitants" do
       commit_form = DatasetEditForm.new(
         number_of_inhabitants: -1,
-        country: 'nl'
+        parent: 'nl'
       )
 
       expect(commit_form.valid?).to eq(false)
@@ -22,13 +22,13 @@ describe DatasetEditForm do
     it "number of inhabitants is 0" do
       commit_form = DatasetEditForm.new(
         number_of_inhabitants: 0,
-        country: 'nl'
+        parent: 'nl'
       )
 
       expect(commit_form.valid?).to eq(false)
     end
 
-    it "has no country set" do
+    it "has no parent set" do
       commit_form = DatasetEditForm.new(
         number_of_inhabitants: 1
       )
@@ -40,7 +40,7 @@ describe DatasetEditForm do
   it 'has all the attributes of the transformer dataset cast' do
     commit_form = DatasetEditForm.new(
       number_of_inhabitants: 50,
-      country: 'nl'
+      parent: 'nl'
     )
 
     expect(commit_form.valid?).to eq(true)
@@ -48,7 +48,7 @@ describe DatasetEditForm do
 
   context "submitting" do
     let(:commit_form) {
-      DatasetEditForm.new(number_of_inhabitants: 20, country: 'nl')
+      DatasetEditForm.new(number_of_inhabitants: 20, parent: 'nl')
     }
 
     it "build a dataset edit for commit" do

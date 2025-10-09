@@ -93,7 +93,7 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,name,country,present_number_of_apartments_before_1945
+          geo_id,name,parent,present_number_of_apartments_before_1945
           GM0340,My First Area,nl,5
         CSV
       end
@@ -119,7 +119,7 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,name,country,present_number_of_apartments_before_1945
+          geo_id,name,parent,present_number_of_apartments_before_1945
           GM0340,,nl,5
         CSV
       end
@@ -151,7 +151,7 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,name,country,present_number_of_apartments_before_1945
+          geo_id,name,parent,present_number_of_apartments_before_1945
           GM0340,My First Area,nl,5
         CSV
       end
@@ -169,6 +169,75 @@ RSpec.describe CSVImporter do
       it 'does not create a new dataset' do
         expect { importer.run }.not_to change(Dataset, :count)
       end
+    end
+  end
+
+  context 'with a boolean attribute' do
+    let(:commits) do
+      <<~YAML
+        ---
+        - fields:
+          - enabled
+          message:
+            Toggle enabled flag
+      YAML
+    end
+
+    let(:data) do
+      <<~CSV
+        geo_id,enabled
+        GM0340,false
+      CSV
+    end
+
+    before do
+      dataset = Dataset.find_by_geo_id('GM0340')
+      commit = dataset.commits.first
+
+      FactoryBot.create(:boolean_dataset_edit, commit: commit, key: 'enabled')
+    end
+
+    it 'creates a boolean dataset edit' do
+      commit = importer.run.first
+      edit = commit.dataset_edits.first
+
+      expect(edit).to be_a(BooleanDatasetEdit)
+      expect(edit.boolean_value).to eq(false)
+    end
+  end
+
+  context 'with a boolean attribute matching the default without an edit' do
+    let(:commits) do
+      <<~YAML
+        ---
+        - fields:
+          - enabled
+          message:
+            Lock enabled flag
+      YAML
+    end
+
+    let(:data) do
+      <<~CSV
+        geo_id,enabled
+        GM0340,true
+      CSV
+    end
+
+    it 'creates a boolean dataset edit to lock the value' do
+      dataset = Dataset.find_by_geo_id('GM0340')
+      attribute = instance_double(
+        EditableAttribute,
+        latest: nil,
+        value: true
+      )
+      allow(attribute).to receive(:present?).and_return(true)
+
+      collection = instance_double('EditableAttributesCollection')
+      allow(collection).to receive(:find).with(:enabled).and_return(attribute)
+      allow(dataset).to receive(:editable_attributes).and_return(collection)
+
+      expect { importer.run }.to change(BooleanDatasetEdit, :count).by(1)
     end
   end
 
@@ -648,7 +717,7 @@ RSpec.describe CSVImporter do
     end
 
     context 'with create_missing_datasets: true
-      and no name or country in the CSV' do
+      and no name or parent in the CSV' do
       let(:importer) do
         described_class.new(
           data_csv.path,
@@ -659,7 +728,7 @@ RSpec.describe CSVImporter do
 
       it 'raises an error' do
         expect { importer.run }
-          .to raise_error(/is missing mandatory headers: "country", "name"/i)
+          .to raise_error(/is missing mandatory headers: "parent", "name"/i)
       end
     end
 
@@ -675,7 +744,7 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,country,name,number_of_inhabitants
+          geo_id,parent,name,number_of_inhabitants
           GM0340,nl,,5
         CSV
       end
@@ -686,7 +755,7 @@ RSpec.describe CSVImporter do
     end
 
     context 'with create_missing_datasets: true
-      and a blank "country" in the CSV' do
+      and a blank "parent" in the CSV' do
       let(:importer) do
         described_class.new(
           data_csv.path,
@@ -697,18 +766,18 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,country,name,number_of_inhabitants
+          geo_id,parent,name,number_of_inhabitants
           GM0340,,My First Area,5
         CSV
       end
 
       it 'raises an error' do
-        expect { importer.run }.to raise_error(/Country can't be blank/i)
+        expect { importer.run }.to raise_error(/parent can't be blank/i)
       end
     end
 
     context 'with create_missing_datasets: true
-      and name and country in the CSV' do
+      and name and parent in the CSV' do
 
       let(:importer) do
         described_class.new(
@@ -720,7 +789,7 @@ RSpec.describe CSVImporter do
 
       let(:data) do
         <<~CSV
-          geo_id,country,name,number_of_inhabitants
+          geo_id,parent,name,number_of_inhabitants
           GM0340,nl,My First Area,5
         CSV
       end
@@ -829,7 +898,7 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,country,name,present_number_of_apartments_before_1945
+        geo_id,parent,name,present_number_of_apartments_before_1945
         GM0340,nl,ABC,5
       CSV
     end
@@ -866,7 +935,7 @@ RSpec.describe CSVImporter do
 
     let(:data) do
       <<~CSV
-        geo_id,country,name,data_source,present_number_of_apartments_before_1945
+        geo_id,parent,name,data_source,present_number_of_apartments_before_1945
         GM0340,nl,ABC,entso,5
       CSV
     end

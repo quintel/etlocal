@@ -3,7 +3,7 @@ class DatasetDownloader
     @area_name = dataset.temp_name
     @attributes = dataset.editable_attributes.as_json.merge(
       name: @area_name,
-      base_dataset: dataset.country
+      base_dataset: dataset.parent
     )
   end
 

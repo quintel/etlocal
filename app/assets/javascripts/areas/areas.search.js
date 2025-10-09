@@ -103,7 +103,7 @@ Areas.Search = (function () {
                 url: "/datasets/search.json",
                 type: 'GET',
                 dataType: 'json',
-                data: { query: this.result.value, country: this.country.value },
+                data: { query: this.result.value, parent: this.parent.value },
                 success: parseResults.bind(this),
                 error: function (e) {
                     alert(e);
@@ -118,8 +118,8 @@ Areas.Search = (function () {
 
             if (selected.length == 1){
                 openPopup.call(this, $(selected[0]).data('id'));
-            } else if (this.country.value != 'any') {
-                openPopup.call(this, this.country.value);
+            } else if (this.parent.value != 'any') {
+                openPopup.call(this, this.parent.value);
             }
         }
     };
@@ -127,7 +127,7 @@ Areas.Search = (function () {
     function Search(areas, scope) {
         this.areas = areas;
         this.scope = scope;
-        this.country = this.scope.find('#country-select')[0];
+        this.parent = this.scope.find('#parent-select')[0];
         this.scope.on('submit', this.openSelectedOption.bind(this));
         this.scope.find('#search-bar').on('input', this.search.bind(this));
         this.scope.find('#search-bar').on('click', this.search.bind(this));

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 202509261210523) do
+ActiveRecord::Schema[7.2].define(version: 202509261210524) do
   create_table "commits", id: :integer, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "source_id"
     t.integer "user_id"
@@ -29,6 +29,8 @@ ActiveRecord::Schema[7.2].define(version: 202509261210523) do
     t.float "value", limit: 53
     t.datetime "created_at", precision: nil, null: false
     t.datetime "updated_at", precision: nil, null: false
+    t.string "type"
+    t.boolean "boolean_value"
     t.index ["commit_id"], name: "index_dataset_edits_on_commit_id"
   end
 
@@ -37,7 +39,7 @@ ActiveRecord::Schema[7.2].define(version: 202509261210523) do
     t.string "name", default: "", null: false
     t.string "geo_id", default: "", null: false
     t.string "data_source", default: "db", null: false
-    t.string "country"
+    t.string "parent"
     t.boolean "has_industry", default: false
     t.boolean "has_agriculture", default: false
     t.boolean "public", default: true

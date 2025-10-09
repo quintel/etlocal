@@ -7,6 +7,7 @@ groups:
         unit: '#'
       - key: parent
         unit: 'string'
+        skip_validation: true
   - header: area_details
     combination_method: max
     items:

@@ -631,8 +631,8 @@ nl:
         energy_greengas_gasification_wet_biomass_energy_greengas_production_child_share: Natte vergassing
         energy_greengas_upgrade_biogas_energy_greengas_production_child_share: Vergisting
 
-        energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: Biogeen
-        energy_distribution_non_biogenic_waste_energy_distribution_waste_mix_child_share: Niet-biogeen
+        input_percentage_of_biogenic_waste_energy_distribution_waste_mix: Biogeen
+        input_percentage_of_non_biogenic_waste_energy_distribution_waste_mix: Niet-biogeen
 
         energy_extraction_natural_gas_demand: Aardgaswinning
         energy_extraction_coal_demand: Kolenwinning

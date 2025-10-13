@@ -13,7 +13,7 @@ en:
         What share of the current green gas demand in this area is produced by gasification of wet biomass?
       energy_greengas_upgrade_biogas_energy_greengas_production_child_share: |
         What share of the current green gas demand in this area is produced by fermentation of biomass?
-      energy_distribution_biogenic_waste_energy_distribution_waste_mix_child_share: |
+      input_percentage_of_biogenic_waste_energy_distribution_waste_mix: |
         This setting is only relevant if a waste-to-energy plant is present in this area. This
         setting allows you to specify how sustainable the burnt waste is: What share of waste is
         biogenic (organic waste, wood or paper) and what share is non-biogenic (plastics etc.)?

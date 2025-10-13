@@ -183,7 +183,7 @@ nl:
       energy_heat_distribution_loss: Warmtenetten - distributieverliezen
       energy_renewable_full_load_hours: Vollasturen van hernieuwbare elektriciteitsproductie
       energy_fossil_full_load_hours: Vollasturen van fossiele elektriciteitsproductie
-      fuel_production: Brandstofproductie
+      fuel_production: Brandstofextractie
       energy_efficiency_coal: Efficiënties van kolencentrales
       energy_efficiency_gas: Efficiënties van gascentrales
       energy_efficiency_other_fossil: Efficiënties van overige fossiel centrales

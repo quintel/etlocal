@@ -74,7 +74,7 @@ en:
         energy_efficiency: Efficiencies
         energy_full_load_hours: Full load hours
         energy_biomass: Biomass
-        energy_fuel_production: Fuel production
+        energy_fuel_production: Fuel extraction
 
       households:
         households_energy_demand: Energy demand

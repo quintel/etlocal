@@ -303,7 +303,7 @@ nl:
       energy_biomass_potentials: |
         Hoeveel biomassa kan er in deze regio potentieel gewonnen worden? Klik op de 'i' voor meer informatie over elke categorie.
       fuel_production: |
-        Hoeveel brandstoffen worden er geproduceerd binnen de grenzen van jouw regio? Deze waarden bepalen hoeveel er moet worden geïmporteerd en geëxporteerd.
+        Hier is de hoeveelheid jaarlijkse extractie van primaire brandstoffen in deze regio gegeven.
       area_emission_factors: |
         Onderstaande getallen geven voor alle energiedragers weer hoeveel CO<sub>2</sub> wordt uitgestoten per MJ.
         Deze 'emissiefactoren' kunnen per land verschillen omdat ze afhankelijk zijn van de oorsprong van de drager.

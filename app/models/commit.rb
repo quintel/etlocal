@@ -8,7 +8,7 @@ class Commit < ApplicationRecord
 
   accepts_nested_attributes_for :dataset_edits, reject_if: :reject_edits
 
-validates :message, presence: true
+  validates :message, presence: true
 
   def add_dataset_edit(key, value)
     cast_value = DatasetEdit.cast_from_csv(key, value)

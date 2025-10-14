@@ -11,8 +11,6 @@ groups:
   - header: area_details
     combination_method: max
     items:
-      - key: enabled
-        unit: 'boolean'
       - key: has_mountains
         unit: 'boolean'
       - key: has_offshore_solar

@@ -7,7 +7,7 @@ en:
       province: Province
       region: Region
       res: RES region
-      country: Country
+      parent: Country
 
     menu:
       static: Static
@@ -30,6 +30,13 @@ en:
 
       static:
         analysis_year: Analysis year
+
+      area_details:
+        has_mountains: Has Mountains
+        has_offshore_solar: Has Offshore Solar
+        has_solar_csp: Has Solar CSP
+        has_merit_order: Has Merit Order
+        has_weather_curves: Has Weather Curves
 
     groups:
       area: General

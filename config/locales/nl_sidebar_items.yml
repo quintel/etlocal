@@ -7,7 +7,7 @@ nl:
       province: Provincie
       region: Regio
       res: RES-regio
-      country: Land
+      parent: Land
 
     menu:
       static: Statisch
@@ -30,6 +30,13 @@ nl:
 
       static:
         analysis_year: Startjaar
+
+      area_details:
+        has_mountains: Heeft Bergen
+        has_offshore_solar: Heeft Offshore Zonne-Energie
+        has_solar_csp: Heeft Geconcentreerde Zonne-Energie
+        has_merit_order: Heeft Merit Order
+        has_weather_curves: Heeft Weerprofielen
 
     groups:
       area: Algemeen

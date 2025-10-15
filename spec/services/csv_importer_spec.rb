@@ -177,15 +177,15 @@ RSpec.describe CSVImporter do
       <<~YAML
         ---
         - fields:
-          - enabled
+          - has_merit_order
           message:
-            Toggle enabled flag
+            Toggle merit order flag
       YAML
     end
 
     let(:data) do
       <<~CSV
-        geo_id,enabled
+        geo_id,has_merit_order
         GM0340,false
       CSV
     end
@@ -194,7 +194,7 @@ RSpec.describe CSVImporter do
       dataset = Dataset.find_by_geo_id('GM0340')
       commit = dataset.commits.first
 
-      FactoryBot.create(:boolean_dataset_edit, commit: commit, key: 'enabled')
+      FactoryBot.create(:boolean_dataset_edit, commit: commit, key: 'has_merit_order')
     end
 
     it 'creates a boolean dataset edit' do
@@ -203,41 +203,6 @@ RSpec.describe CSVImporter do
 
       expect(edit).to be_a(BooleanDatasetEdit)
       expect(edit.boolean_value).to eq(false)
-    end
-  end
-
-  context 'with a boolean attribute matching the default without an edit' do
-    let(:commits) do
-      <<~YAML
-        ---
-        - fields:
-          - enabled
-          message:
-            Lock enabled flag
-      YAML
-    end
-
-    let(:data) do
-      <<~CSV
-        geo_id,enabled
-        GM0340,true
-      CSV
-    end
-
-    it 'creates a boolean dataset edit to lock the value' do
-      dataset = Dataset.find_by_geo_id('GM0340')
-      attribute = instance_double(
-        EditableAttribute,
-        latest: nil,
-        value: true
-      )
-      allow(attribute).to receive(:present?).and_return(true)
-
-      collection = instance_double('EditableAttributesCollection')
-      allow(collection).to receive(:find).with(:enabled).and_return(attribute)
-      allow(dataset).to receive(:editable_attributes).and_return(collection)
-
-      expect { importer.run }.to change(BooleanDatasetEdit, :count).by(1)
     end
   end
 

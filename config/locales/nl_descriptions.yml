@@ -2,13 +2,11 @@ nl:
   descriptions:
     groups:
       area: |
-        In de linkerbalk vind je verschillende onderwerpen die gaan over energievraag, energieproductie
-        en algemene informatie over de regio, zoals geografie, emissies, infrastructuur. Binnen elk onderwerp vind je alle bijbehorende datavelden. Door te klikken op het "i"-icoontje
-        links van het dataveld vind je meer informatie over de data die getoond wordt, welke bronnen gebruikt zijn en of dit getal recentelijk veranderd is.
-        Voor een overzicht van de gebruikte bronnen voor Nederlandse regio's kijk op onze
-        <a target="_blank" href="https://docs.energytransitionmodel.com/main/data-sources-local">documentatie</a>.
-        <strong>Jaar</strong>
-        Hieronder zie je uit welk jaar alle data van deze regio komt.
+        In de linkerbalk vind je verschillende onderwerpen die gaan over energievraag,
+        energieproductie en algemene informatie over de regio, zoals geografie, emissies,
+        infrastructuur. Binnen elk onderwerp vind je alle bijbehorende datavelden. Door te klikken
+        op het "i"-icoontje vind je meer informatie over de data die getoond
+        wordt, welke bronnen gebruikt zijn en of dit getal recentelijk veranderd is.
       area_emissions: |
         In dit tabblad vind je informatie over de uitstoot van broeikasgassen in deze regio.
       area_geography: |

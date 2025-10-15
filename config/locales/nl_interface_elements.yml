@@ -11,7 +11,12 @@ nl:
         coast_line: Kustlijn
         areable_land: Beschikbare landbouwgrond
         number_of_inhabitants: Aantal inwoners
-        parent: Parent
+        parent: Parent dataset
+        has_mountains: Beschikbaarheid bergen
+        has_offshore_solar: Beschikbaarheid zon-PV op zee
+        has_solar_csp: Beschikbaarheid geconcentreerde zonne-energie
+        has_merit_order: Beschikbaarheid uurlijkse berekeningen
+        has_weather_curves: Beschikbaarheid weerjaren
 
         co2_emission_1990: 'CO<sub>2</sub>-emissies in 1990'
         co2_emission_1990_aviation_bunkers: 'CO<sub>2</sub>-emissies internationale luchtvaart in 1990'
@@ -658,7 +663,7 @@ nl:
         input_energy_chp_local_engine_mt_biogas_production: Biogas WKK (MT)
         input_energy_chp_local_ht_wood_pellets_production: Biomassa WKK (HT)
         input_energy_chp_local_mt_wood_pellets_production: Biomassa WKK (MT)
-        input_energy_power_solar_csp_solar_radiation_production: Geconcentreerde zonnestroom
+        input_energy_power_solar_csp_solar_radiation_production: Geconcentreerde zonne-energie
 
         input_energy_power_ultra_supercritical_coal_production: Poederkolen
         input_energy_power_supercritical_coal_production: Kolen conventioneel

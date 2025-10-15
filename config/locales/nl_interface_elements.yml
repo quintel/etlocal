@@ -663,7 +663,7 @@ nl:
         input_energy_chp_local_engine_mt_biogas_production: Biogas WKK (MT)
         input_energy_chp_local_ht_wood_pellets_production: Biomassa WKK (HT)
         input_energy_chp_local_mt_wood_pellets_production: Biomassa WKK (MT)
-        input_energy_power_solar_csp_solar_radiation_production: Geconcentreerde zonnestroom
+        input_energy_power_solar_csp_solar_radiation_production: Geconcentreerde zonne-energie
 
         input_energy_power_ultra_supercritical_coal_production: Poederkolen
         input_energy_power_supercritical_coal_production: Kolen conventioneel

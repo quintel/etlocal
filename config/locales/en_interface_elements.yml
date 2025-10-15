@@ -10,7 +10,12 @@ en:
         coast_line: Coast line
         areable_land: Arable land
         number_of_inhabitants: Number of inhabitants
-        parent: Parent
+        parent: Parent dataset
+        has_mountains: Availability mountains
+        has_offshore_solar: Availability solar PV offshore
+        has_solar_csp: Availability concentrated solar power
+        has_merit_order: Availability hourly calculations
+        has_weather_curves: Availability weather years
 
         co2_emission_1990: 'CO<sub>2</sub> emissions in 1990'
         co2_emission_1990_aviation_bunkers: 'CO<sub>2</sub> emissions international aviation in 1990'

@@ -2,13 +2,11 @@ en:
   descriptions:
     groups:
       area: |
-        In the left bar you will find various topics related to energy demand, energy production and general
-        information about the region, such as geography, emissions, infrastructure. Within each topic you will
-        find all associated data fields. By clicking on the "i" icon to the left of the data field you will
-        find more information about the data that is displayed, which sources have been used and whether this number has recently changed.
-        For an overview of the sources used for Dutch regions, see our <a target="_blank" href="https://docs.energytransitionmodel.com/main/data-sources-local">documentation</a>.
-        <strong> Year </strong>
-        Below you can see from which year all data from this region originates.
+        In the left bar you will find various topics related to energy demand, energy production and
+        general information about the region, such as geography, emissions, infrastructure. Within
+        each topic you will find all associated data fields. By clicking on the "i" icon you will
+        find more information about the data that is displayed, which sources have been used and
+        whether this number has recently changed.
       area_emissions: |
         In this tab you will find information about greenhouse gas emissions in your region.
       area_geography: |

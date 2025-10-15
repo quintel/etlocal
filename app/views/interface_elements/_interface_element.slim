@@ -90,7 +90,7 @@
                 .change
                   .created-by
                     .to
-                      => I18n.t("dataset_edits.changed_to", value: number_to_currency(dataset_edit.value, precision: 2, unit: ''))
+                      => I18n.t("dataset_edits.changed_to", value: format_display_value(dataset_edit.cast_value, interface_item))
                     .by
                       = "#{dataset_edit.creator}, #{I18n.l dataset_edit.created_at, format: :short}"
 

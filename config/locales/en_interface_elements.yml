@@ -621,11 +621,11 @@ en:
 
         # Energy
         energy_power_sector_own_use_electricity_demand: Own use of electricity
-        energy_power_hv_network_loss_demand: Network losses
+        energy_power_hv_network_loss_demand: Electricity
         energy_distribution_greengas_demand: Greengas
         energy_regasification_lng_energy_national_gas_network_natural_gas_demand: Regasified LNG
-        energy_distribution_network_gas_loss_demand: Network losses
-        energy_distribution_crude_oil_loss_demand: Network losses
+        energy_distribution_network_gas_loss_demand: Gas
+        energy_distribution_crude_oil_loss_demand: Oil
 
         energy_greengas_gasification_dry_biomass_energy_greengas_production_child_share: Dry gasification
         energy_greengas_gasification_wet_biomass_energy_greengas_production_child_share: Wet gasification
@@ -733,9 +733,9 @@ en:
         energy_heat_import_mt_steam_hot_water_demand: (Residual) heat imported from outside your region (MT)
         energy_heat_import_lt_steam_hot_water_demand: (Residual) heat imported from outside your region (LT)
 
-        input_energy_heat_distribution_ht_loss_share: Heat distribution loss (HT)
-        input_energy_heat_distribution_mt_loss_share: Heat distribution loss (MT)
-        input_energy_heat_distribution_lt_loss_share: Heat distribution loss (LT)
+        input_energy_heat_distribution_ht_loss_share: Heat (HT)
+        input_energy_heat_distribution_mt_loss_share: Heat (MT)
+        input_energy_heat_distribution_lt_loss_share: Heat (LT)
 
         energy_power_wind_turbine_inland_full_load_hours: Wind (inland)
         energy_power_wind_turbine_coastal_full_load_hours: Wind (coastal)

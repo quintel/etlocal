@@ -626,11 +626,11 @@ nl:
 
         # Energy
         energy_power_sector_own_use_electricity_demand: Eigen gebruik elektriciteit
-        energy_power_hv_network_loss_demand: Netverliezen
+        energy_power_hv_network_loss_demand: Elektriciteit
         energy_distribution_greengas_demand: Groen gas
         energy_regasification_lng_energy_national_gas_network_natural_gas_demand: Hervergast LNG
-        energy_distribution_network_gas_loss_demand: Netverliezen
-        energy_distribution_crude_oil_loss_demand: Netverliezen
+        energy_distribution_network_gas_loss_demand: Gas
+        energy_distribution_crude_oil_loss_demand: Oil
 
         energy_greengas_gasification_dry_biomass_energy_greengas_production_child_share: Droge vergassing
         energy_greengas_gasification_wet_biomass_energy_greengas_production_child_share: Natte vergassing
@@ -744,9 +744,9 @@ nl:
         energy_heat_import_mt_steam_hot_water_demand: (Rest)warmte geïmporteerd van buiten de regio (MT)
         energy_heat_import_lt_steam_hot_water_demand: (Rest)warmte geïmporteerd van buiten de regio (LT)
 
-        input_energy_heat_distribution_ht_loss_share: Transportverliezen in warmtenetten (HT)
-        input_energy_heat_distribution_mt_loss_share: Transportverliezen in warmtenetten (MT)
-        input_energy_heat_distribution_lt_loss_share: Transportverliezen in warmtenetten (LT)
+        input_energy_heat_distribution_ht_loss_share: HT warmte
+        input_energy_heat_distribution_mt_loss_share: MT warmte
+        input_energy_heat_distribution_lt_loss_share: LT warmte
 
         energy_power_wind_turbine_inland_full_load_hours: Wind (op land)
         energy_power_wind_turbine_coastal_full_load_hours: Wind (aan de kust)

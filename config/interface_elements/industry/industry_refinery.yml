@@ -18,34 +18,6 @@ groups:
     - key: input_industry_chemical_refineries_coal_non_energetic_demand
       unit: 'TJ'
 
-  - header: industry_refinery_demand_energetic
-    items:
-    - key: input_industry_chemical_refineries_electricity_demand
-      unit: 'TJ'
-      entso: |
-        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Electricity")
-    - key: input_industry_chemical_refineries_network_gas_demand
-      unit: 'TJ'
-      entso: |
-        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Network gas")
-    - key: input_industry_chemical_refineries_steam_hot_water_demand
-      unit: 'TJ'
-      entso: |
-        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Heat")
-    - key: input_industry_chemical_refineries_wood_pellets_demand
-      unit: 'TJ'
-      entso: |
-        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Primary solid biofuels")
-    - key: input_industry_chemical_refineries_coal_demand
-      unit: 'TJ'
-      entso: |
-        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Coal incl lignite and peat") -
-        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Coke oven coke")
-    - key: input_industry_chemical_refineries_crude_oil_demand
-      unit: 'TJ'
-      entso: |
-        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Oil")
-
   - header: industry_refinery_output
     items:
     - key: input_industry_refinery_transformation_crude_oil_other_oil_demand
@@ -87,9 +59,31 @@ groups:
       unit: 'TJ'
       entso: |
         EB("Transformation output - refineries and petrochemical industry - refinery output", "Naphtha")
-  - header: energy_losses_oil_network
+
+  - header: industry_refinery_demand_energetic
     items:
-      - key: energy_distribution_crude_oil_loss_demand
-        unit: 'TJ'
-        entso: |
-          EB("Distribution losses", "Fossil oil")
+    - key: input_industry_chemical_refineries_electricity_demand
+      unit: 'TJ'
+      entso: |
+        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Electricity")
+    - key: input_industry_chemical_refineries_network_gas_demand
+      unit: 'TJ'
+      entso: |
+        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Network gas")
+    - key: input_industry_chemical_refineries_steam_hot_water_demand
+      unit: 'TJ'
+      entso: |
+        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Heat")
+    - key: input_industry_chemical_refineries_wood_pellets_demand
+      unit: 'TJ'
+      entso: |
+        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Primary solid biofuels")
+    - key: input_industry_chemical_refineries_coal_demand
+      unit: 'TJ'
+      entso: |
+        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Coal incl lignite and peat") -
+        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Coke oven coke")
+    - key: input_industry_chemical_refineries_crude_oil_demand
+      unit: 'TJ'
+      entso: |
+        EB("Energy sector - petroleum refineries (oil refineries) - energy use", "Oil")

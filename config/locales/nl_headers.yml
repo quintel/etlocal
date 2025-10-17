@@ -56,7 +56,7 @@ nl:
       households_solar_thermal_distribution: Verdeling zonthermie
       households_housing_stock: Aantal woningen per bouwjaarklasse
       typical_useful_demand_houses: Typische warmtevraag per woningtype en bouwjaarklasse
-      share_useful_demand_houses: Aandeel in nuttige warmtevraag per woningtype en bouwjaarklasse 
+      share_useful_demand_houses: Aandeel in nuttige warmtevraag per woningtype en bouwjaarklasse
 
       # buildings
       buildings_final_demand: Eindgebruik
@@ -145,10 +145,10 @@ nl:
       industry_fertilizer_demand_non_energetic: Niet-energetische vraag
       industry_aluminium_demand: Vraag
       industry_aluminium_technology: Technologie
-      industry_refinery_input: Olie grondstof vraag
-      industry_refinery_output: Brandstofproductie
-      industry_refinery_demand_energetic: Energetische vraag
-      industry_refinery_demand_non_energetic: Niet-energetische vraag
+      industry_refinery_input: Inzet energie voor omzetting (feedstock)
+      industry_refinery_output: Porductie energie uit omzetting (brandstofproductie)
+      industry_refinery_demand_energetic: Eigen verbruik (energetisch)
+      industry_refinery_demand_non_energetic: Eigen verbruik (niet-energetisch)
 
       # other
       other_final_demand: Eindgebruik
@@ -157,7 +157,7 @@ nl:
       energy_demand_power_sector: Elektriciteitsnet - energievraag
       energy_mix_gas_network: Gas - gasmix in netwerk
       energy_losses_gas_network: Gas - netwerkverliezen
-      energy_losses_oil_network: Olie - netwerkverliezen
+      energy_losses_oil_network: Verliezen bij distributie
       energy_greengas_production: Groengasproductie
       energy_waste_mix: Afvalmix
       energy_extraction: Brandstofproductie en winning natuurlijke hulpbronnen
@@ -195,6 +195,7 @@ nl:
       energy_fossil_heat_full_load_hours: Vollasturen van fossiele warmteproductie
       energy_renewable_heat_full_load_hours: Vollasturen van hernieuwbare warmteproductie
       energy_renewable_full_load_hours_max: Maximum vollasturen van hernieuwbare centrales
+      energy_distribution_losses: Distributieverliezen
 
       # curves
       curves_supply_electricity: Aanbod - Elektriciteit

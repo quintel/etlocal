@@ -56,7 +56,7 @@ nl:
       households_solar_thermal_distribution: Verdeling zonthermie
       households_housing_stock: Aantal woningen per bouwjaarklasse
       typical_useful_demand_houses: Typische warmtevraag per woningtype en bouwjaarklasse
-      share_useful_demand_houses: Aandeel in nuttige warmtevraag per woningtype en bouwjaarklasse 
+      share_useful_demand_houses: Aandeel in nuttige warmtevraag per woningtype en bouwjaarklasse
 
       # buildings
       buildings_final_demand: Eindgebruik
@@ -195,6 +195,7 @@ nl:
       energy_fossil_heat_full_load_hours: Vollasturen van fossiele warmteproductie
       energy_renewable_heat_full_load_hours: Vollasturen van hernieuwbare warmteproductie
       energy_renewable_full_load_hours_max: Maximum vollasturen van hernieuwbare centrales
+      energy_distribution_losses: Distributieverliezen
 
       # curves
       curves_supply_electricity: Aanbod - Elektriciteit

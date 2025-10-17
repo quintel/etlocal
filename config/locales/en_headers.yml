@@ -193,6 +193,7 @@ en:
       energy_fossil_heat_full_load_hours: Full load hours of fossil heat plants
       energy_renewable_heat_full_load_hours: Full load hours of renewable heat plants
       energy_renewable_full_load_hours_max: Maximum full load hours of renewable power plants
+      energy_distribution_losses: Distribution losses
 
       # curves
       curves_supply_electricity: Supply - Electricity

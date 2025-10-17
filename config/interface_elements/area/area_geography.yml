@@ -11,3 +11,15 @@ groups:
       combination_method: average
     - key: coast_line
       unit: 'km'
+    - key: has_mountains
+      unit: 'boolean'
+      combination_method: max
+    - key: has_offshore_solar
+      unit: 'boolean'
+      combination_method: max
+    - key: has_solar_csp
+      unit: 'boolean'
+      combination_method: max
+    - key: has_weather_curves
+      unit: 'boolean'
+      combination_method: max

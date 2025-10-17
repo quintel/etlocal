@@ -733,9 +733,9 @@ en:
         energy_heat_import_mt_steam_hot_water_demand: (Residual) heat imported from outside your region (MT)
         energy_heat_import_lt_steam_hot_water_demand: (Residual) heat imported from outside your region (LT)
 
-        input_energy_heat_distribution_ht_loss_share: Heat distribution loss (HT)
-        input_energy_heat_distribution_mt_loss_share: Heat distribution loss (MT)
-        input_energy_heat_distribution_lt_loss_share: Heat distribution loss (LT)
+        input_energy_heat_distribution_ht_loss_share: Heat (HT)
+        input_energy_heat_distribution_mt_loss_share: Heat (MT)
+        input_energy_heat_distribution_lt_loss_share: Heat (LT)
 
         energy_power_wind_turbine_inland_full_load_hours: Wind (inland)
         energy_power_wind_turbine_coastal_full_load_hours: Wind (coastal)

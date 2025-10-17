@@ -145,10 +145,10 @@ nl:
       industry_fertilizer_demand_non_energetic: Niet-energetische vraag
       industry_aluminium_demand: Vraag
       industry_aluminium_technology: Technologie
-      industry_refinery_input: Olie grondstof vraag
-      industry_refinery_output: Brandstofproductie
-      industry_refinery_demand_energetic: Energetische vraag
-      industry_refinery_demand_non_energetic: Niet-energetische vraag
+      industry_refinery_input: Inzet energie voor omzetting (feedstock)
+      industry_refinery_output: Porductie energie uit omzetting (brandstofproductie)
+      industry_refinery_demand_energetic: Eigen verbruik (energetisch)
+      industry_refinery_demand_non_energetic: Eigen verbruik (niet-energetisch)
 
       # other
       other_final_demand: Eindgebruik
@@ -157,7 +157,7 @@ nl:
       energy_demand_power_sector: Elektriciteitsnet - energievraag
       energy_mix_gas_network: Gas - gasmix in netwerk
       energy_losses_gas_network: Gas - netwerkverliezen
-      energy_losses_oil_network: Olie - netwerkverliezen
+      energy_losses_oil_network: Verliezen bij distributie
       energy_greengas_production: Groengasproductie
       energy_waste_mix: Afvalmix
       energy_extraction: Brandstofproductie en winning natuurlijke hulpbronnen

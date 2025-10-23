@@ -11,7 +11,7 @@ class Dataset < ApplicationRecord
   validates :parent, presence: true, inclusion: {in: Etsource.available_datasets}
 
   ORDER = %w[
-    parent
+    country
     province
     res
     region
@@ -50,7 +50,7 @@ class Dataset < ApplicationRecord
     elsif geo_id.start_with?('RG')
       'region'
     elsif entso_data_source? || geo_id.start_with?('UKNI') || geo_id.start_with?('GB')
-      'parent'
+      'country'
     elsif geo_id.start_with?('RES', 'ES')
       'res'
     else

@@ -16,20 +16,22 @@ class <%= class_name.underscore.camelize %> < ActiveRecord::Migration[5.0]
     CSVImporter.run(data_path, commits_path) do |row, runner|
       print "Updating #{row['geo_id']}... "
 
-      # Track dataset attributes before running the importer
-      dataset = Dataset.find_by(geo_id: row['geo_id'], user: User.robot)
-      original_attrs = { name: dataset&.name, parent: dataset&.parent }
+      # Track dataset timestamp before running the importer
+      original_dataset = Dataset.find_by(geo_id: row['geo_id'], user: User.robot)
+      original_updated_at = original_dataset&.updated_at
 
       commits = runner.call
 
-      # Check if dataset attributes were updated
-      dataset&.reload
-      changed_attrs = original_attrs.filter_map do |attr, original_value|
-        attr.to_s if dataset&.public_send(attr) != original_value
+      dataset = if commits.any?
+        find_dataset(commits)
+      else
+        Dataset.find_by(geo_id: row['geo_id'], user: User.robot)
       end
 
-      if commits.any? || changed_attrs.any?
-        datasets.push(commits.any? ? find_dataset(commits) : dataset)
+      dataset_changed = dataset.present? && original_updated_at != dataset.updated_at
+
+      if commits.any? || dataset_changed
+        datasets.push(dataset)
         puts 'done!'
       else
         puts 'nothing to change!'

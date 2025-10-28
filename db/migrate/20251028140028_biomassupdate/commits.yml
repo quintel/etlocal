@@ -1,0 +1,7 @@
+---
+- fields: 
+  - energy_production_dry_biomass_max_demand
+  - energy_production_oily_biomass_max_demand
+  - energy_production_wet_biomass_max_demand
+  message:
+   "Production and potentials for bio-resources have been estimated based on research by TNO for the Netherlands (2020). The total production and potential for the Netherlands is subdivided by municipalities and provinces based on various distribution keys. See https://refman.energytransitionmodel.com/publications/2100 for more information."

@@ -8,6 +8,7 @@ en:
       region: Region
       res: RES region
       parent: Country
+      country: Country
 
     menu:
       static: Static

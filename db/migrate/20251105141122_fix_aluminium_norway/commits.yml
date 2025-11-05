@@ -1,0 +1,5 @@
+---
+- fields:
+  - input_industry_metal_aluminium_production
+  message:
+    From USGS Mineral Yearbook. See etdataset-public/source_analyses/NO_norway/2019/industry/input_industry_metal_aluminium.xlsx

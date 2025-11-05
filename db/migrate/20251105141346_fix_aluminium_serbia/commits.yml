@@ -1,0 +1,5 @@
+---
+- fields:
+  - input_industry_metal_aluminium_production
+  message:
+    From Statistical Office of the Republic of Serbia Statistical Yearbook. See etdataset-public/source_analyses/RS_serbia/2019/industry/input_industry_metal_aluminium.xlsx

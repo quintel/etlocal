@@ -29,7 +29,7 @@ module Amalgamator
       # }
       # The method uses the combination method set in the InterfaceItem to determine how values should be combined.
       def combine_item_values(datasets)
-        InterfaceElement.items.to_h do |item|
+        InterfaceElement.items.reject { |item| item.unit == 'string' }.to_h do |item|
           plucked_item_values = pluck_item_values(item, datasets)
 
           # Skip items where all values are zero
@@ -49,6 +49,8 @@ module Amalgamator
         datasets.filter_map do |set|
           value = set.editable_attributes.find(item.key.to_s).value
 
+          next value if item.unit == 'boolean'
+
           unless item.flexible || value.is_a?(Numeric)
             log_error(item, "Dataset with geo-id '#{set.geo_id}' contains a non-numeric value (#{value})")
             next nil
@@ -65,6 +67,8 @@ module Amalgamator
 
       # Combine the values based on the combination method of the item
       def combine_values(item, values, datasets)
+        return combine_boolean_values(item, values) if item.unit == 'boolean'
+
         case item.nested_combination_method
         when 'average'
           avg(values)
@@ -76,6 +80,21 @@ module Amalgamator
           values.sum
         else
           argument_error("Unknown combination_method '#{item.nested_combination_method}' for interface item: #{item.key}")
+        end
+      end
+
+      def combine_boolean_values(item, values)
+        case item.nested_combination_method
+        when 'min'
+          values.all?
+        when 'max'
+          values.any?
+        else
+          log_error(
+            item,
+            "Unsupported combination method '#{item.nested_combination_method}' for boolean interface item: #{item.key}"
+          )
+          values.any?
         end
       end
 
@@ -128,7 +147,29 @@ module Amalgamator
         attributes = fn_hash.values.first
 
         if function == 'sum'
-          attributes.sum { |a| dataset.editable_attributes.find(a.to_s).value }
+          attributes.sum do |attribute_key|
+            attribute = dataset.editable_attributes.find(attribute_key.to_s)
+
+            if attribute.nil?
+              log_error(
+                item,
+                "Dataset with geo-id '#{dataset.geo_id}' is missing weighing attribute '#{attribute_key}'"
+              )
+              next 0
+            end
+
+            value = attribute.value
+
+            unless value.is_a?(Numeric)
+              log_error(
+                item,
+                "Dataset with geo-id '#{dataset.geo_id}' contains a non-numeric weighing value (#{value}) for '#{attribute_key}'"
+              )
+              next 0
+            end
+
+            value
+          end
         else
           log_error(item, "Unsupported function '#{function}' used in aggregation. Only 'sum' is allowed.")
           nil

@@ -12,7 +12,8 @@ RSpec.describe Amalgamator::Processor::Combine do
       nested_combination_method: 'sum',
       flexible: false,
       default: nil,
-      entso: nil
+      entso: nil,
+      unit: nil
     }
   end
 

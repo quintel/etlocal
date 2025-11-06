@@ -98,7 +98,10 @@ module Amalgamator
 
       # Rounds values to 8 decimals and replaces nil with 0.0
       def round_item_values(item_values)
-        item_values.transform_values! { |value| value.present? ? value.round(8) : 0.0 }
+        item_values.transform_values! do |value|
+          next value if [TrueClass, FalseClass].include?(value.class)
+          value.present? ? value.round(8) : 0.0
+        end
       end
     end
   end

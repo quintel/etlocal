@@ -29,7 +29,7 @@ module Amalgamator
       # }
       # The method uses the combination method set in the InterfaceItem to determine how values should be combined.
       def combine_item_values(datasets)
-        InterfaceElement.items.to_h do |item|
+        InterfaceElement.items.reject { |item| item.unit == 'string' }.to_h do |item|
           plucked_item_values = pluck_item_values(item, datasets)
 
           # Skip items where all values are zero
@@ -47,28 +47,16 @@ module Amalgamator
       # Fetch and validate the values from the datasets
       def pluck_item_values(item, datasets)
         datasets.filter_map do |set|
-          attribute = set.editable_attributes.find(item.key.to_s)
+          value = set.editable_attributes.find(item.key.to_s).value
 
-          unless attribute
-            log_error(item, "Dataset with geo-id '#{set.geo_id}' is missing the attribute '#{item.key}'")
+          next value if item.unit == 'boolean'
+
+          unless item.flexible || value.is_a?(Numeric)
+            log_error(item, "Dataset with geo-id '#{set.geo_id}' contains a non-numeric value (#{value})")
             next nil
           end
 
-          if item.unit == 'string'
-            value = attribute.value
-            next nil if value.blank?
-
-            value
-          else
-            value = coerce_numeric(attribute.value)
-
-            unless item.flexible || value.is_a?(Numeric)
-              log_error(item, "Dataset with geo-id '#{set.geo_id}' contains a non-numeric value (#{attribute.value})")
-              next nil
-            end
-
-            value
-          end
+          value
         end
       end
 
@@ -79,9 +67,7 @@ module Amalgamator
 
       # Combine the values based on the combination method of the item
       def combine_values(item, values, datasets)
-        if item.unit == 'string'
-          return values.find { |value| value.present? }
-        end
+        return combine_boolean_values(item, values) if item.unit == 'boolean'
 
         case item.nested_combination_method
         when 'average'
@@ -94,6 +80,21 @@ module Amalgamator
           values.sum
         else
           argument_error("Unknown combination_method '#{item.nested_combination_method}' for interface item: #{item.key}")
+        end
+      end
+
+      def combine_boolean_values(item, values)
+        case item.nested_combination_method
+        when 'min'
+          values.all?
+        when 'max'
+          values.any?
+        else
+          log_error(
+            item,
+            "Unsupported combination method '#{item.nested_combination_method}' for boolean interface item: #{item.key}"
+          )
+          values.any?
         end
       end
 
@@ -146,19 +147,25 @@ module Amalgamator
         attributes = fn_hash.values.first
 
         if function == 'sum'
-          attributes.sum do |a|
-            attribute = dataset.editable_attributes.find(a.to_s)
+          attributes.sum do |attribute_key|
+            attribute = dataset.editable_attributes.find(attribute_key.to_s)
 
             if attribute.nil?
-              log_error(item, "Dataset with geo-id '#{dataset.geo_id}' is missing weighting attribute '#{a}'")
-              next 0.0
+              log_error(
+                item,
+                "Dataset with geo-id '#{dataset.geo_id}' is missing weighing attribute '#{attribute_key}'"
+              )
+              next 0
             end
 
-            value = coerce_numeric(attribute.value)
+            value = attribute.value
 
             unless value.is_a?(Numeric)
-              log_error(item, "Dataset with geo-id '#{dataset.geo_id}' contains a non-numeric weighting value (#{attribute.value}) for '#{a}'")
-              next 0.0
+              log_error(
+                item,
+                "Dataset with geo-id '#{dataset.geo_id}' contains a non-numeric weighing value (#{value}) for '#{attribute_key}'"
+              )
+              next 0
             end
 
             value
@@ -166,15 +173,6 @@ module Amalgamator
         else
           log_error(item, "Unsupported function '#{function}' used in aggregation. Only 'sum' is allowed.")
           nil
-        end
-      end
-
-      def coerce_numeric(value)
-        case value
-        when true then 1.0
-        when false then 0.0
-        else
-          value
         end
       end
     end

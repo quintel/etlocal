@@ -10,10 +10,10 @@ RSpec.describe Amalgamator::Processor::Combine do
     {
       key: item_keys[0],
       nested_combination_method: 'sum',
-      unit: '#',
       flexible: false,
       default: nil,
-      entso: nil
+      entso: nil,
+      unit: nil
     }
   end
 

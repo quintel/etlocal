@@ -751,7 +751,10 @@ nl:
         energy_power_wind_turbine_inland_full_load_hours: Wind (op land)
         energy_power_wind_turbine_coastal_full_load_hours: Wind (aan de kust)
         input_energy_power_wind_turbine_offshore_full_load_hours: Wind (offshore)
-        input_solar_panels_roofs_and_parks_full_load_hours: Zonnepanelen (op dak en op land)
+        input_solar_pv_on_roof_households_full_load_hours: Zon op dak (huishoudens)
+        input_solar_pv_on_roof_buildings_full_load_hours: Zon op dak (gebouwen)
+        input_solar_pv_on_land_full_load_hours: Zon op land
+        input_solar_csp_full_load_hours: Geconcentreerde zonne-energie
         energy_power_hydro_river_full_load_hours: Waterkracht (rivier)
         input_energy_chp_local_engine_biogas_full_load_hours: Biogas WKK
         input_energy_chp_local_wood_pellets_full_load_hours: Biomassa WKK
@@ -797,7 +800,6 @@ nl:
         industry_heat_burner_coal_full_load_hours: Kolenketel - industrie
         industry_heat_burner_crude_oil_full_load_hours: Olieketel - industrie
         input_energy_power_combined_cycle_coal_gas_full_load_hours: Syngas STEG
-        flh_solar_pv_solar_radiation_max: Zonnepanelen (op dak en op land)
         agriculture_chp_wood_pellets_full_load_hours: Biomassa WKK - landbouw
         agriculture_chp_engine_biogas_full_load_hours: Biogas WKK - landbouw
         agriculture_chp_engine_network_gas_dispatchable_full_load_hours: Gasmotor-WKK - landbouw

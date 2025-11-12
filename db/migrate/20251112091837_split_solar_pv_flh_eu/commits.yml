@@ -1,0 +1,9 @@
+---
+
+# If you are creating only a single commit, you may instead use a single :all
+# field to have all of the CSV columns be included. This cannot be used when
+# creating multiple commits.
+- fields:
+  - :all
+  message:
+    "FLH's based on the PECD profiles for the respective solar technology. The PECD can be accesed here: https://cds.climate.copernicus.eu/datasets/sis-energy-pecd?tab=overview"

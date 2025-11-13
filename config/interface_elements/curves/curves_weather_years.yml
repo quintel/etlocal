@@ -26,7 +26,8 @@ groups:
     type: files
     paths:
       - curves/weather/{1987,1997,2004}/wind*
-      - curves/weather/{1987,1997,2004}/solar_pv_profile_1.csv
+      - curves/weather/{1987,1997,2004}/solar_pv*.csv
+      - curves/weather/{1987,1997,2004}/solar_csp.csv
 
   - header: curves_supply_heat
     type: files

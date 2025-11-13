@@ -26,7 +26,8 @@ groups:
     type: files
     paths:
       - curves/weather/default/wind*
-      - curves/weather/default/solar_pv_profile_1.csv
+      - curves/weather/default/solar_pv*.csv
+      - curves/weather/default/solar_csp.csv
       - curves/river.csv
 
   - header: curves_supply_heat
@@ -79,4 +80,3 @@ groups:
     paths:
       - curves/weather/default/air_temperature.csv
 
-  

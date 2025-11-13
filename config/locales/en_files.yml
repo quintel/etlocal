@@ -53,23 +53,23 @@ en:
       name: Weather year 2
     2004:
       name: Weather year 3
-    air_temperature: 
+    air_temperature:
       name: Outdoor temperature
     agriculture_electricity:
       name: Electricity
     agriculture_heating:
       name: Heat
-    buildings_heating: 
+    buildings_heating:
       name: Heating
-    buildings_appliances: 
+    buildings_appliances:
       name: Appliances
-    buildings_cooling: 
+    buildings_cooling:
       name: Cooling
-    households_hot_water: 
+    households_hot_water:
       name: Hot water
-    households_appliances: 
+    households_appliances:
       name: Appliances
-    households_cooling: 
+    households_cooling:
       name: Cooling
     insulation_apartments_high:
       name: Heating apartments with high insulation
@@ -103,61 +103,69 @@ en:
       name: Heating terraced houses with medium insulation
     electric_bikes:
       name: Electric bicycles
-    electric_buses: 
+    electric_buses:
       name: Electric buses
-    electric_trucks: 
+    electric_trucks:
       name: Electric trucks
-    electric_vehicle_profile_1: 
+    electric_vehicle_profile_1:
       name: Electric cars "charging everywhere"
-    electric_vehicle_profile_2: 
+    electric_vehicle_profile_2:
       name: Electric cars "charging at home"
-    electric_vehicle_profile_3: 
+    electric_vehicle_profile_3:
       name: Electric cars "fast charging"
-    electric_vehicle_profile_4: 
+    electric_vehicle_profile_4:
       name: Electric cars "smart charging"
-    electric_vehicle_profile_5: 
+    electric_vehicle_profile_5:
       name: Electric cars "regular charging"
     freight_trains:
       name: Freight trains
     passenger_trains:
       name: Passenger trains
-    industry_chemicals_electricity: 
+    industry_chemicals_electricity:
       name: Chemicals electricity demand
-    industry_chemicals_heat: 
+    industry_chemicals_heat:
       name: Chemicals heat demand
-    industry_ict: 
+    industry_ict:
       name: ICT electricity demand
-    industry_metals_electricity: 
+    industry_metals_electricity:
       name: Metal electricity demand
-    industry_metals_heat: 
+    industry_metals_heat:
       name: Metal heat demand
-    industry_other_electricity: 
+    industry_other_electricity:
       name: Other industry electricity demand
-    industry_other_heat: 
+    industry_other_heat:
       name: Other industry heat demand
-    industry_refineries_electricity: 
+    industry_refineries_electricity:
       name: Refineries electricity demand
-    industry_refineries_heat: 
+    industry_refineries_heat:
       name: Refineries heat demand
-    hydrogen_export: 
+    hydrogen_export:
       name: Hydrogen export
-    hydrogen_import: 
+    hydrogen_import:
       name: Hydrogen import
-    network_gas_export: 
+    network_gas_export:
       name: Gas export
-    network_gas_import: 
+    network_gas_import:
       name: Gas import
-    solar_pv_profile_1: 
-      name: Solar PV
-    solar_thermal: 
+    solar_pv_on_roof_households:
+      name: Solar rooftop (households)
+    solar_pv_on_roof_buildings:
+      name: Solar rooftop (buildings)
+    solar_pv_on_land:
+      name: Solar on land
+    solar_pv_offshore:
+      name: Solar offshore
+    solar_csp:
+      name: Concentrated solar power
+    solar_thermal:
       name: Solar thermal
-    geothermal_heat: 
+    geothermal_heat:
       name: Geothermal heat
-    river: 
+    river:
       name: Hydropower (river)
-    wind_offshore_baseline: 
+    wind_offshore_baseline:
       name: Wind offshore
-    wind_coastal_baseline: 
+    wind_coastal_baseline:
       name: Wind coastal
-    wind_inland_baseline: 
+    wind_inland_baseline:
       name: Wind inland

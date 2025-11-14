@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'amalgamator/processor/base'
+
 module Amalgamator
   # Subtracts a dataset from the target dataset to create a new dataset
   class Processor::Separate < Processor::Base

@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+require 'amalgamator/combiner'
+require 'amalgamator/separator'
+require 'amalgamator/dataset_exporter'
+
 namespace :dataset do
   desc <<-DESC
     Combine multiple datasets together into a bigger one, for example municipalities into a province.

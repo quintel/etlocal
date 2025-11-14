@@ -1,3 +1,6 @@
+require 'amalgamator/base'
+require 'amalgamator/processor/combine'
+
 module Amalgamator
   class Combiner < Amalgamator::Base
     def processor

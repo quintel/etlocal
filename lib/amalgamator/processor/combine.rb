@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+#
+require 'amalgamator/processor/base'
 
 module Amalgamator
   # The ValueProcessor is the core worker of the DatasetCombiner classes.

@@ -11,6 +11,10 @@ Dir["#{ Rails.root }/db/seeds/**/*.rb"].each do |file|
   require file
 end
 
+Dir["#{ Rails.root }/lib/amalgamator/**/*.rb"].each do |file|
+  require file
+end
+
 ActiveRecord::Migration.maintain_test_schema!
 
 I18n.locale = :en

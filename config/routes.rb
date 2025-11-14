@@ -24,8 +24,6 @@ Rails.application.routes.draw do
     end
   end
 
-  post :charts, to: "charts#data"
-
   namespace :api do
     namespace :v1 do
       resources :exports, only: :show

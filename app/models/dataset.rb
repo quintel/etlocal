@@ -86,14 +86,6 @@ class Dataset < ApplicationRecord
     base_dataset
   end
 
-  def chart_id
-    if is_province?
-      geo_id.titleize.sub(/\s/, '-')
-    else
-      geo_id
-    end
-  end
-
   def editable_attributes
     @editable_attributes ||= EditableAttributesCollection.new(self)
   end

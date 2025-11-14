@@ -146,7 +146,7 @@ nl:
       industry_aluminium_demand: Vraag
       industry_aluminium_technology: Technologie
       industry_refinery_input: Inzet energie voor omzetting (feedstock)
-      industry_refinery_output: Porductie energie uit omzetting (brandstofproductie)
+      industry_refinery_output: Productie energie uit omzetting (brandstofproductie)
       industry_refinery_demand_energetic: Eigen verbruik (energetisch)
       industry_refinery_demand_non_energetic: Eigen verbruik (niet-energetisch)
 

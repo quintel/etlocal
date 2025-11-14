@@ -12,7 +12,7 @@ en:
         number_of_inhabitants: Number of inhabitants
         parent: Parent dataset
         has_mountains: Availability mountains
-        has_offshore_solar: Availability solar PV offshore
+        has_offshore_solar: Availability solar offshore
         has_solar_csp: Availability concentrated solar power
         has_merit_order: Availability hourly calculations
         has_weather_curves: Availability weather years
@@ -644,10 +644,10 @@ en:
         energy_production_dry_biomass_max_demand: Dry biomass potential
         energy_production_oily_biomass_max_demand: Oily biomass potential
 
-        input_energy_power_wind_turbine_inland_production: Wind (inland)
-        input_energy_power_wind_turbine_coastal_production: Wind (coastal)
-        input_energy_power_wind_turbine_offshore_production: Wind (offshore)
-        input_energy_power_solar_pv_solar_radiation_production: Solar PV plant
+        input_energy_power_wind_turbine_inland_production: Wind onshore
+        input_energy_power_wind_turbine_coastal_production: Wind coastal
+        input_energy_power_wind_turbine_offshore_production: Wind offshore
+        input_energy_power_solar_pv_solar_radiation_production: Solar on land
         input_energy_power_supercritical_waste_mix_production: Waste incinerator
         input_energy_chp_supercritical_ht_waste_mix_production: Waste plant with heat production (CHP, HT)
         input_energy_chp_supercritical_mt_waste_mix_production: Waste plant with heat production (CHP, MT)
@@ -737,9 +737,9 @@ en:
         input_energy_heat_distribution_mt_loss_share: Heat (MT)
         input_energy_heat_distribution_lt_loss_share: Heat (LT)
 
-        energy_power_wind_turbine_inland_full_load_hours: Wind (inland)
-        energy_power_wind_turbine_coastal_full_load_hours: Wind (coastal)
-        input_energy_power_wind_turbine_offshore_full_load_hours: Wind (offshore)
+        energy_power_wind_turbine_inland_full_load_hours: Wind onshore
+        energy_power_wind_turbine_coastal_full_load_hours: Wind coastal
+        input_energy_power_wind_turbine_offshore_full_load_hours: Wind offshore
         input_solar_pv_on_roof_households_full_load_hours: Solar rooftop (households)
         input_solar_pv_on_roof_buildings_full_load_hours: Solar rooftop (buildings)
         input_solar_pv_on_land_full_load_hours: Solar on land

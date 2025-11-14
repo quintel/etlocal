@@ -37,17 +37,17 @@ namespace :dataset do
       migration_slug: ENV.fetch('migration_slug', nil)
     )
 
-    puts '✅ Dataset combiner initialized!'
+    puts 'Dataset combiner initialized!'
     puts 'Combining datasets... '
 
     combiner.result
 
-    puts '✅ Datasets combined!'
+    puts 'Datasets combined!'
     puts 'Exporting data...'
 
     migration_filename = combiner.export_data
 
-    puts '✅ Datasets exported!'
+    puts 'Datasets exported!'
     puts "Migration file can be found at: #{migration_filename}\n\n"
     puts 'All done! Have a nice day :)'
   end
@@ -74,17 +74,17 @@ namespace :dataset do
       source_data_year: ENV.fetch('source_data_year', nil)
     )
 
-    puts '✅ Dataset separator initialized!'
+    puts 'Dataset separator initialized!'
     puts 'Separating datasets... '
 
     separator.result
 
-    puts '✅ Datasets separated!'
+    puts 'Datasets separated!'
     puts 'Exporting data...'
 
     migration_filename = separator.export_data
 
-    puts '✅ Datasets exported!'
+    puts 'Datasets exported!'
     puts "Migration file can be found at: #{migration_filename}\n\n"
     puts 'All done! Have a nice day :)'
   end

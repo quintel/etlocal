@@ -33,10 +33,6 @@ Areas.Layers = (function () {
             new ol.layer.Group({
                 group: 'dataset_selector',
                 layers: new Areas.LayersTransformer(this, this.layers.dataset_selector).transform()
-            }),
-            new ol.layer.Group({
-                group: 'chart',
-                layers: new Areas.LayersTransformer(this, this.layers.chart).transform()
             })
         ];
     }

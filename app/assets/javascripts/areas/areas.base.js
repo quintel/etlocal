@@ -59,7 +59,6 @@ var Areas = (function () {
             this.popup        = new Areas.Popup(this);
 
             this.interfaces   = {
-                chart:            new Areas.VisualMode(this),
                 dataset_selector: new Areas.DatasetSelector(this)
             };
 

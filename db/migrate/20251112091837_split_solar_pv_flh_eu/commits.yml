@@ -6,4 +6,4 @@
 - fields:
   - :all
   message:
-    "FLH's based on the PECD profiles for the respective solar technology. The PECD can be accesed here: https://cds.climate.copernicus.eu/datasets/sis-energy-pecd?tab=overview"
+    "Full load hours based on solar PV curve from renewables.ninja. These full load hours are scaled down to correct for non-concurrency using data for The Netherlands. For The Netherlands full load hours are calculated using data about installed capacity and production. The full load hours derived from the Renewables Ninja curve is scaled down by a factor: flh data NL / flh Renewables Ninja Netherlands."

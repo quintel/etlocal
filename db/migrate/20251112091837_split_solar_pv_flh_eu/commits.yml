@@ -6,4 +6,6 @@
 - fields:
   - :all
   message:
-    "Full load hours based on solar PV curve from renewables.ninja. These full load hours are scaled down to correct for non-concurrency using data for The Netherlands. For The Netherlands full load hours are calculated using data about installed capacity and production. The full load hours derived from the Renewables Ninja curve is scaled down by a factor: flh data NL / flh Renewables Ninja Netherlands."
+    "Retrieved from renewables.ninja, scaled down to correct for non-concurrency.
+    See this file for more information: https://github.com/quintel/etdataset-public/blob/master/source_analyses/EU27_european_union/2019/eu_datasets/power_plants/20220609_EU_power_plants.xlsx"
+

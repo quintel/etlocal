@@ -1,0 +1,11 @@
+---
+
+# If you are creating only a single commit, you may instead use a single :all
+# field to have all of the CSV columns be included. This cannot be used when
+# creating multiple commits.
+- fields:
+  - :all
+  message:
+    "Retrieved from renewables.ninja, scaled down to correct for non-concurrency.
+    See this file for more information: https://github.com/quintel/etdataset-public/blob/master/source_analyses/EU27_european_union/2019/eu_datasets/power_plants/20220609_EU_power_plants.xlsx"
+

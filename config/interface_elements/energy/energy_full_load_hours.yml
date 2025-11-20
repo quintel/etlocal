@@ -20,7 +20,7 @@ groups:
       - key: energy_power_engine_network_gas_full_load_hours
         unit: 'flh'
         combination_method:
-          weighted_average: 
+          weighted_average:
             - input_energy_power_engine_network_gas_production
       - key: energy_power_supercritical_coal_full_load_hours
         unit: 'flh'
@@ -95,7 +95,22 @@ groups:
         combination_method:
           weighted_average:
             - input_energy_power_wind_turbine_offshore_production
-      - key: input_solar_panels_roofs_and_parks_full_load_hours
+      - key: input_solar_pv_on_roof_households_full_load_hours
+        unit: 'flh'
+        combination_method:
+          weighted_average:
+            - input_energy_power_solar_pv_solar_radiation_production
+      - key: input_solar_pv_on_roof_buildings_full_load_hours
+        unit: 'flh'
+        combination_method:
+          weighted_average:
+            - input_energy_power_solar_pv_solar_radiation_production
+      - key: input_solar_pv_on_land_full_load_hours
+        unit: 'flh'
+        combination_method:
+          weighted_average:
+            - input_energy_power_solar_pv_solar_radiation_production
+      - key: input_solar_csp_full_load_hours
         unit: 'flh'
         combination_method:
           weighted_average:
@@ -125,14 +140,6 @@ groups:
         combination_method:
           weighted_average:
             - input_energy_power_supercritical_ccs_waste_mix_production
-
-  - header: energy_renewable_full_load_hours_max
-    items:
-      - key: flh_solar_pv_solar_radiation_max
-        unit: 'flh'
-        combination_method:
-          weighted_average:
-            - input_energy_power_solar_pv_solar_radiation_production
 
   - header: energy_fossil_chp_full_load_hours
     items:
@@ -286,8 +293,8 @@ groups:
           weighted_average:
             - input_energy_heat_heatpump_water_water_ht_electricity_production # + input_energy_heat_heatpump_water_water_mt_electricity_production + input_energy_heat_heatpump_water_water_lt_electricity_production
       - key: industry_heat_burner_hydrogen_full_load_hours
-        unit: 'flh' 
+        unit: 'flh'
         combination_method:
           weighted_average:
             - industry_heat_burner_hydrogen_demand
-      
+

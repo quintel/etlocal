@@ -2085,16 +2085,6 @@
     "Final version of Northern Ireland dataset"
 
 - fields:
-  - input_solar_panels_roofs_and_parks_full_load_hours
-  message:
-    "Final version of Northern Ireland dataset"
-
-- fields:
-  - flh_solar_pv_solar_radiation_max
-  message:
-    "Based on average full load hours of the Netherlands (2019) as default. These full load hours will change in the future year due to the electricity merit order."
-
-- fields:
   - input_energy_power_solar_csp_solar_radiation_production
   message:
     "No production in start year"

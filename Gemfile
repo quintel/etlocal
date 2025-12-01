@@ -40,7 +40,7 @@ gem 'config'
 gem 'git'
 
 gem 'transformer', ref: '63f7442', github: 'quintel/transformer'
-gem 'atlas',       ref: '80a8886', github: 'quintel/atlas'
+gem 'atlas',       ref: '8db16bb', github: 'quintel/atlas'
 gem 'rubel',       ref: 'ad3d44e', github: 'quintel/rubel'
 gem 'refinery',    ref: '5439199', github: 'quintel/refinery'
 

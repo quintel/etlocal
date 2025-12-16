@@ -49,8 +49,8 @@ en:
         In this tab you will find information about solar PV and solar thermal production in the
         buildings sector.
       buildings_building_stock: |
-        In this tab you will find information about the building stock: how many buildings are there in your region? How
-        well are these buildings insulated? And how large is the suitable roof surface for solar panels on these buildings?
+        This tab contains information about the non-residential building stock: how many buildings
+        are there in this region? How well are these buildings insulated?
       buildings_applications: |
         In this tab you can see how energy is used in the buildings sector per energy carrier.
         E.g. What percentage of electricity demand in buildings is used for space heating? And what

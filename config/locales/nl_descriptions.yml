@@ -48,14 +48,13 @@ nl:
         In dit tabblad vind je informatie over de hoeveelheid zonnestroom en zonnewarmte die geproduceerd wordt door
         gebouwen.
       buildings_building_stock: |
-        In dit tabblad vind je informatie over de gebouwenvoorraad: hoeveel staan er in jouw regio? Hoe
-        goed zijn deze gebouwen geïsoleerd? En hoe groot is het geschikt dakoppervlak voor zonnepanelen op deze gebouwen?
+        Dit tabblad bevat informatie over de niet-residentiële gebouwenvoorraad: hoeveel gebouwen
+        staan er in deze regio? Hoe goed zijn deze gebouwen geïsoleerd?
       buildings_applications: |
         In dit tabblad kun je per energiedrager zien waar gebouwen hun energie voor
         gebruiken. Hoeveel procent van het elektriciteitsgebruik wordt gebruikt voor verwarming? En hoeveel
         voor verlichting? Ook kun je zien welke apparaten gebouwen gebruiken. Hoeveel procent van
-        de verlichting gebeurt met spaarlampen? En hoeveel met LED-lampen? Deze percentages staan
-        standaard op het nationale gemiddelde.
+        de verlichting gebeurt met spaarlampen? En hoeveel met LED-lampen?
       transport: |
         In deze sectie vind je informatie over de transportsector.
       transport_road_transport: |

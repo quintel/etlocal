@@ -256,6 +256,7 @@ nl:
 
         # buildings
         present_number_of_buildings: Aantal gebouwen
+        area_per_building_residence_equivalent: Typisch vloeroppervlak per woning
         buildings_roof_surface_available_for_pv: Geschikt dakoppervlak voor zon-PV
         typical_useful_demand_for_space_heating_buildings_present: "Bestaande gebouwen"
         typical_useful_demand_for_space_heating_buildings_future: "Nieuwe gebouwen"

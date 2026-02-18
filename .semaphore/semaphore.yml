@@ -20,8 +20,7 @@ blocks:
             - checkout
             - mkdir /tmp/junit-results
             - sem-service start mysql 8
-            - cache clear
-            - rm -rf vendor/bundle
+            - cache restore
             - bundle config set --local deployment 'true'
             - bundle install
             - cache store

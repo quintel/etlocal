@@ -26,7 +26,7 @@ module GitFiles
     def log
       # Reading the Git log fails, with Git complaining about an ambiguous argument, unless the
       # absolute path to the blob is provided.
-      Git.open(Atlas.data_dir).log.path(git_path.to_s)
+      Git.open(Atlas.data_dir).log.path(git_path.to_s).execute
     end
 
     def <=>(other)

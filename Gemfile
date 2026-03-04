@@ -13,11 +13,10 @@ gem 'jbuilder'
 gem 'jquery-rails', '>= 1.0.3'
 gem 'mysql2'
 gem 'puma'
-gem 'rails', '~> 7.0'
+gem 'rails', '~> 8.1'
 gem 'rails-i18n'
-gem 'sass-rails'
+gem 'sassc-rails'
 gem 'turbolinks'
-gem 'uglifier', '>= 1.3.0'
 gem 'http_accept_language'
 
 gem 'ostruct'
@@ -48,13 +47,13 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec'
   gem 'rspec-collection_matchers'
-  gem 'rspec-rails', '6.1.1'
+  gem 'rspec-rails', '~> 8.0'
   gem 'pry-rails'
   gem 'dotenv-rails'
 end
 
 group :test do
-  gem 'capybara',        '3.40.0'
+  gem 'capybara',        '~> 3.40'
   gem 'selenium-webdriver','4.10'
   gem 'rails-controller-testing'
   gem 'database_cleaner'
@@ -76,7 +75,7 @@ group :development do
   gem 'rubocop-rspec'
 end
 
-gem 'mini_racer', '~> 0.6.3'
+gem 'mini_racer'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

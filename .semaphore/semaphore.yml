@@ -38,3 +38,7 @@ promotions:
     pipeline_file: deploy_production.yml
     auto_promote:
       when: "result = 'passed' and branch = 'production'"
+  - name: Deploy to staging
+    pipeline_file: deploy_staging.yml
+    auto_promote:
+      when: "result = 'passed' and branch = 'master'"

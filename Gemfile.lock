@@ -1,20 +1,21 @@
 GIT
   remote: https://github.com/quintel/atlas.git
-  revision: 33f32a48c868e92f055a68c517c6b9fd5ae01bfa
-  ref: 33f32a4
+  revision: 89b1591868c43eeefcf88a026bd90610e8e00d41
+  ref: 89b1591
   specs:
     atlas (1.0.0)
       activemodel (>= 7)
       activesupport (>= 7)
       csv (>= 3)
       gpgme (~> 2.0)
+      ostruct
       turbine-graph (>= 0.1)
       virtus (~> 1.0)
 
 GIT
   remote: https://github.com/quintel/refinery.git
-  revision: 54391992ee6908712bc2abd5561e244e31a5fbe3
-  ref: 5439199
+  revision: c308c6d56f9b81e9b613a9dffc01ad941fb0ef93
+  ref: c308c6d
   specs:
     refinery (0.0.1)
       ruby-graphviz
@@ -23,15 +24,15 @@ GIT
 
 GIT
   remote: https://github.com/quintel/rubel.git
-  revision: ad3d44ef4304da6a98db3ec42747a7af9e7e64c7
-  ref: ad3d44e
+  revision: 32ae1ea09fcf06c88c7c771d307c202d8dcaf560
+  ref: 32ae1ea
   specs:
-    rubel (0.1.0)
+    rubel (0.1.1)
 
 GIT
   remote: https://github.com/quintel/transformer.git
-  revision: 63f7442c1dfa7457bbf1d918ea1e1d83ede57adb
-  ref: 63f7442
+  revision: 641134c31f1a7f43836c14203ba76375bed7f593
+  ref: 641134c
   specs:
     transformer (1.0.0)
       atlas (~> 1.0)
@@ -639,7 +640,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 3.3.5p100
+   ruby 3.4.7p58
 
 BUNDLED WITH
    2.6.9

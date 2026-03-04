@@ -1,4 +1,4 @@
-ruby '3.3.5'
+ruby '~> 3.4.7'
 
 source 'https://rubygems.org'
 
@@ -39,10 +39,10 @@ gem 'config'
 
 gem 'git'
 
-gem 'transformer', ref: '63f7442', github: 'quintel/transformer'
-gem 'atlas',       ref: '33f32a4', github: 'quintel/atlas'
-gem 'rubel',       ref: 'ad3d44e', github: 'quintel/rubel'
-gem 'refinery',    ref: '5439199', github: 'quintel/refinery'
+gem 'transformer', ref: '641134c', github: 'quintel/transformer' #TODO: update once merged to master
+gem 'atlas',       ref: '89b1591', github: 'quintel/atlas' #TODO: update once merged to master
+gem 'rubel',       ref: '32ae1ea', github: 'quintel/rubel' #TODO: update once merged to master
+gem 'refinery',    ref: 'c308c6d', github: 'quintel/refinery' #TODO: update once merged to master
 
 group :development, :test do
   gem 'byebug', platform: :mri

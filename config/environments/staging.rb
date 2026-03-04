@@ -1,6 +1,8 @@
+require "active_support/core_ext/integer/time"
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.etsource_export_root = "https://beta-local.energytransitionmodel.com"
+  config.etsource_export_root = "https://beta.data.energytransitionmodel.com"
 
   # Code is not reloaded between requests.
   config.cache_classes = true
@@ -54,7 +56,7 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "etgit_#{Rails.env}"
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = { host: "beta-local.energytransitionmodel.com" }
+  config.action_mailer.default_url_options = { host: "beta.data.energytransitionmodel.com" }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

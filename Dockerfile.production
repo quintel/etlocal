@@ -11,6 +11,7 @@ RUN apt-get update -yqq && \
     default-libmysqlclient-dev \
     git \
     gnupg \
+    libyaml-dev \
     nodejs
 
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /usr/share/keyrings/yarn-archive-keyring.gpg > /dev/null \

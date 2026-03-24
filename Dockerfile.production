@@ -1,4 +1,4 @@
-FROM ruby:3.4-slim
+FROM ruby:4.0-slim
 
 LABEL maintainer="dev@quintel.com"
 
@@ -18,17 +18,18 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /usr
   && echo "deb [signed-by=/usr/share/keyrings/yarn-archive-keyring.gpg] https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
   && apt-get update && apt-get install -y yarn && rm -rf /var/lib/apt/lists/*
 
-RUN gem install bundler -v '>= 2'
-
-# Throw errors if Gemfile has been modified since Gemfile.lock
-RUN bundle config --global frozen 1
+RUN gem update --system && gem install bundler
 
 COPY Gemfile* /app/
 WORKDIR /app
 
-RUN bundle config set deployment 'true'
-RUN bundle config set --local without 'development test'
-RUN bundle install --jobs=4 --retry=3
+# Throw errors if Gemfile has been modified since Gemfile.lock
+RUN bundle config frozen true \
+ && bundle config jobs 4 \
+ && bundle config retry 3 \
+ && bundle config deployment true \
+ && bundle config without 'development test' \
+ && bundle install
 
 COPY . /app/
 

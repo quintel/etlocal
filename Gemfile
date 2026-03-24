@@ -1,4 +1,4 @@
-ruby '~> 3.4.7'
+ruby '~> 4.0.2'
 
 source 'https://rubygems.org'
 
@@ -44,7 +44,8 @@ gem 'rubel',       ref: '9fe7010', github: 'quintel/rubel'
 gem 'refinery',    ref: '36b8e34', github: 'quintel/refinery'
 
 group :development, :test do
-  gem 'byebug', platform: :mri
+  gem 'binding_of_caller', '~> 2.0.0'
+  gem 'pry-byebug', '~> 3.12.0', platform: :mri
   gem 'rspec'
   gem 'rspec-collection_matchers'
   gem 'rspec-rails', '~> 8.0'

@@ -128,6 +128,8 @@ GEM
     bcrypt (3.1.21)
     bigdecimal (4.0.1)
     bindex (0.8.1)
+    binding_of_caller (2.0.0)
+      debug_inspector (>= 1.2.0)
     bootsnap (1.23.0)
       msgpack (~> 1.2)
     builder (3.3.0)
@@ -162,6 +164,7 @@ GEM
       database_cleaner-core (~> 2.0)
     database_cleaner-core (2.0.1)
     date (3.5.1)
+    debug_inspector (1.2.0)
     deep_cloneable (3.2.2)
       activerecord (>= 3.1.0, < 9)
     deep_merge (1.2.2)
@@ -354,6 +357,9 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
       reline (>= 0.6.0)
+    pry-byebug (3.12.0)
+      byebug (~> 13.0)
+      pry (>= 0.13, < 0.17)
     pry-rails (0.3.11)
       pry (>= 0.13.0)
     psych (5.3.1)
@@ -599,8 +605,8 @@ PLATFORMS
 DEPENDENCIES
   archive-zip (~> 0.9.0)
   atlas!
+  binding_of_caller (~> 2.0.0)
   bootsnap
-  byebug
   capybara (~> 3.40)
   config
   database_cleaner
@@ -619,6 +625,7 @@ DEPENDENCIES
   mini_racer
   mysql2
   ostruct
+  pry-byebug (~> 3.12.0)
   pry-rails
   puma
   pundit
@@ -654,7 +661,7 @@ DEPENDENCIES
   webmock
 
 RUBY VERSION
-   ruby 3.4.7p58
+   ruby 4.0.2p0
 
 BUNDLED WITH
-   2.6.9
+   4.0.6

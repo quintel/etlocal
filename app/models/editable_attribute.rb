@@ -36,11 +36,6 @@ class EditableAttribute
   # If a dataset has an edit - give that value. If it doesn't have an edit,
   # fall back to the default value.
   def value
-    # Return nil if there’s no edit befre the freeze date
-    if @freeze_date.present? && latest.nil?
-      return nil
-    end
-
     # If we can query the source (e.g., ENTSO-E), use that value
     if @dataset.queryable_source? && @entso_query.present?
       return @dataset.execute_query(@entso_query)

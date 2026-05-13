@@ -38,7 +38,7 @@ gem 'config'
 
 gem 'git'
 
-gem 'transformer', ref: '0e5c5fd', github: 'quintel/transformer'
+gem 'transformer', ref: '0f96454', github: 'quintel/transformer'
 gem 'atlas',       ref: 'f0fb6be', github: 'quintel/atlas'
 gem 'rubel',       ref: '9fe7010', github: 'quintel/rubel'
 gem 'refinery',    ref: '36b8e34', github: 'quintel/refinery'

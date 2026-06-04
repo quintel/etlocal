@@ -5,6 +5,7 @@ html
     title= I18n.t("application")
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = favicon_link_tag asset_path("favicon.svg")
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
     - Dir[Rails.root.join("**", "*.hdb")].each do |hdb_file|

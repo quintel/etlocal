@@ -1,0 +1,12 @@
+key: ccus
+groups:
+  - header: ccus_fertilizer_process_emissions
+    items:
+      - key: industry_final_demand_for_chemical_fertilizers_network_gas_non_energetic_co2_demand
+        unit: 'kg CO<sub>2</sub>'
+      - key: industry_chemicals_fertilizers_emitted_co2_demand
+        unit: 'kg CO<sub>2</sub>'
+  - header: ccus_utilisation
+    items:
+      - key: molecules_other_utilisation_co2_demand
+        unit: 'kg CO<sub>2</sub>'

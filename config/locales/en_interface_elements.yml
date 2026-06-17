@@ -878,6 +878,11 @@ en:
         other_final_demand_crude_oil_demand: Oil
         other_final_demand_crude_oil_non_energetic_demand: Oil (non-energetic)
 
+        # CCUS
+        industry_final_demand_for_chemical_fertilizers_network_gas_non_energetic_co2_demand: Potential CO2 for capture
+        industry_chemicals_fertilizers_emitted_co2_demand: Emitted CO2
+        molecules_other_utilisation_co2_demand: Other utilisation
+
   activerecord:
     attributes:
       dataset_edit:

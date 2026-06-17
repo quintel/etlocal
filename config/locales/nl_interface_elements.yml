@@ -880,6 +880,11 @@ nl:
         input_agriculture_chp_engine_biogas_steam_hot_water_output_conversion: Biogas WKK (landbouw) - efficiêntie warmte
         input_agriculture_chp_wood_pellets_steam_hot_water_output_conversion: Biomassa WKK (landbouw) - efficiêntie warmte
 
+        # CCUS
+        industry_final_demand_for_chemical_fertilizers_network_gas_non_energetic_co2_demand: Potentiële CO2 voor afvang
+        industry_chemicals_fertilizers_emitted_co2_demand: Uitgestoten CO2
+        molecules_other_utilisation_co2_demand: Overig gebruik
+
         #Other
         other_final_demand_electricity_demand: Elektriciteit
         input_other_final_demand_network_gas_demand: Gas

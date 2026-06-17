@@ -195,6 +195,10 @@ en:
       energy_renewable_full_load_hours_max: Maximum full load hours of renewable power plants
       energy_distribution_losses: Distribution losses
 
+      # CCUS
+      ccus_fertilizer_process_emissions: Fertilizer sector process emissions
+      ccus_utilisation: Utilisation of CO<sub>2</sub>
+
       # curves
       curves_supply_electricity: Supply - Electricity
       curves_supply_heat: Supply - Heat

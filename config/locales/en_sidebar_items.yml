@@ -51,6 +51,7 @@ en:
       other: Other energy demand
       energy: Energy production
       transport: Transport
+      ccus: CCUS
       curves: Hourly curves
 
     subgroups:

@@ -51,6 +51,7 @@ nl:
       energy: Energieproductie
       transport: Transport
       other: Overige vraag
+      ccus: CCUS
       curves: Uurprofielen
 
     subgroups:

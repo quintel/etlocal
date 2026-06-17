@@ -197,6 +197,10 @@ nl:
       energy_renewable_full_load_hours_max: Maximum vollasturen van hernieuwbare centrales
       energy_distribution_losses: Distributieverliezen
 
+      # CCUS
+      ccus_fertilizer_process_emissions: Kunstmestsector procesemissies
+      ccus_utilisation: Gebruik van CO<sub>2</sub>
+
       # curves
       curves_supply_electricity: Aanbod - Elektriciteit
       curves_supply_heat: Aanbod - Warmte

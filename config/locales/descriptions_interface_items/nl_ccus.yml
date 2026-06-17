@@ -7,6 +7,5 @@ nl:
       industry_chemicals_fertilizers_emitted_co2_demand: |
         De CO<sub>2</sub> van procesemissies van de kunstmestsector die uiteindelijk wordt
         uitgestoten (en niet afgevangen).
-      molecules_other_utilisation_co2_demand: |
-        Overig gebruik van CO<sub>2</sub> dat op korte termijn weer kan vrijkomen in de atmosfeer
-        of voor onbepaalde tijd kan worden benut.
+      molecules_other_utilisation_delayed_emitted_co2: |
+        Overig gebruik van CO<sub>2</sub> dat op korte termijn weer wordt uitgestoten.

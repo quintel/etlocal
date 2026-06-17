@@ -883,7 +883,7 @@ nl:
         # CCUS
         industry_final_demand_for_chemical_fertilizers_network_gas_non_energetic_co2_demand: Potentiële CO2 voor afvang
         industry_chemicals_fertilizers_emitted_co2_demand: Uitgestoten CO2
-        molecules_other_utilisation_co2_demand: Overig gebruik
+        molecules_other_utilisation_delayed_emitted_co2: Overig gebruik - uitgestelde uitstoot
 
         #Other
         other_final_demand_electricity_demand: Elektriciteit

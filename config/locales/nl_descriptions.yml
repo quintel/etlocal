@@ -151,7 +151,7 @@ nl:
       energy_biomass: |
         In dit tabblad vind je informatie over groen gas, afval en de potentie van biomassa.
       ccus_default: |
-        Text ccus
+        Dit tabblad geeft informatie over afvang en gebruik van CO<sub>2</sub>.
       curves: |
         Het ETM rekent vraag en aanbod van gas, elekriciteit, warmte en waterstof uit op uurbasis. Voor deze berekening zijn uurprofielen nodig
         en deze kan je vinden in deze sectie. Vaak wordt voor een regio binnen een land dezelfde profielen gebruikt als het land zelf.

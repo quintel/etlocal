@@ -8,5 +8,5 @@ groups:
         unit: 'kg-CO<sub>2</sub>'
   - header: ccus_utilisation
     items:
-      - key: molecules_other_utilisation_co2_demand
+      - key: molecules_other_utilisation_delayed_emitted_co2
         unit: 'kg-CO<sub>2</sub'

@@ -2,7 +2,7 @@ class EmissionKeysAllDatasets < ActiveRecord::Migration[8.1]
   EMISSION_KEYS = %w[
     industry_final_demand_for_chemical_fertilizers_network_gas_non_energetic_co2_demand
     industry_chemicals_fertilizers_emitted_co2_demand
-    molecules_other_utilisation_co2_demand
+    molecules_other_utilisation_delayed_emitted_co2
   ].freeze
 
   def up

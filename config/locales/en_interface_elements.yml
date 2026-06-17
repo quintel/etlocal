@@ -869,11 +869,6 @@ en:
         input_agriculture_chp_wood_pellets_steam_hot_water_output_conversion: Biomass CHP (agriculture) - heat efficiency
         input_agriculture_chp_engine_biogas_steam_hot_water_output_conversion: Biogas CHP (agriculture) - heat efficiency
 
-        # CCUS
-        industry_final_demand_for_chemical_fertilizers_network_gas_non_energetic_co2_demand: final
-        industry_chemicals_fertilizers_emitted_co2_demand: emitted
-        molecules_other_utilisation_co2_demand: other ut
-
         #Other
         other_final_demand_electricity_demand: Electricity
         other_final_demand_network_gas_demand: Gas
@@ -886,7 +881,7 @@ en:
         # CCUS
         industry_final_demand_for_chemical_fertilizers_network_gas_non_energetic_co2_demand: Potential CO2 for capture
         industry_chemicals_fertilizers_emitted_co2_demand: Emitted CO2
-        molecules_other_utilisation_co2_demand: Other utilisation
+        molecules_other_utilisation_delayed_emitted_co2: Other utilisation - delayed emitted
 
   activerecord:
     attributes:

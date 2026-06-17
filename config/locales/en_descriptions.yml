@@ -149,7 +149,7 @@ en:
       energy_biomass: |
         In this tab you will find information about green gas, waste and the potential of biomass.
       ccus_default: |
-        Text ccus
+        This tab provides data for CO<sub>2</sub> capture and utilisation.
       curves: |
         The ETM calculates supply and demand of gas, electricity, heat and hydrogen on an hourly basis. Hourly profiles are required for this
         calculation and can be found in this section. Often the same profiles are used for a region within a country as the country itself.

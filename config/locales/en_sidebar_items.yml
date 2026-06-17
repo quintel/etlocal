@@ -75,6 +75,9 @@ en:
         curves_default: Default curves
         curves_weather_years: Weather year curves
 
+      ccus:
+        ccus_default: CCUS
+
       energy:
         energy_energy_demand: Energy demand
         energy_heat_production: District heating sources

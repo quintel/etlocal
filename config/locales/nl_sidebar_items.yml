@@ -75,6 +75,9 @@ nl:
         curves_default: Standaardprofielen
         curves_weather_years: Weerjaarprofielen
 
+      ccus:
+        ccus_default: CCUS
+
       energy:
         energy_energy_demand: Energievraag
         energy_heat_production: Bronnen warmtenet

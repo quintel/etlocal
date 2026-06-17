@@ -45,6 +45,7 @@ energy:
   - energy_biomass
   - energy_fuel_production
 ccus:
+  - ccus_default
 curves:
   - curves_default
   - curves_weather_years

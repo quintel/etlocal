@@ -881,7 +881,7 @@ en:
         # CCUS
         industry_final_demand_for_chemical_fertilizers_network_gas_non_energetic_co2_demand: Potential CO2 for capture
         industry_chemicals_fertilizers_emitted_co2_demand: Emitted CO2
-        molecules_other_utilisation_delayed_emitted_co2: Other utilisation - delayed emitted
+        molecules_other_utilisation_delayed_emitted_co2_demand: Other utilisation - delayed emitted
 
   activerecord:
     attributes:

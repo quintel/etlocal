@@ -150,6 +150,8 @@ nl:
         Energietransitiemodel</a>.
       energy_biomass: |
         In dit tabblad vind je informatie over groen gas, afval en de potentie van biomassa.
+      ccus: |
+        Deze sectie geeft informatie over afvang en gebruik van CO<sub>2</sub>.
       ccus_default: |
         Dit tabblad geeft informatie over afvang en gebruik van CO<sub>2</sub>.
       curves: |

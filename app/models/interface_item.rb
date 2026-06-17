@@ -7,7 +7,7 @@ class InterfaceItem
   validates_presence_of :unit, :key
   validates_inclusion_of :unit, in: %w[
     # kg kg/MJ km TJ % Mton km<sup>2</sup> € MW meter flh kWh/m<sup>2</sup>
-    string boolean m<sup>2</sup> kg-CO<sub>2</sub>
+    string boolean m<sup>2</sup> kgCO<sub>2</sub>
   ]
 
   attribute :key, Symbol

@@ -148,6 +148,8 @@ en:
         Energy Transition Model</a>.
       energy_biomass: |
         In this tab you will find information about green gas, waste and the potential of biomass.
+      ccus: |
+        This section gives information about CO<sub>2</sub> capture and utilisation.
       ccus_default: |
         This tab provides data for CO<sub>2</sub> capture and utilisation.
       curves: |

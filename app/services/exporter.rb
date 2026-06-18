@@ -23,7 +23,7 @@ module Exporter
       puts "Generating #{dataset['area']} with base set #{dataset['base_dataset']}"
       transformer = Transformer::DatasetGenerator.new(dataset)
 
-      transformer.preserve_paths(%w[curves]) do
+      transformer.preserve_paths(%w[curves emissions.csv]) do
         transformer.destroy if rebuild
         transformer.generate
       end

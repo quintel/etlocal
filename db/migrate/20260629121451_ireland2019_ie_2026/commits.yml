@@ -2,12 +2,12 @@
 - fields:
   - input_households_solar_pv_demand
   message:
-    "The data orginates from the Eurostat table '<a href='https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_epsc__custom_21604244/default/table'>Electricity production and self-consumption by sector and fuel</a>', 2019."
+    "The data orginates from the Eurostat table '<a href='https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_epsc__custom_21604244/default/table'>Electricity production and self-consumption by sector and fuel</a>', 2019. See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/households/households.xlsx'>this file</a> for more information."
 
 - fields:
   - input_buildings_solar_pv_demand
   message:
-    "The data orginates from the Eurostat table '<a href='https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_epsc__custom_21604244/default/table'>Electricity production and self-consumption by sector and fuel</a>', 2019."
+    "The data orginates from the Eurostat table '<a href='https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_epsc__custom_21604244/default/table'>Electricity production and self-consumption by sector and fuel</a>', 2019. See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/buildings/buildings.xlsx'>this file</a> for more information."
 
 - fields:
   - households_final_demand_for_lighting_electricity_households_lighting_incandescent_electricity_parent_share
@@ -247,7 +247,7 @@
 - fields:
   - present_number_of_buildings
   message:
-    "Data is retrieved from the Building Stock Observatory (2023). The number of dwelling equivalents is calculated by dividing the total building surface area by the typical surface area per dwelling. See 'https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/services'>this file</a> for more information."
+    "Data is retrieved from the Building Stock Observatory (2023). The number of dwelling equivalents is calculated by dividing the total building surface area by the typical surface area per dwelling. See 'https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/buildings/buildings.xlsx'>this file</a> for more information."
 
 - fields:
   - typical_useful_demand_for_space_heating_buildings_present
@@ -272,12 +272,12 @@
 - fields:
   - input_energy_power_ultra_supercritical_coal_production
   message:
-    "Derived from the Eurostat energy balance (2019). Ireland has a single coal-fired power plant (Moneypoint), a pulverised coal plant; all coal demand is therefore attributed to pulverised coal. See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/production/electricity.xlsx'>this file</a> for more information."
+    "Derived from the Eurostat energy balance (2019). Ireland has a single coal-fired power plant (Moneypoint), a pulverised coal plant; all coal demand is therefore attributed to pulverised coal. See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/primary_production/electricity.xlsx'>this file</a> for more information."
 
 - fields:
   - input_energy_power_supercritical_coal_production
   message:
-    "Derived from the Eurostat energy balance (2019). Ireland has a single coal-fired power plant (Moneypoint), a pulverised coal plant; all coal demand is therefore attributed to pulverised coal. See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/production/electricity.xlsx'>this file</a> for more information."
+    "Derived from the Eurostat energy balance (2019). Ireland has a single coal-fired power plant (Moneypoint), a pulverised coal plant; all coal demand is therefore attributed to pulverised coal. See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/primary_production/electricity.xlsx'>this file</a> for more information."
 
 - fields:
   - input_energy_power_ultra_supercritical_lignite_production
@@ -287,12 +287,12 @@
 - fields:
   - input_energy_power_turbine_network_gas_production
   message:
-    "Derived from the Eurostat Energy balance (2019). Gas demand for fossil electricity plants is distributed over gas turbines and CCGT plants proportionally to their installed capacities (source: EirGrid & SONI, All Island Generation Capacity Statement Data Workbook, 2022). See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/production/electricity.xlsx'>this file</a> for more information."
+    "Derived from the Eurostat Energy balance (2019). Gas demand for fossil electricity plants is distributed over gas turbines and CCGT plants proportionally to their installed capacities (source: EirGrid & SONI, All Island Generation Capacity Statement Data Workbook, 2022). See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/primary_production/electricity.xlsx'>this file</a> for more information."
 
 - fields:
   - input_energy_power_combined_cycle_network_gas_production
   message:
-    "Derived from the Eurostat Energy balance (2019). Gas demand for fossil electricity plants is distributed over gas turbines and CCGT plants proportionally to their installed capacities (source: EirGrid & SONI, All Island Generation Capacity Statement Data Workbook, 2022). See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/production/electricity.xlsx'>this file</a> for more information."
+    "Derived from the Eurostat Energy balance (2019). Gas demand for fossil electricity plants is distributed over gas turbines and CCGT plants proportionally to their installed capacities (source: EirGrid & SONI, All Island Generation Capacity Statement Data Workbook, 2022). See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/primary_production/electricity.xlsx'>this file</a> for more information."
 
 - fields:
   - input_energy_power_engine_diesel_production
@@ -302,12 +302,12 @@
 - fields:
   - input_energy_power_wind_turbine_inland_production
   message:
-    "EirGrid & SONI, All Island Generation Capacity Statement Data Workbook, 2022. See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/production/electricity.xlsx'>this file</a> for more information."
+    "EirGrid & SONI, All Island Generation Capacity Statement Data Workbook, 2022. See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/primary_production/electricity.xlsx'>this file</a> for more information."
 
 - fields:
   - energy_power_wind_turbine_inland_full_load_hours
   message:
-    "EirGrid & SONI, All Island Generation Capacity Statement Data Workbook, 2022. See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/production/electricity.xlsx'>this file</a> for more information."
+    "EirGrid & SONI, All Island Generation Capacity Statement Data Workbook, 2022. See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/primary_production/electricity.xlsx'>this file</a> for more information."
 
 - fields:
   - input_energy_power_solar_pv_solar_radiation_production
@@ -317,7 +317,7 @@
 - fields:
   - input_energy_power_hydro_mountain_production
   message:
-    "The data orginates from the Eurostat <a href='https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_epsc__custom_21257349/default/table'>Energy balance</a>, 2019."
+    "The data orginates from the Eurostat <a href='https://ec.europa.eu/eurostat/databrowser/view/nrg_bal_c__custom_22253779/default/table'>Energy balance</a>, 2019."
 
 - fields:
   - input_energy_chp_ultra_supercritical_ht_lignite_production
@@ -327,17 +327,17 @@
 - fields:
   - input_energy_chp_local_engine_ht_network_gas_production
   message:
-    "Derived from the SEAI energy balance (2019). See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/production/CHP.xlsx'>this file</a> for more information."
+    "Derived from the SEAI energy balance (2019). See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/primary_production/CHP.xlsx'>this file</a> for more information."
 
 - fields:
   - input_energy_chp_local_ht_wood_pellets_production
   message:
-    "Derived from the SEAI energy balance (2019). See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/production/CHP.xlsx'>this file</a> for more information."
+    "Derived from the SEAI energy balance (2019). See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/primary_production/CHP.xlsx'>this file</a> for more information."
 
 - fields:
   - input_energy_chp_local_engine_ht_biogas_production
   message:
-    "Derived from the SEAI energy balance (2019). See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/production/CHP.xlsx'>this file</a> for more information."
+    "Derived from the SEAI energy balance (2019). See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/primary_production/CHP.xlsx'>this file</a> for more information."
 
 - fields:
   - number_of_inhabitants
@@ -347,7 +347,7 @@
 - fields:
   - offshore_suitable_for_wind
   message:
-    "Data is retrieved from Offshore Renewable Energy Development Plan II: Strategic Environmental Assessment Report, SEARI and ClearLead Consulting limited, 2023. See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/general/windturbines_available_space.xlsx'>this file</a> for more information."
+    "Data is retrieved from Offshore Renewable Energy Development Plan II: Strategic Environmental Assessment Report, SEARI and ClearLead Consulting limited, 2023. See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/area/windturbines_available_space.xlsx'>this file</a> for more information."
 
 - fields:
   - interconnector_capacity
@@ -357,4 +357,4 @@
 - fields:
   - annual_infrastructure_cost_gas
   message:
-    "Source: 'Gas Networks Ireland, Annual Report and Financial Statements (2019)'. See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/general/interconnector_and_costs.xlsx'>this file</a> for more information."
+    "Source: 'Gas Networks Ireland, Annual Report and Financial Statements (2019)'. See <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/area/interconnector_and_costs.xlsx'>this file</a> for more information."

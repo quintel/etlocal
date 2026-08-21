@@ -50,7 +50,7 @@ groups:
         combination_method:
           weighted_average:
           - sum:
-            - households_final_demand_steam_hot_water_demand
+            - input_households_final_demand_steam_hot_water_demand
             - input_agriculture_final_demand_steam_hot_water_demand
             - input_buildings_final_demand_steam_hot_water_demand
       - key: input_energy_heat_distribution_mt_loss_share
@@ -71,7 +71,7 @@ groups:
         combination_method:
           weighted_average:
           - sum:
-            - households_final_demand_steam_hot_water_demand
+            - input_households_final_demand_steam_hot_water_demand
             - input_agriculture_final_demand_steam_hot_water_demand
             - input_buildings_final_demand_steam_hot_water_demand
       - key: input_energy_heat_distribution_lt_loss_share
@@ -92,6 +92,6 @@ groups:
         combination_method:
           weighted_average:
           - sum:
-            - households_final_demand_steam_hot_water_demand
+            - input_households_final_demand_steam_hot_water_demand
             - input_agriculture_final_demand_steam_hot_water_demand
             - input_buildings_final_demand_steam_hot_water_demand

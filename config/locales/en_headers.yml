@@ -46,8 +46,10 @@ en:
       households_final_demand_steam_hot_water_input: Temperature levels district heating networks
       households_final_demand_crude_oil_input: Mix of oil types
       households_coal_distribution: Coal distribution
-      households_network_gas_space_heating_hot_water_distribution: Space heating and hot water technologies - gas
-      households_electricity_space_heating_hot_water_distribution: Space heating and hot water technologies - electricity
+      households_network_gas_space_heating_distribution: Space heating technologies - gas
+      households_network_gas_hot_water_distribution: Hot water technologies - gas
+      households_electricity_space_heating_distribution: Space heating technologies - electricity
+      households_electricity_hot_water_distribution: Hot water technologies - electricity
       households_electricity_cooking_distribution: Cooking technologies - electricity
       households_electricity_lighting_distribution: Lighting technologies - electricity
       households_electricity_appliances_distribution: Appliances - electricity

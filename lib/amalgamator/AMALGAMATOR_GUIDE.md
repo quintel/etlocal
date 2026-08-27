@@ -4,12 +4,10 @@ The Amalgamator is a tool for combining multiple regional datasets into larger a
 
 ## Overview
 
-The Amalgamator provides three main operations:
+The Amalgamator provides two main operations:
 
 1. **Combining**: Merge multiple datasets (e.g., municipalities) into a single larger dataset (e.g., province)
-2. **Batch combining**: Combine into many target datasets at once (e.g., all municipalities into all
-   provinces, or into all RES regions), based on a mapping CSV
-3. **Separating**: Subtract one dataset from another to create a residual dataset
+2. **Separating**: Subtract one dataset from another to create a residual dataset
 
 ### Key Features
 
@@ -31,15 +29,6 @@ rails dataset:combine \
   target_area_name=Groningen \
   target_parent_name=nl2023 \
   migration_slug=update_2023
-
-# Combine into all provinces at once, based on a mapping of municipalities onto provinces
-rails dataset:combine_all \
-  mapping_file='../etdataset/pipelines/config/CBS Gebieden in Nederland 2023 - ETM version.csv' \
-  source_geo_id_column='gemeenten|Code' \
-  target_geo_id_column='Provincies|Code' \
-  source_data_year=2023 \
-  target_parent_name=nl2023 \
-  migration_slug=heat_pump_update
 
 # Separate datasets (subtract one from another)
 rails dataset:separate \
@@ -108,48 +97,28 @@ rails dataset:separate \
   migration_slug=remove_groningen
 ```
 
-### Example 3: Combine into All Provinces or All RES Regions
+### Example 3: Update Multiple Provinces
 
-Use `dataset:combine_all` instead of running `dataset:combine` once per region. It reads a mapping
-CSV with one row per source region and groups the rows by target region, so the same file can be
-used for provinces and for RES regions by pointing at a different target column.
+For batch operations combining multiple regions, execute the rake task multiple times in sequence:
 
 ```bash
-# All municipalities into all 12 provinces
-rails dataset:combine_all \
-  mapping_file='../etdataset/pipelines/config/CBS Gebieden in Nederland 2023 - ETM version.csv' \
-  source_geo_id_column='gemeenten|Code' \
-  target_geo_id_column='Provincies|Code' \
+# Province 1 - Groningen
+rails dataset:combine \
+  target_dataset_geo_id=PV20 \
   source_data_year=2023 \
+  source_dataset_geo_ids=GM0014,GM0037,GM0047,GM0765,GM1895,GM1950 \
+  target_area_name=Groningen \
   target_parent_name=nl2023 \
-  migration_slug=heat_pump_update
+  migration_slug=update_2023
 
-# All municipalities into all 30 RES regions. The RES columns are addressed by position here,
-# because their header contains a typographic apostrophe.
-rails dataset:combine_all \
-  mapping_file='../etdataset/pipelines/config/CBS Gebieden in Nederland 2023 - ETM version.csv' \
-  source_geo_id_column=2 \
-  target_geo_id_column=5 \
+# Province 2 - Fryslan
+rails dataset:combine \
+  target_dataset_geo_id=PV21 \
   source_data_year=2023 \
+  source_dataset_geo_ids=GM0059,GM0060,GM0072,GM0074 \
+  target_area_name=Fryslan \
   target_parent_name=nl2023 \
-  migration_slug=heat_pump_update
+  migration_slug=update_2023
+
+# Continue for remaining provinces...
 ```
-
-Columns are addressed either by part of their header (case-insensitive) or by their 1-based
-position in the file. One migration is generated per target region, named after the geo-id and the
-name of that region followed by the migration slug.
-
-Before generating anything, the task checks that every source region has a dataset (a missing one
-would silently drop out of the sum) and that no migration for the same target and slug exists yet
-(Rails refuses to migrate two migrations with the same name).
-
-Useful extra arguments:
-
-- `dry_run=true`: report which regions would be combined, from which sources, without writing
-- `only=PV20,PV21` / `except=PV20`: restrict the batch, e.g. to redo a single region
-- `force=true`: replace migrations generated earlier for the same target and slug
-- `allow_missing_sources=true`: continue when a source region has no dataset
-
-The names and parents of the target datasets are taken from the existing datasets, so they keep
-their current spelling. Pass `target_name_column` when the targets do not exist yet and their names
-have to come from the mapping file.

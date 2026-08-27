@@ -1,0 +1,7 @@
+---
+- fields:
+  - :all
+  message: 'Optelling van de volgende gebieden: Amersfoort, Baarn, Bunnik, Bunschoten,
+    De Bilt, De Ronde Venen, Eemnes, Houten, IJsselstein, Leusden, Lopik, Montfoort,
+    Nieuwegein, Oudewater, Renswoude, Rhenen, Soest, Stichtse Vecht, Utrecht, Utrechtse
+    Heuvelrug, Veenendaal, Wijk bij Duurstede, Woerden, Woudenberg, Zeist, Vijfheerenlanden'

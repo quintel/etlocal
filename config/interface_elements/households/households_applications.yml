@@ -101,9 +101,9 @@ groups:
     items:
       - key: households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share
         unit: '%'
-      - key: households_final_demand_for_space_heating_network_gas_households_space_heater_network_gas_parent_share
-        unit: '%'
       - key: households_final_demand_for_space_heating_network_gas_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_space_heating_network_gas_households_space_heater_network_gas_parent_share
         unit: '%'
         flexible: true
         skip_validation: true
@@ -117,9 +117,9 @@ groups:
     items:
       - key: households_final_demand_for_hot_water_network_gas_households_water_heater_combined_network_gas_parent_share
         unit: '%'
-      - key: households_final_demand_for_hot_water_network_gas_households_water_heater_network_gas_parent_share
-        unit: '%'
       - key: households_final_demand_for_hot_water_network_gas_households_water_heater_hybrid_heatpump_air_water_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_hot_water_network_gas_households_water_heater_network_gas_parent_share
         unit: '%'
         flexible: true
         skip_validation: true

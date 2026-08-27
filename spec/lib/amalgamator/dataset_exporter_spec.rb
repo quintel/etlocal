@@ -129,7 +129,7 @@ RSpec.describe Amalgamator::DatasetExporter do
       ).to eq(
         [{
           'fields' => [:all],
-          'message' => "Optelling van de volgende gebieden: #{source_area_names.join(', ')}"
+          'message' => "Sum of the following areas: #{source_area_names.join(', ')}"
         }]
       )
     end

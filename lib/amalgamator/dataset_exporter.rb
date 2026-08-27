@@ -121,7 +121,7 @@ module Amalgamator
       migration_data_directory.join(COMMITS_FILENAME).write(
         [{
           'fields' => [:all],
-          'message' => "Optelling van de volgende gebieden: #{@source_area_names.join(', ')}"
+          'message' => "Sum of the following areas: #{@source_area_names.join(', ')}"
         }].to_yaml
       )
     end

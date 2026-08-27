@@ -92,7 +92,7 @@ groups:
         flexible: true
         skip_validation: true
 
-  - header: households_network_gas_space_heating_hot_water_distribution
+  - header: households_network_gas_space_heating_distribution
     type: slider
     combination_method:
       weighted_average:
@@ -101,14 +101,30 @@ groups:
     items:
       - key: households_final_demand_for_space_heating_network_gas_households_space_heater_combined_network_gas_parent_share
         unit: '%'
-      - key: households_final_demand_for_space_heating_network_gas_households_space_heater_network_gas_parent_share
-        unit: '%'
       - key: households_final_demand_for_space_heating_network_gas_households_space_heater_hybrid_heatpump_air_water_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_space_heating_network_gas_households_space_heater_network_gas_parent_share
         unit: '%'
         flexible: true
         skip_validation: true
 
-  - header: households_electricity_space_heating_hot_water_distribution
+  - header: households_network_gas_hot_water_distribution
+    type: slider
+    combination_method:
+      weighted_average:
+        - households_final_demand_network_gas_demand
+        - households_final_demand_network_gas_households_final_demand_for_hot_water_network_gas_parent_share
+    items:
+      - key: households_final_demand_for_hot_water_network_gas_households_water_heater_combined_network_gas_parent_share
+        unit: '%'
+      - key: households_final_demand_for_hot_water_network_gas_households_water_heater_hybrid_heatpump_air_water_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_hot_water_network_gas_households_water_heater_network_gas_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
+  - header: households_electricity_space_heating_distribution
     type: slider
     combination_method:
       weighted_average:
@@ -125,6 +141,25 @@ groups:
         unit: '%'
         flexible: true
         skip_validation: true
+
+  - header: households_electricity_hot_water_distribution
+    type: slider
+    combination_method:
+      weighted_average:
+        - households_final_demand_electricity_demand
+        - households_final_demand_electricity_households_final_demand_for_hot_water_electricity_parent_share
+    items:
+      - key: households_final_demand_for_hot_water_electricity_households_water_heater_resistive_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_hot_water_electricity_households_water_heater_heatpump_air_water_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_hot_water_electricity_households_water_heater_hybrid_heatpump_air_water_electricity_parent_share
+        unit: '%'
+      - key: households_final_demand_for_hot_water_electricity_households_water_heater_heatpump_ground_water_electricity_parent_share
+        unit: '%'
+        flexible: true
+        skip_validation: true
+
 
   - header: households_electricity_cooking_distribution
     type: slider

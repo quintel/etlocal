@@ -6,6 +6,9 @@ groups:
       unit: '#'
     - key: area_per_building_residence_equivalent
       unit: "m<sup>2</sup>"
+      combination_method:
+        weighted_average:
+          - present_number_of_buildings
     - key: buildings_roof_surface_available_for_pv
       unit: "km<sup>2</sup>"
 

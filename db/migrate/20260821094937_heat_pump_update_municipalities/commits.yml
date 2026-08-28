@@ -1,0 +1,5 @@
+---
+- fields:
+  - :all
+  message:
+    Taken from the national ETM dataset (nl2023). Updated after the heat pump and useful demand data in the national dataset was improved in August 2026.

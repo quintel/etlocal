@@ -1,6 +1,6 @@
 class Ireland2019Ie2026 < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20260629121451_ireland2019_ie_2026')
+    directory    = Rails.root.join('db/migrate/20260910120000_ireland2019_ie_2026')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

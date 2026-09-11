@@ -312,7 +312,7 @@
 - fields:
   - input_energy_power_solar_pv_solar_radiation_production
   message:
-    "The data orginates from the Eurostat table '<a href='https://ec.europa.eu/eurostat/databrowser/view/nrg_ind_epsc__custom_21257349/default/table'>Electricity production and self-consumption by sector and fuel</a>', 2019. "
+    "Set to 0 TJ Eurostat's Energy Balance shows no land-based solar PV existed in Ireland in 2019 (Eurostat's value is equal to households + buildings rooftop PV)."
 
 - fields:
   - input_energy_power_hydro_mountain_production

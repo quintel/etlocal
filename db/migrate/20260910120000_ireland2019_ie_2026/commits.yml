@@ -352,7 +352,7 @@
 - fields:
   - interconnector_capacity
   message:
-    "Derived from the EirGrid & SONI All Island Generation Capacity Statement Data Workbook (2022). Two interconnectors are identified: EWIC and the North-South interconnector."
+    "Assumed and discussed in consultation with relevant government authorities."
 
 - fields:
   - annual_infrastructure_cost_gas

@@ -352,7 +352,7 @@
 - fields:
   - interconnector_capacity
   message:
-    "Discussed with relevant government authorities, see <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/general/interconnector_and_costs.xlsx'>this file</a> for more information."
+    "Discussed with relevant government authorities, see <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IE_ireland/2019/area/interconnector_and_costs.xlsx'>this file</a> for more information."
 
 - fields:
   - annual_infrastructure_cost_gas

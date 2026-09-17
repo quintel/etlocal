@@ -1,0 +1,4 @@
+---
+- fields:
+  - :all
+  message: 'Sum of the following areas: Northern Ireland, Ireland'

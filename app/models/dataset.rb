@@ -47,7 +47,7 @@ class Dataset < ApplicationRecord
       'district'
     elsif geo_id.start_with?('BU', 'BEBU')
       'neighbourhood'
-    elsif geo_id.start_with?('RG')
+    elsif geo_id.start_with?('RG','II')
       'region'
     elsif entso_data_source? || geo_id.start_with?('UKNI') || geo_id.start_with?('GB')
       'country'

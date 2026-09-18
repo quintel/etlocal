@@ -49,7 +49,7 @@ class Dataset < ApplicationRecord
       'neighbourhood'
     elsif geo_id.start_with?('RG')
       'region'
-    elsif entso_data_source? || geo_id.start_with?('UKNI') || geo_id.start_with?('GB')
+    elsif entso_data_source? || geo_id.start_with?('UKNI', 'GB', 'II')
       'country'
     elsif geo_id.start_with?('RES', 'ES')
       'res'

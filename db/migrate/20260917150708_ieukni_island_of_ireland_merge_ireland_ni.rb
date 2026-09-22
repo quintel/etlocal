@@ -1,6 +1,6 @@
-class IiIslandOfIrelandMergeIrelandNi < ActiveRecord::Migration[5.0]
+class IeukniIslandOfIrelandMergeIrelandNi < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20260917150708_ii_island_of_ireland_merge_ireland_ni')
+    directory    = Rails.root.join('db/migrate/20260917150708_ieukni_island_of_ireland_merge_ireland_ni')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

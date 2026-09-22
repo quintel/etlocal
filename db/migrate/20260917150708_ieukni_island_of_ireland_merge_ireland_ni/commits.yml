@@ -1,7 +1,7 @@
 ---
 - fields:
   - interconnector_capacity
-  message: "Combined interconnector, excluding their internal interconnection, see <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/II_island_of_ireland/2019/area/interconnector.xlsx'>this file</a> for more information."
+  message: "Combined interconnector, excluding their internal interconnection, see <a href='https://github.com/quintel/etdataset-public/tree/master/source_analyses/IEUKNI_island_of_ireland/2019/area/interconnector.xlsx'>this file</a> for more information."
 
 - fields:
   - agriculture_final_demand_electricity_demand

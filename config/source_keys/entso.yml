@@ -64,14 +64,13 @@ column_groups:
     - Pure biogasoline
     - Blended biogasoline
     - Other liquid biofuels
-  Oil excluding naphtha:
+  Oil excluding naphtha and refinery gas:
     - Oil shale and oil sands
     - Crude oil
     - Natural gas liquids
     - Refinery feedstocks
     - Additives and oxygenates (excluding biofuel portion)
     - Other hydrocarbons
-    - Refinery gas
     - Ethane
     - Liquefied petroleum gases
     - Motor gasoline (excluding biofuel portion)
@@ -149,7 +148,6 @@ column_groups:
     - Additives and oxygenates (excluding biofuel portion)
     - Refinery feedstocks
     - Natural gas liquids
-    - Refinery gas
     - Ethane
     - Motor gasoline (excluding biofuel portion)
     - Aviation gasoline

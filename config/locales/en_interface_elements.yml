@@ -533,6 +533,7 @@ en:
         input_industry_chemical_refineries_wood_pellets_demand: Biomass
         input_industry_chemical_refineries_coal_demand: Coal
         input_industry_chemical_refineries_crude_oil_demand: Oil
+        input_industry_chemical_refineries_refinery_gas_demand: Refinery gas
         input_industry_chemical_refineries_network_gas_non_energetic_demand: Network gas
         input_industry_chemical_refineries_wood_pellets_non_energetic_demand: Biomass
         input_industry_chemical_refineries_coal_non_energetic_demand: Coal
@@ -553,6 +554,7 @@ en:
         input_industry_chemical_other_wood_pellets_demand: Solid biomass
         input_industry_chemical_other_crude_oil_demand: Oil
         input_industry_chemical_other_naphtha_demand: Naphtha
+        input_industry_chemical_other_refinery_gas_demand: Refinery gas
         input_industry_chemical_other_hydrogen_demand: Hydrogen
         input_industry_chemical_other_coal_demand: Coal
 

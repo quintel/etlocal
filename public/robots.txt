@@ -1,5 +1,9 @@
-# See http://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
-#
-# To ban all spiders from the entire site uncomment the next two lines:
-# User-agent: *
-# Disallow: /
+# ETLocal is a map-based dataset browser. Only the root page is meaningful to
+# a search engine. /datasets/:id renders the same page for any ID, and the
+# rest is JSON endpoints, git file lookups, or authenticated editing.
+User-agent: *
+Disallow: /
+Allow: /$
+
+# Assets must stay crawlable so the allowed pages render correctly for indexers.
+Allow: /assets/

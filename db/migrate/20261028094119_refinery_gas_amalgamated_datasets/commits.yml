@@ -1,0 +1,7 @@
+---
+- fields:
+  - :all
+  message:
+    "Northern Ireland (UKNI01) has no refineries, so its refinery gas demand is zero.
+    GB therefore uses the UK refinery gas demand, and the island of Ireland (IEUKNI)
+    uses the IE demand, both read from their respective energy balances."

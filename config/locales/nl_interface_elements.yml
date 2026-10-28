@@ -538,6 +538,7 @@ nl:
         input_industry_chemical_refineries_wood_pellets_demand: Biomassa
         input_industry_chemical_refineries_coal_demand: Kolen
         input_industry_chemical_refineries_crude_oil_demand: Olie
+        input_industry_chemical_refineries_refinery_gas_demand: Raffinagegas
         input_industry_chemical_refineries_network_gas_non_energetic_demand: Gas
         input_industry_chemical_refineries_wood_pellets_non_energetic_demand: Biomassa
         input_industry_chemical_refineries_coal_non_energetic_demand: Kolen
@@ -558,6 +559,7 @@ nl:
         input_industry_chemical_other_wood_pellets_demand: Vaste biomassa
         input_industry_chemical_other_crude_oil_demand: Olie
         input_industry_chemical_other_naphtha_demand: Nafta
+        input_industry_chemical_other_refinery_gas_demand: Raffinagegas
         input_industry_chemical_other_hydrogen_demand: Waterstof
         input_industry_chemical_other_coal_demand: Kolen
         input_percentage_of_diesel_industry_final_demand_crude_oil_non_energetic: Diesel (niet-energetisch)

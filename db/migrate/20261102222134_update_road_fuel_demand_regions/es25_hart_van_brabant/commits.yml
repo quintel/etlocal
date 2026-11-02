@@ -1,0 +1,7 @@
+---
+- fields:
+  - :all
+  message: |-
+    Sum of the following areas: Dongen, Gilze en Rijen, Goirle, Heusden, Hilvarenbeek, Loon op Zand, Oisterwijk, Tilburg, Waalwijk
+
+    Updated in November 2026 to correct for a previous double-counting of road energy for trucks and two-wheelers.

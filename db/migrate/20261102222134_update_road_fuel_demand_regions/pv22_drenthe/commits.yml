@@ -1,0 +1,7 @@
+---
+- fields:
+  - :all
+  message: |-
+    Sum of the following areas: Aa en Hunze, Assen, Borger-Odoorn, Coevorden, De Wolden, Emmen, Hoogeveen, Meppel, Midden-Drenthe, Noordenveld, Tynaarlo, Westerveld
+
+    Updated in November 2026 to correct for a previous double-counting of road energy for trucks and two-wheelers.

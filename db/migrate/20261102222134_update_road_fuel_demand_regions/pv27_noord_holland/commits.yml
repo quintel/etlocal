@@ -1,0 +1,7 @@
+---
+- fields:
+  - :all
+  message: |-
+    Sum of the following areas: Aalsmeer, Alkmaar, Amstelveen, Amsterdam, Bergen, Beverwijk, Blaricum, Bloemendaal, Castricum, Den Helder, Diemen, Dijk en Waard, Drechterland, Edam-Volendam, Enkhuizen, Gooise Meren, Haarlem, Haarlemmermeer, Heemskerk, Heemstede, Heiloo, Hilversum, Hollands Kroon, Hoorn, Huizen, Koggenland, Landsmeer, Laren, Medemblik, Oostzaan, Opmeer, Ouder-Amstel, Purmerend, Schagen, Stede Broec, Texel, Uitgeest, Uithoorn, Velsen, Waterland, Wijdemeren, Wormerland, Zaanstad, Zandvoort
+
+    Updated in November 2026 to correct for a previous double-counting of road energy for trucks and two-wheelers.

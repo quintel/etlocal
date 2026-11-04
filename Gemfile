@@ -12,7 +12,7 @@ gem 'bootsnap', require: false
 gem 'jbuilder'
 gem 'jquery-rails', '>= 1.0.3'
 # json 3 removes JSON.parse's create_additions (used by sprockets 4.2) and JSON.fast_generate (used by sentry-raven).
-gem 'json', '~> 2.21'
+gem 'json', '~> 3.1'
 gem 'mysql2'
 gem 'puma'
 gem 'rails', '~> 8.1'

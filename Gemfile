@@ -30,7 +30,7 @@ gem 'validates_email_format_of'
 gem 'gradients'
 gem 'tty-progressbar'
 gem 'remotipart', '~> 1.2'
-gem 'archive-zip', '~> 0.9.0'
+gem 'archive-zip', '~> 0.13.1'
 gem 'sentry-raven'
 gem 'deep_cloneable'
 gem 'str_enum'
@@ -55,7 +55,7 @@ end
 
 group :test do
   gem 'capybara',        '~> 3.40'
-  gem 'selenium-webdriver','4.10'
+  gem 'selenium-webdriver','4.52.0'
   gem 'rails-controller-testing'
   gem 'database_cleaner'
   gem 'factory_bot_rails'

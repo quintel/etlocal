@@ -1,0 +1,4 @@
+---
+- fields:
+  - :all
+  message: 'Sum of the following areas: Hulst, Sluis, Terneuzen'

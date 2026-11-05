@@ -1,0 +1,8 @@
+---
+
+- fields:
+  - :all
+  message:
+    "Refinery gas demand is set to 0 in all derived datasets. Refinery gas is a
+    recently added carrier and is not yet defined at the regional level.
+    Refinery gas use remains included in other carriers."

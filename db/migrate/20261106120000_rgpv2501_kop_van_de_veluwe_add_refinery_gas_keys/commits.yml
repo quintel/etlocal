@@ -1,0 +1,7 @@
+---
+- fields:
+  - :all
+  message:
+    "Refinery gas demand is set to 0 in all non-country datasets. Refinery gas is a
+    recently added carrier and no regional data is available. Refinery gas use by
+    refineries and the chemical industry remains included in their crude oil demand."

@@ -1,0 +1,35 @@
+---
+- fields:
+  - input_transport_road_gasoline_demand
+  message: 'Final gasoline demand road transport in the transport sector is calculated by subtracting
+    final bio-ethanol demand road transport (Klimaatmonitor, 2023) from final gasoline demand road transport
+    (passenger cars, vans, buses and two-wheelers, with road energy allocated to vehicle types by their
+    CO2 emissions) (Klimaatmonitor, 2023).
+
+
+    Updated in November 2026 to correct for a previous double-counting of road energy for trucks and two-wheelers.'
+- fields:
+  - input_transport_road_diesel_demand
+  message: 'Final diesel demand road transport in the transport sector is calculated by first adding final
+    diesel demand road transport (passenger cars, vans, buses and trucks, with road energy allocated to
+    vehicle types by their CO2 emissions) (Klimaatmonitor, 2023) and final diesel demand mobile machinery
+    road transport (Klimaatmonitor, 2023), and subtracting final biodiesel demand road transport (Klimaatmonitor,
+    2023).
+
+
+    Updated in November 2026 to correct for a previous double-counting of road energy for trucks and two-wheelers.'
+- fields:
+  - transport_final_demand_lpg_demand
+  message: 'Final LPG demand road transport in the transport sector is calculated by dividing the CO2
+    emissions of LPG in road transport (Klimaatmonitor, 2023) by the emission factor of LPG (RIVM, 2023).
+
+
+    Updated in November 2026 to correct for a previous double-counting of road energy for trucks and two-wheelers.'
+- fields:
+  - transport_final_demand_for_road_compressed_network_gas_demand
+  message: 'Final compressed network gas demand road transport in the transport sector is calculated by
+    converting the CO2 emissions of CNG in road transport (Klimaatmonitor, 2023) using the emission factor
+    of CNG (RIVM, 2023).
+
+
+    Updated in November 2026 to correct for a previous double-counting of road energy for trucks and two-wheelers.'

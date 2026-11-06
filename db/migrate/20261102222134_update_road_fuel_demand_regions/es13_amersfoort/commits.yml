@@ -1,0 +1,7 @@
+---
+- fields:
+  - :all
+  message: |-
+    Sum of the following areas: Amersfoort, Baarn, Bunschoten, Eemnes, Leusden, Soest, Woudenberg
+
+    Updated in November 2026 to correct for a previous double-counting of road energy for trucks and two-wheelers.

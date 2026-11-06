@@ -1,0 +1,7 @@
+---
+- fields:
+  - :all
+  message: |-
+    Sum of the following areas: Alphen-Chaam, Altena, Baarle-Nassau, Bergen op Zoom, Breda, Drimmelen, Etten-Leur, Geertruidenberg, Halderberge, Moerdijk, Oosterhout, Roosendaal, Rucphen, Steenbergen, Woensdrecht, Zundert
+
+    Updated in November 2026 to correct for a previous double-counting of road energy for trucks and two-wheelers.

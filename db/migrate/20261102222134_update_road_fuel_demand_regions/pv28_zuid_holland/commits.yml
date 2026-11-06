@@ -1,0 +1,7 @@
+---
+- fields:
+  - :all
+  message: |-
+    Sum of the following areas: Alblasserdam, Albrandswaard, Alphen aan den Rijn, Barendrecht, Bodegraven-Reeuwijk, Capelle aan den IJssel, Delft, Dordrecht, Goeree-Overflakkee, Gorinchem, Gouda, Hardinxveld-Giessendam, Hendrik-Ido-Ambacht, Hillegom, Hoeksche Waard, Kaag en Braassem, Katwijk, Krimpen aan den IJssel, Krimpenerwaard, Lansingerland, Leiden, Leiderdorp, Leidschendam-Voorburg, Lisse, Maassluis, Midden-Delfland, Molenlanden, Nieuwkoop, Nissewaard, Noordwijk, Oegstgeest, Papendrecht, Pijnacker-Nootdorp, Ridderkerk, Rijswijk, Rotterdam, s-Gravenhage, Schiedam, Sliedrecht, Teylingen, Vlaardingen, Voorne aan Zee, Voorschoten, Waddinxveen, Wassenaar, Westland, Zoetermeer, Zoeterwoude, Zuidplas, Zwijndrecht
+
+    Updated in November 2026 to correct for a previous double-counting of road energy for trucks and two-wheelers.

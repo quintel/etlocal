@@ -1,0 +1,7 @@
+---
+- fields:
+  - :all
+  message: |-
+    Sum of the following areas: Buren, Culemborg, Maasdriel, Neder-Betuwe, Tiel, West Betuwe, West Maas en Waal, Zaltbommel
+
+    Updated in November 2026 to correct for a previous double-counting of road energy for trucks and two-wheelers.

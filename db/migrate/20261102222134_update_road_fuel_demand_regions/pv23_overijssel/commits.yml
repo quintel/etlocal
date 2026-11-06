@@ -1,0 +1,7 @@
+---
+- fields:
+  - :all
+  message: |-
+    Sum of the following areas: Almelo, Borne, Dalfsen, Deventer, Dinkelland, Enschede, Haaksbergen, Hardenberg, Hellendoorn, Hengelo, Hof van Twente, Kampen, Losser, Oldenzaal, Olst-Wijhe, Ommen, Raalte, Rijssen-Holten, Staphorst, Steenwijkerland, Tubbergen, Twenterand, Wierden, Zwartewaterland, Zwolle
+
+    Updated in November 2026 to correct for a previous double-counting of road energy for trucks and two-wheelers.

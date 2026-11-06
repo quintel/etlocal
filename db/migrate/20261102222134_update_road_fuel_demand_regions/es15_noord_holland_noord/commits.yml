@@ -1,0 +1,7 @@
+---
+- fields:
+  - :all
+  message: |-
+    Sum of the following areas: Alkmaar, Bergen, Castricum, Den Helder, Dijk en Waard, Drechterland, Enkhuizen, Heiloo, Hollands Kroon, Hoorn, Koggenland, Medemblik, Opmeer, Schagen, Stede Broec, Texel, Uitgeest
+
+    Updated in November 2026 to correct for a previous double-counting of road energy for trucks and two-wheelers.

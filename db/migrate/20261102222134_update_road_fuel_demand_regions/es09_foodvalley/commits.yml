@@ -1,0 +1,7 @@
+---
+- fields:
+  - :all
+  message: |-
+    Sum of the following areas: Barneveld, Ede, Nijkerk, Renswoude, Rhenen, Scherpenzeel, Veenendaal, Wageningen
+
+    Updated in November 2026 to correct for a previous double-counting of road energy for trucks and two-wheelers.

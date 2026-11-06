@@ -1,0 +1,7 @@
+---
+- fields:
+  - :all
+  message: |-
+    Sum of the following areas: Bunnik, De Bilt, De Ronde Venen, Houten, IJsselstein, Lopik, Montfoort, Nieuwegein, Oudewater, Stichtse Vecht, Utrecht, Utrechtse Heuvelrug, Vijfheerenlanden, Wijk bij Duurstede, Woerden, Zeist
+
+    Updated in November 2026 to correct for a previous double-counting of road energy for trucks and two-wheelers.

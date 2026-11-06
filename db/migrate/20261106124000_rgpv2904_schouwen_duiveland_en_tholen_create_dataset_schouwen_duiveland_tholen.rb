@@ -1,6 +1,6 @@
-class Rgpv2902WalcherenCreateDatasetWalcheren < ActiveRecord::Migration[5.0]
+class Rgpv2904SchouwenDuivelandEnTholenCreateDatasetSchouwenDuivelandTholen < ActiveRecord::Migration[5.0]
   def self.up
-    directory    = Rails.root.join('db/migrate/20261104135710_rgpv2902_walcheren_create_dataset_walcheren')
+    directory    = Rails.root.join('db/migrate/20261106124000_rgpv2904_schouwen_duiveland_en_tholen_create_dataset_schouwen_duiveland_tholen')
     data_path    = directory.join('data.csv')
     commits_path = directory.join('commits.yml')
     datasets     = []

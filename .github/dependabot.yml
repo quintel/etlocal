@@ -8,11 +8,12 @@
 #                         list of what we're behind on. It won't go green (breaking
 #                         changes bundled) and isn't merged as a unit — it's a
 #                         dashboard; tackle a given major on its own when ready.
-#   - Rails            -> its own PR, never auto-merged (a framework upgrade is a
-#                         deliberate, human decision).
+#   - Rails updates    -> their own PR, never auto-merged (a framework upgrade is a
+#                         deliberate, human decision). Rails security fixes still
+#                         go in the security group like any other gem.
 #
 # The security and minor/patch groups auto-merge on green CI; majors and Rails
-# wait for a human. The auto-merge logic lives in
+# version updates wait for a human. The auto-merge logic lives in
 # .github/workflows/dependabot-auto-merge.yml.
 
 version: 2
